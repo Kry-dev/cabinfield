@@ -1,0 +1,35 @@
+footer.footer
+	.container
+		//.row.d-flex
+		//	.footer-left
+		.footer-logo-box
+			a(href="#").footer-logo
+				img.img-fluid(src="img/general/cabinfield-f-logo.svg", alt="#")
+			p.footer-copyright Copyright © 2005-2018 Cabinfield
+				br
+				| Woodworking LLC. All rights reserved.
+		.footer-nav
+			ul.footer-nav-list
+				li #[a(href='#') About Us]
+				li #[a(href='#') Testimonials]
+				li #[a(href='#') Contact Us]
+				li #[a(href='#') FAQ]
+			ul.footer-nav-list
+				li #[a(href='#') Promotions]
+				li #[a(href='#') Gift It!]
+				li #[a(href='#') Blog]
+			ul.footer-nav-list
+				li #[a(href='#') Terms of Sale & Use]
+				li #[a(href='#') Our Warranty]
+				li #[a(href='#') Privacy Policy]
+
+		.footer-social-wrap
+			include ../components/_footer-social
+			a.footer-subscribe.mb-sm-3(href='#', data-toggle='modal', data-target='#subscribe_popup')
+				i.fa.fa-envelope-o
+				| 	Subscribe for Newsletter
+
+		.contact
+			a.contact-phone(href="tel:866-450-WOOD(9663)") 866-450-WOOD (9663)
+			.contact-hours 6AM - 8PM PST
+		img.img-bbb(src="img/general/BBB.png", alt="#")

@@ -1,0 +1,24 @@
+<!--modal modal sign-in-->
+#sign_in.modal.modal--sign-in.fade(tabindex='-1', role='dialog', aria-hidden='true')
+  .modal-dialog.modal-dialog-centered.modal-sm(role='document')
+    .modal-content
+      .modal-body
+        button.close(type='button', data-dismiss='modal', aria-label='Close')
+          span(aria-hidden='true') ×
+        h4.text-center.modal-title.mb-5 Sign in
+        form.form.px-md-5
+          .form-group
+            label.col-form-label.col-form-label-sm Email address
+            input.form-control(type='email', name='email')
+          .form-group
+            label.col-form-label.col-form-label-sm Password
+              a.text-right(href="#") Forgot yor password?
+            input.form-control(type='password', name="pass")
+          .form-group.d-flex
+            button.btn.btn-lg.btn-order.w-100(type='submit') Sign In
+      .modal-footer
+        p.text-center.text-dark New to Cabinfield?
+        .form-group.d-flex
+          a.btn.btn-outline-warning(href='#') Create Your Cabinfield Account
+
+<!--modal sign-in end-->

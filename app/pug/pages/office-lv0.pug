@@ -1,0 +1,19 @@
+extends ../main-template
+
+block title
+	| Cabinfield Kitchen LV - 0
+
+block content
+	+breadcrumbs([['Office', '#'], ['', '']])
+	main.content.pt-lg-0
+		.container
+			h1.text-center Office
+		<!--Category list -->
+		include ../layout/_category-list
+		<!--Category list end-->
+		<!--Widgets for office page-->
+		include ../layout/_office-widgets-lv0
+		<!--Widgets for office page end-->
+		<!--Review section-->
+		include ../layout/_review-section
+		<!--Review section end-->

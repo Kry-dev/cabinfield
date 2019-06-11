@@ -1,0 +1,161 @@
+mixin rating(percent, number,customclass)
+  <!--star rating-->
+  .stars-rating(title =percent, class=customclass)
+    .back-stars
+      i.fa.fa-star-o
+      i.fa.fa-star-o
+      i.fa.fa-star-o
+      i.fa.fa-star-o
+      i.fa.fa-star-o
+      .front-stars(style='width: ' + percent + '%')
+        i.fa.fa-star
+        i.fa.fa-star
+        i.fa.fa-star
+        i.fa.fa-star
+        i.fa.fa-star
+    span= number
+mixin rating-null(percent,customclass)
+  .stars-rating(title =percent, class=customclass)
+    .back-stars
+      i.fa.fa-star-o
+      i.fa.fa-star-o
+      i.fa.fa-star-o
+      i.fa.fa-star-o
+      i.fa.fa-star-o
+      .front-stars(style='width: ' + percent + '%')
+        i.fa.fa-star
+        i.fa.fa-star
+        i.fa.fa-star
+        i.fa.fa-star
+        i.fa.fa-star
+    a(href='#') Write product review
+
+mixin rating-small(percent)
+  <!--star rating small without number-->
+  .stars-rating.stars-rating--sm(title =percent)
+    .back-stars
+      i.fa.fa-star-o
+      i.fa.fa-star-o
+      i.fa.fa-star-o
+      i.fa.fa-star-o
+      i.fa.fa-star-o
+      .front-stars(style='width: ' + percent + '%')
+        i.fa.fa-star
+        i.fa.fa-star
+        i.fa.fa-star
+        i.fa.fa-star
+        i.fa.fa-star
+    a(href="#") 8 customer reviews
+
+
+mixin rating-small-review(percent)
+  <!--star rating small without number without bottom link-->
+  .stars-rating.stars-rating--sm(title =percent)
+    .back-stars
+      i.fa.fa-star-o
+      i.fa.fa-star-o
+      i.fa.fa-star-o
+      i.fa.fa-star-o
+      i.fa.fa-star-o
+      .front-stars(style='width: ' + percent + '%')
+        i.fa.fa-star
+        i.fa.fa-star
+        i.fa.fa-star
+        i.fa.fa-star
+        i.fa.fa-star
+
+mixin breadcrumbs(items)
+  <!--breadcrumbs-->
+  nav(aria-label="breadcrumb")
+    .container.px-0
+      ul.breadcrumb
+        li.breadcrumb-item
+          a(href= "index.html")
+            i.fa.fa-home
+        each item, index in items
+          li.breadcrumb-item
+            a(href=item[1]) 
+              | #{item[0]}
+
+mixin product-price-simple 
+  <!--product price -->
+  .product-price
+    span Product price:
+    span $
+    .product-price-value 1,371.00
+    .product-price-shipping
+      span + $30.40
+      |  Shipping
+      
+mixin product-price
+  <!--product price -->
+  .product-price
+    span The price reflects selected options
+    .product-price-value
+      span $
+      span.price-new 1,371.00
+    .product-price-shipping
+      span + $30.40
+      |  Shipping
+
+mixin product-price-old
+  <!--old product price -->
+  .product-price
+    span The price reflects selected options
+    .product-price-value
+      | $1,371.00
+      span.price-value-old $1,580.00
+    .product-price-shipping
+      span + $30.40
+      |  Combined shipping. 
+      a.more.border-left.pl-2.ml-1(href='#', data-toggle='modal', data-target='#shipping_options1') shipping options
+
+mixin product-price-old-top
+  <!--old product price  for top section-->
+  .product-price
+    .product-price-value
+      | $1,371.00 
+      span.price-value-old $1,580.00
+    .product-price-shipping
+      span + $30.40
+      |  Combined shipping. 
+      a.more.border-left.pl-2.ml-1(href='#', data-toggle='modal', data-target='#shipping_options1') details
+
+mixin product-price-v2
+  <!--product price  for product-v2-->
+  .product-price
+    span The price reflects selected options
+    .product-price-value $1,371.00
+    .product-price-shipping
+      span + $30.40
+      |  Shipping. 
+      a.more.border-left.pl-2.ml-1(href='#', data-toggle='modal', data-target='#shipping_options2') details
+
+
+mixin product-price-v3
+  <!--product price  for product-v3-->
+  .product-price
+    span The price reflects selected options
+    .product-price-value $1,371.00
+    .product-price-shipping
+      a.more.d-flex(href='#', data-toggle='modal', data-target='#shipping_options1') Calculate delivery costs
+      a.more.d-flex(href='#', data-toggle='modal', data-target='#assembly_quote_request_sent') Assembly quote request sent
+
+
+mixin product-price-v3-top-section 
+  //-product price for product-v3 top-section
+  .product-price
+    .product-price-value $1,371.00
+    .product-price-shipping
+    a.more(href="#", data-toggle="modal",data-target="#shipping_options1") Calculate delivery costs
+
+mixin input-number(label, name, id, val, price)
+  //-product custom input number (modal-customizr-popup-1)
+  .ctrl
+    button.ctrl-btn.ctrl-btn-decr -
+    button.ctrl-btn.ctrl-btn-incr +
+    label(for=name).ctrl-counter=label
+      input(id=id, type='text', name=name, value=val)
+    .ctrl-price + #{price}
+
+

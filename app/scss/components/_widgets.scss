@@ -1,0 +1,255 @@
+$card-height: 21rem;
+.widgets{
+  margin-bottom: 2rem;
+  .card{
+    border-radius: 0;
+    position: relative;
+    border: 0;
+    width: 100%;
+    min-height: $card-height;
+    overflow: hidden;
+    &-title{
+      font-family: 'PT Serif', serif;
+      font-weight: 600;
+      z-index: 1;
+      a{
+        font-size: inherit;
+        font-family: inherit;
+        color: inherit;
+        &:hover,
+        &:focus{
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+    }
+    &-text{
+      font-size: 0.875rem;
+      line-height: 1.3125rem;
+      opacity: 0.9;
+      z-index: 1;
+      a{
+        color: inherit;
+        text-decoration: underline;
+      }
+    }
+    &-subtitle{
+      font-weight: 300;
+      font-family: "Open Sans";	
+      font-size: 0.875rem;	
+      line-height: 1.1875rem;	
+      margin-bottom: 0;
+    }
+    &-controls{
+      width: 80px;
+      transform: translateY(-100%);
+    }
+    &-img{
+      height: 100%;
+      position: absolute;
+      min-width: 100%;
+      left: 0;
+      background-repeat: no-repeat;
+      background-position: bottom right 100%;
+      background-size: cover;
+      @include media-breakpoint-down(sm){
+        background-position: bottom right;
+      }
+
+    }
+    .card-img-overlay{
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      padding: 1rem;
+      position: absolute;
+      left: 0;
+      top: 0;
+      border: 7px solid transparent;
+      outline-offset: -8px;
+      z-index: 2;
+
+    }
+    &.card-border-white .card-img-overlay{outline: 1px solid rgba($white,.8);}
+    &.card-border-dark .card-img-overlay{outline: 1px solid rgba($widget-border-color,.8);}
+    &-footer{
+      border: 0;
+      background: transparent;
+      margin-top: auto;
+      padding: 0;
+      z-index: 1;
+    }
+  }
+  .card-why{
+    background: $why-widget-bg url(../img/homepage/chair.png) no-repeat center bottom;
+    background-size: contain;
+    border: 10px solid #F0ECED;
+    min-height: $card-height * 1.5;
+    &-list{
+      display: flex;
+      flex-direction: column;
+      li{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: .5rem;
+        &:before{
+          content: "";
+          display: block;
+          width: 80px;
+          height: 50px;
+          background: url(../img/sprite/why_icon_sprite.png) no-repeat 2px 5px;
+          background-size: 260px;
+          overflow: hidden;
+        }
+        &:nth-child(2):before{background-position: -50px 7px;}
+        &:nth-child(3):before{background-position: -100px 7px;}
+        &:nth-child(4):before{background-position: -153px 7px;}
+        &:nth-child(5):before{background-position: -205px 7px;}
+        p{
+          margin-left: .5rem;
+          width: 100%;
+          color: $text-dark;
+          font-family: "Open Sans";
+          font-size: 0.875rem;
+          line-height: 1rem;
+          margin-bottom: 0;
+        }
+        @include media-breakpoint-down(md){
+          &:before{
+            width: 65px;
+          }
+        }
+      }
+    }
+  }
+  .card.card--shopstyle{
+    text-align: center;
+    .card-title{
+      text-align: center;
+      color: $text-dark;
+      font-size: 0.875rem;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 400;
+      line-height: 1.1875rem;
+      text-transform: uppercase;
+      width: 100%;
+      max-width: 100%;
+    }
+    .card-img{
+      background-position: center;
+      background-size: cover;
+    }
+    .card-img-overlay{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 100%;
+      padding: 1rem 2rem;
+      &:before{
+        display: none !important;
+      }
+    }
+  }
+  .shop_by {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    a{
+      color: $black;
+      font-family: "PT Serif";
+      display: inline-block;
+      padding: 8px 33px;
+
+    }
+    a + a{
+      margin-left: 2rem;
+      position: relative;
+      @include media-breakpoint-down(sm){
+        margin-left: 5px;
+      }
+      @include media-breakpoint-down(xs){
+        margin-left: 0;
+      }
+      &:before{
+        content: '';
+        position: absolute;
+        left: -1rem;
+        top: 50%;
+        width: 2px;
+        height: 20px;
+        background: #d6cdca;
+        transform: rotate(20deg) translateY(-50%);
+        @include media-breakpoint-down(sm){
+          left: -3px;
+        }
+        @include media-breakpoint-down(xs){
+          display: none;
+        }
+      }
+    }
+  }
+  .card-review {
+    border: 1px solid $review-border-color;
+    min-height: $card-height * 1.5;
+    background: $white url(../img/homepage/review.png) no-repeat center bottom;
+    background-size: contain;
+    padding: 1rem 2rem 80px ;
+    overflow: hidden;
+    &-text {
+      font-family: "Open Sans";	
+      font-size: 0.9375rem;	
+      font-style: italic;	
+      line-height: 1.4375rem
+    }
+    .review-prev,
+    .review-next{
+      background: transparent;
+      border-radius: 0;
+      color: $brown;
+    }
+    @include media-breakpoint-down(md) {
+      min-height: 44rem;
+    }
+  }
+  &-inner{
+    .card{
+      min-height: 18.5rem;
+      position: relative;
+      .card-img-overlay{
+        text-align: left;
+        padding: 32px 42px;
+        display: flex;
+        flex-direction: column;
+        @include media-breakpoint-down(sm){
+          &:before{
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 0;
+            z-index: 1;
+            position: absolute;
+            background: rgba(255, 255, 255, 0.5);
+          }
+        }
+      }
+    }
+    .card-title{
+      font-size: 1.125rem;
+      max-width: 250px;
+    }
+    .card-text{
+      display: block;
+      font-size: 0.8125rem;
+      max-width: 250px;
+      @include media-breakpoint-down(md){
+        max-width: 200px;
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.contact{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 155px;
+  @include media-breakpoint-down(md) {
+    width: auto;
+    flex-direction: row;
+  }
+  @include media-breakpoint-down(sm) {
+    flex-direction: column;
+  }
+  &-phone,
+  &-hours{
+    color: $brown-text;
+    font-family: "Open Sans";
+    font-size: 0.875rem;
+    line-height: 1.1875rem;
+  }
+  &-phone{
+    font-weight: 600;
+    @include media-breakpoint-down(md) {
+      margin-right: 0.5rem;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+extends ../main-template
+
+block title
+	| Cabinfield Category LV - 0
+
+block content
+	+breadcrumbs([['Bedrooms', '#'], ['', '']])
+	main.content.pt-lg-0
+		.container
+			h1.text-center Amish Bedroom Furniture
+		<!--Category list -->
+		include ../layout/_category-list
+		<!--Category list end-->
+		<!--Widgets for inner page-->
+		include ../layout/_category-widgets-lv0
+		<!--Widgets for inner page end-->
+		<!--Review section-->
+		include ../layout/_review-section
+		<!--Review section end-->

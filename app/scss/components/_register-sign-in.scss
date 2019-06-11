@@ -1,0 +1,75 @@
+.register-sign-in,
+.modal--sign-in.register-sign-in{
+  .modal-body{
+    background: #F9F9F9;
+  }
+  .form-control{
+    background: $white;
+  }
+  .modal-footer{
+    border: 0;
+    border: 2px solid #EFE9E7;
+  }
+  .modal-title{
+    color: $text-dark;
+    text-align: center;
+    position: relative;
+    display: block;
+    margin-bottom: 1rem;
+    &:before{
+      content: '';
+      height: 1px;
+      width: 43px;
+      left: 5%;
+      background-color: #D1C8C4;
+      position: absolute;
+      top: 17px;
+    }
+    &:after{
+      content: '';
+      height: 1px;
+      width: 43px;
+      right: 5%;
+      background-color: #D1C8C4;
+      position: absolute;
+      top: 17px;
+    }
+  }
+}
+.register-wrapper{
+  border: 2px solid #EFE9E7;
+  background-color: #fff;
+  position: relative;
+  padding: 6px;
+  .register-inner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #F2EFEE;
+    padding: 20px;
+  }
+  .register-subtitle{
+    color: $text-dark;
+    text-align: center;
+    position: relative;
+    display: block;
+    margin-bottom: 1rem;
+
+    &:before{left: -55px;}
+    &:after{right: -55px;}
+    &:before,
+    &:after{
+      content: "";
+      top: 10px;
+      height: 1px;
+      width: 43px;
+      background-color: #D1C8C4;
+      position: absolute;
+    }
+  }
+  .btn{
+    text-align: center;
+    margin: 1rem auto;
+  }
+}

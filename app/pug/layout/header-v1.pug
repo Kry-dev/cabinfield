@@ -1,0 +1,35 @@
+header.header
+    .container.px-0
+        <!--header top section-->
+        .header-top
+            .header-top_left
+                a(href="/").header-logo
+                    img.img-fluid(src="img/general/cabinfield_logo.png", alt="logo")
+                span.header-title
+                    | Classic Amish Craftmanship
+                    | For Your Home and Garden
+                form.header-search
+                    input.form-control(type='search', name="search", placeholder='Search our store', aria-label='Search')
+                    button.btn.btn-outline-primary(type='submit')
+                        i.fa.fa-search
+            .header-top_right
+                .contact
+                    a.contact-phone(href="tel:866-450-WOOD(9663)") 866-450-WOOD (9663)
+                    .contact-hours 6AM - 8PM PST
+                ul.header-top-nav
+                    li
+                        a(href='#', data-toggle='modal', data-target='#zip_enter')
+                            span.text-black My ZIP:
+                            |  19032 
+                            i.fa.fa-pencil.edit.ml-1
+                    li
+                        a(href="#",data-toggle='modal', data-target='#sign_in') Sign in
+                    li
+                        a(href="#")
+                            .fa.fa-shopping-cart
+                            span.text-warning.ml-1 2
+        <!--end header top section-->
+        <!--header navigation section-->
+        include _navbar
+        <!--end of header navigation section-->
+

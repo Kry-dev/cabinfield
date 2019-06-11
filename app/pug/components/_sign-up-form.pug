@@ -1,0 +1,22 @@
+.register-sign-up.mx-auto
+  .modal-dialog
+    .modal-content
+      .modal-body
+        form.form
+          h5.modal-title Create Account
+          .form-group
+            label.col-form-label.col-form-label-sm Your name
+            input.form-control(type='text', name='name')
+          .form-group
+            label.col-form-label.col-form-label-sm Email 
+            input.form-control(type='email', name='email')
+          .form-group
+            label.col-form-label.col-form-label-sm Password
+            input.form-control(type='password', name="pass1")
+          .form-group.form-group-last
+            label.col-form-label.col-form-label-sm Re-enter password
+            input.form-control(type='password', name="pass2")
+          .d-flex
+            button.btn.btn-order.w-100(type='submit') Create Account
+  h6 Already have an account? #[a.more(href="/register.html") Sign in]
+<!--modal sign-in end-->

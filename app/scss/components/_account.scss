@@ -1,0 +1,175 @@
+.account{
+  padding-top: 24px;
+  & > .container{
+    border-bottom: 1px solid $product-main-border;
+    padding-bottom: 36px;
+    margin-bottom: 130px;
+  }
+
+  &-title{
+    font-family: 'PT Serif', serif;
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  &-subtitle{
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    line-height: 1.125rem;
+    font-family: 'Open Sans', sans-serif;
+    border-bottom: 1px solid $product-main-border;
+    margin: 22px 0 20px 0;
+    padding: 0 0 8px 0;
+  }
+  p{
+    font-size: 13px;
+    line-height: 18px;
+  }
+  .addr p{
+    font-size: 13px;
+    line-height: 18px;
+    margin: 0 0 5px;
+    color: #000000;
+  }
+  .account-history {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    padding: 8px 0 0;
+    margin: 0;
+    min-height: 126px;
+    @include media-breakpoint-down(sm){
+      flex-wrap: wrap;
+    }
+    &-left{
+      flex: 0 0 23%;
+      max-width: 23%;
+      @include media-breakpoint-down(md){
+        flex: 0 0 40%;
+        max-width: 40%;
+      }
+      @include media-breakpoint-down(sm){
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 1rem;
+      }
+    }
+    &-right{
+      flex: 0 0 77%;
+      max-width: 77%;
+      @include media-breakpoint-down(md){
+        flex: 0 0 60%;
+        max-width: 60%;
+      }
+      @include media-breakpoint-down(sm){
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
+    .title{
+      margin-top: 2px;
+      font-size: 15px;
+      font-weight: 600;
+      font-family: 'Open Sans', sans-serif;
+    }
+    .value{
+      color: #514646;
+      font-size: 13px;
+      margin-top: 5px;
+      font-family: 'Open Sans', sans-serif;
+      a,span{
+        font-weight: 600;
+      }
+      &.price.total span {
+        font-size: 16px;
+        line-height: 20px;
+        color: $brown;
+      }
+      a.more {
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        padding-top: 3px;
+        padding-bottom: 32px;
+      }
+    }
+  }
+  .product-history{
+    .stars-rating{
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    &-item{
+      display: flex;
+      width: 100%;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      flex-direction: row;
+      & + .product-history-item{
+        border-top: 1px dashed $border-color;
+        margin-top: 17px;
+        padding-top: 11px;
+      }
+      .title{
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 19px;
+      }
+      .value{
+        margin-top: 0;
+      }
+      @include media-breakpoint-down(md){
+        flex-direction: column;
+      }
+    }
+    &-item--left{
+      width: 48%;
+      @include media-breakpoint-down(md){
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+    }
+    &-item--right{
+      width: 53%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+      @include media-breakpoint-down(md){
+        width: 100%;
+      }
+      @include media-breakpoint-down(sm){
+        flex-wrap: wrap;
+      }
+      .value{
+        margin-top: 2px;
+        span{
+          display: block;
+          margin-top: 2px;
+        }
+        @include media-breakpoint-down(sm){
+          margin-bottom: 1rem;
+        }
+      }
+      .stars-rating{
+        margin-top: 3px;
+        width: 133px;
+        .back-stars{
+          margin-bottom: 2px;
+        }
+        a{
+          margin: 0;
+          font-size: 13px;
+          font-family: 'Open Sans';
+        }
+      }
+    }
+  }
+}

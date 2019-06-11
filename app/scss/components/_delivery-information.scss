@@ -1,0 +1,29 @@
+.delivery_information{
+  border: 10px solid #EFE9E7;
+  padding: 24px 30px 65px;
+  position: relative;
+  color: #786C6C;
+  overflow: hidden;
+  margin-bottom: 35px;
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 80%;
+    height: 82px;
+    background: url(../img/svg/van.svg) no-repeat;
+    background-size: contain;
+  }
+  .title{
+    color: #514646;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 20px;
+    margin-bottom: 10px;
+  }
+  p{
+    font-size: 0.8125rem;
+    font-weight: normal;
+  }
+}

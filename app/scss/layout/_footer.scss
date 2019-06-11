@@ -1,0 +1,186 @@
+.footer{
+    min-height: 165px;
+    background: $footer-bg;
+    width: 100%;
+    padding: 25px 0;
+    display: block;
+
+    > .container{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        padding: 0 6px;
+        @include media-breakpoint-down(sm){
+            height: 100%;
+        }
+    }
+    @media (max-width: 1200px) {
+        min-height: auto;
+        > .container {
+            flex-wrap: wrap;
+        }
+
+    }
+    &-logo-box{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 100%;
+        max-width: 200px;
+        margin-right: 3rem;
+        padding: 8px 0 0 0;
+        @media (max-width: 1200px) {
+            margin-bottom: 1rem;
+        }
+    }
+    &-logo{
+        display: block;
+        width: 100%;
+        margin-bottom: 21px;
+    }
+    &-copyright{
+        color: $footer-copy-color;	
+        font-family: "Open Sans";	
+        font-size: 0.6875rem;	
+        line-height: 0.9375rem;
+        @media (max-width: 1200px) {
+            margin-bottom: 1rem;
+        }
+    }
+    &-nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-right: 73px;
+        @media (max-width: 1200px) {
+            margin-bottom: 1rem;
+        }
+        &-list{
+            padding: 0 10px 0 0;
+            margin: 0;
+            list-style: none;
+            width: 109px;
+            &:last-child{
+                padding: 0;
+            }
+        }
+        a{
+            color: $black;	
+            font-family: "Open Sans";	
+            font-size: 0.8125rem;	
+            line-height: 1rem;
+            &:hover,
+            &:focus {
+                cursor: pointer;
+                text-decoration: underline;
+            }
+        }
+    }
+    &-social-wrap{
+        max-width: 128px;
+        display: flex;
+        flex-direction: column;
+        padding-top: 5px;
+        margin-right: 50px;
+    }
+    .contact{
+        padding-top: 3px;
+        margin-right: 24px;
+    }
+    .contact-phone{
+        margin-bottom: 4px;
+        letter-spacing: -0.7px;
+    }
+    .contact-hours{
+        margin-bottom: 4px;
+        letter-spacing: -0.7px;
+    }
+
+    &-social{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        max-width: 240px;
+        @media (max-width: 1200px) {
+            margin-bottom: 1rem;
+        }
+        a{
+            font-size: 30px;
+            line-height: 30px;
+            text-align: left;
+        }
+        @include media-breakpoint-down(md){
+            margin-bottom: 1rem;
+        }
+    }
+    &-subscribe{
+        font-size: 0.75rem;
+        font-weight: bold;
+        line-height: 0.875rem;
+        text-transform: uppercase;
+        max-width: 150px;
+        display: inline-flex;
+        .fa{
+            font-size: 22px;
+            line-height: 24px;
+            margin-right: 5px;
+        }
+    }
+    .img-bbb{
+        display: block;
+        max-height: 102px;
+        margin-top: -6px;
+        @media (max-width: 1200px) {
+            margin-top: 1rem;
+        }
+    }
+    @include media-breakpoint-down(md){
+        //position: relative;
+        height: auto;
+        padding: 2rem 1rem;
+        .contact{
+            margin-bottom: 1rem;
+        }
+    }
+    @include media-breakpoint-down(sm){
+        padding: 1rem 0;
+        .footer-logo-box{
+            width: 100%;
+            max-width: 100%;
+            flex-direction: row;
+            margin: 0 auto;
+            justify-content: space-between;
+        }
+        .footer-logo{
+            max-width: 180px;
+        }
+        .footer-nav{
+            margin-right: 7px;
+        }
+        .footer-social-wrap{
+            margin-right: 0;
+        }
+        .contact{margin-right: auto}
+        .img-bbb{
+            margin-top: 0;
+        }
+    }
+    @media (max-width: 525px) {
+        .footer-nav{
+            display: none;
+        }
+        .footer-logo-box{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .contact,
+        .footer-social-wrap{
+            margin: 0 auto 1rem;
+        }
+        .img-bbb{
+            margin: 0 auto;
+        }
+    }
+}

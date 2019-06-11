@@ -1,0 +1,93 @@
+.home-slider{
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    &-list{
+        display: block;
+        list-style: none;
+    }
+    &-item{
+        width: 100%;
+        padding: 3rem 4rem;
+        min-height: 390px;
+        position: relative;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        @include media-breakpoint-down(md){
+            padding: 0;
+            min-height: auto;
+        }
+    }
+    &-inner{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        max-width: 280px;
+        height: 100%;
+        position: relative;
+        z-index: 15;
+        &.block-center{
+            margin: 0 auto;
+            text-align: center;
+        }
+        &.block-left{
+            margin-right: auto;
+        }
+        &.block-right{
+            margin-left: auto;
+        }
+        @include media-breakpoint-down(md){
+            width: 100%;
+            max-width: 100%;
+            padding: 3rem;
+            margin: auto;
+            text-align: center;
+            .text-dark{
+                color: $white !important;
+            }
+            &:before{
+                content: "";
+                display: block;
+                width: 100%;
+                height: 100%;
+                background: rgba($black, 0.5);
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: -1;
+            }
+            p{
+                max-width: 50%;
+                text-align: center;
+                margin: 0 auto 10px;
+            }
+        }
+        @include media-breakpoint-down(sm){
+            p {
+                max-width: 70%;
+            }
+        }
+    }
+    &-title{
+        font-family: "Playfair Display";
+        font-size: 2.125rem;
+        font-weight: bold;
+        line-height: 2.875rem;
+        margin-bottom: 1rem;
+    }
+    p{
+        font-family: "Open Sans";
+        font-size: 1.125rem;
+        line-height: 1.625rem;
+        margin-bottom: 1.5rem;
+    }
+    .slick-dots{
+        @include media-breakpoint-down(md){
+            left: 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+    }
+}

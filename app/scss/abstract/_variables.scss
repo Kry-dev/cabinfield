@@ -1,0 +1,199 @@
+// Variables
+
+// Customization Bootstrap vars from "app/libs/bootstrap/scss/_variables.scss"
+//
+// Color system
+//
+$white:    #fff ;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black:    #000 ;
+
+$grays: () ;
+$grays: map-merge((
+        "100": $gray-100,
+        "200": $gray-200,
+        "300": $gray-300,
+        "400": $gray-400,
+        "500": $gray-500,
+        "600": $gray-600,
+        "700": $gray-700,
+        "800": $gray-800,
+        "900": $gray-900
+), $grays);
+
+$blue:    #627590;
+$blue-light:    #b0bac7;
+//$indigo:  #6610f2 ;
+//$purple:  #6f42c1 ;
+//$pink:    #e83e8c ;
+$red:     #dc3545 ;
+$orange:  #CC7654 ;
+//$yellow:  #ffc107 ;
+$green:   #28a745 ;
+//$teal:    #20c997 ;
+$cyan:    #17a2b8 ;
+$brown: #CC7654;
+$brown-light: #BD8D61;
+$brown-light-text: #8E8288;
+$brown-text: #544242;
+$brown-dark: #2A0200;
+$brown-nav-element: #8d5a48;
+$text-shadow-light: #FFE9CB;
+$nav-bottom-bg: #F8F6F7;
+$nav-bottom-link-color: #70444A;
+$footer-bg: #F5F3F3;
+$footer-copy-color: #918483;
+$text-dark: #514646;
+$why-widget-bg: #F8F6F7;
+$review-border-color: #D6CDCA;
+$modal-border-color: #F6F4F3;
+$breadcrumb-color: #918483;
+$label-color: #786C6C;
+$text-label: $label-color;
+$product-border-color: #EFE9E7;
+$product-main-border: #E5DFDD;
+$product-brown-text: #8E8484;
+$product-option-checked-bg: #F5F9FF;
+$product-option-checked-border: #879DBC;
+$product-option-shadow-color: #F0EDED;
+$product-option-stain-shadow-color: #DEE3EA;
+$bodrer-color-default: #4A5A71;
+$bkg-color-default: #778DAB;
+$default-bo-shadow-color: #879DBC;
+$modal-wraper-right-bg:#F9F8F8;
+$modal-vrt-border-color: #EFE9E7;
+$option-label-color: #8C7F7F;
+$faq-border: #F2EFEE;
+$widget-border-color: #100000;
+$g:#FAFAFA;
+$h:#D0C7C5;
+$k:#F0ECED;
+$l:#F2EFEE;
+$o:rgb(39, 25, 25);
+
+$colors: () ;
+$colors: map-merge((
+        "blue":       $blue,
+        "green":      $green,
+        "dark":       $text-dark,
+        "white":      $white,
+        "gray":       $gray-600,
+        "gray-dark":  $gray-800
+), $colors);
+
+$primary:       $blue;
+$secondary:     $gray-600 ;
+$success:       $green ;
+$info:          $cyan ;
+$warning:       $orange;
+$danger:        $red ;
+$light:         $gray-100 ;
+$dark:          $text-dark ;
+
+$theme-colors: (
+    "primary":$primary,
+    "warning":$warning
+);
+
+
+// Body
+//
+// Settings for the `<body>` element.
+
+$body-bg:                   $white ;
+$body-color:                $black ;
+
+// Links
+//
+// Style anchor elements.
+
+$link-color:                $primary;
+$link-decoration:           none;
+$link-hover-color:          rgba($link-color, 0.7);
+$link-hover-decoration:     none;
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1170px
+);
+
+// Font
+//
+
+$fa-font-path:                "../fonts/FontAwesome/";
+$font-size-base:              1rem ; // Assumes the browser default, typically `16px`
+$font-size-lg:                ($font-size-base * 1.25) !default;
+$font-size-sm:                ($font-size-base * 0.8125) !default;
+$font-family-base :             inherit;
+
+$border-color:                #D8D8D8;
+$border-radius:               3px;
+
+// Forms
+
+$input-bg:                                $white;
+$input-font-size:                         0.875rem;
+//
+$input-border-color:                      $review-border-color;
+$input-box-shadow:                        inset 0 2px 0 0 #F3F0F0, inset 0 -1px 0 0 $white;
+
+$input-border-radius:                     2px;
+$input-placeholder-color:               $brown-light-text;
+$custom-radio-indicator-border-radius:          50% ;
+$custom-radio-indicator-icon-checked:           str-replace(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='#627590'/></svg>"), "#", "%23");
+
+
+
+// Slick icon entity codes outputs the following
+// "\2190" outputs ascii character "←"
+// "\2192" outputs ascii character "→"
+// "\2022" outputs ascii character "•"
+
+$slick-font-path: "../fonts/slick/";
+$slick-font-family: "slick";
+$slick-loader-path: "../img/plugins/slick/";
+$slick-arrow-color: $brown;
+$slick-dot-color: $white;
+$slick-dot-color-active: $slick-dot-color;
+$slick-prev-character: "\f053";
+$slick-next-character: "\f054";
+$slick-dot-character: "\2022";
+$slick-dot-size: 30px ;
+$slick-opacity-default: 1;
+$slick-opacity-on-hover: 0.75;
+$slick-opacity-not-active: 0.25 ;
+$slick-border-color: #DED8D5;
+
+// Modals
+
+
+$modal-content-border-color:     $modal-border-color;
+$modal-content-border-width:     10px;
+
+$modal-lg:                             990px;
+$modal-md:                             680px;
+$modal-sm:                             450px;
+// Breadcrumbs
+
+$breadcrumb-padding-y:              .4rem;
+$breadcrumb-padding-x:              1rem;
+$breadcrumb-item-padding:           .5rem;
+$breadcrumb-margin-bottom:          .5rem;
+$breadcrumb-bg:                     transparent;
+$breadcrumb-divider-color:          $breadcrumb-color;
+$breadcrumb-active-color:           $breadcrumb-color;
+$breadcrumb-divider:                "\f054";

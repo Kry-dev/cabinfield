@@ -1,0 +1,54 @@
+.ctrl {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  label.ctrl-counter{
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    align-items: center;
+    color: $black;	
+    font-family: "Open Sans";	
+    font-size: 0.8125rem;	
+    line-height: 1.125rem;	
+    text-align: center;
+    padding-left: 1rem;
+    input{
+      width: 40px;
+      border: 0;
+      background: transparent;
+      font-family: "Open Sans";
+      font-weight: bold;
+      padding: 0 3px;
+      &:focus{
+        outline: none;
+        box-shadow: 0;
+      }
+    }
+  }
+  &-btn{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 28px;	
+    border: 1px solid $product-main-border;
+    border-radius: 2px;
+    font-size: 1.3125rem;
+    color: $text-dark;
+    background-color: $white;
+    box-shadow: inset 0 -3px 0 0 $product-option-shadow-color, inset 0 2px 0 0 $white;
+    &:hover,
+    &:focus{
+      cursor: pointer;
+      outline: 0;
+      background-color: darken($white, 10%);
+    }
+  }
+  &-price{
+    color: $brown;
+    font-size: 0.9375rem;
+    min-width: 40px ;
+  }
+}

@@ -1,0 +1,17 @@
+#mainimage_popup.modal.fade.modal--mainimage(tabindex='-1', role='dialog', aria-hidden='true')
+  .modal-dialog.modal-dialog-centered.modal-lg(role='document')
+    .modal-content
+      .modal-body.p-0
+        button.close(type='button', data-dismiss='modal', aria-label='Close')
+          span(aria-hidden='true') ×
+        .mainimage-content-wrap
+          .mainimage-img
+            img(src='#', alt='#')
+          .mainimage-content
+            .title.mb-3
+              a.prev_img(href='#')
+                i.fa.fa-chevron-left
+              span.mx-3
+              a.next_img(href='#')
+                i.fa.fa-chevron-right
+            .text

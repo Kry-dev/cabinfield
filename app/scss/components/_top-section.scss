@@ -1,0 +1,135 @@
+.top-section{
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #F7F6F6;
+  border-bottom: 4px solid #627590;
+  padding: 10px 0;
+  width: 100%;
+  z-index: 100;
+  @media (max-width: 768px){
+    display: none !important;
+  }
+  &-img{
+    width: 50px;
+    height: 50px;
+  }
+  &-left{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 40%;
+    @include media-breakpoint-down(md){
+      max-width: 50%;
+    }
+    @include media-breakpoint-down(sm){
+      display: none !important;
+    }
+    .cancel{
+      text-transform: uppercase;
+      margin-right: 1.75rem;
+      color: $brown;
+      text-decoration: none !important;
+      font-weight: 600;
+      font-size: 0.9375rem;
+      &:before{
+        content: '\f053';
+        font-family: FontAwesome;
+        font-size: 12px;
+        color: #CC7654;
+        position: absolute;
+        margin-top: 3px;
+        margin-left: -20px;
+      }
+      @include media-breakpoint-down(md){
+        display: none;
+      }
+    }
+  }
+  &-title{
+    color: $black;
+    font-family: "Open Sans";
+    font-size: 0.9375rem;
+    font-weight: 600;
+    line-height: 1.5625rem;
+    margin-bottom: 0;
+  }
+  &-descr{
+    margin-left: 1rem;
+
+    ul{
+      display: flex;
+      flex-direction: row;
+    }
+    li + li a{
+      border-left : 1px solid #D6CDCA;
+    }
+    li a{
+      padding: 0 .5rem;
+      text-transform: uppercase;
+      color: $link-color;
+      font-family: "Open Sans";
+      font-size: 0.8125rem;
+      font-weight: 600;
+      line-height: 1.125rem;
+    }
+  }
+  &-right{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 60%;
+    @include media-breakpoint-down(sm){
+      display: none !important;
+    }
+  }
+  .qty {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: .875rem;
+    color: #786C6C;
+    input{
+      width: 55px;
+      background-color: $white;
+      margin: 0 1rem 0 .5rem;
+      font-size: 14px;
+    }
+    @include media-breakpoint-down(md){
+      display: none;
+    }
+  }
+  .price_by_request{
+    margin: 0;
+    max-width: 250px;
+  }
+  .product-price{
+    margin-right: 2.5rem;
+    margin-bottom: 0;
+    width: 240px;
+    @media (max-width: 1200px){
+      margin-right: .5rem;
+    }
+  }
+  .product-price-value{
+    line-height: 1;
+    font-size:  1.25rem;
+  }
+  .btn{
+    //padding: 8px 10px 8px 10px;
+    &-lg{
+      height: auto;
+    }
+    @include media-breakpoint-down(md){
+      min-width: auto;
+    }
+  }
+  .btn-outline{
+    @include media-breakpoint-down(md){
+      display: none !important;
+    }
+  }
+}
