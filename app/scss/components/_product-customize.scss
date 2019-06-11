@@ -244,6 +244,10 @@
         font-weight: normal;
         text-transform: uppercase;
       }
+      span{
+        padding: 3px 0;
+        width: 100%;
+      }
 
     }
     input[type="radio"]:checked + label ,
