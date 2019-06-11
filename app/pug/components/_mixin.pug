@@ -74,10 +74,10 @@ mixin breadcrumbs(items)
             i.fa.fa-home
         each item, index in items
           li.breadcrumb-item
-            a(href=item[1]) 
+            a(href=item[1])
               | #{item[0]}
 
-mixin product-price-simple 
+mixin product-price-simple
   <!--product price -->
   .product-price
     span Product price:
@@ -86,7 +86,7 @@ mixin product-price-simple
     .product-price-shipping
       span + $30.40
       |  Shipping
-      
+
 mixin product-price
   <!--product price -->
   .product-price
@@ -104,21 +104,22 @@ mixin product-price-old
     span The price reflects selected options
     .product-price-value
       | $1,371.00
-      span.price-value-old $1,580.00
+      span.price-value-old $
+        span 1,580.00
     .product-price-shipping
       span + $30.40
-      |  Combined shipping. 
+      |  Combined shipping.
       a.more.border-left.pl-2.ml-1(href='#', data-toggle='modal', data-target='#shipping_options1') shipping options
 
 mixin product-price-old-top
   <!--old product price  for top section-->
   .product-price
     .product-price-value
-      | $1,371.00 
+      | $1,371.00
       span.price-value-old $1,580.00
     .product-price-shipping
       span + $30.40
-      |  Combined shipping. 
+      |  Combined shipping.
       a.more.border-left.pl-2.ml-1(href='#', data-toggle='modal', data-target='#shipping_options1') details
 
 mixin product-price-v2
@@ -128,7 +129,7 @@ mixin product-price-v2
     .product-price-value $1,371.00
     .product-price-shipping
       span + $30.40
-      |  Shipping. 
+      |  Shipping.
       a.more.border-left.pl-2.ml-1(href='#', data-toggle='modal', data-target='#shipping_options2') details
 
 
@@ -142,7 +143,7 @@ mixin product-price-v3
       a.more.d-flex(href='#', data-toggle='modal', data-target='#assembly_quote_request_sent') Assembly quote request sent
 
 
-mixin product-price-v3-top-section 
+mixin product-price-v3-top-section
   //-product price for product-v3 top-section
   .product-price
     .product-price-value $1,371.00
