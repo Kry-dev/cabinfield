@@ -1,0 +1,74 @@
+section.gift
+    form.gift-form()
+        h1.gift-title Buy Gift Certificate, Checkout
+        .gift-form-section
+            .row
+                .col-lg-6
+                    .form-group
+                        label.col-form-label
+                            b Your email
+                        input.form-control(type='text', name='')
+            .border_top
+            b Payment information
+            .row
+                .col-lg-6
+                    .form-group
+                        label.col-form-label Card number
+                        input.form-control(type='number', name='card-number', placeholder="****-****-****-****")
+                .col-lg-6
+                    label.col-form-label Expiration date
+                    .row
+                        .form-group.col-sm-4
+                            select.selectpicker.w-100(name='')
+                                option Month
+                        .form-group.col-sm-4
+                            select.selectpicker.w-100(name='')
+                                option Year
+                        .form-group.col-sm-4
+                            input.form-control(type='text', name='')
+                            label.col-form-label.sec_code Security code
+            .border_top
+            b Billing information
+            .row
+                .col-lg-6.border-dashed-b
+                    .form-address.form-address-billing(action='')
+                        .row
+                            .form-group.col-md-6
+                                label.col-form-label.col-form-label-sm First name
+                                input.form-control(type='text', name='first-name')
+                            .form-group.col-md-6
+                                label.col-form-label.col-form-label-sm Last name
+                                input.form-control(type='text', name='last-name')
+                        .row
+                            .form-group.col-md-12
+                                label.col-form-label.col-form-label-sm Company name (optional)
+                                input.form-control(type='text', name='company-name')
+                        .row
+                            .form-group.col-md-12
+                                label.col-form-label.col-form-label-sm Street address
+                                input.form-control(type='text', name='street-address-1', placeholder='Address line 1')
+                            .form-group.col-md-12
+                                input.form-control(type='text', name='street-address-2', placeholder='Address line 2 (optional)')
+                .col-lg-6.border-dashed-b
+                    .form-address.form-address-billing(action='')
+                        .row
+                            .form-group.col-md-6
+                                label.col-form-label.col-form-label-sm City
+                                input.form-control(type='text', name='city')
+                            .form-group.col-md-6
+                                label.col-form-label.col-form-label-sm State
+                                input.form-control(type='text', name='state')
+                        .row
+                            .form-group.col-md-6
+                                label.col-form-label.col-form-label-sm Zip-code
+                                input.form-control(type='text', name='Zip-code')
+                            .form-group.col-md-6
+                                label.col-form-label.col-form-label-sm Ext (optional)
+                                input.form-control(type='text', name='ext')
+                            .form-group.col-md-6
+                                label.col-form-label.col-form-label-sm Phone
+                                input.form-control(type='text', name='phone')
+
+            .button_section.d-flex.justify-content-between
+                button.back.flat_bg(type='button') Back
+                button.next.btn-order(type='button') Complete order

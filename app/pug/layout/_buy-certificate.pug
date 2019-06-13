@@ -1,10 +1,10 @@
 section.gift
-    .gift-form
+    form.gift-form()
         h1.gift-title Buy Gift Certificate
         .gift-form-row.amount_section
             label.col-form-label.mb-0.py-0 Gift certificate amount:
-            select.selectpicker.form-control
-                option(value='1', selected='selected') Select amount
+            select.selectpicker.form-control(name = "amount", required)
+                option(value='', selected='selected', disabled) Select amount
                 option(value='1') $10,000
                 option(value='2') $8,000
                 option(value='3') $5,000
@@ -22,21 +22,21 @@ section.gift
                 .col-lg-6
                     .form-group
                         label.col-form-label Your name
-                        input.form-control(type='text', name='')
+                        input.form-control(type='text', name='name', required='required')
                     .form-group
                         label.col-form-label Recipient’s email address
-                        input.form-control(type='text', name='')
+                        input.form-control(type='text', name='email', required='required')
                     .form-group
                         label.col-form-label Re-type recipient’s email address
-                        input.form-control(type='text', name='')
+                        input.form-control(type='text', name='reemail', required='required')
                 .col-lg-6
                     .form-group
                         label.col-form-label Recipient’s name
-                        input.form-control(type='text', name='')
+                        input.form-control(type='text', name='recipient', required='required')
                     .form-group
                         label.col-form-label Message
-                        textarea.form-control(name='', rows="4")
+                        textarea.form-control(name='message', rows="4")
                     a.certificate_example.more(href='#', data-toggle='modal', data-target='#certificate_example') See example of gift certificate
             .button_section.d-flex.justify-content-between
                 button.back.flat_bg(type='button') Back
-                button.next.btn-order(type='button') Proceed to checkout
+                button.next.btn-order(type='submit') Proceed to checkout

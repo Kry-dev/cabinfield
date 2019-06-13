@@ -17,12 +17,12 @@
   <body><!--CONTENT-->
     <main class="content p-0"><!--Gift form 01-->
       <section class="gift">
-        <div class="gift-form">
+        <form class="gift-form">
           <h1 class="gift-title">Buy Gift Certificate</h1>
           <div class="gift-form-row amount_section">
             <label class="col-form-label mb-0 py-0">Gift certificate amount:</label>
-            <select class="selectpicker form-control">
-              <option value="1" selected="selected">Select amount</option>
+            <select class="selectpicker form-control" name="amount" required>
+              <option value="" selected="selected" disabled>Select amount</option>
               <option value="1">$10,000</option>
               <option value="2">$8,000</option>
               <option value="3">$5,000</option>
@@ -42,34 +42,34 @@
               <div class="col-lg-6">
                 <div class="form-group">
                   <label class="col-form-label">Your name</label>
-                  <input class="form-control" type="text" name="">
+                  <input class="form-control" type="text" name="name" required="required">
                 </div>
                 <div class="form-group">
                   <label class="col-form-label">Recipient’s email address</label>
-                  <input class="form-control" type="text" name="">
+                  <input class="form-control" type="text" name="email" required="required">
                 </div>
                 <div class="form-group">
                   <label class="col-form-label">Re-type recipient’s email address</label>
-                  <input class="form-control" type="text" name="">
+                  <input class="form-control" type="text" name="reemail" required="required">
                 </div>
               </div>
               <div class="col-lg-6">
                 <div class="form-group">
                   <label class="col-form-label">Recipient’s name</label>
-                  <input class="form-control" type="text" name="">
+                  <input class="form-control" type="text" name="recipient" required="required">
                 </div>
                 <div class="form-group">
                   <label class="col-form-label">Message</label>
-                  <textarea class="form-control" name="" rows="4"></textarea>
+                  <textarea class="form-control" name="message" rows="4"></textarea>
                 </div><a class="certificate_example more" href="#" data-toggle="modal" data-target="#certificate_example">See example of gift certificate</a>
               </div>
             </div>
             <div class="button_section d-flex justify-content-between">
               <button class="back flat_bg" type="button">Back</button>
-              <button class="next btn-order" type="button">Proceed to checkout</button>
+              <button class="next btn-order" type="submit">Proceed to checkout</button>
             </div>
           </div>
-        </div>
+        </form>
       </section><!--Gift form 01 end-->
     </main><!--CONTENT END-->
   </body><!--MODAL-->

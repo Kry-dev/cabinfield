@@ -8,6 +8,9 @@
     width: 100%;
     max-width: 750px;
     padding: 2.25rem 0;
+    &-grey{
+      background: #F9F9F9;
+    }
     &-row{
       display: flex;
       width: 100%;

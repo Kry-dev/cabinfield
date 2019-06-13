@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE = edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
+    <meta property="og:image" content="path/to/image.jpg">
+    <meta name="keywords" content="">
+    <link rel="icon" href="img/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+    <meta name="theme-color" content="#000">
+    <link rel="stylesheet" type="text/css" href="fonts/fonts.css">
+    <link rel="stylesheet" type="text/css" href="css/main.min.css">
+    <title>Cabinfield Gift Certificate
+    </title>
+  </head>
+  <body><!--CONTENT-->
+    <main class="content p-0"><!--Gift form 01-->
+      <section class="gift">
+        <form class="gift-form">
+          <h1 class="gift-title">Buy Gift Certificate, Checkout</h1>
+          <div class="gift-form-section">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label class="col-form-label"><b>Your email</b></label>
+                  <input class="form-control" type="text" name="">
+                </div>
+              </div>
+            </div>
+            <div class="border_top"></div><b>Payment information</b>
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label class="col-form-label">Card number</label>
+                  <input class="form-control" type="number" name="card-number" placeholder="****-****-****-****">
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <label class="col-form-label">Expiration date</label>
+                <div class="row">
+                  <div class="form-group col-sm-4">
+                    <select class="selectpicker w-100" name="">
+                      <option>Month</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-sm-4">
+                    <select class="selectpicker w-100" name="">
+                      <option>Year</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-sm-4">
+                    <input class="form-control" type="text" name="">
+                    <label class="col-form-label sec_code">Security code</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="border_top"></div><b>Billing information</b>
+            <div class="row">
+              <div class="col-lg-6 border-dashed-b">
+                <div class="form-address form-address-billing" action="">
+                  <div class="row">
+                    <div class="form-group col-md-6">
+                      <label class="col-form-label col-form-label-sm">First name</label>
+                      <input class="form-control" type="text" name="first-name">
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label class="col-form-label col-form-label-sm">Last name</label>
+                      <input class="form-control" type="text" name="last-name">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="form-group col-md-12">
+                      <label class="col-form-label col-form-label-sm">Company name (optional)</label>
+                      <input class="form-control" type="text" name="company-name">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="form-group col-md-12">
+                      <label class="col-form-label col-form-label-sm">Street address</label>
+                      <input class="form-control" type="text" name="street-address-1" placeholder="Address line 1">
+                    </div>
+                    <div class="form-group col-md-12">
+                      <input class="form-control" type="text" name="street-address-2" placeholder="Address line 2 (optional)">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 border-dashed-b">
+                <div class="form-address form-address-billing" action="">
+                  <div class="row">
+                    <div class="form-group col-md-6">
+                      <label class="col-form-label col-form-label-sm">City</label>
+                      <input class="form-control" type="text" name="city">
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label class="col-form-label col-form-label-sm">State</label>
+                      <input class="form-control" type="text" name="state">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="form-group col-md-6">
+                      <label class="col-form-label col-form-label-sm">Zip-code</label>
+                      <input class="form-control" type="text" name="Zip-code">
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label class="col-form-label col-form-label-sm">Ext (optional)</label>
+                      <input class="form-control" type="text" name="ext">
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label class="col-form-label col-form-label-sm">Phone</label>
+                      <input class="form-control" type="text" name="phone">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="button_section d-flex justify-content-between">
+              <button class="back flat_bg" type="button">Back</button>
+              <button class="next btn-order" type="button">Complete order</button>
+            </div>
+          </div>
+        </form>
+      </section><!--Gift form 01 end-->
+    </main><!--CONTENT END-->
+  </body><!--MODAL-->
+  <div class="modal fade" id="certificate_example" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content">
+        <div class="certificate modal-body p-0">
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button><img class="modal-img-bg" src="img/general/giftcard.jpg" alt="#">
+          <div class="certificate-wrap">
+            <div class="price_to_from">
+              <div class="price">$50</div>
+              <div class="to">to<span>Jane Smith</span></div>
+              <div class="from">from<span>John Smith</span></div>
+            </div>
+            <div class="personal_msg">Personal message to recipient will appear here</div>
+            <div class="claim_code">
+              <div class="name">Your claim code:</div>
+              <div class="code">DRGH-RFGMVV-GFNJ</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!--MODAL END-->
+  <script src="js/jquery.js"></script>
+  <script src="js/libs.min.js"></script>
+  <script src="js/main.js"></script>
+</html>
