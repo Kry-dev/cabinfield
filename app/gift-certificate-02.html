@@ -433,40 +433,10 @@
       </div>
     </header><!--HEADER END-->
 <!--CONTENT-->
-    <main class="content gift-certificate"><!--Gift top section-->
-      <section class="about">
-        <div class="container">
-          <div class="row mb-3">
-            <div class="col-lg-6 offset-lg-3 col-md-12"><img class="img-fluid" src="img/general/welcome.png" alt="#">
-              <h1 class="about-main-title">Cabinfield Gift Certificate</h1>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-4 offset-md-2 col-sm-12">
-              <h6 class="about-title">I want to buy gift certificate</h6>
-              <p>
-                A good place to tell how awesome it is to buy a gift  certificate and how happy the recipient will be. Tell the details, gift certificate do not expires and etc.Recipient will recive an email with the gidt card with certificate number.<a class="more text-brown" href="#" data-toggle="modal" data-target="#certificate_example">See example</a></p>
-              <p><a class="btn btn-order buy_gift_certificate" href="#">Buy gift certificate</a></p>
-            </div>
-            <div class="col-md-4 col-sm-12">
-              <h6 class="about-title">I want to claim gift certificate</h6>
-              <p>Information about how to claim cabinfield gift certificate. We do not charge your credit card until we are ready to ship your order. If you are ordering a gazebo or an item that is customized by staining.</p>
-              <div class="d-flex flex-column mt-3 mb-0">
-                <p class="mb-0">Check gift-certificate balance</p>
-                <form class="form-group form-group-apply row">
-                  <div class="col-sm-8 pr-0">
-                    <input class="form-control" type="text" name="" placeholder="Enter gift certificate code">
-                  </div>
-                  <div class="col-sm-4"><a class="btn btn-outline-primary" href="#">View ballance</a></div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <div class="overflow_step step1">
-        <div class="container inner_wrapper">
-          <div class="title">Buy Gift Certificate</div>
+    <main class="content"><!--Gift top section-->
+      <section class="gift">
+        <div class="gift-form">
+          <div class="gift-title">Buy Gift Certificate</div>
           <div class="amount_section">
             <label class="col-form-label mb-0 py-0">Gift certificate amount:</label>
             <select class="selectpicker form-control">
@@ -484,162 +454,41 @@
               <option value="11">$50</option>
               <option value="12">Custom</option>
             </select>
-          </div>
-          <div class="from form_section">
-            <div class="row">
-              <div class="col-lg-6">
-                <div class="form-group">
-                  <label class="col-form-label">Your name</label>
-                  <input class="form-control" type="text" name="">
-                </div>
-                <div class="form-group">
-                  <label class="col-form-label">Recipient’s email address</label>
-                  <input class="form-control" type="text" name="">
-                </div>
-                <div class="form-group">
-                  <label class="col-form-label">Re-type recipient’s email address</label>
-                  <input class="form-control" type="text" name="">
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="form-group">
-                  <label class="col-form-label">Recipient’s name</label>
-                  <input class="form-control" type="text" name="">
-                </div>
-                <div class="form-group">
-                  <label class="col-form-label">Message</label>
-                  <textarea class="form-control" name=""></textarea>
-                </div><a class="certificate_example" href="#" data-toggle="modal" data-target="#certificate_example">See example of gift certificate</a>
-              </div>
-            </div>
-            <div class="button_section d-flex justify-content-between">
-              <button class="back flat_bg" type="button">Back</button>
-              <button class="next btn-order" type="button">Proceed to checkout</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="overflow_step step2">
-        <div class="container inner_wrapper">
-          <div class="title">Buy Gift Certificate, Checkout</div>
-          <div class="form_section">
-            <div class="row">
-              <div class="col-lg-6">
-                <div class="form-group">
-                  <label class="col-form-label"><b>Your email</b></label>
-                  <input class="form-control" type="text" name="">
-                </div>
-              </div>
-            </div>
-            <div class="border_top"></div><b>Payment information</b>
-            <div class="row">
-              <div class="col-lg-6">
-                <div class="form-group">
-                  <label class="col-form-label">Card number</label>
-                  <input class="form-control" type="text" name="">
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <label class="col-form-label">Expiration date</label>
-                <div class="row">
-                  <div class="form-group col-sm-4">
-                    <select class="selectpicker w-100" name="">
-                      <option>Month</option>
-                    </select>
-                  </div>
-                  <div class="form-group col-sm-4">
-                    <select class="selectpicker w-100" name="">
-                      <option>Year</option>
-                    </select>
-                  </div>
-                  <div class="form-group col-sm-4">
+            <div class="from form_section">
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label class="col-form-label">Your name</label>
                     <input class="form-control" type="text" name="">
-                    <label class="col-form-label sec_code">Security code</label>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-form-label">Recipient’s email address</label>
+                    <input class="form-control" type="text" name="">
+                  </div>
+                  <div class="form-group">
+                    <label class="col-form-label">Re-type recipient’s email address</label>
+                    <input class="form-control" type="text" name="">
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="border_top"></div><b>Billing information</b>
-            <div class="row">
-              <div class="col-lg-6 border-dashed-b">
-                <div class="form-address form-address-billing" action="">
-                  <div class="row">
-                    <div class="form-group col-md-6">
-                      <label class="col-form-label col-form-label-sm">First name</label>
-                      <input class="form-control" type="text" name="first-name">
-                    </div>
-                    <div class="form-group col-md-6">
-                      <label class="col-form-label col-form-label-sm">Last name</label>
-                      <input class="form-control" type="text" name="last-name">
-                    </div>
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label class="col-form-label">Recipient’s name</label>
+                    <input class="form-control" type="text" name="">
                   </div>
-                  <div class="row">
-                    <div class="form-group col-md-12">
-                      <label class="col-form-label col-form-label-sm">Company name (optional)</label>
-                      <input class="form-control" type="text" name="company-name">
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="form-group col-md-12">
-                      <label class="col-form-label col-form-label-sm">Street address</label>
-                      <input class="form-control" type="text" name="street-address-1" placeholder="Address line 1">
-                    </div>
-                    <div class="form-group col-md-12">
-                      <input class="form-control" type="text" name="street-address-2" placeholder="Address line 2 (optional)">
-                    </div>
-                  </div>
+                  <div class="form-group">
+                    <label class="col-form-label">Message</label>
+                    <textarea class="form-control" name=""></textarea>
+                  </div><a class="certificate_example" href="#" data-toggle="modal" data-target="#certificate_example">See example of gift certificate</a>
                 </div>
               </div>
-              <div class="col-lg-6 border-dashed-b">
-                <div class="form-address form-address-billing" action="">
-                  <div class="row">
-                    <div class="form-group col-md-6">
-                      <label class="col-form-label col-form-label-sm">City</label>
-                      <input class="form-control" type="text" name="city">
-                    </div>
-                    <div class="form-group col-md-6">
-                      <label class="col-form-label col-form-label-sm">State</label>
-                      <input class="form-control" type="text" name="state">
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="form-group col-md-6">
-                      <label class="col-form-label col-form-label-sm">Zip-code</label>
-                      <input class="form-control" type="text" name="Zip-code">
-                    </div>
-                    <div class="form-group col-md-6">
-                      <label class="col-form-label col-form-label-sm">Ext (optional)</label>
-                      <input class="form-control" type="text" name="ext">
-                    </div>
-                    <div class="form-group col-md-6">
-                      <label class="col-form-label col-form-label-sm">Phone</label>
-                      <input class="form-control" type="text" name="phone">
-                    </div>
-                  </div>
-                </div>
+              <div class="button_section d-flex justify-content-between">
+                <button class="back flat_bg" type="button">Back</button>
+                <button class="next btn-order" type="button">Proceed to checkout</button>
               </div>
-            </div>
-            <div class="button_section d-flex justify-content-between">
-              <button class="back flat_bg" type="button">Back</button>
-              <button class="next btn-order" type="button">Complete order</button>
             </div>
           </div>
         </div>
-      </div>
-      <div class="overflow_step step3">
-        <div class="container inner_wrapper">
-          <div class="col-md-8 offset-md-2 col-sm-8"><img class="img-fluid" src="img/general/welcome.png" alt="#">
-            <h1 class="about-main-title text-center">Cabinfield Gift Certificate</h1>
-          </div>
-          <div class="text_content">
-            <p class="thank_you">Thank you for shopping!</p>
-            <p>Recipient will recive an email with the gift card with certificate number</p>
-            <p>
-              <button class="next btn-order" type="button">Continue shopping</button>
-            </p>
-          </div>
-        </div>
-      </div><!--Gift top section end-->
+      </section><!--Gift top section end-->
     </main><!--CONTENT END-->
 <!--FOOTER-->
     <footer class="footer">
