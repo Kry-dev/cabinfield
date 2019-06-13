@@ -30,7 +30,7 @@
             </div>
             <div class="border_top"></div>
             <div class="col-form-label mb-0">Payment information</div>
-            <div class="row">
+            <div class="row border-b-dashed pb-3 mb-3">
               <div class="col-lg-6">
                 <div class="form-group">
                   <label class="col-form-label">Card number</label>
@@ -57,10 +57,11 @@
                 </div>
               </div>
             </div>
-            <div class="border_top"></div><b>Billing information</b>
-            <div class="row">
+            <div class="border_top"></div>
+            <div class="col-form-label mb-0">Billing information</div>
+            <div class="row border-b-dashed mb-4 pb-4">
               <div class="col-lg-6 border-dashed-b">
-                <div class="form-address form-address-billing" action="">
+                <div class="form-address form-address-billing">
                   <div class="row">
                     <div class="form-group col-md-6">
                       <label class="col-form-label col-form-label-sm">First name</label>
@@ -80,16 +81,16 @@
                   <div class="row">
                     <div class="form-group col-md-12">
                       <label class="col-form-label col-form-label-sm">Street address</label>
-                      <input class="form-control" type="text" name="street-address-1" placeholder="Address line 1">
+                      <input class="form-control street-addr" type="text" name="street-address-1" placeholder="Address line 1">
                     </div>
-                    <div class="form-group col-md-12">
-                      <input class="form-control" type="text" name="street-address-2" placeholder="Address line 2 (optional)">
+                    <div class="form-group col-md-12 mt-2">
+                      <input class="form-control street-addr" type="text" name="street-address-2" placeholder="Address line 2 (optional)">
                     </div>
                   </div>
                 </div>
               </div>
               <div class="col-lg-6 border-dashed-b">
-                <div class="form-address form-address-billing" action="">
+                <div class="form-address form-address-billing">
                   <div class="row">
                     <div class="form-group col-md-6">
                       <label class="col-form-label col-form-label-sm">City</label>
@@ -103,15 +104,15 @@
                   <div class="row">
                     <div class="form-group col-md-6">
                       <label class="col-form-label col-form-label-sm">Zip-code</label>
-                      <input class="form-control" type="text" name="Zip-code">
+                      <input class="form-control" type="text" name="Zip-code" placeholder="●●●●">
                     </div>
                     <div class="form-group col-md-6">
                       <label class="col-form-label col-form-label-sm">Ext (optional)</label>
-                      <input class="form-control" type="text" name="ext">
+                      <input class="form-control" type="text" name="ext" placeholder="●●●●">
                     </div>
                     <div class="form-group col-md-6">
                       <label class="col-form-label col-form-label-sm">Phone</label>
-                      <input class="form-control" type="text" name="phone">
+                      <input class="form-control" type="text" name="phone" placeholder="(●●●)●●●●●●●">
                     </div>
                   </div>
                 </div>

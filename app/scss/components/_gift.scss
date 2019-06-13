@@ -88,6 +88,7 @@
   &-checkout{
     .gift-form-section{
       padding: 1.5rem 2.5rem;
+      background: #F9F9F9;
       .col-form-label{
         font-family: 'Open Sans';
         font-style: normal;
@@ -96,6 +97,10 @@
         line-height: 18px;
         margin-bottom: .25rem;
       }
+    }
+    .col-form-label.sec_code{
+      position: absolute;
+      top: -28px;
     }
     .border-b-dashed{
       padding-bottom: .5rem;
@@ -106,6 +111,20 @@
       &:after{
         border-top: .3em solid $label-color;
       }
+    }
+    .form-address{
+      margin-top: 5px;
+      .col-form-label{
+        margin-bottom: 0;
+      }
+      .form-group{
+        margin-bottom: .25rem;
+      }
+    }
+    input.street-addr::placeholder{
+      color: #918483;
+      font-size: 13px;
+      line-height: 16px;
     }
   }
 }
