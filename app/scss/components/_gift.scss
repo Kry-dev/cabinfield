@@ -4,4 +4,80 @@
   background: $white ;
   display: flex;
   justify-content: center;
+  &-form{
+    width: 100%;
+    max-width: 750px;
+    padding: 2.25rem 0;
+    &-row{
+      display: flex;
+      width: 100%;
+      &.amount_section{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border: 6px solid $form-border-color;
+        padding: 30px;
+        background: url(../img/general/amount-bg.png) no-repeat center bottom;
+        background-size: cover;
+        margin-bottom: 1.5rem;
+        > label{
+          width: 150px;
+          color: $label-color;
+          font-size: 13px;
+          font-weight: 600;
+          line-height: 16px;
+          margin-right: 5px;
+        }
+        >.bootstrap-select {
+          max-width: 210px;
+          >.dropdown-toggle{
+            padding: .35rem .65rem;
+          }
+          >.dropdown-toggle::after{
+            border-top: .3em solid $label-color;
+          }
+        }
+      }
+    }
+    &-section{
+      width: 100%;
+      border: 1px solid $product-main-border;
+      padding: 2.25rem 2.5rem;
+      label.col-form-label{
+        margin-bottom: 0;
+        padding: .2rem 1px;
+      }
+      .form-control{
+        padding: .19rem .75rem;
+      }
+      .form-group{
+        margin-bottom: 1rem;
+      }
+    }
+    .certificate_example{
+      display: block;
+      text-align: right;
+      font-size: 14px;
+      line-height: 16px;
+      margin-bottom: 0.25rem;
+      &.more:after{
+        padding: 0 .25rem;
+      }
+    }
+    .back{
+      min-width: 138px;
+    }
+    .next.btn-order{
+      min-width: 238px;
+    }
+  }
+  &-title{
+    padding: 4px;
+    color: $text-dark;
+    font-weight: bold;
+    font-size: 26px;
+    margin-bottom: 1.3125rem;
+  }
+
 }

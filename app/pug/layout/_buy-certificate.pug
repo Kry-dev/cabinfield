@@ -1,7 +1,7 @@
 section.gift
     .gift-form
-        .gift-title Buy Gift Certificate
-        .amount_section
+        h1.gift-title Buy Gift Certificate
+        .gift-form-row.amount_section
             label.col-form-label.mb-0.py-0 Gift certificate amount:
             select.selectpicker.form-control
                 option(value='1', selected='selected') Select amount
@@ -17,26 +17,26 @@ section.gift
                 option(value='10') $100
                 option(value='11') $50
                 option(value='12') Custom
-            .from.form_section
-                .row
-                    .col-lg-6
-                        .form-group
-                            label.col-form-label Your name
-                            input.form-control(type='text', name='')
-                        .form-group
-                            label.col-form-label Recipient’s email address
-                            input.form-control(type='text', name='')
-                        .form-group
-                            label.col-form-label Re-type recipient’s email address
-                            input.form-control(type='text', name='')
-                    .col-lg-6
-                        .form-group
-                            label.col-form-label Recipient’s name
-                            input.form-control(type='text', name='')
-                        .form-group
-                            label.col-form-label Message
-                            textarea.form-control(name='')
-                        a.certificate_example(href='#', data-toggle='modal', data-target='#certificate_example') See example of gift certificate
-                .button_section.d-flex.justify-content-between
-                    button.back.flat_bg(type='button') Back
-                    button.next.btn-order(type='button') Proceed to checkout
+        .gift-form-section
+            .row.border-b-dashed.mb-4
+                .col-lg-6
+                    .form-group
+                        label.col-form-label Your name
+                        input.form-control(type='text', name='')
+                    .form-group
+                        label.col-form-label Recipient’s email address
+                        input.form-control(type='text', name='')
+                    .form-group
+                        label.col-form-label Re-type recipient’s email address
+                        input.form-control(type='text', name='')
+                .col-lg-6
+                    .form-group
+                        label.col-form-label Recipient’s name
+                        input.form-control(type='text', name='')
+                    .form-group
+                        label.col-form-label Message
+                        textarea.form-control(name='', rows="4")
+                    a.certificate_example.more(href='#', data-toggle='modal', data-target='#certificate_example') See example of gift certificate
+            .button_section.d-flex.justify-content-between
+                button.back.flat_bg(type='button') Back
+                button.next.btn-order(type='button') Proceed to checkout

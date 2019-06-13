@@ -15,11 +15,11 @@
     </title>
   </head>
   <body><!--CONTENT-->
-    <main class="content"><!--Gift form 01-->
+    <main class="content p-0"><!--Gift form 01-->
       <section class="gift">
         <div class="gift-form">
-          <div class="gift-title">Buy Gift Certificate</div>
-          <div class="amount_section">
+          <h1 class="gift-title">Buy Gift Certificate</h1>
+          <div class="gift-form-row amount_section">
             <label class="col-form-label mb-0 py-0">Gift certificate amount:</label>
             <select class="selectpicker form-control">
               <option value="1" selected="selected">Select amount</option>
@@ -36,37 +36,37 @@
               <option value="11">$50</option>
               <option value="12">Custom</option>
             </select>
-            <div class="from form_section">
-              <div class="row">
-                <div class="col-lg-6">
-                  <div class="form-group">
-                    <label class="col-form-label">Your name</label>
-                    <input class="form-control" type="text" name="">
-                  </div>
-                  <div class="form-group">
-                    <label class="col-form-label">Recipient’s email address</label>
-                    <input class="form-control" type="text" name="">
-                  </div>
-                  <div class="form-group">
-                    <label class="col-form-label">Re-type recipient’s email address</label>
-                    <input class="form-control" type="text" name="">
-                  </div>
+          </div>
+          <div class="gift-form-section">
+            <div class="row border-b-dashed mb-4">
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label class="col-form-label">Your name</label>
+                  <input class="form-control" type="text" name="">
                 </div>
-                <div class="col-lg-6">
-                  <div class="form-group">
-                    <label class="col-form-label">Recipient’s name</label>
-                    <input class="form-control" type="text" name="">
-                  </div>
-                  <div class="form-group">
-                    <label class="col-form-label">Message</label>
-                    <textarea class="form-control" name=""></textarea>
-                  </div><a class="certificate_example" href="#" data-toggle="modal" data-target="#certificate_example">See example of gift certificate</a>
+                <div class="form-group">
+                  <label class="col-form-label">Recipient’s email address</label>
+                  <input class="form-control" type="text" name="">
+                </div>
+                <div class="form-group">
+                  <label class="col-form-label">Re-type recipient’s email address</label>
+                  <input class="form-control" type="text" name="">
                 </div>
               </div>
-              <div class="button_section d-flex justify-content-between">
-                <button class="back flat_bg" type="button">Back</button>
-                <button class="next btn-order" type="button">Proceed to checkout</button>
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label class="col-form-label">Recipient’s name</label>
+                  <input class="form-control" type="text" name="">
+                </div>
+                <div class="form-group">
+                  <label class="col-form-label">Message</label>
+                  <textarea class="form-control" name="" rows="4"></textarea>
+                </div><a class="certificate_example more" href="#" data-toggle="modal" data-target="#certificate_example">See example of gift certificate</a>
               </div>
+            </div>
+            <div class="button_section d-flex justify-content-between">
+              <button class="back flat_bg" type="button">Back</button>
+              <button class="next btn-order" type="button">Proceed to checkout</button>
             </div>
           </div>
         </div>
