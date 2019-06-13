@@ -127,4 +127,39 @@
       line-height: 16px;
     }
   }
+  &-thanks{
+    .gift-form{
+      padding: 4rem 0;
+    }
+    &-title{
+      margin-top: -3rem;
+      font-family: 'PT Serif';
+      font-style: normal;
+      font-weight: bold;
+      font-size: 26px;
+      margin-bottom: 0;
+    }
+    &-descr{
+      max-width: 380px;
+      margin: 0 auto;
+      font-family: 'Open Sans';
+      font-style: normal;
+      font-weight: normal;
+      font-size: 13px;
+      line-height: 25px;
+      color: $text-dark;
+      p{
+        color: inherit;
+        font-size: inherit;
+        line-height: inherit;
+        font-weight: inherit;
+      }
+      .thank_you{
+        font-weight: bold;
+        font-size: 17px;
+        line-height: 23px;
+        color: $text-dark;
+      }
+    }
+  }
 }
