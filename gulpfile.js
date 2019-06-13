@@ -42,6 +42,21 @@ gulp.task(cssSyntax, function() {
         }));
 });
 
+// Browsersync
+gulp.task('browsersync', function() {
+  browsersync({
+    server: {
+      baseDir: 'app'
+    },
+    port: 3000,
+    open: true,
+    notify: false,
+    // online: false, // Work Offline Without Internet Connection
+    // tunnel: true
+    // tunnel: "cabinfiled" // Demonstration page: http://projectname.localtunnel.me
+  })
+});
+
 // Работа с Pug
 gulp.task('pug', function() {
     return gulp.src('app/pug/pages/*.pug')
@@ -52,22 +67,8 @@ gulp.task('pug', function() {
         .on("error", notify.onError(function(error) {
             return "Message to the notifier: " + error.message;
         }))
-        .pipe(gulp.dest('app'));
-});
-
-// Browsersync
-gulp.task('browsersync', function() {
-    browsersync({
-        server: {
-            baseDir: 'app'
-        },
-        port: 8081,
-        notify: false,
-        // open: false,
-        // online: false, // Work Offline Without Internet Connection
-        // tunnel: true
-        // tunnel: "cabinfiled" // Demonstration page: http://projectname.localtunnel.me
-    })
+        .pipe(gulp.dest('app'))
+        .pipe(browserSync.reload());
 });
 
 // Работа с JS
@@ -118,8 +119,8 @@ gulp.task('sprite', ['cleansprite', 'spritemade']);
 
 // Слежение
 gulp.task('watch', ['browsersync', cssSyntax, 'scripts'], function() {
-    gulp.watch('app/'+cssSyntax+'/**/*.'+cssSyntax+'', [cssSyntax]);
     gulp.watch('app/pug/**/*.pug', ['pug']);
+    gulp.watch('app/'+cssSyntax+'/**/*.'+cssSyntax+'', [cssSyntax]);
     gulp.watch('app/*.html', browsersync.reload);
     gulp.watch(['app/js/*.js', '!app/js/libs.min.js', '!app/js/jquery.js'], ['scripts']);
 });
