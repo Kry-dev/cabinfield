@@ -1,31 +1,31 @@
-section.gift
+section.gift.gift-checkout
     form.gift-form()
         h1.gift-title Buy Gift Certificate, Checkout
         .gift-form-section
-            .row
+            .row.border-b-dashed
                 .col-lg-6
                     .form-group
                         label.col-form-label
                             b Your email
                         input.form-control(type='text', name='')
             .border_top
-            b Payment information
+            .col-form-label.mb-0 Payment information
             .row
                 .col-lg-6
                     .form-group
                         label.col-form-label Card number
-                        input.form-control(type='number', name='card-number', placeholder="****-****-****-****")
+                        input.form-control(type='number', name='card-number', placeholder="●●●●-●●●●-●●●●-●●●●")
                 .col-lg-6
                     label.col-form-label Expiration date
                     .row
-                        .form-group.col-sm-4
+                        .form-group.col-4.pr-0
                             select.selectpicker.w-100(name='')
                                 option Month
-                        .form-group.col-sm-4
+                        .form-group.col-4
                             select.selectpicker.w-100(name='')
                                 option Year
-                        .form-group.col-sm-4
-                            input.form-control(type='text', name='')
+                        .form-group.col-4.pl-0
+                            input.form-control(type='text', name='', placeholder="●●●")
                             label.col-form-label.sec_code Security code
             .border_top
             b Billing information
