@@ -214,6 +214,7 @@
     border: 1px solid $review-border-color;
     span{
       padding-left: 5px;
+      color: $label-color;
     }
     &:hover,
       &:focus{
@@ -250,6 +251,7 @@
       span{
         padding: 3px 0;
         width: 100%;
+        color: $black;
       }
 
     }
