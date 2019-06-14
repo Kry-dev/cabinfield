@@ -60,11 +60,12 @@ $(document).ready(function(){
 	});
 	/*related list slider*/
 	$('.related-list').each(function(){
-		var slidesToShow = this.childElementCount;
-		var slickIndividual = $(this);
+		const slidesToShow = this.childElementCount;
+		console.log(slidesToShow);
+		const slickIndividual = $(this);
 		slickIndividual.next().css('display','none');
-		var winWidth = window.innerWidth;
-		var initRelatedSlider = function(){
+		const winWidth = window.innerWidth;
+		const initRelatedSlider = function(){
 			slickIndividual.next().css('display','flex');
 			slickIndividual.slick({
 				infinite: true,
@@ -102,11 +103,20 @@ $(document).ready(function(){
 							slidesToShow: 2,
 							slidesToScroll: 2
 						}
+					},
+					{
+						breakpoint: 500,
+						settings: {
+							vertical: false,
+							slidesToShow: 1,
+							slidesToScroll: 1
+						}
 					}
 				]
 			});
-		}
-		if((slidesToShow >= 5 || winWidth <= 768) || (winWidth <= 768 && slidesToShow >= 3)){
+		};
+		// if((slidesToShow >= 5 || winWidth <= 768) || (winWidth <= 768 && slidesToShow >= 3)){
+		if((slidesToShow >= 2 && winWidth <= 768)){
 			initRelatedSlider();
 		}
 	});
@@ -120,6 +130,10 @@ $(document).ready(function(){
 		slidesToScroll: 1,
 		arrows: false,
 		responsive: [
+			{
+				breakpoint: 0,
+				settings: "unslick"
+			},
 			{
 				breakpoint: 992,
 				settings: {
@@ -141,6 +155,16 @@ $(document).ready(function(){
 				settings: {
 					vertical: false,
 					slidesToShow: 4,
+					slidesToScroll: 1,
+					draggable: true,
+					variableWidth: false
+				}
+			},
+			{
+				breakpoint: 425,
+				settings: {
+					vertical: false,
+					slidesToShow: 2,
 					slidesToScroll: 1,
 					draggable: true,
 					variableWidth: false
