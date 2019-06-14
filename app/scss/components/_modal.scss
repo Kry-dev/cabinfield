@@ -224,6 +224,15 @@
     .modal-body{padding: 0;}
     button.close{
       top: -40px;
+      right: 0;
+
+    }
+    @include media-breakpoint-down(sm){
+      button.close{
+        top: -10px !important;
+        right: 0;
+        color: $label-color;
+      }
     }
   }
   &-wrapper{
