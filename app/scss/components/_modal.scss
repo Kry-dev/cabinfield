@@ -204,8 +204,9 @@
     z-index: 1100 !important;
     text-shadow: none;
     @include media-breakpoint-down(sm){
-      right: 0;
-      top: -55px;
+      right: -3px;
+      top: -15px;
+      color: $label-color;
     }
   }
   p{
