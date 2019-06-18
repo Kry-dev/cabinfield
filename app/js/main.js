@@ -76,24 +76,15 @@ $(document).ready(function(){
 				prevArrow: slickIndividual.next().find('.btn.btn-arrow.related-prev'),
 				responsive: [
 					{
-						breakpoint: 1200,
-						settings: {
-							slidesToShow: 4,
-							slidesToScroll: 4
-						}
+						breakpoint: 0,
+						settings: "unslick"
 					},
 					{
-						breakpoint: 992,
+						breakpoint: 500,
 						settings: {
-							slidesToShow: 3,
-							slidesToScroll: 3
-						}
-					},
-					{
-						breakpoint: 768,
-						settings: {
-							slidesToShow: 3,
-							slidesToScroll: 3
+							vertical: false,
+							slidesToShow: 1,
+							slidesToScroll: 1
 						}
 					},
 					{
@@ -105,11 +96,24 @@ $(document).ready(function(){
 						}
 					},
 					{
-						breakpoint: 500,
+						breakpoint: 768,
 						settings: {
-							vertical: false,
-							slidesToShow: 1,
-							slidesToScroll: 1
+							slidesToShow: 3,
+							slidesToScroll: 3
+						}
+					},
+					{
+						breakpoint: 992,
+						settings: {
+							slidesToShow: 3,
+							slidesToScroll: 3
+						}
+					},
+					{
+						breakpoint: 1200,
+						settings: {
+							slidesToShow: 4,
+							slidesToScroll: 4
 						}
 					}
 				]
@@ -119,6 +123,18 @@ $(document).ready(function(){
 		if((slidesToShow >= 2 && winWidth <= 768)){
 			initRelatedSlider();
 		}
+		window.addEventListener("resize", function() {
+			if (winWidth <= 768) {
+				$('.your-slider').slick('unslick');
+				sliderIsLive = false;
+			}
+			else {
+				if (sliderIsLive) {
+					$('.your-slider').slick();
+					sliderIsLive = true;
+				}
+			}
+		});
 	});
 	/*photo list carousel - product page*/
 	$('.product-photo-carousel ul').slick({
@@ -130,10 +146,6 @@ $(document).ready(function(){
 		slidesToScroll: 1,
 		arrows: false,
 		responsive: [
-			{
-				breakpoint: 0,
-				settings: "unslick"
-			},
 			{
 				breakpoint: 992,
 				settings: {
@@ -173,7 +185,7 @@ $(document).ready(function(){
 		]
 	});
 	$('.product-photo').on('click', '.slick-arrow', function(){
-		var action = ( $(this).hasClass('slick-next') ) ? 'slickNext' : 'slickPrev'
+		const action = ( $(this).hasClass('slick-next') ) ? 'slickNext' : 'slickPrev';
 		$(this).parents('.product-photo').find('.product-photo-carousel ul').slick(action);
 	});
 	/*set big img from attr*/
