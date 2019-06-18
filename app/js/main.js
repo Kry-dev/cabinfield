@@ -61,11 +61,10 @@ $(document).ready(function(){
 
 	/*related list slider*/
 	$('.related-list').each(function(){
-		const slidesToShow = this.childElementCount; //get all related lists
-		const slickIndividual = $(this);
+		var slidesToShow = this.childElementCount; //get all related lists
+		var slickIndividual = $(this);
 		slickIndividual.next().css('display','none'); // hide the next sections with buttons
-		const winWidth = window.innerWidth; // get window width
-		const relatedSliderConfig = { // slick slider config
+		var relatedSliderConfig = { // slick slider config
 			infinite: true,
 			// mobileFirst:true,
 			speed: 500,
@@ -164,7 +163,7 @@ $(document).ready(function(){
 		]
 	});
 	$('.product-photo').on('click', '.slick-arrow', function(){
-		const action = ( $(this).hasClass('slick-next') ) ? 'slickNext' : 'slickPrev';
+		var action = ( $(this).hasClass('slick-next') ) ? 'slickNext' : 'slickPrev';
 		$(this).parents('.product-photo').find('.product-photo-carousel ul').slick(action);
 	});
 	/*set big img from attr*/
@@ -500,8 +499,8 @@ $(document).ready(function(){
 
 	/* product customization loader*/
 	$('#options-form .loading').removeClass('fixed');
-	const optionsForm = $('#options-form');
-	const optionsFormHeight = optionsForm.height() - 200;
+	var optionsForm = $('#options-form');
+	var optionsFormHeight = optionsForm.height() - 200;
 	$(window).scroll(function() {
 		if ($(window).scrollTop() < optionsFormHeight) {
 			$('#options-form .loading').addClass('fixed');
