@@ -37,6 +37,10 @@
       max-width: 100%;
     }
   }
+  .slick-list,
+  .slick-track{
+    min-width: 100% !important;
+  }
   &-title {
     font-family: 'Open-sans', sans-serif;
     color: $black;
