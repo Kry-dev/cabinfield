@@ -18,9 +18,9 @@
     }
   }
   &-title{
-    font-family: "Open Sans";	
-    font-size: 1.0625rem;	
-    font-weight: 600;	
+    font-family: "Open Sans";
+    font-size: 1.0625rem;
+    font-weight: 600;
     line-height: 1.4375rem;
   }
   &--edit{
@@ -38,7 +38,7 @@
   &-left{
     display: flex;
     width: 54%;
-    align-self: flex-start; 
+    align-self: flex-start;
     @include media-breakpoint-down(md) {
       width: 100%;
       margin-bottom: 1rem;
@@ -132,6 +132,9 @@
           overflow: hidden;
           z-index: 4;
         }
+        .slick-initialized{
+          min-width: 100%;
+        }
       }
     }
     .item{
@@ -213,19 +216,19 @@
       width: 30%;
     }
     p{
-      height: 40px;	
-      width: 160px;	
-      color: $text-dark;	
-      font-family: "PT Serif";	
+      height: 40px;
+      width: 160px;
+      color: $text-dark;
+      font-family: "PT Serif";
       font-size: 0.9375rem !important;
       line-height: 1.25rem !important;
       margin-bottom: 0;
     }
   }
   span{
-    color: $black;	
-    font-family: "Open Sans";	
-    font-size: 0.75rem;	
+    color: $black;
+    font-family: "Open Sans";
+    font-size: 0.75rem;
     line-height: 1rem;
     font-weight: 100;
   }
@@ -233,7 +236,7 @@
     width: 100%;
     margin: 0 0 .5rem;
     padding: .5rem 0;
-    border-bottom: 1px dashed $product-main-border; 
+    border-bottom: 1px dashed $product-main-border;
   }
   p{
     color: $black;
