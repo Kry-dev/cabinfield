@@ -19,15 +19,21 @@
     height: 50px;
     animation: 1.64s loading infinite ease-in-out;
     transform: translate(-50%, -50%);
-    position: fixed;
+    //position: fixed;
   }
   &-text{
-    position: fixed;
+    //position: fixed;
     padding-top: 50px;
     font-family: inherit;
     color: $white;
     text-transform: uppercase;
     font-size: .8rem;
+  }
+  &.fixed{
+    .loading-circle,
+    .loading-text{
+      position: fixed;
+    }
   }
 }
 @keyframes loading {

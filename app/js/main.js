@@ -498,5 +498,15 @@ $(document).ready(function(){
 		else $(form).stop().fadeIn(400);
 	});
 
-
+	/* product customization loader*/
+	$('#options-form .loading').removeClass('fixed');
+	const optionsForm = $('#options-form');
+	const optionsFormHeight = optionsForm.height() - 200;
+	$(window).scroll(function() {
+		if ($(window).scrollTop() < optionsFormHeight) {
+			$('#options-form .loading').addClass('fixed');
+		} else {
+			$('#options-form .loading').removeClass('fixed');
+		}
+	});
 });
