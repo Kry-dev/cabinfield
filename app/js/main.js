@@ -61,12 +61,10 @@ $(document).ready(function(){
 
 	/*related list slider*/
 	$('.related-list').each(function(){
-		var slidesToShow = this.childElementCount; //get all related lists
 		var slickIndividual = $(this);
 		slickIndividual.next().css('display','none'); // hide the next sections with buttons
 		var relatedSliderConfig = { // slick slider config
 			infinite: true,
-			// mobileFirst:true,
 			speed: 500,
 			slidesToShow: 5,
 			slidesToScroll: 5,
