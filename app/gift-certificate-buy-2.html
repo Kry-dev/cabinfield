@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE = edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
+    <meta property="og:image" content="path/to/image.jpg">
+    <meta name="keywords" content="">
+    <link rel="icon" href="img/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+    <meta name="theme-color" content="#000">
+    <link rel="stylesheet" type="text/css" href="fonts/fonts.css">
+    <link rel="stylesheet" type="text/css" href="css/main.min.css">
+    <title>Cabinfield Gift Certificate
+    </title>
+  </head>
+  <body><!--CONTENT-->
+    <main class="content p-0"><!--Gift form 01-->
+      <section class="gift">
+        <form class="gift-form">
+          <h1 class="gift-title">Buy Gift Certificate</h1>
+          <div class="gift-form-row amount_section">
+            <label class="col-form-label mb-0 py-0">Gift certificate amount:</label>
+            <input class="form-control" name="amount" required>
+          </div>
+          <div class="gift-form-section">
+            <div class="row border-b-dashed mb-4">
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label class="col-form-label">Your name</label>
+                  <input class="form-control" type="text" name="name" required="required">
+                </div>
+                <div class="form-group">
+                  <label class="col-form-label">Recipient’s email address</label>
+                  <input class="form-control" type="text" name="email" required="required">
+                </div>
+                <div class="form-group">
+                  <label class="col-form-label">Re-type recipient’s email address</label>
+                  <input class="form-control" type="text" name="reemail" required="required">
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label class="col-form-label">Recipient’s name</label>
+                  <input class="form-control" type="text" name="recipient" required="required">
+                </div>
+                <div class="form-group">
+                  <label class="col-form-label">Message</label>
+                  <textarea class="form-control" name="message" rows="4"></textarea>
+                </div><a class="certificate_example more" href="#" data-toggle="modal" data-target="#certificate_example">See example of gift certificate</a>
+              </div>
+            </div>
+            <div class="button_section d-flex justify-content-between">
+              <button class="back flat_bg" type="button">Back</button>
+              <button class="next btn-order" type="submit">Proceed to checkout</button>
+            </div>
+          </div>
+        </form>
+      </section><!--Gift form 01 end-->
+    </main><!--CONTENT END-->
+  </body><!--MODAL-->
+  <div class="modal fade" id="certificate_example" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content">
+        <div class="certificate modal-body p-0">
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button><img class="modal-img-bg" src="img/general/giftcard.jpg" alt="#">
+          <div class="certificate-wrap">
+            <div class="price_to_from">
+              <div class="price">$50</div>
+              <div class="to">to<span>Jane Smith</span></div>
+              <div class="from">from<span>John Smith</span></div>
+            </div>
+            <div class="personal_msg">Personal message to recipient will appear here</div>
+            <div class="claim_code">
+              <div class="name">Your claim code:</div>
+              <div class="code">DRGH-RFGMVV-GFNJ</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!--MODAL END-->
+  <script src="js/jquery.js"></script>
+  <script src="js/libs.min.js"></script>
+  <script src="js/main.js"></script>
+</html>

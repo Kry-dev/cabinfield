@@ -19,11 +19,8 @@
     height: 50px;
     animation: 1.64s loading infinite ease-in-out;
     transform: translate(-50%, -50%);
-    //position: fixed;
   }
   &-text{
-    //position: fixed;
-    padding-top: 50px;
     font-family: inherit;
     color: $white;
     text-transform: uppercase;
@@ -34,6 +31,7 @@
     .loading-text{
       position: fixed;
     }
+    .loading-text{padding-top: 50px;}
   }
 }
 @keyframes loading {
