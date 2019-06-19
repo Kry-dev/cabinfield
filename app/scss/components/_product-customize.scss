@@ -125,7 +125,7 @@
     input[type="checkbox"]:checked + label {
       background: $product-option-checked-bg;
       border: 1px solid $product-option-checked-border;
-      font-weight: bold;
+      text-shadow: 0 0 .65px #333, 0 0 .65px #333;
       color: $black;
     }
     label {
@@ -161,9 +161,9 @@
       }
       &:hover {
         background:#DDD;
-        font-weight: 600;
+        text-shadow: 0 0 .5px #333, 0 0 .5px #333;
         .name{
-          font-weight: bold;
+          text-shadow: 0 0 .5px #333, 0 0 .5px #333;
         }
         span{
           font-weight: normal;
