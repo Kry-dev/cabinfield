@@ -25,6 +25,26 @@
         background-size: cover;
         margin-bottom: 1.5rem;
         position: relative;
+        > label{
+          position: relative;
+          &:after{
+            content: "$";
+            display: block;
+            position: absolute;
+            right: -25px;
+            color: #908686;
+            font-size: 13px;
+            line-height: 16px;
+            @include media-breakpoint-down(sm){
+              right: auto;
+              left: 14px;
+              bottom: -25px;
+            }
+          }
+        }
+        > input.amount-number{
+          padding-left: 20px;
+        }
         > input::placeholder{
           color: #908686;
           font-family: "Open Sans";
@@ -54,6 +74,7 @@
         >.form-control,
         >.bootstrap-select {
           max-width: 210px;
+          color: $label-color;
           @include media-breakpoint-down(sm){
             max-width: 100%;
           }
