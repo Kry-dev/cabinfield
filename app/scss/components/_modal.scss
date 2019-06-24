@@ -259,6 +259,13 @@
       h5{
         font-family: 'Open Sans';
       }
+      .btn{
+        height: 40px;
+        line-height: 34px;
+        width: 100%;
+        max-width: 208px;
+        margin: 0 auto;
+      }
       @include media-breakpoint-down(sm) {
         width: 100%;
         padding: 1rem;

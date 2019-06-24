@@ -52,7 +52,7 @@
 }
 
 
-input:checked + .switch-btn:before {
+.switch input:checked + .switch-btn:before {
   transform: translateX(100%);
 }
 
