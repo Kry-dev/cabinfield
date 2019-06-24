@@ -243,8 +243,8 @@
       flex-direction: column;
     }
     &-left{
-      width: 75%;
-      padding: 3rem 3rem 0;
+      width: 70.5%;
+      padding: 2.5rem 2.5rem 0;
       @include media-breakpoint-down(sm) {
         width: 100%;
         padding: 2rem;
@@ -253,9 +253,12 @@
     &-right{
       display: flex;
       flex-direction: column;
-      width: 25%;
+      width: 29.5%;
       border-left: 1px solid $modal-vrt-border-color;
       background: $modal-wraper-right-bg;
+      h5{
+        font-family: 'Open Sans';
+      }
       @include media-breakpoint-down(sm) {
         width: 100%;
         padding: 1rem;
@@ -272,9 +275,11 @@
     }
     p{
       color: $black;
-      font-family: 'Open Sans';
-      font-size: 0.8125rem;
-      line-height: 1.0625rem;
+      font-family: "Open sans";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 21px;
       a{
         font-family: inherit;
         font-size: inherit;

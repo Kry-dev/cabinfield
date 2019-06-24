@@ -4,9 +4,6 @@ section.product-customize
     .row
       .col-md-9.border-right
         form#options-form
-          .loading
-            .loading-circle
-            .loading-text loading
           #optgroup-1
             .product-customize-form
               h6.product-customize-subtitle Bed size: Full Bed
@@ -261,18 +258,18 @@ section.product-customize
                     input( type="radio" id="option-features-05" name="option-features")
                     label(for="option-features-05")
                       .option-half-descr
-                        p Bun Feet
+                        p MODAL 9
                         p #[span Yes (standard)]
                       .option-half-img
                           img(src="img/product/bun_feet.png", alt="#")
                       i.fa.fa-chevron-right
                 #optgroup-06
                   input(type="hidden", name="og_stamps[06]")
-                  .product-option.option-half.option-half--ftrs
+                  .product-option.option-half.option-half--ftrs(data-toggle="modal", data-target="#customize-popup-10")
                     input( type="radio" id="option-features-06" name="option-features")
                     label(for="option-features-06")
                       .option-half-descr
-                        p Bun Feet
+                        p MODAL 10v
                         p #[b No]
                       .option-half-img
                         img(src="img/product/bun_feet.png", alt="#")

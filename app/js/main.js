@@ -504,4 +504,5 @@ $(document).ready(function(){
 			$('#options-form .loading').removeClass('fixed');
 		}
 	});
+
 });
