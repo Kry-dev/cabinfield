@@ -160,37 +160,31 @@ section.product-customize
                 strong Upholstery:
                 |  Faux Leather 15-32 Bomber
               .product-customize-list
-                .product-option.option-half(data-toggle="modal", data-target="#customize_popup1")
-                  input( type="radio" id="upholstery-01" name="upholstery")
-                  label(for="upholstery-01")
+                .product-option-half(data-toggle="modal", data-target="#customize_popup1")
+                  .option-half-descr
+                    p.title Standard
+                      span.name  -$345
+                    p.text-dark 25 options
+                  .option-half-img
+                    img(src="img/product/upholstery.png", alt="#")
+                  i.fa.fa-chevron-right
+                .product-option-half(data-toggle="modal", data-target="#customize_popup1")
+                  .option-half-descr
+                    p.title Faux Leather
+                    p.text-dark 15-32 Bomber
+                  .option-half-img
+                    img(src="img/product/upholstery.png", alt="#")
+                  i.fa.fa-chevron-right
+                .product-option-half(data-toggle="modal", data-target="#customize_popup1")
+                  .option-half-descr
+                    p.title Faux Leather
+                    p.text-dark 15-32 Bomber
+                  .option-half-img
+                    img(src="img/product/upholstery.png", alt="#")
+                  i.fa.fa-pencil.text-underline
+                .product-option-half(data-toggle="modal", data-target="#customize_popup1")
                     .option-half-descr
-                      p Standard
-                        span.name -$345
-                      p.text-dark 25 options
-                    i.fa.fa-chevron-right
-                .product-option.option-half(data-toggle="modal", data-target="#customize_popup1")
-                  input( type="radio" id="upholstery-02" name="upholstery")
-                  label(for="upholstery-02")
-                    .option-half-descr
-                      p Faux Leather
-                      p.text-dark 15-32 Bomber
-                    .option-half-img
-                      img(src="img/product/upholstery.png", alt="#")
-                    i.fa.fa-chevron-right
-                .product-option.option-half(data-toggle="modal", data-target="#customize_popup1")
-                  input( type="radio" id="upholstery-03" name="upholstery")
-                  label(for="upholstery-03")
-                    .option-half-descr
-                      p Faux Leather
-                      p.text-dark 15-32 Bomber
-                    .option-half-img
-                      img(src="img/product/upholstery.png", alt="#")
-                    i.fa.fa-pencil.text-underline
-                .product-option.option-half(data-toggle="modal", data-target="#customize_popup1")
-                  input( type="radio" id="upholstery-04" name="upholstery")
-                  label(for="upholstery-04")
-                    .option-half-descr
-                      p Revolution® Performance…
+                      p.title Revolution® Performance…
                         span +$345
                       p.text-dark 47 options
                     .option-half-img
@@ -202,126 +196,84 @@ section.product-customize
                 strong Optional Features:
                 |  2 x Lock, 3 x USB Charging Station, No Bun Feet, Otoman
               .product-customize-list.optional-features-list
-                #optgroup-01
-                  input(type="hidden", name="og_stamps[01]")
-                  .product-option.option-half.option-half--ftrs(data-toggle="modal", data-target="#customize_popup5")
-                    input( type="radio" id="option-features-01" name="option-features")
-                    label(for="option-features-01")
-                      .option-half-descr
-                        p Lock(s)
-                        p #[span $23 per lock]
-                      .option-half-img
-                          img(src="img/product/locks.png", alt="#")
-                      i.fa.fa-plus
-                #optgroup-02
-                  input(type="hidden", name="og_stamps[02]")
-                  .product-option.option-half.option-half--ftrs(data-toggle="modal", data-target="#customize_popup5")
-                    input( type="radio" id="option-features-02" name="option-features")
-                    label(for="option-features-02")
-                      .option-half-descr
-                        p #[b Lock(s)]
-                        p
-                          span.border-right.text-black.mr-2.pr-2
-                            b x2
-                          span adds $46
-                      .option-half-img
-                          img(src="img/product/locks.png", alt="#")
-                      i.fa.fa-pencil
-                #optgroup-03
-                  input(type="hidden", name="og_stamps[03]")
-                  .product-option.option-half.option-half--ftrs(data-toggle="modal", data-target="#customize_popup7")
-                    input(type="radio" id="option-features-11" name="option-features")
-                    label(for="option-features-11")
-                      .option-half-descr
-                        p 16" x 16" Pillow(s)
-                        p #[span adds $46]
-                      .option-half-img
-                          img(src="img/product/pillows.png", alt="#")
-                      i.fa.fa-plus
-                #optgroup-04
-                  input(type="hidden", name="og_stamps[04]")
-                  .product-option.option-half.option-half--ftrs(data-toggle="modal", data-target="#customize_popup8")
-                    input( type="radio" id="option-features-04" name="option-features")
-                    label(for="option-features-04")
-                      .option-half-descr
-                        p #[b 16" x 16" Pillow(s)]
-                        p
-                          span.border-right.text-black.mr-2.pr-2
-                            b x2
-                          span adds $46
-                      .option-half-img
-                          img(src="img/product/pillows.png", alt="#")
-                      i.fa.fa-pencil
-                #optgroup-05
-                  input(type="hidden", name="og_stamps[05]")
-                  .product-option.option-half.option-half--ftrs(data-toggle="modal", data-target="#customize-popup-9")
-                    input( type="radio" id="option-features-05" name="option-features")
-                    label(for="option-features-05")
-                      .option-half-descr
-                        p MODAL 9
-                        p #[span Yes (standard)]
-                      .option-half-img
-                          img(src="img/product/bun_feet.png", alt="#")
-                      i.fa.fa-chevron-right
-                #optgroup-06
-                  input(type="hidden", name="og_stamps[06]")
-                  .product-option.option-half.option-half--ftrs(data-toggle="modal", data-target="#customize-popup-10")
-                    input( type="radio" id="option-features-06" name="option-features")
-                    label(for="option-features-06")
-                      .option-half-descr
-                        p MODAL 10v
-                        p #[b No]
-                      .option-half-img
-                        img(src="img/product/bun_feet.png", alt="#")
-                      i.fa.fa-pencil
-                #optgroup-07
-                  input(type="hidden", name="og_stamps[07]")
-                  .product-option.option-half.option-half--ftrs
-                    input( type="radio" id="option-features-07" name="option-features")
-                    label(for="option-features-07")
-                      .option-half-descr
-                        p Standard
-                          span.name -$345
-                        p.text-dark 25 options
-                      .option-half-img
-                          img(src="img/product/pillows.png", alt="#")
-                      i.fa.fa-chevron-right
-                #optgroup-08
-                  input(type="hidden", name="og_stamps[09]")
-                  .product-option.option-half.option-half--ftrs
-                    input( type="radio" id="option-features-08" name="option-features")
-                    label(for="option-features-08")
-                      .option-half-descr
-                        p Standard
-                          span.name -$345
-                        p.text-dark 25 options
-                      .option-half-img
-                          img(src="img/product/pillows.png", alt="#")
-                      i.fa.fa-pencil
-                #optgroup-09
-                  input(type="hidden", name="og_stamps[09]")
-                  .product-option.option-half.option-half--ftrs
-                    input( type="radio" id="option-features-12" name="option-features")
-                    label(for="option-features-12")
-                      .option-half-descr
-                        p Standard
-                          span.name -$345
-                        p.text-dark 25 options
-                      .option-half-img
-                          img(src="img/product/bun_feet.png", alt="#")
-                      i.fa.fa-chevron-right
-                #optgroup-10
-                  input(type="hidden", name="og_stamps[10]")
-                  .product-option.option-half.option-half--ftrs
-                    input( type="radio" id="option-features-10" name="option-features")
-                    label(for="option-features-10")
-                      .option-half-descr
-                        p Standard
-                          span.name -$345
-                        p.text-dark 25 options
-                      .option-half-img
-                          img(src="img/product/bun_feet.png", alt="#")
-                      i.fa.fa-pencil
+                .product-option-half(data-toggle="modal", data-target="#customize_popup5")
+                  .option-half-prev
+                    img(src="img/product/locks.png", alt="#")
+                  .option-half-descr
+                    p.title Lock(s)
+                    p #[span $23 per lock]
+                  i.fa.fa-plus
+                .product-option-half(data-toggle="modal", data-target="#customize_popup5")
+                  .option-half-prev
+                    img(src="img/product/locks.png", alt="#")
+                  .option-half-descr
+                    p.title #[b Lock(s)]
+                    p
+                      span.border-right.text-black.mr-2.pr-2 #[b x2]
+                      span adds $46
+                  i.fa.fa-pencil
+                .product-option-half(data-toggle="modal", data-target="#customize_popup7")
+                  .option-half-prev
+                    img(src="img/product/pillows.png", alt="#")
+                  .option-half-descr
+                    p.title 16" x 16" Pillow(s)
+                    p #[span adds $46]
+                  i.fa.fa-plus
+                .product-option-half(data-toggle="modal", data-target="#customize_popup8")
+                  .option-half-prev
+                    img(src="img/product/pillows.png", alt="#")
+                  .option-half-descr
+                    p #[b 16" x 16" Pillow(s)]
+                    p
+                      span.border-right.text-black.mr-2.pr-2 #[b x2]
+                      span adds $46
+                  i.fa.fa-pencil
+                .product-option-half(data-toggle="modal", data-target="#customize-popup-9")
+                  .option-half-prev
+                    img(src="img/product/bun_feet.png", alt="#")
+                  .option-half-descr
+                    p MODAL 9
+                    p #[span Yes (standard)]
+                  i.fa.fa-chevron-right
+                .product-option-half(data-toggle="modal", data-target="#customize-popup-10")
+                  .option-half-prev
+                    img(src="img/product/bun_feet.png", alt="#")
+                  .option-half-descr
+                    p MODAL 10v
+                    p #[b No]
+                  i.fa.fa-pencil
+                .product-option-half
+                  .option-half-prev
+                    img(src="img/product/pillows.png", alt="#")
+                  .option-half-descr
+                    p Standard
+                      span.name -$345
+                    p.text-dark 25 options
+                  i.fa.fa-chevron-right
+                .product-option-half
+                  .option-half-prev
+                    img(src="img/product/pillows.png", alt="#")
+                  .option-half-descr
+                    p Standard
+                      span.name -$345
+                    p.text-dark 25 options
+                  i.fa.fa-pencil
+                .product-option-half
+                  .option-half-prev
+                    img(src="img/product/bun_feet.png", alt="#")
+                  .option-half-descr
+                    p Standard
+                      span.name -$345
+                    p.text-dark 25 options
+                  i.fa.fa-chevron-right
+                .product-option-half
+                  .option-half-prev
+                    img(src="img/product/bun_feet.png", alt="#")
+                  .option-half-descr
+                    p Standard
+                      span.name -$345
+                    p.text-dark 25 options
+                  i.fa.fa-pencil
       .col-md-3
         .option-selected
           h6.product-customize-subtitle
@@ -368,16 +320,13 @@ section.product-customize.product-customize--dr-dw
         .d-block.w-50.ml-auto
           img.img-fluid(src='img/product/customization_arrow1.png', alt='#')
         .product-customize-list
-          .product-option.option-half.option-half--ftrs.w-100
-            input#option-features-03(type='radio', name='option-features')
-            label(for='option-features-03')
-              .option-half-descr
-                p 16" x 16" Pillow(s)
-                p
-                  span adds $46
-              .option-half-img
-                img(src='img/product/pillows.png', alt='#')
-              i.fa.fa-plus
+          .product-option-half.w-100
+            .option-half-prev
+              img(src='img/product/pillows.png', alt='#')
+            .option-half-descr
+              p 16" x 16" Pillow(s)
+              p #[span adds $46]
+            i.fa.fa-plus
       .col-md-4
         .example_popup_text
           .title POP-UP
@@ -387,14 +336,11 @@ section.product-customize.product-customize--dr-dw
         .d-block.w-50.mr-auto
           img.img-fluid(src='img/product/customization_arrow2.png', alt='#')
         .product-customize-list
-          .product-option.option-half.option-half--ftrs.w-100
-            input#option-features-09(type='radio', name='option-features')
-            label(for='option-features-09')
-              .option-half-descr
-                p 16" x 16" Pillow(s)
-                p
-                  span adds $46
-              .option-half-img
-                img(src='img/product/pillows.png', alt='#')
-              i.fa.fa-pencil
+          .product-option-half.w-100
+            .option-half-prev
+              img(src='img/product/pillows.png', alt='#')
+            .option-half-descr
+              p 16" x 16" Pillow(s)
+              p #[span adds $46]
+            i.fa.fa-pencil
 
