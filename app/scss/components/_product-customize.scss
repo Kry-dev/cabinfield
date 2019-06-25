@@ -372,6 +372,9 @@
         height: 60px;
       }
     }
+    .fa{
+
+    }
     &:hover,
     &:focus,
     &.selected {
@@ -382,6 +385,10 @@
       p{
         font-weight: 600;
       }
+    }
+    &.selected .fa:before{
+      content: "\f040";
+      text-decoration: underline;
     }
     @media (max-width: 1200px) {
       width: 48%;
