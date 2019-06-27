@@ -504,4 +504,17 @@ $(document).ready(function(){
 			$('#options-form .loading').removeClass('fixed');
 		}
 	});
+	function initLoaderAnimation() {
+		$("#options-form .loading").removeClass("fixed");
+		$(window).scroll(function() {
+			console.log(optionsFormHeight);
+			if ($(window).scrollTop() < optionsFormHeight) {
+				$("#options-form .loading").addClass("fixed")
+			} else if ($(window).width() < 768 && $(window).scrollTop() < optionsFormHeightMobile) {
+				$("#options-form .loading").addClass("fixed")
+			} else {
+				$("#options-form .loading").removeClass("fixed")
+			}
+		})
+	}
 });
