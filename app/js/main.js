@@ -517,4 +517,18 @@ $(document).ready(function(){
 			}
 		})
 	}
+	// hide filter option on mobile
+	function hideFilterMobile (){
+		var desktopView = $(document).width();
+		if(desktopView <= "768"){
+			$(".product-filters-list").collapse('hide');
+		}
+	}
+	$(function(){
+		hideFilterMobile();
+		$(window).on("resize", function(){
+			hideFilterMobile();
+		});
+	});
+
 });

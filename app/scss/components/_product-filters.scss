@@ -3,7 +3,7 @@
   &-list{
     display: flex;
     flex-direction: column;
-    border-bottom: 1px solid $product-main-border;
+    border-bottom: 1px dotted $product-main-border;
     list-style: none;
     padding-bottom: 21px;
     margin-bottom: 21px;
@@ -34,9 +34,31 @@
     color: $footer-copy-color;
     font-family: 'Open Sans', sans-serif;
     font-size: 0.8125rem;
-    font-weight: bold;
     line-height: 1.125rem;
-    margin-bottom: 13px;
+    padding-bottom: 13px;
+    position: relative;
+    padding-left: 26px;
+    &:before {
+      content: "\f105";
+      font-size: 18px;
+      font-family: FontAwesome;
+      position: absolute;
+      display: block;
+      left: 0;
+      top: 0;
+      color: $footer-copy-color;
+      width: 1rem;
+      height: 1rem;
+      transform: rotate(0);
+      transition: $transition-base;
+    }
+    &[aria-expanded="false"] {
+      border-bottom: 1px dotted $product-main-border;
+    }
+    &[aria-expanded="true"]:before {
+      top: 6px;
+      transform: rotate(90deg);
+    }
   }
   .product-list{
     display: flex;
