@@ -478,6 +478,15 @@
   &.customize_popup--fullsize{
     .modal-dialog.modal-lg{
       max-width: 1054px;
+      @media screen and (max-width: 1080px){
+        max-width: 800px;
+      }
+      @media screen and (max-width: 900px){
+        max-width: 80%;
+      }
+      @media screen and (max-width: 650px){
+        max-width: 100%;
+      }
     }
     .modal-wrapper{
       flex-wrap: nowrap;
@@ -488,10 +497,22 @@
         display: flex;
         width: 84.5%;
         padding: 42px 30px 42px 42px;
+        @media screen and (max-width: 1080px){
+          width: 60%;
+        }
+        @include media-breakpoint-down(sm){
+          width: 100%;
+        }
       }
       &-right{
         width: 26%;
         padding: 35px 30px;
+        @media screen and (max-width: 1080px){
+          width: 40%;
+        }
+        @include media-breakpoint-down(sm){
+          width: 100%;
+        }
       }
     }
     .modal-content{
@@ -504,6 +525,7 @@
       flex-wrap: wrap;
       width: 100%;
       margin-bottom: 1rem;
+
     }
     .fullsize-item {
       display: flex;
@@ -516,8 +538,15 @@
       margin-bottom: 1rem;
       border-radius: 2px;
       border: 2px solid transparent;
+
       &:nth-child(2n){
         margin-left: 28px;
+      }
+      @media screen and (max-width: 1080px){
+        width: 100%;
+        &:nth-child(2n){
+          margin-left: 0;
+        }
       }
       &__img{
         width: 100%;
