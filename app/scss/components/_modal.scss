@@ -409,17 +409,20 @@
     }
     .enlarge{ background: $link-color;}
     .product-customize-list{
-      justify-content: flex-start;
+      display: flex;
+      flex-wrap: wrap;
     }
     .product-option.option-hboard{
-      max-width: 24%;
-      margin: 0 .5% .25rem;
-      @include media-breakpoint-down(md){
-        max-width: 170px;
-      }
+      flex: 1 1 25%; /* explanation below */
+      margin-right: 0;
+      //margin: 5px;
+      //@include media-breakpoint-down(md){
+      //  max-width: 170px;
+      //}
     }
     .product-option.option-hboard label{
       min-height: auto;
+      width: 100%;
       margin: 0;
       img{
         width: 100%;
