@@ -306,6 +306,7 @@
     box-shadow: inset 0 -3px 0 0 #F0EDED, inset 0 2px 0 0 #FFFFFF;
     position: relative;
     margin-bottom: 14px;
+    padding-right: 30px;
     &:nth-child(2n){
       margin-left: auto;
     }
@@ -320,19 +321,22 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      width: 70%;
+      width: 100%;
       order: 0;
-      padding: 11px 14px;
+      padding: 11px 0 11px 14px;
+      overflow: hidden;
       p {
         color: #8C7F7F;
         font-family: "Open Sans";
         font-size: 13px;
         line-height: 1rem;
         margin-bottom: 0;
-        padding: .18rem .5rem;
+        padding: .18rem 0;
+        white-space: nowrap;
       }
       .title {
         color: $black;
+        padding: 0px;
         span{
           padding-left: 5px;
           color: #786c6c;
