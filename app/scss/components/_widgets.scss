@@ -7,7 +7,7 @@ $card-height: 21rem;
     border: 0;
     width: 100%;
     min-height: $card-height;
-    overflow: hidden;
+    //overflow: hidden;
     &-title{
       font-family: 'PT Serif', serif;
       font-weight: 600;
@@ -35,9 +35,9 @@ $card-height: 21rem;
     }
     &-subtitle{
       font-weight: 300;
-      font-family: "Open Sans";	
-      font-size: 0.875rem;	
-      line-height: 1.1875rem;	
+      font-family: "Open Sans";
+      font-size: 0.875rem;
+      line-height: 1.1875rem;
       margin-bottom: 0;
     }
     &-controls{
@@ -200,9 +200,9 @@ $card-height: 21rem;
     padding: 1rem 2rem 80px ;
     overflow: hidden;
     &-text {
-      font-family: "Open Sans";	
-      font-size: 0.9375rem;	
-      font-style: italic;	
+      font-family: "Open Sans";
+      font-size: 0.9375rem;
+      font-style: italic;
       line-height: 1.4375rem
     }
     .review-prev,

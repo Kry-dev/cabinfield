@@ -193,7 +193,12 @@
       width: 49%;
       display: inline-flex;
       position: relative;
-      margin-right: 7px;
+      &:nth-child(2n){
+        margin-left: auto;
+      }
+      .product-option-half {
+        width: 100%;
+      }
       @media (max-width: 1200px) {
         width: 48%;
       }
