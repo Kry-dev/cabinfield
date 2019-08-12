@@ -189,20 +189,15 @@
     width: 100%;
     flex-direction: row;
     flex-wrap: wrap;
-    //div:not(>.product-option-half) {
-    //  display: none;
-    //}
-    > div:empty {
-      display: none;
-    }
+    justify-content: space-between;
+
     div:not([class]) {
-    //div:has() {
       width: 49%;
       display: inline-flex;
       position: relative;
-      &:nth-child(2n){
-        margin-left: auto;
-      }
+      //&:nth-child(2n){
+      //  margin-left: auto;
+      //}
       .product-option-half {
         width: 100%;
       }
@@ -216,6 +211,9 @@
         width: 100%;
         margin-right: 0;
       }
+    }
+    .product-option-half > div:not([class]){
+      width: 100%;
     }
 
   }
