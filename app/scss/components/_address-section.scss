@@ -1,95 +1,113 @@
-.address-section{
-  padding-top: 10px;
-  h1{
-    padding: 14px 0;
-    margin-bottom: 0;
-  }
-  .address-title{
-    padding-top: 11px;
-    font-size: 0.8125rem;
-    color: $black;
-    font-weight: bold;
-    line-height: 1.125rem;
-    font-family: "Open Sans";
-    margin-bottom: 0;
-    .edit{
-      text-transform: uppercase;
+.address-section {
+    padding-top: 10px;
+    
+    h1 {
+        padding: 14px 0;
+        margin-bottom: 0;
     }
-  }
-  .address-subtitle{
-    display: flex;
-    width: 100%;
-    font-size: 14px;
-    text-transform: uppercase;
-    padding: 4px 14px 5px;
-    font-family: "Open Sans";
-    border-bottom: 1px solid $border-color;
-    margin-bottom: 0;
-  }
-  .form-control{
-    font-size: $input-font-size;
-    font-family: "Open Sans";
-    box-shadow: inset 0 2px 0 0 #F4F2F2;
-    background: $white;
-  }
-  .form-group{
-    margin-bottom: 0;
-  }
-  .col-form-label-sm{
-    padding: 10px 0 0;
-    width: 100%;
-    color: $label-color;
-  }
-  .custom_checkbox.checkbox_big input[type=checkbox]+label:before{
-    top: 9px;
-  }
-  .custom_checkbox.checkbox_big input[type=checkbox]:checked+label:after{
-    top: 11px;
-  }
-  .exp-date{
-    .form-group:nth-child(2){
-      position: relative;
-      &:after{
-        position: absolute;
-        content: '/';
-        right: -3px;
-        top: 7px;
-      }
+    
+    .address-title {
+        padding-top: 11px;
+        font-size: 0.8125rem;
+        color: $black;
+        font-weight: bold;
+        line-height: 1.125rem;
+        font-family: "Open Sans", sans-serif;
+        margin-bottom: 0;
+        
+        .edit {
+            text-transform: uppercase;
+        }
     }
-  }
-  .edit{
-    margin-left: 1rem;
-  }
-  .back{
-    margin-left: -20px;
-    letter-spacing: -.1px;
-    margin-bottom: 10px;
-    font-size: 12px;
-    .fa{
-      font-size: 13px;
-      margin: 0 10px 0 0;
+    
+    .address-subtitle {
+        display: flex;
+        width: 100%;
+        font-size: 14px;
+        text-transform: uppercase;
+        padding: 4px 14px 5px;
+        font-family: "Open Sans", sans-serif;
+        border-bottom: 1px solid $border-color;
+        margin-bottom: 0;
     }
-  }
-  .wishlist-item-left{
-
-    > .row:first-child{
-      border-top: 1px solid $border-color;
-      padding: 1rem 0;
+    
+    .form-control {
+        font-size: $input-font-size;
+        font-family: "Open Sans", sans-serif;
+        box-shadow: inset 0 2px 0 0 #F4F2F2;
+        background: $white;
     }
-  }
-  .btn-outline-primary{
-    padding: .33rem .75rem;
-  }
+    
+    .form-group {
+        margin-bottom: 0;
+    }
+    
+    .col-form-label-sm {
+        padding: 10px 0 0;
+        width: 100%;
+        color: $label-color;
+    }
+    
+    .custom_checkbox.checkbox_big input[type=checkbox] + label:before {
+        top: 9px;
+    }
+    
+    .custom_checkbox.checkbox_big input[type=checkbox]:checked + label:after {
+        top: 11px;
+    }
+    
+    .exp-date {
+        .form-group:nth-child(2) {
+            position: relative;
+            
+            &:after {
+                position: absolute;
+                content: "/";
+                right: -3px;
+                top: 7px;
+            }
+        }
+    }
+    
+    .edit {
+        margin-left: 1rem;
+    }
+    
+    .back {
+        margin-left: -20px;
+        letter-spacing: -.1px;
+        margin-bottom: 10px;
+        font-size: 12px;
+        
+        .fa {
+            font-size: 13px;
+            margin: 0 10px 0 0;
+        }
+    }
+    
+    .wishlist-item-left {
+        
+        > .row:first-child {
+            border-top: 1px solid $border-color;
+            padding: 1rem 0;
+        }
+    }
+    
+    .btn-outline-primary {
+        padding: .33rem .75rem;
+    }
 }
-.addr{
-  margin: 5px 0 30px;
-  p{
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: normal;
-    font-size: 15px;
-    line-height: 23px;
-    color: #514646;
-    margin-bottom: 6px;
-  }
+
+.addr {
+    margin: 5px 0 30px;
+    
+    p {
+        font-family: "Open Sans", sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 23px;
+        color: #514646;
+        margin-bottom: 6px;
+    }
 }

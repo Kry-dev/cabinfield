@@ -1,73 +1,79 @@
 .cart {
-  .card {
-    &-title {
-      font-size: 0.8125rem;
-      color: $black;
+    .card {
+        &-title {
+            font-size: 0.8125rem;
+            color: $black;
+        }
+        
+        .price_wrapper {
+            font-size: 0.8125rem;
+            margin-bottom: 1rem;
+        }
+        
+        .price {
+            color: $brown;
+        }
+        
+        .btn {
+            text-transform: uppercase;
+        }
     }
-
-    .price_wrapper {
-      font-size: 0.8125rem;
-      margin-bottom: 1rem;
-    }
-
-    .price {
-      color: $brown;
-    }
-
-    .btn {
-      text-transform: uppercase;
-    }
-  }
 }
 
 .card.card--styles {
-  margin-bottom: 2rem;
-  .card-body{
-    padding: 1.8rem 2.4rem;
-  }
-  .card-title {
-    font-family: 'PT Serif';
-    font-style: normal;
-    font-weight: bold;
-    font-size: 22px;
-    line-height: 16px;
-    text-align: center;
-    margin: 0 auto 22px ;
-    span{
-      text-align: center;
-      position: relative;
-      &:before,
-      &:after {
-        width: 25px;
-        height: 1px;
-        content: "";
-        position: absolute;
-        display: block;
-        top: 50%;
-        transform: translateY(50%);
-        background: $border-color;
-      }
-
-      &:before {
-        left: -40px;
-      }
-
-      &:after {
-        right: -40px;
-      }
+    margin-bottom: 2rem;
+    
+    .card-body {
+        padding: 1.8rem 2.4rem;
     }
-
-  }
-  p{
-    line-height: 1.66;
-    text-align: center;
-  }
-  .btn-warning{
-    display: inline-block;
-    margin: 0 auto;
-    padding: 8px 10px;
-    width: 230px;
-    font-size: 1rem;
-
-  }
+    
+    .card-title {
+        font-family: "PT Serif", sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 16px;
+        text-align: center;
+        margin: 0 auto 22px;
+        
+        span {
+            text-align: center;
+            position: relative;
+            
+            &:before,
+            &:after {
+                width: 25px;
+                height: 1px;
+                content: "";
+                position: absolute;
+                display: block;
+                top: 50%;
+                transform: translateY(50%);
+                background: $border-color;
+            }
+            
+            &:before {
+                left: -40px;
+            }
+            
+            &:after {
+                right: -40px;
+            }
+        }
+        
+    }
+    
+    p {
+        line-height: 1.66;
+        text-align: center;
+    }
+    
+    .btn-warning {
+        display: inline-block;
+        margin: 0 auto;
+        padding: 8px 10px;
+        width: 230px;
+        font-size: 1rem;
+        
+    }
 }

@@ -1,40 +1,48 @@
-.product-features{
-  font-family: 'Open Sans', sans-serif;
-  padding-top: .25rem;
-  .product-title{
-    font-family: 'Open Sans', sans-serif;
-    font-size: 15px;
-    font-weight: 600;
-    line-height: 16px;
-    padding-left: 12px;
-    margin-bottom: 19px;
-  }
-  .product-features-list ul{
-    padding-left: 20px;
-    li{
-      font-size: 0.8125rem;
-      line-height: 21px;
-      color: $black;
+.product-features {
+    font-family: "Open Sans", sans-serif;
+    padding-top: .25rem;
+    
+    .product-title {
+        font-family: "Open Sans", sans-serif;
+        font-size: 15px;
+        font-weight: 600;
+        line-height: 16px;
+        padding-left: 12px;
+        margin-bottom: 19px;
     }
-    @include media-breakpoint-down(sm){
-      margin-bottom: 1.4rem;
+    
+    .product-features-list ul {
+        padding-left: 20px;
+        
+        li {
+            font-size: 0.8125rem;
+            line-height: 21px;
+            color: $black;
+        }
+        
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 1.4rem;
+        }
     }
-  }
-  .product-features-list,
-  ul li,
-  .product-features-list ul,
-  .product-features-list ul li{
-    list-style-type: inherit;
-  }
-  hr{
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-  }
-  .more{
-    font-weight: 600;
-  }
-  .container{
-    border-bottom: 1px solid $border-color;
-    padding-bottom: 43px;
-  }
+    
+    .product-features-list,
+    ul li,
+    .product-features-list ul,
+    .product-features-list ul li {
+        list-style-type: inherit;
+    }
+    
+    hr {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .more {
+        font-weight: 600;
+    }
+    
+    .container {
+        border-bottom: 1px solid $border-color;
+        padding-bottom: 43px;
+    }
 }

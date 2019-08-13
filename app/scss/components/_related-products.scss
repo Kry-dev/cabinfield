@@ -1,93 +1,119 @@
-.related{
-  overflow: hidden;
-  .title{
-    font-size: 0.9375rem;
-    line-height: 1.25rem;
-    font-weight: 600;
-    font-family: 'Open-sans', sans-serif;
-    padding: 0 10px;
-    a{
-      font-size: 13px;
-      line-height: 1.125rem;
-      .fa{
-        font-size: 8px;
-      }
+.related {
+    overflow: hidden;
+    
+    .title {
+        font-size: 0.9375rem;
+        line-height: 1.25rem;
+        font-weight: 600;
+        font-family: 'Open-sans', sans-serif;
+        padding: 0 10px;
+        
+        a {
+            font-size: 13px;
+            line-height: 1.125rem;
+            
+            .fa {
+                font-size: 8px;
+            }
+        }
     }
-  }
-  &-wrap{
-    position: relative;
-    width: 100%;
-  }
-  &-list{
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-  }
-  &-item{
-    max-width: 250px;
-    padding: 0 .5rem;
-    a {
-      display: block;
-      &:hover,
-      &:focus{
-        outline: none;
-      }
+    
+    &-wrap {
+        position: relative;
+        width: 100%;
     }
-    @include media-breakpoint-down(sm){
-      max-width: 100%;
+    
+    &-list {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
     }
-  }
-  .slick-list,
-  .slick-track{
-    min-width: 100% !important;
-  }
-  &-title {
-    font-family: 'Open-sans', sans-serif;
-    color: $black;
-    font-size: 0.8125rem;
-    font-weight: bold;
-    line-height: 1;
-    margin-bottom: .5rem;
-  }
-  &-price {
-    font-size: 0.75rem;
-    line-height: 1rem;
-    color: $black;
-    margin-bottom: 0.5rem;
-    span {
-      font-size: 1rem;
-      font-weight: bold;
+    
+    &-item {
+        max-width: 250px;
+        padding: 0 .5rem;
+        
+        a {
+            display: block;
+            
+            &:hover,
+            &:focus {
+                outline: none;
+            }
+        }
+        
+        @include media-breakpoint-down(sm) {
+            max-width: 100%;
+        }
     }
-  }
-  &-descr{
-    font-size: 0.75rem;
-    line-height: 1rem;
-    color: $text-dark;
-  }
-  .card{
-    border: 0;
-    &-img-top{
-      max-width: 198px;
-      margin: 0 auto .5rem;
+    
+    .slick-list,
+    .slick-track {
+        min-width: 100% !important;
     }
-    &-body{
-      padding: 0;
+    
+    &-title {
+        font-family: 'Open-sans', sans-serif;
+        color: $black;
+        font-size: 0.8125rem;
+        font-weight: bold;
+        line-height: 1;
+        margin-bottom: .5rem;
     }
-  }
-  &-controls{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    position: absolute;
-    width: 100%;
-    top: 81px;
-  }
-  .btn-arrow{
-    width: 17px;
-  }
-  &-prev{margin-left: -8px;}
-  &-next{margin-right: -8px;}
-  hr{
-    margin: 2rem auto;
-  }
+    
+    &-price {
+        font-size: 0.75rem;
+        line-height: 1rem;
+        color: $black;
+        margin-bottom: 0.5rem;
+        
+        span {
+            font-size: 1rem;
+            font-weight: bold;
+        }
+    }
+    
+    &-descr {
+        font-size: 0.75rem;
+        line-height: 1rem;
+        color: $text-dark;
+    }
+    
+    .card {
+        border: 0;
+        
+        &-img-top {
+            max-width: 198px;
+            margin: 0 auto .5rem;
+        }
+        
+        &-body {
+            padding: 0;
+        }
+    }
+    
+    &-controls {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        position: absolute;
+        width: 100%;
+        top: 81px;
+    }
+    
+    .btn-arrow {
+        width: 17px;
+    }
+    
+    &-prev {
+        margin-left: -8px;
+    }
+    
+    &-next {
+        margin-right: -8px;
+    }
+    
+    hr {
+        margin: 2rem auto;
+    }
 }

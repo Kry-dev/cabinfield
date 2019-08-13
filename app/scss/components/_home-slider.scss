@@ -1,12 +1,14 @@
-.home-slider{
+.home-slider {
     display: flex;
     width: 100%;
     overflow: hidden;
-    &-list{
+    
+    &-list {
         display: block;
         list-style: none;
     }
-    &-item{
+    
+    &-item {
         width: 100%;
         padding: 3rem 4rem;
         min-height: 390px;
@@ -14,12 +16,13 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        @include media-breakpoint-down(md){
+        @include media-breakpoint-down(md) {
             padding: 0;
             min-height: auto;
         }
     }
-    &-inner{
+    
+    &-inner {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -27,26 +30,30 @@
         height: 100%;
         position: relative;
         z-index: 15;
-        &.block-center{
+        
+        &.block-center {
             margin: 0 auto;
             text-align: center;
         }
-        &.block-left{
+        
+        &.block-left {
             margin-right: auto;
         }
-        &.block-right{
+        
+        &.block-right {
             margin-left: auto;
         }
-        @include media-breakpoint-down(md){
+        
+        @include media-breakpoint-down(md) {
             width: 100%;
             max-width: 100%;
             padding: 3rem;
             margin: auto;
             text-align: center;
-            .text-dark{
+            .text-dark {
                 color: $white !important;
             }
-            &:before{
+            &:before {
                 content: "";
                 display: block;
                 width: 100%;
@@ -57,33 +64,36 @@
                 top: 0;
                 z-index: -1;
             }
-            p{
+            p {
                 max-width: 50%;
                 text-align: center;
                 margin: 0 auto 10px;
             }
         }
-        @include media-breakpoint-down(sm){
+        @include media-breakpoint-down(sm) {
             p {
                 max-width: 70%;
             }
         }
     }
-    &-title{
-        font-family: "Playfair Display";
+    
+    &-title {
+        font-family: "Playfair Display", sans-serif;
         font-size: 2.125rem;
         font-weight: bold;
         line-height: 2.875rem;
         margin-bottom: 1rem;
     }
-    p{
-        font-family: "Open Sans";
+    
+    p {
+        font-family: "Open Sans", sans-serif;
         font-size: 1.125rem;
         line-height: 1.625rem;
         margin-bottom: 1.5rem;
     }
-    .slick-dots{
-        @include media-breakpoint-down(md){
+    
+    .slick-dots {
+        @include media-breakpoint-down(md) {
             left: 0;
             display: flex;
             flex-direction: row;

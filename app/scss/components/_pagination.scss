@@ -1,78 +1,93 @@
-.pagination{
-  display: flex;
-  width: 100%;
-  margin-bottom: 1rem;
-  @include media-breakpoint-down(sm){
-    width: 90%;
-    margin: 0 auto 1rem;
-  }
-  &-inner{
+.pagination {
     display: flex;
     width: 100%;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap:nowrap;
-    margin: auto;
-    position: relative;
-    ul{
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      flex-wrap: nowrap;
-      margin: auto;
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      li,
-      a{
-        color: $black;
-      }
+    margin-bottom: 1rem;
+    @include media-breakpoint-down(sm) {
+        width: 90%;
+        margin: 0 auto 1rem;
     }
-  }
-  
-  a{
-    font-size: 0.8125rem;
-    font-weight: 600;
-    text-decoration: none !important;
-    border-bottom: 2px solid transparent;
-    margin: 0 .5rem;
-    &.inactive{
-      color: $breadcrumb-color;
-      border-bottom: 2px solid $breadcrumb-color;
+    
+    &-inner {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+        margin: auto;
+        position: relative;
+        
+        ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: nowrap;
+            margin: auto;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            
+            li,
+            a {
+                color: $black;
+            }
+        }
     }
-  }
-  &-arrow{
-    color: $brown;
-    position: relative;
-    border-bottom: 2px solid transparent;
-    &.prev{margin:0 auto 0 0;}
-    &.next{margin: 0 0 0 auto;}
-    &.prev,
-    &.next{
-      @include media-breakpoint-down(sm){
-       span{
-         display: none;
-       }
-      }
+    
+    a {
+        font-size: 0.8125rem;
+        font-weight: 600;
+        text-decoration: none !important;
+        border-bottom: 2px solid transparent;
+        margin: 0 .5rem;
+        
+        &.inactive {
+            color: $breadcrumb-color;
+            border-bottom: 2px solid $breadcrumb-color;
+        }
     }
-    &.prev:before,
-    &.next:before{
-      font-family: 'FontAwesome';
-      position: absolute;
-      line-height: 1.2rem;
-      font-size: inherit;
-      @include media-breakpoint-down(sm){
-        position: initial;
-      }
+    
+    &-arrow {
+        color: $brown;
+        position: relative;
+        border-bottom: 2px solid transparent;
+        
+        &.prev {
+            margin: 0 auto 0 0;
+        }
+        
+        &.next {
+            margin: 0 0 0 auto;
+        }
+        
+        &.prev,
+        &.next {
+            @include media-breakpoint-down(sm) {
+                span {
+                    display: none;
+                }
+            }
+        }
+        
+        &.prev:before,
+        &.next:before {
+            font-family: 'FontAwesome';
+            position: absolute;
+            line-height: 1.2rem;
+            font-size: inherit;
+            @include media-breakpoint-down(sm) {
+                position: initial;
+            }
+        }
+        
+        &.prev:before {
+            content: "\f053";
+            left: -1rem;
+        }
+        
+        &.next:before {
+            content: "\f054";
+            right: -1rem;
+        }
     }
-    &.prev:before{
-      content: "\f053";
-      left: -1rem;
-    }
-    &.next:before{
-      content: "\f054";
-      right: -1rem;
-    }
-  }
 }
