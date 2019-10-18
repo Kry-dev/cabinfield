@@ -232,7 +232,8 @@
             display: inline-flex;
             position: relative;
             
-            .product-option-half {
+            .product-option-half,
+            .product-option-radio {
                 width: 100%;
             }
             
@@ -249,7 +250,8 @@
             }
         }
         
-        .product-option-half > div:not([class]) {
+        .product-option-half > div:not([class]),
+        .product-option-radio > div:not([class]) {
             width: 100%;
         }
         
@@ -367,7 +369,7 @@
         height: 62px;
         border-radius: 2px;
         border: 1px solid #D6CDCA;
-        box-shadow: inset 0 -3px 0 0 #F0EDED, inset 0 2px 0 0 #FFFFFF;
+        box-shadow: inset 0 -3px 0 0 #F0EDED, inset 0 2px 0 0 $white;
         position: relative;
         margin-bottom: 14px;
         padding-right: 30px;
@@ -384,35 +386,7 @@
             color: #778DAB;
         }
         
-        .option-half-descr {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            width: 100%;
-            order: 0;
-            padding: 11px 0 11px 14px;
-            overflow: hidden;
-            
-            p {
-                color: #8C7F7F;
-                font-family: "Open Sans", sans-serif;
-                font-size: 13px;
-                line-height: 1rem;
-                margin-bottom: 0;
-                padding: .18rem 0;
-                white-space: nowrap;
-            }
-            
-            .title {
-                color: $black;
-                padding: 0px;
-                
-                span {
-                    padding-left: 5px;
-                    color: #786c6c;
-                }
-            }
-        }
+        
         
         .option-half-img {
             width: 40%;
@@ -451,17 +425,13 @@
             }
         }
         
-        .fa {
-        
-        }
-        
         &:hover,
         &:focus,
         &.selected {
             cursor: pointer;
             border: 1px solid #879DBC;
             background-color: #F5F9FF;
-            box-shadow: inset 0 -2px 0 0 #FFFFFF, inset 0 3px 0 0 #DEE3EA;
+            box-shadow: inset 0 -2px 0 0 $white, inset 0 3px 0 0 #DEE3EA;
             
             p {
                 font-weight: 600;
@@ -481,7 +451,93 @@
         }
     }
 }
-
+.option-half-descr {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    order: 0;
+    padding: 11px 0 11px 14px;
+    overflow: hidden;
+    
+    p {
+        color: #8C7F7F;
+        font-family: "Open Sans", sans-serif;
+        font-size: 13px;
+        line-height: 1rem;
+        margin-bottom: 0;
+        padding: .18rem 0;
+        white-space: nowrap;
+    }
+    
+    .title {
+        color: $black;
+        padding: 0;
+        
+        span {
+            padding-left: 5px;
+            color: #786c6c;
+        }
+    }
+}
+.product-option-radio {
+    display: flex;
+    flex-direction: row;
+    width: 49%;
+    height: 62px;
+    border-radius: 2px;
+    border: 1px solid #D6CDCA;
+    box-shadow: inset 0 -3px 0 0 #F0EDED, inset 0 2px 0 0 $white;
+    position: relative;
+    margin-bottom: 14px;
+    padding-right: 20px;
+    &:hover,
+    &:focus{
+        cursor: pointer;
+        border: 1px solid #879DBC;
+        box-shadow: inset 0 -2px 0 0 $white, inset 0 3px 0 0 #DEE3EA;
+    }
+    &.selected {
+        cursor: pointer;
+        border: 1px solid #879DBC;
+        background-color: #F5F9FF;
+        
+        
+        p {
+            font-weight: 600;
+        }
+    }
+    .custom-control {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        .custom-control-label {
+            color: $black;
+            line-height: 17px;
+        }
+        .custom-control-label::before {
+            margin-top: 0;
+            left: -1.5rem;
+            border: 1px solid #CBC2BF;
+            box-shadow: inset 0 3px 0 0 #F0EDED, inset 0 2px 0 0 #FFFFFF;
+        }
+        .custom-control-label::after {
+            margin-top: 0;
+            left: -1.25rem;
+        }
+        & + .custom-control {
+            margin-left: 1rem;
+        }
+        .custom-control-input:checked~.custom-control-label::before {
+            border: 1px solid #627590;
+        }
+        &:focus,
+        &:hover {
+            cursor: initial;
+        }
+    }
+}
 .product-customize--dr-dw {
     .example_popup_text {
         border: 2px dashed #AEA7A5;

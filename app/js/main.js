@@ -519,7 +519,7 @@ $(document).ready(function(){
 	}
 	// hide filter option on mobile
 	function hideFilterMobile (){
-		var desktopView = $(document).width();
+		let desktopView = $(document).width();
 		if(desktopView <= "768"){
 			$(".product-filters-list").collapse('hide');
 		}
@@ -530,5 +530,18 @@ $(document).ready(function(){
 			hideFilterMobile();
 		});
 	});
-
+	
+	// product customization option yes/no
+    $(".product-option-radio").on('click', function(){
+        $(this).toggleClass('selected');
+        let inputYes = $(this).find(".custom-control-input.yes");
+        let inputNo = $(this).find(".custom-control-input.no");
+        if ($(this).hasClass( "selected" )){
+            inputYes.prop("checked", true);
+            inputNo.prop("checked", false);
+        } else {
+            inputYes.prop("checked", false);
+            inputNo.prop("checked", true);
+        }
+    })
 });
