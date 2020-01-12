@@ -330,3 +330,23 @@
     border: 2px solid $brown;
     border-radius: 2px;
 }
+.btn-collection {
+    display: inline-block;
+    width: 100%;
+    background: #FBFAF9;
+    border: 1px solid #E5DFDD;
+    text-transform: uppercase;
+    font-size: 11px;
+    line-height: 15px;
+    text-align: center;
+    vertical-align: middle;
+    color: #918483;
+    padding: 10px;
+    border-radius: 0;
+    &:after {
+        content: "\f105";
+        font-family: FontAwesome;
+        padding-left: .5rem;
+        font-style: 13px;
+    }
+}
