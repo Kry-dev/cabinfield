@@ -230,8 +230,8 @@ a:focus {
 .shop_by {
     width: 40%;
     min-width: 320px;
-    border-top: 2px solid #d6cdca87;
-    border-bottom: 2px solid #d6cdca87;
+    border-top: 2px solid rgba($review-border-color, .53);
+    border-bottom: 2px solid rgba($review-border-color, .53);
     position: relative;
     display: flex;
     flex-direction: row;
