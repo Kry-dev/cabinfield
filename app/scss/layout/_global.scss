@@ -322,3 +322,26 @@ a:focus {
     margin-bottom: 80px;
     margin-bottom: 10vh;
 }
+.product .quick-ship {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: .5rem 0 0;
+    margin-top: .5rem;
+    border-top: 1px solid $border-color;
+    .btn {
+        min-width: 160px;
+        margin: 0;
+    }
+    p {
+        color: $label-color;
+        font-size: 12px;
+    }
+    @include media-breakpoint-down(sm) {
+        flex-direction: column;
+        text-align: center;
+        .btn {
+            margin-bottom: .5rem;
+        }
+    }
+}
