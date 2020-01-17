@@ -449,6 +449,11 @@
     }
     
     &--shipping-opns.customize_popup {
+        .product-customize-list .product-option label{
+            min-height: 38px;
+            height: auto;
+            padding: 5px 5px 7px;
+        }
         .modal-wrapper-subtitle.custom-control-label:after,
         .modal-wrapper-subtitle.custom-control-label:before {
             margin-top: 0;
