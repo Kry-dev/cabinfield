@@ -67,7 +67,7 @@ $card-height: 21rem;
         }
         
         .card-img-overlay {
-            content: "";
+            //content: "";
             display: block;
             width: 100%;
             height: 100%;
@@ -298,6 +298,33 @@ $card-height: 21rem;
             max-width: 250px;
             @include media-breakpoint-down(md) {
                 max-width: 200px;
+            }
+        }
+    }
+    &.widgets--homepage {
+        @include media-breakpoint-down(md) {
+            .card-img {
+                background-position: 50% 50%;
+            }
+            .card-img-overlay {
+                
+                &:before {
+                    content: "";
+                    height: 100%;
+                    width: 100%;
+                    left: 0;
+                    top: 0;
+                    z-index: -1;
+                    position: absolute;
+                    background: rgba(255, 255, 255, 0.5);
+                }
+            }
+            .card-border-white.text-white {
+                color: $text-dark !important;
+                .card-img-overlay {
+                    outline: 1px solid $text-dark;
+                }
+                
             }
         }
     }
