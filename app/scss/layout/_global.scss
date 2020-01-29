@@ -345,3 +345,21 @@ a:focus {
         }
     }
 }
+
+.popup-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 14px;
+    font-size: 11px;
+    height: 14px;
+    border-radius: 50%;
+    border: 1px solid $warning;
+    color: $warning;
+    margin: auto auto auto 8px;
+    &:hover,
+    &:focus {
+        color: $white;
+        background: $warning;
+    }
+}
