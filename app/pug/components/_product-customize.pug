@@ -36,7 +36,7 @@ section.product-customize
                     #optgroup-5
                         .product-customize-form
                             h6.product-customize-subtitle #[b Pillows:]
-                            ul.product-customize-list.mb-3
+                            ul.product-customize-list.align-items-end.mb-3
                                 li.product-option-col
                                     h6.product-customize-subtitle 16" x 16" Pillow(s)  #[span.ml-1.label-color  $23 per pillow]
                                         a(href="#", data-toggle="modal", data-target="#customize_popup11").popup-info i
@@ -63,6 +63,27 @@ section.product-customize
                             .person-message
                                 h6.product-customize-subtitle.label-color Enter your personalized message here!
                                 textarea
+                    #optgroup-10
+                        .product-customize-form
+                            h6.product-customize-subtitle #[b Available Standard Sunbrella® Fabrics:]
+                            .product-customize-list
+                                .product-option.option-stain
+                                    input( type="radio" id="Standard-04" name="Standard")
+                                    label(for="Standard-04")
+                                        img(src="img/product/tmp_stain-2.jpg", alt="#").img-fluid
+                                        p.name Astoria Sunset
+                                .product-option.option-stain
+                                    input( type="radio" id="Standard-01" name="Standard")
+                                    label(for="Standard-01")
+                                        p.sample-text As shown in Product Photo
+                                        p.name Standart
+                                .product-option.option-stain
+                                    input( type="radio" id="Standard-02" name="Standard" checked)
+                                    label(for="Standard-02")
+                                        p.sample-text.sample-text--all SEE ALL AVAILABLE
+                                            span choices
+                                        p.name Select Now
+
                     #optgroup-2
                         .product-customize-form
                             h6.product-customize-subtitle

@@ -129,7 +129,6 @@
     width: 100%;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: flex-end;
     .product-option {
         display: inline-flex;
         position: relative;
@@ -334,11 +333,45 @@
             span {
                 font-weight: normal;
             }
+            .sample-text {
+                span {
+                    font-weight: 700;
+                }
+            }
         }
         
         img {
             width: 100%;
             height: 67px;
+        }
+        .sample-text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 2px 2px 0 0;
+            background-color: #E0E0E0;
+            width: 100%;
+            height: 67px;
+            color: #000;
+            font-family: "Open Sans";
+            font-size: 12px;
+            line-height: 17px;
+            text-align: center;
+            padding: 2px;
+            &.sample-text--all {
+                background-color: #879DBC;
+                color: $white;
+                font-weight: 700;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-transform: uppercase;
+                span {
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    color: $white;
+                }
+            }
         }
     }
     

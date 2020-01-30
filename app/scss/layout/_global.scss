@@ -377,5 +377,7 @@ a:focus {
         border-color: $review-border-color;
         padding: .5rem;
         color: $label-color;
+        border-radius: 2px;
+        box-shadow: inset 0 3px 0 0 #F4F2F2;
     }
 }
