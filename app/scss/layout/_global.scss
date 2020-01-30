@@ -193,6 +193,9 @@ a:focus {
     
 }
 
+.label-color {
+    color: $label-color;
+}
 .actions {
     display: flex;
     flex-direction: row;

@@ -129,7 +129,7 @@
     width: 100%;
     flex-direction: row;
     flex-wrap: wrap;
-    
+    align-items: flex-end;
     .product-option {
         display: inline-flex;
         position: relative;
@@ -259,6 +259,14 @@
             width: 100%;
         }
         
+    }
+    .product-option-select {
+        width: 100%;
+        max-width: 230px;
+        height: 38px;
+        .bootstrap-select>.dropdown-toggle {
+            padding: .5rem .65rem;
+        }
     }
 }
 
@@ -452,6 +460,26 @@
         }
         @include media-breakpoint-down(sm) {
             width: 100%;
+        }
+    }
+    &-col {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        align-items: flex-end;
+        margin-right: 24px;
+        .product-option-select {
+            margin-bottom: 4px;
+            position: relative;
+            
+        }
+        .product-option {
+            position: relative;
+            .popup-info {
+                position: absolute;
+                right: -20px;
+                top: 14px;
+            }
         }
     }
 }
