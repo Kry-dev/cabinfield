@@ -39,6 +39,9 @@
         line-height: 1.4375rem;
         padding-right: 3px;
         font-size: 0.8125rem;
+        .popup-info {
+            display: inline-flex;
+        }
     }
     
     .price {
