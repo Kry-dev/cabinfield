@@ -274,7 +274,7 @@ $card-height: 21rem;
             
             .card-img-overlay {
                 text-align: left;
-                padding: 32px 42px;
+                padding: 32px 32px;
                 display: flex;
                 flex-direction: column;
                 @include media-breakpoint-down(sm) {
@@ -295,7 +295,7 @@ $card-height: 21rem;
         .card-text {
             display: block;
             font-size: 0.8125rem;
-            max-width: 250px;
+            max-width: 240px;
             @include media-breakpoint-down(md) {
                 max-width: 200px;
             }
