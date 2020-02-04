@@ -266,7 +266,16 @@ $card-height: 21rem;
         .card {
             min-height: 18.5rem;
             position: relative;
-            
+            @include media-breakpoint-down(md) {
+                min-height: 21rem;
+            }
+            @include media-breakpoint-down(sm) {
+                min-height: 18.5rem;
+            }
+            .card-img {
+                //background-position: 10px 0;
+                background-position: right bottom 80%;
+            }
             .card-title {
                 font-size: 1.125rem;
                 max-width: 250px;
