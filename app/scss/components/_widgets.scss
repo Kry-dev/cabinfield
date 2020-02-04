@@ -264,18 +264,14 @@ $card-height: 21rem;
     
     &-inner {
         .card {
-            min-height: 18.5rem;
+            min-height: 21rem;
             position: relative;
-            @include media-breakpoint-down(md) {
-                min-height: 21rem;
-            }
-            @include media-breakpoint-down(sm) {
-                min-height: 18.5rem;
-            }
-            .card-img {
-                //background-position: 10px 0;
-                background-position: right bottom 80%;
-            }
+            //@include media-breakpoint-down(md) {
+            //    min-height: 21rem;
+            //}
+            //@include media-breakpoint-down(sm) {
+            //    min-height: 18.5rem;
+            //}
             .card-title {
                 font-size: 1.125rem;
                 max-width: 250px;
@@ -304,9 +300,9 @@ $card-height: 21rem;
         .card-text {
             display: block;
             font-size: 0.8125rem;
-            max-width: 240px;
+            max-width: 220px;
             @include media-breakpoint-down(md) {
-                max-width: 200px;
+                max-width: 220px;
             }
         }
     }
