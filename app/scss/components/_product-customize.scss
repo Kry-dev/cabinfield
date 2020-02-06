@@ -259,14 +259,7 @@
         }
         
     }
-    .product-option-select {
-        width: 100%;
-        max-width: 230px;
-        height: 38px;
-        .bootstrap-select>.dropdown-toggle {
-            padding: .5rem .65rem;
-        }
-    }
+    
     &.product-customize-list--hardware {
         padding-right: 150px;
         @include media-breakpoint-down(md) {
@@ -274,7 +267,14 @@
         }
     }
 }
-
+.product-option-select {
+    width: 100%;
+    max-width: 230px;
+    height: 38px;
+    .bootstrap-select>.dropdown-toggle {
+        padding: .5rem .65rem;
+    }
+}
 .product-option {
     margin-right: 7px;
     
