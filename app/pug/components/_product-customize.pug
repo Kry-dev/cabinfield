@@ -32,41 +32,7 @@ section.product-customize
                                     input( type="radio" id="bed-size-05" name="bed-size")
                                     label(for="bed-size-05") California King Bed
                                         span + $562
-                    #optgroup-5
-                        .product-customize-form
-                            h6.product-customize-subtitle #[b.mr-1 Pillows: ]
-                            .product-option-select
-                                label.mb-0 Quantity:
-                                select.selectpicker
-                                    option.text-dark(value='2',data-content="<b>x2</b><span class='text-dark ml-3'>46$</span>",selected)
-                                    option.text-dark(value='3',data-content="<b>x3</b><span class='text-dark ml-3'>66$</span>")
-                            ul.product-customize-list.align-items-end.mb-3
-                                li.product-option-col
-                                    h6.product-customize-subtitle 16" x 16" Pillow(s)  #[span.ml-1.label-color  $23 per pillow]
-                                        a(href="#", data-toggle="modal", data-target="#customize_popup11").popup-info i
-                                    .product-option-select
-                                        label.mb-0 Quantity:
-                                        select.selectpicker
-                                            option.text-dark(value='2',data-content="<b>x2</b><span class='text-dark ml-3'>46$</span>",selected)
-                                            option.text-dark(value='3',data-content="<b>x3</b><span class='text-dark ml-3'>66$</span>")
-                                li.product-option-col
-                                    h6.product-customize-subtitle 20" x 20" Pillow(s) #[span.ml-1.label-color  $50 per pillow]
-                                        a(href="#", data-toggle="modal", data-target="#customize_popup11").popup-info i
-                                    .product-option-select
-                                        label.mb-0 Quantity:
-                                        select.selectpicker
-                                            option.text-dark(value='2',data-content="<b>x2</b><span class='text-dark ml-3'>50$</span>")
-                                            option.text-dark(value='3',data-content="<b>x3</b><span class='text-dark ml-3'>100$</span>",selected)
-                                li.product-option-col
-                                    h6
-                                    .product-option.mt-auto
-                                        input( type="radio" id="Cylinder-0123" name="Cylinder")
-                                        label(for="Cylinder-0123") Cylinder Cushions
-                                            span + $105
-                                        a(href="#", data-toggle="modal", data-target="#customize_popup11").popup-info i
-                            .person-message
-                                h6.product-customize-subtitle.label-color Enter your personalized message here!
-                                textarea
+
                     #optgroup-10
                         .product-customize-form
                             h6.product-customize-subtitle #[b.mr-1 Available Standard Sunbrella® Fabrics:]
@@ -251,6 +217,49 @@ section.product-customize
                                         p.name
                                             strong.pr-2 Gbrielle
                                             | - $242
+                    #optgroup-5
+                        .product-customize-form
+                            h6.product-customize-subtitle #[b.mr-1 Pillows: ]
+                            .product-option-select
+                                label.mb-0 Quantity:
+                                select.selectpicker(data-title="")
+                                    option.text-dark(value='2',data-content="<b>x2</b><span class='text-dark ml-3'>46$</span>",selected)
+                                    option.text-dark(value='3',data-content="<b>x3</b><span class='text-dark ml-3'>66$</span>")
+                            h6.product-customize-subtitle #[b.mr-1 Quantity input number]
+                            .product-option-select
+                                label.mb-0 Quantity:
+                                .quantity
+                                    input(type="number", min="1", max="99", step="1", value="1")
+                                    .quantity__btn.quantity__btn--up
+                                    .quantity__btn.quantity__btn--down
+
+                            ul.product-customize-list.align-items-end.mb-3
+                                li.product-option-col
+                                    h6.product-customize-subtitle 16" x 16" Pillow(s)  #[span.ml-1.label-color  $23 per pillow]
+                                        a(href="#", data-toggle="modal", data-target="#customize_popup11").popup-info i
+                                    .product-option-select
+                                        label.mb-0 Quantity:
+                                        select.selectpicker
+                                            option.text-dark(value='2',data-content="<b>x2</b><span class='text-dark ml-3'>46$</span>",selected)
+                                            option.text-dark(value='3',data-content="<b>x3</b><span class='text-dark ml-3'>66$</span>")
+                                li.product-option-col
+                                    h6.product-customize-subtitle 20" x 20" Pillow(s) #[span.ml-1.label-color  $50 per pillow]
+                                        a(href="#", data-toggle="modal", data-target="#customize_popup11").popup-info i
+                                    .product-option-select
+                                        label.mb-0 Quantity:
+                                        select.selectpicker
+                                            option.text-dark(value='2',data-content="<b>x2</b><span class='text-dark ml-3'>50$</span>")
+                                            option.text-dark(value='3',data-content="<b>x3</b><span class='text-dark ml-3'>100$</span>",selected)
+                                li.product-option-col
+                                    h6
+                                    .product-option.mt-auto
+                                        input( type="radio" id="Cylinder-0123" name="Cylinder")
+                                        label(for="Cylinder-0123") Cylinder Cushions
+                                            span + $105
+                                        a(href="#", data-toggle="modal", data-target="#customize_popup11").popup-info i
+                            .person-message
+                                h6.product-customize-subtitle.label-color Enter your personalized message here!
+                                textarea
             .col-lg-3.col-md-4
                 .option-selected
                     h6.product-customize-subtitle

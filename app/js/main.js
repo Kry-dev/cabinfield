@@ -455,8 +455,8 @@ $(document).ready(function(){
 		$(this).parents('.review_section').find('.review_carousel').slick(action);
 	});
 
-	$('.selectpicker').selectpicker();
-
+	$('.selectpicker').selectpicker({title: ''});
+    $(".btn.dropdown-toggle").removeAttr('title');
 	/*Testimonials product hover*/
 	$(".testimonials .testimonials-product a").on({
 		mouseenter: function () {
@@ -544,4 +544,37 @@ $(document).ready(function(){
             inputNo.prop("checked", true);
         }
     })
+});
+
+$('.quantity').each(function() {
+    let spinner = $(this),
+        input = spinner.find('input[type="number"]'),
+        btnUp = spinner.find('.quantity__btn--up'),
+        btnDown = spinner.find('.quantity__btn--down'),
+        min = input.attr('min'),
+        max = input.attr('max');
+    
+    btnUp.click(function() {
+        let oldValue = parseFloat(input.val());
+        let newVal;
+        if (oldValue >= max) {
+            newVal = oldValue;
+        } else {
+            newVal = oldValue + 1;
+        }
+        spinner.find("input").val(newVal);
+        spinner.find("input").trigger("change");
+    });
+    
+    btnDown.click(function() {
+        let oldValue = parseFloat(input.val());
+        let newVal;
+        if (oldValue <= min) {
+            newVal = oldValue;
+        } else {
+            newVal = oldValue - 1;
+        }
+        spinner.find("input").val(newVal);
+        spinner.find("input").trigger("change");
+    });
 });
