@@ -545,7 +545,7 @@ $(document).ready(function(){
         }
     })
 });
-
+//Quantity input type number
 $('.quantity').each(function() {
     let spinner = $(this),
         input = spinner.find('input[type="number"]'),
