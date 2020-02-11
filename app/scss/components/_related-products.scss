@@ -9,11 +9,11 @@
         padding: 0 10px;
         
         a {
-            font-size: 13px;
+            font-size: 16px;
             line-height: 1.125rem;
-            
+            font-weight: bold;
             .fa {
-                font-size: 8px;
+                font-size: 14px;
             }
         }
     }
@@ -102,15 +102,18 @@
     }
     
     .btn-arrow {
-        width: 17px;
+        width: 24px;
+        .fa {
+            font-size: 24px;
+        }
     }
     
     &-prev {
-        margin-left: -8px;
+        margin-left: -18px;
     }
     
     &-next {
-        margin-right: -8px;
+        margin-right: -18px;
     }
     
     hr {
