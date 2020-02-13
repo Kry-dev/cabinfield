@@ -121,4 +121,13 @@
     hr {
         margin: 2rem auto;
     }
+    @include media-breakpoint-down(sm){
+        &-prev {
+            margin-left: -17px;
+        }
+    
+        &-next {
+            margin-right: -17px;
+        }
+    }
 }
