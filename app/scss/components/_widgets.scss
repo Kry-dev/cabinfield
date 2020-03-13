@@ -332,7 +332,39 @@ $card-height: 21rem;
                 .card-img-overlay {
                     outline: 1px solid $text-dark;
                 }
-                
+            }
+        }
+    }
+    &.widgets--new {
+        
+        .card {
+            min-height: 25rem;
+            @include media-breakpoint-down(sm) {
+                min-width: 21rem;
+            }
+        }
+        
+        .card-img-overlay {
+            padding: 1rem 5rem;
+            border: 7px solid rgba(0, 0, 0, 0.3);
+            &:before {
+                content: "";
+                height: 100%;
+                width: 100%;
+                left: 0;
+                top: 0;
+                z-index: -1;
+                position: absolute;
+                background: rgba(0, 0, 0, 0.3);
+            }
+            @include media-breakpoint-down(sm) {
+                padding: 1rem 2rem;
+            }
+        }
+        a:hover {
+            cursor: pointer;
+            .card-img-overlay {
+                border: 7px solid $blue;
             }
         }
     }
