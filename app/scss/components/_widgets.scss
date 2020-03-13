@@ -339,8 +339,13 @@ $card-height: 21rem;
         
         .card {
             min-height: 25rem;
+            margin-bottom: 2rem;
             @include media-breakpoint-down(sm) {
-                min-width: 21rem;
+                min-height: 21rem;
+                margin-bottom: 1rem;
+            }
+            &-text {
+                opacity: 1;
             }
         }
         
@@ -360,6 +365,13 @@ $card-height: 21rem;
             @include media-breakpoint-down(sm) {
                 padding: 1rem 2rem;
             }
+            @include media-breakpoint-down(xs) {
+                padding: 1rem;
+            }
+        }
+        a {
+            display: block;
+            width: 100%;
         }
         a:hover {
             cursor: pointer;
