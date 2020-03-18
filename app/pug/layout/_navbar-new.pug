@@ -1,0 +1,338 @@
+nav.navbar.navbar-expand-lg(role="navigation" id="mnu")
+    button.navbar-toggler(type='button', data-toggle='collapse', data-target='#header_navbar', aria-controls='header_navbar', aria-expanded='false', aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+    ul.mnu
+        li
+            a.nav-link(href='#') Bedrooms
+            .mnu-inner
+                .mnu-inner--tab
+                    button.tablinks.active(onmouseover="openSubMenu(event, 'Bedroom-Furniture-Sets')") Bedroom Furniture Sets
+                    button.tablinks(onmouseover="openSubMenu(event, 'Beds-Headboards')") Beds & Headboards
+                    button.tablinks(onmouseover="openSubMenu(event, 'Bedroom-Storage-Pieces')") Bedroom Storage Pieces
+                    button.tablinks(onmouseover="openSubMenu(event, 'Storage-Chests-Boxes')") Storage Chests & Boxes
+                    button.tablinks(onmouseover="openSubMenu(event, 'Bedroom-Accessories')") Bedroom Accessories
+                    button.tablinks(onmouseover="openSubMenu(event, 'Quick-Ship-Bedroom')") Quick Ship Bedroom
+                .mnu-inner--content
+                    ul#Bedroom-Furniture-Sets.tabcontent(style="display: flex;")
+                        li #[a(href='/products/bedrooms/bedroom-furniture-sets/mission') Mission]
+                        li #[a(href='/products/bedrooms/bedroom-furniture-sets/contemporary') Contemporary]
+                        li #[a(href='/products/bedrooms/bedroom-furniture-sets/traditional') Traditional]
+                        li #[a(href='/products/bedrooms/bedroom-furniture-sets/eclectic') Eclectic]
+                        li #[a(href='/products/bedrooms/bedroom-furniture-sets/rustic') Rustic]
+                        li #[a(href='/products/bedrooms/bedroom-furniture-sets/farmhouse') Farmhouse]
+                        li #[a(href='/products/bedrooms/bedroom-furniture-sets/quick-ship-bedroom-furniture-sets') Quick Ship Bedroom Furniture Sets]
+                        li #[a(href='/products/bedrooms/bedroom-furniture-sets/live-edge') Live Edge]
+                        li #[a(href='/products/bedrooms/bedroom-furniture-sets') View All]
+                    ul#Beds-Headboards.tabcontent
+                        li #[a(href='/products/bedrooms/beds-headboards/panel-beds') Panel Beds]
+                        li #[a(href='/products/bedrooms/beds-headboards/spindle-beds') Spindle Beds]
+                        li #[a(href='/products/bedrooms/beds-headboards/post-beds') Post Beds]
+                        li #[a(href='/products/bedrooms/beds-headboards/platform-beds') Platform Beds]
+                        li #[a(href='/products/bedrooms/beds-headboards/storage-beds') Storage Beds]
+                        li #[a(href='/products/bedrooms/beds-headboards/bookcase-beds') Bookcase Beds]
+                        li #[a(href='/products/bedrooms/beds-headboards/upholstered-beds') Upholstered Beds]
+                        li #[a(href='/products/bedrooms/beds-headboards/murphy-beds') Murphy Beds]
+                        li #[a(href='/products/bedrooms/beds-headboards/canopy-beds') Canopy Beds]
+                        li #[a(href='/products/bedrooms/beds-headboards/sleigh-beds') Sleigh Beds]
+                        li #[a(href='/products/bedrooms/beds-headboards/bunkbeds') Bunkbeds]
+                        li #[a(href='/products/bedrooms/beds-headboards/daybeds') Daybeds]
+                        li #[a(href='/products/bedrooms/beds-headboards/slat-beds') Slat Beds]
+                        li #[a(href='/products/bedrooms/beds-headboards/quick-ship-beds-headboards') Quick Ship Beds & Headboards]
+                        li #[a(href='/products/bedrooms/beds-headboards') View All]
+                    ul#Bedroom-Storage-Pieces.tabcontent
+                        li #[a(href='/products/bedrooms/bedroom-storage-pieces/armoires-wardrobes') Armoires & Wardrobes]
+                        li #[a(href='/products/bedrooms/bedroom-storage-pieces/dressers') Dressers]
+                        li #[a(href='/products/bedrooms/bedroom-storage-pieces/chest-of-drawers') Chest of Drawers]
+                        li #[a(href='/products/bedrooms/bedroom-storage-pieces/lingerie-chests') Lingerie Chests]
+                        li #[a(href='/products/bedrooms/bedroom-storage-pieces/mule-chests') Mule Chests]
+                        li #[a(href='/products/bedrooms/bedroom-storage-pieces/nightstands') Nightstands]
+                        li #[a(href='/products/bedrooms/bedroom-storage-pieces/bedroom-media-consoles') Bedroom Media Consoles]
+                        li #[a(href='/products/bedrooms/bedroom-storage-pieces/quick-ship-bedroom-storage-pieces') Quick Ship Bedroom Storage Pieces]
+                        li #[a(href='/products/bedrooms/bedroom-storage-pieces') View All]
+                    ul#Storage-Chests-Boxes.tabcontent
+                        li #[a(href='/products/bedrooms/storage-chests-boxes/blanket-boxes-hope-chests') Blanket Boxes & Hope Chests]
+                        li #[a(href='/products/bedrooms/storage-chests-boxes/steamer-trunks') Steamer Trunks]
+                        li #[a(href='/products/bedrooms/storage-chests-boxes') View All]
+                    ul#Bedroom-Accessories.tabcontent
+                        li #[a(href='/products/bedrooms/bedroom-accessories/bedroom-benches') Bedroom Benches]
+                        li #[a(href='/products/bedrooms/bedroom-accessories/jewelry-armoires') Jewelry Armoires]
+                        li #[a(href='/products/bedrooms/bedroom-accessories/cheval-jewelry-mirrors') Cheval & Jewelry Mirrors]
+                        li #[a(href='/products/bedrooms/bedroom-accessories/vanities-dressing-tables') Vanities & Dressing Tables]
+                        li #[a(href='/products/bedrooms/bedroom-accessories') View All]
+                    ul#Quick-Ship-Bedroom.tabcontent
+                        li #[a(href='/products/bedrooms/quick-ship-bedroom' rel="nofollow") View All]
+                .mnu-bottom
+                    .title Shop Bedrooms #[a(href='/bedrooms/shop-by-style') by Style] or #[a(href='/bedrooms/shop-by-collection') by Collection]
+                    img.mnu-bottom-img(src='img/menus/BedroomsMenu_Image.png', alt='Bed rooms menu image')
+        li
+            a.nav-link(href='#') Kitchen & Dining Room
+            .mnu-inner
+                .mnu-inner--tab
+                    button.tablinks.active(onmouseover="openSubMenu(event,'Dining-Room-Sets')") Dining Room Sets
+                    button.tablinks(onmouseover="openSubMenu(event, 'Quick-Ship-Kitchen-Dining-Room')") Quick Ship Kitchen & Dining Room
+                    button.tablinks(onmouseover="openSubMenu(event, 'Dining-Tables')") Dining Tables
+                    button.tablinks(onmouseover="openSubMenu(event, 'Dining-Chairs-Seating')") Dining Chairs & Seating
+                    button.tablinks(onmouseover="openSubMenu(event, 'Dining-Storage-Pieces')") Dining Storage Pieces
+                    button.tablinks(onmouseover="openSubMenu(event, 'Kitchen-Storage-Pieces')") Kitchen Storage Pieces
+                    button.tablinks(onmouseover="openSubMenu(event, 'Bars-Wine-Storage')") Bars & Wine Storage
+                    button.tablinks(onmouseover="openSubMenu(event, 'Kitchen-Islands')") Kitchen Islands
+                    button.tablinks(onmouseover="openSubMenu(event, 'Breakfast-Nooks')") Breakfast Nooks
+                .mnu-inner--content
+                    ul#Dining-Room-Sets.tabcontent(style="display: flex;")
+                        li #[a(href='/products/kitchen-dining-room/dining-room-sets/mission') Mission]
+                        li #[a(href='/products/kitchen-dining-room/dining-room-sets/contemporary') Contemporary]
+                        li #[a(href='/products/kitchen-dining-room/dining-room-sets/traditional') Traditional]
+                        li #[a(href='/products/kitchen-dining-room/dining-room-sets/rustic') Rustic]
+                        li #[a(href='/products/kitchen-dining-room/dining-room-sets/live-edge') Live Edge]
+                        li #[a(href='/products/kitchen-dining-room/dining-room-sets/art-deco') Art Deco]
+                        li #[a(href='/products/kitchen-dining-room/dining-room-sets/legacy-world') Legacy World]
+                        li #[a(href='/products/kitchen-dining-room/dining-room-sets/eclectic') Eclectic]
+                        li #[a(href='/products/kitchen-dining-room/dining-room-sets/farmhouse') Farmhouse]
+                        li #[a(href='/products/kitchen-dining-room/dining-room-sets/modern-living') Modern Living]
+                        li #[a(href='/products/kitchen-dining-room/dining-room-sets/quick-ship-dining-room-sets') Quick Ship Dining Room Sets]
+                        li #[a(href='/products/kitchen-dining-room/dining-room-sets') View All]
+                    ul#Quick-Ship-Kitchen-Dining-Room.tabcontent
+                        li #[a(href='/products/kitchen-dining-room/quick-ship-kitchen-dining-room') View All]
+                    ul#Dining-Tables.tabcontent
+                        li #[a(href='/products/kitchen-dining-room/dining-tables/leg-tables') Leg Tables]
+                        li #[a(href='/products/kitchen-dining-room/dining-tables/single-pedestal-tables') Single Pedestal Tables]
+                        li #[a(href='/products/kitchen-dining-room/dining-tables/double-pedestal-tables') Double Pedestal Tables]
+                        li #[a(href='/products/kitchen-dining-room/dining-tables/pub-tables') Pub Tables]
+                        li #[a(href='/products/kitchen-dining-room/dining-tables/trestle-tables') Trestle Tables]
+                        li #[a(href='/products/kitchen-dining-room/dining-tables/leaf-tables') Leaf Tables]
+                        li #[a(href='/products/kitchen-dining-room/dining-tables/quick-ship-dining-tables') Quick Ship Dining Tables]
+                        li #[a.view_all(href='/products/kitchen-dining-room/dining-tables') View All]
+                    ul#Dining-Chairs-Seating.tabcontent
+                        li #[a(href='/products/kitchen-dining-room/dining-chairs-seating/dining-chairs') Dining Chairs]
+                        li #[a(href='/products/kitchen-dining-room/dining-chairs-seating/dining-benches') Dining Benches]
+                        li #[a(href='/products/kitchen-dining-room/dining-chairs-seating/bar-stools-counter-chairs') Bar Stools & Counter Chairs]
+                        li #[a(href='/products/kitchen-dining-room/dining-chairs-seating/quick-ship-dining-chairs-seating') Quick Ship Dining Chairs & Seating]
+                        li #[a(href='/products/kitchen-dining-room/dining-chairs-seating') View All]
+                    ul#Dining-Storage-Pieces.tabcontent
+                        li #[a(href='/products/kitchen-dining-room/dining-storage-pieces/hutches') Hutches]
+                        li #[a(href='/products/kitchen-dining-room/dining-storage-pieces/corner-hutches') Corner Hutches]
+                        li #[a(href='/products/kitchen-dining-room/dining-storage-pieces/buffets-sideboards') Buffets & Sideboards]
+                        li #[a(href='/products/kitchen-dining-room/dining-storage-pieces/quick-ship-dining-storage-pieces') Quick Ship Dining Storage Pieces]
+                        li #[a(href='/products/kitchen-dining-room/dining-storage-pieces') View All]
+                    ul#Kitchen-Storage-Pieces.tabcontent
+                        li #[a(href='/products/kitchen-dining-room/kitchen-storage-pieces/cabinets-cupboards') Cabinets & Cupboards]
+                        li #[a(href='/products/kitchen-dining-room/kitchen-storage-pieces/pie-safes-jelly-cabinets') Pie Safes & Jelly Cabinets]
+                        li #[a(href='/products/kitchen-dining-room/kitchen-storage-pieces') View All]
+                    ul#Bars-Wine-Storage.tabcontent
+                        li #[a(href='/products/kitchen-dining-room/bars-wine-storage/bar-cabinets-wine-racks') Bar Cabinets & Wine Racks]
+                        li #[a(href='/products/kitchen-dining-room/bars-wine-storage/home-bars-bar-furniture') Home Bars & Bar Furniture]
+                        li #[a(href='/products/kitchen-dining-room/bars-wine-storage/coffee-bars') Coffee Bars]
+                        li #[a(href='/products/kitchen-dining-room/bars-wine-storage') View All]
+
+                    ul#Kitchen-Islands.tabcontent
+                        li #[a(href='/products/kitchen-dining-room/kitchen-islands') View All]
+                    ul#Breakfast-Nooks.tabcontent
+                        li #[a(href='/products/kitchen-dining-room/breakfast-nooks') View All]
+                .mnu-bottom
+                    .title Shop Kitchen & Dining Room #[a(href='/kitchen-dining-room/shop-by-style') by Style] or #[a(href='/kitchen-dining-room/shop-by-collection') by Collection]
+                    img.mnu-bottom-img(src='img/menus/KitchenMenu_Image.png', alt='KitchenMenu')
+        li
+            a.nav-link(href='#') Living Room & Entertainment
+            .mnu-inner
+                .mnu-inner--tab
+                    button.tablinks.active(onmouseover="openSubMenu(event,'Accent-Tables')") Accent Tables
+                    button.tablinks(onmouseover="openSubMenu(event,'Living-Room-Seating')") Living Room Seating
+                    button.tablinks(onmouseover="openSubMenu(event,'Curios-Display-Cabinets')") Curios & Display Cabinets
+                    button.tablinks(onmouseover="openSubMenu(event,'tv-stands-entertainment-centers')") TV Stands & Entertainment Centers
+                    button.tablinks(onmouseover="openSubMenu(event,'entryway-mudroom')") Entryway & Mudroom
+                    button.tablinks(onmouseover="openSubMenu(event,'hallway-furniture-benches')") Hallway Furniture & Benches
+                    button.tablinks(onmouseover="openSubMenu(event,'gun-gabinets')") Gun Cabinets
+                    button.tablinks(onmouseover="openSubMenu(event,'quick-ship-living-room-entertainment')") Quick Ship Living Room & Entertainment
+                .mnu-inner--content
+                    ul#Accent-Tables.tabcontent(style="display: flex;")
+                        li #[a(href='/products/living-room-entertainment/accent-tables/coffee-tables') Coffee Tables]
+                        li #[a(href='/products/living-room-entertainment/accent-tables/end-tables') End Tables]
+                        li #[a(href='/products/living-room-entertainment/accent-tables/sofa-tables') Sofa Tables]
+                        li #[a(href='/products/living-room-entertainment/accent-tables/console-tables') Console Tables]
+                        li #[a(href='/products/living-room-entertainment/accent-tables/lift-top-tables') Lift-top Tables]
+                        li #[a(href='/products/living-room-entertainment/accent-tables/quick-ship-accent-tables') Quick Ship Accent Tables]
+                        li #[a(href='/products/living-room-entertainment/accent-tables') View All]
+                    ul#Living-Room-Seating.tabcontent
+                        li #[a(href='/products/living-room-entertainment/living-room-seating/sofas') Sofas]
+                        li #[a(href='/products/living-room-entertainment/living-room-seating/loveseats') Loveseats]
+                        li #[a(href='/products/living-room-entertainment/living-room-seating/recliners') Recliners]
+                        li #[a(href='/products/living-room-entertainment/living-room-seating/rocking-chairs') Rocking Chairs]
+                        li #[a(href='/products/living-room-entertainment/living-room-seating/gliders') Gliders]
+                        li #[a(href='/products/living-room-entertainment/living-room-seating/living-room-chairs') Living Room Chairs]
+                        li #[a(href='/products/living-room-entertainment/living-room-seating/futons') Futons]
+                        li #[a(href='/products/living-room-entertainment/living-room-seating/quick-ship-seating') Quick Ship Seating]
+                        li #[a(href='/products/living-room-entertainment/living-room-seating') View All]
+                    ul#Curios-Display-Cabinets.tabcontent
+                        li
+                            a(href='/products/living-room-entertainment/curios-display-cabinets') View All
+
+                    ul#tv-stands-entertainment-centers.tabcontent
+                        li #[a(href='/products/living-room-entertainment/tv-stands-entertainment-centers/tv-consoles-media-stands') TV Consoles & Media Stands]
+                        li #[a(href='/products/living-room-entertainment/tv-stands-entertainment-centers/hutch-tower-media-units') Hutch & Tower Media Units]
+                        li #[a(href='/products/living-room-entertainment/tv-stands-entertainment-centers/wall-units') Wall Units]
+                        li #[a(href='/products/living-room-entertainment/tv-stands-entertainment-centers/fireplace-media-stands-wall-units') Fireplace Media Stands & Wall Units]
+                        li #[a(href='/products/living-room-entertainment/tv-stands-entertainment-centers/corner-media-stands-wall-units') Corner Media Stands & Wall Units]
+                        li #[a(href='/products/living-room-entertainment/tv-stands-entertainment-centers/quick-ship-tv-stands-entertainment-centers') Quick Ship TV Stands & Entertainment Centers]
+                        li #[a(href='/products/living-room-entertainment/tv-stands-entertainment-centers') View All]
+                    ul#entryway-mudroom.tabcontent
+                        li #[a(href='/products/living-room-entertainment/entryway-mudroom') View All]
+
+                    ul#hallway-furniture-benches.tabcontent
+                        li #[a(href='/products/living-room-entertainment/hallway-furniture-benches') View All]
+                    ul#gun-gabinets.tabcontent
+                        li #[a(href='/products/living-room-entertainment/gun-cabinets') View All]
+                    ul#quick-ship-living-room-entertainment.tabcontent
+                        li #[a(href='/products/living-room-entertainment/quick-ship-living-room-entertainment') View All]
+                .mnu-bottom
+                    .title Shop Living Room & Entertainment #[a(href='/living-room-entertainment/shop-by-style') by Style] or #[a(href='/living-room-entertainment/shop-by-collection') by Collection]
+                    img.mnu-bottom-img(src='img/menus/LivingRoomMenu_image.png', alt='LivingRoomMenu')
+        li
+            a.nav-link(href='#') Office
+            .mnu-inner
+                .mnu-inner--tab
+                    button.tablinks.active(onmouseover="openSubMenu(event,'office-furniture-sets')") Office Furniture Sets
+                    button.tablinks(onmouseover="openSubMenu(event,'quick-ship-office')") Quick Ship Office
+                    button.tablinks(onmouseover="openSubMenu(event,'desks-tables')") Desks & Tables
+                    button.tablinks(onmouseover="openSubMenu(event,'office-storage-pieces')") Office Storage Pieces
+                    button.tablinks(onmouseover="openSubMenu(event,'desk-chairs')") Desk Chairs
+                    button.tablinks(onmouseover="openSubMenu(event,'workbenches')") Workbenches
+                .mnu-inner--content
+                    ul#office-furniture-sets.tabcontent(style="display: flex;")
+                        li #[a(href='/products/office/office-furniture-sets/mission') Mission]
+                        li #[a(href='/products/office/office-furniture-sets/contemporary') Contemporary]
+                        li #[a(href='/products/office/office-furniture-sets/traditional') Traditional]
+                        li #[a(href='/products/office/office-furniture-sets') View All]
+                    ul#quick-ship-office.tabcontent
+                        li #[a(href='/products/office/quick-ship-office') View All]
+                    ul#desks-tables.tabcontent
+                        li #[a(href='/products/office/desks-tables/conference-tables') Conference Tables]
+                        li #[a(href='/products/office/desks-tables/executive-desks') Executive Desks]
+                        li #[a(href='/products/office/desks-tables/partner-desks') Partner Desks]
+                        li #[a(href='/products/office/desks-tables/l-shaped-desks') L-Shaped Desks]
+                        li #[a(href='/products/office/desks-tables/u-shaped-desks') U-Shaped Desks]
+                        li #[a(href='/products/office/desks-tables/hutch-top-desks') Hutch Top Desks]
+                        li #[a(href='/products/office/desks-tables/roll-top-desks') Roll Top Desks]
+                        li #[a(href='/products/office/desks-tables/secretary-desks') Secretary Desks]
+                        li #[a(href='/products/office/desks-tables/standing-desks') Standing Desks]
+                        li #[a(href='/products/office/desks-tables/writing-desks') Writing Desks]
+                        li #[a(href='/products/office/desks-tables/quick-ship-desks-tables') Quick Ship Desks & Tables]
+                        li #[a(href='/products/office/desks-tables') View All ]
+                    ul#office-storage-pieces.tabcontent
+                        li #[a(href='/products/office/office-storage-pieces/bookcases') Bookcases]
+                        li #[a(href='/products/office/office-storage-pieces/credenzas') Credenzas]
+                        li #[a(href='/products/office/office-storage-pieces/filing-cabinets') Filing Cabinets]
+                        li #[a(href='/products/office/office-storage-pieces/quick-ship-office-storage-pieces') Quick Ship Office Storage Pieces]
+                        li #[a(href='/products/office/office-storage-pieces') View All]
+
+                    ul#desk-chairs.tabcontent
+                        li #[a(href='/products/office/desk-chairs') View All]
+                    ul#workbenches.tabcontent
+                        li #[a(href='/products/office/workbenches') View All]
+                .mnu-bottom
+                    .title Shop Office #[a(href='/office/shop-by-style') by Style] or #[a(href='/office/shop-by-collection') by Collection]
+                    img.mnu-bottom-img(src='img/menus/OfficeMenu_image.png', alt='OfficeMenu')
+        li
+            a.nav-link(href='#') Outdoor
+            .mnu-inner
+                .mnu-inner--tab
+                    button.tablinks.active(onmouseover="openSubMenu(event,'gazebos-outdoor-structures')") Gazebos & Outdoor Structures
+                    button.tablinks(onmouseover="openSubMenu(event,'outdoor-lounge-dining-furniture-sets')") Outdoor Lounge & Dining Furniture Sets
+                    button.tablinks(onmouseover="openSubMenu(event,'outdoor-lounge-furniture')") Outdoor Lounge Furniture
+                    button.tablinks(onmouseover="openSubMenu(event,'outdoor-dining-furniture')") Outdoor Dining Furniture
+                    button.tablinks(onmouseover="openSubMenu(event,'specialty-playsets')") Specialty Playsets
+                    button.tablinks(onmouseover="openSubMenu(event,'outdoor-garden-decor')") Outdoor & Garden Decor
+                .mnu-inner--content
+                    ul#gazebos-outdoor-structures.tabcontent(style="display: flex;")
+                        li #[a(href='/products/outdoor/gazebos-outdoor-structures/gazebos') Gazebos]
+                        li #[a(href='/products/outdoor/gazebos-outdoor-structures/cabanas') Cabanas]
+                        li #[a(href='/products/outdoor/gazebos-outdoor-structures') View All]
+                    ul#outdoor-lounge-dining-furniture-sets.tabcontent
+                        li #[a(href='/products/outdoor/outdoor-lounge-dining-furniture-sets/patio-lounge-sets') Patio Lounge Sets]
+                        li #[a(href='/products/outdoor/outdoor-lounge-dining-furniture-sets/bar-sets') Bar Sets]
+                        li #[a(href='/products/outdoor/outdoor-lounge-dining-furniture-sets/dining-sets') Dining Sets]
+                        li #[a(href='/products/outdoor/outdoor-lounge-dining-furniture-sets') View All]
+                    ul#outdoor-lounge-furniture.tabcontent
+                        li #[a(href='/products/outdoor/outdoor-lounge-furniture/gliders') Gliders]
+                        li #[a(href='/products/outdoor/outdoor-lounge-furniture/porch-swings') Porch Swings]
+                        li #[a(href='/products/outdoor/outdoor-lounge-furniture/porch-rockers') Porch Rockers]
+                        li #[a(href='/products/outdoor/outdoor-lounge-furniture/accent-tables') Accent Tables]
+                        li #[a(href='/products/outdoor/outdoor-lounge-furniture/benches') Benches]
+                        li #[a(href='/products/outdoor/outdoor-lounge-furniture/patio-chairs') Patio Chairs]
+                        li #[a(href='/products/outdoor/outdoor-lounge-furniture/adirondack-chairs') Adirondack Chairs]
+                        li #[a(href='/products/outdoor/outdoor-lounge-furniture/sofas-loveseats-sectionals') Sofas, Loveseats, & Sectionals]
+                        li #[a(href='/products/outdoor/outdoor-lounge-furniture') View All]
+                    ul#outdoor-dining-furniture.tabcontent
+                        li #[a(href='/products/outdoor/outdoor-dining-furniture/picnic-tables') Picnic Tables]
+                        li #[a(href='/products/outdoor/outdoor-dining-furniture/dining-tables') Dining Tables]
+                        li #[a(href='/products/outdoor/outdoor-dining-furniture/dining-chairs') Dining Chairs]
+                        li #[a(href='/products/outdoor/outdoor-dining-furniture/bars') Bars]
+                        li #[a(href='/products/outdoor/outdoor-dining-furniture/bar-stools-pub-chairs') Bar Stools & Pub Chairs]
+                        li #[a(href='/products/outdoor/outdoor-dining-furniture/dining-benches') Dining Benches]
+                        li #[a(href='/products/outdoor/outdoor-dining-furniture') View All]
+                    ul#specialty-playsets.tabcontent
+                        li #[a(href='/products/outdoor/specialty-playsets') View All]
+                    ul#outdoor-garden-decor.tabcontent
+                        li #[a(href='/products/outdoor/outdoor-garden-decor/arbors') Arbors]
+                        li #[a(href='/products/outdoor/outdoor-garden-decor') View All]
+                .mnu-bottom
+                    .title
+                    img.mnu-bottom-img(src='img/menus/OutdoorMenu_image.png', alt='OutdoorMenu')
+        li
+            a.nav-link(href='#') Rustics & Live Edge
+            .mnu-inner
+                .mnu-inner--tab
+                    button.tablinks.active(onmouseover="openSubMenu(event,'rustics-live-edge-bedroom')") Rustics & Live Edge Bedroom
+                    button.tablinks(onmouseover="openSubMenu(event,'rustics-live-edge-kitchen-dining-room')") Rustics & Live Edge Kitchen & Dining Room
+                    button.tablinks(onmouseover="openSubMenu(event,'rustics-live-edge-living-room-entertainment')") Rustics & Live Edge Living Room & Entertainment
+                    button.tablinks(onmouseover="openSubMenu(event,'rustics-live-edge-office')") Rustics & Live Edge Office
+                    button.tablinks(onmouseover="openSubMenu(event,'quick-ship-rustics-live-edge')") Quick Ship Rustics & Live Edge
+                    button.tablinks(onmouseover="openSubMenu(event,'rustic-outdoor')") Rustic Outdoor
+                .mnu-inner--content
+                    ul#rustics-live-edge-bedroom.tabcontent(style="display: flex;")
+                        li #[a(href='/rustics-live-edge/rustics-live-edge-bedroom/shop-by-collection') Shop By Collection]
+                        li #[a(href='/products/rustics-live-edge/rustics-live-edge-bedroom/blanket-chests') Blanket Chests]
+                        li #[a(href='/products/rustics-live-edge/rustics-live-edge-bedroom/bedroom-sets') Bedroom Sets]
+                        li #[a(href='/products/rustics-live-edge/rustics-live-edge-bedroom/beds-headboards') Beds & Headboards]
+                        li #[a(href='/products/rustics-live-edge/rustics-live-edge-bedroom/armoires-wardrobes') Armoires & Wardrobes]
+                        li #[a(href='/products/rustics-live-edge/rustics-live-edge-bedroom/dressers') Dressers]
+                        li #[a(href='/products/rustics-live-edge/rustics-live-edge-bedroom/chest-of-drawers') Chest of Drawers]
+                        li #[a(href='/products/rustics-live-edge/rustics-live-edge-bedroom/mule-chests') Mule Chests]
+                        li #[a(href='/products/rustics-live-edge/rustics-live-edge-bedroom/lingerie-chests') Lingerie Chests]
+                        li #[a(href='/products/rustics-live-edge/rustics-live-edge-bedroom/nightstands') Nightstands]
+                        li #[a(href='/products/rustics-live-edge/rustics-live-edge-bedroom/bedroom-media-consoles') Bedroom Media Consoles]
+                        li #[a(href='/products/rustics-live-edge/rustics-live-edge-bedroom') View All]
+                    ul#rustics-live-edge-kitchen-dining-room.tabcontent
+                        li #[a(href='/products/rustics-live-edge/rustics-live-edge-kitchen-dining-room/dining-room-sets') Dining Room Sets]
+                        li #[a(href='/products/rustics-live-edge/rustics-live-edge-kitchen-dining-room/dining-tables') Dining Tables]
+                        li #[a(href='/products/rustics-live-edge/rustics-live-edge-kitchen-dining-room/dining-chairs-seating') Dining Chairs & Seating]
+                        li #[a(href='/products/rustics-live-edge/rustics-live-edge-kitchen-dining-room/dining-storage-pieces') Dining Storage Pieces]
+                        li #[a(href='/products/rustics-live-edge/rustics-live-edge-kitchen-dining-room/home-bars-bar-furniture') Home Bars & Bar Furniture]
+                        li #[a(href='/products/rustics-live-edge/rustics-live-edge-kitchen-dining-room/kitchen-storage-pieces') Kitchen Storage Pieces]
+                        li #[a(href='/rustics-live-edge/rustics-live-edge-kitchen-dining-room/shop-by-collection') Shop By Collection]
+                        li #[a(href='/products/rustics-live-edge/rustics-live-edge-kitchen-dining-room') View All]
+                    ul#rustics-live-edge-living-room-entertainment.tabcontent
+                        li #[a(href='/rustics-live-edge/rustics-live-edge-living-room-entertainment/shop-by-collection') Shop By Collection]
+                        li #[a(href='/products/rustics-live-edge/rustics-live-edge-living-room-entertainment/seating-collections') Seating Collections]
+                        li #[a(href='/products/rustics-live-edge/rustics-live-edge-living-room-entertainment/accent-tables') Accent Tables]
+                        li #[a(href='/products/rustics-live-edge/rustics-live-edge-living-room-entertainment/tv-stands-entertainment-centers') TV Stands & Entertainment Centers]
+                        li #[a(href='/products/rustics-live-edge/rustics-live-edge-living-room-entertainment/entryway-mudroom') Entryway & Mudroom]
+                        li #[a(href='/products/rustics-live-edge/rustics-live-edge-living-room-entertainment/hallway-furniture-benches') Hallway Furniture & Benches]
+                        li #[a(href='/products/rustics-live-edge/rustics-live-edge-living-room-entertainment/gun-cabinets') Gun Cabinets]
+                        li #[a(href='/products/rustics-live-edge/rustics-live-edge-living-room-entertainment') View All]
+
+                    ul#rustics-live-edge-office.tabcontent
+                        li #[a(href="/products/rustics-live-edge/rustics-live-edge-office/desks-tables") Desks & Tables]
+                        li #[a(href="/products/rustics-live-edge/rustics-live-edge-office/office-storage-pieces") Office Storage Pieces]
+                        li #[a(href="/rustics-live-edge/rustics-live-edge-office/shop-by-collection") Shop By Collection]
+                        li #[a(href="/products/rustics-live-edge/rustics-live-edge-office") View All]
+                    ul#quick-ship-rustics-live-edge.tabcontent
+                        li #[a(href="/products/rustics-live-edge/quick-ship-rustics-live-edge") View All]
+                    ul#rustic-outdoor.tabcontent
+                        li #[a(href="/products/rustics-live-edge/rustic-outdoor/outdoor-lounge-dining-furniture-sets") Outdoor Lounge & Dining Furniture Sets]
+                        li #[a(href="/products/rustics-live-edge/rustic-outdoor/outdoor-lounge-furniture") Outdoor Lounge Furniture]
+                        li #[a(href="/products/rustics-live-edge/rustic-outdoor/outdoor-dining-furniture") Outdoor Dining Furniture]
+                        li #[a(href="/products/rustics-live-edge/rustic-outdoor") View All]
+                .mnu-bottom
+                    .title
+                        | Shop Rustics & Live Edge #[a(href='/rustics-live-edge/shop-by-style') by Style]
+                    img.mnu-bottom-img(src='img/menus/RusticMenu_image.png', alt='Rustics & Live Edge')
