@@ -579,17 +579,38 @@ $('.quantity').each(function() {
     });
 });
 
-//menu script
-function openSubMenu(evt, cityName) {
-    let i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
+/*Main navigation*/
+$("#mnu > ul > li").on({
+    click: function (evt) {
+        if ( $(this).find(".mnu-inner")){
+            console.log(this);
+            $(this).find(".mnu-inner").addClass("active");
+        }
+    },
+    mouseleave: function (evt) {
+        if ( $(this).find(".mnu-inner.active")){
+            $(this).find(".mnu-inner.active").removeClass("active");
+        }
     }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(cityName).style.display = "flex";
-    evt.currentTarget.className += " active";
-};
+});
+// //menu script
+// function openSubMenu(evt, tabTitle) {
+//     let i, tabcontent, tablinks;
+//     tabcontent = document.getElementsByClassName("tabcontent");
+//     tablinks = document.getElementsByClassName("tablinks");
+//
+//     for (i = 0; i < tabcontent.length; i++) {
+//         // tabcontent[i].style.display = "none";
+//         tabcontent[i].className = tabcontent[i].className.replace(" active", "");
+//     }
+//     for (i = 0; i < tablinks.length; i++) {
+//         tablinks[i].className = tablinks[i].className.replace(" active", "");
+//     }
+//
+//     // document.getElementById(tabTitle).style.display = "flex";
+//     document.getElementById(tabTitle).className = " active";
+//
+//     // console.log(evt);
+//     evt.currentTarget.className += " active";
+//     // tabcontent.className += " active";
+// }
