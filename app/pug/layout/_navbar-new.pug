@@ -6,14 +6,14 @@ nav.navbar.navbar-expand-lg(role="navigation" id="mnu")
             a.nav-link(href='#') Bedrooms
             .mnu-inner
                 .mnu-inner--tab
-                    button.tablinks.active(onmouseover="openSubMenu(event, 'Bedroom-Furniture-Sets')") Bedroom Furniture Sets
-                    button.tablinks(onmouseover="openSubMenu(event, 'Beds-Headboards')") Beds & Headboards
-                    button.tablinks(onmouseover="openSubMenu(event, 'Bedroom-Storage-Pieces')") Bedroom Storage Pieces
-                    button.tablinks(onmouseover="openSubMenu(event, 'Storage-Chests-Boxes')") Storage Chests & Boxes
-                    button.tablinks(onmouseover="openSubMenu(event, 'Bedroom-Accessories')") Bedroom Accessories
-                    button.tablinks(onmouseover="openSubMenu(event, 'Quick-Ship-Bedroom')") Quick Ship Bedroom
+                    button.tablinks.active(data-tab="Bedroom-Furniture-Sets") Bedroom Furniture Sets
+                    button.tablinks(data-tab="Beds-Headboards") Beds & Headboards
+                    button.tablinks(data-tab="Bedroom-Storage-Pieces") Bedroom Storage Pieces
+                    button.tablinks(data-tab="Storage-Chests-Boxes") Storage Chests & Boxes
+                    button.tablinks(data-tab="Bedroom-Accessories") Bedroom Accessories
+                    button.tablinks(data-tab="Quick-Ship-Bedroom") Quick Ship Bedroom
                 .mnu-inner--content
-                    ul#Bedroom-Furniture-Sets.tabcontent.active(style="display: flex;")
+                    ul#Bedroom-Furniture-Sets.tabcontent.active()
                         li #[a(href='/products/bedrooms/bedroom-furniture-sets/mission') Mission]
                         li #[a(href='/products/bedrooms/bedroom-furniture-sets/contemporary') Contemporary]
                         li #[a(href='/products/bedrooms/bedroom-furniture-sets/traditional') Traditional]
@@ -68,17 +68,17 @@ nav.navbar.navbar-expand-lg(role="navigation" id="mnu")
             a.nav-link(href='#') Kitchen & Dining Room
             .mnu-inner
                 .mnu-inner--tab
-                    button.tablinks.active(onmouseover="openSubMenu(event,'Dining-Room-Sets')") Dining Room Sets
-                    button.tablinks(onmouseover="openSubMenu(event, 'Quick-Ship-Kitchen-Dining-Room')") Quick Ship Kitchen & Dining Room
-                    button.tablinks(onmouseover="openSubMenu(event, 'Dining-Tables')") Dining Tables
-                    button.tablinks(onmouseover="openSubMenu(event, 'Dining-Chairs-Seating')") Dining Chairs & Seating
-                    button.tablinks(onmouseover="openSubMenu(event, 'Dining-Storage-Pieces')") Dining Storage Pieces
-                    button.tablinks(onmouseover="openSubMenu(event, 'Kitchen-Storage-Pieces')") Kitchen Storage Pieces
-                    button.tablinks(onmouseover="openSubMenu(event, 'Bars-Wine-Storage')") Bars & Wine Storage
-                    button.tablinks(onmouseover="openSubMenu(event, 'Kitchen-Islands')") Kitchen Islands
-                    button.tablinks(onmouseover="openSubMenu(event, 'Breakfast-Nooks')") Breakfast Nooks
+                    button.tablinks.active(data-tab='Dining-Room-Sets') Dining Room Sets
+                    button.tablinks(data-tab='Quick-Ship-Kitchen-Dining-Room') Quick Ship Kitchen & Dining Room
+                    button.tablinks(data-tab='Dining-Tables') Dining Tables
+                    button.tablinks(data-tab='Dining-Chairs-Seating') Dining Chairs & Seating
+                    button.tablinks(data-tab='Dining-Storage-Pieces') Dining Storage Pieces
+                    button.tablinks(data-tab='Kitchen-Storage-Pieces') Kitchen Storage Pieces
+                    button.tablinks(data-tab='Bars-Wine-Storage') Bars & Wine Storage
+                    button.tablinks(data-tab='Kitchen-Islands') Kitchen Islands
+                    button.tablinks(data-tab='Breakfast-Nooks') Breakfast Nooks
                 .mnu-inner--content
-                    ul#Dining-Room-Sets.tabcontent(style="display: flex;")
+                    ul#Dining-Room-Sets.tabcontent.active
                         li #[a(href='/products/kitchen-dining-room/dining-room-sets/mission') Mission]
                         li #[a(href='/products/kitchen-dining-room/dining-room-sets/contemporary') Contemporary]
                         li #[a(href='/products/kitchen-dining-room/dining-room-sets/traditional') Traditional]
@@ -135,16 +135,16 @@ nav.navbar.navbar-expand-lg(role="navigation" id="mnu")
             a.nav-link(href='#') Living Room & Entertainment
             .mnu-inner
                 .mnu-inner--tab
-                    button.tablinks.active(onmouseover="openSubMenu(event,'Accent-Tables')") Accent Tables
-                    button.tablinks(onmouseover="openSubMenu(event,'Living-Room-Seating')") Living Room Seating
-                    button.tablinks(onmouseover="openSubMenu(event,'Curios-Display-Cabinets')") Curios & Display Cabinets
-                    button.tablinks(onmouseover="openSubMenu(event,'tv-stands-entertainment-centers')") TV Stands & Entertainment Centers
-                    button.tablinks(onmouseover="openSubMenu(event,'entryway-mudroom')") Entryway & Mudroom
-                    button.tablinks(onmouseover="openSubMenu(event,'hallway-furniture-benches')") Hallway Furniture & Benches
-                    button.tablinks(onmouseover="openSubMenu(event,'gun-gabinets')") Gun Cabinets
-                    button.tablinks(onmouseover="openSubMenu(event,'quick-ship-living-room-entertainment')") Quick Ship Living Room & Entertainment
+                    button.tablinks.active(data-tab='Accent-Tables') Accent Tables
+                    button.tablinks(data-tab='Living-Room-Seating') Living Room Seating
+                    button.tablinks(data-tab='Curios-Display-Cabinets') Curios & Display Cabinets
+                    button.tablinks(data-tab='tv-stands-entertainment-centers') TV Stands & Entertainment Centers
+                    button.tablinks(data-tab='entryway-mudroom') Entryway & Mudroom
+                    button.tablinks(data-tab='hallway-furniture-benches') Hallway Furniture & Benches
+                    button.tablinks(data-tab='gun-gabinets') Gun Cabinets
+                    button.tablinks(data-tab='quick-ship-living-room-entertainment') Quick Ship Living Room & Entertainment
                 .mnu-inner--content
-                    ul#Accent-Tables.tabcontent(style="display: flex;")
+                    ul#Accent-Tables.tabcontent.active
                         li #[a(href='/products/living-room-entertainment/accent-tables/coffee-tables') Coffee Tables]
                         li #[a(href='/products/living-room-entertainment/accent-tables/end-tables') End Tables]
                         li #[a(href='/products/living-room-entertainment/accent-tables/sofa-tables') Sofa Tables]
@@ -190,14 +190,14 @@ nav.navbar.navbar-expand-lg(role="navigation" id="mnu")
             a.nav-link(href='#') Office
             .mnu-inner
                 .mnu-inner--tab
-                    button.tablinks.active(onmouseover="openSubMenu(event,'office-furniture-sets')") Office Furniture Sets
-                    button.tablinks(onmouseover="openSubMenu(event,'quick-ship-office')") Quick Ship Office
-                    button.tablinks(onmouseover="openSubMenu(event,'desks-tables')") Desks & Tables
-                    button.tablinks(onmouseover="openSubMenu(event,'office-storage-pieces')") Office Storage Pieces
-                    button.tablinks(onmouseover="openSubMenu(event,'desk-chairs')") Desk Chairs
-                    button.tablinks(onmouseover="openSubMenu(event,'workbenches')") Workbenches
+                    button.tablinks.active(data-tab='office-furniture-sets') Office Furniture Sets
+                    button.tablinks(data-tab='quick-ship-office') Quick Ship Office
+                    button.tablinks(data-tab='desks-tables') Desks & Tables
+                    button.tablinks(data-tab='office-storage-pieces') Office Storage Pieces
+                    button.tablinks(data-tab='desk-chairs') Desk Chairs
+                    button.tablinks(data-tab='workbenches') Workbenches
                 .mnu-inner--content
-                    ul#office-furniture-sets.tabcontent(style="display: flex;")
+                    ul#office-furniture-sets.tabcontent.active
                         li #[a(href='/products/office/office-furniture-sets/mission') Mission]
                         li #[a(href='/products/office/office-furniture-sets/contemporary') Contemporary]
                         li #[a(href='/products/office/office-furniture-sets/traditional') Traditional]
@@ -235,14 +235,14 @@ nav.navbar.navbar-expand-lg(role="navigation" id="mnu")
             a.nav-link(href='#') Outdoor
             .mnu-inner
                 .mnu-inner--tab
-                    button.tablinks.active(onmouseover="openSubMenu(event,'gazebos-outdoor-structures')") Gazebos & Outdoor Structures
-                    button.tablinks(onmouseover="openSubMenu(event,'outdoor-lounge-dining-furniture-sets')") Outdoor Lounge & Dining Furniture Sets
-                    button.tablinks(onmouseover="openSubMenu(event,'outdoor-lounge-furniture')") Outdoor Lounge Furniture
-                    button.tablinks(onmouseover="openSubMenu(event,'outdoor-dining-furniture')") Outdoor Dining Furniture
-                    button.tablinks(onmouseover="openSubMenu(event,'specialty-playsets')") Specialty Playsets
-                    button.tablinks(onmouseover="openSubMenu(event,'outdoor-garden-decor')") Outdoor & Garden Decor
+                    button.tablinks.active(data-tab='gazebos-outdoor-structures') Gazebos & Outdoor Structures
+                    button.tablinks(data-tab='outdoor-lounge-dining-furniture-sets') Outdoor Lounge & Dining Furniture Sets
+                    button.tablinks(data-tab='outdoor-lounge-furniture') Outdoor Lounge Furniture
+                    button.tablinks(data-tab='outdoor-dining-furniture') Outdoor Dining Furniture
+                    button.tablinks(data-tab='specialty-playsets') Specialty Playsets
+                    button.tablinks(data-tab='outdoor-garden-decor') Outdoor & Garden Decor
                 .mnu-inner--content
-                    ul#gazebos-outdoor-structures.tabcontent(style="display: flex;")
+                    ul#gazebos-outdoor-structures.tabcontent.active
                         li #[a(href='/products/outdoor/gazebos-outdoor-structures/gazebos') Gazebos]
                         li #[a(href='/products/outdoor/gazebos-outdoor-structures/cabanas') Cabanas]
                         li #[a(href='/products/outdoor/gazebos-outdoor-structures') View All]
@@ -281,14 +281,14 @@ nav.navbar.navbar-expand-lg(role="navigation" id="mnu")
             a.nav-link(href='#') Rustics & Live Edge
             .mnu-inner
                 .mnu-inner--tab
-                    button.tablinks.active(onmouseover="openSubMenu(event,'rustics-live-edge-bedroom')") Rustics & Live Edge Bedroom
-                    button.tablinks(onmouseover="openSubMenu(event,'rustics-live-edge-kitchen-dining-room')") Rustics & Live Edge Kitchen & Dining Room
-                    button.tablinks(onmouseover="openSubMenu(event,'rustics-live-edge-living-room-entertainment')") Rustics & Live Edge Living Room & Entertainment
-                    button.tablinks(onmouseover="openSubMenu(event,'rustics-live-edge-office')") Rustics & Live Edge Office
-                    button.tablinks(onmouseover="openSubMenu(event,'quick-ship-rustics-live-edge')") Quick Ship Rustics & Live Edge
-                    button.tablinks(onmouseover="openSubMenu(event,'rustic-outdoor')") Rustic Outdoor
+                    button.tablinks.active(data-tab='rustics-live-edge-bedroom') Rustics & Live Edge Bedroom
+                    button.tablinks(data-tab='rustics-live-edge-kitchen-dining-room') Rustics & Live Edge Kitchen & Dining Room
+                    button.tablinks(data-tab='rustics-live-edge-living-room-entertainment') Rustics & Live Edge Living Room & Entertainment
+                    button.tablinks(data-tab='rustics-live-edge-office') Rustics & Live Edge Office
+                    button.tablinks(data-tab='quick-ship-rustics-live-edge') Quick Ship Rustics & Live Edge
+                    button.tablinks(data-tab='rustic-outdoor') Rustic Outdoor
                 .mnu-inner--content
-                    ul#rustics-live-edge-bedroom.tabcontent(style="display: flex;")
+                    ul#rustics-live-edge-bedroom.tabcontent.active
                         li #[a(href='/rustics-live-edge/rustics-live-edge-bedroom/shop-by-collection') Shop By Collection]
                         li #[a(href='/products/rustics-live-edge/rustics-live-edge-bedroom/blanket-chests') Blanket Chests]
                         li #[a(href='/products/rustics-live-edge/rustics-live-edge-bedroom/bedroom-sets') Bedroom Sets]

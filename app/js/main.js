@@ -583,7 +583,6 @@ $('.quantity').each(function() {
 $("#mnu > ul > li").on({
     click: function (evt) {
         if ( $(this).find(".mnu-inner")){
-            console.log(this);
             $(this).find(".mnu-inner").addClass("active");
         }
     },
@@ -593,7 +592,7 @@ $("#mnu > ul > li").on({
         }
     }
 });
-// //menu script
+// // menu script
 // function openSubMenu(evt, tabTitle) {
 //     let i, tabcontent, tablinks;
 //     tabcontent = document.getElementsByClassName("tabcontent");
@@ -614,3 +613,33 @@ $("#mnu > ul > li").on({
 //     evt.currentTarget.className += " active";
 //     // tabcontent.className += " active";
 // }
+function Tabs() {
+    let currentMenu = document.querySelectorAll('.mnu-inner.active');
+    console.log(currentMenu);
+    let bindAll = function() {
+        let menuElements = document.querySelectorAll('[data-tab]');
+        for(let i = 0; i < menuElements.length ; i++) {
+            menuElements[i].addEventListener('mouseover', change, false);
+        }
+    };
+    
+    let clear = function() {
+        let menuElements = document.querySelectorAll('[data-tab]');
+        for(let i = 0; i < menuElements.length ; i++) {
+            menuElements[i].classList.remove('active');
+            let id = menuElements[i].getAttribute('data-tab');
+            document.getElementById(id).classList.remove('active');
+        }
+    };
+    
+    let change = function(e) {
+        clear();
+        e.target.classList.add('active');
+        let id = e.currentTarget.getAttribute('data-tab');
+        document.getElementById(id).classList.add('active');
+    };
+    
+    bindAll();
+}
+
+Tabs();
