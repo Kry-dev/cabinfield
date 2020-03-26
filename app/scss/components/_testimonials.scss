@@ -83,7 +83,9 @@
             }
         }
     }
-    
+    &-labe{
+        max-width: 200px;
+    }
     @include media-breakpoint-down(sm) {
         .img-fluid {
             margin: 0 auto 1rem;
