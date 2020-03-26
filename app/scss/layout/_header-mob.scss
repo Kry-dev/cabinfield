@@ -1,0 +1,25 @@
+//#mobile-menu {
+//    //display: none;
+//    @include media-breakpoint-down(md) {
+//        //display: block;
+//        nav:not(.mm-menu) {
+//            display: none;
+//        }
+//    }
+//}
+.header-mob {
+    &--top {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+    &--top-nav {
+        display: flex;
+        flex-direction: row;
+    }
+    .header-log {
+        width: 100%;
+        margin: 182px;
+    }
+}

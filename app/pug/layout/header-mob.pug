@@ -1,0 +1,25 @@
+header.header-mob
+    .container.px-0
+        <!--header top section-->
+        .header-mob--top
+            a(href="/").header-logo
+                img.img-fluid(src="img/general/cabinfield_logo.png", alt="logo")
+            ul.header-mob--top-nav
+                li #[a(href="#") My Account]
+                li #[a(href="#") My Wishlist]
+                li
+                    a(href="#")
+                        .fa.fa-shopping-cart
+                        span.text-warning.ml-1 2
+        .header-mob--mdl
+            <!--header navigation section-->
+            include _navbar-mob
+            <!--end of header navigation section-->
+        .header-mob--btm
+            form.header-search
+                input.form-control(type='search', name="search", placeholder='Search our store', aria-label='Search')
+                button.btn.btn-outline-primary(type='submit')
+                    i.fa.fa-search
+        <!--end header top section-->
+
+

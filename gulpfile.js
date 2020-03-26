@@ -1,6 +1,6 @@
-var cssSyntax = 'scss'; // Syntax: scss;
+const cssSyntax = 'scss'; // Syntax: scss;
 
-var gulp           = require('gulp'),
+const gulp           = require('gulp'),
     pug            = require('gulp-pug'),
     browsersync    = require('browser-sync'),
     concat         = require('gulp-concat'),
@@ -75,14 +75,11 @@ gulp.task('pug', function() {
 gulp.task('scripts', function() {
     return gulp.src([
         // Библиотеки
-        // 'app/libs/magnific/jquery.magnific-popup.min.js',
+        'app/libs/mmenu-js/mmenu.js',
         'app/libs/popper/popper.min.js',
         'app/libs/bootstrap/bootstrap.min.js',
-        // 'app/libs/bxslider/jquery.bxslider.min.js',
-        // 'app/libs/maskedinput/maskedinput.js',
         'app/libs/slick/slick.min.js',
         'app/libs/bootstrap-select/js/bootstrap-select.min.js',
-        // 'app/libs/validate/jquery.validate.min.js'
     ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())
@@ -98,7 +95,7 @@ gulp.task('cleansprite', function() {
 
 
 gulp.task('spritemade', function() {
-    var spriteData =
+    let spriteData =
         gulp.src('app/img/sprite/*.*')
         .pipe(spritesmith({
             imgName: 'sprite.png',
@@ -115,6 +112,7 @@ gulp.task('spritemade', function() {
     spriteData.img.pipe(gulp.dest('app/img/sprite/')); // путь, куда сохраняем картинку
     spriteData.css.pipe(gulp.dest('app/'+cssSyntax+'/')); // путь, куда сохраняем стили
 });
+
 gulp.task('sprite', ['cleansprite', 'spritemade']);
 
 // Слежение
@@ -142,18 +140,18 @@ gulp.task('img', function() {
 
 // Сборка проекта
 gulp.task('build', ['clean', 'img', cssSyntax, 'scripts'], function() {
-    var buildCss = gulp.src('app/css/*.css')
+    let buildCss = gulp.src('app/css/*.css')
         .pipe(gulp.dest('product/css'));
-    var buildFonts = gulp.src('app/fonts/**/*')
+    let buildFonts = gulp.src('app/fonts/**/*')
         .pipe(gulp.dest('product/fonts'));
     // Font-awesome fonts
-    var buildFontAwesome = gulp.src('app/libs/font-awesome/fonts/**/*')
-        .pipe(gulp.dest('product/libs/fonta-wesome/fonts'));
-    var buildJs = gulp.src('app/js/**.js')
+    let buildFontAwesome = gulp.src('app/libs/font-awesome/fonts/**/*')
+        .pipe(gulp.dest('product/libs/font-awesome/fonts'));
+    let buildJs = gulp.src('app/js/**.js')
         .pipe(gulp.dest('product/js'));
-    var buildHtml = gulp.src('app/*.html')
+    let buildHtml = gulp.src('app/*.html')
         .pipe(gulp.dest('product/'));
-    var buildImg = gulp.src('app/img/sprite/sprite.png')
+    let buildImg = gulp.src('app/img/sprite/sprite.png')
         .pipe(imagemin({
             progressive: true,
             use: [pngquant()]

@@ -615,7 +615,6 @@ $("#mnu > ul > li").on({
 // }
 function Tabs() {
     let currentMenu = document.querySelectorAll('.mnu-inner.active');
-    console.log(currentMenu);
     let bindAll = function() {
         let menuElements = document.querySelectorAll('[data-tab]');
         for(let i = 0; i < menuElements.length ; i++) {
@@ -643,3 +642,79 @@ function Tabs() {
 }
 
 Tabs();
+// let menu = new Mmenu(document.querySelector( '#mobile-menu' ), 'all');
+//
+// let navigator = menu.navigation({
+//     selectedClass: 'Selected',
+//     slidingSubmenus: true,
+//     theme: 'light',
+//     title: 'Menu'
+// });
+//
+// let drawer = menu.offcanvas({
+//     position: 'right',
+//     panel: true,
+//     showTextItems: true
+// });
+//
+// 	// Open the menu.
+// document.querySelector( 'a[href="#mobile-menu"]' ).addEventListener( 'click', evnt => {
+//   evnt.preventDefault();
+//   drawer.open();
+// });
+
+new Mmenu(
+  document.querySelector('#mobile-menu'), {
+      extensions	: [
+        "popup",
+        "theme-white",
+        "pagedim-black",
+        "position-top",
+        "border-full"
+      ],
+      // setSelected	: false,
+      // counters	: true,
+      searchfield : {
+          placeholder		: 'Search menu items'
+      },
+      navbars		: [
+            {
+              type		: 'tabs',
+              content		: [
+                  '<a class="header-logo" href="/"><img class="img-fluid" src="img/general/cabinfield_logo.png" alt="logo"></a>',
+                  '<a class="mobile-close" href="" ><i class="fa fa-home"></i></a>'
+              ]
+          }, {
+              content		: [ 'searchfield' ]
+          }, {
+              // position	: 'bottom',
+              // content		: [ '<a href="http://mmenu.frebsite.nl/wordpress-plugin" target="_blank">WordPress plugin</a>' ]
+          }
+      ]
+  }, {
+      searchfield : {
+          clear 		: true
+      },
+      // navbars		: {
+      //     breadcrumbs	: {
+      //         removeFirst	: true
+      //     }
+      // }
+  }
+);
+
+// new Mmenu(document.querySelector( '#mobile-menu' ), {
+//   drag 		: true,
+//   pageScroll 	: {
+//       scroll 		: true,
+//       update		: true
+//   },
+//   sidebar 	: {
+//       expanded 	: 800
+//   },
+//
+// });
+$('mobile-close').on( "click", function() {
+    api.close();
+    // $icon.addClass( "is-active" );
+});

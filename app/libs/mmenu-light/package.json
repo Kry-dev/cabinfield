@@ -1,0 +1,74 @@
+{
+  "_from": "mmenu-light@^3.0.3",
+  "_id": "mmenu-light@3.0.3",
+  "_inBundle": false,
+  "_integrity": "sha512-J0VXLO3lh+kl/VVoiHNAZxgRA7KJYdIFmKjd6M6Q2tPzyCTL6A2Mo3IU84t2PPIwPtPB/aSwWk1j4zjRNypu2g==",
+  "_location": "/mmenu-light",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "mmenu-light@^3.0.3",
+    "name": "mmenu-light",
+    "escapedName": "mmenu-light",
+    "rawSpec": "^3.0.3",
+    "saveSpec": null,
+    "fetchSpec": "^3.0.3"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/mmenu-light/-/mmenu-light-3.0.3.tgz",
+  "_shasum": "1227e6423bc3066c7ee0ed738147c0f1c643bffb",
+  "_spec": "mmenu-light@^3.0.3",
+  "_where": "/Users/mac/WEB/cabinfield-html",
+  "author": {
+    "name": "Fred Heusschen",
+    "email": "info@frebsite.nl"
+  },
+  "bugs": {
+    "url": "https://github.com/FrDH/mmenu-light/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "The (extremely) lightweight alternative to the mmenu.js plugin for creating off-canvas mobile menus with the exact look and feel.",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-typescript": "^5.0.1",
+    "typescript": "^3.7.2",
+    "webpack-stream": "^5.2.1"
+  },
+  "homepage": "https://github.com/FrDH/mmenu-light#readme",
+  "keywords": [
+    "app",
+    "list",
+    "listview",
+    "megamenu",
+    "menu",
+    "mmenu",
+    "mobile",
+    "navigation",
+    "off-canvas",
+    "drawer",
+    "curtain",
+    "panels",
+    "submenu"
+  ],
+  "license": "CC-BY-4.0",
+  "main": "dist/mmenu-light.js",
+  "module": "src/mmenu-light.js",
+  "name": "mmenu-light",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FrDH/mmenu-light.git"
+  },
+  "scripts": {
+    "build": "gulp default"
+  },
+  "version": "3.0.3"
+}

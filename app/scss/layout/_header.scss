@@ -1,10 +1,131 @@
+#mobile-menu {
+    height: 100vh;
+    background: $white;
+    &.mm-menu_popup {
+        top: 0;
+        left: 0;
+    }
+    .mm-menu_position-top {
+        min-height: 100%;
+    }
+    .mm-navbars_top.mm-navbars_has-tabs {
+        padding: 32px 32px 0;
+    }
+    .mm-searchfield {
+        margin: 24px auto;
+    }
+    .mm-navbar,
+    .mm-panels,
+    .mm-panel{
+        background: $white;
+    }
+    .mm-navbars_top.mm-navbars_has-tabs {
+        border-bottom: 1px solid black;
+    }
+    &.mm-menu_opened {
+        z-index: 100;
+    }
+    &.mm-menu_theme-light {
+        .mm-panels {
+            //background: $white !important;
+        }
+    }
+    .mm-searchfield__input {
+        padding: 0;
+    }
+    .mm-searchfield__input input {
+        height: 45px;
+        background: #EFE9E7;
+        border-radius: 5px;
+    }
+    .mm-listitem__text {
+        padding-left: 0;
+    }
+    .nav-link.mm-listitem__text,
+    .mm-counter {
+        color: $brown;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 25px;
+    }
+    .mm-listitem {
+        align-items: center;
+        &:after {
+            display: none;
+        }
+    }
+    .nav-link.mm-listitem__text,
+    .mm-btn.mm-btn_next.mm-listitem__btn {
+        border: 0;
+        
+    }
+    
+    .mm-listitem + .mm-listitem {
+        border-top: .5px solid #979797;
+    }
+    .mm-listview {
+        padding: 0 32px;
+        background: $white;
+        .mm-btn:after {
+            border-left: 2px solid $brown;
+            border-top: 2px solid $brown;
+        }
+        
+    }
+    .mm-btn.mm-btn_prev.mm-navbar__btn {
+        &:before {
+            border-left: 2px solid $brown;
+            border-top: 2px solid $brown;
+        }
+    }
+    .mm-navbar__title {
+        color: $brown;
+        text-decoration: underline;
+    }
+    .mobile-close {
+        .fa {
+            color: $black;
+        }
+    }
+    .mm-navbars_top .mm-navbar_tabs>* {
+        border: 0;
+    }
+    .header-logo {
+        max-width: 180px;
+    }
+    .mobile-close {
+        text-align: right;
+        padding-right: 0;
+        justify-content: flex-end;
+        .fa {
+            font-size: 26px;
+        }
+    }
+}
+#mobile-menu:not(.mm-menu) {
+    display: none;
+}
+//@media (max-width: 768px) {
+//    #mobile-menu {
+//        display: none !important;
+//    }
+//}
+//@media (min-width: 769px) {
+//    #mm-mobile-menu {
+//        display: none !important;
+//    }
+//}
 .header {
     display: block;
     @include media-breakpoint-down(md) {
         margin-bottom: 1rem;
+        #mnu {
+            display: none;
+        }
     }
     @include media-breakpoint-down(sm) {
-        margin-bottom: 0;
+        margin: 0 15px;
     }
     
     &:before {
@@ -27,13 +148,14 @@
         height: 74px;
         padding: 14px 15px 10px 12px;
         @include media-breakpoint-down(md) {
-            flex-direction: column;
-            height: 150px;
+            //flex-direction: column;
+            height: 70px;
         }
         @include media-breakpoint-down(sm) {
-            height: auto;
+            height: 80px;
+            padding: 14px 0 10px 0;
             flex-direction: row;
-            align-items: center;
+            align-items: flex-end;
         }
         
         &-nav {
@@ -76,6 +198,15 @@
             }
             @include media-breakpoint-down(md) {
                 flex-direction: row;
+                justify-content: flex-end;
+                width: 100%;
+                padding-right: 0;
+                li a{
+                    padding: 0 1rem;
+                }
+                li + li {
+                    border-left: 1px solid #ECE9E9;
+                }
                 li:last-child {
                     position: relative;
                     transform: translatey(0);
@@ -85,23 +216,14 @@
                 width: 100%;
                 justify-content: flex-end;
                 padding-right: 0;
-                li + li {
-                    margin-left: 1rem;
+                li a{
+                    padding: 0 .5rem;
                 }
-                li {
-                    a {
-                        display: flex;
-                        flex-direction: row;
-                        flex-wrap: nowrap;
-                        font-size: 0.75rem;
-                        line-height: 1;
-                    }
-                    
-                    span,
-                    .fa {
-                        line-height: 1;
-                        font-size: 0.75rem;
-                    }
+                li:last-child {
+                    position: absolute;
+                    top: -24px;
+                    right: 0;
+                    border: 0;
                 }
             }
             
@@ -116,7 +238,7 @@
                 padding-left: 15px;
                 width: 165px;
             }
-            @include media-breakpoint-down(sm) {
+            @include media-breakpoint-down(md) {
                 display: none;
             }
         }
@@ -131,15 +253,12 @@
             width: 65%;
         }
         @include media-breakpoint-down(md) {
-            width: 100%;
+            width: 180px;
             flex-wrap: wrap;
             padding: 1rem 0 0;
         }
         @include media-breakpoint-down(sm) {
-            width: 30%;
-            flex-wrap: wrap;
-            padding: 0;
-            justify-content: flex-start;
+            width: 130px;
         }
     }
     
@@ -152,7 +271,7 @@
         align-items: center;
         position: relative;
         @include media-breakpoint-down(md) {
-            width: 100%;
+            width: 50%;
             max-width: 100%;
             .border-left.py-3 {
                 display: none;
@@ -182,7 +301,7 @@
         line-height: 17px;
         margin-right: 31px;
         @include media-breakpoint-down(md) {
-            margin-right: auto;
+            display: none;
         }
         @include media-breakpoint-down(sm) {
             display: none;
@@ -218,6 +337,7 @@
         @include media-breakpoint-down(md) {
             width: 100%;
             margin: 0;
+            display: none;
         }
         @include media-breakpoint-down(sm) {
             display: none;

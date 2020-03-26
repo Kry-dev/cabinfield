@@ -28,11 +28,15 @@
     "imagemin-pngquant": "^6.0.0",
     "stylelint": "^10.1.0",
     "stylelint-config-recommended-scss": "^3.3.0",
-    "stylelint-scss": "^3.9.3"
+    "stylelint-scss": "^3.16.0"
   },
   "dependencies": {
-    "bootstrap": "^4.3.1",
-    "bootstrap-select": "^1.13.9",
-    "gulp-autoprefixer": "^6.1.0"
+    "bootstrap": "^4.4.1",
+    "bootstrap-select": "^1.13.12",
+    "gulp-autoprefixer": "^6.1.0",
+    "jquery": "^3.4.1",
+    "mmenu-js": "^8.5.3",
+    "mmenu-light": "^3.0.3",
+    "popper.js": "^1.16.1"
   }
 }
