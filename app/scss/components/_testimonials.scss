@@ -83,8 +83,9 @@
             }
         }
     }
-    &-labe{
-        max-width: 200px;
+    &-labe {
+        display: block;
+        max-width: 133px;
     }
     @include media-breakpoint-down(sm) {
         .img-fluid {
