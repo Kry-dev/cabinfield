@@ -201,26 +201,34 @@ a:focus {
     flex-direction: row;
     justify-content: flex-start;
     
-    a {
+    > button {
+        border: 0;
+        background: transparent;
+    }
+    > a,
+    > button {
         font-size: 0.75rem;
         font-weight: 600;
         line-height: 1rem;
         text-transform: uppercase;
         padding: 0 .5rem;
-        
+        color: $link-color;
         .fa {
             margin-right: 0.5rem;
         }
     }
     
-    a + a {
-        
+    a + a,
+    button + button ,
+    a + button ,
+    button  + a{
         border-left: 1px solid $product-border-color;
     }
     
     @include media-breakpoint-down(sm) {
         flex-direction: column;
-        a + a {
+        a + a,
+        button + button {
             border: 0;
             margin: 0;
             padding: .5rem .5rem 0;
