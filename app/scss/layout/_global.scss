@@ -381,3 +381,13 @@ a:focus {
         box-shadow: inset 0 3px 0 0 #F4F2F2;
     }
 }
+.card.card-grey {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: #F8F6F7;
+    border: 10px solid #F0ECED;
+    padding: 40px;
+}
