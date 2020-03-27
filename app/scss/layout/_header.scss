@@ -136,7 +136,7 @@
         align-items: center;
         width: 100%;
         height: 74px;
-        padding: 14px 15px 10px 12px;
+        padding: 14px 0 10px 0;
         @include media-breakpoint-down(md) {
             //flex-direction: column;
             height: 70px;
@@ -153,19 +153,23 @@
             list-style: none;
             flex-wrap: nowrap;
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-end;
             align-items: center;
-            width: 240px;
+            width: 100%;
             font-size: 0.875rem;
             line-height: 1.1875rem;
             font-family: "Open Sans", sans-serif;
             font-weight: 500;
             margin-bottom: 0;
             position: relative;
-            
+            li + li {
+                border-left: 1px solid #ECE9E9;
+            }
             a {
-                display: flex;
-                flex-direction: row;
+                display: block;
+                padding: 0 .75rem;
+                text-align: center;
+                white-space: nowrap;
             }
             
             a,
@@ -174,29 +178,13 @@
                 line-height: 1.1875rem;
             }
             
-            @media(max-width: 1200px) {
-                flex-direction: column;
-                border: 0;
-                width: 40%;
-                padding-right: 40px;
-                li:last-child {
-                    position: absolute;
-                    right: 0;
-                    top: 50%;
-                    transform: translateY(-50%);
-                }
-            }
+            
             @include media-breakpoint-down(md) {
                 flex-direction: row;
                 justify-content: flex-end;
                 width: 100%;
                 padding-right: 0;
-                li a{
-                    padding: 0 1rem;
-                }
-                li + li {
-                    border-left: 1px solid #ECE9E9;
-                }
+                
                 li:last-child {
                     position: relative;
                     transform: translatey(0);
@@ -209,11 +197,17 @@
                 li a{
                     padding: 0 .5rem;
                 }
+                li:first-child + li {
+                    border-left: 0;
+                }
                 li:last-child {
                     position: absolute;
                     top: -24px;
                     right: 0;
                     border: 0;
+                }
+                .contact-phone {
+                    display: none;
                 }
             }
             
@@ -237,15 +231,16 @@
     &-top_left {
         display: flex;
         flex-direction: row;
-        justify-content: flex-start;
+        justify-content: space-between;
         align-items: center;
+        width: 100%;
+        max-width: 600px;
         @media (max-width: 1200px) {
-            width: 65%;
+            width: 40%;
         }
         @include media-breakpoint-down(md) {
-            width: 180px;
+            width: 160px;
             flex-wrap: wrap;
-            padding: 1rem 0 0;
         }
         @include media-breakpoint-down(sm) {
             width: 130px;
@@ -255,11 +250,14 @@
     &-top_right {
         display: flex;
         width: 100%;
-        max-width: 470px;
+        max-width: 500px;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
         position: relative;
+        @media (max-width: 1200px) {
+            width: 60%;
+        }
         @include media-breakpoint-down(md) {
             width: 50%;
             max-width: 100%;
@@ -274,10 +272,10 @@
     }
     
     &-logo {
-        width: 180px;
-        margin-right: 15px;
+        width: 160px;
+        //margin-right: 15px;
         @include media-breakpoint-down(md) {
-            margin-right: 1rem;
+            //margin-right: 1rem;
         }
     }
     
@@ -289,17 +287,15 @@
         font-weight: normal;
         font-size: 15px;
         line-height: 17px;
-        margin-right: 31px;
-        @include media-breakpoint-down(md) {
+        //margin-right: 31px;
+        @media(max-width: 1200px) {
             display: none;
         }
-        @include media-breakpoint-down(sm) {
-            display: none;
-        }
+        
     }
     
     &-search {
-        width: 208px;
+        width: 204px;
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
