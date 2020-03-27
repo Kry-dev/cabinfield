@@ -106,16 +106,6 @@
 #mobile-menu:not(.mm-menu) {
     display: none;
 }
-//@media (max-width: 768px) {
-//    #mobile-menu {
-//        display: none !important;
-//    }
-//}
-//@media (min-width: 769px) {
-//    #mm-mobile-menu {
-//        display: none !important;
-//    }
-//}
 .header {
     display: block;
     @include media-breakpoint-down(md) {
