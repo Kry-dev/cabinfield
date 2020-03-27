@@ -16,19 +16,14 @@
     }
     .mm-navbar,
     .mm-panels,
-    .mm-panel{
+    .mm-panel {
         background: $white;
     }
     .mm-navbars_top.mm-navbars_has-tabs {
-        border-bottom: 1px solid black;
+        border-bottom: 1px solid $black;
     }
     &.mm-menu_opened {
         z-index: 100;
-    }
-    &.mm-menu_theme-light {
-        .mm-panels {
-            //background: $white !important;
-        }
     }
     .mm-searchfield__input {
         padding: 0;
@@ -58,7 +53,6 @@
     .nav-link.mm-listitem__text,
     .mm-btn.mm-btn_next.mm-listitem__btn {
         border: 0;
-        
     }
     
     .mm-listitem + .mm-listitem {

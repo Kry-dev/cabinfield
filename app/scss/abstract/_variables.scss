@@ -163,7 +163,8 @@ $custom-radio-indicator-icon-checked: str-replace(url("data:image/svg+xml,<svg x
 // "\2192" outputs ascii character "→"
 // "\2022" outputs ascii character "•"
 
-$slick-font-path: "../fonts/slick/";
+$slick-font-path: "../libs/slick/fonts/";
+$slick-font-url: "../libs/slick/fonts/";
 $slick-font-family: "slick";
 $slick-loader-path: "../img/plugins/slick/";
 $slick-arrow-color: $brown;
