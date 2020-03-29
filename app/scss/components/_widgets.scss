@@ -75,8 +75,8 @@ $card-height: 21rem;
             position: absolute;
             left: 0;
             top: 0;
-            border: 7px solid transparent;
-            outline-offset: -8px;
+            border: 9px solid transparent;
+            outline-offset: -10px;
             z-index: 2;
             
         }
@@ -106,7 +106,7 @@ $card-height: 21rem;
         position: relative;
         overflow: hidden;
         padding: 1rem 1.5rem;
-        margin-bottom: 3rem;
+        margin-bottom: 2rem;
         &:before,
         &:after {
             position: absolute;
@@ -410,7 +410,7 @@ $card-height: 21rem;
         
         .card-img-overlay {
             padding: 1rem 5rem;
-            border: 7px solid rgba(0, 0, 0, 0.3);
+            border: 9px solid rgba(0, 0, 0, 0.3);
             &:before {
                 content: "";
                 height: 100%;
@@ -439,7 +439,7 @@ $card-height: 21rem;
         a:hover {
             cursor: pointer;
             .card-img-overlay {
-                border: 7px solid $blue;
+                border: 9px solid $blue;
             }
         }
     }
