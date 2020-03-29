@@ -239,7 +239,7 @@
         display: block;
         transform: rotate(-90deg);
         font-size: 21px;
-        font-weight: bold;
+        font-weight: 700;
     }
     
     span {
@@ -300,7 +300,7 @@
     box-shadow: none;
     padding-left: 10px;
     padding-right: 10px;
-    line-height: 37px
+    line-height: 37px;
 }
 
 .btn-order {
@@ -311,7 +311,7 @@
     background-size: cover;
     color: #fff;
     font-size: 14px;
-    font-weight: bold;
+    font-weight: 700;
     line-height: 1;
     text-transform: uppercase;
     border-radius: 2.2px;
@@ -377,7 +377,7 @@
         text-align: center;
         margin-bottom: 0;
         font-weight: 700;
-        font-family: "Open Sans";
+        font-family: "Open Sans", sans-serif;
         font-size: 12px;
         line-height: 17px;
         text-align: center;
@@ -402,5 +402,22 @@
             background: #ddd;
             text-shadow: 0 0 0.5px #333, 0 0 0.5px #333;
         }
+    }
+}
+.btn-why,
+a.btn-why {
+    font-size: 14px;
+    font-weight: 700;
+    color: $black;
+    text-transform: uppercase;
+    padding: 12px 16px;
+    background: transparent;
+    border: 1px solid $brown;
+    @include transition($btn-transition);
+    &:hover,
+    &:focus {
+        cursor: pointer;
+        background: $brown;
+        transition: $transition-fade;
     }
 }

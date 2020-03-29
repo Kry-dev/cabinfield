@@ -99,63 +99,121 @@ $card-height: 21rem;
     }
     
     .card-why {
-        background: $why-widget-bg url(../img/homepage/chair.png) no-repeat center bottom;
+        background: $why-widget-bg;
         background-size: contain;
         border: 10px solid #F0ECED;
         min-height: $card-height * 1.5;
-        
-        &-list {
+        position: relative;
+        overflow: hidden;
+        padding: 1rem 1.5rem;
+        margin-bottom: 3rem;
+        &:before,
+        &:after {
+            position: absolute;
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100%;
+            max-width: 312px;
+            max-height: 121px;
+            bottom: 0;
+            top: auto;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 0 0;
+            z-index: 1;
+        }
+        &:before {
+            left: 10px;
+            right: auto;
+            background-image: url("../img/why/office_collection.png");
+        }
+        &:after {
+            right: 10px;
+            left: auto;
+            background-image: url("../img/why/Living_collection.png");
+        }
+        .why-list {
             display: flex;
-            flex-direction: column;
-            
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 60px;
+            margin-bottom: 2rem;
+            @include media-breakpoint-down(lg) {
+                padding: 0;
+            }
+            @include media-breakpoint-down(md) {
+                flex-wrap: wrap;
+            }
+            @include media-breakpoint-down(sm) {
+                max-width: 240px;
+                margin: 0 auto 2rem;
+            }
+            li+li {
+                margin-left: 45px;
+            }
             li {
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
                 align-items: center;
                 margin-bottom: .5rem;
-                
-                &:before {
-                    content: "";
-                    display: block;
-                    width: 80px;
-                    height: 50px;
-                    background: url(../img/sprite/why_icon_sprite.png) no-repeat 2px 5px;
-                    background-size: 260px;
-                    overflow: hidden;
-                }
-                
-                &:nth-child(2):before {
-                    background-position: -50px 7px;
-                }
-                
-                &:nth-child(3):before {
-                    background-position: -100px 7px;
-                }
-                
-                &:nth-child(4):before {
-                    background-position: -153px 7px;
-                }
-                
-                &:nth-child(5):before {
-                    background-position: -205px 7px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    max-width: 50px;
+                    max-height: 52px;
                 }
                 
                 p {
-                    margin-left: .5rem;
+                    margin-left: 12px;
                     width: 100%;
                     color: $text-dark;
                     font-family: "Open Sans", sans-serif;
                     font-size: 0.875rem;
                     line-height: 1rem;
                     margin-bottom: 0;
+                    min-width: 140px;
                 }
                 
                 @include media-breakpoint-down(md) {
+                    width: 50%;
                     &:before {
                         width: 65px;
                     }
+                    & + li {
+                        margin-left: 0;
+                    }
                 }
+                @include media-breakpoint-down(sm) {
+                    width: 100%;
+                }
+            }
+        }
+        p {
+            font-size: 14px;
+            line-height: 19px;
+            font-weight: 600;
+            max-width: 460px;
+            @include media-breakpoint-down(sm) {
+                max-width: 240px;
+            }
+        }
+        .btn {
+            position: relative;
+            display: inline-block;
+            z-index: 2;
+        }
+        @include media-breakpoint-down(md) {
+            margin-bottom: 2rem;
+            padding-bottom: 120px;
+            &:before {
+                display: none;
+            }
+            &:after {
+                left: 50%;
+                transform: translateX(-50%);
             }
         }
     }
