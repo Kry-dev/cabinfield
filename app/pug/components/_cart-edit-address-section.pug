@@ -1,6 +1,6 @@
 section.cart.address-section
   .container
-    a.back.text-brown(href='#') 
+    a.back.text-brown(href='#')
       i.fa.fa-chevron-left
       | Back to cart
     h1 Delivery Information
@@ -48,11 +48,13 @@ section.cart.address-section
                   label.col-form-label.col-form-label-sm Phone
                   input.form-control(type='text', name='phone')
           .col-lg-6.border-dashed-b
-            .d-flex.flex-row.justify-content-between
+            .d-flex.flex-column.justify-content-between
               h5.address-title Billing address
-              .checkbox.custom_checkbox.checkbox_big
-                input#billing_same_as_shipping.billing_same_as_shipping(type='checkbox')
-                label.col-form-label.col-form-label-sm(for='billing_same_as_shipping') Same as shipping address
+              //a.text-brown.my-3(href="#" id="same_as_ship_adr") Different from Shipping
+              a.text-brown.my-3(href="#" id="same_as_ship_adr") Same as shipping address
+              //.checkbox.custom_checkbox.checkbox_big
+              //  input#billing_same_as_shipping.billing_same_as_shipping(type='checkbox')
+              //  label.col-form-label.col-form-label-sm(for='billing_same_as_shipping') Same as shipping address
 
             form.form-address.form-address-billing.border-b-dashed(action="")
               .row
