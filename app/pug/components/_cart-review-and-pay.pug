@@ -1,6 +1,6 @@
 section.cart.address-section
   .container
-    a.back.text-brown(href='#') 
+    a.back.text-brown(href='#')
       i.fa.fa-chevron-left
       | Back to cart
     h1 Review and Pay
@@ -10,7 +10,7 @@ section.cart.address-section
           .col-lg-6
             h5.address-title Shipping Address
               a.edit(href="#")
-                i.fa.fa-pencil 
+                i.fa.fa-pencil
                 | change
             .addr.mb-3
               p John Doe
@@ -21,7 +21,7 @@ section.cart.address-section
               p (484) 5400190
             h5.address-title Billing address
               a.edit(href="#")
-                i.fa.fa-pencil 
+                i.fa.fa-pencil
                 | change
             .addr
               p Same as shipping address
@@ -32,9 +32,11 @@ section.cart.address-section
                 .form-group.col-md-8
                   label.col-form-label.col-form-label-sm Card number
                   input.form-control(type='text', name='card-number')
-                .form-group.col-md-4.pt-3
-                  label.col-form-label.col-form-label-sm
-                    a(href="#") No credit card (use paycheck)
+                .form-group.col-md-4.pr-0
+                  p.pay-by-check
+                    a.text-brown.text-underline(href="#") Pay by Check
+                    a(href="#")
+                      i.fa.fa-question-circle-o
               .row.exp-date
                 .form-group.col-md-12.mb-0
                   label.col-form-label.col-form-label-sm Expiration date
