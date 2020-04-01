@@ -134,11 +134,12 @@
         @include media-breakpoint-down(md) {
             height: 70px;
         }
-        @include media-breakpoint-down(sm) {
+        @media (max-width: 540px) {
             height: 80px;
             padding: 14px 0 10px 0;
-            flex-direction: row;
-            align-items: flex-end;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
         }
         
         &-nav {
@@ -183,25 +184,21 @@
                     transform: translatey(0);
                 }
             }
-            @include media-breakpoint-down(sm) {
-                width: 100%;
-                justify-content: flex-end;
-                padding-right: 0;
+            @include media-breakpoint-down(sm){
                 li a{
                     padding: 0 .5rem;
                 }
                 li:first-child + li {
                     border-left: 0;
                 }
-                li:last-child {
-                    position: absolute;
-                    top: -24px;
-                    right: 0;
-                    border: 0;
-                }
                 .contact-phone {
                     display: none;
                 }
+            }
+            @media (max-width: 540px) {
+                width: 100%;
+                justify-content: flex-end;
+                padding-right: 0;
             }
             
             .fa {
@@ -258,9 +255,9 @@
                 display: none;
             }
         }
-        @include media-breakpoint-down(sm) {
-            width: 70%;
-            max-width: 70%;
+        @media (max-width: 540px) {
+            width: 100%;
+            max-width: 100%;
         }
     }
     
