@@ -36,6 +36,9 @@
         @include media-breakpoint-down(md) {
             padding: 0;
         }
+        @include media-breakpoint-down(sm) {
+            min-height: 520px;
+        }
     }
     
     &-inner {
@@ -75,10 +78,23 @@
                 text-align: center;
                 margin: 0 auto 10px;
             }
+            
         }
         @include media-breakpoint-down(sm) {
+            padding: 3rem 2rem;
+            height: 520px;
+            .home-slider-title,
             p {
-                max-width: 70%;
+                margin: 0 auto 1rem;
+                max-width: 300px;
+            }
+            
+            .btn-order {
+                font-size: 12px;
+                position: absolute;
+                bottom: 80px;
+                left: 50%;
+                transform: translateX(-50%);
             }
         }
     }
