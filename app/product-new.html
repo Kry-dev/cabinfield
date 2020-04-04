@@ -9,7 +9,6 @@
     <link rel="icon" href="img/favicon/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
     <meta name="theme-color" content="#000">
-    <!--link(rel="stylesheet" type='text/css' href="libs/mmenu-light/dist/mmenu-light.css")-->
     <link rel="stylesheet" type="text/css" href="libs/mmenu-js/dist/mmenu.css">
     <link rel="stylesheet" type="text/css" href="css/main.min.css">
     <title>Product page
@@ -858,7 +857,7 @@
                 <p>Shown in quartersawn white oak with Michael's cherry stain. This suite includes bed, dresser with optional mirror, armoire, nightstand and blanket chest with cedar bottom.<a href="#">See product features and specs</a></p>
               </div>
               <div class="row">
-                <div class="product-right-btns"><a class="btn btn-order" href="#">Select Your Options</a><a class="btn btn-outline-blue my-0 border-0" href="#">Save to Wishlist</a></div>
+                <div class="product-right-btns"><a class="btn btn-order" href="#" data-toggle="modal" data-target="#select_options">Select Your Options</a><a class="btn btn-outline-blue my-0 border-0" href="#">Save to Wishlist</a></div>
               </div>
             </div>
           </div>
@@ -1220,34 +1219,7 @@
         </div><img class="img-bbb" src="img/general/BBB.png" alt="#">
       </div>
     </footer><!--FOOTER END-->
-<!--MODAL--><!--modal modal sign-in-->
-    <div class="modal modal--sign-in fade" id="sign_in" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
-        <div class="modal-content">
-          <div class="modal-body">
-            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-            <h4 class="text-center modal-title mb-5">Sign in</h4>
-            <form class="form px-md-5">
-              <div class="form-group">
-                <label class="col-form-label col-form-label-sm">Email address</label>
-                <input class="form-control" type="email" name="email">
-              </div>
-              <div class="form-group">
-                <label class="col-form-label col-form-label-sm">Password<a class="text-right" href="#">Forgot yor password?</a></label>
-                <input class="form-control" type="password" name="pass">
-              </div>
-              <div class="form-group d-flex">
-                <button class="btn btn-lg btn-order w-100" type="submit">Sign In</button>
-              </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <p class="text-center text-dark">New to Cabinfield?</p>
-            <div class="form-group d-flex"><a class="btn btn-outline-warning" href="#">Create Your Cabinfield Account</a></div>
-          </div>
-        </div>
-      </div>
-    </div><!--modal sign-in end--><!--modal subscribe-->
+<!--MODAL--><!--modal subscribe-->
     <div class="modal modal--subscribe fade" id="subscribe_popup" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
         <div class="modal-content">
@@ -1271,12 +1243,113 @@
           <div class="modal-footer"></div>
         </div>
       </div>
-    </div><!--modal subscribe end--><!--MODAL END-->
+    </div><!--modal subscribe end-->
+    <div class="modal fade modal--mainimage" id="mainimage_popup" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-body p-0">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            <div class="mainimage-content-wrap">
+              <div class="mainimage-img"><img src="#" alt="#"></div>
+              <div class="mainimage-content">
+                <div class="title mb-3"><a class="prev_img" href="#"><i class="fa fa-chevron-left"></i></a><span class="mx-3"></span><a class="next_img" href="#"><i class="fa fa-chevron-right"></i></a></div>
+                <div class="text"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal--select-optns fade show" id="select_options" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+          <div class="modal-header">
+            <!--ol.list-group.list-group-horizontal.select-optns-steps-->
+            <ul class="nav nav-tabs" id="productSelectTabs" role="tablist">
+              <li><a class="nav-link active" id="step-01-tab" data-toggle="tab" href="#step-01" role="tab" aria-controls="step-01" aria-selected="true">1. Bed Size</a></li>
+              <li><a class="nav-link" id="step-02-tab" data-toggle="tab" href="#step-02" role="tab" aria-controls="step-02" aria-selected="false">2. Wood</a></li>
+              <li><a class="nav-link" id="step-03-tab" data-toggle="tab" href="#step-03" role="tab" aria-controls="step-03" aria-selected="false">3. Wood Stain</a></li>
+              <li><a class="nav-link" id="step-04-tab" data-toggle="tab" href="#step-04" role="tab" aria-controls="step-04" aria-selected="false">4. Headboard Style</a></li>
+              <li><a class="nav-link" id="step-05-tab" data-toggle="tab" href="#step-05" role="tab" aria-controls="step-05" aria-selected="false">5. Review</a></li>
+            </ul>
+            <div class="product-select">
+              <h2 class="product-title">Customize your Indian Creek Panel Amish Bed:</h2><img class="product-img" src="img/product/gazebo-02.png">
+            </div>
+          </div>
+          <div class="modal-body tab-content" id="productSelectTabsContent">
+            <div class="tab-pane fade show active" id="step-01" role="tabpanel" aria-labelledby="step-01-tab">
+              <div id="optgroup-1">
+                <div class="product-customize-form">
+                  <h6 class="product-customize-subtitle"><b class="mr-1">Choose:</b>Bed Size<a class="popup-info" href="#" data-toggle="modal" data-target="#customize_popup5">i</a></h6>
+                  <div class="product-customize-list">
+                    <div class="product-option">
+                      <input id="bed-size-01" type="radio" name="bed-size" checked="">
+                      <label for="bed-size-01">Twin Bed<span>- $102</span></label>
+                    </div>
+                    <div class="product-option">
+                      <input id="bed-size-02" type="radio" name="bed-size">
+                      <label for="bed-size-02">Full Bed<span>- $102</span></label>
+                    </div>
+                    <div class="product-option">
+                      <input id="bed-size-03" type="radio" name="bed-size">
+                      <label for="bed-size-03">Queen Bed<span>+ $156</span></label>
+                    </div>
+                    <div class="product-option">
+                      <input id="bed-size-04" type="radio" name="bed-size">
+                      <label for="bed-size-04">King Bed<span>+ $195</span></label>
+                    </div>
+                    <div class="product-option">
+                      <input id="bed-size-05" type="radio" name="bed-size">
+                      <label for="bed-size-05">California King Bed<span>+ $562</span></label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="step-02" role="tabpanel" aria-labelledby="step-02-tab">
+              <div id="optgroup-2">
+                <div class="product-customize-form">
+                  <h6 class="product-customize-subtitle"><b class="mr-1">Choose:</b>Wood<a class="popup-info" href="#" data-toggle="modal" data-target="#customize_popup5">i</a></h6>
+                  <div class="product-customize-list">
+                    <div class="product-option">
+                      <input id="bed-wood-01" type="radio" name="bed-wood" checked="">
+                      <label for="bed-wood-01">Oak<span>- $102</span></label>
+                    </div>
+                    <div class="product-option">
+                      <input id="bed-wood-02" type="radio" name="bed-wood">
+                      <label for="bed-wood-02">Brown Maple</label>
+                    </div>
+                    <div class="product-option">
+                      <input id="bed-wood-03" type="radio" name="bed-wood">
+                      <label for="bed-wood-03">Sap Cherry<span>+ $102</span></label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="step-03" role="tabpanel" aria-labelledby="step-03-tab">3</div>
+            <div class="tab-pane fade" id="step-04" role="tabpanel" aria-labelledby="step-04-tab">4</div>
+            <div class="tab-pane fade" id="step-05" role="tabpanel" aria-labelledby="step-05-tab">5</div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn prevtab">< PREV</button>
+            <button class="btn nexttab">NEXT ></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--include modal/_modal-customize-popup-1-->
+    <!--include modal/_modal-customize-popup-5-->
+    <!--include modal/_modal-customize-popup-7-->
+    <!--include modal/_modal-customize-popup-8-->
+    <!--include modal/_modal-customize-popup-9-->
+    <!--include modal/_modal-customize-popup-10-->
+    <!--include modal/_modal-customize-fullsize--><!--MODAL END-->
     <script src="js/jquery.js"></script>
     <script src="js/libs.min.js"></script>
     <script src="libs/mmenu-js/dist/mmenu.polyfills.js"></script>
     <script src="libs/mmenu-js/dist/mmenu.js"></script>
-    <!--script(src="libs/mmenu-light/dist/mmenu-light.js")-->
     <script src="js/main.js"></script>
   </body>
 </html>

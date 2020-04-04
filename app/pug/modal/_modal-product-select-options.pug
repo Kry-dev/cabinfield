@@ -1,4 +1,81 @@
-#select_options.modal.modal--shipping-opns.customize_popup.fade(tabindex='-1', role='dialog', aria-hidden='true')
+#select_options.modal.modal--select-optns.fade.show(tabindex='-1', role='dialog', aria-hidden='true')
     .modal-dialog.modal-dialog-centered.modal-lg(role='document')
         .modal-content
-            .modal-body
+            button.close(type='button', data-dismiss='modal', aria-label='Close')
+                span(aria-hidden='true') ×
+            .modal-header
+                //ol.list-group.list-group-horizontal.select-optns-steps
+                ul.nav.nav-tabs(id="productSelectTabs", role="tablist")
+                    li #[a(class="nav-link active" id="step-01-tab" data-toggle="tab" href="#step-01" role="tab" aria-controls="step-01" aria-selected="true") 1. Bed Size]
+                    li #[a(class="nav-link" id="step-02-tab" data-toggle="tab" href="#step-02" role="tab" aria-controls="step-02" aria-selected="false") 2. Wood]
+                    li #[a(class="nav-link" id="step-03-tab" data-toggle="tab" href="#step-03" role="tab" aria-controls="step-03" aria-selected="false") 3. Wood Stain]
+                    li #[a(class="nav-link" id="step-04-tab" data-toggle="tab" href="#step-04" role="tab" aria-controls="step-04" aria-selected="false") 4. Headboard Style]
+                    li #[a(class="nav-link" id="step-05-tab" data-toggle="tab" href="#step-05" role="tab" aria-controls="step-05" aria-selected="false") 5. Review]
+                .product-select
+                    h2.product-title Customize your Indian Creek Panel Amish Bed:
+                    img.product-img(src="img/product/gazebo-02.png")
+            .modal-body.tab-content(id="productSelectTabsContent")
+                .tab-pane.fade.show.active(id="step-01" role="tabpanel" aria-labelledby="step-01-tab")
+
+                    #optgroup-1
+                        .product-customize-form
+                            h6.product-customize-subtitle
+                                b.mr-1 Choose:
+                                | Bed Size
+                                a.popup-info(href='#', data-toggle='modal', data-target='#customize_popup5') i
+                            .product-customize-list
+                                .product-option
+                                    input#bed-size-01(type='radio', name='bed-size', checked='')
+                                    label(for='bed-size-01')
+                                        | Twin Bed
+                                        span - $102
+                                .product-option
+                                    input#bed-size-02(type='radio', name='bed-size')
+                                    label(for='bed-size-02')
+                                        | Full Bed
+                                        span - $102
+                                .product-option
+                                    input#bed-size-03(type='radio', name='bed-size')
+                                    label(for='bed-size-03')
+                                        | Queen Bed
+                                        span + $156
+                                .product-option
+                                    input#bed-size-04(type='radio', name='bed-size')
+                                    label(for='bed-size-04')
+                                        | King Bed
+                                        span + $195
+                                .product-option
+                                    input#bed-size-05(type='radio', name='bed-size')
+                                    label(for='bed-size-05')
+                                        | California King Bed
+                                        span + $562
+
+                .tab-pane.fade(id="step-02" role="tabpanel" aria-labelledby="step-02-tab")
+                    #optgroup-2
+                        .product-customize-form
+                            h6.product-customize-subtitle
+                                b.mr-1 Choose:
+                                | Wood
+                                a.popup-info(href='#', data-toggle='modal', data-target='#customize_popup5') i
+                            .product-customize-list
+                                .product-option
+                                    input#bed-wood-01(type='radio', name='bed-wood', checked='')
+                                    label(for='bed-wood-01')
+                                        | Oak
+                                        span - $102
+                                .product-option
+                                    input#bed-wood-02(type='radio', name='bed-wood')
+                                    label(for='bed-wood-02')
+                                        | Brown Maple
+                                .product-option
+                                    input#bed-wood-03(type='radio', name='bed-wood')
+                                    label(for='bed-wood-03')
+                                        | Sap Cherry
+                                        span + $102
+                .tab-pane.fade(id="step-03" role="tabpanel" aria-labelledby="step-03-tab") 3
+                .tab-pane.fade(id="step-04" role="tabpanel" aria-labelledby="step-04-tab") 4
+                .tab-pane.fade(id="step-05" role="tabpanel" aria-labelledby="step-05-tab") 5
+
+            .modal-footer
+                button.btn.prevtab < PREV
+                button.btn.nexttab NEXT >

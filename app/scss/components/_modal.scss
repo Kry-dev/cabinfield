@@ -1,6 +1,7 @@
 body.modal-open .mm-slideout {
-    z-index:inherit;
+    z-index: inherit;
 }
+
 .modal {
     &-content {
         border-radius: 0;
@@ -16,7 +17,7 @@ body.modal-open .mm-slideout {
         font-family: "PT Serif", sans-serif;
         font-size: 1.625rem;
         line-height: 2.125rem;
-        font-weight: bold;
+        font-weight: 700;
     }
     
     &-title-second {
@@ -33,7 +34,7 @@ body.modal-open .mm-slideout {
     &--subscribe {
         .modal-footer {
             min-height: 150px;
-            background: url(../img/svg/mailbox.svg) no-repeat bottom center;
+            background: url('../img/svg/mailbox.svg') no-repeat bottom center;
         }
     }
     
@@ -45,7 +46,7 @@ body.modal-open .mm-slideout {
         .modal-title {
             font-family: "PT Serif", sans-serif;
             font-style: normal;
-            font-weight: normal;
+            font-weight: 400;
             font-size: 24px;
             line-height: 24px;
             margin-bottom: 14px;
@@ -60,7 +61,7 @@ body.modal-open .mm-slideout {
         
         .modal-footer {
             min-height: 140px;
-            background: url(../img/svg/van.svg) no-repeat bottom center;
+            background: url("../img/svg/van.svg") no-repeat bottom center;
         }
         
         .form.modal--zip-form {
@@ -452,21 +453,25 @@ body.modal-open .mm-slideout {
     }
     
     &--shipping-opns.customize_popup {
-        .product-customize-list .product-option label{
+        .product-customize-list .product-option label {
             min-height: 38px;
             height: auto;
             padding: 5px 5px 7px;
         }
+        
         .modal-wrapper-subtitle.custom-control-label:after,
         .modal-wrapper-subtitle.custom-control-label:before {
             margin-top: 0;
         }
+        
         .modal-wrapper-subtitle.custom-control-label:before {
             left: -25px;
         }
+        
         .modal-wrapper-subtitle.custom-control-label:after {
             left: -21px;
         }
+        
         .text_overflow {
             left: 23%;
             z-index: 10;
@@ -803,6 +808,87 @@ body.modal-open .mm-slideout {
             &.btn-outline {
                 color: $blue;
             }
+        }
+    }
+    
+    &--select-optns {
+        .product-select {
+            
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+        .product-title {
+            font-family: "PT Serif";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 30px;
+            line-height: 39px;
+            color: #2A0200;
+            max-width: 65%;
+        }
+        .modal-dialog {
+            max-width: 950px;
+        }
+        
+        .modal-content {
+            border: 0;
+            padding: 2rem 4rem;
+            min-height: 570px;
+        }
+        
+        .modal-header {
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .modal-body {
+            padding: 2rem 0;
+            border-bottom: .5px solid $blue;
+        }
+        
+        .modal-footer {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        
+        .nav-tabs {
+            margin-bottom: 1rem;
+            border: 0;
+            width: 100%;
+        }
+        
+        .nav-link {
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 18px;
+            border: 0;
+            border-bottom: 1px solid transparent;
+            color: $black;
+            
+            &.active {
+                font-weight: 700;
+                border-bottom: 1px solid $blue;
+            }
+        }
+        
+        .product-customize-form {
+            border-bottom: 0;
+        }
+        .product-customize-subtitle {
+            border-bottom: .5px solid $blue;
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+        }
+        .product-img {
+            width: 100%;
+            height: 100%;
+            max-width: 162px;
+            max-height: 162px;
         }
     }
 }
