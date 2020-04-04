@@ -679,6 +679,9 @@ new Mmenu(
         "position-top",
         "border-full"
       ],
+      offCanvas: {
+          zposition: "front"
+      },
       // setSelected	: false,
       // counters	: true,
       searchfield : {

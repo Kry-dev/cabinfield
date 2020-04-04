@@ -1,3 +1,6 @@
+body.modal-open .mm-slideout {
+    z-index:inherit;
+}
 .modal {
     &-content {
         border-radius: 0;
@@ -76,9 +79,9 @@
             padding-right: 65px;
             height: 57px;
             color: $black;
-            background-color: #FAFAFA !important;
-            border: 1px solid #D0C7C5;
-            box-shadow: inset 0 -1px 0 #FFFFFF, inset 0 2px 0 #F3F0F0;
+            background-color: $g !important;
+            border: 1px solid $h;
+            box-shadow: inset 0 -1px 0 $white, inset 0 2px 0 #F3F0F0;
             font-size: 30px;
             line-height: 41px;
             text-align: left;
@@ -492,7 +495,7 @@
         label {
             &:hover,
             &:focus {
-                background: #f5f9ff;
+                background: $product-option-checked-bg;
             }
         }
         
@@ -707,9 +710,9 @@
             &:hover,
             &:focus {
                 cursor: pointer;
-                border: 2px solid #879DBC;
+                border: 2px solid $product-option-checked-border;
                 border-radius: 2px;
-                background-color: #F5F9FF;
+                background-color: $product-option-checked-bg;
                 transition: $transition-base;
                 
                 .fullsize-item__img {
@@ -725,9 +728,9 @@
             }
             
             &.active {
-                border: 2px solid #879DBC;
+                border: 2px solid $product-option-checked-border;
                 border-radius: 2px;
-                background-color: #F5F9FF;
+                background-color: $product-option-checked-bg;
                 box-shadow: inset 0 -2px 0 0 $white, inset 0 3px 0 0 $product-option-stain-shadow-color;
                 padding: 2px;
                 
