@@ -1471,7 +1471,7 @@
             </div>
             <div class="tab-pane fade" id="step-06" role="tabpanel" aria-labelledby="step-06-tab">
               <div class="option-selected">
-                <h6 class="product-customize-subtitle"><b>Review ZIP:</b></h6>
+                <h6 class="product-customize-subtitle"><b>Review Checkout:</b></h6>
                 <p class="text-black"><b>The price reflects selected options:</b></p>
                 <ul class="option-selected-list">
                   <li>Bed size:<span>Queen (64"W x 86"L)</span></li>
@@ -1479,20 +1479,33 @@
                   <li>Wood:<span>Quartersawn White Oak</span></li>
                   <li>Wood stain:<span>OCS-225 Mission Maple</span></li>
                   <li>Headboard Style:<span>Elliot</span></li>
+                  <li class="my-3">Shipping prices calculated for zip Code:<span class="text-brown">4251<a href="#"><i class="fa fa-pencil edit mx-1"></i>Change</a></span></li>
                 </ul>
-                <div class="product-price">
-                  <div class="product-price-value">$1,371.00</div>
-                  <!--.product-price-shipping-->
-                  <!--    span + $30.40-->
-                  <!--    |  Shipping-->
-                </div>
-                <form class="form modal--zip">
-                  <label for="review-zip">Enter Zip</label>
-                  <div class="form-group">
-                    <input class="form-control" type="text" id="review-zip1" name="zip" minlength="5" maxlength="5" placeholder="8●●●●">
+                <p class="text-black"><b>Shipping Type:</b></p>
+                <ul class="modal-ship-type mb-3">
+                  <li class="custom_radio">
+                    <input id="ship_type_01" type="radio" name="ship_type" value="">
+                    <label for="ship_type_01">Standard curbside delivery<span class="text-brown">+ 78.19</span></label>
+                  </li>
+                  <li class="custom_radio">
+                    <input id="ship_type_02" type="radio" name="ship_type" value="">
+                    <label for="ship_type_02">Inside delivery with setup<span class="text-brown">+ 78.19</span></label>
+                  </li>
+                </ul>
+                <ul class="option-selected-list mb-3">
+                  <li>Combined value shipping:<span><strong>Yes</strong></span></li>
+                  <li><a href="#">More info about your savings | ></a></li>
+                </ul>
+                <div class="product-price mb-3">
+                  <div class="product-price-shipping"><span>+ $30.40</span> Shipping</div>
+                  <div class="d-flex flex-row">
+                    <p class="text-black mr-1"><b>Extended Price:</b></p>
+                    <div class="product-price-value">$1,371.00</div>
                   </div>
-                </form>
+                </div>
+                <p class="mb-5"><small>* Promotion discounts (where applicable) will be shown in the shopping cart.</small></p>
                 <p><a class="btn btn-order btn-sm d-block" href="#">Calculate Shipping</a></p>
+                <p><a class="btn btn-order btn-sm d-block" href="#">Check Out</a></p>
               </div>
             </div>
           </div>

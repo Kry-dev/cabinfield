@@ -928,23 +928,34 @@ body.modal-open .mm-slideout {
             }
         }
         .option-selected {
-            p,
-            ul {
+            > p,
+            > ul {
                 max-width: 50%;
             }
         }
         .product-price {
             margin-bottom: 2rem;
         }
-        .modal--zip-form {
+        .modal--zip {
             margin-bottom: 2rem;
             .form-control {
-                max-width: 262px;
+                max-width: 280px;
             }
         }
         .btn-order {
             padding: .675rem .5rem;
             max-width: 190px;
+        }
+        .modal-ship-type {
+            max-width: 50%;
+        }
+        .product-price {
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            &-shipping {
+                border-bottom: 1px solid $brown;
+            }
         }
     }
 }
