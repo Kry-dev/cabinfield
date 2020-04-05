@@ -514,7 +514,7 @@ body.modal-open .mm-slideout {
         }
         
         .product-option.option-hboard {
-            flex: 1 1 25%; /* explanation below */
+            flex: 1 1 25%;
             margin: .5rem;
         }
         
@@ -854,6 +854,7 @@ body.modal-open .mm-slideout {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
+            padding: 1rem 0;
         }
         
         .nav-tabs {
@@ -878,6 +879,8 @@ body.modal-open .mm-slideout {
         
         .product-customize-form {
             border-bottom: 0;
+            padding-left: 0;
+            padding-bottom: 0;
         }
         .product-customize-subtitle {
             border-bottom: .5px solid $blue;
@@ -889,6 +892,40 @@ body.modal-open .mm-slideout {
             height: 100%;
             max-width: 162px;
             max-height: 162px;
+        }
+        
+        .product-customize-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            .product-option.option-stain {
+                display: inline-flex;
+                width: 23%;
+                margin: 0 0 1rem;
+            }
+            .product-option.option-hboard {
+                display: inline-flex;
+                max-width: 30%;
+                margin-bottom: 1rem;
+                flex: auto;
+            }
+        }
+        
+        .btn.btn-prevtab,
+        .btn.btn-nexttab {
+            text-transform: uppercase;
+            color: $brown;
+            padding: 0;
+            bottom: 0;
+            .fa {
+                margin: 0 .5rem;
+            }
+            &:hover,
+            &:focus {
+                font-weight: 700;
+                outline: 0;
+                box-shadow: none;
+            }
         }
     }
 }

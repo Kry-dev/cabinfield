@@ -720,9 +720,10 @@ $('mobile-close').on( "click", function() {
 function bootstrapTabControl(){
     let i, items = $('#productSelectTabs > li > .nav-link'), pane = $('#productSelectTabsContent > .tab-pane');
     // next
-    $('.nexttab').on('click', function(){
+    $(".btn-nexttab").on("click", function(){
+        console.log("btn next");
         for(i = 0; i < items.length; i++){
-            if($(items[i]).hasClass('active') == true){
+            if($(items[i]).hasClass("active") == true){
                 break;
             }
         }
@@ -738,9 +739,10 @@ function bootstrapTabControl(){
         
     });
     // Prev
-    $('.prevtab').on('click', function(){
+    $(".btn-prevtab").on('click', function(){
+        console.log("btn prev");
         for(i = 0; i < items.length; i++){
-            if($(items[i]).hasClass('active') == true){
+            if($(items[i]).hasClass("active") == true){
                 break;
             }
         }
