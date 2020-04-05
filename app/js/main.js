@@ -717,17 +717,19 @@ $('mobile-close').on( "click", function() {
     api.close();
 });
 
-function bootstrapTabControl(){
-    let i, items = $('#productSelectTabs > li > .nav-link'), pane = $('#productSelectTabsContent > .tab-pane');
+function productModalTabControl(){
+    let i,
+      items = $('#productSelectTabs > li > .nav-link'),
+      pane = $('#productSelectTabsContent > .tab-pane');
+    
     // next
     $(".btn-nexttab").on("click", function(){
-        console.log("btn next");
         for(i = 0; i < items.length; i++){
             if($(items[i]).hasClass("active") == true){
                 break;
             }
         }
-        console.log(i);
+        
         if(i < items.length - 1){
             // for tab
             $(items[i]).removeClass('active');
@@ -740,7 +742,6 @@ function bootstrapTabControl(){
     });
     // Prev
     $(".btn-prevtab").on('click', function(){
-        console.log("btn prev");
         for(i = 0; i < items.length; i++){
             if($(items[i]).hasClass("active") == true){
                 break;
@@ -756,5 +757,8 @@ function bootstrapTabControl(){
         }
     });
 }
-bootstrapTabControl();
+$("#select_options").on('shown.bs.modal', function () {
+    productModalTabControl();
+});
+
 
