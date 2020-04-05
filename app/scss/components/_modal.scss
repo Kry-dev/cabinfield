@@ -927,5 +927,24 @@ body.modal-open .mm-slideout {
                 box-shadow: none;
             }
         }
+        .option-selected {
+            p,
+            ul {
+                max-width: 50%;
+            }
+        }
+        .product-price {
+            margin-bottom: 2rem;
+        }
+        .modal--zip-form {
+            margin-bottom: 2rem;
+            .form-control {
+                max-width: 262px;
+            }
+        }
+        .btn-order {
+            padding: .675rem .5rem;
+            max-width: 190px;
+        }
     }
 }

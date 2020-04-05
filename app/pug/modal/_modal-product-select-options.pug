@@ -9,7 +9,8 @@
                     li #[a(class="nav-link" id="step-02-tab" data-toggle="tab" href="#step-02" role="tab" aria-controls="step-02" aria-selected="false") 2. Wood]
                     li #[a(class="nav-link" id="step-03-tab" data-toggle="tab" href="#step-03" role="tab" aria-controls="step-03" aria-selected="false") 3. Wood Stain]
                     li #[a(class="nav-link" id="step-04-tab" data-toggle="tab" href="#step-04" role="tab" aria-controls="step-04" aria-selected="false") 4. Headboard Style]
-                    li #[a(class="nav-link" id="step-05-tab" data-toggle="tab" href="#step-05" role="tab" aria-controls="step-05" aria-selected="false") 5. Review]
+                    li #[a(class="nav-link" id="step-05-tab" data-toggle="tab" href="#step-05" role="tab" aria-controls="step-05" aria-selected="false") 5. Review ZIP]
+                    li #[a(class="nav-link" id="step-06-tab" data-toggle="tab" href="#step-06" role="tab" aria-controls="step-06" aria-selected="false") 6. Review Checkout]
                 .product-select
                     h2.product-title Customize your Indian Creek Panel Amish Bed:
                     img.product-img(src="img/product/gazebo-02.png")
@@ -160,7 +161,74 @@
                                             strong.pr-2 Gbrielle
                                             | - $242
 
-                .tab-pane.fade(id="step-05" role="tabpanel" aria-labelledby="step-05-tab") 5
+                .tab-pane.fade(id="step-05" role="tabpanel" aria-labelledby="step-05-tab")
+                    .option-selected
+                        h6.product-customize-subtitle
+                            b Review ZIP:
+                        p.text-black
+                            b The price reflects selected options:
+                        ul.option-selected-list
+                            li
+                                | Bed size:
+                                span Queen (64"W x 86"L)
+
+                            li
+                                | Set:
+                                span Full Bed
+                            li
+                                | Wood:
+                                span Quartersawn White Oak
+                            li
+                                | Wood stain:
+                                span OCS-225 Mission Maple
+                            li
+                                | Headboard Style:
+                                span Elliot
+
+                        .product-price
+                            .product-price-value $1,371.00
+                        form.form.modal--zip
+                            label(for="review-zip") Enter Zip
+                            .form-group
+                                input.form-control(type="text" id="review-zip" name="zip" minlength="5" maxlength="5" placeholder="8●●●●")
+                        p
+                            a.btn.btn-order.btn-sm.d-block(href='#') Calculate Shipping
+
+                .tab-pane.fade(id="step-06" role="tabpanel" aria-labelledby="step-06-tab")
+                    .option-selected
+                        h6.product-customize-subtitle
+                            b Review ZIP:
+                        p.text-black
+                            b The price reflects selected options:
+                        ul.option-selected-list
+                            li
+                                | Bed size:
+                                span Queen (64"W x 86"L)
+
+                            li
+                                | Set:
+                                span Full Bed
+                            li
+                                | Wood:
+                                span Quartersawn White Oak
+                            li
+                                | Wood stain:
+                                span OCS-225 Mission Maple
+                            li
+                                | Headboard Style:
+                                span Elliot
+
+                        .product-price
+                            .product-price-value $1,371.00
+                            //.product-price-shipping
+                            //    span + $30.40
+                            //    |  Shipping
+                        form.form.modal--zip
+                            label(for="review-zip") Enter Zip
+                            .form-group
+                                input.form-control(type="text" id="review-zip1" name="zip" minlength="5" maxlength="5" placeholder="8●●●●")
+                        p
+                            a.btn.btn-order.btn-sm.d-block(href='#') Calculate Shipping
 
             .modal-footer
                 button.btn.btn-prevtab
