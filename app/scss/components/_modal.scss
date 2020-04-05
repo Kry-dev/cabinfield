@@ -942,9 +942,19 @@ body.modal-open .mm-slideout {
                 max-width: 280px;
             }
         }
-        .btn-order {
+        .btn {
+            display: inline-block;
             padding: .675rem .5rem;
             max-width: 190px;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 1;
+            text-transform: uppercase;
+            border-radius: 2.2px;
+            height: 37px;
+            width: auto;
+            text-align: center;
+            text-decoration: none;
         }
         .modal-ship-type {
             max-width: 50%;
