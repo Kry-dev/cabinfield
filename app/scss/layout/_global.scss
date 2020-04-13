@@ -399,3 +399,11 @@ a:focus {
     border: 10px solid #F0ECED;
     padding: 40px;
 }
+
+.tab-content> form >.tab-pane {
+    display: none;
+}
+
+.tab-content> form >.active {
+    display: block;
+}
