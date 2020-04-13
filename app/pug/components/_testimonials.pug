@@ -95,3 +95,24 @@ section.testimonials
     .row
       .col-md-8.offset-md-2
         include _pagination
+
+    nav
+        ul.pagination
+            li.page-item.disabled
+                span.page-link « Previous
+            li.page-item.active
+                span.page-link 1
+            li.page-item
+                a.page-link(href='#') 2
+            li.page-item
+                a.page-link(href='#') 3
+            li.page-item
+                a.page-link(href='#') 4
+            li.page-item
+                a.page-link(href='#') 5
+            li.page-item.disabled
+                span.page-link …
+            li.page-item
+                a.page-link(href='#') 149
+            li.page-item
+                a.page-link(rel='next', href='#') Next »
