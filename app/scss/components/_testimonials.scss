@@ -87,6 +87,12 @@
             }
         }
     }
+    .testimonial-page-ic {
+        margin-top: -40px;
+        @include media-breakpoint-down(md) {
+            margin-top: 0;
+        }
+    }
     @include media-breakpoint-down(sm) {
         .img-fluid {
             margin: 0 auto 1rem;
