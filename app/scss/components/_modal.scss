@@ -812,6 +812,9 @@ body.modal-open .mm-slideout {
     }
     
     &--select-optns {
+        @include media-breakpoint-down(sm) {
+            padding-top: 100px;
+        }
         .product-select {
             
             display: flex;
@@ -837,6 +840,9 @@ body.modal-open .mm-slideout {
             border: 0;
             padding: 2rem 4rem;
             min-height: 570px;
+            @include media-breakpoint-down(sm) {
+                padding: 1rem;
+            }
         }
         
         .modal-header {
@@ -861,6 +867,9 @@ body.modal-open .mm-slideout {
             margin-bottom: 1rem;
             border: 0;
             width: 100%;
+            @include media-breakpoint-down(sm) {
+                justify-content: center;
+            }
         }
         
         .nav-link {
@@ -875,6 +884,10 @@ body.modal-open .mm-slideout {
                 font-weight: 700;
                 border-bottom: 1px solid $blue;
             }
+            @include media-breakpoint-down(sm) {
+                line-height: 13px;
+                padding: .5rem .25rem;
+            }
         }
         
         .product-customize-form {
@@ -886,6 +899,10 @@ body.modal-open .mm-slideout {
             border-bottom: .5px solid $blue;
             padding-bottom: 1rem;
             margin-bottom: 2rem;
+            @include media-breakpoint-down(sm) {
+                margin-bottom: 1rem;
+                
+            }
         }
         .product-img {
             width: 100%;
@@ -902,12 +919,23 @@ body.modal-open .mm-slideout {
                 display: inline-flex;
                 width: 23%;
                 margin: 0 0 1rem;
+                @include media-breakpoint-down(sm) {
+                    width: auto;
+                    margin: 0 .25rem 1rem;
+                }
             }
             .product-option.option-hboard {
                 display: inline-flex;
                 max-width: 30%;
                 margin-bottom: 1rem;
                 flex: auto;
+                @include media-breakpoint-down(sm) {
+                    max-width: 100%;
+                    margin: 0 .25rem 1rem;
+                }
+            }
+            @include media-breakpoint-down(sm) {
+                justify-content: center;
             }
         }
         
@@ -931,6 +959,9 @@ body.modal-open .mm-slideout {
             > p,
             > ul {
                 max-width: 50%;
+                @include media-breakpoint-down(sm) {
+                    max-width: 100%;
+                }
             }
         }
         .product-price {
@@ -959,12 +990,24 @@ body.modal-open .mm-slideout {
         .modal-ship-type {
             max-width: 50%;
         }
+        
         .product-price {
             flex-direction: column;
             justify-content: flex-start;
             align-items: flex-start;
             &-shipping {
                 border-bottom: 1px solid $brown;
+            }
+        }
+        .product-select {
+            @include media-breakpoint-down(sm) {
+                flex-direction: column;
+            }
+        }
+        .product-title {
+            @include media-breakpoint-down(sm) {
+                max-width: 100%;
+                font-size: 24px;
             }
         }
     }

@@ -179,23 +179,23 @@ $(document).ready(function(){
 		}
 	});
 
-	/*show top-section*/
-	if ( $(".top-section.d-hidden").length > 0 && $(".content .product").length > 0 ){
-		$(window).scroll(function(){
-			var scroll = $(window).scrollTop();
-			var customize_product = $(".product").offset().top;
-			if ( scroll > customize_product + 150 ){
-				if ( $(".top-section.d-hidden").css("display") == "none" )
-					$(".top-section.d-hidden").stop().slideDown(300);
-			}
-			else if ( $(".top-section.d-hidden").css("display") == "flex" ) {
-				$(".top-section.d-hidden").stop().slideUp(200);
-			}
-			else{
-				$(".top-section.d-hidden").stop().slideUp(200);
-			}
-		});
-	}
+	// /*show top-section*/
+	// if ( $(".top-section.d-hidden").length > 0 && $(".content .product").length > 0 ){
+	// 	$(window).scroll(function(){
+	// 		var scroll = $(window).scrollTop();
+	// 		var customize_product = $(".product").offset().top;
+	// 		if ( scroll > customize_product + 150 ){
+	// 			if ( $(".top-section.d-hidden").css("display") == "none" )
+	// 				$(".top-section.d-hidden").stop().slideDown(300);
+	// 		}
+	// 		else if ( $(".top-section.d-hidden").css("display") == "flex" ) {
+	// 			$(".top-section.d-hidden").stop().slideUp(200);
+	// 		}
+	// 		else{
+	// 			$(".top-section.d-hidden").stop().slideUp(200);
+	// 		}
+	// 	});
+	// }
 
 	//Product image modal
 	function product_modal_img( current_item ){
@@ -683,7 +683,7 @@ $('mobile-close').on( "click", function() {
 function productModalTabControl(){
     let i,
       items = $('#productSelectTabs > li > .nav-link'),
-      pane = $('#productSelectTabsContent > .tab-pane');
+      pane = $('#productSelectTabsContent > .tab-pane, #productSelectTabsContent > form > .tab-pane ');
     
     // next
     $(".btn-nexttab").on("click", function(){
@@ -721,7 +721,11 @@ function productModalTabControl(){
     });
 }
 $("#select_options").on('shown.bs.modal', function () {
+    $('.top-section').show();
     productModalTabControl();
+});
+$("#select_options").on('hidden.bs.modal', function () {
+    $('.top-section').hide();
 });
 
 

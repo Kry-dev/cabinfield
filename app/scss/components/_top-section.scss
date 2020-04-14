@@ -7,15 +7,17 @@
     border-bottom: 4px solid #627590;
     padding: 10px 0;
     width: 100%;
-    z-index: 100;
-    
-    @media (max-width: 768px) {
-        display: none !important;
+    z-index: 1060;
+    @include media-breakpoint-down(sm) {
+        padding: 5px 0;
+        border-bottom: 2px solid #627590;
     }
-    
     &-img {
         width: 50px;
         height: 50px;
+        @include media-breakpoint-down(sm) {
+            display: none !important;
+        }
     }
     
     &-left {
@@ -28,7 +30,7 @@
             max-width: 50%;
         }
         @include media-breakpoint-down(sm) {
-            display: none !important;
+            max-width: 60%;
         }
         
         .cancel {
@@ -50,7 +52,7 @@
             }
             
             @include media-breakpoint-down(md) {
-                display: none;
+                //display: none;
             }
         }
     }
@@ -62,10 +64,20 @@
         font-weight: 600;
         line-height: 1.5625rem;
         margin-bottom: 0;
+        @include media-breakpoint-down(sm) {
+            font-size: 13px;
+            line-height: 13px;
+            width: 100%;
+            margin-bottom: 5px;
+        }
     }
     
     &-descr {
         margin-left: 1rem;
+        @include media-breakpoint-down(sm) {
+            margin: 0;
+            width: 100%;
+        }
         
         ul {
             display: flex;
@@ -94,7 +106,7 @@
         align-items: center;
         max-width: 60%;
         @include media-breakpoint-down(sm) {
-            display: none !important;
+            //display: none !important;
         }
     }
     
@@ -145,11 +157,20 @@
             min-width: auto;
         }
     }
-    
+    .save-wish {
+        text-transform: uppercase;
+        color: $primary;
+        font-weight: 700;
+        text-align: right;
+        line-height: 1.2;
+        @include media-breakpoint-down(sm) {
+            max-width: 90px;
+        }
+    }
     .btn-outline {
         color: $primary;
-        @include media-breakpoint-down(md) {
-            display: none !important;
+        @include media-breakpoint-down(sm) {
+            word-wrap: break-word;
         }
     }
 }
