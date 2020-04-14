@@ -901,7 +901,9 @@ body.modal-open .mm-slideout {
             margin-bottom: 2rem;
             @include media-breakpoint-down(sm) {
                 margin-bottom: 1rem;
-                
+                .more {
+                    display: none;
+                }
             }
         }
         .product-img {
