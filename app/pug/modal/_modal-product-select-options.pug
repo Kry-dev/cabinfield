@@ -15,9 +15,7 @@
                     h2.product-title Customize your Indian Creek Panel Amish Bed:
                     img.product-img(src="img/product/gazebo-02.png")
             .modal-body.tab-content(id="productSelectTabsContent")
-                form
                     .tab-pane.fade.show.active(id="step-01" role="tabpanel" aria-labelledby="step-01-tab")
-
                         #optgroup-1
                             .product-customize-form
                                 h6.product-customize-subtitle
@@ -163,101 +161,104 @@
                                                 | - $242
 
                     .tab-pane.fade(id="step-05" role="tabpanel" aria-labelledby="step-05-tab")
-                        .option-selected
-                            h6.product-customize-subtitle
-                                b Review ZIP:
-                            p.text-black
-                                b The price reflects selected options:
-                            ul.option-selected-list
-                                li
-                                    | Bed size:
-                                    span Queen (64"W x 86"L)
+                        #optgroup-10
+                            .option-selected
+                                h6.product-customize-subtitle
+                                    b Review ZIP:
+                                p.text-black
+                                    b The price reflects selected options:
+                                ul.option-selected-list
+                                    li
+                                        | Bed size:
+                                        span Queen (64"W x 86"L)
 
-                                li
-                                    | Set:
-                                    span Full Bed
-                                li
-                                    | Wood:
-                                    span Quartersawn White Oak
-                                li
-                                    | Wood stain:
-                                    span OCS-225 Mission Maple
-                                li
-                                    | Headboard Style:
-                                    span Elliot
+                                    li
+                                        | Set:
+                                        span Full Bed
+                                    li
+                                        | Wood:
+                                        span Quartersawn White Oak
+                                    li
+                                        | Wood stain:
+                                        span OCS-225 Mission Maple
+                                    li
+                                        | Headboard Style:
+                                        span Elliot
 
-                            .product-price
-                                .product-price-value $1,371.00
-                            form.form.modal--zip
-                                label(for="review-zip") Enter Zip
-                                .form-group
-                                    input.form-control(type="text" id="review-zip" name="zip" minlength="5" maxlength="5" placeholder="8●●●●")
-                            p
-                                a.btn.btn-order.btn-sm.d-block(href='#') Calculate Shipping
+                                .product-price
+                                    .product-price-value $1,371.00
+                                form.form.modal--zip
+                                    label(for="review-zip") Enter Zip
+                                    .form-group
+                                        input.form-control(type="text" id="review-zip" name="zip" minlength="5" maxlength="5" placeholder="8●●●●")
+                                p
+                                    a.btn.btn-order.btn-sm.d-block(href='#') Calculate Shipping
+
+
 
                     .tab-pane.fade(id="step-06" role="tabpanel" aria-labelledby="step-06-tab")
-                        .option-selected
-                            h6.product-customize-subtitle
-                                b Review Checkout:
-                            p.text-black
-                                b The price reflects selected options:
-                            ul.option-selected-list
-                                li
-                                    | Bed size:
-                                    span Queen (64"W x 86"L)
+                        #optgroup-12
+                            .option-selected
+                                h6.product-customize-subtitle
+                                    b Review Checkout:
+                                p.text-black
+                                    b The price reflects selected options:
+                                ul.option-selected-list
+                                    li
+                                        | Bed size:
+                                        span Queen (64"W x 86"L)
 
-                                li
-                                    | Set:
-                                    span Full Bed
-                                li
-                                    | Wood:
-                                    span Quartersawn White Oak
-                                li
-                                    | Wood stain:
-                                    span OCS-225 Mission Maple
-                                li
-                                    | Headboard Style:
-                                    span Elliot
-                                li.my-3
-                                    | Shipping prices calculated for zip Code:
-                                    span.text-brown 4251
-                                        a(href="#")
-                                            i.fa.fa-pencil.edit.mx-1
-                                            |Change
+                                    li
+                                        | Set:
+                                        span Full Bed
+                                    li
+                                        | Wood:
+                                        span Quartersawn White Oak
+                                    li
+                                        | Wood stain:
+                                        span OCS-225 Mission Maple
+                                    li
+                                        | Headboard Style:
+                                        span Elliot
+                                    li.my-3
+                                        | Shipping prices calculated for zip Code:
+                                        span.text-brown 4251
+                                            a(href="#")
+                                                i.fa.fa-pencil.edit.mx-1
+                                                | Change
 
-                            p.text-black
-                                b Shipping Type:
-                            ul.modal-ship-type.mb-3
-                                li.custom_radio
-                                    input#ship_type_01(type='radio', name='ship_type', value='')
-                                    label(for='ship_type_01') Standard curbside delivery
-                                        span.text-brown + 78.19
-                                li.custom_radio
-                                    input#ship_type_02(type='radio', name='ship_type', value='')
-                                    label(for='ship_type_02') Inside delivery with setup
-                                        span.text-brown + 78.19
-                            ul.option-selected-list.mb-3
-                                li
-                                    | Combined value shipping:
-                                    span
-                                        strong Yes
-                                li
-                                    a(href="#") More info about your savings | >
-                            .product-price.mb-3
-                                .product-price-shipping
-                                    span + $30.40
-                                    |  Shipping
-                                .d-flex.flex-row
-                                    p.text-black.mr-1
-                                        b Extended Price:
-                                    .product-price-value $1,371.00
-                            p.mb-5
-                                small * Promotion discounts (where applicable) will be shown in the shopping cart.
-                            p
-                                a.btn.btn-order.btn-sm.d-block(href='#') Calculate Shipping
-                            p
-                                a.btn.btn-outline-warning.btn-sm.d-block(href='#') Check Out
-
+                                p.text-black
+                                    b Shipping Type:
+                                ul.modal-ship-type.mb-3
+                                    li.custom_radio
+                                        input#ship_type_01(type='radio', name='ship_type', value='')
+                                        label(for='ship_type_01') Standard curbside delivery
+                                            span.text-brown + 78.19
+                                    li.custom_radio
+                                        input#ship_type_02(type='radio', name='ship_type', value='')
+                                        label(for='ship_type_02') Inside delivery with setup
+                                            span.text-brown + 78.19
+                                ul.option-selected-list.mb-3
+                                    li
+                                        | Combined value shipping:
+                                        span
+                                            strong Yes
+                                    li
+                                        a(href="#") More info about your savings | >
+                                .product-price.mb-3
+                                    .product-price-shipping
+                                        span + $30.40
+                                        |  Shipping
+                                    .d-flex.flex-row
+                                        p.text-black.mr-1
+                                            b Extended Price:
+                                        .product-price-value $1,371.00
+                                p.mb-5
+                                    small * Promotion discounts (where applicable) will be shown in the shopping cart.
+                                p
+                                    a.btn.btn-order.btn-sm.d-block(href='#') Calculate Shipping
+                                p
+                                    a.btn.btn-outline-warning.btn-sm.d-block(href='#') Check Out
             .modal-footer
                 button.btn.btn-prevtab
                     i.fa.fa-chevron-left
