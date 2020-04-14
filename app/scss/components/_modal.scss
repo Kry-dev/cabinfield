@@ -812,9 +812,8 @@ body.modal-open .mm-slideout {
     }
     
     &--select-optns {
-        @include media-breakpoint-down(sm) {
-            padding-top: 100px;
-        }
+        padding-top: 100px;
+        
         .product-select {
             
             display: flex;
