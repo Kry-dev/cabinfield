@@ -812,8 +812,10 @@
       <section class="filter">
         <div class="container">
           <div class="filter-wrap">
-            <div class="filter-items-found">2012 items found.</div>
-            <div class="filter-wrap-list"><a class="remove" href="#">$500 - $1000</a><a class="remove" href="#">Bearwood</a><a class="remove" href="#">Apache</a><a class="remove" href="#">Cherry</a><a class="remove" href="#">Walnut</a></div><a class="clear-filter" href="#">Clear filter</a>
+            <div class="filter-items-found"><span><strong>185</strong></span> items found.</div>
+            <p class="d-block">Customize your search by choosing filters</p>
+            <div class="filter-wrap-list"><a class="remove" href="#">$500 - $1000</a><a class="remove" href="#">Bearwood</a><a class="remove" href="#">Apache</a><a class="remove" href="#">Cherry</a><a class="remove" href="#">Walnut</a></div>
+            <div class="filter-wrap-controls"><a class="choose-filter d-block d-lg-none" id="choose-filter" data-toggle="collapse" href="#product-filters-wrap" role="button" aria-expanded="true" aria-controls="product-filters-wrap">Choose filter</a><a class="clear-filter" href="#">Clear filter</a></div>
           </div>
         </div>
       </section><!--Filters wrap end -->
@@ -821,130 +823,132 @@
       <section class="product-filters">
         <div class="container">
           <div class="row">
-            <div class="col-lg-2 col-md-3">
-              <h6 class="product-filters-title" data-toggle="collapse" href="#collapsePrice" role="button" aria-expanded="true" aria-controls="collapsePrice">Price</h6>
-              <ul class="product-filters-list show collapse" id="collapsePrice">
-                <li class="checkbox custom_checkbox">
-                  <input id="price0" type="checkbox" name="Price" value="Under $500" data-toggle="collapse" data-target="Under-500">
-                  <label for="price0">Under $500</label>
-                </li>
-                <li class="checkbox custom_checkbox">
-                  <input id="price1" type="checkbox" name="Price" value="$500 - $1000">
-                  <label for="price1">$500 - $1000</label>
-                </li>
-                <li class="checkbox custom_checkbox">
-                  <input id="price2" type="checkbox" name="Price" value="$1000 - $2000">
-                  <label for="price2">$1000 - $2000</label>
-                </li>
-                <li class="checkbox custom_checkbox">
-                  <input id="price3" type="checkbox" name="Price" value="$2000 - $3000">
-                  <label for="price3">$2000 - $3000</label>
-                </li>
-                <li class="checkbox custom_checkbox">
-                  <input id="price4" type="checkbox" name="Price" value="Above $3000">
-                  <label for="price4">Above $3000</label>
-                </li>
-              </ul>
-              <h6 class="product-filters-title" data-toggle="collapse" href="#collapseStyle" role="button" aria-expanded="true" aria-controls="collapseStyle">Style</h6>
-              <ul class="product-filters-list show collapse" id="collapseStyle">
-                <li class="checkbox custom_checkbox">
-                  <input id="style0" type="checkbox" name="Style" value="Contemporary">
-                  <label for="style0">Contemporary</label>
-                </li>
-                <li class="checkbox custom_checkbox">
-                  <input id="style1" type="checkbox" name="Style" value="Mission/Craftsman/Arts &amp; Crafts">
-                  <label for="style1">Mission/Craftsman/Arts & Crafts</label>
-                </li>
-                <li class="checkbox custom_checkbox">
-                  <input id="style2" type="checkbox" name="Style" value="Mission Beds and Headboards">
-                  <label for="style2">Mission Beds and Headboards</label>
-                </li>
-                <li class="checkbox custom_checkbox">
-                  <input id="style3" type="checkbox" name="Style" value="Traditional">
-                  <label for="style3">Traditional</label>
-                </li>
-                <li class="checkbox custom_checkbox">
-                  <input id="style4" type="checkbox" name="Style" value="Eclectic">
-                  <label for="style4">Eclectic</label>
-                </li>
-                <li class="checkbox custom_checkbox">
-                  <input id="style5" type="checkbox" name="Style" value="Economy/Value">
-                  <label for="style5">Economy/Value</label>
-                </li>
-                <li class="checkbox custom_checkbox">
-                  <input id="style6" type="checkbox" name="Style" value="Traditional">
-                  <label for="style6">Traditional</label>
-                </li>
-              </ul>
-              <h6 class="product-filters-title" data-toggle="collapse" href="#collapseWood" role="button" aria-expanded="true" aria-controls="collapseWood">Wood</h6>
-              <ul class="product-filters-list show collapse" id="collapseWood">
-                <li class="checkbox custom_checkbox">
-                  <input id="wood0" type="checkbox" name="Wood" value="Oak">
-                  <label for="wood0">Oak</label>
-                </li>
-                <li class="checkbox custom_checkbox">
-                  <input id="wood1" type="checkbox" name="Wood" value="Cherry">
-                  <label for="wood1">Cherry</label>
-                </li>
-                <li class="checkbox custom_checkbox">
-                  <input id="wood2" type="checkbox" name="Wood" value="Brown Maple">
-                  <label for="wood2">Brown Maple</label>
-                </li>
-                <li class="checkbox custom_checkbox">
-                  <input id="wood3" type="checkbox" name="Wood" value="Quartersawn Oak">
-                  <label for="wood3">Quartersawn Oak</label>
-                </li>
-                <li class="checkbox custom_checkbox">
-                  <input id="wood4" type="checkbox" name="Wood" value="Bearwood">
-                  <label for="wood4">Bearwood</label>
-                </li>
-                <li class="checkbox custom_checkbox">
-                  <input id="wood5" type="checkbox" name="Wood" value="Apache">
-                  <label for="wood5">Apache</label>
-                </li>
-                <li class="checkbox custom_checkbox">
-                  <input id="wood6" type="checkbox" name="Wood" value="Hard Maple">
-                  <label for="wood6">Hard Maple</label>
-                </li>
-                <li class="checkbox custom_checkbox">
-                  <input id="wood7" type="checkbox" name="Wood" value="Walnut">
-                  <label for="wood7">Walnut</label>
-                </li>
-                <li class="checkbox custom_checkbox">
-                  <input id="wood8" type="checkbox" name="Wood" value="Hickory">
-                  <label for="wood8">Hickory</label>
-                </li>
-                <li class="checkbox custom_checkbox">
-                  <input id="wood9" type="checkbox" name="Wood" value="Hard Maple">
-                  <label for="wood9">Hard Maple</label>
-                </li>
-                <li class="checkbox custom_checkbox">
-                  <input id="wood10" type="checkbox" name="Wood" value="Rustic Hickory">
-                  <label for="wood10">Rustic Hickory</label>
-                </li>
-                <li class="checkbox custom_checkbox">
-                  <input id="wood11" type="checkbox" name="Wood" value="Hickory Twigs &amp; Oak">
-                  <label for="wood11">Hickory Twigs & Oak</label>
-                </li>
-                <li class="checkbox custom_checkbox">
-                  <input id="wood12" type="checkbox" name="Wood" value="Hickory Twigs &amp; Rustic Alder">
-                  <label for="wood12">Hickory Twigs & Rustic Alder</label>
-                </li>
-                <li class="checkbox custom_checkbox">
-                  <input id="wood13" type="checkbox" name="Wood" value="Hickory Twigs &amp; Brown Maple">
-                  <label for="wood13">Hickory Twigs & Brown Maple</label>
-                </li>
-                <li class="checkbox custom_checkbox">
-                  <input id="wood14" type="checkbox" name="Wood" value="Hickory Twigs &amp; Walnut">
-                  <label for="wood14">Hickory Twigs & Walnut</label>
-                </li>
-                <li class="checkbox custom_checkbox">
-                  <input id="wood15" type="checkbox" name="Wood" value="Hickory Twigs &amp; Hickory">
-                  <label for="wood15">Hickory Twigs & Hickory</label>
-                </li>
-              </ul>
+            <div class="col-lg-2 col-md-12">
+              <div class="product-filters-wrap d-none d-lg-block" id="product-filters-wrap">
+                <h6 class="product-filters-title" data-toggle="collapse" href="#collapsePrice" role="button" aria-expanded="true" aria-controls="collapsePrice">Price</h6>
+                <ul class="product-filters-list show collapse" id="collapsePrice">
+                  <li class="checkbox custom_checkbox">
+                    <input id="price0" type="checkbox" name="Price" value="Under $500" data-toggle="collapse" data-target="Under-500">
+                    <label for="price0">Under $500</label>
+                  </li>
+                  <li class="checkbox custom_checkbox">
+                    <input id="price1" type="checkbox" name="Price" value="$500 - $1000">
+                    <label for="price1">$500 - $1000</label>
+                  </li>
+                  <li class="checkbox custom_checkbox">
+                    <input id="price2" type="checkbox" name="Price" value="$1000 - $2000">
+                    <label for="price2">$1000 - $2000</label>
+                  </li>
+                  <li class="checkbox custom_checkbox">
+                    <input id="price3" type="checkbox" name="Price" value="$2000 - $3000">
+                    <label for="price3">$2000 - $3000</label>
+                  </li>
+                  <li class="checkbox custom_checkbox">
+                    <input id="price4" type="checkbox" name="Price" value="Above $3000">
+                    <label for="price4">Above $3000</label>
+                  </li>
+                </ul>
+                <h6 class="product-filters-title" data-toggle="collapse" href="#collapseStyle" role="button" aria-expanded="true" aria-controls="collapseStyle">Style</h6>
+                <ul class="product-filters-list show collapse" id="collapseStyle">
+                  <li class="checkbox custom_checkbox">
+                    <input id="style0" type="checkbox" name="Style" value="Contemporary">
+                    <label for="style0">Contemporary</label>
+                  </li>
+                  <li class="checkbox custom_checkbox">
+                    <input id="style1" type="checkbox" name="Style" value="Mission/Craftsman/Arts &amp; Crafts">
+                    <label for="style1">Mission/Craftsman/Arts & Crafts</label>
+                  </li>
+                  <li class="checkbox custom_checkbox">
+                    <input id="style2" type="checkbox" name="Style" value="Mission Beds and Headboards">
+                    <label for="style2">Mission Beds and Headboards</label>
+                  </li>
+                  <li class="checkbox custom_checkbox">
+                    <input id="style3" type="checkbox" name="Style" value="Traditional">
+                    <label for="style3">Traditional</label>
+                  </li>
+                  <li class="checkbox custom_checkbox">
+                    <input id="style4" type="checkbox" name="Style" value="Eclectic">
+                    <label for="style4">Eclectic</label>
+                  </li>
+                  <li class="checkbox custom_checkbox">
+                    <input id="style5" type="checkbox" name="Style" value="Economy/Value">
+                    <label for="style5">Economy/Value</label>
+                  </li>
+                  <li class="checkbox custom_checkbox">
+                    <input id="style6" type="checkbox" name="Style" value="Traditional">
+                    <label for="style6">Traditional</label>
+                  </li>
+                </ul>
+                <h6 class="product-filters-title" data-toggle="collapse" href="#collapseWood" role="button" aria-expanded="true" aria-controls="collapseWood">Wood</h6>
+                <ul class="product-filters-list show collapse" id="collapseWood">
+                  <li class="checkbox custom_checkbox">
+                    <input id="wood0" type="checkbox" name="Wood" value="Oak">
+                    <label for="wood0">Oak</label>
+                  </li>
+                  <li class="checkbox custom_checkbox">
+                    <input id="wood1" type="checkbox" name="Wood" value="Cherry">
+                    <label for="wood1">Cherry</label>
+                  </li>
+                  <li class="checkbox custom_checkbox">
+                    <input id="wood2" type="checkbox" name="Wood" value="Brown Maple">
+                    <label for="wood2">Brown Maple</label>
+                  </li>
+                  <li class="checkbox custom_checkbox">
+                    <input id="wood3" type="checkbox" name="Wood" value="Quartersawn Oak">
+                    <label for="wood3">Quartersawn Oak</label>
+                  </li>
+                  <li class="checkbox custom_checkbox">
+                    <input id="wood4" type="checkbox" name="Wood" value="Bearwood">
+                    <label for="wood4">Bearwood</label>
+                  </li>
+                  <li class="checkbox custom_checkbox">
+                    <input id="wood5" type="checkbox" name="Wood" value="Apache">
+                    <label for="wood5">Apache</label>
+                  </li>
+                  <li class="checkbox custom_checkbox">
+                    <input id="wood6" type="checkbox" name="Wood" value="Hard Maple">
+                    <label for="wood6">Hard Maple</label>
+                  </li>
+                  <li class="checkbox custom_checkbox">
+                    <input id="wood7" type="checkbox" name="Wood" value="Walnut">
+                    <label for="wood7">Walnut</label>
+                  </li>
+                  <li class="checkbox custom_checkbox">
+                    <input id="wood8" type="checkbox" name="Wood" value="Hickory">
+                    <label for="wood8">Hickory</label>
+                  </li>
+                  <li class="checkbox custom_checkbox">
+                    <input id="wood9" type="checkbox" name="Wood" value="Hard Maple">
+                    <label for="wood9">Hard Maple</label>
+                  </li>
+                  <li class="checkbox custom_checkbox">
+                    <input id="wood10" type="checkbox" name="Wood" value="Rustic Hickory">
+                    <label for="wood10">Rustic Hickory</label>
+                  </li>
+                  <li class="checkbox custom_checkbox">
+                    <input id="wood11" type="checkbox" name="Wood" value="Hickory Twigs &amp; Oak">
+                    <label for="wood11">Hickory Twigs & Oak</label>
+                  </li>
+                  <li class="checkbox custom_checkbox">
+                    <input id="wood12" type="checkbox" name="Wood" value="Hickory Twigs &amp; Rustic Alder">
+                    <label for="wood12">Hickory Twigs & Rustic Alder</label>
+                  </li>
+                  <li class="checkbox custom_checkbox">
+                    <input id="wood13" type="checkbox" name="Wood" value="Hickory Twigs &amp; Brown Maple">
+                    <label for="wood13">Hickory Twigs & Brown Maple</label>
+                  </li>
+                  <li class="checkbox custom_checkbox">
+                    <input id="wood14" type="checkbox" name="Wood" value="Hickory Twigs &amp; Walnut">
+                    <label for="wood14">Hickory Twigs & Walnut</label>
+                  </li>
+                  <li class="checkbox custom_checkbox">
+                    <input id="wood15" type="checkbox" name="Wood" value="Hickory Twigs &amp; Hickory">
+                    <label for="wood15">Hickory Twigs & Hickory</label>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div class="col-md-9 col-lg-10">
+            <div class="col-md-12 col-lg-10">
               <ul class="product-list border-bottom">
                 <li class="Under-500" data-category="$1000 - $2000" data-target="$1000 - $2000"><a class="card" href="#"><img class="card-img-top" src="img/relatedproducts/product-01.jpg" alt="#">
                     <div class="card-body">

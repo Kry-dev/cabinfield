@@ -729,3 +729,7 @@ $("#select_options").on('hidden.bs.modal', function () {
 });
 
 
+$("#choose-filter").on("click", function (e) {
+    e.preventDefault();
+    $("#product-filters-wrap").toggle();
+});

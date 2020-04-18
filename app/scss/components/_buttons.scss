@@ -421,3 +421,16 @@ a.btn-why {
         transition: $transition-fade;
     }
 }
+
+.choose-filter {
+    width: 122px;
+    border-radius: 4px;
+    color: $white;
+    background-color: $brown;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    padding: 1rem  1rem;
+}
