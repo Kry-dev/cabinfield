@@ -214,12 +214,36 @@
             flex-direction: column;
             justify-content: space-between;
             border: 1px solid $product-main-border;
-            
             img {
                 max-width: 100%;
                 height: auto;
+                margin: 0;
             }
-            
+            .zoom {
+                display: block;
+                flex-direction: column;
+                width: 100%;
+                height: auto;
+                position: relative;
+                .zoom-inner {
+                    position: absolute;
+                    left: 1rem;
+                    bottom: 1rem;
+                    color: $white;
+                    border-radius: 1rem;
+                    padding: .25rem .75rem;
+                    text-transform: uppercase;
+                    font-size: 0.825rem;
+                    background: rgba($white, .25);
+                    display: inline-flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .fa {
+                    margin-right: .5rem;
+                }
+            }
             .title {
                 margin-bottom: 0;
                 padding: 0.75rem 1rem;

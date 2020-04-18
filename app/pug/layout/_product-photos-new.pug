@@ -12,5 +12,9 @@
       button.btn.slick-arrow.slick-prev(type='button')
       button.btn.slick-arrow.slick-next(type='button')
 .product-photo-main
-          img.img-fluid(src='img/product/tmp_product.jpg', alt='#', data-toggle='modal', data-target='#mainimage_popup')
-          p.title 10 Drawer Dresser shown with optional mirror
+    .zoom
+      img.img-fluid(src='img/product/tmp_product.jpg', alt='#', data-toggle='modal', data-target='#mainimage_popup')
+      .zoom-inner(data-toggle='modal', data-target='#mainimage_popup')
+        i.fa.fa-search-plus
+        | click to enlarge
+    p.title 10 Drawer Dresser shown with optional mirror
