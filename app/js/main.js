@@ -733,3 +733,12 @@ $("#choose-filter").on("click", function (e) {
     e.preventDefault();
     $("#product-filters-wrap").toggle();
 });
+
+$('.product-details').hide();
+$('.toggle-details').on('click', function (e) {
+    e.preventDefault();
+    let prodDetails = $(this).closest('div').find('.product-details');
+    if(prodDetails != 0) {
+        prodDetails.toggle();
+    }
+});

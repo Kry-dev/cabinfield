@@ -815,7 +815,6 @@ body.modal-open .mm-slideout {
         padding-top: 100px;
         
         .product-select {
-            
             display: flex;
             flex-direction: row;
             justify-content: space-between;
@@ -840,7 +839,7 @@ body.modal-open .mm-slideout {
             padding: 2rem 4rem;
             min-height: 570px;
             @include media-breakpoint-down(sm) {
-                padding: 1rem;
+                padding: 1rem 1rem 0;
             }
         }
         
@@ -853,6 +852,9 @@ body.modal-open .mm-slideout {
         .modal-body {
             padding: 2rem 0;
             border-bottom: .5px solid $blue;
+            @include media-breakpoint-down(sm) {
+                padding: .75rem 0;
+            }
         }
         
         .modal-footer {
@@ -860,8 +862,17 @@ body.modal-open .mm-slideout {
             flex-direction: row;
             justify-content: space-between;
             padding: 1rem 0;
+            @include media-breakpoint-down(sm) {
+                padding: 0;
+                padding: 0
+            }
         }
-        
+         button.close {
+             @include media-breakpoint-down(sm) {
+                 top: -45px;
+                 color: $white;
+             }
+        }
         .nav-tabs {
             margin-bottom: 1rem;
             border: 0;
@@ -893,13 +904,17 @@ body.modal-open .mm-slideout {
             border-bottom: 0;
             padding-left: 0;
             padding-bottom: 0;
+            @include media-breakpoint-down(sm) {
+                margin-bottom: 0;
+            }
         }
         .product-customize-subtitle {
             border-bottom: .5px solid $blue;
             padding-bottom: 1rem;
             margin-bottom: 2rem;
             @include media-breakpoint-down(sm) {
-                margin-bottom: 1rem;
+                margin-bottom: .75rem;
+                padding-bottom: .5rem;
                 .more {
                     display: none;
                 }
@@ -910,6 +925,9 @@ body.modal-open .mm-slideout {
             height: 100%;
             max-width: 162px;
             max-height: 162px;
+            @include media-breakpoint-down(sm) {
+                display: none;
+            }
         }
         
         .product-customize-list {
@@ -932,7 +950,12 @@ body.modal-open .mm-slideout {
                 flex: auto;
                 @include media-breakpoint-down(sm) {
                     max-width: 100%;
-                    margin: 0 .25rem 1rem;
+                    margin: 0 .25rem;
+                }
+            }
+            .product-option.option-hboard + .product-option.option-hboard {
+                @include media-breakpoint-down(sm) {
+                    margin: .5rem .25rem 0rem;
                 }
             }
             @include media-breakpoint-down(sm) {
@@ -1008,7 +1031,16 @@ body.modal-open .mm-slideout {
         .product-title {
             @include media-breakpoint-down(sm) {
                 max-width: 100%;
-                font-size: 24px;
+                font-size: 18px;
+                line-height: 24px;
+                font-weight: 600;
+            }
+        }
+        .product-details {
+            display: none;
+            width: 100%;
+            img {
+                max-width: 100%;
             }
         }
     }
