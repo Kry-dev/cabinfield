@@ -740,5 +740,6 @@ $('.toggle-details').on('click', function (e) {
     let prodDetails = $(this).closest('div').find('.product-details');
     if(prodDetails != 0) {
         prodDetails.toggle();
+        $(this).text( $(this).text() == 'View Storage Details' ? 'Hide Storage Details' : 'View Storage Details' );
     }
 });
