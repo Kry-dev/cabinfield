@@ -1042,6 +1042,16 @@ body.modal-open .mm-slideout {
             img {
                 max-width: 100%;
             }
+            ul,
+            ol {
+                color: #514646;
+                font-size: .9375rem;
+                line-height: 1.4375rem;
+                font-family: "Open Sans",sans-serif;
+            }
+            p strong {
+                color: $black;
+            }
         }
     }
 }
