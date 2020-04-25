@@ -743,3 +743,35 @@ $('.toggle-details').on('click', function (e) {
         $(this).text( $(this).text() == 'View Storage Details' ? 'Hide Storage Details' : 'View Storage Details' );
     }
 });
+
+// Open Fullsize Option
+$('.closeFullSize').hide();
+$(".openFullSize").click(function (e) {
+    e.preventDefault();
+    var currentTab = $(this).closest('.product-customize-form');
+    console.log(currentTab);
+    var currentFullSizeList = currentTab.find(".product-customize-list");
+    console.log(currentFullSizeList);
+    var sliderOptions = {
+        dots: false,
+        infinite: false,
+        autoplay: false,
+        autoplaySpeed: 7000,
+        speed: 800,
+        slidesToShow: 1,
+        adaptiveHeight: true
+    };
+    currentFullSizeList.slick(sliderOptions);
+    currentTab.find(".closeFullSize").show();
+    $(this).hide();
+});
+
+$('.closeFullSize').on("click", (function (e) {
+    e.preventDefault();
+    console.log($(this).parent());
+    let openFullSize = $(this).parent().find('.openFullSize');
+    let currentFullSizeList = $(this).parent().find('.slick-initialized');
+    currentFullSizeList.slick('unslick');
+    openFullSize.show();
+    $(this).hide();
+}));
