@@ -914,9 +914,6 @@ body.modal-open .mm-slideout {
             @include media-breakpoint-down(sm) {
                 margin-bottom: .75rem;
                 padding-bottom: .5rem;
-                .more {
-                    display: none;
-                }
             }
         }
         .product-img {
