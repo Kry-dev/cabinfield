@@ -743,25 +743,22 @@ $('.toggle-details').on('click', function (e) {
         $(this).text( $(this).text() == 'View Storage Details' ? 'Hide Storage Details' : 'View Storage Details' );
     }
 });
-
+var sliderOptions = {
+    dots: false,
+    infinite: false,
+    autoplay: false,
+    autoplaySpeed: 7000,
+    speed: 800,
+    slidesToShow: 1,
+    adaptiveHeight: true
+};
 // Open Fullsize Option
 $('.closeFullSize').hide();
 $(".openFullSize").click(function (e) {
     e.preventDefault();
     var currentTab = $(this).closest('.product-customize-form');
-    console.log(currentTab);
     var currentFullSizeList = currentTab.find(".product-customize-list");
-    console.log(currentFullSizeList);
-    var sliderOptions = {
-        dots: false,
-        infinite: false,
-        autoplay: false,
-        autoplaySpeed: 7000,
-        speed: 800,
-        slidesToShow: 1,
-        adaptiveHeight: true
-    };
-    currentFullSizeList.slick(sliderOptions);
+        currentFullSizeList.slick(sliderOptions);
     currentTab.find(".closeFullSize").show();
     $(this).hide();
 });
@@ -775,3 +772,27 @@ $('.closeFullSize').on("click", (function (e) {
     openFullSize.show();
     $(this).hide();
 }));
+$('.closeFabricFullsize').on('click', function (e) {
+    e.preventDefault();
+    let currentFullSizeList = $(this).parent().find('.slick-initialized');
+    currentFullSizeList.slick('unslick');
+});
+// $('.closeFabricFullsize').hide();
+$('.product-fabric-list .enlarge').on('click', function () {
+    let currentSlide = $(this).closest(".product-option.option-stain");
+    let pagination = $(this).closest(".product-customize-form").find(".pagination");
+    let thisList = $(this).closest(".product-fabric-list");
+    let getCurrentPosition = currentSlide.data('slick-index');
+    pagination.hide();
+    thisList.slick({
+        dots: false,
+        infinite: false,
+        autoplay: false,
+        autoplaySpeed: 7000,
+        speed: 800,
+        slidesToShow: 1,
+        adaptiveHeight: true,
+        initialSlide: getCurrentPosition
+    });
+    $('.closeFabricFullsize').show();
+});
