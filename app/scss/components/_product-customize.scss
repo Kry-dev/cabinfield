@@ -727,7 +727,7 @@
     justify-content: space-between;
     margin-bottom: 1rem;
     .product-option.option-stain {
-        flex: 1 0 30%; /* explanation below */
+        flex: 1 0 30%;
         //width: 192px;
         //height: 168px;
         min-height: 168px;
@@ -793,6 +793,10 @@
                     max-width: 555px;
                     margin: 0 auto;
                 }
+                &:hover,
+                &:focus {
+                    background: transparent;
+                }
             }
             .name {
                 display: none;
@@ -809,4 +813,5 @@
         }
         
     }
+    
 }

@@ -763,7 +763,7 @@ $(".openFullSize").click(function (e) {
     $(this).hide();
 });
 
-$('.closeFullSize').on("click", (function (e) {
+$(".closeFullSize").on("click", (function (e) {
     e.preventDefault();
     console.log($(this).parent());
     let openFullSize = $(this).parent().find('.openFullSize');
@@ -772,7 +772,7 @@ $('.closeFullSize').on("click", (function (e) {
     openFullSize.show();
     $(this).hide();
 }));
-$('.closeFabricFullsize').on('click', function (e) {
+$(".closeFabricFullsize").on('click', function (e) {
     e.preventDefault();
     let currentFullSizeList = $(this).parent().find('.slick-initialized');
     currentFullSizeList.slick('unslick');
