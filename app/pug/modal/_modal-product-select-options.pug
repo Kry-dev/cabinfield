@@ -13,6 +13,7 @@
                     li #[a(class="nav-link" id="step-042-tab" data-toggle="tab" href="#step-042" role="tab" aria-controls="step-042" aria-selected="false") 4.2 Storage Rail]
                     li #[a(class="nav-link" id="step-05-tab" data-toggle="tab" href="#step-05" role="tab" aria-controls="step-05" aria-selected="false") 5. Review ZIP]
                     li #[a(class="nav-link" id="step-06-tab" data-toggle="tab" href="#step-06" role="tab" aria-controls="step-06" aria-selected="false") 6. Review Checkout]
+                    li #[a(class="nav-link" id="step-07-tab" data-toggle="tab" href="#step-07" role="tab" aria-controls="step-07" aria-selected="false") 6. Review Gazeebo]
                 .product-select
                     h2.product-title Customize your Indian Creek Panel Amish Bed:
                     img.product-img(src="img/product/gazebo-02.png")
@@ -525,6 +526,66 @@
                                 a.btn.btn-order.btn-sm.d-block(href='#') Calculate Shipping
                             p
                                 a.btn.btn-outline-warning.btn-sm.d-block(href='#') Check Out
+                .tab-pane.fade(id="step-07" role="tabpanel" aria-labelledby="step-07-tab")
+                    #optgroup-127
+                        .option-selected
+                            h6.product-customize-subtitle
+                                b Review:
+                            p.text-black
+                                b The price reflects selected options:
+                            ul.option-selected-list.mb-0
+                                li
+                                    | Bed size:
+                                    span Queen (64"W x 86"L)
+                                li
+                                    | Wood:
+                                    span Quartersawn White Oak
+                                li
+                                    | Wood stain:
+                                    span OCS-225 Mission Maple
+                                li
+                                    | Headboard Style:
+                                    span Elliot
+                            .product-price.mb-3
+                                .product-price-value $1,371.00
+                            form.form.form-modal
+                                .row
+                                    .col-md-6.col-sm-12
+                                        label(for="enter-zip") Enter Zip
+                                        .form-group
+                                            input.form-control(type="text" id="enter-zip" name="zip")
+                                .row
+                                    .col-md-6.col-sm-12
+                                        label(for="full-name") Full Name
+                                        .form-group
+                                            input.form-control(type="text" id="full-name" name="full-name"  placeholder="")
+                                .row
+                                    .col-md-6.col-sm-12
+                                        label(for="review-zip") Email
+                                        .form-group
+                                            input.form-control(type="email" id="email" name="email" )
+                                .row
+                                    .col-md-6.col-sm-12
+                                        label Will this be delivered to a commercial address? Please check yes if that is the case
+                                        .custom_radio.form-check.form-check-inline
+                                            input#inlineRadio1.form-check-input(type='radio', name='Options1', value='option1')
+                                            label.form-check-label(for='inlineRadio1') Yes
+                                        .custom_radio.form-check.form-check-inline
+                                            input#inlineRadio2.form-check-input(type='radio', name='Options1', value='option2')
+                                            label.form-check-label(for='inlineRadio2') No
+                                .row.mb-3
+                                    .col-md-6.col-sm-12
+                                        label Will there be a fork lift available to unload? Please check yes if that is the case.
+                                        .custom_radio.form-check.form-check-inline
+                                            input#inlineRadio3.form-check-input(type='radio', name='Options2', value='option3')
+                                            label.form-check-label(for='inlineRadio3') Yes
+                                        .custom_radio.form-check.form-check-inline
+                                            input#inlineRadio4.form-check-input(type='radio', name='Options2', value='option4')
+                                            label.form-check-label(for='inlineRadio4') No
+
+                            p
+                                a.btn.btn-order.btn-sm.d-block(href='#') Calculate Shipping
+
             .modal-footer
                 button.btn.btn-prevtab
                     i.fa.fa-chevron-left
