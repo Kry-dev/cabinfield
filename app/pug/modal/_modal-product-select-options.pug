@@ -13,7 +13,8 @@
                     li #[a(class="nav-link" id="step-042-tab" data-toggle="tab" href="#step-042" role="tab" aria-controls="step-042" aria-selected="false") 4.2 Storage Rail]
                     li #[a(class="nav-link" id="step-05-tab" data-toggle="tab" href="#step-05" role="tab" aria-controls="step-05" aria-selected="false") 5. Review ZIP]
                     li #[a(class="nav-link" id="step-06-tab" data-toggle="tab" href="#step-06" role="tab" aria-controls="step-06" aria-selected="false") 6. Review Checkout]
-                    li #[a(class="nav-link" id="step-07-tab" data-toggle="tab" href="#step-07" role="tab" aria-controls="step-07" aria-selected="false") 6. Review Gazeebo]
+                    li #[a(class="nav-link" id="step-07-tab" data-toggle="tab" href="#step-07" role="tab" aria-controls="step-07" aria-selected="false") 7. Review Gazeebo]
+                    li #[a(class="nav-link" id="step-08-tab" data-toggle="tab" href="#step-08" role="tab" aria-controls="step-08" aria-selected="false") 7. CHECKBOX]
                 .product-select
                     h2.product-title Customize your Indian Creek Panel Amish Bed:
                     img.product-img(src="img/product/gazebo-02.png")
@@ -586,6 +587,42 @@
                             p
                                 a.btn.btn-order.btn-sm.d-block(href='#') Calculate Shipping
 
+                .tab-pane.fade(id="step-08" role="tabpanel" aria-labelledby="step-08-tab")
+                    #optgroup-455
+                        .product-customize-form
+                            h6.product-customize-subtitle
+                                strong.mr-1 Headboard Style:
+                                |  Lilly
+                                a.more.pl-3.ml-3.border-left.openFullSize(href='#') Open full-sized previews
+                            .product-customize-list
+                                .product-option.option-hboard.checkbox
+                                    input#hboar-01(type='checkbox', name='headboard')
+                                    label(for='hboar-01')
+                                        img.img-fluid(src='img/product/tmp_headboard.jpg', alt='#')
+                                        p.name
+                                            strong.pr-2 Elliot
+                                            | - $242
+                                .product-option.option-hboard.checkbox
+                                    input#hboar-02(type='checkbox', name='headboard', checked='')
+                                    label(for='hboar-02')
+                                        img.img-fluid(src='img/product/tmp_headboard.jpg', alt='#')
+                                        p.name
+                                            strong.pr-2 Elliot
+                                            | + $102
+                                .product-option.option-hboard.checkbox
+                                    input#hboar-03(type='checkbox', name='headboard')
+                                    label(for='hboar-03')
+                                        img.img-fluid(src='img/product/tmp_headboard.jpg', alt='#')
+                                        p.name
+                                            strong.pr-2 Lily
+                                .product-option.option-hboard.checkbox
+                                    input#hboar-04(type='checkbox', name='headboard')
+                                    label(for='hboar-04')
+                                        img.img-fluid(src='img/product/tmp_headboard.jpg', alt='#')
+                                        p.name
+                                            strong.pr-2 Gbrielle
+                                            | - $242
+                            a.closeFullSize(href="#") View Standard Previews
             .modal-footer
                 button.btn.btn-prevtab
                     i.fa.fa-chevron-left
