@@ -783,7 +783,6 @@ $('.product-fabric-list .enlarge').on('click', function () {
     let pagination = $(this).closest(".product-customize-form").find(".pagination");
     let thisList = $(this).closest(".product-fabric-list");
     let getCurrentPosition = currentSlide.data('slick-index');
-    pagination.hide();
     thisList.slick({
         dots: false,
         infinite: false,

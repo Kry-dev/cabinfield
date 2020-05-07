@@ -911,10 +911,16 @@ body.modal-open .mm-slideout {
             border-bottom: .5px solid $blue;
             padding-bottom: 1rem;
             margin-bottom: 2rem;
+           
             @include media-breakpoint-down(sm) {
                 margin-bottom: .75rem;
                 padding-bottom: .5rem;
             }
+        }
+        .person-message .product-customize-subtitle {
+            border-bottom: 0;
+            padding: 0;
+            margin: 1rem 0;
         }
         .product-img {
             width: 100%;

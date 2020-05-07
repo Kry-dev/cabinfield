@@ -7,6 +7,7 @@
                 ul.nav.nav-tabs(id="productSelectTabs", role="tablist")
                     li #[a(class="nav-link active" id="step-01-tab" data-toggle="tab" href="#step-01" role="tab" aria-controls="step-01" aria-selected="true") 1. Bed Size]
                     li #[a(class="nav-link" id="step-02-tab" data-toggle="tab" href="#step-02" role="tab" aria-controls="step-02" aria-selected="false") 2. Wood]
+                    li #[a(class="nav-link" id="step-33-tab" data-toggle="tab" href="#step-33" role="tab" aria-controls="step-33" aria-selected="false") 2.1 Wood]
                     li #[a(class="nav-link" id="step-03-tab" data-toggle="tab" href="#step-03" role="tab" aria-controls="step-03" aria-selected="false") 3. Wood Stain]
                     li #[a(class="nav-link" id="step-031-tab" data-toggle="tab" href="#step-031" role="tab" aria-controls="step-031" aria-selected="false") 3.1 Gazebo]
                     li #[a(class="nav-link" id="step-04-tab" data-toggle="tab" href="#step-04" role="tab" aria-controls="step-04" aria-selected="false") 4. Headboard Style]
@@ -80,6 +81,42 @@
                                     label(for='bed-wood-03')
                                         | Sap Cherry
                                         span + $102
+                            .person-message.additional-field.additional-field-4936173(style='')
+                                h6.product-customize-subtitle.label-color Please list which drawers get locks:
+                                textarea(name='message_areas[4936173]', cols='30', rows='2', placeholder='')
+
+                .tab-pane.fade(id="step-33" role="tabpanel" aria-labelledby="step-33-tab")
+                    #sdfkjsdf
+                        .product-customize-form
+                            h6.product-customize-subtitle
+                                b.mr-1 Hardware:
+                                |   BP1586-WN, BP3620-NBZ
+                            .product-customize-list.product-customize-list--hardware
+                                .product-option.product-option--hardware
+                                    input#BP1466-WN(type='checkbox', name='BP1466-WN')
+                                    label(for='BP1466-WN') BP1466-WN
+                                    a.popup-info(href='#', data-toggle='modal', data-target='#customize_popup11') i
+                                .product-option.product-option--hardware
+                                    input#BP1467-WN(type='checkbox', name='BP1467-WN')
+                                    label(for='BP1467-WN') BP1467-WN
+                                    a.popup-info(href='#', data-toggle='modal', data-target='#customize_popup11') i
+                                .product-option.product-option--hardware
+                                    input#BP1468-WN(type='checkbox', name='BP1468-WN')
+                                    label(for='BP1468-WN') BP1468-WN
+                                    a.popup-info(href='#', data-toggle='modal', data-target='#customize_popup11') i
+                                .product-option.product-option--hardware
+                                    input#BP1469-WN(type='checkbox', name='BP1469-WN')
+                                    label(for='BP1469-WN') BP1469-WN
+                                    a.popup-info(href='#', data-toggle='modal', data-target='#customize_popup11') i
+                                .product-option.product-option--hardware
+                                    input#BP1470-WN(type='checkbox', name='BP1470-WN')
+                                    label(for='BP1470-WN') BP1470-WN
+                                    a.popup-info(href='#', data-toggle='modal', data-target='#customize_popup11') i
+                                .product-option.product-option--hardware
+                                    input#BP1471-WN(type='checkbox', name='BP1471-WN')
+                                    label(for='BP1471-WN') BP1471-WN
+                                    a.popup-info(href='#', data-toggle='modal', data-target='#customize_popup11') i
+
                 .tab-pane.fade(id="step-03" role="tabpanel" aria-labelledby="step-03-tab")
                     #optgroup-3
                         .product-customize-form
@@ -527,6 +564,7 @@
                                 a.btn.btn-order.btn-sm.d-block(href='#') Calculate Shipping
                             p
                                 a.btn.btn-outline-warning.btn-sm.d-block(href='#') Check Out
+
                 .tab-pane.fade(id="step-07" role="tabpanel" aria-labelledby="step-07-tab")
                     #optgroup-127
                         .option-selected
