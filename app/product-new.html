@@ -852,7 +852,7 @@
                       <div class="product-price"><span>The price reflects selected options</span>
                         <div class="product-price-value"><span>$</span><span class="price-new">1,371.00</span></div>
                         <div class="product-price-shipping"><span>+ $30.40</span> Shipping</div>
-                      </div><!--Product price in mixin.pug end-->
+                      </div><!--Product price in mixin.pug end--><a class="btn btn-order mb-3" href="#" data-toggle="modal" data-target="#check_zip">Check ZIP code</a>
                 </div>
               </div>
               <p class="product-overview">With a handcrafted wood kitchen set mealtimes will become the special bonding time you’ve always dreamed of. Solidly constructed fan back chairs are optionally stained in 2 tones, creating natural wood and black kitchen chairs with custom contoured seats. The natural and black kitchen table features elegantly curved table legs, and is optionally an expandable kitchen table with self storing leaves.</p>
@@ -2305,7 +2305,32 @@
           </div>
         </div>
       </div>
-    </div><!--MODAL END-->
+    </div><!--modal check zip -->
+    <div class="modal fade" id="check_zip" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content border-0">
+          <div class="modal-body p-5">
+            <h4 class="text-center mb-4">Zip Code</h4>
+            <h4 class="text-center mb-4" style="display:none">We’re Sorry!</h4>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            <form class="form modal--zip-form">
+              <div class="form-group mb-4">
+                <p style="display:none">Your zip code is out of range of the Heartland Collection's delivery availability. You are invited to shop the Cabinfield Collection. We deliver Cabinfield gazebos throughout the U.S.</p>
+                <label>Enter Zip</label>
+                <input class="form-control" type="text" name="zip" minlength="5" maxlength="5" placeholder="8●●●●">
+              </div>
+              <div class="form-group d-none">
+                <button class="btn btn-order w-100" type="button">Continue Shopping</button>
+              </div>
+              <div class="form-group d-flex">
+                <button class="btn btn-order w-100" type="submit">Check ZIPCode</button>
+              </div>
+            </form>
+            <div class="modal-footer"></div>
+          </div>
+        </div>
+      </div>
+    </div><!--modal check zip end--><!--MODAL END-->
     <script src="js/jquery.js"></script>
     <script src="js/libs.min.js"></script>
     <script src="libs/mmenu-js/dist/mmenu.polyfills.js"></script>

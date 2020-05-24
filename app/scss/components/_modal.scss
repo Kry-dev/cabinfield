@@ -1059,6 +1059,9 @@ body.modal-open .mm-slideout {
             }
         }
     }
+    &-sm {
+        max-width: 396px;
+    }
 }
 .product-customize-list.slick-initialized {
     max-width: 500px;
