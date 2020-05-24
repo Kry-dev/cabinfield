@@ -1002,6 +1002,7 @@
                 <div class="item"><span class="name">Shipping & handling:</span><span class="price">$135.00</span></div>
                 <div class="item"><span class="name">Sales tax <a class="popup-info mr-0" href="#" data-toggle="modal" data-target="#customize_popup11">i</a> :</span><span class="price text-brown"> - $128.24</span></div>
                 <div class="item full_price"><span class="name">Extended price:</span><span class="price">$1,371.00</span></div>
+                <p class="mt-5 mb-0 text-right">Shipping to:<span class="mx-2"><strong>14251</strong></span><a class="edit" href="#" data-toggle="modal" data-target="#check_zip"><i class="fa fa-pencil mr-1"></i> change</a></p>
               </div>
               <div class="delivery_information">
                 <div class="title">Delivery information:</div>
@@ -1209,7 +1210,32 @@
           <div class="modal-footer"></div>
         </div>
       </div>
-    </div><!--modal subscribe end--><!--MODAL END-->
+    </div><!--modal subscribe end--><!--modal check zip -->
+    <div class="modal fade" id="check_zip" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content border-0">
+          <div class="modal-body p-5">
+            <h4 class="text-center mb-4">Zip Code</h4>
+            <h4 class="text-center mb-4" style="display:none">We’re Sorry!</h4>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            <form class="form modal--zip-form">
+              <div class="form-group mb-4">
+                <p style="display:none">Your zip code is out of range of the Heartland Collection's delivery availability. You are invited to shop the Cabinfield Collection. We deliver Cabinfield gazebos throughout the U.S.</p>
+                <label>Enter Zip</label>
+                <input class="form-control" type="text" name="zip" minlength="5" maxlength="5" placeholder="8●●●●">
+              </div>
+              <div class="form-group d-none">
+                <button class="btn btn-order w-100" type="button">Continue Shopping</button>
+              </div>
+              <div class="form-group d-flex">
+                <button class="btn btn-order w-100" type="submit">Check ZIPCode</button>
+              </div>
+            </form>
+            <div class="modal-footer"></div>
+          </div>
+        </div>
+      </div>
+    </div><!--modal check zip end--><!--MODAL END-->
     <script src="js/jquery.js"></script>
     <script src="js/libs.min.js"></script>
     <script src="libs/mmenu-js/dist/mmenu.polyfills.js"></script>
