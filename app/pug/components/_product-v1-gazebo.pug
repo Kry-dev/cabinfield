@@ -1,37 +1,43 @@
 section.product
-  .container
-    .d-flex.flex-column.flex-lg-row.pb-3.border-bottom
-      .product-left
-        <!--Product photos in components/_product-photos.pug-->
-        include ../layout/_product-photos-gazebo
-        <!--Product photos in components/_product-photos.pug end-->
-      .product-right
-        h1.product-right-title Indian Creek Amish Gazebo
-        .row
-          .col-sm-5.pr-0
-            span.product-number.mb-1 Product No.: FGFH1128
-            .product-rating
-              <!--Product rating small in mixin.pug-->
-              +rating-small("80", "<a href='#'> 8 customer reviews </a>")
-              <!--Product rating small in mixin.pug end-->
-          .col-sm-6
-            .seal-list
-              img.seal(src='img/svg/eco-icon.svg', alt='#')
-              img.seal(src='img/svg/amishhandcrafted-icon.svg', alt='#')
-          .col-sm-12
-            <!--Product price old in mixin.pug-->
-            +product-price-old
-            <!--Product price old in mixin.pug end-->
-        .row
-          .product-right-btns
-            a.btn.btn-order(href='#') Customize and Buy
-            a.btn.btn-outline-blue.my-0.border-0(href='#') Save to Wishlist
-        .row.mb-3
-          .product-assembly
-            p This item could be delivered assembled
-            a.btn.btn-assembly request a quote for assembled delivery
-        p.product-overview
-          | With a handcrafted wood kitchen set mealtimes will become the special bonding time you’ve always dreamed of. Solidly constructed fan back chairs are optionally stained in 2 tones, creating natural wood and black kitchen chairs with custom contoured seats. The natural and black kitchen table features elegantly curved table legs, and is optionally an expandable kitchen table with self storing leaves.
-        .product-includes
-          p Shown in quartersawn white oak with Michael's cherry stain. This suite includes bed, dresser with optional mirror, armoire, nightstand and blanket chest with cedar bottom.
-            a(href='#') See product features and specs
+    .container
+        .d-flex.flex-column.flex-lg-row.pb-3.border-bottom
+            .product-left
+                <!--Product photos in components/_product-photos.pug-->
+                include ../layout/_product-photos-gazebo
+                <!--Product photos in components/_product-photos.pug end-->
+            .product-right
+                h1.product-right-title Indian Creek Amish Gazebo
+                .row
+                    .col-sm-5.pr-0
+                        span.product-number.mb-1 Product No.: FGFH1128
+                        .product-rating.border-0.p-0
+                            <!--Product rating small in mixin.pug-->
+                            +rating-small("80", "<a href='#'> 8 customer reviews </a>")
+                            <!--Product rating small in mixin.pug end-->
+                        p.mb-3
+                            a.more.small(href="#") Why CabinField?
+
+                    .col-sm-6
+                        .seal-list
+                            img.seal(src='img/svg/eco-icon.svg', alt='#')
+                            img.seal(src='img/svg/amishhandcrafted-icon.svg', alt='#')
+                    .col-sm-12
+                        <!--Product price old in mixin.pug-->
+                        +product-price-old
+                        <!--Product price old in mixin.pug end-->
+                .row
+                    .product-right-btns
+                        a.btn.btn-order(href='#') Select your options
+                p.mb-4 Zip code:
+                    span.mx-2
+                        strong 14251
+                    a.edit(href='#', data-toggle='modal', data-target='#check_zip')
+                        i.fa.fa-pencil.mr-1
+                        |  change
+
+
+                p.product-overview
+                    | With a handcrafted wood kitchen set mealtimes will become the special bonding time you’ve always dreamed of. Solidly constructed fan back chairs are optionally stained in 2 tones, creating natural wood and black kitchen chairs with custom contoured seats. The natural and black kitchen table features elegantly curved table legs, and is optionally an expandable kitchen table with self storing leaves.
+                .product-includes
+                    p Shown in quartersawn white oak with Michael's cherry stain. This suite includes bed, dresser with optional mirror, armoire, nightstand and blanket chest with cedar bottom.
+                        a(href='#') See product features and specs
