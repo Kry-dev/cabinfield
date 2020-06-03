@@ -1058,6 +1058,9 @@ body.modal-open .mm-slideout {
                 color: $black;
             }
         }
+        .pagination {
+            padding: 0 1rem;
+        }
     }
     &-sm {
         max-width: 396px;

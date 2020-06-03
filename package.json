@@ -35,6 +35,11 @@
     "bootstrap-select": "^1.13.12",
     "gulp-autoprefixer": "^6.1.0",
     "jquery": "^3.4.1",
+    "lg-fullscreen": "^1.2.0",
+    "lg-pager": "^1.0.2",
+    "lg-thumbnail": "^1.2.0",
+    "lg-zoom": "^1.2.0",
+    "lightgallery": "^1.7.0",
     "mmenu-js": "^8.5.3",
     "mmenu-light": "^3.0.3",
     "popper.js": "^1.16.1"

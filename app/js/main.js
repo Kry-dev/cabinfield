@@ -551,6 +551,12 @@ $(document).ready(function(){
             inputNo.prop("checked", true);
         }
     })
+    
+// Go to third slide
+// Index starts from 0
+//     $("#lightgallery").lightGallery({
+//         fullScreen: false,
+//     });
 });
 //Quantity input type number
 $('.quantity').each(function() {
@@ -779,19 +785,70 @@ $(".closeFabricFullsize").on('click', function (e) {
 });
 // $('.closeFabricFullsize').hide();
 $('.product-fabric-list .enlarge').on('click', function () {
-    let currentSlide = $(this).closest(".product-option.option-stain");
-    let pagination = $(this).closest(".product-customize-form").find(".pagination");
-    let thisList = $(this).closest(".product-fabric-list");
-    let getCurrentPosition = currentSlide.data('slick-index');
-    thisList.slick({
-        dots: false,
-        infinite: false,
-        autoplay: false,
-        autoplaySpeed: 7000,
-        speed: 800,
-        slidesToShow: 1,
-        adaptiveHeight: true,
-        initialSlide: getCurrentPosition
-    });
-    $('.closeFabricFullsize').show();
+    let parent = $(this).closest('.product-fabric-list');
+    // let currentSlide = $(this).closest(".product-option.option-stain");
+    // let pagination = $(this).closest(".product-customize-form").find(".pagination");
+    // let thisList = $(this).closest(".product-fabric-list");
+    // let getCurrentPosition = currentSlide.data('slick-index');
+    // thisList.slick({
+    //     dots: false,
+    //     infinite: false,
+    //     autoplay: false,
+    //     autoplaySpeed: 7000,
+    //     speed: 800,
+    //     slidesToShow: 1,
+    //     adaptiveHeight: true,
+    //     initialSlide: getCurrentPosition
+    // });
+    // $('.closeFabricFullsize').show();
+});
+
+//Product Fabric options show fullscreen function
+function fabricFullSize( current_item ){
+    let img_count = $(".fabric-gallery-list .item").length;
+    if ( !$(current_item).index() ) {
+        $("#fabric-fullsize  a.prev_img").addClass("inactive");
+    } else 	{
+        $("#fabric-fullsize  a.prev_img").removeClass("inactive");
+    }
+    
+    if ( $(current_item).index() >= img_count-1 ) {
+        $("#fabric-fullsize a.next_img").addClass("inactive");
+    } else {
+        $("#fabric-fullsize a.next_img").removeClass("inactive");
+    }
+    
+    $("#fabric-fullsize .lightgallery-img img").attr( "src", $(current_item).find('img').attr('src') );
+    $("#fabric-fullsize .lightgallery-content .description").html( $(current_item).find(".description").html() );
+}
+
+// //Product Fabric options show fullscreen on click to .enlarge
+$(".fabric-gallery-list .enlarge").on("click", function(){
+    $(".fabric-gallery-list .selected").removeClass("selected");
+    $("#fabric-fullsize").addClass('active');
+    let current_item = $(this).closest('.item').addClass("selected");
+    fabricFullSize( current_item );
+});
+
+
+//Product Fabric options prev and next arrows
+$("#fabric-fullsize").on("click", "a.prev_img:not(.inactive), a.next_img:not(.inactive)", function (e) {
+    e.preventDefault();
+    let current_item;
+    if ( $(this).hasClass("prev_img") ) {
+        current_item = $(".fabric-gallery-list  .item.selected").removeClass("selected").prev(".item").addClass("selected");
+    } else {
+        current_item = $(".fabric-gallery-list  .item.selected").removeClass("selected").next(".item").addClass("selected");
+    }
+    fabricFullSize( current_item );
+});
+
+$(".closeFabricFullsize").on('click', function (e) {
+    e.preventDefault();
+    $("#fabric-fullsize").removeClass('active');
+});
+$(".fabric-gallery-list .item img").on("click", function(){
+    $(".fabric-gallery-list .selected").removeClass("selected");
+    let current_item = $(this).closest('.item').addClass("selected");
+    fabricFullSize( current_item );
 });
