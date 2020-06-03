@@ -80,7 +80,6 @@ gulp.task('scripts', function() {
         'app/libs/bootstrap/bootstrap.min.js',
         'app/libs/slick/slick.min.js',
         'app/libs/bootstrap-select/js/bootstrap-select.min.js',
-        'app/libs/lightgallery/dist/js/lightgallery.js',
     ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())
