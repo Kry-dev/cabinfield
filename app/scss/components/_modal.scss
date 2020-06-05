@@ -1069,6 +1069,10 @@ body.modal-open .mm-slideout {
 .product-customize-list.slick-initialized {
     max-width: 500px;
     margin: 0 auto 30px;
+    label p {
+        display: inline;
+    }
+    
     
     
 }

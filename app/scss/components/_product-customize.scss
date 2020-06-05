@@ -308,7 +308,9 @@
             border-radius: 2px;
             min-width: 100px;
             margin-bottom: 10px;
-            
+            p {
+                display: none;
+            }
             .name,
             p.name {
                 display: flex;
