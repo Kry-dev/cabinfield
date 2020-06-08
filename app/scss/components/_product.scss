@@ -633,14 +633,10 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    //height: ;
-    //max-height: 920px;
     position: absolute;
     left: 0;
     right: 0;
-    top: 106px;
-    //bottom: 0;
-    //padding-top: 2rem;
+    top: 40px;
     background: $white;
     z-index: -1;
     &.active {
