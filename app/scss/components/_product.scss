@@ -569,6 +569,7 @@
         width: 100%;
         max-width: 264px;
         min-height: 168px;
+        max-height: 300px;
         margin-bottom: 1rem;
         margin-right: 10px;
         
@@ -636,7 +637,7 @@
     position: absolute;
     left: 0;
     right: 0;
-    top: 40px;
+    top: 0;
     background: $white;
     z-index: -1;
     &.active {
