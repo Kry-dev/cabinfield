@@ -79,7 +79,12 @@
         flex-wrap: wrap;
         width: 100%;
         margin-bottom: 1rem;
-        
+        @include media-breakpoint-down(sm) {
+            width: 100%;
+            max-width: 340px;
+            margin: 0 auto;
+            
+        }
         li {
             width: 25%;
             box-sizing: border-box;
@@ -89,6 +94,7 @@
             
             @include media-breakpoint-down(sm) {
                 width: 100%;
+                padding: 45px;
                 & + li {
                     border-top: 1px dashed #ccc;
                 }

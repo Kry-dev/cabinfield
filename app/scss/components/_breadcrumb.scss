@@ -23,6 +23,7 @@
     line-height: 15px;
     
     a {
+        display: inline-block;
         color: $breadcrumb-color;
         font-size: 0.6875rem;
         text-transform: uppercase;
@@ -30,11 +31,12 @@
         font-style: normal;
         font-weight: normal;
         line-height: 15px;
+        vertical-align: middle;
     }
     
     + .breadcrumb-item::before {
         display: inline-block; // Suppress underlining of the separator in modern browsers
-        padding-right: .2rem;
+        padding-right: .5rem;
         padding-left: $breadcrumb-item-padding;
         color: $breadcrumb-divider-color;
         content: "#{$breadcrumb-divider}";
