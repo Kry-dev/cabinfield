@@ -75,11 +75,29 @@ a:focus {
     color: $link-color;
     font-size: 0.9375rem;
     line-height: 1rem;
-    
     &:after {
         content: "\f105";
         font-family: "FontAwesome";
         padding-left: 0.5rem;
+    }
+    &.toggle-details span {
+        padding: 0;
+        color: inherit;
+        font-size: inherit;
+        line-height: inherit;
+    }
+}
+.more-wrapper {
+    .product-details {
+        display: none;
+    }
+    &.active {
+        .more:after {
+            content: "\f107";
+        }
+        .product-details {
+            display: block;
+        }
     }
 }
 

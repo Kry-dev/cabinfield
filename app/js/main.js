@@ -740,15 +740,7 @@ $("#choose-filter").on("click", function (e) {
     $("#product-filters-wrap").toggle();
 });
 
-$('.product-details').hide();
-$('.toggle-details').on('click', function (e) {
-    e.preventDefault();
-    let prodDetails = $(this).closest('div').find('.product-details');
-    if(prodDetails != 0) {
-        prodDetails.toggle();
-        $(this).text( $(this).text() == 'View Storage Details' ? 'Hide Storage Details' : 'View Storage Details' );
-    }
-});
+
 var sliderOptions = {
     dots: false,
     infinite: false,
@@ -782,25 +774,6 @@ $(".closeFabricFullsize").on('click', function (e) {
     e.preventDefault();
     let currentFullSizeList = $(this).parent().find('.slick-initialized');
     currentFullSizeList.slick('unslick');
-});
-// $('.closeFabricFullsize').hide();
-$('.product-fabric-list .enlarge').on('click', function () {
-    let parent = $(this).closest('.product-fabric-list');
-    // let currentSlide = $(this).closest(".product-option.option-stain");
-    // let pagination = $(this).closest(".product-customize-form").find(".pagination");
-    // let thisList = $(this).closest(".product-fabric-list");
-    // let getCurrentPosition = currentSlide.data('slick-index');
-    // thisList.slick({
-    //     dots: false,
-    //     infinite: false,
-    //     autoplay: false,
-    //     autoplaySpeed: 7000,
-    //     speed: 800,
-    //     slidesToShow: 1,
-    //     adaptiveHeight: true,
-    //     initialSlide: getCurrentPosition
-    // });
-    // $('.closeFabricFullsize').show();
 });
 
 //Product Fabric options show fullscreen function
@@ -862,3 +835,13 @@ $(".fabric-gallery-list .item img").on("click", function(){
     let current_item = $(this).closest('.item').addClass("selected");
     fabricFullSize( current_item );
 });
+
+
+$('.toggle-details').on('click', function (e) {
+    e.preventDefault();
+    const thisParent = $(this).closest('.more-wrapper');
+    thisParent.toggleClass("active");
+    $(this).find("span").toggleClass("d-none");
+    
+});
+
