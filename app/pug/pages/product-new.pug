@@ -5,6 +5,11 @@ block title
 block content
     +breadcrumbs([['Bedrooms', '#'], ['Beds & Headboards', '#'], ['Platform beds', '#']])
     main.content.pt-lg-0
+        .container
+            form.header-search.d-flex.d-lg-none
+                input.form-control(type='search', name="search", placeholder='Search our store', aria-label='Search')
+                button.btn.btn-outline-primary(type='submit')
+                    i.fa.fa-search
         <!--Product overview-->
         include ../components/_product-new
         <!--Product end-->

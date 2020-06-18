@@ -981,6 +981,12 @@ body.modal-open .mm-slideout {
                 box-shadow: none;
             }
         }
+        .btn.btn-prevtab {
+            margin-right: auto;
+        }
+        .btn.btn-nexttab {
+            margin-left: auto;
+        }
         .option-selected {
             > p,
             > ul {
