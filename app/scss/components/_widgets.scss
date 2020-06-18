@@ -410,17 +410,17 @@ $card-height: 21rem;
         
         .card-img-overlay {
             padding: 1rem 5rem;
-            border: 9px solid rgba(0, 0, 0, 0.15);
-            &:before {
-                content: "";
-                height: 100%;
-                width: 100%;
-                left: 0;
-                top: 0;
-                z-index: -1;
-                position: absolute;
-                background: rgba(0, 0, 0, 0.15);
-            }
+            border: 9px solid rgba(0, 0, 0, 0);
+            //&:before {
+            //    content: "";
+            //    height: 100%;
+            //    width: 100%;
+            //    left: 0;
+            //    top: 0;
+            //    z-index: -1;
+            //    position: absolute;
+            //    background: rgba(0, 0, 0, 0);
+            //}
             @include media-breakpoint-down(sm) {
                 padding: 1rem 2rem;
             }
