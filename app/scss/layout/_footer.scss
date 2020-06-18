@@ -55,7 +55,7 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        margin-right: 73px;
+        margin-right: 50px;
         @media (max-width: 1200px) {
             margin-bottom: 1rem;
         }
@@ -64,7 +64,7 @@
             padding: 0 10px 0 0;
             margin: 0;
             list-style: none;
-            width: 109px;
+            width: 122px;
             
             &:last-child {
                 padding: 0;
