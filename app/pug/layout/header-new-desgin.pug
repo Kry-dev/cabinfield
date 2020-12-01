@@ -1,0 +1,36 @@
+header.header
+    .container
+        .header-top
+            <!--header top section-->
+            ul.header-links
+                li #[a(href="#") Contact]
+                li #[a(href="#") Learning Center]
+                li #[a(href="#") FAQ]
+            a.header-tel(href="tel:8664509663") 866-450-WOOD(9663)
+
+            <!--end of header top section-->
+        .header-mdl
+            <!--header middle section-->
+            .header-brand
+                a.header-brand--logo
+                    img.img-fluid(src="img/general/cabinfield_logo.png", alt="logo")
+                span.header-brand--title
+                    | Classic Amish Craftmanship
+                    | For Your Home and Garden
+            form.header-search
+                input.form-control(type='search', name="search", placeholder='Search our store', aria-label='Search')
+                button.btn.btn-outline-primary(type='submit')
+                    i.fa.fa-search
+            ul.header-user-links
+                li #[a(href="#") Sign In]
+                li #[a(href="#") My Wishlist]
+                li
+                    a(href="#")
+                        .fa.fa-shopping-cart
+                        span.text-warning.ml-1 2
+            <!-- end of header middle section-->
+    .header-btm
+        <!--header navigation section-->
+        .container
+            include _navbar-new-design
+        <!--end of header navigation section-->

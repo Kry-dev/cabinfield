@@ -22,7 +22,7 @@ $card-height: 21rem;
         }
         
         &-title {
-            font-family: "PT Serif", serif;
+            font-family: $font-family-base;
             font-weight: 600;
             z-index: 1;
             
@@ -259,7 +259,7 @@ $card-height: 21rem;
         
         a {
             color: $black;
-            font-family: "PT Serif", sans-serif;
+            font-family: $font-family-base;
             display: inline-block;
             padding: 8px 33px;
         }

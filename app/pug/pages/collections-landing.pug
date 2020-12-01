@@ -1,0 +1,15 @@
+extends ../style-template
+
+block title
+	| Cabinfield Category LV - 0
+
+block content
+	+breadcrumbs([['Bedrooms', '#'], ['Shop Collections', '#'],['SHOP Series', '#']])
+	main.content.pt-lg-0
+		.container.mb-5
+			h1.text-left.text-dark.text-bold Bed Room Collections
+
+		<!--Widgets for inner page-->
+		include ../layout/_collections-widgets
+		<!--Widgets for inner page end-->
+

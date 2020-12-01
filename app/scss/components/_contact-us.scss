@@ -1,6 +1,6 @@
 .contact-us {
     &-title {
-        font-family: "PT Serif", serif;
+        font-family: $font-family-base;
         color: $text-dark;
         font-size: 1.875rem;
         line-height: 2.0625rem;
@@ -60,7 +60,7 @@
             
             a {
                 color: #CC7654;
-                font-family: "PT Serif", serif;
+                font-family: $font-family-base;
                 font-size: 21px;
                 line-height: 28px;
             }

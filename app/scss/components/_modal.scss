@@ -14,7 +14,7 @@ body.modal-open .mm-slideout {
     
     &-title {
         color: $black;
-        font-family: "PT Serif", sans-serif;
+        font-family: $font-family-base;
         font-size: 1.625rem;
         line-height: 2.125rem;
         font-weight: 700;
@@ -44,7 +44,7 @@ body.modal-open .mm-slideout {
         }
         
         .modal-title {
-            font-family: "PT Serif", sans-serif;
+            font-family: $font-family-base;
             font-style: normal;
             font-weight: 400;
             font-size: 24px;
@@ -398,7 +398,7 @@ body.modal-open .mm-slideout {
     
     &-inner-title {
         color: $black;
-        font-family: "PT Serif", sans-serif;
+        font-family: $font-family-base;
         font-size: 1.3125rem;
         line-height: 1.75rem;
         text-align: center;
