@@ -1,0 +1,66 @@
+section.product-features.mb-5
+    nav.product-features-nav
+        .container
+            #nav-tab.nav.nav-tabs(role='tablist')
+                a#specs-features-tab.nav-link.active(data-toggle='tab' href='#specs-features' role='tab' aria-controls='specs-features' aria-selected='true') SPECS & Features
+                a#nav-customize-tab.nav-link(data-toggle='tab' href='#nav-customize' role='tab' aria-controls='nav-customize' aria-selected='false') Customize
+                a#nav-reviews-tab.nav-link(data-toggle='tab' href='#nav-reviews' role='tab' aria-controls='nav-reviews' aria-selected='false') REVIEWS/Q&A
+    #nav-tabContent.tab-content
+            #specs-features.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='specs-features-tab')
+                .container
+                    .row
+                        .col-md-4.product-features-list
+                            h6.product-title.border-bottom Product Specs
+                            ul
+                                li Choice of wood species & stains
+                                li 1” thick top
+                                li Rounded corner top (small radius)
+                                li Jasper edges
+                                li 30" high
+                                li Wooden extension slides
+                                li Center leg on tables with 3 or more 12” leaves
+                                li Pewter nail heads on Collinsville chairs
+                                li 2 styles of chairs
+                                li Upholstered seats & backs (Collinsville chairs)
+                                li Upholstered seats (Mc Cohen chairs)
+                        .col-md-4.product-features-list
+                            h6.product-title.border-bottom Standard Features
+                            ul
+                                li Choice of wood species & stains
+                                li 1” thick top
+                                li Rounded corner top (small radius)
+                                li Jasper edges
+                                li 30" high
+                                li Wooden extension slides
+                                li Center leg on tables with 3 or more 12” leaves
+                                li Pewter nail heads on Collinsville chairs
+                                li 2 styles of chairs
+                                li Upholstered seats & backs (Collinsville chairs)
+                                li Upholstered seats (Mc Cohen chairs)
+
+
+                        .col-md-4.product-features-list
+                            h6.product-title.border-bottom Optional Features
+                            ul
+                                li Choice of edge profiles
+                                li V-groove in solid tops
+                                li Breadboard ends
+                                li 1-18" butterfly leaf
+                                li Up to 4-12" leaves
+                                li Drawer in solid top table
+                                li Silverware drawer organizer
+                                li Exceptional variety of high-quality leather or fabric upholsteries
+                                li Nail head choices for Collinsville chairs
+
+            #nav-customize.tab-pane.fade(role='tabpanel' aria-labelledby='nav-customize-tab')
+                .container
+                    .product-customize
+                        .flex-column
+                            <!--Product customize-->
+                            include ../components/_product-customize-tab
+                            <!--Product customize end-->
+            #nav-reviews.tab-pane.fade(role='tabpanel' aria-labelledby='nav-reviews-tab')
+                .container
+                    <!--Product reviews-->
+                    include ../layout/_product-reviews
+                    <!--Product reviews end-->

@@ -87,6 +87,9 @@
         
         .product-price-shipping > span {
             font-size: 15px;
+            &.small {
+                font-size: 0.8125rem;
+            }
         }
         
         &-btns {

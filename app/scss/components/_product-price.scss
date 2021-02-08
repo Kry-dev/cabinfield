@@ -18,6 +18,9 @@
             color: inherit;
             font-weight: inherit;
             font-size: inherit;
+            &.small {
+                font-size: 0.8125rem;
+            }
         }
     }
     

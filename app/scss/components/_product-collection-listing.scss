@@ -1,0 +1,36 @@
+
+.product-collection-sort {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    .btn {
+        display: flex;
+        white-space: nowrap;
+    }
+    .dropdown.bootstrap-select {
+        min-width: 220px;
+        height: 44px;
+    }
+}
+
+.collection-listing {
+    display: flex;
+    flex-direction: column;
+}
+.collection-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    padding: 2rem;
+    border: 1px solid $black;
+    &--img {
+        width: 100%;
+        max-width: 230px;
+        margin-right: 2rem;
+        img {
+            width: 100%;
+        }
+    }
+}

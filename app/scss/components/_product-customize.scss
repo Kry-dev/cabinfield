@@ -22,7 +22,7 @@
     &-subtitle {
         font-family: "Open Sans", sans-serif;
         font-size: 0.8125rem;
-        font-weight: 400;
+        font-weight: 700;
         line-height: 1.5625rem;
         margin-bottom: 7px;
         width: 100%;
@@ -101,6 +101,9 @@
             font-weight: bold;
             line-height: 25px;
             margin-right: 10px;
+            .small {
+                font-size: .8125rem;
+            }
         }
         
         .product-price-shipping {
@@ -109,6 +112,7 @@
             font-weight: 600;
             line-height: 16px;
         }
+        
     }
 }
 
@@ -155,6 +159,12 @@
             border: 1px solid $product-option-checked-border;
             text-shadow: 0 0 .65px #333, 0 0 .65px #333;
             color: $black;
+            .enlarge {
+                text-shadow: none;
+            }
+            span {
+                color: $warning;
+            }
         }
         
         label {
@@ -201,25 +211,40 @@
                 }
                 
                 span {
-                    font-weight: normal;
+                    font-weight: 400;
+                }
+                .enlarge {
+                    text-shadow: none;
                 }
             }
         }
     }
     
     .enlarge {
-        display: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         color: $white;
         position: absolute;
-        background: rgba($black, .5);
+        background: rgba($white, .5);
         text-transform: uppercase;
-        padding: .25rem .5rem;
         font-size: 0.8125rem;
-        top: 0;
+        top: .5rem;
+        right: .5rem;
         z-index: 100;
-        
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
         .fa {
-            margin-right: 0.5rem;
+            color: rgba($black, .25);
+        }
+        &:hover,
+        &:focus {
+            cursor: zoom-in;
+            color: $white;
+            .fa {
+                color: $white;
+            }
         }
     }
     
@@ -288,9 +313,9 @@
         
         &:hover,
         &:focus {
-            .enlarge {
-                display: block;
-            }
+            //.enlarge {
+            //    display: flex;
+            //}
         }
     }
     

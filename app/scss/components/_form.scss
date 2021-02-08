@@ -98,7 +98,9 @@ label {
         border: 1px solid transparent;
     }
 }
-
+.bootstrap-select.form-control-lg .dropdown-toggle {
+    padding: .75rem 1rem;
+}
 .dropdown-item {
     &:hover,
     &:focus,

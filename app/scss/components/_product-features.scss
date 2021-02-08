@@ -41,8 +41,40 @@
         font-weight: 600;
     }
     
-    .container {
-        border-bottom: 1px solid $border-color;
-        padding-bottom: 43px;
+    &-nav {
+        background: $product-option-shadow-color;
+        border-bottom: 3px solid $blue;
+        
+        .nav-link {
+            font-size: 0.875rem;
+            min-width: 188px;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: $text-dark;
+            text-align: center;
+            margin-bottom: -4px;
+            border-width: 3px;
+            border-radius: 0;
+        }
+        .nav-link.active {
+            border-color: $blue $blue $white;
+        }
+        .nav-link:focus,
+        .nav-link:hover {
+            background: $blue;
+            color: $white;
+            border-color: $blue;
+        }
+    }
+    .tab-pane {
+        padding: 2rem 0;
+        .product-title {
+            display: inline-block;
+            font-size: 0.875rem;
+            padding: 0 0.75rem;
+        }
+        .border-bottom {
+            border-bottom-color: $dark;
+        }
     }
 }
