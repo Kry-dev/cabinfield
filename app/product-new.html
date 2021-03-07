@@ -287,11 +287,11 @@
       <section class="product-features mb-5">
         <nav class="product-features-nav">
           <div class="container">
-            <div class="nav nav-tabs" id="nav-tab" role="tablist"><a class="nav-link active" id="specs-features-tab" data-toggle="tab" href="#specs-features" role="tab" aria-controls="specs-features" aria-selected="true">SPECS & Features</a><a class="nav-link" id="nav-customize-tab" data-toggle="tab" href="#nav-customize" role="tab" aria-controls="nav-customize" aria-selected="false">Customize</a><a class="nav-link" id="nav-reviews-tab" data-toggle="tab" href="#nav-reviews" role="tab" aria-controls="nav-reviews" aria-selected="false">REVIEWS/Q&A</a></div>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist"><a class="nav-link" id="specs-features-tab" data-toggle="tab" href="#specs-features" role="tab" aria-controls="specs-features" aria-selected="false">SPECS & Features</a><a class="nav-link active" id="nav-customize-tab" data-toggle="tab" href="#nav-customize" role="tab" aria-controls="nav-customize" aria-selected="true">Customize</a><a class="nav-link" id="nav-reviews-tab" data-toggle="tab" href="#nav-reviews" role="tab" aria-controls="nav-reviews" aria-selected="false">REVIEWS/Q&A</a></div>
           </div>
         </nav>
         <div class="tab-content" id="nav-tabContent">
-          <div class="tab-pane fade show active" id="specs-features" role="tabpanel" aria-labelledby="specs-features-tab">
+          <div class="tab-pane fade" id="specs-features" role="tabpanel" aria-labelledby="specs-features-tab">
             <div class="container">
               <div class="row">
                 <div class="col-md-4 product-features-list">
@@ -343,7 +343,7 @@
               </div>
             </div>
           </div>
-          <div class="tab-pane fade" id="nav-customize" role="tabpanel" aria-labelledby="nav-customize-tab">
+          <div class="tab-pane fade show active" id="nav-customize" role="tabpanel" aria-labelledby="nav-customize-tab">
             <div class="container">
               <div class="product-customize">
                 <div class="flex-column"><!--Product customize-->
@@ -397,7 +397,7 @@
                     <div id="optgroup-3">
                       <div class="product-customize-form">
                         <h6 class="product-customize-subtitle">Stain:<a class="popup-info mr-1" href="#" data-toggle="modal" data-target="#customize_popup5">i</a></h6>
-                        <div class="product-customize-list">
+                        <div class="product-customize-list" data-slick="{&quot;slidesToShow&quot;: 4, &quot;slidesToScroll&quot;: 4}">
                           <div class="product-option option-stain">
                             <input type="radio" id="wood-stain-01" name="wood-stain">
                             <label for="wood-stain-01">
@@ -450,9 +450,171 @@
                         </div>
                       </div>
                     </div>
+                    <div id="optgroup-4">
+                      <div class="product-customize-form">
+                        <h6 class="product-customize-subtitle">Headboard Style:</h6>
+                        <div class="product-customize-list">
+                          <div class="product-option option-hboard">
+                            <input type="radio" id="hboard-01" name="headboard">
+                            <label for="hboard-01">
+                              <div class="enlarge"><i class="fa fa-search"></i></div><img class="img-fluid" src="img/product/tmp_headboard.jpg" alt="#">
+                              <p class="name"><strong class="pr-2">Elliot</strong>- $242</p>
+                            </label>
+                          </div>
+                          <div class="product-option option-hboard">
+                            <input type="radio" id="hboard-02" name="headboard" checked>
+                            <label for="hboard-02">
+                              <div class="enlarge"><i class="fa fa-search"></i></div><img class="img-fluid" src="img/product/tmp_headboard.jpg" alt="#">
+                              <p class="name"><strong class="pr-2">Elliot</strong>+ $102</p>
+                            </label>
+                          </div>
+                          <div class="product-option option-hboard">
+                            <input type="radio" id="hboard-03" name="headboard">
+                            <label for="hboard-03">
+                              <div class="enlarge"><i class="fa fa-search"></i></div><img class="img-fluid" src="img/product/tmp_headboard.jpg" alt="#">
+                              <p class="name"><strong class="pr-2">Lily</strong></p>
+                            </label>
+                          </div>
+                          <div class="product-option option-hboard">
+                            <input type="radio" id="hboard-04" name="headboard">
+                            <label for="hboard-04">
+                              <div class="enlarge"><i class="fa fa-search"></i></div><img class="img-fluid" src="img/product/tmp_headboard.jpg" alt="#">
+                              <p class="name"><strong class="pr-2">Gbrielle</strong>- $242</p>
+                            </label>
+                          </div>
+                          <div class="product-option option-hboard">
+                            <input type="radio" id="hboard-05" name="headboard">
+                            <label for="hboard-05">
+                              <div class="enlarge"><i class="fa fa-search"></i></div><img class="img-fluid" src="img/product/tmp_headboard.jpg" alt="#">
+                              <p class="name"><strong class="pr-2">Elliot</strong>- $242</p>
+                            </label>
+                          </div>
+                          <div class="product-option option-hboard">
+                            <input type="radio" id="hboard-06" name="headboard" checked>
+                            <label for="hboard-06">
+                              <div class="enlarge"><i class="fa fa-search"></i></div><img class="img-fluid" src="img/product/tmp_headboard.jpg" alt="#">
+                              <p class="name"><strong class="pr-2">Elliot</strong>+ $102</p>
+                            </label>
+                          </div>
+                          <div class="product-option option-hboard">
+                            <input type="radio" id="hboard-07" name="headboard">
+                            <label for="hboard-07">
+                              <div class="enlarge"><i class="fa fa-search"></i></div><img class="img-fluid" src="img/product/tmp_headboard.jpg" alt="#">
+                              <p class="name"><strong class="pr-2">Lily</strong></p>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="optgroup-5">
+                      <div class="product-customize-form">
+                        <h6 class="product-customize-subtitle">Coat rack on footboard:<a class="popup-info" href="#" data-toggle="modal" data-target="#customize_popup5">i</a></h6>
+                        <div class="product-customize-list">
+                          <div class="product-option">
+                            <input type="radio" id="coat-roat-01" name="wood">
+                            <label for="coat-roat-01">Wooden pegs on right<span>+ $85</span></label>
+                          </div>
+                          <div class="product-option">
+                            <input type="radio" id="coat-roat-02" name="wood" checked>
+                            <label for="coat-roat-02">Wooden pegs on left<span>+ $65</span></label>
+                          </div>
+                          <div class="product-option">
+                            <input type="radio" id="coat-roat-03" name="wood">
+                            <label for="coat-roat-03">Antler pegs on right<span>+ $85</span></label>
+                          </div>
+                          <div class="product-option">
+                            <input type="radio" id="coat-roat-04" name="wood">
+                            <label for="coat-roat-04">Antler pegs on left<span>+ $85</span></label>
+                          </div>
+                          <div class="product-option">
+                            <input type="radio" id="coat-roat-05" name="wood" checked>
+                            <label for="coat-roat-05">Wooden pegs on left both sides<span>+ $185</span></label>
+                          </div>
+                          <div class="product-option">
+                            <input type="radio" id="coat-roat-06" name="wood">
+                            <label for="coat-roat-06">Antler pegs on left both sides<span>+ $185</span></label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="optgroup-6">
+                      <div class="product-customize-form">
+                        <h6 class="product-customize-subtitle">Extra top rail:<a class="popup-info" href="#" data-toggle="modal" data-target="#customize_popup5">i</a></h6>
+                        <div class="product-customize-list">
+                          <div class="product-option">
+                            <input type="radio" id="rail-01" name="Extra top rail">
+                            <label for="rail-01">On headboard<span>+ $85</span></label>
+                          </div>
+                          <div class="product-option">
+                            <input type="radio" id="rail-02" name="Extra top rail" checked>
+                            <label for="rail-02">On footboard<span>+ $65</span></label>
+                          </div>
+                          <div class="product-option">
+                            <input type="radio" id="rail-03" name="Extra top rail">
+                            <label for="rail-03">None</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="optgroup-7">
+                      <div class="product-customize-form">
+                        <h6 class="product-customize-subtitle">Fabric:<a class="popup-info mr-1" href="#" data-toggle="modal" data-target="#customize_popup5">i</a><a class="text-uppercase ml-3" href="#" data-toggle="modal" data-target="#customize_popup5">See all Fabric Swatches</a></h6>
+                        <div class="product-customize-list">
+                          <div class="product-option option-stain">
+                            <input type="radio" id="fabric-01" name="fabric">
+                            <label for="fabric-01">
+                              <div class="enlarge"><i class="fa fa-search"></i></div><img class="img-fluid" src="img/fabric/fabric-01.jpg" alt="#">
+                              <p class="name">4-10 dove</p>
+                            </label>
+                          </div>
+                          <div class="product-option option-stain">
+                            <input type="radio" id="fabric-02" name="fabric" checked>
+                            <label for="fabric-02">
+                              <div class="enlarge"><i class="fa fa-search"></i></div><img class="img-fluid" src="img/fabric/fabric-02.jpg" alt="#">
+                              <p class="name" data-title="1-49 Gallery">1-49 Gallery</p>
+                            </label>
+                          </div>
+                          <div class="product-option option-stain">
+                            <input type="radio" id="fabric-04" name="fabric">
+                            <label for="fabric-04">
+                              <div class="enlarge"><i class="fa fa-search"></i></div><img class="img-fluid" src="img/fabric/fabric-03.jpg" alt="#">
+                              <p class="name" data-title="1-49 Gallery">1-49 Gallery</p>
+                            </label>
+                          </div>
+                          <div class="product-option option-stain">
+                            <input type="radio" id="fabric-05" name="fabric">
+                            <label for="fabric-05">
+                              <div class="enlarge"><i class="fa fa-search"></i></div><img class="img-fluid" src="img/fabric/fabric-04.jpg" alt="#">
+                              <p class="name" data-title="1-49 Gallery">1-49 Gallery</p>
+                            </label>
+                          </div>
+                          <div class="product-option option-stain">
+                            <input type="radio" id="fabric-06" name="fabric">
+                            <label for="fabric-06">
+                              <div class="enlarge"><i class="fa fa-search"></i></div><img class="img-fluid" src="img/fabric/fabric-04.jpg" alt="#">
+                              <p class="name" data-title="1-49 Gallery">1-49 Gallery</p>
+                            </label>
+                          </div>
+                          <div class="product-option option-stain">
+                            <input type="radio" id="fabric-07" name="fabric">
+                            <label for="fabric-07">
+                              <div class="enlarge"><i class="fa fa-search"></i></div><img class="img-fluid" src="img/fabric/fabric-05.jpg" alt="#">
+                              <p class="name" data-title="1-49 Gallery">1-49 Gallery</p>
+                            </label>
+                          </div>
+                          <div class="product-option option-stain">
+                            <input type="radio" id="fabric-08" name="fabric">
+                            <label for="fabric-08">
+                              <div class="enlarge"><i class="fa fa-search"></i></div><img class="img-fluid" src="img/fabric/fabric-06.jpg" alt="#">
+                              <p class="name" data-title="1-49 Gallery">1-49 Gallery</p>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                     <div id="optgroup-10">
                       <div class="product-customize-form">
-                        <h6 class="product-customize-subtitle"><b class="mr-1">Available Standard Sunbrella® Fabrics:</b></h6>
+                        <h6 class="product-customize-subtitle">Available Standard Sunbrella® Fabrics:</h6>
                         <div class="product-customize-list">
                           <div class="product-option option-stain">
                             <input type="radio" id="Standard-04" name="Standard">
@@ -509,42 +671,7 @@
                         </div>
                       </div>
                     </div>
-                    <div id="optgroup-4">
-                      <div class="product-customize-form">
-                        <h6 class="product-customize-subtitle"><strong class="mr-1">Headboard Style:</strong> Lilly<a class="more pl-3 ml-3 border-left" href="#" data-toggle="modal" data-target="#customize--fullsize">Open full-sized previews</a></h6>
-                        <div class="product-customize-list">
-                          <div class="product-option option-hboard">
-                            <input type="radio" id="hboard-01" name="headboard">
-                            <label for="hboard-01">
-                              <div class="enlarge"><i class="fa fa-search"></i></div><img class="img-fluid" src="img/product/tmp_headboard.jpg" alt="#">
-                              <p class="name"><strong class="pr-2">Elliot</strong>- $242</p>
-                            </label>
-                          </div>
-                          <div class="product-option option-hboard">
-                            <input type="radio" id="hboard-02" name="headboard" checked>
-                            <label for="hboard-02">
-                              <div class="enlarge"><i class="fa fa-search"></i></div><img class="img-fluid" src="img/product/tmp_headboard.jpg" alt="#">
-                              <p class="name"><strong class="pr-2">Elliot</strong>+ $102</p>
-                            </label>
-                          </div>
-                          <div class="product-option option-hboard">
-                            <input type="radio" id="hboard-03" name="headboard">
-                            <label for="hboard-03">
-                              <div class="enlarge"><i class="fa fa-search"></i></div><img class="img-fluid" src="img/product/tmp_headboard.jpg" alt="#">
-                              <p class="name"><strong class="pr-2">Lily</strong></p>
-                            </label>
-                          </div>
-                          <div class="product-option option-hboard">
-                            <input type="radio" id="hboard-04" name="headboard">
-                            <label for="hboard-04">
-                              <div class="enlarge"><i class="fa fa-search"></i></div><img class="img-fluid" src="img/product/tmp_headboard.jpg" alt="#">
-                              <p class="name"><strong class="pr-2">Gbrielle</strong>- $242</p>
-                            </label>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div id="optgroup-5">
+                    <div id="optgroup-8">
                       <div class="product-customize-form">
                         <h6 class="product-customize-subtitle"><b class="mr-1">Pillows: </b></h6>
                         <div class="product-option-select">
@@ -740,119 +867,9 @@
 <!--Product customize-->
       <!--include ../components/_product-customize--><!--Product customize end-->
 <!--Related products-->
-      <section class="related">
-        <div class="container">
-          <h6 class="title">Related to items <a href="#" class="text-brown">See more <i class="fa fa-chevron-right"></i></a></h6>
-          <div class="related-wrap">
-            <ul class="related-list">
-              <li class="related-item"><a class="card" href="#"><img class="card-img-top" src="img/relatedproducts/product-01.jpg" alt="#">
-                  <div class="card-body">
-                    <h5 class="related-title">Carolina Crown Amish Bed</h5>
-                    <p class="related-price">starting at: <span class="text-brown">$1,371</span></p>
-                    <p class="related-descr">Comes with a unique and functional bookcase headboard that will look great in any rustic themed bedroom.</p>
-                  </div></a></li>
-              <li class="related-item"><a class="card" href="#"><img class="card-img-top" src="img/relatedproducts/product-02.jpg" alt="#">
-                  <div class="card-body">
-                    <h5 class="related-title">Carolina Crown Amish Bed</h5>
-                    <p class="related-price">starting at: <span class="text-brown">$1,371</span></p>
-                    <p class="related-descr">Comes with a unique and functional bookcase headboard that will look great in any rustic themed bedroom.</p>
-                  </div></a></li>
-              <li class="related-item"><a class="card" href="#"><img class="card-img-top" src="img/relatedproducts/product-03.jpg" alt="#">
-                  <div class="card-body">
-                    <h5 class="related-title">Carolina Crown Amish Bed</h5>
-                    <p class="related-price">starting at: <span class="text-brown">$1,371</span></p>
-                    <p class="related-descr">Comes with a unique and functional bookcase headboard that will look great in any rustic themed bedroom.</p>
-                  </div></a></li>
-              <li class="related-item"><a class="card" href="#"><img class="card-img-top" src="img/relatedproducts/product-04.jpg" alt="#">
-                  <div class="card-body">
-                    <h5 class="related-title">Carolina Crown Amish Bed</h5>
-                    <p class="related-price">starting at: <span class="text-brown">$1,371</span></p>
-                    <p class="related-descr">Comes with a unique and functional bookcase headboard that will look great in any rustic themed bedroom.</p>
-                  </div></a></li>
-              <li class="related-item"><a class="card" href="#"><img class="card-img-top" src="img/relatedproducts/product-05.jpg" alt="#">
-                  <div class="card-body">
-                    <h5 class="related-title">Carolina Crown Amish Bed</h5>
-                    <p class="related-price">starting at: <span class="text-brown">$1,371</span></p>
-                    <p class="related-descr">Comes with a unique and functional bookcase headboard that will look great in any rustic themed bedroom.</p>
-                  </div></a></li>
-              <li class="related-item"><a class="card" href="#"><img class="card-img-top" src="img/relatedproducts/product-06.jpg" alt="#">
-                  <div class="card-body">
-                    <h5 class="related-title">Carolina Crown Amish Bed</h5>
-                    <p class="related-price">starting at: <span class="text-brown">$1,371</span></p>
-                    <p class="related-descr">Comes with a unique and functional bookcase headboard that will look great in any rustic themed bedroom.</p>
-                  </div></a></li>
-              <li class="related-item"><a class="card" href="#"><img class="card-img-top" src="img/relatedproducts/product-07.jpg" alt="#">
-                  <div class="card-body">
-                    <h5 class="related-title">Carolina Crown Amish Bed</h5>
-                    <p class="related-price">starting at: <span class="text-brown">$1,371</span></p>
-                    <p class="related-descr">Comes with a unique and functional bookcase headboard that will look great in any rustic themed bedroom.</p>
-                  </div></a></li>
-            </ul>
-            <div class="related-controls">
-              <button class="btn btn-arrow related-prev"><i class="fa fa-chevron-left"></i></button>
-              <button class="btn btn-arrow related-next"><i class="fa fa-chevron-right"></i></button>
-            </div>
-          </div>
-          <hr>
-        </div>
-      </section><!--Related products end-->
+      <!--include ../layout/_related-products--><!--Related products end-->
 <!--Related products-->
-      <section class="related">
-        <div class="container">
-          <h6 class="title">Related to items <a href="#" class="text-brown">See more <i class="fa fa-chevron-right"></i></a></h6>
-          <div class="related-wrap">
-            <ul class="related-list">
-              <li class="related-item"><a class="card" href="#"><img class="card-img-top" src="img/relatedproducts/product-01.jpg" alt="#">
-                  <div class="card-body">
-                    <h5 class="related-title">Carolina Crown Amish Bed</h5>
-                    <p class="related-price">starting at: <span class="text-brown">$1,371</span></p>
-                    <p class="related-descr">Comes with a unique and functional bookcase headboard that will look great in any rustic themed bedroom.</p>
-                  </div></a></li>
-              <li class="related-item"><a class="card" href="#"><img class="card-img-top" src="img/relatedproducts/product-02.jpg" alt="#">
-                  <div class="card-body">
-                    <h5 class="related-title">Carolina Crown Amish Bed</h5>
-                    <p class="related-price">starting at: <span class="text-brown">$1,371</span></p>
-                    <p class="related-descr">Comes with a unique and functional bookcase headboard that will look great in any rustic themed bedroom.</p>
-                  </div></a></li>
-              <li class="related-item"><a class="card" href="#"><img class="card-img-top" src="img/relatedproducts/product-03.jpg" alt="#">
-                  <div class="card-body">
-                    <h5 class="related-title">Carolina Crown Amish Bed</h5>
-                    <p class="related-price">starting at: <span class="text-brown">$1,371</span></p>
-                    <p class="related-descr">Comes with a unique and functional bookcase headboard that will look great in any rustic themed bedroom.</p>
-                  </div></a></li>
-              <li class="related-item"><a class="card" href="#"><img class="card-img-top" src="img/relatedproducts/product-04.jpg" alt="#">
-                  <div class="card-body">
-                    <h5 class="related-title">Carolina Crown Amish Bed</h5>
-                    <p class="related-price">starting at: <span class="text-brown">$1,371</span></p>
-                    <p class="related-descr">Comes with a unique and functional bookcase headboard that will look great in any rustic themed bedroom.</p>
-                  </div></a></li>
-              <li class="related-item"><a class="card" href="#"><img class="card-img-top" src="img/relatedproducts/product-05.jpg" alt="#">
-                  <div class="card-body">
-                    <h5 class="related-title">Carolina Crown Amish Bed</h5>
-                    <p class="related-price">starting at: <span class="text-brown">$1,371</span></p>
-                    <p class="related-descr">Comes with a unique and functional bookcase headboard that will look great in any rustic themed bedroom.</p>
-                  </div></a></li>
-              <li class="related-item"><a class="card" href="#"><img class="card-img-top" src="img/relatedproducts/product-06.jpg" alt="#">
-                  <div class="card-body">
-                    <h5 class="related-title">Carolina Crown Amish Bed</h5>
-                    <p class="related-price">starting at: <span class="text-brown">$1,371</span></p>
-                    <p class="related-descr">Comes with a unique and functional bookcase headboard that will look great in any rustic themed bedroom.</p>
-                  </div></a></li>
-              <li class="related-item"><a class="card" href="#"><img class="card-img-top" src="img/relatedproducts/product-07.jpg" alt="#">
-                  <div class="card-body">
-                    <h5 class="related-title">Carolina Crown Amish Bed</h5>
-                    <p class="related-price">starting at: <span class="text-brown">$1,371</span></p>
-                    <p class="related-descr">Comes with a unique and functional bookcase headboard that will look great in any rustic themed bedroom.</p>
-                  </div></a></li>
-            </ul>
-            <div class="related-controls">
-              <button class="btn btn-arrow related-prev"><i class="fa fa-chevron-left"></i></button>
-              <button class="btn btn-arrow related-next"><i class="fa fa-chevron-right"></i></button>
-            </div>
-          </div>
-          <hr>
-        </div>
-      </section><!--Related products end-->
+      <!--include ../layout/_related-products--><!--Related products end-->
 <!--Top product section-->
       <!--section.top-section.d-block.mb-5(style="position:relative;")-->
       <section class="top-section">
@@ -874,28 +891,8 @@
 <!--FOOTER-->
     <footer class="footer">
       <div class="container">
-        <!--.row.d-flex-->
-        <!--	.footer-left-->
-        <div class="footer-logo-box"><a class="footer-logo" href="#"><img class="img-fluid" src="img/general/cabinfield-f-logo.svg" alt="#"></a>
+        <div class="footer-logo-box"><a class="footer-logo" href="#"><img class="img-fluid" src="img/general/cabinfield.svg" alt="Cabinfield"></a>
           <p class="footer-copyright">Copyright © 2005-2018 Cabinfield<br>Woodworking LLC. All rights reserved.</p>
-        </div>
-        <div class="footer-nav">
-          <ul class="footer-nav-list">
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Testimonials</a></li>
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="#">FAQ</a></li>
-          </ul>
-          <ul class="footer-nav-list">
-            <li><a href="#">Promotions</a></li>
-            <li><a href="#">Gift It!</a></li>
-            <li><a href="#">Blog</a></li>
-          </ul>
-          <ul class="footer-nav-list">
-            <li><a href="#">Terms of Sale & Use</a></li>
-            <li><a href="#">Our Warranty</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-          </ul>
         </div>
         <div class="footer-social-wrap">
           <ul class="footer-social">
@@ -903,11 +900,24 @@
             <li><a href="#"><i class="fa fa-twitter"></i></a></li>
             <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
             <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-          </ul><a class="footer-subscribe mb-sm-3" href="#" data-toggle="modal" data-target="#subscribe_popup"><i class="fa fa-envelope-o"></i>	Subscribe for Newsletter</a>
-        </div>
-        <div class="contact"><a class="contact-phone" href="tel:866-450-WOOD(9663)">866-450-WOOD (9663)</a>
-          <div class="contact-hours">6AM - 8PM PST</div>
+          </ul><a class="footer-subscribe mb-sm-3" href="#" data-toggle="modal" data-target="#subscribe_popup"><i class="fa fa-envelope-o"></i>   Subscribe for Newsletter</a>
         </div><img class="img-bbb" src="img/general/BBB.png" alt="#">
+        <ul class="footer-nav-list">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Testimonials</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Promotions</a></li>
+          <li><a href="#">Gift It!</a></li>
+        </ul>
+        <ul class="footer-nav-list">
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Warranty Disclaimer</a></li>
+          <li><a href="#">Cancellations/Returns Disclaimer</a></li>
+          <li><a href="#">Shipping and Delivery Disclaimer</a></li>
+          <li><a href="#">Gazebos & Playsets Disclaimer</a></li>
+        </ul>
       </div>
     </footer><!--FOOTER END-->
 <!--MODAL--><!--modal subscribe-->

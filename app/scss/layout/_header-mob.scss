@@ -1,12 +1,12 @@
-//#mobile-menu {
-//    //display: none;
-//    @include media-breakpoint-down(md) {
-//        //display: block;
-//        nav:not(.mm-menu) {
-//            display: none;
-//        }
-//    }
-//}
+#mobile-menu {
+    display: none;
+    @include media-breakpoint-down(md) {
+        display: block;
+        nav:not(.mm-menu) {
+            display: none;
+        }
+    }
+}
 .header-mob {
     &--top {
         display: flex;

@@ -102,7 +102,7 @@
         }
     }
     &-search {
-        width: 390px;
+        
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
@@ -126,7 +126,10 @@
                 font-size: 16px;
             }
         }
-        
+    
+        @include media-breakpoint-up(xl) {
+            width: 390px;
+        }
         @include media-breakpoint-down(md) {
             width: 100%;
             margin: 0;

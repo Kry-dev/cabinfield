@@ -33,4 +33,32 @@
             width: 100%;
         }
     }
+    &.collection-card--new {
+        position: relative;
+        overflow: hidden;
+        &:before ,
+        &:after {
+            display: block;
+            width: 134px;
+            height: 32px;
+            position: absolute;
+            left: -10px;
+            top: 0;
+        }
+        &:before {
+            content: "";
+            background: $primary;
+            transform: skewX(-30deg);
+        }
+        &:after {
+            content: "NEW!";
+            text-align: center;
+            vertical-align: middle;
+            color: $white;
+            font-size: 14px;
+            line-height: 32px;
+            font-family: "Helvetica", sans-serif;
+            font-weight: 700;
+        }
+    }
 }

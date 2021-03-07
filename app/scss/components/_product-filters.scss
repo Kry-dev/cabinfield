@@ -4,9 +4,9 @@
     &-list {
         display: flex;
         flex-direction: column;
-        border-bottom: 1px dotted $product-main-border;
+        //border-bottom: 1px dotted $product-main-border;
         list-style: none;
-        padding-bottom: 21px;
+        //padding-bottom: 21px;
         margin-bottom: 21px;
         
         &,
@@ -45,22 +45,22 @@
         line-height: 1.125rem;
         padding-bottom: 13px;
         position: relative;
-        padding-left: 26px;
+        //padding-left: 26px;
         
-        &:before {
-            content: "\f105";
-            font-size: 18px;
-            font-family: FontAwesome;
-            position: absolute;
-            display: block;
-            left: 0;
-            top: 0;
-            color: $footer-copy-color;
-            width: 1rem;
-            height: 1rem;
-            transform: rotate(0);
-            transition: $transition-base;
-        }
+        //&:before {
+        //    content: "\f105";
+        //    font-size: 18px;
+        //    font-family: FontAwesome;
+        //    position: absolute;
+        //    display: block;
+        //    left: 0;
+        //    top: 0;
+        //    color: $footer-copy-color;
+        //    width: 1rem;
+        //    height: 1rem;
+        //    transform: rotate(0);
+        //    transition: $transition-base;
+        //}
         
         &[aria-expanded="false"] {
             border-bottom: 1px dotted $product-main-border;
