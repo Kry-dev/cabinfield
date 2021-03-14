@@ -1,39 +1,49 @@
 section.product
-  .container
-    .d-flex.flex-column.flex-lg-row
-      .product-left
-        .product-left-top
-            h1.product-right-title.mb-3 Indian Creek Panel Amish Bed
-            span.product-number.mb-3 Product No.: FGFH1128
-            a(href="#").text-underline.mb-3 View Gallery
-        <!--Product photos in components/_product-photos.pug-->
-        include ../layout/_product-photos-new
-        <!--Product photos in components/_product-photos.pug end-->
-      .product-right
-
-        .row
-          .col-sm-5.pr-0
-            .product-rating
-              <!--Product rating small in mixin.pug-->
-              +rating-small("80", "<a href='#'> 8 customer reviews </a>")
-              <!--Product rating small in mixin.pug end-->
-                a.more(href="#") Why CabinField?
-
-          .col-sm-6
-            .seal-list
-              a(href="#")
-                img.seal(src='img/svg/eco-icon.svg', alt='#')
-          .col-sm-12
-            <!--Product price in mixin.pug-->
-            +product-price
-            <!--Product price in mixin.pug end-->
-              a.btn.btn-order.mb-3(href='#', data-toggle='modal', data-target='#check_zip') Check ZIP code
-        p.product-overview
-          | With a handcrafted wood kitchen set mealtimes will become the special bonding time you’ve always dreamed of. Solidly constructed fan back chairs are optionally stained in 2 tones, creating natural wood and black kitchen chairs with custom contoured seats. The natural and black kitchen table features elegantly curved table legs, and is optionally an expandable kitchen table with self storing leaves.
-        .product-includes.mb-3
-          p Shown in quartersawn white oak with Michael's cherry stain. This suite includes bed, dresser with optional mirror, armoire, nightstand and blanket chest with cedar bottom.
-            a(href='#') See product features and specs
-        .row
-            .product-right-btns
-                a.btn.btn-order(href='#', data-toggle='modal', data-target='#select_options') Select Your Options
-                a.btn.btn-outline-blue.my-0.border-0(href='#') Save to Wishlist
+    .container
+        .d-flex.flex-column.flex-lg-row
+            .product-left
+                .product-left-top
+                    h1.product-right-title.mb-3 Indian Creek Panel Amish Bed
+                    span.product-number.mb-3 Product No.: FGFH1128
+                    a(href="#").text-underline.mb-3 View Gallery
+                <!--Product photos in components/_product-photos.pug-->
+                include ../layout/_product-photos-new
+                <!--Product photos in components/_product-photos.pug end-->
+            .product-right
+                .row
+                    .col-sm-12
+                        .seal-list
+                            a(href="#")
+                                img.seal(src='img/svg/eco-icon-blue.svg', alt='#')
+                            a(href="#")
+                                img.seal(src='img/svg/amish-blue.svg', alt='#')
+                            a(href="#")
+                                img.seal(src='img/svg/quickship-blue.svg', alt='#')
+                    .col-sm-12
+                        <!--Product price in mixin.pug-->
+                        +product-price
+                        <!--Product price in mixin.pug end-->
+                .row
+                    .col-sm-12
+                        .product-rating
+                            h5.text-warning.text-bold Shipping discount on two or more items
+                            <!--Product rating small in mixin.pug-->
+                            +rating-null("90", "justify-content-start")
+                            <!--Product rating small in mixin.pug end-->
+                .row
+                    .product-right-btns.flex-column.col-sm-6
+                        a.btn.btn-warning.w-100(href='#', data-toggle='modal', data-target='#select_options') Choose Options
+                        a.btn.btn-outline-blue.w-100.mt-3(href='#') Add to wishlist
+                .row
+                    .col-sm-12
+                        ul.mb-3
+                            li #[a(href="#") • Delivery Information ]
+                            li #[a(href="#") • Return Policy ]
+                            li #[a(href="#") • Pre-Built Options ]
+                            li #[a(href="#") • Order Samples ]
+                    .col-sm-12
+                        h6.text-dark.mb-0 Product Information:
+                        p.text-dark
+                            | With a handcrafted wood kitchen set mealtimes will become the special bonding time you’ve always dreamed of.
+                            | Solidly constructed fan back chairs are optionally stained in 2 tones, creating
+                            | #[a(href="#") Read more...]

@@ -84,7 +84,7 @@
         }
         
         .product-rating {
-            padding: .2rem 0 .8rem;
+            //padding: .2rem 0 .8rem;
         }
         
         .product-price-value {
@@ -331,9 +331,9 @@
     
     &-rating {
         width: 100%;
-        margin: 0 0 .5rem;
-        padding: .5rem 0;
-        border-bottom: 1px dashed $product-main-border;
+        //margin: 0 0 .5rem;
+        //padding: .5rem 0;
+        //border-bottom: 1px dashed $product-main-border;
     }
     
     p {
@@ -438,18 +438,15 @@
 }
 
 .seal-list {
-    margin-top: 20px;
-    height: 52px;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     flex-wrap: nowrap;
-    
+    margin-bottom: 1rem;
     a {
         display: block;
-        width: 100px;
-        height: 100px;
-        margin-left: -5px;
+        width: 58px;
+        height: 58px;
         position: relative;
         z-index: 1;
         
@@ -459,17 +456,16 @@
             opacity: .8;
         }
     }
-    
+    a + a {
+        margin-left: 1rem;
+    }
     .seal {
-        width: 100px;
-        height: 100px;
-        margin-left: -5px;
-        
+        width: 58px;
+        height: 58px;
     }
     
     @media (min-width: 992px) and (max-width: 1200px) {
         margin-top: 0;
-        produc
         .seal,
         a {
             width: 75px;

@@ -28,7 +28,6 @@ mixin rating-null(percent,customclass)
         i.fa.fa-star
         i.fa.fa-star
         i.fa.fa-star
-    a(href='#') Write product review
 
 mixin rating-small(percent)
   <!--star rating small without number-->
@@ -91,14 +90,15 @@ mixin product-price-simple
 mixin product-price
   <!--product price -->
   .product-price
-    span The price reflects selected options
+    span.text-warning Starting at:
     .product-price-value
       span $
       span.price-new 1,371.00
     .product-price-shipping
       span + $30.40
-      |  Shipping
-
+      span.ml-2  Standard curbside delivery to 100001
+        a.edit.pl-2.ml-1(href='#', data-toggle='modal', data-target='#')
+            i.fa.fa-pencil
 mixin product-price-old
   <!--old product price -->
   .product-price

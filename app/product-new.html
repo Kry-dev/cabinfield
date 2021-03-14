@@ -255,31 +255,48 @@
             </div>
             <div class="product-right">
               <div class="row">
-                <div class="col-sm-5 pr-0">
-                  <div class="product-rating"><!--Product rating small in mixin.pug--><!--star rating small without number-->
-                        <div class="stars-rating stars-rating--sm" title="80">
-                          <div class="back-stars"><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
-                            <div class="front-stars" style="width: 80%"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
-                          </div><a href="#">8 customer reviews</a>
-                        </div><!--Product rating small in mixin.pug end--><a class="more" href="#">Why CabinField?</a>
-                  </div>
-                </div>
-                <div class="col-sm-6">
-                  <div class="seal-list"><a href="#"><img class="seal" src="img/svg/eco-icon.svg" alt="#"></a></div>
+                <div class="col-sm-12">
+                  <div class="seal-list"><a href="#"><img class="seal" src="img/svg/eco-icon-blue.svg" alt="#"></a><a href="#"><img class="seal" src="img/svg/amish-blue.svg" alt="#"></a><a href="#"><img class="seal" src="img/svg/quickship-blue.svg" alt="#"></a></div>
                 </div>
                 <div class="col-sm-12"><!--Product price in mixin.pug--><!--product price -->
-                      <div class="product-price"><span>The price reflects selected options</span>
+                      <div class="product-price"><span class="text-warning">Starting at:</span>
                         <div class="product-price-value"><span>$</span><span class="price-new">1,371.00</span></div>
-                        <div class="product-price-shipping"><span>+ $30.40</span> Shipping</div>
-                      </div><!--Product price in mixin.pug end--><a class="btn btn-order mb-3" href="#" data-toggle="modal" data-target="#check_zip">Check ZIP code</a>
+                        <div class="product-price-shipping"><span>+ $30.40</span><span class="ml-2"> Standard curbside delivery to 100001<a class="edit pl-2 ml-1" href="#" data-toggle="modal" data-target="#"><i class="fa fa-pencil"></i></a></span></div>
+                      </div><!--Product price in mixin.pug end-->
                 </div>
               </div>
-              <p class="product-overview">With a handcrafted wood kitchen set mealtimes will become the special bonding time you’ve always dreamed of. Solidly constructed fan back chairs are optionally stained in 2 tones, creating natural wood and black kitchen chairs with custom contoured seats. The natural and black kitchen table features elegantly curved table legs, and is optionally an expandable kitchen table with self storing leaves.</p>
-              <div class="product-includes mb-3">
-                <p>Shown in quartersawn white oak with Michael's cherry stain. This suite includes bed, dresser with optional mirror, armoire, nightstand and blanket chest with cedar bottom.<a href="#">See product features and specs</a></p>
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="product-rating">
+                    <h5 class="text-warning text-bold">Shipping discount on two or more items</h5><!--Product rating small in mixin.pug-->
+                        <div class="stars-rating justify-content-start" title="90">
+                          <div class="back-stars"><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
+                            <div class="front-stars" style="width: 90%"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                          </div>
+                        </div><!--Product rating small in mixin.pug end-->
+                  </div>
+                </div>
               </div>
               <div class="row">
-                <div class="product-right-btns"><a class="btn btn-order" href="#" data-toggle="modal" data-target="#select_options">Select Your Options</a><a class="btn btn-outline-blue my-0 border-0" href="#">Save to Wishlist</a></div>
+                <div class="product-right-btns flex-column col-sm-6"><a class="btn btn-warning w-100" href="#" data-toggle="modal" data-target="#select_options">Choose Options</a><a class="btn btn-outline-blue w-100 mt-3" href="#">Add to wishlist</a></div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12">
+                  <ul class="mb-3">
+                    <li><a href="#">• Delivery Information </a></li>
+                    <li><a href="#">• Return Policy </a></li>
+                    <li><a href="#">• Pre-Built Options </a></li>
+                    <li><a href="#">• Order Samples </a></li>
+                  </ul>
+                </div>
+                <div class="col-sm-12">
+                  <h6 class="text-dark mb-0">Product Information:</h6>
+                  <p class="text-dark">
+                    With a handcrafted wood kitchen set mealtimes will become the special bonding time you’ve always dreamed of.
+                    Solidly constructed fan back chairs are optionally stained in 2 tones, creating
+                    <a href="#">Read more...</a>
+                  </p>
+                </div>
               </div>
             </div>
           </div>
