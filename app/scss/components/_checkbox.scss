@@ -41,6 +41,20 @@
     height: 19px;
     width: 19px;
 }
+.custom_checkbox.checkbox_primary {
+    input[type="checkbox"] + label:before {
+        width: 19px;
+        height: 19px;
+    }
+    
+    input[type="checkbox"] + label:after {
+        font-size: 13px;
+    }
+    
+    input[type="checkbox"]:checked + label:after {
+        color: $primary;
+    }
+}
 
 .custom_checkbox.checkbox_big input[type="checkbox"]:checked + label:after {
     font-size: 12px !important;

@@ -2,14 +2,17 @@ section.product
   .container
     .d-flex.flex-column.flex-lg-row
       .product-left
+        .product-left-top
+            h1.product-right-title.mb-3 Indian Creek Panel Amish Bed
+            span.product-number.mb-3 Product No.: FGFH1128
+            a(href="#").text-underline.mb-3 View Gallery
         <!--Product photos in components/_product-photos.pug-->
         include ../layout/_product-photos-new
         <!--Product photos in components/_product-photos.pug end-->
       .product-right
-        h1.product-right-title Indian Creek Panel Amish Bed
+
         .row
           .col-sm-5.pr-0
-            span.product-number.mb-1 Product No.: FGFH1128
             .product-rating
               <!--Product rating small in mixin.pug-->
               +rating-small("80", "<a href='#'> 8 customer reviews </a>")

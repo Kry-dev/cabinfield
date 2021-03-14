@@ -2,7 +2,7 @@ form#options-form
     #optgroup-1
         .product-customize-form
             h6.product-customize-subtitle Bed size:
-                a(href="#", data-toggle="modal", data-target="#customize_popup5").popup-info i
+                a(href="#", data-toggle="modal", data-target="#customize_popup5").popup-info ?
             .product-customize-list
                 .product-option
                     input( type="radio" id="bed-size-01" name="bed-size" )
@@ -27,7 +27,7 @@ form#options-form
     #optgroup-2
         .product-customize-form
             h6.product-customize-subtitle Wood Type:
-                a(href="#", data-toggle="modal", data-target="#customize_popup5").popup-info i
+                a(href="#", data-toggle="modal", data-target="#customize_popup5").popup-info ?
             .product-customize-list
                 .product-option
                     input( type="radio" id="wood-01" name="wood")
@@ -162,7 +162,7 @@ form#options-form
     #optgroup-5
         .product-customize-form
             h6.product-customize-subtitle Coat rack on footboard:
-                a(href="#", data-toggle="modal", data-target="#customize_popup5").popup-info i
+                a(href="#", data-toggle="modal", data-target="#customize_popup5").popup-info ?
             .product-customize-list
                 .product-option
                     input( type="radio" id="coat-roat-01" name="wood")
@@ -191,7 +191,7 @@ form#options-form
     #optgroup-6
         .product-customize-form
             h6.product-customize-subtitle Extra top rail:
-                a(href="#", data-toggle="modal", data-target="#customize_popup5").popup-info i
+                a(href="#", data-toggle="modal", data-target="#customize_popup5").popup-info ?
             .product-customize-list
                 .product-option
                     input( type="radio" id="rail-01" name="Extra top rail")
@@ -209,7 +209,7 @@ form#options-form
     #optgroup-7
         .product-customize-form
             h6.product-customize-subtitle Fabric:
-                a(href="#", data-toggle="modal", data-target="#customize_popup5").popup-info.mr-1 i
+                a(href="#", data-toggle="modal", data-target="#customize_popup5").popup-info.mr-1 ?
                 a(href="#", data-toggle="modal", data-target="#customize_popup5").text-uppercase.ml-3 See all Fabric Swatches
             .product-customize-list()
                 .product-option.option-stain
@@ -261,103 +261,27 @@ form#options-form
                             i.fa.fa-search
                         img(src="img/fabric/fabric-06.jpg", alt="#").img-fluid
                         p.name(data-title="1-49 Gallery") 1-49 Gallery
-    #optgroup-10
-        .product-customize-form
-            h6.product-customize-subtitle Available Standard Sunbrella® Fabrics:
-            .product-customize-list
-                .product-option.option-stain
-                    input( type="radio" id="Standard-04" name="Standard")
-                    label(for="Standard-04")
-                        img(src="img/product/tmp_stain-2.jpg", alt="#").img-fluid
-                        p.name Astoria Sunset
-                .product-option.option-stain
-                    input( type="radio" id="Standard-01" name="Standard")
-                    label(for="Standard-01")
-                        p.sample-text As shown in Product Photo
-                        p.name Standart
-                //.product-option.option-stain
-                //    input( type="radio" id="Standard-02" name="Standard", )
-                //    label(for="Standard-02")
-                //        p.sample-text.sample-text--all SEE ALL AVAILABLE
-                //            span choices
-                //        p.name Select Now
-                a.btn-all-choices(href="#",data-toggle="modal", data-target="#customize_popup11")
-                    p.sample-text.sample-text--all SEE ALL AVAILABLE
-                        span  choices
-                    p.name Select Now
-    #optgroup-11
-        .product-customize-form
-            h6.product-customize-subtitle #[b.mr-1 Hardware: ]  BP1586-WN, BP3620-NBZ
-            .product-customize-list.product-customize-list--hardware
-                .product-option.product-option--hardware
-                    input( type="checkbox" id="BP1466-WN" name="BP1466-WN")
-                    label(for="BP1466-WN") BP1466-WN
-                    a(href="#", data-toggle="modal", data-target="#customize_popup11").popup-info i
-                .product-option.product-option--hardware
-                    input( type="checkbox" id="BP1467-WN" name="BP1467-WN")
-                    label(for="BP1467-WN") BP1467-WN
-                    a(href="#", data-toggle="modal", data-target="#customize_popup11").popup-info i
-                .product-option.product-option--hardware
-                    input( type="checkbox" id="BP1468-WN" name="BP1468-WN")
-                    label(for="BP1468-WN") BP1468-WN
-                    a(href="#", data-toggle="modal", data-target="#customize_popup11").popup-info i
-                .product-option.product-option--hardware
-                    input( type="checkbox" id="BP1469-WN" name="BP1469-WN")
-                    label(for="BP1469-WN") BP1469-WN
-                    a(href="#", data-toggle="modal", data-target="#customize_popup11").popup-info i
-                .product-option.product-option--hardware
-                    input( type="checkbox" id="BP1470-WN" name="BP1470-WN")
-                    label(for="BP1470-WN") BP1470-WN
-                    a(href="#", data-toggle="modal", data-target="#customize_popup11").popup-info i
-                .product-option.product-option--hardware
-                    input( type="checkbox" id="BP1471-WN" name="BP1471-WN")
-                    label(for="BP1471-WN") BP1471-WN
-                    a(href="#", data-toggle="modal", data-target="#customize_popup11").popup-info i
-
-
 
     #optgroup-8
         .product-customize-form
-            h6.product-customize-subtitle #[b.mr-1 Pillows: ]
-            .product-option-select
-                label.mb-0 Quantity:
-                select.selectpicker.show
-                    option.text-dark(value='2',data-content="<b>x2</b><span class='text-dark ml-3'>46$</span>",selected)
-                    option.text-dark(value='3',data-content="<b>x3</b><span class='text-dark ml-3'>66$</span>")
-            h6.product-customize-subtitle #[b.mr-1 Quantity input number]
-            .product-option-select
-                label.mb-0 Quantity:
-                .quantity
-                    input(type="number", min="1", max="99", step="1", value="1")
-                    .quantity__btn.quantity__btn--up
-                    .quantity__btn.quantity__btn--down
+            h6.product-customize-subtitle #[b.mr-1 Pillow: ]
+                a(href="#", data-toggle="modal", data-target="#customize_popup5").popup-info ?
+            .form-group.row
+                .col-sm-6
+                    .checkbox.custom_checkbox.checkbox_primary.mb-3
+                        input#Pillow0(type='checkbox' name='' value='')
+                        label.text-dark.text-uppercase(for='Pillow0') 13"x13" - Add $36.00
+                    .checkbox.custom_checkbox.checkbox_primary
+                        input#Pillow1(type='checkbox' name='' value='')
+                        label.text-dark.text-uppercase(for='Pillow1') Emriodery
+                .col-sm-6
+                    label.mb-0.d-flex.align-content-center Quantity:
+                        select.selectpicker.ml-3
+                            option.text-dark(value='2') Option 1
+                            option.text-dark(value='3') Option 2
 
-            ul.product-customize-list.align-items-end.mb-3
-                li.product-option-col
-                    h6.product-customize-subtitle 16" x 16" Pillow(s)  #[span.ml-1.label-color  $23 per pillow]
-                        a(href="#", data-toggle="modal", data-target="#customize_popup11").popup-info i
-                    .product-option-select
-                        label.mb-0 Quantity:
-                        select.selectpicker
-                            option.text-dark(value='2',data-content="<b>x2</b><span class='text-dark ml-3'>46$</span>",selected)
-                            option.text-dark(value='3',data-content="<b>x3</b><span class='text-dark ml-3'>66$</span>")
-                li.product-option-col
-                    h6.product-customize-subtitle 20" x 20" Pillow(s) #[span.ml-1.label-color  $50 per pillow]
-                        a(href="#", data-toggle="modal", data-target="#customize_popup11").popup-info i
-                    .product-option-select
-                        label.mb-0 Quantity:
-                        select.selectpicker
-                            option.text-dark(value='2',data-content="<b>x2</b><span class='text-dark ml-3'>50$</span>")
-                            option.text-dark(value='3',data-content="<b>x3</b><span class='text-dark ml-3'>100$</span>",selected)
-                li.product-option-col
-                    h6
-                    .product-option.mt-auto
-                        input( type="radio" id="Cylinder-0123" name="Cylinder")
-                        label(for="Cylinder-0123") Cylinder Cushions
-                            span + $105
-                        a(href="#", data-toggle="modal", data-target="#customize_popup11").popup-info i
             .person-message
-                h6.product-customize-subtitle.label-color Enter your personalized message here!
-                textarea
-
+                h6.product-customize-subtitle.label-color Message:
+                textarea(rows="4")
+                a.btn.btn-lg.btn-warning(href="#")  add to cart
 
