@@ -655,14 +655,11 @@ Tabs();
 
 
 // var mobileBanner = ["<div class=\"nav-pictures\"><a href=\"#\"><img class=\"img-fluid\" src=\"img/general/nav-img-01.png\"></a><a href=\"#\"><img class=\"img-fluid\" src=\"img/general/nav-img-02.png\"></a></div>"];
-var mobBanners = $('.nav-pictures').html();
+var mobBanners = $('.nav-pictures').html(); // get banners from desctop menu and put to mmenu
 new Mmenu(
   document.querySelector('#mobile-menu'), {
       extensions: [
-          // "shadow-panels",
           "fx-panels-slide-100",
-          // "border-none",
-          // "position-top",
           "theme-white",
           "fullscreen",
       ],
@@ -678,21 +675,11 @@ new Mmenu(
           position: "bottom",
           content: mobBanners,
       },
-      classNames: {
-          panel: "COCOCO",
-      },
       
       setSelected: true,
       panelNodetype: ["ul", "ol"],
   },
   {});
-// $('#mmenu-icon').on('click',function (){
-//     var mobBanners = $('#mobileBanners').html();
-//     console.log(mobBanners);
-// })
-//
-// // const mmenuPanel = document.querySelector( "#mobile-menu .mm-panels" );
-// // mmenuPanel.after($mmenuBanners);
 
 
 $('mobile-close').on("click", function () {
