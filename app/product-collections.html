@@ -9,8 +9,8 @@
     <link rel="icon" href="img/favicon/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
     <meta name="theme-color" content="#000">
-    <!--link(rel="stylesheet" type='text/css' href="libs/mmenu-light/dist/mmenu-light.css")-->
-    <!--link(rel="stylesheet" type='text/css' href="libs/mmenu-js/dist/mmenu.css")-->
+    <link rel="stylesheet" type="text/css" href="libs/mmenu-light/dist/mmenu-light.css">
+    <link rel="stylesheet" type="text/css" href="libs/mmenu-js/dist/mmenu.css">
     <link rel="stylesheet" type="text/css" href="css/main.min.css">
     <title>Kennet Series
     </title>
@@ -19,7 +19,7 @@
     <!--include layout/header-->
     <header class="header">
       <div class="container">
-        <div class="header-top"><!--header top section-->
+        <div class="header-top d-none d-md-flex"><!--header top section-->
           <ul class="header-links">
             <li><a href="#">Contact</a></li>
             <li><a href="#">Learning Center</a></li>
@@ -27,22 +27,23 @@
           </ul><a class="header-tel" href="tel:8664509663">866-450-WOOD(9663)</a><!--end of header top section-->
         </div>
         <div class="header-mdl"><!--header middle section-->
-          <div class="header-brand"><a class="header-brand--logo"><img class="img-fluid" src="img/general/cabinfield_logo.png" alt="logo"></a><span class="header-brand--title">
+          <div class="header-brand"><a class="header-brand--logo"><img class="img-fluid" src="img/general/cabinfield-logo.svg" alt="logo"></a><span class="header-brand--title d-none d-xl-block">
               Classic Amish Craftmanship
               For Your Home and Garden</span></div>
-          <form class="header-search">
+          <form class="header-search d-none d-lg-flex">
             <input class="form-control" type="search" name="search" placeholder="Search our store" aria-label="Search">
             <button class="btn btn-outline-primary" type="submit"><i class="fa fa-search"></i></button>
           </form>
           <ul class="header-user-links">
-            <li><a href="#">Sign In</a></li>
-            <li><a href="#">My Wishlist</a></li>
-            <li><a href="#">
-                <div class="fa fa-shopping-cart"></div><span class="text-warning ml-1">2</span></a></li>
+            <li class="d-block d-md-none"><a href="#"><i class="fa fa-user"></i></a></li>
+            <li class="d-block d-md-none"><a href="#"><i class="fa fa-phone"></i></a></li>
+            <li class="d-none d-md-block"><a href="#">Sign In</a></li>
+            <li class="d-none d-md-block"><a href="#">My Wishlist</a></li>
+            <li><a href="#"><i class="fa fa-shopping-cart"></i><span class="text-warning ml-1">2</span></a></li>
           </ul><!-- end of header middle section-->
         </div>
       </div>
-      <div class="header-btm"><!--header navigation section-->
+      <div class="header-btm d-none d-lg-flex"><!--header navigation section-->
         <div class="container">
           <ul class="nav navbar-nav">
             <!-- Standard dropdown-->
@@ -307,7 +308,116 @@
           </ul>
         </div><!--end of header navigation section-->
       </div>
-    </header><!--HEADER END-->
+      <div class="header-mob d-flex d-lg-none">
+        <div class="container">
+          <div class="row">
+            <div class="col-2"><a class="btn-menu" href="#mobile-menu" id="mmenu-icon"></a></div>
+            <div class="col-10">
+              <form class="header-search">
+                <input class="form-control" type="search" name="search" placeholder="Search our store" aria-label="Search">
+                <button class="btn btn-outline-primary" type="submit"><i class="fa fa-search"></i></button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="mobile-menu">
+      <nav id="mobile-menu">
+        <ul>
+          <li><a href="#">Bedrooms</a>
+            <ul>
+              <li><a href="#">Bedroom Furniture Sets</a>
+                <ul>
+                  <li><a href="#">Mission</a></li>
+                  <li><a href="#">Contemporary</a></li>
+                  <li><a href="#">Traditional</a></li>
+                  <li><a href="#">Eclectic</a></li>
+                  <li><a href="#">Rustic</a></li>
+                  <li><a href="#">Farmhouse</a></li>
+                  <li><a href="#">Quick Ship Bedroom Furniture Sets</a></li>
+                  <li><a href="#">Live Edge</a></li>
+                  <li><a href="#">View All</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Beds & Headboards</a>
+                <ul>
+                  <li><a href="#">Panel Beds</a></li>
+                  <li><a href="#">Spindle Beds</a></li>
+                  <li><a href="#">Post Beds</a></li>
+                  <li><a href="#">Platform Beds</a></li>
+                  <li><a href="#">Storage Beds</a></li>
+                  <li><a href="#">Bookcase Beds</a></li>
+                  <li><a href="#">Upholstered Beds</a></li>
+                  <li><a href="#">Murphy Beds</a></li>
+                  <li><a href="#">Canopy Beds</a></li>
+                  <li><a href="#">Sleigh Beds</a></li>
+                  <li><a href="#">Bunkbeds</a></li>
+                  <li><a href="#">Daybeds</a></li>
+                  <li><a href="#">Slat Beds</a></li>
+                  <li><a href="#">Quick Ship Beds & Headboards</a></li>
+                  <li><a href="#">View All</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Bedroom Storage Pieces</a>
+                <ul>
+                  <li><a href="#">Armoires & Wardrobes</a></li>
+                  <li><a href="#">Dressers</a></li>
+                  <li><a href="#">Chest of Drawers</a></li>
+                  <li><a href="#">Lingerie Chests</a></li>
+                  <li><a href="#">Mule Chests</a></li>
+                  <li><a href="#">Nightstands</a></li>
+                  <li><a href="#">Bedroom Media Consoles</a></li>
+                  <li><a href="#">Quick Ship Bedroom Storage Pieces</a></li>
+                  <li><a href="#">View All</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="#">Kitchen & Dining Room</a>
+            <ul>
+              <li><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Living Room & Entertainment</a>
+            <ul>
+              <li><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Office</a>
+            <ul>
+              <li><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Outdoor</a>
+            <ul>
+              <li><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Rustics & Live Edge</a>
+            <ul>
+              <li><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="nav-pictures"><a href="#"><img class="img-fluid" src="img/general/nav-img-01.png"></a><a href="#"><img class="img-fluid" src="img/general/nav-img-02.png"></a></div>
+      </nav>
+    </div><!--HEADER END-->
 <!--CONTENT--><!--breadcrumbs-->
         <nav aria-label="breadcrumb">
           <div class="container px-0">
@@ -668,9 +778,9 @@
     </div><!--modal check zip end--><!--MODAL END-->
     <script src="js/jquery.js"></script>
     <script src="js/libs.min.js"></script>
-    <!--script(src="libs/mmenu-js/dist/mmenu.polyfills.js")-->
-    <!--script(src="libs/mmenu-js/dist/mmenu.js")-->
-    <!--script(src="libs/mmenu-light/dist/mmenu-light.js")-->
+    <script src="libs/mmenu-js/dist/mmenu.polyfills.js"></script>
+    <script src="libs/mmenu-js/dist/mmenu.js"></script>
+    <script src="libs/mmenu-light/dist/mmenu-light.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

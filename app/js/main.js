@@ -648,39 +648,75 @@ function Tabs() {
 
 Tabs();
 
+// new Mmenu(
+//   document.querySelector('#mobile-menu'), {
+//       extensions	: [
+//         "popup",
+//         // "theme-white",
+//         // "pagedim-black",
+//         "position-top",
+//         // "border-full"
+//       ],
+//       offCanvas: {
+//           zposition: "front"
+//       },
+//       // searchfield : {
+//       //     placeholder		: 'Search menu items'
+//       // },
+//       navbars		: [
+//             {
+//               // type		: 'tabs',
+//               content		: [
+//                   // '<a class="header-logo" href="/"><img class="img-fluid" src="img/general/cabinfield_logo.png" alt="logo"></a>',
+//                   // '<a class="mobile-close" href="" ><i class="fa fa-home"></i></a>'
+//               ]
+//           }, {
+//               // content		: [ 'searchfield' ]
+//           }, {
+//           }
+//       ]
+//   }, {
+//       searchfield : {
+//           clear 		: true
+//       },
+//   }
+// );
+
+
 new Mmenu(
   document.querySelector('#mobile-menu'), {
-      extensions	: [
-        "popup",
+    extensions 	: [
+        // "shadow-panels",
+        "fx-panels-slide-100",
+        // "border-none",
+        // "position-top",
         "theme-white",
-        "pagedim-black",
-        "position-top",
-        "border-full"
-      ],
-      offCanvas: {
-          zposition: "front"
+        "fullscreen",
+        // "position-right"
+    ],
+    navbars	: [
+      {
+        position: "top",
+        content : [
+            "prev",
+            // "searchfield",
+            "close"
+        ]
       },
-      searchfield : {
-          placeholder		: 'Search menu items'
-      },
-      navbars		: [
-            {
-              type		: 'tabs',
-              content		: [
-                  '<a class="header-logo" href="/"><img class="img-fluid" src="img/general/cabinfield_logo.png" alt="logo"></a>',
-                  '<a class="mobile-close" href="" ><i class="fa fa-home"></i></a>'
-              ]
-          }, {
-              content		: [ 'searchfield' ]
-          }, {
-          }
-      ]
-  }, {
-      searchfield : {
-          clear 		: true
-      },
-  }
-);
+        {
+        position: "bottom",
+        content: [
+            "<div class=\"nav-pictures\"><a href=\"#\"><img class=\"img-fluid\" src=\"img/general/nav-img-01.png\"></a><a href=\"#\"><img class=\"img-fluid\" src=\"img/general/nav-img-02.png\"></a></div>",
+        ]
+      }
+    ],
+    wrappers: ["bootstrap"],
+    setSelected: true,
+    searchfield: {
+        panel: true
+    }}, {});
+
+
 
 $('mobile-close').on( "click", function() {
     api.close();

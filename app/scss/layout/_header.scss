@@ -1,6 +1,7 @@
 
 
 .header {
+    
     &-top {
         display: flex;
         flex-direction: row;
@@ -76,7 +77,10 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 2rem;
+        padding: 1rem 0;
+        @include media-breakpoint-down(md){
+            //margin-bottom: 2rem;
+        }
     }
     &-user-links {
         display: flex;
@@ -107,7 +111,7 @@
         flex-direction: row;
         flex-wrap: nowrap;
         position: relative;
-        
+        width: 80%;
         input {
             padding: .5rem .75rem;
             font-size: 14px;
@@ -127,17 +131,13 @@
             }
         }
     
-        @include media-breakpoint-up(xl) {
+        @include media-breakpoint-up(md) {
             width: 390px;
         }
-        @include media-breakpoint-down(md) {
-            width: 100%;
-            margin: 0;
-            display: none;
-        }
-        @include media-breakpoint-down(sm) {
-            display: none;
-        }
+        //@include media-breakpoint-down(md) {
+        //    width: 100%;
+        //    margin: 0;
+        //}
     }
     &-btm {
         display: flex;
@@ -145,6 +145,10 @@
         width: 100%;
         background: $primary;
         min-height: 54px;
+        .container {
+            position: relative;
+            
+        }
         .nav {
             display: flex;
             flex-direction: row;
@@ -152,10 +156,11 @@
             align-items: center;
             flex-wrap: nowrap;
             position: relative;
-            
+            @include media-breakpoint-down(md){
+                display: none;
+            }
             .dropdown {
                 position: initial;
-                
             }
             .dropdown-toggle {
                 font-family: $header-font;
@@ -184,6 +189,7 @@
                 overflow: hidden;
                 &.show {
                     display: flex;
+                    transform: translate3d(0, 22px, 0px) !important;
                 }
                 &-left {
                     display: flex;
@@ -193,12 +199,6 @@
                     height: 100%;
                     max-height: 400px;
                     overflow: auto;
-                    
-                    /* Re-order items into rows */
-                    //.nav-submenu:nth-child(3n+1) {order: 1;}
-                    //.nav-submenu:nth-child(3n+2) {order: 2;}
-                    //.nav-submenu:nth-child(3n)   {order: 3;}
-    
                     /* Force new columns */
                     &::before,
                     &::after {
@@ -279,5 +279,20 @@
             }
         }
         
+    }
+    &-mob{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        background: $primary;
+        min-height: 54px;
+        height: 66px;
+        .container {
+            position: relative;
+        }
+        .header-search {
+            margin-left: auto;
+            width: 100%;
+        }
     }
 }

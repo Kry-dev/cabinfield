@@ -1,6 +1,6 @@
 header.header
     .container
-        .header-top
+        .header-top.d-none.d-md-flex
             <!--header top section-->
             ul.header-links
                 li #[a(href="#") Contact]
@@ -13,24 +13,42 @@ header.header
             <!--header middle section-->
             .header-brand
                 a.header-brand--logo
-                    img.img-fluid(src="img/general/cabinfield_logo.png", alt="logo")
-                span.header-brand--title
+                    img.img-fluid(src="img/general/cabinfield-logo.svg", alt="logo")
+                span.header-brand--title.d-none.d-xl-block
                     | Classic Amish Craftmanship
                     | For Your Home and Garden
-            form.header-search
+            form.header-search.d-none.d-lg-flex
                 input.form-control(type='search', name="search", placeholder='Search our store', aria-label='Search')
                 button.btn.btn-outline-primary(type='submit')
                     i.fa.fa-search
             ul.header-user-links
-                li #[a(href="#") Sign In]
-                li #[a(href="#") My Wishlist]
+                li.d-block.d-md-none
+                    a(href="#")
+                        i.fa.fa-user
+                li.d-block.d-md-none
+                    a(href="#")
+                        i.fa.fa-phone
+                li.d-none.d-md-block #[a(href="#") Sign In]
+                li.d-none.d-md-block #[a(href="#") My Wishlist]
                 li
                     a(href="#")
-                        .fa.fa-shopping-cart
+                        i.fa.fa-shopping-cart
                         span.text-warning.ml-1 2
             <!-- end of header middle section-->
-    .header-btm
+    .header-btm.d-none.d-lg-flex
         <!--header navigation section-->
         .container
             include _navbar-new-design
+
         <!--end of header navigation section-->
+    .header-mob.d-flex.d-lg-none
+        .container
+            .row
+                .col-2
+                    a.btn-menu(href="#mobile-menu" id="mmenu-icon")
+                .col-10
+                    form.header-search
+                        input.form-control(type='search', name="search", placeholder='Search our store', aria-label='Search')
+                        button.btn.btn-outline-primary(type='submit')
+                            i.fa.fa-search
+include _navbar-mob
