@@ -60,6 +60,15 @@
     .mm-navbars_bottom {
         .mm-navbar {
             border: 0;
+            span {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                a + a {
+                    margin-top: 20px;
+                }
+            }
         }
     }
     .mm-btn_close {
