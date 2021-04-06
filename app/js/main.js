@@ -20,23 +20,23 @@ $(document).ready(function(){
 		}
 	});
 
-	/*Main navigation*/
-	$("#header_navbar > ul > li, #header_navbar .nav-submenu").on({
-		mouseenter: function (evt) {
-			if ( $(this).find(".nav-submenu").css("display") == "none" ){
-				$(this).find(".nav-submenu").stop().fadeIn(400);
-			}
-		},
-		mouseleave: function (evt) {
-			if ( $(this).find(".nav-submenu").css("display") == "block" ){
-				$(this).find(".nav-submenu").stop().fadeOut(250);
-			}
-		}
-	});
-	$(".close-submenu").on("click", function (e) {
-		e.preventDefault();
-		$(this).parent().hide();
-	});
+	// /*Main navigation*/
+	// $("#header_navbar > ul > li, #header_navbar .nav-submenu").on({
+	// 	mouseenter: function (evt) {
+	// 		if ( $(this).find(".nav-submenu").css("display") == "none" ){
+	// 			$(this).find(".nav-submenu").stop().fadeIn(400);
+	// 		}
+	// 	},
+	// 	mouseleave: function (evt) {
+	// 		if ( $(this).find(".nav-submenu").css("display") == "flex" ){
+	// 			$(this).find(".nav-submenu").stop().fadeOut(250);
+	// 		}
+	// 	}
+	// });
+	// $(".close-submenu").on("click", function (e) {
+	// 	e.preventDefault();
+	// 	$(this).parent().hide();
+	// });
 	/*main_slider*/
 	$(".home-slider-list").slick({
 		infinite: true,
