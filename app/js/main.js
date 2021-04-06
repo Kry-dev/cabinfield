@@ -663,18 +663,19 @@ new Mmenu(
           "theme-white",
           "fullscreen",
       ],
-      navbar: {
-          position: "top",
-          content: [
-              "prev",
-              "title",
-              "close"
-          ]
-      },
-      navbars: {
+      navbars: [
+        {
+            position: "top",
+            content: [
+            "prev",
+            "title",
+            "close"
+            ]
+        },{
           position: "bottom",
           content: mobBanners,
-      },
+        }
+      ],
       
       setSelected: true,
       panelNodetype: ["ul", "ol"],
