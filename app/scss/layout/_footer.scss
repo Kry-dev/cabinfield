@@ -11,6 +11,7 @@
         align-items: center;
         padding: 0 6px;
         @include media-breakpoint-down(sm) {
+            flex-direction: column;
             height: 100%;
         }
     }
@@ -32,6 +33,7 @@
         @media (max-width: 1200px) {
             margin-bottom: 1rem;
         }
+        
     }
     
     &-logo {
@@ -42,7 +44,7 @@
     
     &-copyright {
         color: $footer-copy-color;
-        font-family: "Open Sans", sans-serif;
+        font-family: "Helvetica", sans-serif;
         font-size: 0.6875rem;
         line-height: 0.9375rem;
         @media (max-width: 1200px) {
@@ -62,7 +64,7 @@
         
         a {
             color: $primary;
-            font-family: "Open Sans", sans-serif;
+            font-family: "Helvetica", sans-serif;
             font-size: .875rem;
             line-height: 1rem;
             
@@ -70,6 +72,17 @@
             &:focus {
                 cursor: pointer;
                 text-decoration: underline;
+            }
+        }
+        @include media-breakpoint-down(sm) {
+            width: 100%;
+            text-align: center;
+            padding: 0;
+            a {
+                display: block;
+                width: 100%;
+                line-height: 32px;
+                border-bottom: 1px solid #EFE9E7;
             }
         }
     }
@@ -85,6 +98,7 @@
         flex-direction: row;
         justify-content: space-between;
         margin-bottom: 10px;
+        
         @media (max-width: 1200px) {
             margin-bottom: 1rem;
         }
@@ -133,21 +147,30 @@
         .footer-logo-box {
             width: 100%;
             max-width: 100%;
-            flex-direction: row;
+            flex-direction: column;
             margin: 0 auto;
-            justify-content: space-between;
+            justify-content: center;
+            align-items: center;
         }
+        
         .footer-logo {
             max-width: 180px;
         }
+        
         .footer-nav {
             margin-right: 7px;
         }
+        
         .footer-social-wrap {
             margin-right: 0;
         }
+    
         .img-bbb {
-            margin-top: 0;
+            margin: 0 auto 20px;
+        }
+        
+        .footer-copyright {
+            text-align: center;
         }
     }
     @media (max-width: 525px) {
@@ -162,8 +185,6 @@
         .footer-social-wrap {
             margin: 0 auto 1rem;
         }
-        .img-bbb {
-            margin: 0 auto;
-        }
+        
     }
 }

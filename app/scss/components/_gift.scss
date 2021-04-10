@@ -55,7 +55,7 @@
                 
                 > input::placeholder {
                     color: #908686;
-                    font-family: "Open Sans", sans-serif;
+                    font-family: "Helvetica", sans-serif;
                     font-size: 13px;
                     line-height: 16px;
                 }
@@ -74,7 +74,7 @@
                     bottom: 10px;
                     left: 46%;
                     color: $label-color;
-                    font-family: "Open Sans", sans-serif;
+                    font-family: "Helvetica", sans-serif;
                     font-size: 13px;
                     line-height: 16px;
                     @include media-breakpoint-down(sm) {
@@ -165,7 +165,7 @@
             background: #F9F9F9;
             
             .col-form-label {
-                font-family: "Open Sans", sans-serif;
+                font-family: "Helvetica", sans-serif;
                 font-style: normal;
                 font-weight: 600;
                 font-size: 13px;
@@ -228,7 +228,7 @@
         &-descr {
             max-width: 380px;
             margin: 0 auto;
-            font-family: "Open Sans", sans-serif;
+            font-family: "Helvetica", sans-serif;
             font-style: normal;
             font-weight: normal;
             font-size: 13px;

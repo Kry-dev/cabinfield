@@ -43,12 +43,12 @@ header.header
         <!--end of header navigation section-->
     .header-mob.d-flex.d-lg-none
         .container
-            .row
+            .row.align-content-center
                 .col-2
                     a.btn-menu(href="#mobile-menu" id="mmenu-icon")
                 .col-10
                     form.header-search
-                        input.form-control(type='search', name="search", placeholder='Search our store', aria-label='Search')
+                        input.form-control(type='search', name="search desctop", placeholder='Search our store', aria-label='Search')
                         button.btn.btn-outline-primary(type='submit')
                             i.fa.fa-search
-include _navbar-mob
+    include _navbar-mob

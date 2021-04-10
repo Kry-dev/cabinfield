@@ -1,5 +1,3 @@
-
-
 .header {
     
     &-top {
@@ -72,21 +70,22 @@
             margin-left: 1rem;
         }
     }
+    
     &-mdl {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
         padding: 1rem 0;
-        @include media-breakpoint-down(md){
-            //margin-bottom: 2rem;
-        }
+      
     }
+    
     &-user-links {
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
         align-items: center;
+        
         a {
             padding: 0 10px;
             color: $primary;
@@ -96,9 +95,11 @@
             font-size: 0.875rem;
             line-height: 1rem;
         }
+        
         li + li {
             border-left: 1px solid #ECE9E9;
         }
+        
         li:last-child {
             a {
                 padding-right: 0;
@@ -134,10 +135,7 @@
         @include media-breakpoint-up(md) {
             width: 390px;
         }
-        //@include media-breakpoint-down(md) {
-        //    width: 100%;
-        //    margin: 0;
-        //}
+       
     }
     &-btm {
         display: flex;
@@ -147,8 +145,8 @@
         min-height: 54px;
         .container {
             position: relative;
-            
         }
+        
         .nav {
             display: flex;
             flex-direction: row;
@@ -161,13 +159,18 @@
             }
             .dropdown {
                 position: initial;
+                &:hover>.dropdown-menu {
+                    display: flex;
+                }
+    
             }
+            
             .dropdown-toggle {
                 font-family: $header-font;
                 font-style: normal;
                 font-weight: 700;
                 font-size: 17px;
-                line-height: 20px;
+                line-height: 54px;
                 text-transform: uppercase;
                 color: $white;
                 &:after {
@@ -180,19 +183,18 @@
             .caret {
                 display: none;
             }
+            
             .dropdown-menu {
-                //display: flex;
                 flex-direction: row;
                 flex-wrap: wrap;
-                margin: 1rem 0 0;
-                padding: 13px 0 0;
                 border: 1px solid $warning;
                 width: 100%;
                 position: absolute;
+                top: 50px;
                 overflow: hidden;
                 &.show {
                     display: flex;
-                    transform: translate3d(0, 22px, 0px) !important;
+                    transform: translate3d(0, 22px, 0) !important;
                 }
                 &-left {
                     display: flex;
@@ -215,7 +217,6 @@
                     display: inline-flex;
                     align-items: center;
                     justify-content: center;
-                    border-left: 1px solid #000000;
                     max-width: 40%;
                     width: 100%;
                 }
@@ -283,6 +284,7 @@
         }
         
     }
+    
     &-mob{
         display: flex;
         align-items: center;

@@ -17,23 +17,23 @@
     color: $breadcrumb-color;
     font-size: 0.6875rem;
     text-transform: uppercase;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Helvetica", sans-serif;
     font-style: normal;
     font-weight: normal;
     line-height: 15px;
-    
+
     a {
         display: inline-block;
         color: $breadcrumb-color;
         font-size: 0.6875rem;
         text-transform: uppercase;
-        font-family: "Open Sans", sans-serif;
+        font-family: "Helvetica", sans-serif;
         font-style: normal;
         font-weight: normal;
         line-height: 15px;
         vertical-align: middle;
     }
-    
+
     + .breadcrumb-item::before {
         display: inline-block; // Suppress underlining of the separator in modern browsers
         padding-right: .5rem;
@@ -44,7 +44,7 @@
         font-size: 5px;
         transform: translateY(-1px);
     }
-    
+
     // IE9-11 hack to properly handle hyperlink underlines for breadcrumbs built
     // without `<ul>`s. The `::before` pseudo-element generates an element
     // *within* the .breadcrumb-item and thereby inherits the `text-decoration`.
@@ -54,16 +54,16 @@
     + .breadcrumb-item:hover::before {
         text-decoration: underline;
     }
-    
+
     // stylelint-disable-next-line no-duplicate-selectors
     + .breadcrumb-item:hover::before {
         text-decoration: none;
     }
-    
+
     &.active {
         color: $breadcrumb-active-color;
     }
-    
+
     .fa {
         font-size: 12px;
         line-height: 15px;
