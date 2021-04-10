@@ -7,9 +7,10 @@ block content
     +breadcrumbs([['Bedrooms', '#'], ['Shop Collections', '#'], ['SHOP Series', '#']])
     main.content.pt-lg-0
         .container.mb-5
-            .d-flex.flex-row.justify-content-between
-                h1.text-left.text-dark.text-bold Mission Bedroom Series
-                a.btn.btn-lg.btn-warning.ml-auto(href="#") Shop by furniture piece
+            .d-flex.flex-column.flex-md-row.justify-content-between
+                h1.text-left.text-dark.text-bold.text-center.text-md-left Mission Bedroom Series
+                a.btn.btn-lg.btn-warning.m-auto.ml-md-auto.d-none.d-md-inline-flex(href="#") Shop by furniture piece
+                a.btn.btn-lg.btn-outline-primary.w-100.d-block.d-md-none(href="#") Shop by furniture piece
         <!--Widgets for inner page-->
         include ../layout/_style-widgets
         <!--Widgets for inner page end-->
