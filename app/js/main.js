@@ -107,9 +107,9 @@ $(document).ready(function () {
         arrows: false,
         responsive: [
             {
-                breakpoint: 992,
+                breakpoint: 1201,
                 settings: {
-                    vertical: true,
+                    vertical: false,
                     slidesToShow: 4,
                     slidesToScroll: 1
                 }
@@ -136,7 +136,7 @@ $(document).ready(function () {
                 breakpoint: 425,
                 settings: {
                     vertical: false,
-                    slidesToShow: 2,
+                    slidesToShow: 4,
                     slidesToScroll: 1,
                     draggable: true,
                     variableWidth: false

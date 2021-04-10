@@ -21,7 +21,9 @@
     position: relative;
     padding-left: 58px;
     padding-top: 6px;
-    
+    @include media-breakpoint-down(md){
+        padding-left: 0;
+    }
     .avatar {
         text-align: center;
         display: block;
@@ -54,6 +56,9 @@
         .stars-rating {
             margin-left: .5rem;
         }
+        @include media-breakpoint-down(md){
+            padding-left: 58px;
+        }
     }
     
     .tagline {
@@ -62,6 +67,9 @@
         line-height: 10px;
         font-weight: 400;
         margin-bottom: 12px;
+        @include media-breakpoint-down(md){
+            padding-left: 58px;
+        }
     }
     
     .text {
@@ -79,6 +87,11 @@
             font-size: 24px;
             position: absolute;
             margin: 5px 14px 0 -37px;
+        }
+        @include media-breakpoint-down(md){
+            &:before {
+                display: none;
+            }
         }
     }
     

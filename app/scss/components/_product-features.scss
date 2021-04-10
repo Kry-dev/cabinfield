@@ -44,26 +44,43 @@
     &-nav {
         background: $product-option-shadow-color;
         border-bottom: 3px solid $blue;
-
+        flex-wrap: nowrap;
         .nav-link {
-            font-size: 0.875rem;
-            min-width: 188px;
+            font-size: 12px;
             text-transform: uppercase;
-            font-weight: 700;
-            color: $text-dark;
+            font-weight: 400;
+            color: $black;
             text-align: center;
             margin-bottom: -4px;
             border-width: 3px;
             border-radius: 0;
+            padding: .5rem .5rem;
+            @include media-breakpoint-up(md) {
+                font-size: 0.875rem;
+                min-width: 188px;
+                padding: .5rem 1rem;
+            }
         }
         .nav-link.active {
             border-color: $blue $blue $white;
+            font-weight: 700;
         }
         .nav-link:focus,
         .nav-link:hover {
             background: $blue;
             color: $white;
             border-color: $blue;
+        }
+        @include media-breakpoint-down(sm) {
+            flex-wrap: wrap;
+            flex-direction: column;
+            border-bottom-color: transparent;
+            .nav-link {
+                width: 100%;
+            }
+            .nav-link.active {
+                border-color: $blue $blue;
+            }
         }
     }
     .tab-pane {

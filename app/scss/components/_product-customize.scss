@@ -126,6 +126,9 @@
     padding-bottom: 1rem;
     padding-left: .5rem;
     border-bottom: 1px dashed $product-border-color;
+    @include media-breakpoint-down(md){
+        padding-left: 0;
+    }
 }
 
 .product-customize-list {
@@ -137,6 +140,9 @@
         display: inline-flex;
         position: relative;
         margin-right: 20px;
+        @include media-breakpoint-down(sm){
+            margin-right: 10px;
+        }
         input {
             display: block;
             position: absolute;
@@ -183,7 +189,9 @@
             padding: 0 1.4375rem;
             border-radius: 2px;
             box-shadow: inset 0 -3px 0 0 $product-option-shadow-color, inset 0 2px 0 0 $white;
-
+            @include media-breakpoint-down(md) {
+                margin-bottom: 1rem;
+            }
             .text-dark {
                 color: $option-label-color !important;
             }
