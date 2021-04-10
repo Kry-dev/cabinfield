@@ -26,7 +26,6 @@
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
-            
             li,
             a {
                 color: $black;
@@ -35,22 +34,23 @@
     }
     
     a {
-        font-size: 0.8125rem;
+        font-size: 15px;
+        line-height: 20px;
         font-weight: 600;
         text-decoration: none !important;
-        border-bottom: 2px solid transparent;
-        margin: 0 .5rem;
-        
+        padding: 3px .5rem;
+        border-bottom: 1px solid $black;
         &.inactive {
-            color: $breadcrumb-color;
-            border-bottom: 2px solid $breadcrumb-color;
+            color: $brown;
+            border-bottom: 1px solid $brown;
+            
         }
     }
     
     &-arrow {
         color: $brown;
         position: relative;
-        border-bottom: 2px solid transparent;
+        border-bottom: 1px solid transparent !important;
         
         &.prev {
             margin: 0 auto 0 0;
@@ -119,8 +119,10 @@ nav ul.pagination {
         }
         
     }
+    
     li:first-child {
         margin-right: auto;
+        
         .page-link {
             position: relative;
             &:before {
