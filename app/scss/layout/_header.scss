@@ -159,7 +159,10 @@
             }
             .dropdown {
                 position: initial;
-                &:hover>.dropdown-menu {
+                &:hover {
+                    cursor: pointer;
+                }
+                &:hover >.dropdown-menu {
                     display: flex;
                 }
     
