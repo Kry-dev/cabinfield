@@ -251,13 +251,17 @@
                 list-style: none;
             }
             &-subtitle {
-                margin-bottom: 0;
+                margin-bottom: 10px;
+                font-family: $header-font;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 13px;
+                line-height: 26px;
                 a {
                     font-family: $header-font;
                     font-style: normal;
                     font-weight: 700;
                     font-size: 13px;
-                    line-height: 26px;
                     text-decoration: underline;
                     color: #70444A;
                 }
