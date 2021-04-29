@@ -1,6 +1,8 @@
 .btn {
     padding: .2rem .75rem;
-    
+    text-align: center;
+    font-style: normal;
+    position: relative;
     &-order {
         position: relative;
         color: $white;
@@ -55,15 +57,6 @@
     }
     
     &-warning {
-        position: relative;
-        font-family: "Helvetica", sans-serif;
-        font-style: normal;
-        font-weight: 600;
-        font-size: 13px;
-        line-height: 16px;
-        text-align: center;
-        text-transform: uppercase;
-        border-radius: 2px;
         
         .fa {
             position: absolute;

@@ -431,10 +431,10 @@
     <main class="content pt-2">
       <div class="container">
         <div class="row">
-          <div class="col-6">
-            <h1 class="mb-3">Kennet Series</h1>
+          <div class="col-md-12 col-lg-5 col-xl-6">
+            <h1 class="mb-md-3">Kennet Series</h1>
           </div>
-          <div class="col-6">
+          <div class="col-lg-7 col-xl-6 d-none d-lg-flex">
             <div class="product-collection-sort">
               <label>Sort by:</label>
               <select class="selectpicker form-control form-control-lg mx-2">
@@ -447,11 +447,183 @@
             </div>
           </div>
         </div>
+        <!--DETAILS MOBILE FILTER BUTTONS-->
+        <div class="row d-flex d-lg-none">
+          <div class="col-md-4 col-xs-12 mb-4 mb-md-0"><a class="btn btn-outline-primary w-100" href="#">Shop by furniture piece</a></div>
+          <div class="col-md-4 col-6">
+            <button class="btn btn-outline-warning w-100" onclick="$('#mobile-sort').show();">Sort</button>
+          </div>
+          <div class="col-md-4 col-6">
+            <button class="btn btn-warning w-100" onclick="$('#mobile-filter-list').show();">Filter Search</button>
+          </div>
+        </div>
+        <!--mobile filter list-->
+        <div class="filter-mobile" id="mobile-filter-list">
+          <div class="filter-mobile--top">
+            <button class="text-primary text-uppercase" onclick="$('#mobile-filter-list').hide();"><i class="fa fa-caret-left text-black mr-3"></i> Go back</button>
+          </div>
+          <div class="row filter-mobile--cta">
+            <div class="col-6"><a class="btn btn-outline-warning w-100" href="#">Clear</a></div>
+            <div class="col-6"><a class="btn btn-warning w-100" href="#">Filter Search</a></div>
+          </div>
+          <div class="filter-tabs">
+            <div class="filter-tab">
+              <input id="chck1" type="checkbox">
+              <label class="filter-tab--label" for="chck1">Furniture Type<span class="text-bold">(4)</span></label>
+              <div class="filter-tab--content">
+                <ul class="product-filters-list">
+                  <li class="checkbox custom_checkbox">
+                    <input id="fur-type-0" type="checkbox" name="" value="">
+                    <label for="fur-type-0">Bedroom Furniture set</label>
+                  </li>
+                  <li class="checkbox custom_checkbox">
+                    <input id="fur-type-1" type="checkbox" name="" value="" checked="">
+                    <label for="fur-type-1">Beds and Headboards</label>
+                  </li>
+                  <li class="checkbox custom_checkbox">
+                    <input id="fur-type-2" type="checkbox" name="" value="">
+                    <label for="fur-type-2">Bedroom Storage Pieces</label>
+                  </li>
+                  <li class="checkbox custom_checkbox">
+                    <input id="fur-type-3" type="checkbox" name="" value="">
+                    <label for="fur-type-3">Bedroom Accessories</label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="filter-tab">
+              <input id="chck2" type="checkbox">
+              <label class="filter-tab--label" for="chck2">Collection<span class="text-bold">(12)</span></label>
+              <div class="filter-tab--content">
+                <ul class="product-filters-list">
+                  <li class="checkbox custom_checkbox">
+                    <input id="wood-mob-0" type="checkbox" name="Wood" value="">
+                    <label for="wood-mob-0">Oak</label>
+                  </li>
+                  <li class="checkbox custom_checkbox">
+                    <input id="wood-mob-1" type="checkbox" name="Wood" value="">
+                    <label for="wood-mob-1">Cherry</label>
+                  </li>
+                  <li class="checkbox custom_checkbox">
+                    <input id="wood-mob-2" type="checkbox" name="Wood" value="">
+                    <label for="wood-mob-2">Brown Maple</label>
+                  </li>
+                  <li class="checkbox custom_checkbox">
+                    <input id="wood-mob-3" type="checkbox" name="Wood" value="">
+                    <label for="wood-mob-3">Quartersawn Oak</label>
+                  </li>
+                  <li class="checkbox custom_checkbox">
+                    <input id="wood-mob-4" type="checkbox" name="Wood" value="">
+                    <label for="wood-mob-4">Bearwood-mob-</label>
+                  </li>
+                  <li class="checkbox custom_checkbox">
+                    <input id="wood-mob-5" type="checkbox" name="Wood" value="">
+                    <label for="wood-mob-5">Apache</label>
+                  </li>
+                  <li class="checkbox custom_checkbox">
+                    <input id="wood-mob-6" type="checkbox" name="Wood" value="">
+                    <label for="wood-mob-6">Hard Maple</label>
+                  </li>
+                  <li class="checkbox custom_checkbox">
+                    <input id="wood-mob-7" type="checkbox" name="Wood" value="">
+                    <label for="wood-mob-7">Walnut</label>
+                  </li>
+                  <li class="checkbox custom_checkbox">
+                    <input id="wood-mob-8" type="checkbox" name="Wood" value="">
+                    <label for="wood-mob-8">Hickory</label>
+                  </li>
+                  <li class="checkbox custom_checkbox">
+                    <input id="wood-mob-9" type="checkbox" name="Wood" value="">
+                    <label for="wood-mob-9">Hard Maple</label>
+                  </li>
+                  <li class="checkbox custom_checkbox">
+                    <input id="wood-mob-10" type="checkbox" name="Wood" value="">
+                    <label for="wood-mob-10">Rustic Hickory</label>
+                  </li>
+                  <li class="checkbox custom_checkbox">
+                    <input id="wood-mob-11" type="checkbox" name="Wood" value="">
+                    <label for="wood-mob-11">Hickory Twigs & Oak</label>
+                  </li>
+                  <li class="checkbox custom_checkbox">
+                    <input id="wood-mob-12" type="checkbox" name="Wood" value="">
+                    <label for="wood-mob-12">Hickory Twigs & Rustic Alder</label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="filter-tab">
+              <input id="chck3" type="checkbox">
+              <label class="filter-tab--label" for="chck3">Style<span class="text-bold">(7)</span></label>
+              <div class="filter-tab--content">
+                <ul class="product-filters-list">
+                  <li class="checkbox custom_checkbox">
+                    <input id="style-mob-0" type="checkbox" name="" value="">
+                    <label for="style-mob-0">Contemporary</label>
+                  </li>
+                  <li class="checkbox custom_checkbox">
+                    <input id="style-mob-1" type="checkbox" name="" value="" checked="">
+                    <label for="style-mob-1">Mission/Craftsman/Arts & Crafts</label>
+                  </li>
+                  <li class="checkbox custom_checkbox">
+                    <input id="style-mob-2" type="checkbox" name="" value="">
+                    <label for="style-mob-2">Mission Beds and Headboards</label>
+                  </li>
+                  <li class="checkbox custom_checkbox">
+                    <input id="style-mob-3" type="checkbox" name="" value="">
+                    <label for="style-mob-3">Traditional</label>
+                  </li>
+                  <li class="checkbox custom_checkbox">
+                    <input id="style-mob-4" type="checkbox" name="" value="">
+                    <label for="style-mob-4">Eclectic</label>
+                  </li>
+                  <li class="checkbox custom_checkbox">
+                    <input id="style-mob-5" type="checkbox" name="" value="">
+                    <label for="style-mob-5">Economy/Value</label>
+                  </li>
+                  <li class="checkbox custom_checkbox">
+                    <input id="style-mob-6" type="checkbox" name="" value="">
+                    <label for="style-mob-6">Traditional</label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--mobile filter sort-->
+        <div class="filter-mobile" id="mobile-sort">
+          <div class="filter-mobile--top">
+            <button class="text-primary text-uppercase" onclick="$('#mobile-sort').hide();"><i class="fa fa-caret-left text-black mr-3"></i> Go back</button>
+          </div>
+          <div class="row filter-mobile--cta">
+            <div class="col-6"><a class="btn btn-outline-warning w-100" href="#">Clear</a></div>
+            <div class="col-6"><a class="btn btn-warning w-100" href="#">Filter Search</a></div>
+          </div>
+          <div class="filter-tabs">
+            <ul class="product-filters-list">
+              <li class="checkbox custom_checkbox">
+                <input id="sort-0" type="checkbox" name="" value="">
+                <label for="sort-0">Low to high</label>
+              </li>
+              <li class="checkbox custom_checkbox">
+                <input id="sort-1" type="checkbox" name="" value="" checked="">
+                <label for="sort-1">High to low</label>
+              </li>
+              <li class="checkbox custom_checkbox">
+                <input id="sort-2" type="checkbox" name="" value="">
+                <label for="sort-2">Most Popular</label>
+              </li>
+              <li class="checkbox custom_checkbox">
+                <input id="sort-3" type="checkbox" name="" value="">
+                <label for="sort-3">Most Relevant</label>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div><!--Filter product list-->
       <section class="product-filters">
         <div class="container">
           <div class="row">
-            <div class="col-lg-3 col-md-3">
+            <div class="col-lg-3 d-none d-lg-flex">
               <div class="product-filters-wrap">
                 <h6 class="product-filters-title">Furniture Type</h6>
                 <ul class="product-filters-list">
@@ -524,13 +696,13 @@
                 </ul><a class="btn btn-outline-warning px-lg-3" href="#">Clear Filter</a>
               </div>
             </div>
-            <div class="collection-listing col-lg-9">
+            <div class="collection-listing col-lg-9 col-md-12">
               <div class="collection-card mb-4">
                 <div class="collection-card--img"><img src="img/collections/collection-02.png"></div>
                 <div class="collection-card--body">
-                  <h2>Kennet Flat Pannel Amish Bed</h2>
+                  <h2 class="collection-card--title">Kennet Flat Pannel Amish Bed</h2>
                   <div class="row">
-                    <div class="col-sm-5 pr-0"><span class="product-number mb-1">Product No.: FGFH1128</span>
+                    <div class="col-xs-12 col-lg-5 pr-md-0"><span class="product-number mb-1">Product No.: FGFH1128</span>
                       <div class="product-rating border-0">
                         <!-- Product rating small in mixin.pug-->
                         <!-- star rating small without number-->
@@ -545,19 +717,19 @@
                   <div class="row align-items-end">
                     <!-- Product furnitureType in mixin.pug-->
                     <!-- product furnitureType-->
-                    <div class="col-6 product-furnitureType mb-0"><span class="text-brown">Starting at</span>
+                    <div class="col-12 col-md-6 product-furnitureType mb-0"><span class="text-brown">Starting at</span>
                       <div class="product-furnitureType-value"><span>$</span><span class="furnitureType-new">1,371.00</span><span class="small ml-2">+ shipping</span></div>
                     </div>
-                    <div class="col-6"><a class="btn btn-warning py-2 w-100" href="#">See Details</a></div>
+                    <div class="collection-card--cta col-12 col-md-6"><a class="btn btn-warning" href="#">See Details</a></div>
                   </div>
                 </div>
               </div>
               <div class="collection-card collection-card--new mb-4">
                 <div class="collection-card--img"><img src="img/collections/collection-03.png"></div>
                 <div class="collection-card--body">
-                  <h2>Kennet Flat Pannel Amish Bed</h2>
+                  <h2 class="collection-card--title">Kennet Flat Pannel Amish Bed</h2>
                   <div class="row">
-                    <div class="col-sm-5 pr-0"><span class="product-number mb-1">Product No.: FGFH1128</span>
+                    <div class="col-xs-12 col-lg-5 pr-md-0"><span class="product-number mb-1">Product No.: FGFH1128</span>
                       <div class="product-rating border-0">
                         <!-- Product rating small in mixin.pug-->
                         <!-- star rating small without number-->
@@ -572,19 +744,19 @@
                   <div class="row align-items-end">
                     <!-- Product furnitureType in mixin.pug-->
                     <!-- product furnitureType-->
-                    <div class="col-6 product-furnitureType mb-0"><span class="text-brown">Starting at</span>
+                    <div class="col-12 col-md-6 product-furnitureType mb-0"><span class="text-brown">Starting at</span>
                       <div class="product-furnitureType-value"><span>$</span><span class="furnitureType-new">1,371.00</span><span class="small ml-2">+ shipping</span></div>
                     </div>
-                    <div class="col-6"><a class="btn btn-warning py-2 w-100" href="#">See Details</a></div>
+                    <div class="collection-card--cta col-12 col-md-6"><a class="btn btn-warning" href="#">See Details</a></div>
                   </div>
                 </div>
               </div>
               <div class="collection-card mb-4">
                 <div class="collection-card--img"><img src="img/collections/collection-04.png"></div>
                 <div class="collection-card--body">
-                  <h2>Kennet Flat Pannel Amish Bed</h2>
+                  <h2 class="collection-card--title">Kennet Flat Pannel Amish Bed</h2>
                   <div class="row">
-                    <div class="col-sm-5 pr-0"><span class="product-number mb-1">Product No.: FGFH1128</span>
+                    <div class="col-xs-12 col-lg-5 pr-md-0"><span class="product-number mb-1">Product No.: FGFH1128</span>
                       <div class="product-rating border-0">
                         <!-- Product rating small in mixin.pug-->
                         <!-- star rating small without number-->
@@ -602,16 +774,16 @@
                     <div class="col-6 product-furnitureType mb-0"><span class="text-brown">Starting at</span>
                       <div class="product-furnitureType-value"><span>$</span><span class="furnitureType-new">1,371.00</span><span class="small ml-2">+ shipping</span></div>
                     </div>
-                    <div class="col-6"><a class="btn btn-warning py-2 w-100" href="#">See Details</a></div>
+                    <div class="collection-card--cta col-12 col-md-6"><a class="btn btn-warning" href="#">See Details</a></div>
                   </div>
                 </div>
               </div>
               <div class="collection-card mb-4">
                 <div class="collection-card--img"><img src="img/collections/collection-02.png"></div>
                 <div class="collection-card--body">
-                  <h2>Kennet Flat Pannel Amish Bed</h2>
+                  <h2 class="collection-card--title">Kennet Flat Pannel Amish Bed</h2>
                   <div class="row">
-                    <div class="col-sm-5 pr-0"><span class="product-number mb-1">Product No.: FGFH1128</span>
+                    <div class="col-xs-12 col-lg-5 pr-md-0"><span class="product-number mb-1">Product No.: FGFH1128</span>
                       <div class="product-rating border-0">
                         <!-- Product rating small in mixin.pug-->
                         <!-- star rating small without number-->
@@ -629,16 +801,16 @@
                     <div class="col-6 product-furnitureType mb-0"><span class="text-brown">Starting at</span>
                       <div class="product-furnitureType-value"><span>$</span><span class="furnitureType-new">1,371.00</span><span class="small ml-2">+ shipping</span></div>
                     </div>
-                    <div class="col-6"><a class="btn btn-warning py-2 w-100" href="#">See Details</a></div>
+                    <div class="collection-card--cta col-12 col-md-6"><a class="btn btn-warning" href="#">See Details</a></div>
                   </div>
                 </div>
               </div>
               <div class="collection-card mb-4">
                 <div class="collection-card--img"><img src="img/collections/collection-03.png"></div>
                 <div class="collection-card--body">
-                  <h2>Kennet Flat Pannel Amish Bed</h2>
+                  <h2 class="collection-card--title">Kennet Flat Pannel Amish Bed</h2>
                   <div class="row">
-                    <div class="col-sm-5 pr-0"><span class="product-number mb-1">Product No.: FGFH1128</span>
+                    <div class="col-xs-12 col-lg-5 pr-md-0"><span class="product-number mb-1">Product No.: FGFH1128</span>
                       <div class="product-rating border-0">
                         <!-- Product rating small in mixin.pug-->
                         <!-- star rating small without number-->
@@ -656,14 +828,14 @@
                     <div class="col-6 product-furnitureType mb-0"><span class="text-brown">Starting at</span>
                       <div class="product-furnitureType-value"><span>$</span><span class="furnitureType-new">1,371.00</span><span class="small ml-2">+ shipping</span></div>
                     </div>
-                    <div class="col-6"><a class="btn btn-warning py-2 w-100" href="#">See Details</a></div>
+                    <div class="collection-card--cta col-12 col-md-6"><a class="btn btn-warning" href="#">See Details</a></div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
           <div class="row">
-            <div class="col-lg-9 offset-md-3">
+            <div class="col-lg-9 offset-lg-3 col-md-12">
               <hr class="mt-3">
               <div class="pagination">
                 <div class="pagination-inner"><a class="pagination-arrow prev inactive" href="#"><span>Previous Page</span></a>

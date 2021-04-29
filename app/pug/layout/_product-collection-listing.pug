@@ -1,7 +1,7 @@
 section.product-filters
     .container
         .row
-            .col-lg-3.col-md-3
+            .col-lg-3.d-none.d-lg-flex
                 .product-filters-wrap
                     h6.product-filters-title Furniture Type
                     ul.product-filters-list
@@ -56,14 +56,14 @@ section.product-filters
                             label(for='wood3') Traditional
 
                     a.btn.btn-outline-warning.px-lg-3(href="#") Clear Filter
-            .collection-listing.col-lg-9
+            .collection-listing.col-lg-9.col-md-12
                 .collection-card.mb-4
                     .collection-card--img
                         img(src="img/collections/collection-02.png")
                     .collection-card--body
-                        h2 Kennet Flat Pannel Amish Bed
+                        h2.collection-card--title Kennet Flat Pannel Amish Bed
                         .row
-                            .col-sm-5.pr-0
+                            .col-xs-12.col-lg-5.pr-md-0
                                 span.product-number.mb-1 Product No.: FGFH1128
                                 .product-rating.border-0
                                     // Product rating small in mixin.pug
@@ -84,21 +84,21 @@ section.product-filters
                         .row.align-items-end
                             // Product furnitureType in mixin.pug
                             // product furnitureType
-                            .col-6.product-furnitureType.mb-0
+                            .col-12.col-md-6.product-furnitureType.mb-0
                                 span.text-brown Starting at
                                 .product-furnitureType-value
                                     span $
                                     span.furnitureType-new 1,371.00
                                     span.small.ml-2 + shipping
-                            .col-6
-                                a.btn.btn-warning.py-2.w-100(href='#') See Details
+                            .collection-card--cta.col-12.col-md-6
+                                a.btn.btn-warning(href='#') See Details
                 .collection-card.collection-card--new.mb-4
                     .collection-card--img
                         img(src="img/collections/collection-03.png")
                     .collection-card--body
-                        h2 Kennet Flat Pannel Amish Bed
+                        h2.collection-card--title Kennet Flat Pannel Amish Bed
                         .row
-                            .col-sm-5.pr-0
+                            .col-xs-12.col-lg-5.pr-md-0
                                 span.product-number.mb-1 Product No.: FGFH1128
                                 .product-rating.border-0
                                     // Product rating small in mixin.pug
@@ -119,21 +119,21 @@ section.product-filters
                         .row.align-items-end
                             // Product furnitureType in mixin.pug
                             // product furnitureType
-                            .col-6.product-furnitureType.mb-0
+                            .col-12.col-md-6.product-furnitureType.mb-0
                                 span.text-brown Starting at
                                 .product-furnitureType-value
                                     span $
                                     span.furnitureType-new 1,371.00
                                     span.small.ml-2 + shipping
-                            .col-6
-                                a.btn.btn-warning.py-2.w-100(href='#') See Details
+                            .collection-card--cta.col-12.col-md-6
+                                a.btn.btn-warning(href='#') See Details
                 .collection-card.mb-4
                     .collection-card--img
                         img(src="img/collections/collection-04.png")
                     .collection-card--body
-                        h2 Kennet Flat Pannel Amish Bed
+                        h2.collection-card--title Kennet Flat Pannel Amish Bed
                         .row
-                            .col-sm-5.pr-0
+                            .col-xs-12.col-lg-5.pr-md-0
                                 span.product-number.mb-1 Product No.: FGFH1128
                                 .product-rating.border-0
                                     // Product rating small in mixin.pug
@@ -160,15 +160,15 @@ section.product-filters
                                     span $
                                     span.furnitureType-new 1,371.00
                                     span.small.ml-2 + shipping
-                            .col-6
-                                a.btn.btn-warning.py-2.w-100(href='#') See Details
+                            .collection-card--cta.col-12.col-md-6
+                                a.btn.btn-warning(href='#') See Details
                 .collection-card.mb-4
                     .collection-card--img
                         img(src="img/collections/collection-02.png")
                     .collection-card--body
-                        h2 Kennet Flat Pannel Amish Bed
+                        h2.collection-card--title Kennet Flat Pannel Amish Bed
                         .row
-                            .col-sm-5.pr-0
+                            .col-xs-12.col-lg-5.pr-md-0
                                 span.product-number.mb-1 Product No.: FGFH1128
                                 .product-rating.border-0
                                     // Product rating small in mixin.pug
@@ -195,15 +195,15 @@ section.product-filters
                                     span $
                                     span.furnitureType-new 1,371.00
                                     span.small.ml-2 + shipping
-                            .col-6
-                                a.btn.btn-warning.py-2.w-100(href='#') See Details
+                            .collection-card--cta.col-12.col-md-6
+                                a.btn.btn-warning(href='#') See Details
                 .collection-card.mb-4
                     .collection-card--img
                         img(src="img/collections/collection-03.png")
                     .collection-card--body
-                        h2 Kennet Flat Pannel Amish Bed
+                        h2.collection-card--title Kennet Flat Pannel Amish Bed
                         .row
-                            .col-sm-5.pr-0
+                            .col-xs-12.col-lg-5.pr-md-0
                                 span.product-number.mb-1 Product No.: FGFH1128
                                 .product-rating.border-0
                                     // Product rating small in mixin.pug
@@ -230,10 +230,10 @@ section.product-filters
                                     span $
                                     span.furnitureType-new 1,371.00
                                     span.small.ml-2 + shipping
-                            .col-6
-                                a.btn.btn-warning.py-2.w-100(href='#') See Details
+                            .collection-card--cta.col-12.col-md-6
+                                a.btn.btn-warning(href='#') See Details
         .row
-            .col-lg-9.offset-md-3
+            .col-lg-9.offset-lg-3.col-md-12
                 hr.mt-3
                 include ../components/_pagination
                 p.text-center.mt-3
