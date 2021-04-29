@@ -41,23 +41,26 @@
             width: 100%;
         }
     }
-    &--title {
-        font-style: normal;
-        font-weight: 700;
-        font-size: 14px;
-        line-height: 16px;
-        color: #514646;
-    }
-    .product-number,
-    .product-furnitureType {
-        font-weight: 40;
-        font-size: 12px;
-        line-height: 16px;
-        .furnitureType-new {
+    @include media-breakpoint-down(sm) {
+        &--title {
+            font-style: normal;
+            font-weight: 700;
             font-size: 14px;
+            line-height: 16px;
+            color: #514646;
         }
+        .product-number,
+        .product-furnitureType {
+            font-weight: 40;
+            font-size: 12px;
+            line-height: 16px;
+            .furnitureType-new {
+                font-size: 14px;
+            }
         
+        }
     }
+    
     &.collection-card--new {
         overflow: hidden;
         &:before ,
