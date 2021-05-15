@@ -79,7 +79,7 @@ a:focus {
     line-height: 1rem;
     &:after {
         content: "\f105";
-        font-family: "FontAwesome";
+        font-family: $font-awesome;
         padding-left: 0.5rem;
     }
     &.toggle-details span {
@@ -347,7 +347,7 @@ a:focus {
     color: #AEA7A5;
     font-family: $font-family-base;;
     font-size: 28px;
-    font-weight: bold;
+    font-weight: 700;
     line-height: 33px;
     border-bottom: 2px solid #EFE9E7;
     margin-bottom: 80px;

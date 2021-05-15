@@ -66,7 +66,7 @@
             
             &:before {
                 content: "\f0da";
-                font-family: "FontAwesome";
+                font-family: $font-awesome;
                 font-size: 1rem;
                 position: absolute;
                 color: $brown;
@@ -123,9 +123,9 @@
             &:before {
                 content: "A.";
                 color: $product-border-color;
-                font-family: "PT Serif Bold", serif;
+                font-family: $font-family-base;
                 font-size: 2rem;
-                font-weight: bold;
+                font-weight: 700;
                 line-height: 1;
                 position: absolute;
                 left: -26px;
@@ -218,9 +218,9 @@
             counter-increment: terms_of_sale_content_h2;
             position: absolute;
             color: $review-border-color;
-            font-family: "PT Serif Bold", serif;
+            font-family: $font-family-base;
             font-size: 1.6875rem;
-            font-weight: bold;
+            font-weight: 700;
             line-height: 2.25rem;
             margin-left: -45px;
             margin-top: -8px;
@@ -249,7 +249,7 @@
         
         &:before {
             content: "\f0da";
-            font-family: "FontAwesome";
+            font-family: $font-awesome;
             font-size: 1rem;
             position: absolute;
             color: $brown;

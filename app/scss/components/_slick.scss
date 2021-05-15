@@ -39,7 +39,7 @@
     border: 1px solid $slick-border-color;
     border-radius: 2px;
     background-color: $white;
-    font-family: 'Font Awesome 5 Free';
+    font-family: $font-awesome;
     
     &:hover, &:focus {
         outline: none;

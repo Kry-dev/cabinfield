@@ -42,7 +42,7 @@
     &.product-customize--edit {
         .product-title {
             font-size: 24px;
-            font-weight: bold;
+            font-weight: 700;
             line-height: 32px;
             margin-bottom: 20px;
             font-family: $font-family-base;;
@@ -98,7 +98,7 @@
         .product-price-value {
             color: $brown;
             font-size: 17px;
-            font-weight: bold;
+            font-weight: 700;
             line-height: 25px;
             margin-right: 10px;
             .small {
@@ -358,7 +358,7 @@
         input[type="radio"]:checked + label,
         input[type="checkbox"]:checked + label {
             .name {
-                font-weight: bold;
+                font-weight: 700;
             }
 
             span {
@@ -501,7 +501,7 @@
             input[type="checkbox"] + label {
                 &:after {
                     content: "\f058";
-                    font-family: "FontAwesome";
+                    font-family: $font-awesome;
                     position: absolute;
                     right: 12px;
                     bottom: 32px;
@@ -514,7 +514,7 @@
             input[type="checkbox"]:checked + label {
                 &:after {
                     content: "\f00c";
-                    font-family: "FontAwesome";
+                    font-family: $font-awesome;
                     position: absolute;
                     right: 11px;
                     bottom: 29px;
@@ -742,7 +742,7 @@
         .title {
             color: #514646;
             font-size: 16px;
-            font-weight: bold;
+            font-weight: 700;
             line-height: 22px;
             text-align: center;
             margin-bottom: 5px;
@@ -775,7 +775,7 @@
         line-height: 1rem;
         text-align: left;
         text-transform: uppercase;
-        font-weight: bold;
+        font-weight: 700;
         margin: auto;
     }
 

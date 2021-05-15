@@ -752,7 +752,7 @@ body.modal-open .mm-slideout {
                     
                     span:before {
                         content: "\f00c";
-                        font-family: "FontAwesome";
+                        font-family: $font-awesome;
                         margin-right: .5rem;
                         color: $blue;
                     }
