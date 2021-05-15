@@ -6,7 +6,7 @@ body {
 body {
     display: flex;
     flex-direction: column;
-    font-family: $font-family-base;
+    font-family: $font-family-base;;
     text-rendering: optimizeLegibility !important;
     -webkit-font-smoothing: antialiased !important;
 }
@@ -38,7 +38,7 @@ b, strong {
 }
 
 h1 {
-    font-family: $font-family-base;
+    font-family: $font-family-base;;
     font-size: 30px;
     line-height: 40px;
     font-weight: 400;
@@ -303,7 +303,7 @@ a:focus {
     
     a {
         color: $black;
-        font-family: $font-family-base;
+        font-family: $font-family-base;;
         font-size: 1rem;
         line-height: 1.5625rem;
         display: inline-block;
@@ -345,7 +345,7 @@ a:focus {
     height: 400px;
     height: 50vh;
     color: #AEA7A5;
-    font-family: $font-family-base;
+    font-family: $font-family-base;;
     font-size: 28px;
     font-weight: bold;
     line-height: 33px;

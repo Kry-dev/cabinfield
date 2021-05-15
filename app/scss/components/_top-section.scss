@@ -59,7 +59,7 @@
 
     &-title {
         color: $black;
-        font-family: "Helvetica", sans-serif;
+        font-family: $font-family-base;;
         font-size: 0.9375rem;
         font-weight: 600;
         line-height: 1.5625rem;
@@ -92,7 +92,7 @@
             padding: 0 .5rem;
             text-transform: uppercase;
             color: $link-color;
-            font-family: "Helvetica", sans-serif;
+            font-family: $font-family-base;;
             font-size: 0.8125rem;
             font-weight: 600;
             line-height: 1.125rem;

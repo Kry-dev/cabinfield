@@ -21,7 +21,7 @@
         font-size: 0.8125rem;
         font-weight: 600;
         line-height: 1.125rem;
-        font-family: "Helvetica", sans-serif;
+        font-family: $font-family-base;;
         border-bottom: 1px solid $product-main-border;
         margin: 22px 0 20px 0;
         padding: 0 0 8px 0;
@@ -82,14 +82,14 @@
             margin-top: 2px;
             font-size: 15px;
             font-weight: 600;
-            font-family: "Helvetica", sans-serif;
+            font-family: $font-family-base;;
         }
         
         .value {
             color: #514646;
             font-size: 13px;
             margin-top: 5px;
-            font-family: "Helvetica", sans-serif;
+            font-family: $font-family-base;;
             
             a,
             span {
@@ -133,7 +133,7 @@
             }
             
             .title {
-                font-family: "Helvetica", sans-serif;
+                font-family: $font-family-base;;
                 font-style: normal;
                 font-weight: 600;
                 font-size: 14px;
@@ -194,7 +194,7 @@
                 a {
                     margin: 0;
                     font-size: 13px;
-                    font-family: "Helvetica", sans-serif;
+                    font-family: $font-family-base;;
                 }
             }
         }
