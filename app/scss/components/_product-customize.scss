@@ -86,7 +86,7 @@
             color: $black;
             font-size: 0.8125rem;;
             padding-left: 0.25rem;
-            font-weight: normal;
+            font-weight: 400;
         }
     }
 
@@ -108,7 +108,7 @@
 
         .product-price-shipping {
             color: $brown;
-            font-size: 13px;
+            font-size: $font-size-sm;
             font-weight: 600;
             line-height: 16px;
         }
@@ -160,15 +160,17 @@
 
         input[type="radio"]:checked + label,
         input[type="checkbox"]:checked + label {
-            background: $product-option-checked-bg;
-            border: 1px solid $product-option-checked-border;
+            //background: $product-option-checked-bg;
+            background: $primary;
+            border: $border-width solid $product-option-checked-border;
             text-shadow: 0 0 .65px #333, 0 0 .65px #333;
-            color: $black;
+            color: $white;
             .enlarge {
                 text-shadow: none;
             }
+            .name,
             span {
-                color: $warning;
+                color: $white;
                 text-shadow: none;
             }
         }
@@ -187,8 +189,9 @@
             min-width: 159px;
             text-align: center;
             padding: 0 1.4375rem;
-            border-radius: 2px;
-            box-shadow: inset 0 -3px 0 0 $product-option-shadow-color, inset 0 2px 0 0 $white;
+            border-radius: $border-radius;
+            //box-shadow: inset 0 -3px 0 0 $product-option-shadow-color, inset 0 2px 0 0 $white;
+            box-shadow: $input-box-shadow;
             @include media-breakpoint-down(md) {
                 margin-bottom: 1rem;
             }
@@ -197,14 +200,14 @@
             }
 
             p {
-                font-weight: normal;
+                font-weight: 400;
             }
 
             p,
             p.name {
                 color: $label-color;
                 font-family: $font-family-base;
-                font-size: 13px;
+                font-size: $font-size-sm;
                 line-height: 1rem;
                 margin-bottom: 0;
                 padding: .18rem .5rem;
@@ -215,6 +218,7 @@
                 text-shadow: 0 0 .5px #333, 0 0 .5px #333;
 
                 .name {
+                    color: $white;
                     text-shadow: 0 0 .5px #333, 0 0 .5px #333;
                 }
 
@@ -310,7 +314,7 @@
 }
 .product-option {
     label {
-        border: 1px solid $review-border-color;
+        border: $border-width solid $review-border-color;
 
         span {
             padding-left: 5px;
@@ -328,7 +332,7 @@
             min-height: 64px;
             height: auto;
             padding: 0;
-            border-radius: 2px;
+            border-radius: $border-radius;
             min-width: 100px;
             margin-bottom: 20px;
             p {
@@ -343,7 +347,7 @@
                 margin: 0 auto;
                 text-align: center;
                 color: $black;
-                font-weight: normal;
+                font-weight: 400;
                 text-transform: uppercase;
             }
 
@@ -359,11 +363,12 @@
         input[type="checkbox"]:checked + label {
             .name {
                 font-weight: 700;
+                color: $white;
             }
 
             span {
-                font-weight: normal;
-                color: $warning;
+                font-weight: 400;
+                color: $white;
             }
             .sample-text {
                 span {
@@ -420,7 +425,7 @@
             flex-direction: row;
             flex-wrap: nowrap;
             justify-content: space-between;
-            font-weight: normal;
+            font-weight: 400;
             &:before {
                 content: "";
                 position: absolute;
@@ -448,8 +453,9 @@
         }
         input[type="radio"]:checked + label,
         input[type="checkbox"]:checked + label {
-            border: 1px solid #D6CDCA;
-            box-shadow: inset 0 -3px 0 0 #F0EDED, inset 0 2px 0 0 #FFF;
+            border: $border-width solid #D6CDCA;
+            //box-shadow: inset 0 -3px 0 0 #F0EDED, inset 0 2px 0 0 #FFF;
+            box-shadow: $input-box-shadow;
             &:before {
                 background: $primary;
                 transition: $transition-base;
@@ -462,7 +468,7 @@
                 transition: $transition-base;
             }
             span {
-                color: $warning;
+                color: $white;
             }
         }
     }
@@ -476,7 +482,7 @@
             min-height: 64px;
             height: auto;
             padding: 0;
-            border-radius: 2px;
+            border-radius: $border-radius;
             min-width: 100px;
 
             span {
@@ -530,7 +536,7 @@
                 }
                 span {
                     text-shadow: none;
-                    color: $warning;
+                    color: $white;
                 }
             }
         }
@@ -541,9 +547,10 @@
         flex-direction: row;
         width: 49%;
         height: 62px;
-        border-radius: 2px;
-        border: 1px solid #D6CDCA;
-        box-shadow: inset 0 -3px 0 0 #F0EDED, inset 0 2px 0 0 $white;
+        border-radius: $border-radius;
+        border: $border-width solid #D6CDCA;
+        //box-shadow: inset 0 -3px 0 0 #F0EDED, inset 0 2px 0 0 $white;
+        box-shadow: $input-box-shadow;
         position: relative;
         margin-bottom: 14px;
         padding-right: 30px;
@@ -603,9 +610,10 @@
         &:focus,
         &.selected {
             cursor: pointer;
-            border: 1px solid #879DBC;
+            border: $border-width solid #879DBC;
             background-color: #F5F9FF;
-            box-shadow: inset 0 -2px 0 0 $white, inset 0 3px 0 0 #DEE3EA;
+            //box-shadow: inset 0 -2px 0 0 $white, inset 0 3px 0 0 #DEE3EA;
+            box-shadow: $input-box-shadow;
 
             p {
                 font-weight: 600;
@@ -657,7 +665,7 @@
     p {
         color: #8C7F7F;
         font-family: $font-family-base;
-        font-size: 13px;
+        font-size: $font-size-sm;
         line-height: 1rem;
         margin-bottom: 0;
         padding: .18rem 0;
@@ -679,21 +687,23 @@
     flex-direction: row;
     width: 49%;
     height: 62px;
-    border-radius: 2px;
-    border: 1px solid #D6CDCA;
-    box-shadow: inset 0 -3px 0 0 #F0EDED, inset 0 2px 0 0 $white;
+    border-radius: $border-radius;
+    border: $border-width solid #D6CDCA;
+    //box-shadow: inset 0 -3px 0 0 #F0EDED, inset 0 2px 0 0 $white;
+    box-shadow: $input-box-shadow;
     position: relative;
     margin-bottom: 14px;
     padding-right: 20px;
     &:hover,
     &:focus{
         cursor: pointer;
-        border: 1px solid #879DBC;
-        box-shadow: inset 0 -2px 0 0 $white, inset 0 3px 0 0 #DEE3EA;
+        border: $border-width solid #879DBC;
+        //box-shadow: inset 0 -2px 0 0 $white, inset 0 3px 0 0 #DEE3EA;
+        box-shadow: $input-box-shadow;
     }
     &.selected {
         cursor: pointer;
-        border: 1px solid #879DBC;
+        border: $border-width solid #879DBC;
         background-color: #F5F9FF;
 
 
@@ -713,8 +723,9 @@
         .custom-control-label::before {
             margin-top: 0;
             left: -1.5rem;
-            border: 1px solid #CBC2BF;
-            box-shadow: inset 0 3px 0 0 #F0EDED, inset 0 2px 0 0 #FFFFFF;
+            border: $border-width solid #CBC2BF;
+            //box-shadow: inset 0 3px 0 0 #F0EDED, inset 0 2px 0 0 #FFFFFF;
+            box-shadow: $input-box-shadow;
         }
         .custom-control-label::after {
             margin-top: 0;
@@ -724,7 +735,7 @@
             margin-left: 1rem;
         }
         .custom-control-input:checked~.custom-control-label::before {
-            border: 1px solid #627590;
+            border: $border-width solid #627590;
         }
         &:focus,
         &:hover {
@@ -750,7 +761,7 @@
 
         .text {
             color: #514646;
-            font-size: 13px;
+            font-size: $font-size-sm;
             font-weight: 600;
             line-height: 18px;
             text-align: center;
@@ -780,7 +791,7 @@
     }
 
     .descr {
-        font-size: 14px;
+        font-size: $font-size-sm;
         color: $text-dark;
     }
 }

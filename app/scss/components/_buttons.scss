@@ -1,61 +1,9 @@
 .btn {
-    padding: .2rem .75rem;
+    //padding: .2rem .75rem;
     text-align: center;
     font-style: normal;
     position: relative;
-    &-order {
-        position: relative;
-        color: $white;
-        background: url(../img/general/order_button.png) no-repeat center;
-        background-size: 110%;
-        text-transform: uppercase;
-        border-radius: 2px;
-        box-shadow: inset 0 -3px 0 0 rgba(143, 31, 0, 0.21), inset 0 2px 0 0 rgba(255, 205, 175, 0.51), 0 1px 0 0 rgba(132, 25, 0, 0.19);
-        
-        &.btn-lg {
-            min-width: 247px;
-            height: 2.75rem;
-            font-size: 0.875rem;
-            font-weight: 600;
-            line-height: 1.3125rem;
-            padding: .675rem 1rem;
-            @include media-breakpoint-down(lg) {
-                min-width: 200px;
-                box-shadow: inset 0 0 0 0 rgba(143, 31, 0, 0.21), inset 0 0 0 0 rgba(255, 205, 175, 0.51), 0 0 0 0 rgba(132, 25, 0, 0.19);
-            }
-        }
-        
-        &.btn-sm {
-            background-size: cover;
-            min-width: 134px;
-            padding: .675rem .5rem;
-            font-family: $font-family-base;
-            font-size: 0.875rem;
-            font-weight: 700;
-            letter-spacing: 0.2px;
-            line-height: 1;
-            text-align: center;
-            box-shadow: inset 0 -3px 0 0 rgba(143, 31, 0, 0.21), inset 0 2px 0 0 rgba(255, 205, 175, 0.51), 0 0 0 0 rgba(132, 25, 0, 0.19);
-            
-        }
-        
-        &:hover,
-        &:focus {
-            color: $white;
-            opacity: .7;
-        }
-        
-        .fa {
-            position: absolute;
-            font-size: inherit;
-            color: inherit;
-            z-index: 50;
-            left: 1rem;
-            top: .65rem;
-            display: block;
-        }
-    }
-    
+   
     &-warning {
         
         .fa {
@@ -99,8 +47,8 @@
         height: 45px;
         padding: 0;
         width: 25px;
-        border: 1px solid $slick-border-color;
-        border-radius: 2px;
+        border: $border-width solid $slick-border-color;
+        border-radius: $border-radius;
         background-color: $white;
         display: flex;
         justify-content: center;
@@ -125,7 +73,7 @@
         font-size: 0.75rem;
         line-height: 1.1rem;
         text-align: center;
-        border: 1px solid $brown;
+        border: $border-width solid $brown;
         border-radius: 2.2px;
         white-space: inherit;
         padding: 4px 0;
@@ -133,18 +81,11 @@
     
     &-default {
         color: $white;
-        border: 1px solid $bodrer-color-default;
-        border-radius: 3px;
-        background-color: $bkg-color-default;
-        box-shadow: inset 0 -3px 0 0 $link-color, inset 0 2px 0 0 $default-bo-shadow-color;
+        border: $border-width solid $primary;
+        border-radius: $border-radius;
+        background-color: $primary;
+        box-shadow: $input-box-shadow;
         
-        &.btn-lg {
-            height: auto;
-            min-height: 50px;
-            padding: 1rem;
-            font-size: 1.3125rem;
-            line-height: 1.75rem;
-        }
     }
     
     &-explore {
@@ -174,29 +115,7 @@
     }
 }
 
-.btn-filled {
-    color: $white;
-    font-family: $font-family-base;
-    font-size: 0.8125rem;
-    font-weight: 700;
-    line-height: 1.0625rem;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    height: 50px;
-    width: 106px;
-    border: 1px solid rgba(164, 72, 43, 0.44);
-    border-radius: 2px;
-    background-color: #D6815F;
-    box-shadow: inset 0 -3px 0 0 rgba(143, 31, 0, 0.21), inset 0 2px 0 0 rgba(255, 205, 175, 0.51), 0 1px 0 0 rgba(132, 25, 0, 0.19);
-    
-    &:hover,
-    &:focus {
-        cursor: pointer;
-        opacity: 0.7;
-        color: $white;
-    }
-}
+
 
 #to_top {
     transition: none !important;
@@ -217,7 +136,7 @@
         height: 100%;
         content: "";
         position: absolute;
-        border: 1px solid $link-color;
+        border: $border-width solid $link-color;
         transform: rotate(45deg);
         left: 0;
         top: 0;
@@ -253,8 +172,8 @@
 }
 
 .btn-outline-blue {
-    border: 1px solid #879DBC;
-    border-radius: 2px;
+    border: $border-width solid #879DBC;
+    border-radius: $border-radius;
     display: inline-block;
     margin: 12px 0;
     padding: .2rem .75rem;
@@ -276,11 +195,11 @@
 
 .btn-discount {
     display: inline-block;
-    border: 1px solid $brown;
-    border-radius: 2px;
+    border: $border-width solid $brown;
+    border-radius: $border-radius;
     background: transparent;
     color: $brown !important;
-    font-size: 13px;
+    font-size: $font-size-sm;
     font-weight: 700;
     letter-spacing: 0.2px;
     height: 37px;
@@ -297,12 +216,12 @@
 
 .btn-order {
     display: inline-block;
-    border: 1px solid rgba(164, 72, 43, 0.44);
+    border: $border-width solid rgba(164, 72, 43, 0.44);
     box-shadow: inset 0 -1px 0 0 rgba(143, 31, 0, 0.21), inset 0 1px 0 0 rgba(255, 205, 175, 0.51), 0 1px 0 0 rgba(132, 25, 0, 0.19);
     background: #D6815F url(../img/general/order_button.png) no-repeat center;
     background-size: cover;
     color: #fff;
-    font-size: 14px;
+    font-size: $font-size-sm;
     font-weight: 700;
     line-height: 1;
     text-transform: uppercase;
@@ -320,15 +239,15 @@
 
 .btn-outline-warning {
     border: 2px solid $brown;
-    border-radius: 2px;
+    border-radius: $border-radius;
 }
 .btn-collection {
     display: inline-block;
     width: 100%;
     background: #FBFAF9;
-    border: 1px solid #E5DFDD;
+    border: $border-width solid #E5DFDD;
     text-transform: uppercase;
-    font-size: 11px;
+    font-size: $font-size-sm;
     line-height: 15px;
     text-align: center;
     vertical-align: middle;
@@ -337,7 +256,7 @@
     border-radius: 0;
     &:after {
         content: "\f105";
-        font-family: FontAwesome;
+        font-family: $font-awesome;
         padding-left: .5rem;
         font-style: 13px;
     }
@@ -352,7 +271,7 @@
     text-transform: uppercase;
     height: auto;
     padding: 12px 5px 0;
-    border-radius: 2px;
+    border-radius: $border-radius;
     min-width: 100px;
     margin-bottom: 10px;
     -ms-flex-align: center;
@@ -364,7 +283,7 @@
     text-align: center;
     background: $product-option-checked-border;
     color: $white;
-    border: 1px solid #d6cdca;
+    border: $border-width solid #d6cdca;
     .sample-text {
         text-align: center;
         margin-bottom: 0;
@@ -397,13 +316,13 @@
 }
 .btn-why,
 a.btn-why {
-    font-size: 14px;
+    font-size: $font-size-sm;
     font-weight: 700;
     color: $black;
     text-transform: uppercase;
     padding: 12px 16px;
     background: transparent;
-    border: 1px solid $brown;
+    border: $border-width solid $brown;
     @include transition($btn-transition);
     &:hover,
     &:focus {

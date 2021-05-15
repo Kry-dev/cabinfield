@@ -39,7 +39,7 @@
             bottom: 6px;
             left: 6px;
             z-index: -1;
-            border: 1px solid #F2EFEE;
+            border: $border-width solid #F2EFEE;
             background: url(../img/svg/phone.svg) no-repeat bottom right;
         }
         
@@ -52,7 +52,7 @@
             span {
                 font-family: $font-family-base;
                 color: #897575;
-                font-size: 14px;
+                font-size: $font-size-sm;
                 line-height: 19px;
                 text-transform: uppercase;
                 display: block;

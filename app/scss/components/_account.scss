@@ -28,12 +28,12 @@
     }
     
     p {
-        font-size: 13px;
+        font-size: $font-size-sm;
         line-height: 18px;
     }
     
     .addr p {
-        font-size: 13px;
+        font-size: $font-size-sm;
         line-height: 18px;
         margin: 0 0 5px;
         color: #000000;
@@ -80,14 +80,14 @@
         
         .title {
             margin-top: 2px;
-            font-size: 15px;
+            font-size: $font-size-sm;
             font-weight: 600;
             font-family: $font-family-base;
         }
         
         .value {
             color: #514646;
-            font-size: 13px;
+            font-size: $font-size-sm;
             margin-top: 5px;
             font-family: $font-family-base;
             
@@ -136,7 +136,7 @@
                 font-family: $font-family-base;
                 font-style: normal;
                 font-weight: 600;
-                font-size: 14px;
+                font-size: $font-size-sm;
                 line-height: 19px;
             }
             
@@ -193,7 +193,7 @@
                 
                 a {
                     margin: 0;
-                    font-size: 13px;
+                    font-size: $font-size-sm;
                     font-family: $font-family-base;
                 }
             }

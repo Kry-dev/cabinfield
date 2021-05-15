@@ -192,7 +192,7 @@ $card-height: 21rem;
             }
         }
         p {
-            font-size: 14px;
+            font-size: $font-size-sm;
             line-height: 19px;
             font-weight: 600;
             max-width: 460px;
@@ -294,7 +294,7 @@ $card-height: 21rem;
     }
     
     .card-review {
-        border: 1px solid $review-border-color;
+        border: $border-width solid $review-border-color;
         min-height: $card-height * 1.5;
         background: $white url(../img/homepage/review.png) no-repeat center bottom;
         background-size: contain;

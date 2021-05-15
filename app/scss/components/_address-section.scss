@@ -23,7 +23,7 @@
     .address-subtitle {
         display: flex;
         width: 100%;
-        font-size: 14px;
+        font-size: $font-size-sm;
         text-transform: uppercase;
         padding: 4px 14px 5px;
         font-family: $font-family-base;
@@ -80,7 +80,7 @@
         font-size: 12px;
 
         .fa {
-            font-size: 13px;
+            font-size: $font-size-sm;
             margin: 0 10px 0 0;
         }
     }
@@ -104,8 +104,8 @@
     p {
         font-family: $font-family-base;
         font-style: normal;
-        font-weight: normal;
-        font-size: 15px;
+        font-weight: 400;
+        font-size: $font-size-sm;
         line-height: 23px;
         color: #514646;
         margin-bottom: 6px;

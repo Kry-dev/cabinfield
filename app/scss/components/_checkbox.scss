@@ -19,8 +19,8 @@
         top: 0;
         position: absolute;
         left: 0;
-        border: 1px solid #D6CDCA;
-        border-radius: 2px;
+        border: $border-width solid #D6CDCA;
+        border-radius: $border-radius;
         box-shadow: inset 0 2px 0 0 #F4F2F2;
     }
     
@@ -48,7 +48,7 @@
     }
     
     input[type="checkbox"] + label:after {
-        font-size: 13px;
+        font-size: $font-size-sm;
     }
     
     input[type="checkbox"]:checked + label:after {
@@ -82,7 +82,7 @@
         top: 2px;
         position: absolute;
         left: 0;
-        border: 1px solid #D6CDCA;
+        border: $border-width solid #D6CDCA;
         border-radius: 50%;
         box-shadow: inset 0 2px 0 0 #F4F2F2;
     }

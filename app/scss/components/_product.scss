@@ -88,7 +88,7 @@
             @include media-breakpoint-down(md) {
                 font-family: "Open Sans";
                 font-style: normal;
-                font-weight: normal;
+                font-weight: 400;
                 font-size: 12px;
                 line-height: 16px;
                 color: #514646;
@@ -104,7 +104,7 @@
         }
         
         .product-price-shipping > span {
-            font-size: 15px;
+            font-size: $font-size-sm;
             &.small {
                 font-size: 0.8125rem;
             }
@@ -120,7 +120,7 @@
             .btn {
                 height: 37px;
                 min-width: 180px;
-                font-size: 14px;
+                font-size: $font-size-sm;
                 padding: 0 28px;
                 display: flex;
                 justify-content: center;
@@ -244,7 +244,7 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            border: 1px solid $product-main-border;
+            border: $border-width solid $product-main-border;
             max-width: 450px;
             img {
                 max-width: 100%;
@@ -311,7 +311,7 @@
                 text-align: center;
                 vertical-align: middle;
                 color: $white;
-                font-size: 14px;
+                font-size: $font-size-sm;
                 line-height: 32px;
                 font-family: $font-family-base;
                 font-weight: 700;
@@ -327,7 +327,7 @@
         width: 100%;
         max-width: 406px;
         margin-left: 15px;
-        border: 1px solid $product-main-border;
+        border: $border-width solid $product-main-border;
         padding: 12px 12px 12px 16px;
         background: #FBFAF9 url(../img/product/assembly.png) no-repeat center bottom;
         background-size: contain;
@@ -370,7 +370,7 @@
     }
     
     .small {
-        font-size: 13px;
+        font-size: $font-size-sm;
     }
     
     &-selected-option {
@@ -399,7 +399,7 @@
         line-height: 1.2;
     }
     .product-rating a{
-        font-size: 13px;
+        font-size: $font-size-sm;
     }
 }
 
@@ -444,14 +444,14 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 20px;
-    border: 1px solid #E5DFDD;
+    border: $border-width solid #E5DFDD;
     background-color: #FBFAF9;
     padding: 15px 20px;
     
     span {
         font-family: $font-family-base;
         color: #514646;
-        font-size: 15px;
+        font-size: $font-size-sm;
         line-height: 24px;
     }
     
@@ -520,8 +520,8 @@
     &:before {
         content: '\f0f6';
         position: absolute;
-        font-family: FontAwesome;
-        font-weight: normal;
+        font-family: $font-awesome;
+        font-weight: 400;
         width: 34px;
         font-size: 34px;
         display: block;
@@ -532,8 +532,8 @@
     &:after {
         content: '\f1ec';
         position: absolute;
-        font-family: FontAwesome;
-        font-weight: normal;
+        font-family: $font-awesome;
+        font-weight: 400;
         width: 20px;
         font-size: 20px;
         display: block;
@@ -573,7 +573,7 @@
         h6 {
             font-family: "PT Serif";
             font-style: normal;
-            font-weight: normal;
+            font-weight: 400;
             font-size: 20px;
             line-height: 27px;
             color: $text-dark;
@@ -584,7 +584,7 @@
             height: auto;
             color: $text-dark;
             font-family: "Helvetica";
-            font-size: 13px;
+            font-size: $font-size-sm;
             line-height: 16px;
             margin-bottom: 0;
         }
@@ -596,7 +596,7 @@
             font-family: "Helvetica";
             font-style: normal;
             font-weight: 700;
-            font-size: 14px;
+            font-size: $font-size-sm;
             line-height: 20px;
             text-align: center;
             text-transform: uppercase;
@@ -690,7 +690,7 @@
         color: #000;
         font-weight: 400;
         text-transform: uppercase;
-        border: 1px solid #d6cdca;
+        border: $border-width solid #d6cdca;
     }
     
 }
@@ -724,8 +724,8 @@
         height: 45px;
         width: 17px;
         font-size: 17px;
-        border: 1px solid #ded8d5;
-        border-radius: 2px;
+        border: $border-width solid #ded8d5;
+        border-radius: $border-radius;
         background-color: #fff;
         font-family: $font-awesome;
         &.inactive {

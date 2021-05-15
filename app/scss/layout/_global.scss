@@ -138,8 +138,8 @@ a:focus {
 .select {
     text-transform: uppercase;
     display: inline-block;
-    border: 1px solid $bodrer-color-default;
-    border-radius: 2px;
+    border: $border-width solid $bodrer-color-default;
+    border-radius: $border-radius;
     background-color: $bkg-color-default;
     box-shadow: inset 0 -3px 0 0 $link-color, inset 0 2px 0 0 $default-bo-shadow-color;
     color: $white;
@@ -382,10 +382,10 @@ a:focus {
     justify-content: center;
     align-items: center;
     width: 14px;
-    font-size: 11px;
+    font-size: $font-size-sm;
     height: 14px;
     border-radius: 50%;
-    border: 1px solid $blue;
+    border: $border-width solid $blue;
     color: $blue;
     margin: auto auto auto 8px;
     &:hover,
@@ -404,7 +404,7 @@ a:focus {
         border-color: $review-border-color;
         padding: .5rem;
         color: $label-color;
-        border-radius: 2px;
+        border-radius: $border-radius;
         box-shadow: inset 0 3px 0 0 #F4F2F2;
         margin-bottom: 2rem;
     }
@@ -465,14 +465,9 @@ a:focus {
     border-radius: 50%;
     border-right-color: transparent;
     border-bottom-color: transparent;
-    -webkit-transition: all 0.5s ease-in;
-    -webkit-animation-name:             loading;
-    -webkit-animation-duration:         1.0s;
-    -webkit-animation-iteration-count:  infinite;
-    -webkit-animation-timing-function: linear;
     transition: all 0.5s ease-in;
-    animation-name:             loading;
-    animation-duration:         1.0s;
-    animation-iteration-count:  infinite;
+    animation-name: loading;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
     animation-timing-function: linear;
 }

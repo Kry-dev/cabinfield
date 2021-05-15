@@ -270,8 +270,8 @@
         color: $brown-light;
         font-family: Georgia;
         font-style: italic;
-        font-weight: normal;
-        font-size: 15px;
+        font-weight: 400;
+        font-size: $font-size-sm;
         line-height: 17px;
         //margin-right: 31px;
         @media(max-width: 1200px) {
@@ -288,14 +288,14 @@
         
         input {
             padding: .5rem .75rem;
-            font-size: 14px;
+            font-size: $font-size-sm;
         }
         
         .btn {
             position: absolute;
             right: 0;
             top: 0;
-            border: 1px solid transparent;
+            border: $border-width solid transparent;
             box-shadow: none;
             padding: 6px 9px;
             height: 35px;

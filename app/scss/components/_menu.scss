@@ -70,7 +70,7 @@ header {
         padding: 1rem 0;
         font-style: normal;
         font-weight: 600;
-        font-size: 13px;
+        font-size: $font-size-sm;
         line-height: 169%;
         color: $brown;
         position: relative;
@@ -135,7 +135,7 @@ header {
             font-family: $font-family-base;
             font-style: normal;
             font-weight: 400;
-            font-size: 13px;
+            font-size: $font-size-sm;
             line-height: 18px;
             color: $black;
             width: 100%;

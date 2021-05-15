@@ -34,7 +34,7 @@
     }
     
     a {
-        font-size: 15px;
+        font-size: $font-size-sm;
         line-height: 20px;
         font-weight: 600;
         text-decoration: none !important;
@@ -128,7 +128,7 @@ nav ul.pagination {
             &:before {
                 position: absolute;
                 display: block;
-                font-family: FontAwesome;
+                font-family: $font-awesome;
                 content: "\f053";
                 top: 0;
                 left: -10px;
@@ -146,7 +146,7 @@ nav ul.pagination {
             &:after {
                 position: absolute;
                 display: block;
-                font-family: FontAwesome;
+                font-family: $font-awesome;
                 content: "\f054";
                 top: 0;
                 right: -7px;

@@ -860,7 +860,7 @@
                         </div>
                         <div class="person-message">
                           <h6 class="product-customize-subtitle label-color">Message:</h6>
-                          <textarea rows="4"></textarea><a class="btn btn-lg btn-warning" href="#"> add to cart</a>
+                          <textarea rows="4"></textarea><a class="btn btn-warning" href="#"> add to cart</a>
                         </div>
                       </div>
                     </div>
@@ -1113,7 +1113,7 @@
                 <input class="form-control" type="text">
               </div>
               <div class="form-group d-flex">
-                <button class="btn btn-lg btn-order w-100" type="submit">Subscribe</button>
+                <button class="btn btn-warning w-100" type="submit">Subscribe</button>
               </div>
             </form>
           </div>
@@ -1137,7 +1137,7 @@
                 <input class="form-control" type="password" name="pass">
               </div>
               <div class="form-group d-flex">
-                <button class="btn btn-lg btn-order w-100" type="submit">Sign In</button>
+                <button class="btn btn-warning w-100" type="submit">Sign In</button>
               </div>
             </form>
           </div>
@@ -1151,25 +1151,39 @@
     <div class="modal modal--calculate" id="modal--calculate" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-md" role="document">
         <div class="modal-content">
-          <div class="modal-body">
-            <h4 class="text-center modal-title mb-5">Calculate Shipping</h4>
-            <p>Please enter zip code to see shipping charges</p>
-            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-            <form class="form px-5">
-              <div class="form-group">
-                <label class="col-form-label col-form-label-sm">Email address</label>
-                <input class="form-control" type="email" name="newsletter-email">
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+          <form class="form modal-body p-4">
+            <div class="form-group">
+              <h4 class="text-left modal-title">Calculate Shipping</h4>
+              <p>Please enter zip code to see shipping charges</p>
+            </div>
+            <div class="form-group row mt-4">
+              <div class="col-sm-2 d-flex align-content-center">
+                <label for="myZIP">My zip</label>
               </div>
-              <div class="form-group">
-                <label class="col-form-label col-form-label-sm">First Name</label>
-                <input class="form-control" type="text">
+              <div class="col-sm-4">
+                <input class="form-control" id="myZIP" type="text">
               </div>
-              <div class="form-group d-flex">
-                <button class="btn btn-lg btn-brown w-100" type="submit">Subscribe</button>
+            </div>
+            <div class="form-group">
+              <label>Delivery:</label>
+            </div>
+            <div class="form-group">
+              <div class="checkbox custom_checkbox checkbox_primary mb-3">
+                <input id="myZIP0" type="checkbox" name="myZIP" value="" checked="checked">
+                <label class="text-dark" for="myZIP0">Standard curbside delivery</label>
               </div>
-            </form>
-          </div>
-          <div class="modal-footer"></div>
+            </div>
+            <div class="form-group">
+              <div class="checkbox custom_checkbox checkbox_primary">
+                <input id="myZIP1" type="checkbox" name="myZIP" value="">
+                <label class="text-dark" for="myZIP1">Inside delivery with set up</label>
+              </div>
+            </div>
+            <div class="form-group mt-4">
+              <button class="btn btn-warning" type="submit">Calculate and add to cost</button>
+            </div>
+          </form>
         </div>
       </div>
     </div><!--modal calculate end-->
@@ -1604,7 +1618,7 @@
                       <input class="form-control" type="text" id="review-zip" name="zip" minlength="5" maxlength="5" placeholder="8●●●●">
                     </div>
                   </form>
-                  <p><a class="btn btn-order btn-sm d-block" href="#">Calculate Shipping</a></p>
+                  <p><a class="btn btn-warning btn-sm d-block" href="#">Calculate Shipping</a></p>
                 </div>
               </div>
             </div>
@@ -1654,7 +1668,7 @@
                     </div>
                   </div>
                   <p class="mb-5"><small>* Promotion discounts (where applicable) will be shown in the shopping cart.</small></p>
-                  <p><a class="btn btn-order btn-sm d-block" href="#">Calculate Shipping</a></p>
+                  <p><a class="btn btn-warning btn-sm d-block" href="#">Calculate Shipping</a></p>
                   <p><a class="btn btn-outline-warning btn-sm d-block" href="#">Check Out</a></p>
                 </div>
               </div>
@@ -1725,7 +1739,7 @@
                       </div>
                     </div>
                   </form>
-                  <p><a class="btn btn-order btn-sm d-block" href="#">Calculate Shipping</a></p>
+                  <p><a class="btn btn-warning btn-sm d-block" href="#">Calculate Shipping</a></p>
                 </div>
               </div>
             </div>
@@ -1793,7 +1807,7 @@
                         </label>
                         <div class="ctrl-price">+ 46$</div>
                       </div>
-                  <div class="d-flex flex-column p-3"><a class="btn btn-order d-block text-uppercase" href="#">Save</a><a class="btn btn-outline d-block text-uppercase" href="#" data-dismiss="modal" aria-label="Close">cancel</a></div>
+                  <div class="d-flex flex-column p-3"><a class="btn btn-warning d-block text-uppercase" href="#">Save</a><a class="btn btn-outline d-block text-uppercase" href="#" data-dismiss="modal" aria-label="Close">cancel</a></div>
                 </div>
               </div>
             </div>
@@ -2229,10 +2243,10 @@
                 <input class="form-control" type="text" name="zip" minlength="5" maxlength="5" placeholder="8●●●●">
               </div>
               <div class="form-group d-none">
-                <button class="btn btn-order w-100" type="button">Continue Shopping</button>
+                <button class="btn btn-warning w-100" type="button">Continue Shopping</button>
               </div>
               <div class="form-group d-flex">
-                <button class="btn btn-order w-100" type="submit">Check ZIPCode</button>
+                <button class="btn btn-warning w-100" type="submit">Check ZIPCode</button>
               </div>
             </form>
             <div class="modal-footer"></div>

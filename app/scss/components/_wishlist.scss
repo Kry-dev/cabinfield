@@ -40,7 +40,7 @@
             .addr p {
                 font-family: 'Helvetica';
                 font-style: normal;
-                font-weight: normal;
+                font-weight: 400;
                 color: $text-dark;
                 line-height: 1.4375rem;
                 font-size: .8125rem;
@@ -255,7 +255,7 @@
         padding: 0;
         font-family: $font-family-base;
         font-style: normal;
-        font-weight: normal;
+        font-weight: 400;
         font-size: 24px;
         line-height: 32px;
         
@@ -272,7 +272,7 @@
         font-family: $font-family-base;
         font-style: normal;
         font-weight: 600;
-        font-size: 13px;
+        font-size: $font-size-sm;
         line-height: 19px;
         text-transform: uppercase;
         @include media-breakpoint-down(sm) {

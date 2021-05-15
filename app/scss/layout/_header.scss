@@ -115,14 +115,14 @@
         width: 80%;
         input {
             padding: .5rem .75rem;
-            font-size: 14px;
+            font-size: $font-size-sm;
         }
         
         .btn {
             position: absolute;
             right: 0;
             top: 0;
-            border: 1px solid transparent;
+            border: $border-width solid transparent;
             box-shadow: none;
             padding: 6px 9px;
             height: 35px;
@@ -180,7 +180,7 @@
                     display: none;
                 }
                 @include media-breakpoint-down(lg) {
-                    font-size: 14px;
+                    font-size: $font-size-sm;
                 }
             }
             .caret {
@@ -190,7 +190,7 @@
             .dropdown-menu {
                 flex-direction: row;
                 flex-wrap: wrap;
-                border: 1px solid $warning;
+                border: $border-width solid $warning;
                 width: 100%;
                 position: absolute;
                 top: 50px;
@@ -255,13 +255,13 @@
                 font-family: $header-font;
                 font-style: normal;
                 font-weight: 700;
-                font-size: 13px;
+                font-size: $font-size-sm;
                 line-height: 26px;
                 a {
                     font-family: $header-font;
                     font-style: normal;
                     font-weight: 700;
-                    font-size: 13px;
+                    font-size: $font-size-sm;
                     text-decoration: underline;
                     color: #70444A;
                 }
@@ -270,7 +270,7 @@
                 font-family: $header-font;
                 font-style: normal;
                 font-weight: 700;
-                font-size: 13px;
+                font-size: $font-size-sm;
                 line-height: 26px;
                 color: #CC7654;
             }

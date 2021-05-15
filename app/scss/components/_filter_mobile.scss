@@ -42,7 +42,7 @@
             color: $primary;
             font-style: normal;
             font-weight: 400;
-            font-size: 13px;
+            font-size: $font-size-sm;
             line-height: 17px;
             padding: 10px 0;
             border-bottom: 1px solid $primary;
@@ -56,7 +56,7 @@
             }
             &::before {
                 content: "\f0da";
-                font-family: FontAwesome;
+                font-family: $font-awesome;
                 font-size: 1rem;
                 transition: all .35s;
                 color: #000;

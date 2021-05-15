@@ -52,14 +52,14 @@
             width: 75px;
 
             .fa {
-                font-size: 15px;
+                font-size: $font-size-sm;
                 line-height: 15px;
                 width: 15px;
             }
         }
 
         a {
-            font-size: 13px;
+            font-size: $font-size-sm;
             margin-left: 1rem;
         }
     }

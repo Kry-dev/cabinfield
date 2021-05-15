@@ -15,7 +15,7 @@
         $slick-font-url("slick.woff") format("woff"),
         $slick-font-url("slick.ttf") format("truetype"),
         $slick-font-url("slick.svg#slick") format("svg");
-        font-weight: normal;
+        font-weight: 400;
         font-style: normal;
     }
 }
@@ -36,8 +36,8 @@
     padding: 0;
     height: 45px;
     width: 17px;
-    border: 1px solid $slick-border-color;
-    border-radius: 2px;
+    border: $border-width solid $slick-border-color;
+    border-radius: $border-radius;
     background-color: $white;
     font-family: $font-awesome;
     

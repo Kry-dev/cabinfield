@@ -19,7 +19,7 @@
     
     .title {
         color: #514646;
-        font-size: 13px;
+        font-size: $font-size-sm;
         font-weight: 600;
         line-height: 20px;
         margin-bottom: 10px;
@@ -27,6 +27,6 @@
     
     p {
         font-size: 0.8125rem;
-        font-weight: normal;
+        font-weight: 400;
     }
 }

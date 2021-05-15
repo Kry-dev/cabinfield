@@ -37,8 +37,8 @@
         justify-content: center;
         align-items: center;
         width: 28px;
-        border: 1px solid $product-main-border;
-        border-radius: 2px;
+        border: $border-width solid $product-main-border;
+        border-radius: $border-radius;
         font-size: 1.3125rem;
         color: $text-dark;
         background-color: $white;

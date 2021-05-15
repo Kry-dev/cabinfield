@@ -50,7 +50,7 @@
         //&:before {
         //    content: "\f105";
         //    font-size: 18px;
-        //    font-family: FontAwesome;
+        //    font-family: $font-awesome;
         //    position: absolute;
         //    display: block;
         //    left: 0;
@@ -181,8 +181,8 @@
                 padding: 40px 55px 40px 40px;
                 font-family: "Helvetica";
                 font-style: normal;
-                font-weight: normal;
-                font-size: 13px;
+                font-weight: 400;
+                font-size: $font-size-sm;
                 line-height: 19px;
                 color: $black;
 
@@ -236,7 +236,7 @@
             font-family: "Helvetica";
             font-style: normal;
             font-weight: 700;
-            font-size: 14px;
+            font-size: $font-size-sm;
             line-height: 19px;
             text-align: center;
             text-transform: uppercase;

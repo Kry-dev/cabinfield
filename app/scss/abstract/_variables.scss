@@ -18,15 +18,15 @@ $black: #000;
 
 $grays: ();
 $grays: map-merge((
-    "100": $gray-100,
-    "200": $gray-200,
-    "300": $gray-300,
-    "400": $gray-400,
-    "500": $gray-500,
-    "600": $gray-600,
-    "700": $gray-700,
-    "800": $gray-800,
-    "900": $gray-900
+        "100": $gray-100,
+        "200": $gray-200,
+        "300": $gray-300,
+        "400": $gray-400,
+        "500": $gray-500,
+        "600": $gray-600,
+        "700": $gray-700,
+        "800": $gray-800,
+        "900": $gray-900
 ), $grays);
 
 $blue: #627590;
@@ -81,12 +81,12 @@ $o: rgb(39, 25, 25);
 
 $colors: ();
 $colors: map-merge((
-    "blue": $blue,
-    "green": $green,
-    "dark": $text-dark,
-    "white": $white,
-    "gray": $gray-600,
-    "gray-dark": $gray-800
+        "blue": $blue,
+        "green": $green,
+        "dark": $text-dark,
+        "white": $white,
+        "gray": $gray-600,
+        "gray-dark": $gray-800
 ), $colors);
 
 $primary: $blue;
@@ -99,8 +99,8 @@ $light: $gray-100;
 $dark: $text-dark;
 
 $theme-colors: (
-    "primary":$primary,
-    "warning":$warning
+        "primary":$primary,
+        "warning":$warning
 );
 
 
@@ -125,10 +125,10 @@ $link-hover-decoration: none;
 // Define the maximum width of `.container` for different screen sizes.
 
 $container-max-widths: (
-    sm: 540px,
-    md: 720px,
-    lg: 960px,
-    xl: 1170px
+        sm: 540px,
+        md: 720px,
+        lg: 960px,
+        xl: 1170px
 );
 
 // Font
@@ -136,27 +136,47 @@ $container-max-widths: (
 
 $fa-font-path: "../fonts/FontAwesome/";
 $font-size-base: 1rem; // Assumes the browser default, typically `16px`
-$font-size-lg: ($font-size-base * 1.25) !default;
-$font-size-sm: ($font-size-base * 0.8125) !default;
+$font-size-lg: ($font-size-base * 1.25);
+$font-size-sm: ($font-size-base * 0.875);
 $font-family-base: inherit;
-
+$line-height-base: 1.5;
 $border-color: #D8D8D8;
-$border-radius: 3px;
-
+$border-radius: 2px;
+$border-width: 1px;
 // Forms
 
 $input-bg: $white;
-$input-font-size: 0.875rem;
-//
-$input-border-color: $review-border-color;
-$input-box-shadow: inset 0 2px 0 0 #F3F0F0, inset 0 -1px 0 0 $white;
+//$input-font-size: 0.875rem;
+$input-font-size: 1rem;
+$input-line-height: 1;
+$label-font-size: $font-size-sm;
+$input-padding-y: 0.5625rem; //9px
+$input-padding-x: 0.5625rem; //9px
 
-$input-border-radius: 2px;
+
+$input-height-border: $border-width * 2;
+
+//$input-height: ($input-line-height + ($border-width * 2) + ($input-padding-y * 2));
+$input-height: 38px;
+
+
+$input-border-color: $review-border-color;
+//$input-box-shadow: inset 0 2px 0 0 #F3F0F0, inset 0 -1px 0 0 $white;
+$input-box-shadow: none;
+
+
+$input-border-radius: $border-radius;
 $input-placeholder-color: $brown-light-text;
 $custom-radio-indicator-border-radius: 50%;
 $custom-radio-indicator-icon-checked: str-replace(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='#627590'/></svg>"), "#", "%23");
 
 
+//buttons
+$btn-height: $input-height;
+$btn-line-height: $input-line-height;
+$btn-font-size: $input-font-size;
+$btn-padding-y: $input-padding-y;
+$btn-padding-x: $input-padding-x;
 // Slick icon entity codes outputs the following
 // "\2190" outputs ascii character "←"
 // "\2192" outputs ascii character "→"
@@ -182,11 +202,11 @@ $slick-border-color: #DED8D5;
 
 
 $modal-content-border-color: $modal-border-color;
-$modal-content-border-width: 10px;
+$modal-content-border-width: 0;
 
-$modal-lg: 914px;
-$modal-md: 680px;
-$modal-sm: 450px;
+//$modal-lg: 914px;
+//$modal-md: 680px;
+//$modal-sm: 450px;
 // Breadcrumbs
 
 $breadcrumb-padding-y: .4rem;

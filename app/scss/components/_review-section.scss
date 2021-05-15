@@ -2,7 +2,7 @@
 .review_section {
 
     .review_section_wrap {
-        border: 1px solid $product-main-border;
+        border: $border-width solid $product-main-border;
         padding: 20px 25px;
         display: flex;
         overflow: hidden;
@@ -24,7 +24,7 @@
 
         &:after {
             content: '\f054';
-            font-family: FontAwesome;
+            font-family: $font-awesome;
             position: absolute;
             font-size: 0.5rem;
             display: inline-block;
@@ -80,7 +80,7 @@
         }
 
         .slick-arrow {
-            border: 1px solid $product-main-border;
+            border: $border-width solid $product-main-border;
             background: transparent;
             width: 23px;
             height: 30px;
@@ -135,7 +135,7 @@
         }
 
         .name {
-            font-size: 13px;
+            font-size: $font-size-sm;
             font-weight: 600;
             line-height: 13px;
             margin-bottom: 5px;
@@ -143,7 +143,7 @@
 
         .tagline {
             color: $footer-copy-color;
-            font-size: 13px;
+            font-size: $font-size-sm;
             line-height: 10px;
         }
 
@@ -160,7 +160,7 @@
                 position: absolute;
                 margin: 5px 0 0 -35px;
                 content: '\f10d';
-                font-family: FontAwesome;
+                font-family: $font-awesome;
                 font-style: initial;
                 color: #ded9d6;
                 font-size: 22px;
