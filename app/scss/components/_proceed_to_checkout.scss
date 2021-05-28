@@ -4,7 +4,9 @@
     padding: 35px 30px 30px;
     position: relative;
     margin-bottom: 28px;
-    
+    @include media-breakpoint-down(sm){
+        padding: 25px 16px 20px;
+    }
     &:before {
         content: "";
         position: absolute;
