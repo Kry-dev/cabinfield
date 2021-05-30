@@ -16,6 +16,7 @@
     </title>
   </head>
   <body><!--HEADER-->
+    <!--include layout/header-->
     <header class="header">
       <div class="container">
         <div class="header-top d-none d-md-flex"><!--header top section-->
@@ -763,6 +764,83 @@
         </ul>
       </div>
     </footer><!--FOOTER END-->
+<!--MODAL--><!--modal modal sign-in-->
+    <div class="modal modal--sign-in fade" id="sign_in" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            <h4 class="text-center modal-title mb-5">Sign in</h4>
+            <form class="form px-md-5">
+              <div class="form-group">
+                <label class="col-form-label col-form-label-sm">Email address</label>
+                <input class="form-control" type="email" name="email">
+              </div>
+              <div class="form-group">
+                <label class="col-form-label col-form-label-sm">Password<a class="text-right" href="#">Forgot yor password?</a></label>
+                <input class="form-control" type="password" name="pass">
+              </div>
+              <div class="form-group d-flex">
+                <button class="btn btn-warning w-100" type="submit">Sign In</button>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <p class="text-center text-dark">New to Cabinfield?</p>
+            <div class="form-group d-flex"><a class="btn btn-outline-warning" href="#">Create Your Cabinfield Account</a></div>
+          </div>
+        </div>
+      </div>
+    </div><!--modal sign-in end--><!--modal subscribe-->
+    <div class="modal modal--subscribe fade" id="subscribe_popup" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <h4 class="text-center modal-title mb-5">Get the Cabinfield Email Newsletter</h4>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            <form class="form px-5">
+              <div class="form-group">
+                <label class="col-form-label col-form-label-sm">Email address</label>
+                <input class="form-control" type="email" name="newsletter-email">
+              </div>
+              <div class="form-group">
+                <label class="col-form-label col-form-label-sm">First Name</label>
+                <input class="form-control" type="text">
+              </div>
+              <div class="form-group d-flex">
+                <button class="btn btn-warning w-100" type="submit">Subscribe</button>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer"></div>
+        </div>
+      </div>
+    </div><!--modal subscribe end--><!--modal check zip -->
+    <div class="modal fade" id="check_zip" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content border-0">
+          <div class="modal-body p-5">
+            <h4 class="text-center mb-4">Zip Code</h4>
+            <h4 class="text-center mb-4" style="display:none">We’re Sorry!</h4>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            <form class="form modal--zip-form">
+              <div class="form-group mb-4">
+                <p style="display:none">Your zip code is out of range of the Heartland Collection's delivery availability. You are invited to shop the Cabinfield Collection. We deliver Cabinfield gazebos throughout the U.S.</p>
+                <label>Enter Zip</label>
+                <input class="form-control" type="text" name="zip" minlength="5" maxlength="5" placeholder="8●●●●">
+              </div>
+              <div class="form-group d-none">
+                <button class="btn btn-warning w-100" type="button">Continue Shopping</button>
+              </div>
+              <div class="form-group d-flex">
+                <button class="btn btn-warning w-100" type="submit">Check ZIPCode</button>
+              </div>
+            </form>
+            <div class="modal-footer"></div>
+          </div>
+        </div>
+      </div>
+    </div><!--modal check zip end--><!--MODAL END-->
     <script src="js/jquery.js"></script>
     <script src="js/libs.min.js"></script>
     <script src="libs/mmenu-js/dist/mmenu.polyfills.js"></script>
