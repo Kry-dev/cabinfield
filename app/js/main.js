@@ -473,10 +473,12 @@ $(document).ready(function () {
     });
     
     /*Billing address - Same as shipping address*/
-    $(".billing_same_as_shipping").change(function () {
-        let form = $(this).parents('.d-flex').next('.form-address-billing');
-        if (this.checked) $('.form-address-billing').stop().fadeOut(400);
-        else $(form).stop().fadeIn(400);
+    $("#billing_same_as_shipping").change(function () {
+        let form = $(this).parents('.d-flex').find('.form-address-billing');
+        $(this).next('label').text(function (i, text) {
+            return text === "Same as shipping address" ? "Different from Shipping" : "Same as shipping address";
+        })
+        form.toggle();
     });
     
     $('#same_as_ship_adr').on("click", function (e) {
@@ -755,9 +757,8 @@ $(document).ready(function () {
     });
 
     // mobile mmenu plugin navigation
-    // var mobileBanner = ["<div class=\"nav-pictures\"><a href=\"#\"><img class=\"img-fluid\" src=\"img/general/nav-img-01.png\"></a><a href=\"#\"><img class=\"img-fluid\" src=\"img/general/nav-img-02.png\"></a></div>"];
     let mobBanners = $('.nav-pictures').html(); // get banners from desctop menu and put to mmenu
-    new Mmenu(
+    let mobileMenu = new Mmenu(
       document.querySelector('#mobile-menu'), {
           extensions: [
               "fx-panels-slide-100",
@@ -782,4 +783,7 @@ $(document).ready(function () {
           panelNodetype: ["ul", "ol"],
       },
       {});
+    if($("#mobile-menu")){
+        mobileMenu();
+    }
 });

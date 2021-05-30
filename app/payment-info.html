@@ -12,10 +12,11 @@
     <link rel="stylesheet" type="text/css" href="libs/mmenu-light/dist/mmenu-light.css">
     <link rel="stylesheet" type="text/css" href="libs/mmenu-js/dist/mmenu.css">
     <link rel="stylesheet" type="text/css" href="css/main.min.css">
-    <title>Cabinfield shopping cart
+    <title>Cabinfield Payment Information
     </title>
   </head>
   <body><!--HEADER-->
+    <!--include layout/header-->
     <header class="header">
       <div class="container">
         <div class="header-top d-none d-md-flex"><!--header top section-->
@@ -416,320 +417,136 @@
       </nav>
     </header><!--HEADER END-->
 <!--CONTENT-->
-    <main class="content"><!-- Cart section-->
-      <section class="cart">
-        <div class="container mb-5">
-          <h1>Shopping cart</h1>
+    <main class="content"><!-- Cart edit address section-->
+      <section class="cart address-section">
+        <div class="container"><a class="back text-brown" href="#"><i class="fa fa-chevron-left"></i>Back to cart</a>
+          <h1>Payment Information</h1>
           <div class="row wishlist-item">
-            <!--.wishlist-item-left-->
             <div class="col-lg-8 col-md-6 col-sm-12">
-              <!--Start of Shipping group 1-->
-              <div class="row px-0 mb-3">
-                <div class="col-md-12">
-                  <h4 class="h4 mb-3">Shipping group 1</h4>
-                  <label>Delivery:</label>
-                  <li class="checkbox custom_checkbox">
-                    <input id="ship01" type="checkbox" name="" value="">
-                    <label for="ship01">Standard curbside delivery</label>
-                  </li>
-                  <li class="checkbox custom_checkbox">
-                    <input id="ship02" type="checkbox" name="" value="" checked="">
-                    <label for="ship02">Inside delivery with set up</label>
-                  </li>
+              <div class="row">
+                <div class="col-lg-6">
+                  <h4 class="h4 mb-3">Payment Method</h4>
+                  <form class="form-address" action="">
+                    <div class="row mb-3">
+                      <div class="form-group col-sm-12 mb-3 mb-md-0">
+                        <label class="mb-0">Card Number</label><a class="mb-0" href="#">No credit card (use paycheck)</a>
+                        <input class="form-control" type="text" name="card-number" placeholder="">
+                      </div>
+                    </div>
+                    <div class="row exp-date mb-3">
+                      <div class="form-group col-md-12 mb-0">
+                        <label>Expiration date</label>
+                      </div>
+                      <div class="form-group col-6 mb-3 mb-md-0">
+                        <select class="form-control selectpicker" type="text" name="month">
+                          <option>month</option>
+                        </select>
+                      </div>
+                      <div class="form-group col-6 mb-3 mb-md-0">
+                        <select class="form-control selectpicker" type="text" name="year" placeholder="year">
+                          <option>year</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="row mb-3 border-b-dashed">
+                      <div class="form-group col-md-6 mb-3 mb-md-0">
+                        <label>Security Code</label>
+                        <input class="form-control" type="text" name="first-name">
+                      </div>
+                    </div>
+                    <div class="row mb-3">
+                      <div class="form-group col-sm-12 mb-0">
+                        <label>Gift Certificates codes</label>
+                      </div>
+                      <div class="form-group col-sm-6 mb-3 mb-md-0">
+                        <input class="form-control" type="text" name="" placeholder="Enter code">
+                      </div>
+                      <div class="form-group col-sm-6 mb-3 mb-md-0"><a class="btn btn-outline-primary w-100 text-uppercase" href="#"><strong>Apply</strong></a></div>
+                    </div>
+                  </form>
                 </div>
-              </div>
-              <!--start PDP 1 group 1-->
-              <div class="row mb-3 border-b-dashed">
-                <div class="col-lg-6 col-md-12">
-                  <div class="product-selected"><img class="img-fluid" src="img/product/yKelvO0K53.jpg"></div>
-                </div>
-                <div class="col-lg-6 col-md-12"></div>
-                <div class="col-lg-6 col-md-12">
-                  <div class="option-selected mb-3">
-                    <h6><b>Carolina Crown Amish Bed</b></h6>
-                    <ul class="option-selected-list">
-                      <li>Product price<span class="text-brown font-weight-bold">$1,371.00</span></li>
-                      <li>Bed size:<span>Queen (64"W x 86"L)</span></li>
-                      <li>Bed size:<span>Queen (64"W x 86"L)</span></li>
-                      <li>Headboard Style:<span>Adessa</span></li>
-                      <li>Set:<span>Full Bed</span></li>
-                      <li>Wood:<span>Quartersawn White Oak</span></li>
-                      <li>Wood stain:<span>OCS-225 Mission Maple</span></li>
-                      <li>Nail Head Style:<span>Antique Silver</span></li>
-                      <li>Bed size:<span>Queen (64"W x 86"L)</span></li>
-                      <li>Headboard Style:<span>Adessa</span></li>
-                      <li>Set:<span>Full Bed</span></li>
-                      <li>Wood:<span>Quartersawn White Oak</span></li>
-                      <li>Wood stain:<span>OCS-225 Mission Maple</span></li>
-                      <li>Nail Head Style:<span>Antique Silver</span></li>
-                    </ul>
-                  </div>
-                  <div class="actions mb-3 mb-lg-0"><a class="edit" href="#"><i class="fa fa-pencil"></i>Edit</a>
-                    <button class="wishlist"><i class="fa fa-heart-o"></i>Move to wishlist</button>
-                    <button class="delete"><i class="fa fa-trash"></i>Delete</button>
-                  </div>
-                </div>
-                <div class="col-lg-6 col-md-12">
-                  <div class="form-group row">
-                    <div class="col-sm-12 mb-3">
-                      <label class="mb-1">Quantity:</label>
-                      <select class="selectpicker w-100">
-                        <option class="text-dark" value="2">Option 1</option>
-                        <option class="text-dark" value="3">Option 2</option>
-                      </select>
+                <div class="col-lg-6 border-dashed-b">
+                  <div class="d-flex flex-column justify-content-between">
+                    <h4 class="h4 mb-3">Billing address</h4>
+                    <div class="checkbox custom_checkbox">
+                      <input id="billing_same_as_shipping" type="checkbox" name="" value="">
+                      <label class="mb-1 text-primary" for="billing_same_as_shipping">Same as shipping address</label>
+                      <!--a.ml-auto(href="#" id="same_as_ship_adr") Same as shipping address-->
                     </div>
-                    <div class="col-sm-12"><a class="text-bold" href="#">+ Add add virtual pre-gifting</a></div>
-                  </div>
-                </div>
-              </div>
-              <!--End PDP 1 group 1-->
-              <!--start PDP 1 group 2-->
-              <div class="row mb-5 border-b-dashed">
-                <div class="col-lg-6 col-md-12">
-                  <div class="product-selected"><img class="img-fluid" src="img/product/Amq5PuczxT.jpg"></div>
-                </div>
-                <div class="col-lg-6 col-md-12"></div>
-                <div class="col-lg-6 col-md-12">
-                  <div class="option-selected mb-3">
-                    <h6><b>Carolina Crown Amish Bed</b></h6>
-                    <ul class="option-selected-list">
-                      <li>Product price<span class="text-brown font-weight-bold">$1,371.00</span></li>
-                      <li>Bed size:<span>Queen (64"W x 86"L)</span></li>
-                      <li>Bed size:<span>Queen (64"W x 86"L)</span></li>
-                      <li>Headboard Style:<span>Adessa</span></li>
-                      <li>Set:<span>Full Bed</span></li>
-                      <li>Wood:<span>Quartersawn White Oak</span></li>
-                      <li>Wood stain:<span>OCS-225 Mission Maple</span></li>
-                      <li>Nail Head Style:<span>Antique Silver</span></li>
-                      <li>Bed size:<span>Queen (64"W x 86"L)</span></li>
-                      <li>Headboard Style:<span>Adessa</span></li>
-                      <li>Set:<span>Full Bed</span></li>
-                      <li>Wood:<span>Quartersawn White Oak</span></li>
-                      <li>Wood stain:<span>OCS-225 Mission Maple</span></li>
-                      <li>Nail Head Style:<span>Antique Silver</span></li>
-                    </ul>
-                  </div>
-                  <div class="actions mb-3 mb-lg-0"><a class="edit" href="#"><i class="fa fa-pencil"></i>Edit</a>
-                    <button class="wishlist"><i class="fa fa-heart-o"></i>Move to wishlist</button>
-                    <button class="delete"><i class="fa fa-trash"></i>Delete</button>
-                  </div>
-                </div>
-                <div class="col-lg-6 col-md-12">
-                  <div class="form-group row">
-                    <div class="col-sm-12 mb-3">
-                      <label class="mb-1">Quantity:</label>
-                      <select class="selectpicker w-100">
-                        <option class="text-dark" value="2">Option 1</option>
-                        <option class="text-dark" value="3">Option 2</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="form-group row mb-3">
-                    <div class="col-sm-12"><a class="text-bold" href="#">+ Add add virtual pre-gifting</a></div>
-                  </div>
-                  <div class="form-group row mb-3">
-                    <div class="col-sm-12">
-                      <label class="mb-1">Occasion: *</label>
-                      <select class="selectpicker w-100">
-                        <option class="text-dark" value="2">Option 1</option>
-                        <option class="text-dark" value="3">Option 2</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="form-group row mb-3">
-                    <div class="col-sm-12">
-                      <label class="mb-1">Recipient: *</label>
-                      <input class="form-control w-100" type="text">
-                    </div>
-                  </div>
-                  <div class="form-group row mb-3">
-                    <div class="col-sm-12">
-                      <label class="mb-1">Message: *</label>
-                      <textarea class="form-control w-100"></textarea>
-                    </div>
-                  </div>
-                  <div class="form-group row mb-3">
-                    <div class="col-sm-12">
-                      <label class="mb-1">Closing: *</label>
-                      <input class="form-control w-100" type="text">
-                    </div>
-                  </div>
-                  <div class="form-group row mb-3">
-                    <div class="col-sm-12">
-                      <label class="mb-1">Form: *</label>
-                      <input class="form-control w-100" type="text">
-                    </div>
+                    <form class="form form-address-billing" action="">
+                      <div class="row mb-3">
+                        <div class="form-group col-md-6 mb-3 mb-md-0">
+                          <label class="mb-md-0">First name</label>
+                          <input class="form-control" type="text" name="first-name">
+                        </div>
+                        <div class="form-group col-md-6 mb-3 mb-md-0">
+                          <label class="mb-md-0"> Last name</label>
+                          <input class="form-control" type="text" name="last-name">
+                        </div>
+                      </div>
+                      <div class="row mb-3">
+                        <div class="form-group col-md-12 mb-3 mb-md-0">
+                          <label>Company name (optional)</label>
+                          <input class="form-control" type="text" name="company-name">
+                        </div>
+                      </div>
+                      <div class="row mb-3">
+                        <div class="form-group col-md-12 mb-3 mb-md-0">
+                          <label>Street address</label>
+                          <input class="form-control mb-2" type="text" name="street-address-1">
+                        </div>
+                        <div class="form-group col-md-12 mb-3 mb-md-0">
+                          <label>Address line 2 (optional)"</label>
+                          <input class="form-control" type="text" name="street-address-2">
+                        </div>
+                      </div>
+                      <div class="row mb-3">
+                        <div class="form-group col-md-6 mb-3 mb-md-0">
+                          <label>City</label>
+                          <input class="form-control" type="text" name="city">
+                        </div>
+                        <div class="form-group col-md-6 mb-3 mb-md-0">
+                          <label>State</label>
+                          <input class="form-control" type="text" name="state">
+                        </div>
+                      </div>
+                      <div class="row mb-3">
+                        <div class="form-group col-md-6 mb-3 mb-md-0">
+                          <label>Zip-code</label>
+                          <input class="form-control" type="text" name="Zip-code">
+                        </div>
+                        <div class="form-group col-md-6 mb-3 mb-md-0">
+                          <label>Ext (optional)</label>
+                          <input class="form-control" type="text" name="ext">
+                        </div>
+                      </div>
+                      <div class="row mb-3">
+                        <div class="form-group col-lg-6 col-md-12 mb-3 mb-md-0">
+                          <label>Phone</label>
+                          <input class="form-control" type="text" name="phone">
+                        </div>
+                      </div>
+                    </form>
                   </div>
                 </div>
               </div>
-              <!--End PDP 1 group 2-->
-              <!--End of Shipping group 1-->
-              <!--Start of Shipping group 2-->
-              <div class="row px-0 mb-3">
-                <div class="col-md-12">
-                  <h4 class="h4 mb-3">Shipping group 2</h4>
-                  <label>Delivery:</label>
-                  <li class="checkbox custom_checkbox">
-                    <input id="ship03" type="checkbox" name="" value="">
-                    <label for="ship03">Standard curbside delivery</label>
-                  </li>
-                  <li class="checkbox custom_checkbox">
-                    <input id="ship04" type="checkbox" name="" value="" checked="">
-                    <label for="ship04">Inside delivery with set up</label>
-                  </li>
-                </div>
-              </div>
-              <!--start PDP 1 group 2-->
-              <div class="row mb-3 border-b-dashed">
-                <div class="col-lg-6 col-md-12">
-                  <div class="product-selected"><img class="img-fluid" src="img/product/yKelvO0K53.jpg"></div>
-                </div>
-                <div class="col-lg-6 col-md-12"></div>
-                <div class="col-lg-6 col-md-12">
-                  <div class="option-selected mb-3">
-                    <h6><b>Carolina Crown Amish Bed</b></h6>
-                    <ul class="option-selected-list">
-                      <li>Product price<span class="text-brown font-weight-bold">$1,371.00</span></li>
-                      <li>Bed size:<span>Queen (64"W x 86"L)</span></li>
-                      <li>Bed size:<span>Queen (64"W x 86"L)</span></li>
-                      <li>Headboard Style:<span>Adessa</span></li>
-                      <li>Set:<span>Full Bed</span></li>
-                      <li>Wood:<span>Quartersawn White Oak</span></li>
-                      <li>Wood stain:<span>OCS-225 Mission Maple</span></li>
-                      <li>Nail Head Style:<span>Antique Silver</span></li>
-                      <li>Bed size:<span>Queen (64"W x 86"L)</span></li>
-                      <li>Headboard Style:<span>Adessa</span></li>
-                      <li>Set:<span>Full Bed</span></li>
-                      <li>Wood:<span>Quartersawn White Oak</span></li>
-                      <li>Wood stain:<span>OCS-225 Mission Maple</span></li>
-                      <li>Nail Head Style:<span>Antique Silver</span></li>
-                    </ul>
-                  </div>
-                  <div class="actions mb-3 mb-lg-0"><a class="edit" href="#"><i class="fa fa-pencil"></i>Edit</a>
-                    <button class="wishlist"><i class="fa fa-heart-o"></i>Move to wishlist</button>
-                    <button class="delete"><i class="fa fa-trash"></i>Delete</button>
-                  </div>
-                </div>
-                <div class="col-lg-6 col-md-12">
-                  <div class="form-group row">
-                    <div class="col-sm-12 mb-3">
-                      <label class="mb-1">Quantity:</label>
-                      <select class="selectpicker w-100">
-                        <option class="text-dark" value="2">Option 1</option>
-                        <option class="text-dark" value="3">Option 2</option>
-                      </select>
-                    </div>
-                    <div class="col-sm-12"><a class="text-bold" href="#">+ Add add virtual pre-gifting</a></div>
-                  </div>
-                </div>
-              </div>
-              <!--End PDP 1 group 2-->
-              <!--start PDP 2 group 2-->
-              <div class="row mb-5 border-b-dashed">
-                <div class="col-lg-6 col-md-12">
-                  <div class="product-selected"><img class="img-fluid" src="img/product/yKelvO0K53.jpg"></div>
-                </div>
-                <div class="col-lg-6 col-md-12"></div>
-                <div class="col-lg-6 col-md-12">
-                  <div class="option-selected mb-3">
-                    <h6><b>Carolina Crown Amish Bed</b></h6>
-                    <ul class="option-selected-list">
-                      <li>Product price<span class="text-brown font-weight-bold">$1,371.00</span></li>
-                      <li>Bed size:<span>Queen (64"W x 86"L)</span></li>
-                      <li>Bed size:<span>Queen (64"W x 86"L)</span></li>
-                      <li>Headboard Style:<span>Adessa</span></li>
-                      <li>Set:<span>Full Bed</span></li>
-                      <li>Wood:<span>Quartersawn White Oak</span></li>
-                      <li>Wood stain:<span>OCS-225 Mission Maple</span></li>
-                      <li>Nail Head Style:<span>Antique Silver</span></li>
-                      <li>Bed size:<span>Queen (64"W x 86"L)</span></li>
-                      <li>Headboard Style:<span>Adessa</span></li>
-                      <li>Set:<span>Full Bed</span></li>
-                      <li>Wood:<span>Quartersawn White Oak</span></li>
-                      <li>Wood stain:<span>OCS-225 Mission Maple</span></li>
-                      <li>Nail Head Style:<span>Antique Silver</span></li>
-                    </ul>
-                  </div>
-                  <div class="actions mb-3 mb-lg-0"><a class="edit" href="#"><i class="fa fa-pencil"></i>Edit</a>
-                    <button class="wishlist"><i class="fa fa-heart-o"></i>Move to wishlist</button>
-                    <button class="delete"><i class="fa fa-trash"></i>Delete</button>
-                  </div>
-                </div>
-                <div class="col-lg-6 col-md-12">
-                  <div class="form-group row">
-                    <div class="col-sm-12 mb-3">
-                      <label class="mb-1">Quantity:</label>
-                      <select class="selectpicker w-100">
-                        <option class="text-dark" value="2">Option 1</option>
-                        <option class="text-dark" value="3">Option 2</option>
-                      </select>
-                    </div>
-                    <div class="col-sm-12"><a class="text-bold" href="#">+ Add add virtual pre-gifting</a></div>
-                  </div>
-                </div>
-              </div>
-              <!--End PDP 2 group 2-->
-              <!--End of Shipping group 2-->
-              <div class="extended_price">(Combined) Standard curbside delivery of 2 items above</div>
-              <div class="extended_price">Shipping group total:<span class="ml-3">$130.67</span></div>
-              <div class="extended_price">You saved:<span class="ml-3 text-brown">- $32.00</span></div>
-              <!--Start of Shipping group 3-->
-              <div class="row px-0 mb-3">
-                <div class="col-md-12">
-                  <h4 class="h4 mb-3">Shipping group 3</h4>
-                </div>
-              </div>
-              <!--start Cabinfield Gift Card-->
-              <div class="row mb-3 border-b-dashed">
-                <div class="col-lg-6 col-md-12">
-                  <div class="product-selected mb-3"><img class="img-fluid w-100" src="img/general/gift-cert.png"></div>
-                </div>
-                <div class="col-lg-6 col-md-12"></div>
-                <div class="col-lg-6 col-md-12">
-                  <div class="option-selected mb-3">
-                    <h6><b>Cabinfield Gift Card</b></h6>
-                    <ul class="option-selected-list">
-                      <li>Gift certificate amount:<span class="text-brown font-weight-bold">$45</span></li>
-                      <li>Recipient’s name:<span>John Doe</span></li>
-                      <li>Recipient’s e-mail:<span>JohnDoe@gmail.com</span></li>
-                    </ul>
-                  </div>
-                  <div class="actions mb-3 mb-lg-0"><a class="edit" href="#"><i class="fa fa-pencil"></i>Edit</a>
-                    <button class="wishlist"><i class="fa fa-heart-o"></i>Move to wishlist</button>
-                    <button class="delete"><i class="fa fa-trash"></i>Delete</button>
-                  </div>
-                </div>
-              </div>
-              <!--End Cabinfield Gift Card-->
-              <div class="extended_price">Email delivery of 1 items above:</div>
-              <!--End of Shipping group 3-->
             </div>
-            <!--.wishlist-item-right-->
             <div class="col-lg-4 col-md-6 col-sm-12">
-              <div class="proceed_to_checkout">
-                <div class="d-flex justify-content-center"><a class="btn btn-warning w-100" href="#"><b>PROCEED TO CHECKOUT</b></a></div>
-                <div class="title">Order Summary</div>
+              <div class="proceed_to_checkout mt-5 mt-md-0">
+                <div class="title mt-0">Order Summary</div>
                 <div class="item"><span class="name">Items:</span><span class="price">$1,321.00</span></div>
-                <div class="item"><span class="name">Shipping & handling:</span><span class="price">$135.00</span></div>
+                <div class="item"><span class="name">Shipping & handling:</span><span class="price">$234.00</span></div>
                 <div class="item"><span class="name">Savings on combined shipping:</span><span class="price text-brown"> - $128.24</span></div>
-                <div class="item full_price"><span class="name">Extended price:</span><span class="price">$1,371.00</span></div>
-              </div>
-              <div class="proceed_to_checkout">
-                <div class="title mt-0 mb-3">Calculate Shipping</div>
-                <div class="form-row mb-3">
-                  <div class="col-12">
-                    <label>Enter Zip:</label>
-                    <input class="form-control">
-                  </div>
-                </div>
-                <div class="form-row">
-                  <div class="col-12"><a class="btn btn-outline-warning w-100 text-uppercase" href="#"><b>Calculate</b></a></div>
-                </div>
+                <div class="item"><span class="name">Total before tax:</span><span class="price">$1,371.00</span></div>
+                <div class="item"><span class="name">Estimated tax to be collected:</span><span class="price">$0.00</span></div>
+                <div class="item full_price"><span class="name">Order total:</span><span class="price">$1,371.00</span></div>
+                <div class="item"><span class="name">Due today<a class="popup-info mr-0" href="#">?</a>:</span><span class="price">$0.00</span></div>
+                <div class="d-flex justify-content-center w-100 mt-3"><a class="btn btn-warning text-uppercase w-100" href="#"><b>Continue to Payment</b></a></div>
               </div>
             </div>
           </div>
         </div>
-      </section><!-- Cart section end-->
+      </section><!-- Cart edit address section end-->
     </main><!--CONTENT END-->
 <!--FOOTER-->
     <footer class="footer">
@@ -763,6 +580,83 @@
         </ul>
       </div>
     </footer><!--FOOTER END-->
+<!--MODAL--><!--modal modal sign-in-->
+    <div class="modal modal--sign-in fade" id="sign_in" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            <h4 class="text-center modal-title mb-5">Sign in</h4>
+            <form class="form px-md-5">
+              <div class="form-group">
+                <label class="col-form-label col-form-label-sm">Email address</label>
+                <input class="form-control" type="email" name="email">
+              </div>
+              <div class="form-group">
+                <label class="col-form-label col-form-label-sm">Password<a class="text-right" href="#">Forgot yor password?</a></label>
+                <input class="form-control" type="password" name="pass">
+              </div>
+              <div class="form-group d-flex">
+                <button class="btn btn-warning w-100" type="submit">Sign In</button>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <p class="text-center text-dark">New to Cabinfield?</p>
+            <div class="form-group d-flex"><a class="btn btn-outline-warning" href="#">Create Your Cabinfield Account</a></div>
+          </div>
+        </div>
+      </div>
+    </div><!--modal sign-in end--><!--modal subscribe-->
+    <div class="modal modal--subscribe fade" id="subscribe_popup" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <h4 class="text-center modal-title mb-5">Get the Cabinfield Email Newsletter</h4>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            <form class="form px-5">
+              <div class="form-group">
+                <label class="col-form-label col-form-label-sm">Email address</label>
+                <input class="form-control" type="email" name="newsletter-email">
+              </div>
+              <div class="form-group">
+                <label class="col-form-label col-form-label-sm">First Name</label>
+                <input class="form-control" type="text">
+              </div>
+              <div class="form-group d-flex">
+                <button class="btn btn-warning w-100" type="submit">Subscribe</button>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer"></div>
+        </div>
+      </div>
+    </div><!--modal subscribe end--><!--modal check zip -->
+    <div class="modal fade" id="check_zip" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content border-0">
+          <div class="modal-body p-5">
+            <h4 class="text-center mb-4">Zip Code</h4>
+            <h4 class="text-center mb-4" style="display:none">We’re Sorry!</h4>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            <form class="form modal--zip-form">
+              <div class="form-group mb-4">
+                <p style="display:none">Your zip code is out of range of the Heartland Collection's delivery availability. You are invited to shop the Cabinfield Collection. We deliver Cabinfield gazebos throughout the U.S.</p>
+                <label>Enter Zip</label>
+                <input class="form-control" type="text" name="zip" minlength="5" maxlength="5" placeholder="8●●●●">
+              </div>
+              <div class="form-group d-none">
+                <button class="btn btn-warning w-100" type="button">Continue Shopping</button>
+              </div>
+              <div class="form-group d-flex">
+                <button class="btn btn-warning w-100" type="submit">Check ZIPCode</button>
+              </div>
+            </form>
+            <div class="modal-footer"></div>
+          </div>
+        </div>
+      </div>
+    </div><!--modal check zip end--><!--MODAL END-->
     <script src="js/jquery.js"></script>
     <script src="js/libs.min.js"></script>
     <script src="libs/mmenu-js/dist/mmenu.polyfills.js"></script>

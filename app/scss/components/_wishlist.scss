@@ -1,62 +1,6 @@
 .wishlist {
     &-item {
         margin-bottom: 0;
-        
-        &-left {
-            flex: 0 0 66.66667%;
-            max-width: 66.66667%;
-            padding: 0 1rem;
-            @media (max-width: 1200px) {
-                width: 100%;
-                flex: 0 0 100%;
-                max-width: 100%;
-            }
-        }
-        
-        &-right {
-            flex: 0 0 33.33333%;
-            max-width: 33.33333%;
-            padding: 0 1rem;
-            display: flex;
-            flex-direction: column;
-            @media (max-width: 1200px) {
-                width: 100%;
-                flex: 0 0 100%;
-                max-width: 100%;
-                padding: 0 20%;
-            }
-            @include media-breakpoint-down(sm) {
-                padding: 0 1rem;
-            }
-            
-            .order-placed-title {
-                margin-bottom: 15px;
-            }
-            
-            .addr {
-                margin: 0 0 20px;
-            }
-            
-            .addr p {
-                font-family: $font-family-base;
-                font-style: normal;
-                font-weight: 400;
-                color: $text-dark;
-                line-height: 1.4375rem;
-                font-size: .8125rem;
-                margin-bottom: 0;
-            }
-        }
-        
-        .option-selected {
-            h6 {
-                margin-bottom: 6px;
-            }
-        }
-        
-        .option-selected li {
-            margin-bottom: 0.35rem;
-        }
     }
     
     &-title {
@@ -103,20 +47,7 @@
             padding: 0;
         }
         
-        .btn {
-            line-height: 24px;
-            text-transform: uppercase;
-            width: 100%;
-            padding: 3px 13px;
-            
-            &-warning {
-                padding-left: 38px;
-            }
-            
-            &-outline-warning {
-                padding: 3px 8px;
-            }
-        }
+        
     }
     
 }
@@ -158,12 +89,7 @@
             font-size: 0.8125rem;
         }
         
-        input {
-            height: 28px;
-            width: 63px;
-            padding-left: 8px;
-            padding-right: 8px;
-        }
+       
         
         .price {
             color: $brown;
@@ -176,18 +102,7 @@
         }
     }
     
-    .btn-order {
-        min-width: 160px;
-        width: 100%;
-        text-transform: uppercase;
-        align-self: flex-end;
-        @include media-breakpoint-down(md) {
-            max-width: 100%;
-            align-self: center;
-        }
-    }
-    
-    a {
+    a:not(.btn) {
         font-size: 0.8125rem;
     }
     .actions > a ,

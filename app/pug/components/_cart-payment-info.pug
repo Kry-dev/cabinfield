@@ -1,0 +1,117 @@
+section.cart.address-section
+    .container
+        a.back.text-brown(href='#')
+            i.fa.fa-chevron-left
+            | Back to cart
+        h1 Payment Information
+        .row.wishlist-item
+            .col-lg-8.col-md-6.col-sm-12
+                .row
+                    .col-lg-6
+                        h4.h4.mb-3 Payment Method
+                        form.form-address(action="")
+                            .row.mb-3
+                                .form-group.col-sm-12.mb-3.mb-md-0
+                                    label.mb-0 Card Number
+                                    a.mb-0(href="#") No credit card (use paycheck)
+                                    input.form-control(type="text" name="card-number" placeholder="")
+                            .row.exp-date.mb-3
+                                .form-group.col-md-12.mb-0
+                                    label Expiration date
+                                .form-group.col-6.mb-3.mb-md-0
+                                    select.form-control.selectpicker(type='text' name='month')
+                                        option month
+                                .form-group.col-6.mb-3.mb-md-0
+                                    select.form-control.selectpicker(type='text' name='year' placeholder='year')
+                                        option year
+
+                            .row.mb-3.border-b-dashed
+                                .form-group.col-md-6.mb-3.mb-md-0
+                                    label Security Code
+                                    input.form-control(type='text', name='first-name')
+
+                            .row.mb-3
+                                .form-group.col-sm-12.mb-0
+                                    label Gift Certificates codes
+                                .form-group.col-sm-6.mb-3.mb-md-0
+                                    input.form-control(type='text', name='', placeholder='Enter code')
+                                .form-group.col-sm-6.mb-3.mb-md-0
+                                    a(href='#').btn.btn-outline-primary.w-100.text-uppercase
+                                        strong Apply
+
+                    .col-lg-6.border-dashed-b
+                        .d-flex.flex-column.justify-content-between
+                            h4.h4.mb-3 Billing address
+                            .checkbox.custom_checkbox
+                                input#billing_same_as_shipping(type='checkbox' name='' value='')
+                                label.mb-1.text-primary(for='billing_same_as_shipping') Same as shipping address
+                                //a.ml-auto(href="#" id="same_as_ship_adr") Same as shipping address
+
+                            form.form.form-address-billing(action='')
+                                .row.mb-3
+                                    .form-group.col-md-6.mb-3.mb-md-0
+                                        label.mb-md-0 First name
+                                        input.form-control(type='text' name='first-name')
+                                    .form-group.col-md-6.mb-3.mb-md-0
+                                        label.mb-md-0  Last name
+                                        input.form-control(type='text' name='last-name')
+                                .row.mb-3
+                                    .form-group.col-md-12.mb-3.mb-md-0
+                                        label Company name (optional)
+                                        input.form-control(type='text' name='company-name')
+                                .row.mb-3
+                                    .form-group.col-md-12.mb-3.mb-md-0
+                                        label Street address
+                                        input.form-control.mb-2(type='text' name='street-address-1')
+                                    .form-group.col-md-12.mb-3.mb-md-0
+                                        label Address line 2 (optional)"
+                                        input.form-control(type='text' name='street-address-2')
+                                .row.mb-3
+                                    .form-group.col-md-6.mb-3.mb-md-0
+                                        label City
+                                        input.form-control(type='text' name='city')
+                                    .form-group.col-md-6.mb-3.mb-md-0
+                                        label State
+                                        input.form-control(type='text' name='state')
+                                .row.mb-3
+                                    .form-group.col-md-6.mb-3.mb-md-0
+                                        label Zip-code
+                                        input.form-control(type='text' name='Zip-code')
+                                    .form-group.col-md-6.mb-3.mb-md-0
+                                        label Ext (optional)
+                                        input.form-control(type='text' name='ext')
+                                .row.mb-3
+                                    .form-group.col-lg-6.col-md-12.mb-3.mb-md-0
+                                        label Phone
+                                        input.form-control(type='text' name='phone')
+
+            .col-lg-4.col-md-6.col-sm-12
+                .proceed_to_checkout.mt-5.mt-md-0
+                    .title.mt-0 Order Summary
+                    .item
+                        span.name Items:
+                        span.price $1,321.00
+                    .item
+                        span.name Shipping & handling:
+                        span.price $234.00
+                    .item
+                        span.name Savings on combined shipping:
+                        span.price.text-brown  - $128.24
+                    .item
+                        span.name Total before tax:
+                        span.price $1,371.00
+                    .item
+                        span.name Estimated tax to be collected:
+                        span.price $0.00
+                    .item.full_price
+                        span.name Order total:
+                        span.price $1,371.00
+                    .item
+                        span.name Due today
+                            a.popup-info.mr-0(href='#') ?
+                            | :
+                        span.price $0.00
+                    .d-flex.justify-content-center.w-100.mt-3
+                        a(href='#').btn.btn-warning.text-uppercase.w-100
+                            b Continue to Payment
+

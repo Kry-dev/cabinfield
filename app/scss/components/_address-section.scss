@@ -35,12 +35,6 @@
         margin-bottom: 0;
     }
 
-    .col-form-label-sm {
-        padding: 10px 0 0;
-        width: 100%;
-        color: $label-color;
-    }
-
     .custom_checkbox.checkbox_big input[type=checkbox] + label:before {
         top: 9px;
     }
@@ -58,6 +52,7 @@
                 content: "/";
                 right: -3px;
                 top: 7px;
+                color: $border-color;
             }
         }
     }
@@ -76,18 +71,6 @@
             font-size: $font-size-sm;
             margin: 0 10px 0 0;
         }
-    }
-
-    .wishlist-item-left {
-
-        > .row:first-child {
-            border-top: 1px solid $border-color;
-            padding: 1rem 0;
-        }
-    }
-
-    .btn-outline-primary {
-        padding: .33rem .75rem;
     }
 }
 
