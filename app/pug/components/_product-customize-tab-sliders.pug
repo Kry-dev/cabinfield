@@ -45,7 +45,7 @@ form#options-form
             h6.product-customize-subtitle Stain:
                 a(href="#", data-toggle="modal", data-target="#customize_popup5").popup-info.mr-3 i
                 a(href="#") Reguest samples
-            .product-customize-list(data-slick='{"slidesToShow": 4, "slidesToScroll": 4}')
+            .product-customize-list
                 .product-option.option-stain
                     input( type="radio" id="wood-stain-01" name="wood-stain")
                     label.product-option--label(for="wood-stain-01")
@@ -216,53 +216,89 @@ form#options-form
             .product-customize-list()
                 .product-option.option-stain
                     input( type="radio" id="fabric-01" name="fabric")
-                    label.product-option--label(for="fabric-01")
+                    label.product-option--label.mb-2(for="fabric-01")
                         .enlarge
                             i.fa.fa-search
                         img(src="img/fabric/fabric-01.jpg", alt="#").img-fluid
                         p.name 4-10 dove
+                    .product-option--quantity
+                        label.mb-0 Quantity:
+                        select.selectpicker.form-control
+                            option.text-dark(value='2') Option 1
+                            option.text-dark(value='3') Option 2
+
                 .product-option.option-stain
                     input( type="radio" id="fabric-02" name="fabric" checked)
-                    label.product-option--label(for="fabric-02")
+                    label.product-option--label.mb-2(for="fabric-02")
                         .enlarge
                             i.fa.fa-search
                         img(src="img/fabric/fabric-02.jpg", alt="#").img-fluid
                         p.name(data-title="1-49 Gallery") 1-49 Gallery
+                    .product-option--quantity
+                        label.mb-0 Quantity:
+                        select.selectpicker.form-control
+                            option.text-dark(value='2') Option 1
+                            option.text-dark(value='3') Option 2
                 .product-option.option-stain
                     input( type="radio" id="fabric-04" name="fabric")
-                    label.product-option--label(for="fabric-04")
+                    label.product-option--label.mb-2(for="fabric-04")
                         .enlarge
                             i.fa.fa-search
                         img(src="img/fabric/fabric-03.jpg", alt="#").img-fluid
                         p.name(data-title="1-49 Gallery") 1-49 Gallery
+                    .product-option--quantity
+                        label.mb-0 Quantity:
+                        select.selectpicker.form-control
+                            option.text-dark(value='2') Option 1
+                            option.text-dark(value='3') Option 2
                 .product-option.option-stain
                     input( type="radio" id="fabric-05" name="fabric")
-                    label.product-option--label(for="fabric-05")
+                    label.product-option--label.mb-2(for="fabric-05")
                         .enlarge
                             i.fa.fa-search
                         img(src="img/fabric/fabric-04.jpg", alt="#").img-fluid
                         p.name(data-title="1-49 Gallery") 1-49 Gallery
+                    .product-option--quantity
+                        label.mb-0 Quantity:
+                        select.selectpicker.form-control
+                            option.text-dark(value='2') Option 1
+                            option.text-dark(value='3') Option 2
                 .product-option.option-stain
                     input( type="radio" id="fabric-06" name="fabric")
-                    label.product-option--label(for="fabric-06")
+                    label.product-option--label.mb-2(for="fabric-06")
                         .enlarge
                             i.fa.fa-search
                         img(src="img/fabric/fabric-04.jpg", alt="#").img-fluid
                         p.name(data-title="1-49 Gallery") 1-49 Gallery
+                    .product-option--quantity
+                        label.mb-0 Quantity:
+                        select.selectpicker.form-control
+                            option.text-dark(value='2') Option 1
+                            option.text-dark(value='3') Option 2
                 .product-option.option-stain
                     input( type="radio" id="fabric-07" name="fabric")
-                    label.product-option--label(for="fabric-07")
+                    label.product-option--label.mb-2(for="fabric-07")
                         .enlarge
                             i.fa.fa-search
                         img(src="img/fabric/fabric-05.jpg", alt="#").img-fluid
                         p.name(data-title="1-49 Gallery") 1-49 Gallery
+                    .product-option--quantity
+                        label.mb-0 Quantity:
+                        select.selectpicker.form-control
+                            option.text-dark(value='2') Option 1
+                            option.text-dark(value='3') Option 2
                 .product-option.option-stain
                     input( type="radio" id="fabric-08" name="fabric")
-                    label.product-option--label(for="fabric-08")
+                    label.product-option--label.mb-2(for="fabric-08")
                         .enlarge
                             i.fa.fa-search
                         img(src="img/fabric/fabric-06.jpg", alt="#").img-fluid
                         p.name(data-title="1-49 Gallery") 1-49 Gallery
+                    .product-option--quantity
+                        label.mb-0 Quantity:
+                        select.selectpicker.form-control
+                            option.text-dark(value='2') Option 1
+                            option.text-dark(value='3') Option 2
 
     #optgroup-8
         .product-customize-form
@@ -278,7 +314,7 @@ form#options-form
                         label.text-dark.text-uppercase(for='Pillow1') Emriodery
                 .col-sm-6
                     label.mb-0.d-flex.align-content-center Quantity:
-                        select.selectpicker.ml-3
+                        select.selectpicker.form-control.ml-3
                             option.text-dark(value='2') Option 1
                             option.text-dark(value='3') Option 2
 

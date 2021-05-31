@@ -381,9 +381,9 @@ a:focus {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 14px;
+    width: $font-size-base;
     font-size: $font-size-sm;
-    height: 14px;
+    height: $font-size-base;
     border-radius: 50%;
     border: $border-width solid $blue;
     color: $blue;

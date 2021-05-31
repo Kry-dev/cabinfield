@@ -1,0 +1,26 @@
+extends ../product-options-template
+block title
+    | Product page
+
+block content
+    +breadcrumbs([['Bedrooms', '#'], ['Beds & Headboards', '#'], ['Platform beds', '#']])
+    main.content.pt-lg-0
+        <!--Product overview-->
+        include ../components/_product-new
+        <!--Product end-->
+        <!--Product features tabs-->
+        include ../layout/_product-features-tabs-with-sliders
+        <!--Product features tabs end-->
+        <!--Related products-->
+        include ../layout/_related-products
+        <!--Related products end-->
+
+        <!--Related products-->
+        include ../layout/_related-products
+        <!--Related products end-->
+        <!--Top product section-->
+        include ../components/_top-section-product-select
+        <!--Top product section end-->
+
+
+

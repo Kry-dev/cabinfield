@@ -126,7 +126,7 @@
     padding-bottom: 1rem;
     padding-left: .5rem;
     border-bottom: 1px dashed $product-border-color;
-    @include media-breakpoint-down(md){
+    @include media-breakpoint-down(md) {
         padding-left: 0;
     }
 }
@@ -140,6 +140,8 @@
         display: inline-flex;
         position: relative;
         margin-right: 20px;
+        height: $input-height;
+        min-width: 138px;
         @include media-breakpoint-down(sm){
             margin-right: 10px;
         }
@@ -158,9 +160,8 @@
             z-index: 100;
         }
 
-        input[type="radio"]:checked + label,
-        input[type="checkbox"]:checked + label {
-            //background: $product-option-checked-bg;
+        input[type="radio"]:checked + label.product-option--label,
+        input[type="checkbox"]:checked + label.product-option--label {
             background: $primary;
             border: $border-width solid $product-option-checked-border;
             text-shadow: 0 0 .65px #333, 0 0 .65px #333;
@@ -174,8 +175,8 @@
                 text-shadow: none;
             }
         }
-
-        label {
+    
+        .product-option--label {
             display: flex;
             flex-direction: row;
             justify-content: center;
@@ -185,13 +186,9 @@
             font-family: $font-family-base;
             font-size: 0.8125rem;
             line-height: 1rem;
-            height: 38px;
-            min-width: 159px;
             text-align: center;
             padding: 0 1.4375rem;
             border-radius: $border-radius;
-            //box-shadow: inset 0 -3px 0 0 $product-option-shadow-color, inset 0 2px 0 0 $white;
-            box-shadow: $input-box-shadow;
             @include media-breakpoint-down(md) {
                 margin-bottom: 1rem;
             }
@@ -214,14 +211,8 @@
             }
 
             &:hover {
-                background: #DDD;
-                text-shadow: 0 0 .5px #333, 0 0 .5px #333;
-
-                .name {
-                    color: $white;
-                    text-shadow: 0 0 .5px #333, 0 0 .5px #333;
-                }
-
+                background: $product-option-shadow-color;
+               
                 span {
                     font-weight: 400;
                 }
@@ -307,13 +298,13 @@
 .product-option-select {
     width: 100%;
     max-width: 230px;
-    height: 38px;
+    height: $input-height;
     .bootstrap-select>.dropdown-toggle {
         padding: .5rem .65rem;
     }
 }
 .product-option {
-    label {
+    &--label {
         border: $border-width solid $review-border-color;
 
         span {
@@ -323,13 +314,20 @@
    }
 
     &.option-stain {
-
-        label {
+        display: flex;
+        flex-direction: column;
+        width: 128px;
+        height: inherit;
+        .img-fluid {
+            min-height: 64px;
+        }
+        .product-option--label {
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
-            width: 128px;
-            min-height: 64px;
+            //width: 128px;
+            //min-height: 64px;
+            width: 100%;
             height: auto;
             padding: 0;
             border-radius: $border-radius;
@@ -356,11 +354,25 @@
                 width: 100%;
                 color: $black;
             }
-
+            .product-option--quantity {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+                label {
+                    display: inline-flex;
+                    margin: 0;
+                    border: 0;
+                    text-align: left;
+                }
+                .dropdown.bootstrap-select {
+                    width: 100%;
+                }
+            }
         }
 
-        input[type="radio"]:checked + label,
-        input[type="checkbox"]:checked + label {
+        input[type="radio"]:checked + label.product-option--label,
+        input[type="checkbox"]:checked + label.product-option--label {
             .name {
                 font-weight: 700;
                 color: $white;
@@ -390,7 +402,6 @@
             width: 100%;
             height: 67px;
             color: #000;
-            font-family: "Helvetica";
             font-size: 12px;
             line-height: 17px;
             text-align: center;
@@ -415,7 +426,7 @@
 
         margin-right: 36px;
         margin-bottom: 1rem;
-        label {
+        label.product-option--label {
             min-width: 140px;
             text-align: left;
             padding: 0 46px 0 16px;
@@ -451,9 +462,9 @@
             top: 13px;
             right: -20px;
         }
-        input[type="radio"]:checked + label,
-        input[type="checkbox"]:checked + label {
-            border: $border-width solid #D6CDCA;
+        input[type="radio"]:checked + label.product-option--label,
+        input[type="checkbox"]:checked + label.product-option--label {
+            border: $border-width solid $border-color;
             //box-shadow: inset 0 -3px 0 0 #F0EDED, inset 0 2px 0 0 #FFF;
             box-shadow: $input-box-shadow;
             &:before {
@@ -474,17 +485,16 @@
     }
 
     &.option-hboard {
-
-        label {
+        width: 138px;
+        min-width: 100px;
+        min-height: 64px;
+        height: inherit;
+        label.product-option--label {
             display: flex;
             flex-direction: column;
-            width: 128px;
-            min-height: 64px;
             height: auto;
             padding: 0;
             border-radius: $border-radius;
-            min-width: 100px;
-
             span {
                 display: flex;
                 width: 100%;
@@ -503,8 +513,8 @@
             width: 100%;
         }
         &.checkbox {
-            input[type="radio"]+ label,
-            input[type="checkbox"] + label {
+            input[type="radio"]+ label.product-option--label,
+            input[type="checkbox"] + label.product-option--label {
                 &:after {
                     content: "\f058";
                     font-family: $font-awesome;
@@ -516,8 +526,8 @@
                     color: rgba(#D6D5D4, .5);
                 }
             }
-            input[type="radio"]:checked + label,
-            input[type="checkbox"]:checked + label {
+            input[type="radio"]:checked + label.product-option--label,
+            input[type="checkbox"]:checked + label.product-option--label {
                 &:after {
                     content: "\f00c";
                     font-family: $font-awesome;
