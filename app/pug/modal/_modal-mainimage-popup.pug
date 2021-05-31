@@ -1,4 +1,4 @@
-#mainimage_popup.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+#mainimage_popup.modal.fade.modal--mainimage(tabindex='-1', role='dialog', aria-hidden='true')
     .modal-dialog.modal-dialog-centered.modal-lg(role='document')
         .modal-content
             .modal-header
@@ -9,14 +9,14 @@
             .modal-body.row
                 .col-1
                     .d-flex.h-100.justify-content-center.align-items-center
-                        a.btn.btn-outline-warning.prev_img(href='#')
+                        a.btn.px-1.prev_img(href='#')
                             i.fa.fa-chevron-left
                 .col-10
                     .mainimage-img.m-auto
                         img#pdp-zoom(src='#', alt='#')
                 .col-1
                     .d-flex.h-100.justify-content-center.align-items-center
-                        a.btn.btn-outline-warning.next_img(href='#')
+                        a.btn.px-1.next_img(href='#')
                             i.fa.fa-chevron-right
 
                 //.title.mb-3
