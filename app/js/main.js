@@ -758,32 +758,96 @@ $(document).ready(function () {
 
     // mobile mmenu plugin navigation
     let mobBanners = $('.nav-pictures').html(); // get banners from desctop menu and put to mmenu
-    let mobileMenu = new Mmenu(
-      document.querySelector('#mobile-menu'), {
-          extensions: [
-              "fx-panels-slide-100",
-              "theme-white",
-              "fullscreen",
-          ],
-          navbars: [
-              {
-                  position: "top",
-                  content: [
-                      "prev",
-                      "title",
-                      "close"
-                  ]
-              }, {
-                  position: "bottom",
-                  content: mobBanners,
-              }
-          ],
+    let mobileMenu = document.querySelector('#mobile-menu');
+    if(mobileMenu){
+        new Mmenu(
+          mobileMenu, {
+              extensions: [
+                  "fx-panels-slide-100",
+                  "theme-white",
+                  "fullscreen",
+              ],
+              navbars: [
+                  {
+                      position: "top",
+                      content: [
+                          "prev",
+                          "title",
+                          "close"
+                      ]
+                  }, {
+                      position: "bottom",
+                      content: mobBanners,
+                  }
+              ],
           
-          setSelected: true,
-          panelNodetype: ["ul", "ol"],
-      },
-      {});
-    if($("#mobile-menu")){
-        mobileMenu();
+              setSelected: true,
+              panelNodetype: ["ul", "ol"],
+          },
+          {});
     }
+
+
+    /*PDP options list slider*/
+    let prodCustomSlider = $(".product-customize--slider");
+    let numSlick = 0;
+    prodCustomSlider.each( function() {
+        numSlick++;
+        console.log($(this).children().length);
+        let sliderCount = $(this).children().length;
+        if (sliderCount > 7) {
+            $(this).addClass( 'product-customize--slider-' + numSlick ).slick({
+                infinite: false,
+                slidesToShow: 7,
+                slidesToScroll: 1,
+                rows:0,
+                arrows: true,
+                fade: false,
+                adaptiveHeight: true,
+                mobileFirst: true,
+                responsive: [
+                    {
+                        breakpoint: 280,
+                        settings: "unslick"
+                    },
+                    {
+                        breakpoint: 310,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 500,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 5,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 1200,
+                        settings: {
+                            slidesToShow: 7,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
+        }
+        
+    });
 });

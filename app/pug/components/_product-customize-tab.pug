@@ -277,13 +277,14 @@ form#options-form
                         input#Pillow1(type='checkbox' name='' value='')
                         label.text-dark.text-uppercase(for='Pillow1') Emriodery
                 .col-sm-6
-                    label.mb-0.d-flex.align-content-center Quantity:
-                        select.selectpicker.ml-3
+                    label.mb-0.d-flex.flex-row.align-items-center Quantity:
+                        select.selectpicker.from-control.ml-3
                             option.text-dark(value='2') Option 1
                             option.text-dark(value='3') Option 2
 
             .person-message
                 h6.product-customize-subtitle.label-color Message:
                 textarea(rows="4")
-                a.btn.btn-warning(href="#")  add to cart
+                a.btn.btn-warning.text-uppercase(href="#")
+                    strong add to cart
 
