@@ -244,28 +244,28 @@
                 position: relative;
                 .zoom-inner {
                     position: absolute;
-                    left: 1rem;
+                    right: 1rem;
                     bottom: 1rem;
+                    width: 30px;
+                    height: 30px;
                     color: $white;
+                    background: rgba($brown, .5);
                     border-radius: 1rem;
-                    padding: .25rem .75rem;
                     text-transform: uppercase;
-                    font-size: 0.825rem;
-                    background: rgba($black, .25);
-                    display: inline-flex;
-                    flex-direction: row;
+                    font-size: 1rem;
+                    display: flex;
                     justify-content: center;
                     align-items: center;
-                }
-                .fa {
-                    margin-right: .5rem;
+                    cursor: pointer;
                 }
             }
             .title {
                 margin-bottom: 0;
                 padding: 0.75rem 1rem;
-                font-size: 0.8125rem;
-                line-height: 1rem;
+                font-size: $font-size-base;
+                line-height: 1.4;
+                color: $dark;
+                text-align: center;
             }
             @include media-breakpoint-down(lg) {
                 max-width: 100%;
