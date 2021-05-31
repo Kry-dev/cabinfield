@@ -142,6 +142,7 @@
         margin-right: 20px;
         height: $input-height;
         min-width: 138px;
+        margin-bottom: 16px;
         @include media-breakpoint-down(sm){
             margin-right: 10px;
         }
@@ -186,6 +187,7 @@
             font-family: $font-family-base;
             font-size: 0.8125rem;
             line-height: 1rem;
+            min-height: $input-height;
             text-align: center;
             padding: 0 1.4375rem;
             border-radius: $border-radius;
@@ -306,7 +308,7 @@
 .product-option {
     &--label {
         border: $border-width solid $review-border-color;
-
+        
         span {
             padding-left: 5px;
             color: $label-color;
