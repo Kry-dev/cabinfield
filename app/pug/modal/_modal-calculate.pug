@@ -1,15 +1,15 @@
 <!--modal calculate-->
 #modal--calculate.modal.modal--calculate(tabindex='-1', role='dialog', aria-hidden='true')
     .modal-dialog.modal-dialog-centered.modal-md(role='document')
-        .modal-content
-            button.close(type='button', data-dismiss='modal', aria-label='Close')
-                span(aria-hidden='true') ×
-
-            form.form.modal-body.p-4
-                .form-group
-                    h4.text-left.modal-title Calculate Shipping
-                    p Please enter zip code to see shipping charges
-                .form-group.row.mt-4
+        form.form.modal-content.p-4
+            .modal-header
+                button.close(type='button', data-dismiss='modal', aria-label='Close')
+                    span(aria-hidden='true') ×
+                .form-group.w-100.mb-0
+                    h4.text-center.modal-title Calculate Shipping
+                    p.mb-0.text-center Please enter zip code to see shipping charges
+            .modal-body
+                .form-group.row
                     .col-sm-2.d-flex.align-content-center
                         label(for='myZIP') My zip
                     .col-sm-4
@@ -17,14 +17,16 @@
                 .form-group
                     label Delivery:
                 .form-group
-                    .checkbox.custom_checkbox.checkbox_primary.mb-3
+                    .checkbox.custom_checkbox.mb-3
                         input#myZIP0(type='checkbox' name='myZIP' value='' checked="checked")
-                        label.text-dark(for='myZIP0') Standard curbside delivery
+                        label.text-dark.mb-0(for='myZIP0') Standard curbside delivery
                 .form-group
-                    .checkbox.custom_checkbox.checkbox_primary
+                    .checkbox.custom_checkbox
                         input#myZIP1(type='checkbox' name='myZIP' value='')
-                        label.text-dark(for='myZIP1') Inside delivery with set up
-                .form-group.mt-4
-                    button.btn.btn-warning(type='submit') Calculate and add to cost
+                        label.text-dark.mb-0(for='myZIP1') Inside delivery with set up
+            .modal-footer
+                .form-group
+                    button.btn.btn-warning.text-uppercase(type='submit')
+                        strong Calculate and add to cost
 <!--modal calculate end-->
 

@@ -316,18 +316,17 @@ $(document).ready(function () {
     //Enlarge image on customize_product
     $(".product-customize .product-option label .enlarge").on("click", function (e) {
         e.stopPropagation();
-        console.log("click");
         var option_item = $(this).parent("label"),
           option_img = option_item.find("img").attr("src"),
           option_name = option_item.find(".name").clone(),
           option_descr = option_item.find(".descr").clone();
         console.log(option_name);
-        $("#mainimage_popup").modal("show");
-        $("#mainimage_popup .mainimage-content-wrap .mainimage-img img").attr("src", option_img);
-        $("#mainimage_popup .mainimage-content-wrap .mainimage-content .title").hide(0);
-        $("#mainimage_popup .mainimage-content-wrap .mainimage-content .text").text("").prepend(option_name);
+        $("#pdpzoom_popup").modal("show");
+        $("#pdpzoom_popup .mainimage-img img").attr("src", option_img);
+        $("#pdpzoom_popup .title").hide(0);
+        $("#pdpzoom_popup .text").text("").prepend(option_name);
         if (option_descr != 0) {
-            $("#mainimage_popup .mainimage-content-wrap .mainimage-content .text").append(option_descr);
+            $("#pdpzoom_popup .text").append(option_descr);
         }
     });
     

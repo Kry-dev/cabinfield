@@ -1,0 +1,23 @@
+#pdpzoom_popup.modal.fade.modal--mainimage(tabindex='-1', role='dialog', aria-hidden='true')
+    .modal-dialog.modal-dialog-centered.modal-lg(role='document')
+        .modal-content.p-4
+            .modal-header
+                button.close(type='button', data-dismiss='modal', aria-label='Close')
+                    span(aria-hidden='true') ×
+
+            .modal-body
+                .row
+                    .col-md-12
+                        h3.h3.text-center.text-dark.w-100
+                            .text
+                .row
+                    .col-12
+                        .mainimage-img.m-auto
+                            img#enlarge-zoom(src='#', alt='#')
+
+            .modal-footer
+                .d-flex.flex-row.align-items-center.justify-content-center
+                    a.btn.btn-outline-warning.mx-1.zoom-out(href="#", data-zoom="#enlarge-zoom")
+                        i.fa.fa-minus
+                    a.btn.btn-outline-warning.mx-1.zoom-in(href="#", data-zoom="#enlarge-zoom")
+                        i.fa.fa-plus
