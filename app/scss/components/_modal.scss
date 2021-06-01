@@ -845,7 +845,6 @@ body.modal-open .mm-slideout {
     }
     
     &--select-optns {
-        padding-top: 100px;
         
         .product-select {
             display: flex;
@@ -856,12 +855,11 @@ body.modal-open .mm-slideout {
         }
         
         .product-title {
-            font-family: "PT Serif";
             font-style: normal;
             font-weight: 400;
             font-size: 30px;
             line-height: 39px;
-            color: #2A0200;
+            color: $dark;
             max-width: 65%;
         }
         
@@ -886,7 +884,6 @@ body.modal-open .mm-slideout {
         
         .modal-body {
             padding: 2rem 0;
-            border-bottom: .5px solid $blue;
             @include media-breakpoint-down(sm) {
                 padding: .75rem 0;
             }
@@ -947,9 +944,7 @@ body.modal-open .mm-slideout {
         }
         
         .product-customize-subtitle {
-            border-bottom: .5px solid $blue;
             padding-bottom: 1rem;
-            margin-bottom: 2rem;
             
             @include media-breakpoint-down(sm) {
                 margin-bottom: .75rem;
@@ -981,7 +976,10 @@ body.modal-open .mm-slideout {
             .product-option.option-stain {
                 display: inline-flex;
                 width: 23%;
-                margin: 0 0 1rem;
+                margin: 0 1% 1rem;
+                img {
+                    height: inherit;
+                }
                 @include media-breakpoint-down(sm) {
                     width: auto;
                     margin: 0 .25rem 1rem;
