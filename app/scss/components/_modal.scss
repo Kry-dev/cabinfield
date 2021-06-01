@@ -16,7 +16,12 @@ body.modal-open .mm-slideout {
     &-content {
         border-radius: 0;
     }
-    
+    &-content-loaded {
+        width: 100%;
+        img {
+            width: 100%;
+        }
+    }
     &-header,
     &-footer {
         border: 0;
