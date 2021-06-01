@@ -1059,7 +1059,7 @@
             <div class="col-sm-6">
               <div class="row px-0">
                 <div class="col-xl-4 offset-xl-4 col-lg-6 col-md-12"><a class="btn btn-outline-primary text-uppercase w-100" href="#"><strong>Add to Wishlist</strong></a></div>
-                <div class="col-xl-4 col-lg-6 col-md-12"><a class="btn btn-warning text-uppercase w-100" href="#"><strong>Add to Cart</strong></a></div>
+                <div class="col-xl-4 col-lg-6 col-md-12"><a class="btn btn-warning text-uppercase w-100" href="#" data-toggle="modal" data-target="#modal--add-to-card"><strong>Add to Cart</strong></a></div>
               </div>
             </div>
           </div>
@@ -1191,6 +1191,27 @@
             </div>
           </div>
         </form>
+      </div>
+    </div><!--modal calculate end--><!--modal calculate-->
+    <div class="modal" id="modal--add-to-card" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content p-4">
+          <div class="modal-header">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            <div class="form-group w-100 mb-0">
+              <h4 class="text-center modal-title">Take advantage of combined shipping offers</h4>
+            </div>
+          </div>
+          <div class="modal-body">
+            <div class="form-group row">
+              <div class="col-sm-6"><a class="btn btn-warning w-100 text-uppercase" href="#"><strong>Proceed to shopping cart</strong></a></div>
+              <div class="col-sm-6"><a class="btn btn-outline-primary w-100 text-uppercase" href="#"><strong>Continue Shopping</strong></a></div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
+          </div>
+        </div>
       </div>
     </div><!--modal calculate end-->
     <div class="modal fade modal--mainimage" id="mainimage_popup" tabindex="-1" role="dialog" aria-hidden="true">
