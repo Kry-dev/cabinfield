@@ -820,7 +820,7 @@ $(document).ready(function () {
                     {
                         breakpoint: 310,
                         settings: {
-                            slidesToShow: 1,
+                            slidesToShow: 2,
                             slidesToScroll: 1
                         }
                     },
