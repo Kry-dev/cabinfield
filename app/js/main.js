@@ -799,63 +799,73 @@ $(document).ready(function () {
     /*PDP options list slider*/
     let prodCustomSlider = $(".product-customize--slider");
     let numSlick = 0;
-    prodCustomSlider.each( function() {
-        numSlick++;
-        let sliderCount = $(this).children().length;
-        if (sliderCount > 7) {
-            $(this).addClass( 'product-customize--slider-' + numSlick ).slick({
-                infinite: false,
-                slidesToShow: 7,
-                slidesToScroll: 1,
-                rows:0,
-                arrows: true,
-                fade: false,
-                adaptiveHeight: true,
-                mobileFirst: true,
-                responsive: [
-                    {
-                        breakpoint: 280,
-                        settings: "unslick"
-                    },
-                    {
-                        breakpoint: 310,
-                        settings: {
-                            slidesToShow: 2,
-                            slidesToScroll: 1
-                        }
-                    },
-                    {
-                        breakpoint: 500,
-                        settings: {
-                            slidesToShow: 2,
-                            slidesToScroll: 1
-                        }
-                    },
-                    {
-                        breakpoint: 768,
-                        settings: {
-                            slidesToShow: 3,
-                            slidesToScroll: 1
-                        }
-                    },
-                    {
-                        breakpoint: 1024,
-                        settings: {
-                            slidesToShow: 5,
-                            slidesToScroll: 1
-                        }
-                    },
-                    {
-                        breakpoint: 1200,
-                        settings: {
-                            slidesToShow: 7,
-                            slidesToScroll: 1
-                        }
-                    }
-                ]
-            });
-        }
-        
+    let prodCustomSliderConfig = {
+        infinite: false,
+        slidesToShow: 7,
+        slidesToScroll: 1,
+        rows:0,
+        arrows: true,
+        fade: false,
+        adaptiveHeight: true,
+        mobileFirst: true,
+        responsive: [
+            {
+                breakpoint: 280,
+                settings: "unslick"
+            },
+            {
+                breakpoint: 300,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 500,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 5,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 7,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    }
+    let prodCustomSliderInit = function (){
+        prodCustomSlider.each( function() {
+            numSlick++;
+            let currentSlider = $(this);
+            let sliderCount = currentSlider.children().length;
+            if (sliderCount > 7) {
+                currentSlider.not(".slick-initialized").addClass( 'product-customize--slider-' + numSlick ).slick(prodCustomSliderConfig);
+            }
+        })
+    };
+    prodCustomSliderInit();
+    $(window).on('resize orientationchange', function() {
+        // $(".product-customize--slider.slick-slider").slick('resize');
+        // $(".product-customize--slider.slick-slider").slick('refresh');
+        $(".product-customize--slider.slick-slider").slick('resize');
+        // $(".product-customize--slider.slick-initialized").slick('resize');
     });
     
     let zoom = 1;
@@ -883,4 +893,22 @@ $(document).ready(function () {
             'transform'         : 'scale(' + zoom + ')'
         });
     });
+    
+    $('.option-selected-list__viewAll').each(function(){
+        const max = 2;
+        let $this = $(this);
+        if ($this.find('li').length > max) {
+            $this.find('li:gt('+max+')').hide().end().append('<li class="viewAll"><a href="#" class="show_more">Show All</a></li>');
+            $this.find('.viewAll').on("click", function (e){
+                e.preventDefault();
+                $(this).siblings(':gt('+max+')').toggle();
+                if ( $('.show_more').length ) {
+                    $(this).html('<a href="#" class="show_less">Show Less</a>');
+                } else {
+                    $(this).html('<a href="#" class="show_more">Show All</a>');
+                }
+            });
+        }
+    });
 });
+

@@ -21,13 +21,12 @@ section.cart
                     .col-lg-6.col-md-12
                         .product-selected
                             img.img-fluid(src='img/product/yKelvO0K53.jpg')
-
-                    .col-lg-6.col-md-12
-                    .col-lg-6.col-md-12
                         .option-selected.mb-3
-                            h6 #[b Carolina Crown Amish Bed]
-                            include _option-selected-list
-                        .actions.mb-3.mb-lg-0
+                            include _option-selected-list-viewAll
+                    .col-lg-6.col-md-12.pt-lg-5
+                        h4.h4.mb-3.font-weight-bold.text-black Carolina Crown Amish Bed
+                        h4.h4.mb-3.font-weight-bold.text-dark Product price #[span.text-brown.font-weight-bold $1,371.00]
+                        .actions.mb-3
                             a.edit(href='#')
                                 i.fa.fa-pencil
                                 | Edit
@@ -37,7 +36,6 @@ section.cart
                             button.delete
                                 i.fa.fa-trash
                                 | Delete
-                    .col-lg-6.col-md-12
                         .form-group.row
                             .col-sm-12.mb-3
                                 label.mb-1 Quantity:
@@ -54,13 +52,12 @@ section.cart
                     .col-lg-6.col-md-12
                         .product-selected
                             img.img-fluid(src='img/product/Amq5PuczxT.jpg')
-
-                    .col-lg-6.col-md-12
-                    .col-lg-6.col-md-12
                         .option-selected.mb-3
-                            h6 #[b Carolina Crown Amish Bed]
-                            include _option-selected-list
-                        .actions.mb-3.mb-lg-0
+                            include _option-selected-list-viewAll
+                    .col-lg-6.col-md-12.pt-lg-5
+                        h4.h4.mb-3.font-weight-bold.text-black Carolina Crown Amish Bed
+                        h4.h4.mb-3.font-weight-bold.text-dark Product price #[span.text-brown.font-weight-bold $1,371.00]
+                        .actions.mb-3
                             a.edit(href='#')
                                 i.fa.fa-pencil
                                 | Edit
@@ -70,7 +67,6 @@ section.cart
                             button.delete
                                 i.fa.fa-trash
                                 | Delete
-                    .col-lg-6.col-md-12
                         .form-group.row
                             .col-sm-12.mb-3
                                 label.mb-1 Quantity:
@@ -78,6 +74,57 @@ section.cart
                                     option.text-dark(value='2') Option 1
                                     option.text-dark(value='3') Option 2
                         .form-group.row.mb-3
+                            .col-sm-12
+                                a(href="#").text-bold + Add add virtual pre-gifting
+
+
+                //End PDP 1 group 2
+                .extended_price (Combined) Standard curbside delivery of 2 items above
+                .extended_price Shipping group total:
+                    span.ml-3 $130.67
+                .extended_price You saved:
+                    span.ml-3.text-brown - $32.00
+
+                //End of Shipping group 1
+
+                //Start of Shipping group 2
+                .row.px-0.mb-3
+                    .col-md-12
+                        h4.h4.mb-3 Shipping group 2
+                        label Delivery:
+                        li.checkbox.custom_checkbox
+                            input#ship03(type='checkbox' name='' value='')
+                            label(for='ship03') Standard curbside delivery
+                        li.checkbox.custom_checkbox
+                            input#ship04(type='checkbox' name='' value='' checked='')
+                            label(for='ship04') Inside delivery with set up
+
+                //start PDP 1 group 2
+                .row.mb-3.border-b-dashed
+                    .col-lg-6.col-md-12
+                        .product-selected
+                            img.img-fluid(src='img/product/yKelvO0K53.jpg')
+                        .option-selected.mb-3
+                            include _option-selected-list-viewAll
+                    .col-lg-6.col-md-12.pt-lg-5
+                        h4.h4.mb-3.font-weight-bold.text-black Carolina Crown Amish Bed
+                        h4.h4.mb-3.font-weight-bold.text-dark Product price #[span.text-brown.font-weight-bold $1,371.00]
+                        .actions.mb-3
+                            a.edit(href='#')
+                                i.fa.fa-pencil
+                                | Edit
+                            button.wishlist
+                                i.fa.fa-heart-o
+                                | Move to wishlist
+                            button.delete
+                                i.fa.fa-trash
+                                | Delete
+                        .form-group.row
+                            .col-sm-12.mb-3
+                                label.mb-1 Quantity:
+                                select.selectpicker.w-100
+                                    option.text-dark(value='2') Option 1
+                                    option.text-dark(value='3') Option 2
                             .col-sm-12
                                 a(href="#").text-bold + Add add virtual pre-gifting
                         .form-group.row.mb-3
@@ -106,65 +153,17 @@ section.cart
 
                 //End PDP 1 group 2
 
-                //End of Shipping group 1
-
-                //Start of Shipping group 2
-                .row.px-0.mb-3
-                    .col-md-12
-                        h4.h4.mb-3 Shipping group 2
-                        label Delivery:
-                        li.checkbox.custom_checkbox
-                            input#ship03(type='checkbox' name='' value='')
-                            label(for='ship03') Standard curbside delivery
-                        li.checkbox.custom_checkbox
-                            input#ship04(type='checkbox' name='' value='' checked='')
-                            label(for='ship04') Inside delivery with set up
-
-                //start PDP 1 group 2
-                .row.mb-3.border-b-dashed
-                    .col-lg-6.col-md-12
-                        .product-selected
-                            img.img-fluid(src='img/product/yKelvO0K53.jpg')
-
-                    .col-lg-6.col-md-12
-                    .col-lg-6.col-md-12
-                        .option-selected.mb-3
-                            h6 #[b Carolina Crown Amish Bed]
-                            include _option-selected-list
-                        .actions.mb-3.mb-lg-0
-                            a.edit(href='#')
-                                i.fa.fa-pencil
-                                | Edit
-                            button.wishlist
-                                i.fa.fa-heart-o
-                                | Move to wishlist
-                            button.delete
-                                i.fa.fa-trash
-                                | Delete
-                    .col-lg-6.col-md-12
-                        .form-group.row
-                            .col-sm-12.mb-3
-                                label.mb-1 Quantity:
-                                select.selectpicker.w-100
-                                    option.text-dark(value='2') Option 1
-                                    option.text-dark(value='3') Option 2
-                            .col-sm-12
-                                a(href="#").text-bold + Add add virtual pre-gifting
-
-                //End PDP 1 group 2
-
                 //start PDP 2 group 2
                 .row.mb-5.border-b-dashed
                     .col-lg-6.col-md-12
                         .product-selected
                             img.img-fluid(src='img/product/yKelvO0K53.jpg')
-
-                    .col-lg-6.col-md-12
-                    .col-lg-6.col-md-12
                         .option-selected.mb-3
-                            h6 #[b Carolina Crown Amish Bed]
-                            include _option-selected-list
-                        .actions.mb-3.mb-lg-0
+                            include _option-selected-list-viewAll
+                    .col-lg-6.col-md-12.pt-lg-5
+                        h4.h4.mb-3.font-weight-bold.text-black Carolina Crown Amish Bed
+                        h4.h4.mb-3.font-weight-bold.text-dark Product price #[span.text-brown.font-weight-bold $1,371.00]
+                        .actions.mb-3
                             a.edit(href='#')
                                 i.fa.fa-pencil
                                 | Edit
@@ -174,7 +173,6 @@ section.cart
                             button.delete
                                 i.fa.fa-trash
                                 | Delete
-                    .col-lg-6.col-md-12
                         .form-group.row
                             .col-sm-12.mb-3
                                 label.mb-1 Quantity:
@@ -222,7 +220,7 @@ section.cart
                                     | Recipient’s e-mail:
                                     span JohnDoe@gmail.com
 
-                        .actions.mb-3.mb-lg-0
+                        .actions.mb-3
                             a.edit(href='#')
                                 i.fa.fa-pencil
                                 | Edit
