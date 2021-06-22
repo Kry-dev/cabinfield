@@ -1,0 +1,25 @@
+section.signin
+    .container
+        .row
+            .col-md-12
+                h1.mb-5 My Account
+        .row
+            .col-lg-4.col-md-6.col-sm-12
+                form
+                    .form-group
+                        label(for='username') Username
+                        input#username.form-control(type='email')
+                    .form-group.mb-5
+                        label(for='userPassword') Password
+                        input#userPassword.form-control(type='password', aria-describedby='userPassword')
+                        small#userPasswordHelp.form-text.text-muted Forgot #[a(href="#") Password]
+                            | ?
+                    .form-group.mb-5
+                        button.w-100.btn.btn-warning(type='submit')
+                            span.text-uppercase.font-weight-bold Log In
+
+                    .form-group.mb-5
+                        label Not yet a member?
+                        button.w-100.btn.btn-outline-warning(type='submit')
+                            span.text-uppercase.font-weight-bold Create an account
+

@@ -25,6 +25,7 @@
         line-height: 1.3125rem;
         padding: .675rem 1rem;
         text-transform: uppercase;
+        border-radius: 0;
     }
     
     &-outline-primary {
@@ -237,10 +238,10 @@
     }
 }
 
-.btn-outline-warning {
-    border: 2px solid $brown;
-    border-radius: $border-radius;
-}
+//.btn-outline-warning {
+//    border: 2px solid $brown;
+//    border-radius: $border-radius;
+//}
 .btn-collection {
     display: inline-block;
     width: 100%;
