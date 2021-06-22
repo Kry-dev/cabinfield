@@ -431,26 +431,63 @@
         <div class="container">
           <div class="row">
             <div class="col-md-12">
-              <h1 class="mb-5">My Account</h1>
+              <h1 class="mb-5">My Information</h1>
             </div>
           </div>
           <div class="row">
-            <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="col-lg-6 col-md-12 col-sm-12">
               <form>
-                <div class="form-group">
-                  <label for="username">Username</label>
-                  <input class="form-control" id="username" type="text">
+                <div class="row">
+                  <div class="col-md-6 col-sm-12">
+                    <div class="form-group">
+                      <label for="firstname">First Name</label>
+                      <input class="form-control" id="firstname" type="text">
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-sm-12">
+                    <div class="form-group">
+                      <label for="Lastname">Last Name</label>
+                      <input class="form-control" id="Lastname" type="text">
+                    </div>
+                  </div>
                 </div>
-                <div class="form-group mb-5">
-                  <label for="userPassword">Password</label>
-                  <input class="form-control" id="userPassword" type="password" aria-describedby="userPassword"><small class="form-text text-muted" id="userPasswordHelp">Forgot <a href="#">Password</a>?</small>
+                <div class="row">
+                  <div class="col-md-6 col-sm-12">
+                    <div class="form-group">
+                      <label for="createPass">Create Password</label>
+                      <input class="form-control" id="createPass" type="password" aria-describedby="createPassHelp">
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-sm-12">
+                    <div class="form-group">
+                      <label for="confirmPass">Confirm Password</label>
+                      <input class="form-control" id="confirmPass" type="password" aria-describedby="createPassHelp">
+                    </div>
+                  </div>
                 </div>
-                <div class="form-group mb-5">
-                  <button class="w-100 btn btn-warning" type="submit"><span class="text-uppercase font-weight-bold">Log In</span></button>
+                <div class="row">
+                  <div class="col-md-6 col-sm-12">
+                    <div class="form-group">
+                      <label for="email">Email Address</label>
+                      <input class="form-control" id="email" type="email">
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-sm-12">
+                    <div class="form-group pt-3">
+                      <div class="mb-4"></div>
+                      <div class="checkbox custom_checkbox">
+                        <input id="Newsletters-subcrs" type="checkbox" name="" value="">
+                        <label class="form-check-label" for="Newsletters-subcrs">Sign Up for Newsletters</label>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="form-group mb-5">
-                  <label>Not yet a member?</label>
-                  <button class="w-100 btn btn-outline-warning" type="submit"><span class="text-uppercase font-weight-bold">Create an account</span></button>
+                <div class="row mt-5">
+                  <div class="col-lg-6 col-md-6">
+                    <div class="form-group mb-5">
+                      <button class="w-100 btn btn-warning" type="submit"><span class="text-uppercase font-weight-bold">Create account</span></button><small class="form-text text-muted mt-2">Already a member?  <a href="#">Sign in</a></small>
+                    </div>
+                  </div>
                 </div>
               </form>
             </div>

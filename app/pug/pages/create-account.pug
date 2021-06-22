@@ -1,0 +1,9 @@
+extends ../main-template
+
+block title
+    | Cabinfield Sign In
+
+block content
+    +breadcrumbs([['MY ACCOUNT', '#'], ['', '']])
+    main.content
+        include ../components/_create-account-form
