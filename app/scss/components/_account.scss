@@ -47,18 +47,23 @@
         padding: 8px 0 0;
         margin: 0;
         min-height: 126px;
-        @include media-breakpoint-down(sm) {
+        @include media-breakpoint-down(md) {
             flex-wrap: wrap;
         }
         
         &-left {
             flex: 0 0 23%;
             max-width: 23%;
+            //@include media-breakpoint-down(lg) {
+            //    flex: 0 0 40%;
+            //    max-width: 40%;
+            //}
+            //@include media-breakpoint-down(md) {
+            //    flex: 0 0 33%;
+            //    max-width: 33%;
+            //
+            //}
             @include media-breakpoint-down(md) {
-                flex: 0 0 40%;
-                max-width: 40%;
-            }
-            @include media-breakpoint-down(sm) {
                 flex: 0 0 100%;
                 max-width: 100%;
                 margin-bottom: 1rem;
@@ -68,11 +73,16 @@
         &-right {
             flex: 0 0 77%;
             max-width: 77%;
+            //@include media-breakpoint-down(lg) {
+            //    flex: 0 0 60%;
+            //    max-width: 60%;
+            //}
+            //@include media-breakpoint-down(md) {
+            //    flex: 0 0 77%;
+            //    max-width: 77%;
+            //}
+            
             @include media-breakpoint-down(md) {
-                flex: 0 0 60%;
-                max-width: 60%;
-            }
-            @include media-breakpoint-down(sm) {
                 flex: 0 0 100%;
                 max-width: 100%;
             }
@@ -144,14 +154,14 @@
                 margin-top: 0;
             }
             
-            @include media-breakpoint-down(md) {
+            @include media-breakpoint-down(sm) {
                 flex-direction: column;
             }
         }
         
         &-item--left {
             width: 48%;
-            @include media-breakpoint-down(md) {
+            @include media-breakpoint-down(sm) {
                 width: 100%;
                 margin-bottom: 1rem;
             }
@@ -167,6 +177,7 @@
                 width: 100%;
             }
             @include media-breakpoint-down(sm) {
+                flex-direction: column;
                 flex-wrap: wrap;
             }
             

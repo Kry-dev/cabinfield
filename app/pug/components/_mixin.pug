@@ -46,6 +46,22 @@ mixin rating-small(percent)
         i.fa.fa-star
     a(href="#") 8 customer reviews
 
+mixin rating-account(percent)
+    <!--star rating small without number-->
+    .stars-rating.stars-rating--sm(title =percent)
+        .back-stars
+            i.fa.fa-star-o
+            i.fa.fa-star-o
+            i.fa.fa-star-o
+            i.fa.fa-star-o
+            i.fa.fa-star-o
+            .front-stars(style='width: ' + percent + '%')
+                i.fa.fa-star
+                i.fa.fa-star
+                i.fa.fa-star
+                i.fa.fa-star
+                i.fa.fa-star
+    a(href="#") Write product review
 
 mixin rating-small-review(percent)
   <!--star rating small without number without bottom link-->
