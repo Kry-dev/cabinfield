@@ -12,7 +12,7 @@ section.signin
                     .form-group.mb-5
                         label(for='userPassword') Password
                         input#userPassword.form-control(type='password', aria-describedby='userPassword')
-                        small#userPasswordHelp.form-text.text-muted Forgot #[a(href="#") Password]
+                        small#userPasswordHelp.form-text.text-muted Forgot #[a(href="#" data-toggle="modal" data-target="#modal--forgot-pass") Password]
                             | ?
                     .form-group.mb-5
                         button.w-100.btn.btn-warning(type='submit')
