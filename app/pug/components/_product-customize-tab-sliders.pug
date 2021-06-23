@@ -344,19 +344,38 @@ form.w-100#options-form
         .product-customize-form
             h6.product-customize-subtitle #[b.mr-1 Pillow: ]
                 a(href="#", data-toggle="modal", data-target="#customize_popup5").popup-info ?
-            .form-group.row
-                .col-sm-6
-                    .checkbox.custom_checkbox.mb-3
+            .row.w-100.mb-3
+                .col-md-3.col-sm-6.d-inline-flex.align-items-center
+                    .checkbox.custom_checkbox
                         input#Pillow0(type='checkbox' name='' value='')
                         label.text-dark.text-uppercase(for='Pillow0') 13"x13" - Add $36.00
+                .col-md-3.col-sm-6
+                    label.mb-0.d-flex.flex-row.align-items-center Quantity:
+                        select.selectpicker.from-control.ml-3
+                            option.text-dark(value='2') Option 1
+                            option.text-dark(value='3') Option 2
+            .row.w-100.mb-3
+                .col-md-3.col-sm-6.d-inline-flex.align-items-center
                     .checkbox.custom_checkbox
                         input#Pillow1(type='checkbox' name='' value='')
                         label.text-dark.text-uppercase(for='Pillow1') Emriodery
-                .col-sm-6
+                .col-md-3.col-sm-6
                     label.mb-0.d-flex.flex-row.align-items-center Quantity:
-                        select.selectpicker.form-control.ml-3
+                        select.selectpicker.from-control.ml-3
                             option.text-dark(value='2') Option 1
-                            option.text-dark(value='3') Option 2
+            //.form-group.row
+            //    .col-sm-6
+            //        .checkbox.custom_checkbox.mb-3
+            //            input#Pillow0(type='checkbox' name='' value='')
+            //            label.text-dark.text-uppercase(for='Pillow0') 13"x13" - Add $36.00
+            //        .checkbox.custom_checkbox
+            //            input#Pillow1(type='checkbox' name='' value='')
+            //            label.text-dark.text-uppercase(for='Pillow1') Emriodery
+            //    .col-sm-6
+            //        label.mb-0.d-flex.flex-row.align-items-center Quantity:
+            //            select.selectpicker.form-control.ml-3
+            //                option.text-dark(value='2') Option 1
+            //                option.text-dark(value='3') Option 2
 
             .person-message
                 h6.product-customize-subtitle.label-color Message:
