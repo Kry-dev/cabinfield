@@ -482,7 +482,10 @@
                 </div>
               </div>
               <div class="row">
-                <div class="product-right-btns flex-column col-xl-6 col-lg-9 col-sm-12"><a class="btn btn-warning text-uppercase w-100" href="#"><strong>Choose Options</strong></a><a class="btn btn-outline-primary text-uppercase w-100 mt-3" href="#"><strong>Add to wishlist</strong></a></div>
+                <div class="product-right-btns flex-column col-xl-6 col-lg-9 col-sm-12">
+                  <!--a.btn.btn-warning.text-uppercase.w-100(data-toggle='tab' href='#nav-customize' role='tab' aria-controls='nav-customize' aria-selected='true')--><a class="btn btn-warning text-uppercase w-100" onclick="$('#nav-tab a[href='#nav-customize']').click();" href="javascript:void(0);"><strong>Choose Options</strong></a>
+                  <!--a#nav-customize-tab.nav-link.active(data-toggle='tab' href='#nav-customize' role='tab' aria-controls='nav-customize' aria-selected='true') Customize--><a class="btn btn-outline-primary text-uppercase w-100 mt-3" href="#"><strong>Add to wishlist</strong></a>
+                </div>
               </div>
               <div class="row">
                 <div class="col-sm-12">
@@ -510,11 +513,11 @@
       <section class="product-features mb-5">
         <nav class="product-features-nav">
           <div class="container px-0 px-sm-3">
-            <div class="nav nav-tabs" id="nav-tab" role="tablist"><a class="nav-link" id="specs-features-tab" data-toggle="tab" href="#specs-features" role="tab" aria-controls="specs-features" aria-selected="false">SPECS & Features</a><a class="nav-link active" id="nav-customize-tab" data-toggle="tab" href="#nav-customize" role="tab" aria-controls="nav-customize" aria-selected="true">Customize</a><a class="nav-link" id="nav-reviews-tab" data-toggle="tab" href="#nav-reviews" role="tab" aria-controls="nav-reviews" aria-selected="false">REVIEWS/Q&A</a></div>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist"><a class="nav-link active" id="specs-features-tab" data-toggle="tab" href="#specs-features" role="tab" aria-controls="specs-features" aria-selected="true">SPECS & Features</a><a class="nav-link" id="nav-customize-tab" data-toggle="tab" href="#nav-customize" role="tab" aria-controls="nav-customize" aria-selected="false">Customize</a><a class="nav-link" id="nav-reviews-tab" data-toggle="tab" href="#nav-reviews" role="tab" aria-controls="nav-reviews" aria-selected="false">REVIEWS/Q&A</a></div>
           </div>
         </nav>
         <div class="tab-content" id="nav-tabContent">
-          <div class="tab-pane fade" id="specs-features" role="tabpanel" aria-labelledby="specs-features-tab">
+          <div class="tab-pane fade show active" id="specs-features" role="tabpanel" aria-labelledby="specs-features-tab">
             <div class="container">
               <div class="row">
                 <div class="col-md-4 product-features-list">
@@ -566,7 +569,7 @@
               </div>
             </div>
           </div>
-          <div class="tab-pane fade show active" id="nav-customize" role="tabpanel" aria-labelledby="nav-customize-tab">
+          <div class="tab-pane fade" id="nav-customize" role="tabpanel" aria-labelledby="nav-customize-tab">
             <div class="container">
               <div class="product-customize">
                 <div class="flex-column"><!--Product customize-->

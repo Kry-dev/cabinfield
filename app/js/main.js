@@ -45,7 +45,7 @@ $(document).ready(function () {
     $(".related-list").each(function () {
         var slickIndividual = $(this);
         slickIndividual.next().css("display", "none"); // hide the next sections with buttons
-        var relatedSliderConfig = { // slick slider config
+        var relatedConfig = { // slick slider config
             infinite: true,
             speed: 500,
             slidesToShow: 5,
@@ -90,11 +90,11 @@ $(document).ready(function () {
         
         function initRelatedSlider() {
             slickIndividual.next().css("display", "flex");
-            slickIndividual.slick(relatedSliderConfig);
+            slickIndividual.not('.slick-initialized').slick(relatedConfig);
         }
         
         initRelatedSlider();
-        $(window).on("resize", initRelatedSlider);
+        $(window).on("load resize", initRelatedSlider);
     });
     /*photo list carousel - product page*/
     $(".product-photo-carousel ul").slick({
@@ -910,5 +910,10 @@ $(document).ready(function () {
             });
         }
     });
+    
+    // $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+    //     var target = this.href.split('#');
+    //     $('.nav a').filter('a[href="#'+target[1]+'"]').tab('show');
+    // })
 });
 
