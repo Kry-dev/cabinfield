@@ -1,0 +1,19 @@
+extends ../main-template
+
+block title
+    | Cabinfield wishlist page
+
+block content
+    main.content
+        +breadcrumbs([['Wishlist', '#']])
+        <!--Wishlist-section-->
+        section.wishlist
+            .container
+                h1.h1.text-dark Wishlist
+                .row.pt-lg-5
+                    .col-md-6
+                        h2 Your wishlist is empty.
+                        p You haven't added any items to your Wish List yet.
+                            a(href="#")  Shop now
+                            | .
+        <!--Wishlist-section end-->
