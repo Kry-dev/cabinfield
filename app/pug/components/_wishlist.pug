@@ -1,9 +1,84 @@
 section.wishlist
-  .container
-    h1.wishlist-title My Wish List
-    .row.wishlist-item
-      include ../layout/_product-selected-wishlist
-    hr
-    .row.wishlist-item
-      include ../layout/_product-unselected-wishlist
-    hr.mb-5
+    .container
+        h1.h1.text-dark Wishlist
+
+        .row.mb-3.border-b-dashed.pb-lg-5
+            .col-xl-4.col-lg-4.col-md-12
+                .product-selected
+                    img.img-fluid(src='img/product/yKelvO0K53.jpg')
+                h4.h4.mb-3.font-weight-bold.text-black Carolina Crown Amish Bed
+                h4.h4.mb-3.mb-md-0.font-weight-bold.text-dark Product price #[span.text-brown.font-weight-bold $1,371.00]
+
+            .col-xl-4.col-lg-5.col-md-12.pt-lg-5
+                .d-flex.flex-column.justify-content-between.h-100
+                    .option-selected
+                        include _option-selected-list-viewAll
+                    .actions.mt-auto.mb-3.mb-lg-0
+                        a.edit(href='#')
+                            i.fa.fa-pencil
+                            | Edit
+                        button.wishlist
+                            i.fa.fa-heart-o
+                            | Move to wishlist
+                        button.delete
+                            i.fa.fa-trash
+                            | Delete
+            .col-xl-4.col-lg-3.col-md-12.pt-lg-5
+                button.btn.btn-warning.w-100.mb-3
+                    span.text-uppercase.font-weight-bold Move to cart
+                button.btn.btn-outline-primary.w-100
+                    span.text-uppercase.font-weight-bold Remove
+
+        .row.mb-3.border-b-dashed.pb-lg-5
+            .col-xl-4.col-lg-4.col-md-12
+                .product-selected
+                    img.img-fluid(src='img/product/yKelvO0K53.jpg')
+                h4.h4.mb-3.font-weight-bold.text-black Carolina Crown Amish Bed
+                h4.h4.mb-3.mb-md-0.font-weight-bold.text-dark Product price #[span.text-brown.font-weight-bold $1,371.00]
+
+            .col-xl-4.col-lg-5.col-md-12.pt-lg-5
+                .d-flex.flex-column.justify-content-between.h-100
+                    .option-selected
+                        include _option-selected-list-viewAll
+                    .actions.mt-auto.mb-3.mb-lg-0
+                        a.edit(href='#')
+                            i.fa.fa-pencil
+                            | Edit
+                        button.wishlist
+                            i.fa.fa-heart-o
+                            | Move to wishlist
+                        button.delete
+                            i.fa.fa-trash
+                            | Delete
+            .col-xl-4.col-lg-3.col-md-12.pt-lg-5
+                button.btn.btn-warning.w-100.mb-3
+                    span.text-uppercase.font-weight-bold Move to cart
+                button.btn.btn-outline-primary.w-100
+                    span.text-uppercase.font-weight-bold Remove
+
+        .row.mb-3.border-b-dashed.pb-lg-5
+            .col-xl-4.col-lg-4.col-md-12
+                .product-selected
+                    img.img-fluid(src='img/product/yKelvO0K53.jpg')
+                h4.h4.mb-3.font-weight-bold.text-black Carolina Crown Amish Bed
+                h4.h4.mb-3.mb-md-0.font-weight-bold.text-dark Product price #[span.text-brown.font-weight-bold $1,371.00]
+
+            .col-xl-4.col-lg-5.col-md-12.pt-lg-5
+                .d-flex.flex-column.justify-content-between.h-100
+                    .option-selected
+                        include _option-selected-list-viewAll
+                    .actions.mt-auto.mb-3.mb-lg-0
+                        a.edit(href='#')
+                            i.fa.fa-pencil
+                            | Edit
+                        button.wishlist
+                            i.fa.fa-heart-o
+                            | Move to wishlist
+                        button.delete
+                            i.fa.fa-trash
+                            | Delete
+            .col-xl-4.col-lg-3.col-md-12.pt-lg-5
+                button.btn.btn-warning.w-100.mb-3
+                    span.text-uppercase.font-weight-bold Move to cart
+                button.btn.btn-outline-primary.w-100
+                    span.text-uppercase.font-weight-bold Remove

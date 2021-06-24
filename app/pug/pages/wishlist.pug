@@ -1,13 +1,11 @@
 extends ../main-template
 
 block title
-	| Cabinfield wishlist page
+    | Cabinfield wishlist page
 
 block content
-	main.content.pt-lg-0
-		<!--Wishlist-section-->
-		include ../components/_wishlist
-		<!--Wishlist-section end-->
-		<!--Review-section-->
-		include ../layout/_review-section
-		<!--Review-section end-->
+    main.content
+        +breadcrumbs([['Wishlist', '#']])
+        <!--Wishlist-section-->
+        include ../components/_wishlist
+        <!--Wishlist-section end-->
