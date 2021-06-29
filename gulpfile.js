@@ -48,12 +48,12 @@ gulp.task('browsersync', function() {
     server: {
       baseDir: 'app'
     },
-    port: 3000,
+    port: 4000,
     open: true,
     notify: false,
-    // online: false, // Work Offline Without Internet Connection
-    // tunnel: true
-    // tunnel: "cabinfiled" // Demonstration page: http://projectname.localtunnel.me
+    online: false, // Work Offline Without Internet Connection
+    tunnel: true,
+    tunnel: "cabinfiled" // Demonstration page: http://projectname.localtunnel.me
   })
 });
 
