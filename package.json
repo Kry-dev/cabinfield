@@ -4,7 +4,8 @@
   "description": "This is template for front-end projects (HTML, CSS, JS) with Bootstrap 4 (grid & reboot), Font-Awesome 5, Gulp, Pug, Sass, Browsersync, Autoprefixer, Clean-CSS, Uglify and Rsync. The template contains a .htaccess file with caching rules for web server.",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "preinstall": "npx npm-force-resolutions"
   },
   "resolutions": {
     "graceful-fs": "^4.2.4"
@@ -36,6 +37,7 @@
   "dependencies": {
     "bootstrap": "^4.4.1",
     "bootstrap-select": "^1.13.18",
+    "graceful-fs": "^4.2.6",
     "gulp-autoprefixer": "^6.1.0",
     "jquery": "^3.4.1",
     "lg-fullscreen": "^1.2.0",
