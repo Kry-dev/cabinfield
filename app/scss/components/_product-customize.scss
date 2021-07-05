@@ -424,12 +424,13 @@
             width: 100%;
             height: 67px;
         }
+        
         .sample-text {
             display: flex;
             justify-content: center;
             align-items: center;
             border-radius: 2px 2px 0 0;
-            background-color: #E0E0E0;
+            //background-color: #E0E0E0;
             width: 100%;
             height: 67px;
             color: #000;
@@ -437,20 +438,21 @@
             line-height: 17px;
             text-align: center;
             padding: 2px;
-            &.sample-text--all {
-                background-color: #879DBC;
-                color: $white;
-                font-weight: 700;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                text-transform: uppercase;
-                span {
-                    text-transform: uppercase;
-                    font-weight: 700;
-                    color: $white;
-                }
-            }
+            border-bottom: 1px solid $border-color;
+            //&.sample-text--all {
+            //    //background-color: #879DBC;
+            //    color: $white;
+            //    font-weight: 700;
+            //    flex-direction: column;
+            //    justify-content: center;
+            //    align-items: center;
+            //    text-transform: uppercase;
+            //    span {
+            //        text-transform: uppercase;
+            //        font-weight: 700;
+            //        color: $white;
+            //    }
+            //}
         }
     }
     &.product-option--hardware {

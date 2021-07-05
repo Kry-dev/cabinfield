@@ -914,9 +914,16 @@ $(document).ready(function () {
         }
     });
     
-    // $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-    //     var target = this.href.split('#');
-    //     $('.nav a').filter('a[href="#'+target[1]+'"]').tab('show');
-    // })
+    $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+        var target = this.href.split('#');
+        $('.nav a').filter('a[href="#'+target[1]+'"]').tab('show');
+    })
+    $('#choose-optns').on("click",function () {
+        $("html, body").animate({
+            scrollTop: $("#nav-tab").offset().top -= 100
+        }, 100);
+        let target = this.href.split('#');
+        console.log(target)
+    })
 });
 

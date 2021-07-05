@@ -484,7 +484,7 @@
               </div>
               <div class="row">
                 <div class="product-right-btns flex-column col-xl-6 col-lg-9 col-sm-12">
-                  <!--a.btn.btn-warning.text-uppercase.w-100(data-toggle='tab' href='#nav-customize' role='tab' aria-controls='nav-customize' aria-selected='true')--><a class="btn btn-warning text-uppercase w-100" onclick="$('#nav-tab a[href='#nav-customize']').click();" href="javascript:void(0);"><strong>Choose Options</strong></a>
+                  <!--a.btn.btn-warning.text-uppercase.w-100(data-toggle='tab' href='#nav-customize' role='tab' aria-controls='nav-customize' aria-selected='true')--><a class="btn btn-warning text-uppercase w-100" id="choose-optns" href="#nav-customize"><strong>Choose Options</strong></a>
                   <!--a#nav-customize-tab.nav-link.active(data-toggle='tab' href='#nav-customize' role='tab' aria-controls='nav-customize' aria-selected='true') Customize--><a class="btn btn-outline-primary text-uppercase w-100 mt-3" href="#"><strong>Add to wishlist</strong></a>
                 </div>
               </div>
@@ -625,6 +625,13 @@
                       <div class="product-customize-form">
                         <h6 class="product-customize-subtitle">Stain:<a class="popup-info mr-3" href="#" data-toggle="modal" data-target="#customize_popup_info">i</a><a href="#">Reguest samples</a></h6>
                         <div class="product-customize-list" data-slick="{&quot;slidesToShow&quot;: 4, &quot;slidesToScroll&quot;: 4}">
+                          <div class="product-option option-stain">
+                            <input type="radio" id="sample-01" name="wood-stain">
+                            <label class="product-option--label" for="sample-01">
+                              <div class="sample-text">Standard as shown in product photo</div>
+                              <p class="name">NO FRONT...</p>
+                            </label>
+                          </div>
                           <div class="product-option option-stain">
                             <input type="radio" id="wood-stain-01" name="wood-stain">
                             <label class="product-option--label" for="wood-stain-01">
