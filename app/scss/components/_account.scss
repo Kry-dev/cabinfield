@@ -18,7 +18,7 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        font-size: 0.8125rem;
+        font-size: 0.875rem;
         font-weight: 600;
         line-height: 1.125rem;
         font-family: $font-family-base;
@@ -35,8 +35,6 @@
     .addr p {
         font-size: $font-size-sm;
         line-height: 18px;
-        margin: 0 0 5px;
-        color: #000000;
     }
     
     .account-history {
@@ -54,15 +52,6 @@
         &-left {
             flex: 0 0 23%;
             max-width: 23%;
-            //@include media-breakpoint-down(lg) {
-            //    flex: 0 0 40%;
-            //    max-width: 40%;
-            //}
-            //@include media-breakpoint-down(md) {
-            //    flex: 0 0 33%;
-            //    max-width: 33%;
-            //
-            //}
             @include media-breakpoint-down(md) {
                 flex: 0 0 100%;
                 max-width: 100%;
@@ -73,15 +62,6 @@
         &-right {
             flex: 0 0 77%;
             max-width: 77%;
-            //@include media-breakpoint-down(lg) {
-            //    flex: 0 0 60%;
-            //    max-width: 60%;
-            //}
-            //@include media-breakpoint-down(md) {
-            //    flex: 0 0 77%;
-            //    max-width: 77%;
-            //}
-            
             @include media-breakpoint-down(md) {
                 flex: 0 0 100%;
                 max-width: 100%;

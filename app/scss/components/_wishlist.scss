@@ -7,14 +7,14 @@
         @include media-breakpoint-down(sm) {
             flex-direction: row;
             justify-content: space-between;
-            a,button {
+            a,
+            button {
                 padding: 0;
                 margin: 0;
                 border: 0;
             }
         }
     }
-    
 }
 
 .wishlist-item {
@@ -26,7 +26,7 @@
         margin-bottom: 14px;
         color: $label-color;
         line-height: 1.4375rem;
-        font-size: 0.8125rem;
+        font-size: 0.875rem;
         display: flex;
         flex-direction: row;
         align-items: flex-start;
@@ -44,14 +44,11 @@
             text-align: right;
         }
         
-        span {
-            font-size: 0.8125rem;
-        }
         
         .values_inline_label {
             display: inline-block;
             margin-right: 8px;
-            font-size: 0.8125rem;
+            font-size: 0.875rem;
         }
         
        
@@ -62,17 +59,17 @@
             font-weight: 600;
             
             &.price_shipping {
-                font-size: 0.8125rem;
+                font-size: 0.875rem;
             }
         }
     }
     
     a:not(.btn) {
-        font-size: 0.8125rem;
+        font-size: $font-size-base;
     }
     .actions > a ,
     .actions > button {
-        font-size: .75rem;
+        font-size: $font-size-base;
     }
     .actions {
         @include media-breakpoint-down(sm) {
@@ -91,11 +88,10 @@
     
     .extended_price {
         color: $text-dark;
-        font-size: 0.875rem;
+        font-size: $font-size-base;
         font-weight: 400;
         line-height: 1.25rem;
         position: relative;
-        //margin-bottom: .5rem;
         text-align: right;
     }
 }

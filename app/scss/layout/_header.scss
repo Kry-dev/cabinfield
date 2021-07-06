@@ -16,7 +16,7 @@
             font-family: $header-font;
             font-style: normal;
             font-weight: 400;
-            font-size: 0.875rem;
+            font-size: $font-size-base;
             line-height: 1rem;
             padding: 0 10px;
             &:hover,
@@ -40,7 +40,7 @@
         font-family: $header-font;
         font-style: normal;
         font-weight: 700;
-        font-size: 0.875rem;
+        font-size: $font-size-base;
         line-height: 1rem;
         text-align: right;
         &:hover,
@@ -92,7 +92,7 @@
             font-family: $header-font;
             font-style: normal;
             font-weight: 400;
-            font-size: 0.875rem;
+            font-size: $font-size-base;
             line-height: 1rem;
         }
         

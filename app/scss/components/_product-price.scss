@@ -4,7 +4,7 @@
     margin-bottom: 1rem;
     
     span {
-        font-size: 0.8125rem;
+        font-size: 0.875rem;
         color: $black;
         font-weight: 400;
     }
@@ -19,7 +19,7 @@
             font-weight: inherit;
             font-size: inherit;
             &.small {
-                font-size: 0.8125rem;
+                font-size: 0.875rem;
             }
         }
     }
@@ -33,7 +33,7 @@
     
     &-shipping {
         color: $label-color;
-        font-size: 0.8125rem;
+        font-size: 0.875rem;
         line-height: 1.1875rem;
         
         span {

@@ -1,10 +1,18 @@
 extends ../main-template
 
 block title
-	| Cabinfield Cart Shipping Information
+    | Cabinfield Cart Shipping Information
 
 block content
-	main.content
-		<!-- Cart edit address section-->
-		include ../components/_cart-shipping-information
-		<!-- Cart edit address section end-->
+    nav(aria-label='breadcrumb')
+        .container.px-0
+            ul.breadcrumb
+                li.breadcrumb-item
+                    a(href='#').text-warning
+                        i.fa.fa-chevron-left
+                        span.font-weight-bold.ml-2 Back
+
+    main.content.pt-0
+        <!-- Cart edit address section-->
+        include ../components/_cart-shipping-information
+        <!-- Cart edit address section end-->

@@ -46,7 +46,8 @@ h1 {
 }
 
 p {
-    font-size: 0.8125rem;
+    font-size: $font-size-base;
+    margin-bottom: .5rem;
 }
 
 a:hover,
@@ -130,7 +131,7 @@ a:focus {
 
 .see_all {
     color: $link-color;
-    font-size: 0.8125rem;
+    font-size: 0.875rem;
     font-weight: 600;
     line-height: 1.125rem;
 }
@@ -382,12 +383,16 @@ a:focus {
     justify-content: center;
     align-items: center;
     width: $font-size-base;
-    font-size: $font-size-sm;
+    font-size: 12px;
     height: $font-size-base;
+    line-height: $font-size-base;
     border-radius: 50%;
     border: $border-width solid $blue;
     color: $blue;
     margin: auto auto auto 8px;
+    &.popup-info:not(.btn){
+        font-size: 12px;
+    }
     &:hover,
     &:focus {
         color: $white;

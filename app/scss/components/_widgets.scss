@@ -360,7 +360,7 @@ $card-height: 21rem;
         
         .card-text {
             display: block;
-            font-size: 0.8125rem;
+            font-size: 0.875rem;
             max-width: 220px;
             @include media-breakpoint-down(md) {
                 max-width: 220px;

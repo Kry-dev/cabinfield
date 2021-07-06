@@ -23,7 +23,7 @@
 
     &-subtitle {
         font-family: $font-family-base;
-        font-size: 0.8125rem;
+        font-size: 0.875rem;
         font-weight: 700;
         line-height: 1.5625rem;
         margin-bottom: 7px;
@@ -56,7 +56,7 @@
 
         .product-customize-form {
             .product-customize-subtitle {
-                font-size: 0.8125rem;
+                font-size: 0.875rem;
             }
         }
     }
@@ -80,13 +80,13 @@
         width: 100%;
         color: $label-color;
         font-family: $font-family-base;
-        font-size: 0.8125rem;
+        font-size: $font-size-base;
         line-height: 1rem;
         margin-bottom: 0.5rem;
 
         b, span {
             color: $black;
-            font-size: 0.8125rem;;
+            font-size: $font-size-base;
             padding-left: 0.25rem;
             font-weight: 400;
         }
@@ -104,7 +104,7 @@
             line-height: 25px;
             margin-right: 10px;
             .small {
-                font-size: .8125rem;
+                font-size: .875rem;
             }
         }
 
@@ -187,7 +187,7 @@
             cursor: pointer;
             color: $black;
             font-family: $font-family-base;
-            font-size: 0.8125rem;
+            font-size: 0.875rem;
             line-height: 1rem;
             min-height: $input-height;
             text-align: center;
@@ -235,7 +235,7 @@
         position: absolute;
         background: rgba($white, .5);
         text-transform: uppercase;
-        font-size: 0.8125rem;
+        font-size: 0.875rem;
         top: .5rem;
         right: .5rem;
         z-index: 100;

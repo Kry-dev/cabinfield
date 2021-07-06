@@ -417,85 +417,55 @@
       </nav>
     </header><!--HEADER END-->
 <!--CONTENT-->
-    <main class="content"><!-- Cart edit address section-->
+    <nav aria-label="breadcrumb">
+      <div class="container px-0">
+        <ul class="breadcrumb">
+          <li class="breadcrumb-item"><a class="text-warning" href="#"><i class="fa fa-chevron-left"></i><span class="font-weight-bold ml-2">Back</span></a></li>
+        </ul>
+      </div>
+    </nav>
+    <main class="content pt-0"><!-- Cart edit address section-->
       <section class="cart address-section">
-        <div class="container"><a class="back text-brown" href="#"><i class="fa fa-chevron-left"></i>Back to cart</a>
-          <h1>Review</h1>
+        <div class="container">
+          <!--a.back.text-brown(href='#')-->
+          <!--    i.fa.fa-chevron-left-->
+          <!--    | Back-->
+          <h1 class="mb-3 text-dark">Review</h1>
           <div class="row wishlist-item">
             <div class="col-lg-8 col-md-6 col-sm-12">
               <div class="row">
                 <div class="col-lg-6">
-                  <h6 class="h6 text-bold mb-3">Shipping Information</h6>
-                  <div class="addr mb-3">
+                  <h6 class="h6 text-bold text-dark mb-3">Shipping Information</h6>
+                  <div class="addr">
                     <p>John Doe</p>
                     <p>700 Carpenters Crossing</p>
                     <p>BWW Ste 286309</p>
                     <p>Folcroft,PA19032-2011</p>
                     <p>United States</p>
-                    <p>(484) 5400190</p>
-                  </div><a class="edit ml-0" href="#"><i class="fa fa-pencil"></i><span class="ml-3">edit</span></a>
+                    <p>(484) 5400190</p><a class="edit ml-0" href="#"><i class="fa fa-pencil"></i><span class="ml-3">edit</span></a>
+                  </div>
                 </div>
-                <div class="col-lg-6 border-dashed-b">
-                  <div class="d-flex flex-column justify-content-between">
-                    <h6 class="h6 text-bold mb-3">Billing address</h6>
-                    <div class="checkbox custom_checkbox">
-                      <input id="billing_same_as_ship" type="checkbox" name="" value="" checked="">
-                      <label class="mb-1 text-primary" for="billing_same_as_ship">Same as shipping address</label>
-                    </div>
-                    <form class="form form-address-billing" action="" style="display: none;">
-                      <div class="row mb-3">
-                        <div class="form-group col-md-6 mb-3 mb-md-0">
-                          <label class="mb-md-0">First name</label>
-                          <input class="form-control" type="text" name="first-name">
-                        </div>
-                        <div class="form-group col-md-6 mb-3 mb-md-0">
-                          <label class="mb-md-0"> Last name</label>
-                          <input class="form-control" type="text" name="last-name">
-                        </div>
-                      </div>
-                      <div class="row mb-3">
-                        <div class="form-group col-md-12 mb-3 mb-md-0">
-                          <label>Company name (optional)</label>
-                          <input class="form-control" type="text" name="company-name">
-                        </div>
-                      </div>
-                      <div class="row mb-3">
-                        <div class="form-group col-md-12 mb-3 mb-md-0">
-                          <label>Street address</label>
-                          <input class="form-control mb-2" type="text" name="street-address-1">
-                        </div>
-                        <div class="form-group col-md-12 mb-3 mb-md-0">
-                          <label>Address line 2 (optional)"</label>
-                          <input class="form-control" type="text" name="street-address-2">
-                        </div>
-                      </div>
-                      <div class="row mb-3">
-                        <div class="form-group col-md-6 mb-3 mb-md-0">
-                          <label>City</label>
-                          <input class="form-control" type="text" name="city">
-                        </div>
-                        <div class="form-group col-md-6 mb-3 mb-md-0">
-                          <label>State</label>
-                          <input class="form-control" type="text" name="state">
-                        </div>
-                      </div>
-                      <div class="row mb-3">
-                        <div class="form-group col-md-6 mb-3 mb-md-0">
-                          <label>Zip-code</label>
-                          <input class="form-control" type="text" name="Zip-code">
-                        </div>
-                        <div class="form-group col-md-6 mb-3 mb-md-0">
-                          <label>Ext (optional)</label>
-                          <input class="form-control" type="text" name="ext">
-                        </div>
-                      </div>
-                      <div class="row mb-3">
-                        <div class="form-group col-lg-6 col-md-12 mb-3 mb-md-0">
-                          <label>Phone</label>
-                          <input class="form-control" type="text" name="phone">
-                        </div>
-                      </div>
-                    </form><a class="edit ml-0" href="#"><i class="fa fa-pencil"></i><span class="ml-3">edit</span></a>
+                <div class="col-lg-6">
+                  <h6 class="h6 text-bold text-dark mb-3">Billing address</h6>
+                  <div class="addr">
+                    <p>700 Carpenters Crossing</p>
+                    <p>BWW Ste 286309</p>
+                    <p>Folcroft,PA19032-2011</p>
+                    <p>United States</p><a class="edit ml-0" href="#"><i class="fa fa-pencil"></i><span class="ml-3">edit</span></a>
+                  </div>
+                </div>
+              </div>
+              <div class="row mt-3">
+                <div class="col-lg-6">
+                  <h6 class="h6 text-bold text-dark mb-3">Payment Info</h6>
+                  <div class="addr">
+                    <p>xxxx-xxxx-xxxx-4444</p><a class="edit ml-0" href="#"><i class="fa fa-pencil"></i><span class="ml-3">edit</span></a>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <h6 class="h6 text-bold text-dark mb-3">Gift Note</h6>
+                  <div class="addr">
+                    <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p><a class="edit ml-0" href="#"><i class="fa fa-pencil"></i><span class="ml-3">edit</span></a>
                   </div>
                 </div>
               </div>
@@ -510,11 +480,137 @@
                 <div class="item"><span class="name">Estimated tax to be collected:</span><span class="price">$0.00</span></div>
                 <div class="item full_price"><span class="name">Order total:</span><span class="price">$1,371.00</span></div>
                 <div class="item"><span class="name">Due today<a class="popup-info mr-0" href="#">?</a>:</span><span class="price">$0.00</span></div>
-                <div class="d-flex justify-content-center w-100 mt-3"><a class="btn btn-warning text-uppercase w-100" href="#"><b>Continue to Payment</b></a></div>
-                <div class="checkbox custom_checkbox mt-3">
-                  <input id="terms" type="checkbox" name="" value="">
-                  <label class="mb-1 text-primary" for="terms">By clicking “Place Your Order” above you agree to Cabinfield’s Terms of Use and Privacy Policy.</label>
-                </div>
+                <div class="d-flex justify-content-center w-100 my-3"><a class="btn btn-warning text-uppercase w-100" href="#"><b>Place Your Order</b></a></div><a href="#">By clicking “Place Your Order” above you agree to Cabinfield’s updated Terms of Use and Privacy Policy.</a>
+              </div>
+            </div>
+          </div>
+          <div class="row text-dark">
+            <div class="col-md-12">
+              <h3 class="mb-3">Important! Please read before submitting your order!</h3>
+              <p>We treasure the opportunity to partner with our customers in designing and building beautiful handcrafted furniture that will last for generations.</p>
+              <p>When you submit your order, you will receive a detailed email order confirmation, which includes the final specs of your order. We urge you to read through your order confirmation carefully.</p>
+              <p>We cannot remember every detail of our many phone and email conversations with customers, so it is vital that you check the order confirmation to verify that the details of your order are correct and all the options and specs you desire are included.</p>
+              <p>Your order will be built according to the specs on the site and the specific information included in your written order confirmation.</p>
+              <p>If you do not receive an order confirmation shortly after submitting your order, please check your spam/junk folder.</p>
+              <p>If you are unable to locate your order confirmation please contact us immediately by phone or email at service@cabinfield.com.</p>
+            </div>
+          </div>
+          <hr class="my-3 my-md-5">
+          <h2 class="h2 text-dark mb-3 mb-md-5"><strong>Order Summary</strong></h2>
+          <div class="row">
+            <div class="col-md-4 col-sm-6">
+              <div class="product-selected"><img class="img-fluid" src="img/product/yKelvO0K53.jpg"></div>
+              <div class="option-selected">
+                <h3 class="text-dark">Carolina Crown Amish Bed</h3>
+                <ul class="option-selected-list option-selected-list__viewAll">
+                  <li>Subtotal:
+                    <h3 class="d-inline-flex text-brown font-weight-bold mb-0">$1,371.00</h3>
+                  </li>
+                  <li>Bed size:<span>Queen (64"W x 86"L)</span></li>
+                  <li>Headboard Style:<span>Adessa</span></li>
+                  <li>Set:<span>Full Bed</span></li>
+                  <li>Wood:<span>Quartersawn White Oak</span></li>
+                  <li>Wood stain:<span>OCS-225 Mission Maple</span></li>
+                  <li>Nail Head Style:<span>Antique Silver</span></li>
+                  <li>Bed size:<span>Queen (64"W x 86"L)</span></li>
+                  <li>Headboard Style:<span>Adessa</span></li>
+                  <li>Set:<span>Full Bed</span></li>
+                  <li>Wood:<span>Quartersawn White Oak</span></li>
+                  <li>Wood stain:<span>OCS-225 Mission Maple</span></li>
+                  <li>Nail Head Style:<span>Antique Silver</span></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+              <div class="product-selected"><img class="img-fluid" src="img/product/yKelvO0K53.jpg"></div>
+              <div class="option-selected">
+                <h3 class="text-dark">Carolina Crown Amish Bed</h3>
+                <ul class="option-selected-list option-selected-list__viewAll">
+                  <li>Subtotal:
+                    <h3 class="d-inline-flex text-brown font-weight-bold mb-0">$1,371.00</h3>
+                  </li>
+                  <li>Bed size:<span>Queen (64"W x 86"L)</span></li>
+                  <li>Headboard Style:<span>Adessa</span></li>
+                  <li>Set:<span>Full Bed</span></li>
+                  <li>Wood:<span>Quartersawn White Oak</span></li>
+                  <li>Wood stain:<span>OCS-225 Mission Maple</span></li>
+                  <li>Nail Head Style:<span>Antique Silver</span></li>
+                  <li>Bed size:<span>Queen (64"W x 86"L)</span></li>
+                  <li>Headboard Style:<span>Adessa</span></li>
+                  <li>Set:<span>Full Bed</span></li>
+                  <li>Wood:<span>Quartersawn White Oak</span></li>
+                  <li>Wood stain:<span>OCS-225 Mission Maple</span></li>
+                  <li>Nail Head Style:<span>Antique Silver</span></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+              <div class="product-selected"><img class="img-fluid" src="img/product/yKelvO0K53.jpg"></div>
+              <div class="option-selected">
+                <h3 class="text-dark">Carolina Crown Amish Bed</h3>
+                <ul class="option-selected-list option-selected-list__viewAll">
+                  <li>Subtotal:
+                    <h3 class="d-inline-flex text-brown font-weight-bold mb-0">$1,371.00</h3>
+                  </li>
+                  <li>Bed size:<span>Queen (64"W x 86"L)</span></li>
+                  <li>Headboard Style:<span>Adessa</span></li>
+                  <li>Set:<span>Full Bed</span></li>
+                  <li>Wood:<span>Quartersawn White Oak</span></li>
+                  <li>Wood stain:<span>OCS-225 Mission Maple</span></li>
+                  <li>Nail Head Style:<span>Antique Silver</span></li>
+                  <li>Bed size:<span>Queen (64"W x 86"L)</span></li>
+                  <li>Headboard Style:<span>Adessa</span></li>
+                  <li>Set:<span>Full Bed</span></li>
+                  <li>Wood:<span>Quartersawn White Oak</span></li>
+                  <li>Wood stain:<span>OCS-225 Mission Maple</span></li>
+                  <li>Nail Head Style:<span>Antique Silver</span></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+              <div class="product-selected"><img class="img-fluid" src="img/product/yKelvO0K53.jpg"></div>
+              <div class="option-selected">
+                <h3 class="text-dark">Carolina Crown Amish Bed</h3>
+                <ul class="option-selected-list option-selected-list__viewAll">
+                  <li>Subtotal:
+                    <h3 class="d-inline-flex text-brown font-weight-bold mb-0">$1,371.00</h3>
+                  </li>
+                  <li>Bed size:<span>Queen (64"W x 86"L)</span></li>
+                  <li>Headboard Style:<span>Adessa</span></li>
+                  <li>Set:<span>Full Bed</span></li>
+                  <li>Wood:<span>Quartersawn White Oak</span></li>
+                  <li>Wood stain:<span>OCS-225 Mission Maple</span></li>
+                  <li>Nail Head Style:<span>Antique Silver</span></li>
+                  <li>Bed size:<span>Queen (64"W x 86"L)</span></li>
+                  <li>Headboard Style:<span>Adessa</span></li>
+                  <li>Set:<span>Full Bed</span></li>
+                  <li>Wood:<span>Quartersawn White Oak</span></li>
+                  <li>Wood stain:<span>OCS-225 Mission Maple</span></li>
+                  <li>Nail Head Style:<span>Antique Silver</span></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+              <div class="product-selected"><img class="img-fluid" src="img/product/yKelvO0K53.jpg"></div>
+              <div class="option-selected">
+                <h3 class="text-dark">Carolina Crown Amish Bed</h3>
+                <ul class="option-selected-list option-selected-list__viewAll">
+                  <li>Subtotal:
+                    <h3 class="d-inline-flex text-brown font-weight-bold mb-0">$1,371.00</h3>
+                  </li>
+                  <li>Bed size:<span>Queen (64"W x 86"L)</span></li>
+                  <li>Headboard Style:<span>Adessa</span></li>
+                  <li>Set:<span>Full Bed</span></li>
+                  <li>Wood:<span>Quartersawn White Oak</span></li>
+                  <li>Wood stain:<span>OCS-225 Mission Maple</span></li>
+                  <li>Nail Head Style:<span>Antique Silver</span></li>
+                  <li>Bed size:<span>Queen (64"W x 86"L)</span></li>
+                  <li>Headboard Style:<span>Adessa</span></li>
+                  <li>Set:<span>Full Bed</span></li>
+                  <li>Wood:<span>Quartersawn White Oak</span></li>
+                  <li>Wood stain:<span>OCS-225 Mission Maple</span></li>
+                  <li>Nail Head Style:<span>Antique Silver</span></li>
+                </ul>
               </div>
             </div>
           </div>

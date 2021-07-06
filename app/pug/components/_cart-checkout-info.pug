@@ -1,69 +1,46 @@
 section.cart.address-section
     .container
-        a.back.text-brown(href='#')
-            i.fa.fa-chevron-left
-            | Back to cart
-        h1 Review
+        //a.back.text-brown(href='#')
+        //    i.fa.fa-chevron-left
+        //    | Back
+        h1.mb-3.text-dark Review
         .row.wishlist-item
             .col-lg-8.col-md-6.col-sm-12
                 .row
                     .col-lg-6
-                        h6.h6.text-bold.mb-3 Shipping Information
-                        .addr.mb-3
+                        h6.h6.text-bold.text-dark.mb-3 Shipping Information
+                        .addr
                             p John Doe
                             p 700 Carpenters Crossing
                             p BWW Ste 286309
                             p Folcroft,PA19032-2011
                             p United States
                             p (484) 5400190
-                        a.edit.ml-0(href='#')
-                            i.fa.fa-pencil
-                            span.ml-3 edit
-
-                    .col-lg-6.border-dashed-b
-                        .d-flex.flex-column.justify-content-between
-                            h6.h6.text-bold.mb-3 Billing address
-                            .checkbox.custom_checkbox
-                                input#billing_same_as_ship(type='checkbox' name='' value='', checked="")
-                                label.mb-1.text-primary(for='billing_same_as_ship') Same as shipping address
-                            form.form.form-address-billing(action='', style="display: none;")
-                                .row.mb-3
-                                    .form-group.col-md-6.mb-3.mb-md-0
-                                        label.mb-md-0 First name
-                                        input.form-control(type='text' name='first-name')
-                                    .form-group.col-md-6.mb-3.mb-md-0
-                                        label.mb-md-0  Last name
-                                        input.form-control(type='text' name='last-name')
-                                .row.mb-3
-                                    .form-group.col-md-12.mb-3.mb-md-0
-                                        label Company name (optional)
-                                        input.form-control(type='text' name='company-name')
-                                .row.mb-3
-                                    .form-group.col-md-12.mb-3.mb-md-0
-                                        label Street address
-                                        input.form-control.mb-2(type='text' name='street-address-1')
-                                    .form-group.col-md-12.mb-3.mb-md-0
-                                        label Address line 2 (optional)"
-                                        input.form-control(type='text' name='street-address-2')
-                                .row.mb-3
-                                    .form-group.col-md-6.mb-3.mb-md-0
-                                        label City
-                                        input.form-control(type='text' name='city')
-                                    .form-group.col-md-6.mb-3.mb-md-0
-                                        label State
-                                        input.form-control(type='text' name='state')
-                                .row.mb-3
-                                    .form-group.col-md-6.mb-3.mb-md-0
-                                        label Zip-code
-                                        input.form-control(type='text' name='Zip-code')
-                                    .form-group.col-md-6.mb-3.mb-md-0
-                                        label Ext (optional)
-                                        input.form-control(type='text' name='ext')
-                                .row.mb-3
-                                    .form-group.col-lg-6.col-md-12.mb-3.mb-md-0
-                                        label Phone
-                                        input.form-control(type='text' name='phone')
-
+                            a.edit.ml-0(href='#')
+                                i.fa.fa-pencil
+                                span.ml-3 edit
+                    .col-lg-6
+                        h6.h6.text-bold.text-dark.mb-3 Billing address
+                        .addr
+                            p 700 Carpenters Crossing
+                            p BWW Ste 286309
+                            p Folcroft,PA19032-2011
+                            p United States
+                            a.edit.ml-0(href='#')
+                                i.fa.fa-pencil
+                                span.ml-3 edit
+                .row.mt-3
+                    .col-lg-6
+                        h6.h6.text-bold.text-dark.mb-3 Payment Info
+                        .addr
+                            p xxxx-xxxx-xxxx-4444
+                            a.edit.ml-0(href='#')
+                                i.fa.fa-pencil
+                                span.ml-3 edit
+                    .col-lg-6
+                        h6.h6.text-bold.text-dark.mb-3 Gift Note
+                        .addr
+                            p Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.
                             a.edit.ml-0(href='#')
                                 i.fa.fa-pencil
                                 span.ml-3 edit
@@ -93,10 +70,59 @@ section.cart.address-section
                             a.popup-info.mr-0(href='#') ?
                             | :
                         span.price $0.00
-                    .d-flex.justify-content-center.w-100.mt-3
+                    .d-flex.justify-content-center.w-100.my-3
                         a(href='#').btn.btn-warning.text-uppercase.w-100
-                            b Continue to Payment
+                            b Place Your Order
 
-                    .checkbox.custom_checkbox.mt-3
-                        input#terms(type='checkbox' name='' value='')
-                        label.mb-1.text-primary(for='terms') By clicking “Place Your Order” above you agree to Cabinfield’s Terms of Use and Privacy Policy.
+                    a(href="#") By clicking “Place Your Order” above you agree to Cabinfield’s updated Terms of Use and Privacy Policy.
+        .row.text-dark
+            .col-md-12
+                h3.mb-3 Important! Please read before submitting your order!
+
+                p We treasure the opportunity to partner with our customers in designing and building beautiful handcrafted furniture that will last for generations.
+
+                p When you submit your order, you will receive a detailed email order confirmation, which includes the final specs of your order. We urge you to read through your order confirmation carefully.
+
+                p We cannot remember every detail of our many phone and email conversations with customers, so it is vital that you check the order confirmation to verify that the details of your order are correct and all the options and specs you desire are included.
+                p Your order will be built according to the specs on the site and the specific information included in your written order confirmation.
+
+                p If you do not receive an order confirmation shortly after submitting your order, please check your spam/junk folder.
+                p If you are unable to locate your order confirmation please contact us immediately by phone or email at service@cabinfield.com.
+        hr.my-3.my-md-5
+        h2.h2.text-dark.mb-3.mb-md-5
+            strong Order Summary
+        .row
+            .col-md-4.col-sm-6
+                .product-selected
+                    img.img-fluid(src='img/product/yKelvO0K53.jpg')
+                .option-selected
+                    h3.text-dark Carolina Crown Amish Bed
+                    include _option-selected-list-checkout-info-viewAll
+
+            .col-md-4.col-sm-6
+                .product-selected
+                    img.img-fluid(src='img/product/yKelvO0K53.jpg')
+                .option-selected
+                    h3.text-dark Carolina Crown Amish Bed
+                    include _option-selected-list-checkout-info-viewAll
+
+            .col-md-4.col-sm-6
+                .product-selected
+                    img.img-fluid(src='img/product/yKelvO0K53.jpg')
+                .option-selected
+                    h3.text-dark Carolina Crown Amish Bed
+                    include _option-selected-list-checkout-info-viewAll
+
+            .col-md-4.col-sm-6
+                .product-selected
+                    img.img-fluid(src='img/product/yKelvO0K53.jpg')
+                .option-selected
+                    h3.text-dark Carolina Crown Amish Bed
+                    include _option-selected-list-checkout-info-viewAll
+
+            .col-md-4.col-sm-6
+                .product-selected
+                    img.img-fluid(src='img/product/yKelvO0K53.jpg')
+                .option-selected
+                    h3.text-dark Carolina Crown Amish Bed
+                    include _option-selected-list-checkout-info-viewAll

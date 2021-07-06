@@ -156,7 +156,7 @@
     
     span {
         font-family: $font-family-base;
-        font-size: 0.8125rem;
+        font-size: 0.875rem;
         text-align: center;
         display: block;
         text-transform: uppercase;
@@ -259,7 +259,7 @@
         content: "\f105";
         font-family: $font-awesome;
         padding-left: .5rem;
-        font-style: 13px;
+        font-style: normal;
     }
 }
 .btn-all-choices {
@@ -279,7 +279,7 @@
     align-items: center;
     cursor: pointer;
     font-family: $font-family-base;
-    font-size: .8125rem;
+    font-size: .875rem;
     line-height: 1rem;
     text-align: center;
     background: $product-option-checked-border;
