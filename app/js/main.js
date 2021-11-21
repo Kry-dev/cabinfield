@@ -1,5 +1,4 @@
 $(document).ready(function () {
-    
     /*scroll to top*/
     $("body").append("<a href='#' id='to_top'><i class='fa fa-angle-right'></i> <span>back to top</span></a>");
     $("body").on("click", "a#to_top", function () {
@@ -456,7 +455,7 @@ $(document).ready(function () {
         $(this).parents('.review_section').find('.review_carousel').slick(action);
     });
     
-    $('.selectpicker').selectpicker({title: ''});
+    
     
     $(".btn.dropdown-toggle").removeAttr('title');
     
@@ -925,5 +924,11 @@ $(document).ready(function () {
         let target = this.href.split('#');
         console.log(target)
     })
+    
+    
+    $(".selectpicker").selectpicker();
+    $(function () {
+        $('select').selectpicker();
+    });
 });
 
