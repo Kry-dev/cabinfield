@@ -26,7 +26,14 @@ body.modal-open .mm-slideout {
     &-footer {
         border: 0;
     }
-    
+    &-footer {
+        @include media-breakpoint-up(lg) {
+            .offset-lg-2 {
+                margin-left: 16.66667%;
+            }
+        }
+        
+    }
     &-title {
         color: $black;
         font-family: $font-family-base;
@@ -282,6 +289,8 @@ body.modal-open .mm-slideout {
         cursor: pointer;
         z-index: 1100 !important;
         text-shadow: none;
+        border: 0;
+        background: transparent;
         @include media-breakpoint-down(sm) {
             right: -3px;
             top: -15px;

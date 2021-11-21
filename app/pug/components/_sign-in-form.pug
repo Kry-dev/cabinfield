@@ -5,21 +5,21 @@ section.signin
                 h1.mb-5 My Account
         .row
             .col-lg-4.col-md-6.col-sm-12
-                form
-                    .form-group
+                form.w-100
+                    .mb-5
                         label(for='username') Username
                         input#username.form-control(type='text')
-                    .form-group.mb-5
+                    .mb-5
                         label(for='userPassword') Password
                         input#userPassword.form-control(type='password', aria-describedby='userPassword')
-                        small#userPasswordHelp.form-text.text-muted Forgot #[a(href="#" data-toggle="modal" data-target="#modal--forgot-pass") Password]
+                        small#userPasswordHelp.form-text.text-muted Forgot #[button( data-bs-toggle="modal" data-bs-target="#modal--forgot-pass") Password]
                             | ?
-                    .form-group.mb-5
+                    .mb-5
                         button.w-100.btn.btn-warning(type='submit')
-                            span.text-uppercase.font-weight-bold Log In
+                            span.text-uppercase.fw-bold Log In
 
-                    .form-group.mb-5
+                    .mb-5
                         label Not yet a member?
                         button.w-100.btn.btn-outline-warning(type='submit')
-                            span.text-uppercase.font-weight-bold Create an account
+                            span.text-uppercase.fw-bold Create an account
 

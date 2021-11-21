@@ -3,18 +3,18 @@
     .modal-dialog.modal-dialog-centered.modal-md(role='document')
         form.form.modal-content.p-4
             .modal-header
-                button.close(type='button', data-dismiss='modal', aria-label='Close')
+                button.close(type='button', data-bs-dismiss='modal', aria-label='Close')
                     span(aria-hidden='true') ×
-                .form-group.w-100.mb-0
+                .w-100.mb-0
                     h4.text-center.modal-title.mb-3 Forgot your password?
                     p.mb-0.text-center Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.
             .modal-body
-                .form-group
+                .mb-3
                     label(for='email') Email Address
                     input#email.form-control(type='email')
 
             .modal-footer
-                .form-group
+                .mb-3
                     button.btn.btn-warning.text-uppercase(type='submit')
                         strong Recover password
 <!--modal calculate end-->

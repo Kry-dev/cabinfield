@@ -5,6 +5,7 @@ const gulp           = require('gulp'),
     browsersync    = require('browser-sync'),
     concat         = require('gulp-concat'),
     uglify         = require('gulp-uglifyjs'),
+    gulpUtil       = require('gulp-util'),
     cssnano        = require('gulp-cssnano'),
     rename         = require('gulp-rename'),
     cleancss       = require('gulp-clean-css'),
@@ -75,14 +76,15 @@ gulp.task('pug', function() {
 gulp.task('scripts', function() {
     return gulp.src([
         // Библиотеки
-        'app/libs/mmenu-js/mmenu.js',
-        'app/libs/popper/popper.min.js',
-        'app/libs/bootstrap/bootstrap.min.js',
-        'app/libs/slick/slick.min.js',
-        'app/libs/bootstrap-select/js/bootstrap-select.min.js',
+        // 'app/libs/mmenu-js/mmenu.js',
+        // 'app/libs/popper.js/dist/umd/popper.js',
+        // 'app/libs/bootstrap5/dist/js/bootstrap.min.js',
+        // 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js',
+        // 'app/libs/slick/slick.min.js',
+        // 'app/libs/bootstrap-select/js/bootstrap-select.min.js',
     ])
     .pipe(concat('libs.min.js'))
-    .pipe(uglify())
+    .pipe(uglify().on('error', gulpUtil.log))
     .pipe(gulp.dest('app/js'))
     .pipe(browsersync.reload({stream: true}));
 });

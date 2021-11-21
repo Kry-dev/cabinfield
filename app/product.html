@@ -39,7 +39,7 @@
             <li class="d-block d-md-none"><a href="#"><i class="fa fa-phone"></i></a></li>
             <li class="d-none d-md-block"><a href="#">Sign In</a></li>
             <li class="d-none d-md-block"><a href="#">My Wishlist</a></li>
-            <li><a href="#"><i class="fa fa-shopping-cart"></i><span class="text-warning ml-1">2</span></a></li>
+            <li><a href="#"><i class="fa fa-shopping-cart"></i><span class="text-warning ms-1">2</span></a></li>
           </ul><!-- end of header middle section-->
         </div>
       </div>
@@ -450,14 +450,14 @@
                   </div>
                 </div>
               </div>
-              <div class="product-photo-main"><img class="img-fluid" src="img/product/tmp_product.jpg" alt="#" data-toggle="modal" data-target="#mainimage_popup">
+              <div class="product-photo-main"><img class="img-fluid" src="img/product/tmp_product.jpg" alt="#" data-bs-toggle="modal" data-bs-target="#mainimage_popup">
                 <p class="title">10 Drawer Dresser shown with optional mirror</p>
               </div><!--Product photos in components/_product-photos.pug end-->
             </div>
             <div class="product-right">
               <h1 class="product-right-title">Indian Creek Panel Amish Bed</h1>
               <div class="row">
-                <div class="col-sm-5 pr-0"><span class="product-number mb-1">Product No.: FGFH1128</span>
+                <div class="col-sm-5 pe-0"><span class="product-number mb-1">Product No.: FGFH1128</span>
                   <div class="product-rating"><!--Product rating small in mixin.pug-->
                         <div class="stars-rating &lt;a href='#'&gt; 8 customer reviews &lt;/a&gt;" title="80">
                           <div class="back-stars"><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
@@ -472,7 +472,8 @@
                 <div class="col-sm-12"><!--Product price in mixin.pug--><!--product price -->
                       <div class="product-price"><span class="text-warning">Starting at:</span>
                         <div class="product-price-value"><span>$</span><span class="price-new">1,371.00</span></div>
-                        <div class="product-price-shipping"><span>+ $30.40</span><span class="ml-2"> Standard curbside delivery to 100001<a class="edit pl-2 ml-1" href="#" data-toggle="modal" data-target="#modal--calculate"><i class="fa fa-pencil"></i></a></span></div>
+                        <div class="product-price-shipping"><span>+ $30.40</span><span class="ms-2"> Standard curbside delivery to 100001
+                            <button class="edit ps-2 ms-1" href="#" data-bs-toggle="modal" data-bs-target="#modal--calculate"><i class="fa fa-pencil"></i></button></span></div>
                       </div><!--Product price in mixin.pug end-->
                 </div>
               </div>
@@ -521,7 +522,7 @@
               <h6 class="product-title">Standard Features</h6>
               <ul>
                 <li>Choice of wood species & stains</li>
-                <li>1” thick top </li>
+                <li>1” thick top</li>
                 <li>Rounded corner top (small radius)</li>
                 <li>Jasper edges</li>
                 <li>30" high</li>
@@ -542,18 +543,26 @@
                 <li>1-18" butterfly leaf</li>
                 <li>Up to 4-12" leaves</li>
                 <li>Drawer in solid top table</li>
-                <li>Silverware drawer organizer </li>
+                <li>Silverware drawer organizer</li>
                 <li>Exceptional variety of high-quality leather or fabric upholsteries</li>
                 <li>Nail head choices for Collinsville chairs</li>
               </ul>
             </div>
-            <div class="col-md-3 offset-md-1"> 
+            <div class="col-md-3 offset-md-1">
               <h6 class="product-title">More Product details</h6>
               <ul class="list-unstyle">
-                <li><a class="more" href="#" data-toggle="modal" data-target="#care_instructions"><i class="fa fa-exclamation-triangle"></i> Care instructions</a></li>
-                <li><a class="more" href="#" data-toggle="modal" data-target="#motor_freight_shipping"><i class="fa fa-exclamation-triangle"></i> Motor freight shipping</a></li>
-                <li><a class="more" href="#" data-toggle="modal" data-target="#motor_freight_shipping">Product specs</a></li>
-                <li><a class="more" href="#" data-toggle="modal" data-target="#motor_freight_shipping">Delivery information</a></li>
+                <li>
+                  <button class="more" data-bs-toggle="modal" data-bs-target="#care_instructions"><i class="fa fa-exclamation-triangle"></i> Care instructions</button>
+                </li>
+                <li>
+                  <button class="more" data-bs-toggle="modal" data-bs-target="#motor_freight_shipping"><i class="fa fa-exclamation-triangle"></i> Motor freight shipping</button>
+                </li>
+                <li>
+                  <button class="more" data-bs-toggle="modal" data-bs-target="#motor_freight_shipping">Product specs</button>
+                </li>
+                <li>
+                  <button class="more" data-bs-toggle="modal" data-bs-target="#motor_freight_shipping">Delivery information</button>
+                </li>
               </ul>
             </div>
           </div>
@@ -564,11 +573,13 @@
         <div class="container">
           <h5 class="product-title">Customize your Indian Creek Panel Amish Bed</h5>
           <div class="row">
-            <div class="col-lg-9 col-md-8 border-right flex-column">
+            <div class="col-lg-9 col-md-8 border-end flex-column">
               <form id="options-form">
                 <div id="optgroup-1">
                   <div class="product-customize-form">
-                    <h6 class="product-customize-subtitle"><b class="mr-1">Bed size: </b>   Full Bed<a class="popup-info" href="#" data-toggle="modal" data-target="#customize_popup5">i</a></h6>
+                    <h6 class="product-customize-subtitle"><b class="me-1">Bed size: </b>   Full Bed
+                      <button class="popup-info" type="button" data-bs-target="#customize_popup5">i</button>
+                    </h6>
                     <div class="product-customize-list">
                       <div class="product-option">
                         <input type="radio" id="bed-size-01" name="bed-size" checked>
@@ -595,7 +606,7 @@
                 </div>
                 <div id="optgroup-10">
                   <div class="product-customize-form">
-                    <h6 class="product-customize-subtitle"><b class="mr-1">Available Standard Sunbrella® Fabrics:</b></h6>
+                    <h6 class="product-customize-subtitle"><b class="me-1">Available Standard Sunbrella® Fabrics:</b></h6>
                     <div class="product-customize-list">
                       <div class="product-option option-stain">
                         <input type="radio" id="Standard-04" name="Standard">
@@ -615,7 +626,7 @@
                       <!--    label(for="Standard-02")-->
                       <!--        p.sample-text.sample-text--all SEE ALL AVAILABLE-->
                       <!--            span choices-->
-                      <!--        p.name Select Now--><a class="btn-all-choices" href="#" data-toggle="modal" data-target="#customize_popup11">
+                      <!--        p.name Select Now--><a class="btn-all-choices" href="#" data-bs-toggle="modal" data-bs-target="#customize_popup11">
                         <p class="sample-text sample-text--all">SEE ALL AVAILABLE<span> choices</span></p>
                         <p class="name">Select Now</p></a>
                     </div>
@@ -623,38 +634,46 @@
                 </div>
                 <div id="optgroup-11">
                   <div class="product-customize-form">
-                    <h6 class="product-customize-subtitle"><b class="mr-1">Hardware: </b>  BP1586-WN, BP3620-NBZ</h6>
+                    <h6 class="product-customize-subtitle"><b class="me-1">Hardware: </b>  BP1586-WN, BP3620-NBZ</h6>
                     <div class="product-customize-list product-customize-list--hardware">
                       <div class="product-option product-option--hardware">
                         <input type="checkbox" id="BP1466-WN" name="BP1466-WN">
-                        <label for="BP1466-WN">BP1466-WN</label><a class="popup-info" href="#" data-toggle="modal" data-target="#customize_popup11">i</a>
+                        <label for="BP1466-WN">BP1466-WN</label>
+                        <button class="popup-info" type="button" data-bs-target="#customize_popup11">i</button>
                       </div>
                       <div class="product-option product-option--hardware">
                         <input type="checkbox" id="BP1467-WN" name="BP1467-WN">
-                        <label for="BP1467-WN">BP1467-WN</label><a class="popup-info" href="#" data-toggle="modal" data-target="#customize_popup11">i</a>
+                        <label for="BP1467-WN">BP1467-WN</label>
+                        <button class="popup-info" type="button" data-bs-target="#customize_popup11">i</button>
                       </div>
                       <div class="product-option product-option--hardware">
                         <input type="checkbox" id="BP1468-WN" name="BP1468-WN">
-                        <label for="BP1468-WN">BP1468-WN</label><a class="popup-info" href="#" data-toggle="modal" data-target="#customize_popup11">i</a>
+                        <label for="BP1468-WN">BP1468-WN</label>
+                        <button class="popup-info" type="button" data-bs-target="#customize_popup11">i</button>
                       </div>
                       <div class="product-option product-option--hardware">
                         <input type="checkbox" id="BP1469-WN" name="BP1469-WN">
-                        <label for="BP1469-WN">BP1469-WN</label><a class="popup-info" href="#" data-toggle="modal" data-target="#customize_popup11">i</a>
+                        <label for="BP1469-WN">BP1469-WN</label>
+                        <button class="popup-info" type="button" data-bs-target="#customize_popup11">i</button>
                       </div>
                       <div class="product-option product-option--hardware">
                         <input type="checkbox" id="BP1470-WN" name="BP1470-WN">
-                        <label for="BP1470-WN">BP1470-WN</label><a class="popup-info" href="#" data-toggle="modal" data-target="#customize_popup11">i</a>
+                        <label for="BP1470-WN">BP1470-WN</label>
+                        <button class="popup-info" type="button" data-bs-target="#customize_popup11">i</button>
                       </div>
                       <div class="product-option product-option--hardware">
                         <input type="checkbox" id="BP1471-WN" name="BP1471-WN">
-                        <label for="BP1471-WN">BP1471-WN</label><a class="popup-info" href="#" data-toggle="modal" data-target="#customize_popup11">i</a>
+                        <label for="BP1471-WN">BP1471-WN</label>
+                        <button class="popup-info" type="button" data-bs-target="#customize_popup11">i</button>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div id="optgroup-2">
                   <div class="product-customize-form">
-                    <h6 class="product-customize-subtitle"><b class="mr-1">Wood:</b> Brown Maple<a class="popup-info" href="#" data-toggle="modal" data-target="#customize_popup5">i</a></h6>
+                    <h6 class="product-customize-subtitle"><b class="me-1">Wood:</b> Brown Maple
+                      <button class="popup-info" type="button" data-bs-target="#customize_popup5">i</button>
+                    </h6>
                     <div class="product-customize-list">
                       <div class="product-option">
                         <input type="radio" id="wood-01" name="wood">
@@ -673,7 +692,10 @@
                 </div>
                 <div id="optgroup-3">
                   <div class="product-customize-form">
-                    <h6 class="product-customize-subtitle"><strong class="mr-1">Wood Stain:</strong> Natural<a class="popup-info mr-1" href="#" data-toggle="modal" data-target="#customize_popup5">i</a><a class="more pl-3 ml-3 border-left" href="#" data-toggle="modal" data-target="#customize--fullsize">Open full-sized previews</a></h6>
+                    <h6 class="product-customize-subtitle"><strong class="me-1">Wood Stain:</strong> Natural
+                      <button class="popup-info me-1" type="button" data-bs-target="#customize_popup5">i</button>
+                      <button class="more ps-3 ms-3 border-start" data-bs-toggle="modal" data-bs-target="#customize--fullsize">Open full-sized previews</button>
+                    </h6>
                     <div class="product-includes warning">
                       <p>Please note that the stain or paint colors shown may not appear the same on all computer monitors. Actual results on your furniture may also vary due to natural variations in the color, grain, and texture of the wood. You may call or email to request stain samples.</p>
                     </div>
@@ -682,14 +704,14 @@
                         <input type="radio" id="wood-stain-01" name="wood-stain">
                         <label for="wood-stain-01">
                           <div class="enlarge"><i class="fa fa-search"></i>enlarge</div><img class="img-fluid" src="img/product/tmp_stain.jpg" alt="#">
-                          <p class="name">Natural</p><span class="descr" data-description="Seely Golden Brown">Seely Golden Brown</span>
+                          <p class="name">Natural</p><span class="descr" data-bs-description="Seely Golden Brown">Seely Golden Brown</span>
                         </label>
                       </div>
                       <div class="product-option option-stain">
                         <input type="radio" id="wood-stain-02" name="wood-stain" checked>
                         <label for="wood-stain-02">
                           <div class="enlarge"><i class="fa fa-search"></i>enlarge</div><img class="img-fluid" src="img/product/tmp_stain.jpg" alt="#">
-                          <p class="name" data-title="OCS-101 S-2">OCS-101 S-2</p><span class="descr" data-description="Seely Golden Brown">Seely Golden Brown</span>
+                          <p class="name" data-title="OCS-101 S-2">OCS-101 S-2</p><span class="descr" data-bs-description="Seely Golden Brown">Seely Golden Brown</span>
                         </label>
                       </div>
                       <div class="product-option option-stain">
@@ -732,34 +754,36 @@
                 </div>
                 <div id="optgroup-4">
                   <div class="product-customize-form">
-                    <h6 class="product-customize-subtitle"><strong class="mr-1">Headboard Style:</strong> Lilly<a class="more pl-3 ml-3 border-left" href="#" data-toggle="modal" data-target="#customize--fullsize">Open full-sized previews</a></h6>
+                    <h6 class="product-customize-subtitle"><strong class="me-1">Headboard Style:</strong> Lilly
+                      <button class="more ps-3 ms-3 border-start" data-bs-toggle="modal" data-bs-target="#customize--fullsize">Open full-sized previews</button>
+                    </h6>
                     <div class="product-customize-list">
                       <div class="product-option option-hboard">
                         <input type="radio" id="hboard-01" name="headboard">
                         <label for="hboard-01">
                           <div class="enlarge"><i class="fa fa-search"></i>enlarge</div><img class="img-fluid" src="img/product/tmp_headboard.jpg" alt="#">
-                          <p class="name"><strong class="pr-2">Elliot</strong>- $242</p>
+                          <p class="name"><strong class="pe-2">Elliot</strong>- $242</p>
                         </label>
                       </div>
                       <div class="product-option option-hboard">
                         <input type="radio" id="hboard-02" name="headboard" checked>
                         <label for="hboard-02">
                           <div class="enlarge"><i class="fa fa-search"></i>enlarge</div><img class="img-fluid" src="img/product/tmp_headboard.jpg" alt="#">
-                          <p class="name"><strong class="pr-2">Elliot</strong>+ $102</p>
+                          <p class="name"><strong class="pe-2">Elliot</strong>+ $102</p>
                         </label>
                       </div>
                       <div class="product-option option-hboard">
                         <input type="radio" id="hboard-03" name="headboard">
                         <label for="hboard-03">
                           <div class="enlarge"><i class="fa fa-search"></i>enlarge</div><img class="img-fluid" src="img/product/tmp_headboard.jpg" alt="#">
-                          <p class="name"><strong class="pr-2">Lily</strong></p>
+                          <p class="name"><strong class="pe-2">Lily</strong></p>
                         </label>
                       </div>
                       <div class="product-option option-hboard">
                         <input type="radio" id="hboard-04" name="headboard">
                         <label for="hboard-04">
                           <div class="enlarge"><i class="fa fa-search"></i>enlarge</div><img class="img-fluid" src="img/product/tmp_headboard.jpg" alt="#">
-                          <p class="name"><strong class="pr-2">Gbrielle</strong>- $242</p>
+                          <p class="name"><strong class="pe-2">Gbrielle</strong>- $242</p>
                         </label>
                       </div>
                     </div>
@@ -767,15 +791,15 @@
                 </div>
                 <div id="optgroup-5">
                   <div class="product-customize-form">
-                    <h6 class="product-customize-subtitle"><b class="mr-1">Pillows: </b></h6>
+                    <h6 class="product-customize-subtitle"><b class="me-1">Pillows: </b></h6>
                     <div class="product-option-select">
                       <label class="mb-0">Quantity:</label>
                       <select class="selectpicker show">
-                        <option class="text-dark" value="2" data-content="&lt;b&gt;x2&lt;/b&gt;&lt;span class='text-dark ml-3'&gt;46$&lt;/span&gt;" selected></option>
-                        <option class="text-dark" value="3" data-content="&lt;b&gt;x3&lt;/b&gt;&lt;span class='text-dark ml-3'&gt;66$&lt;/span&gt;"></option>
+                        <option class="text-dark" value="2" data-bs-content="&lt;b&gt;x2&lt;/b&gt;&lt;span class='text-dark ml-3'&gt;46$&lt;/span&gt;" selected></option>
+                        <option class="text-dark" value="3" data-bs-content="&lt;b&gt;x3&lt;/b&gt;&lt;span class='text-dark ml-3'&gt;66$&lt;/span&gt;"></option>
                       </select>
                     </div>
-                    <h6 class="product-customize-subtitle"><b class="mr-1">Quantity input number</b></h6>
+                    <h6 class="product-customize-subtitle"><b class="me-1">Quantity input number</b></h6>
                     <div class="product-option-select">
                       <label class="mb-0">Quantity:</label>
                       <div class="quantity">
@@ -786,22 +810,26 @@
                     </div>
                     <ul class="product-customize-list align-items-end mb-3">
                       <li class="product-option-col">
-                        <h6 class="product-customize-subtitle">16" x 16" Pillow(s)  <span class="ml-1 label-color"> $23 per pillow</span><a class="popup-info" href="#" data-toggle="modal" data-target="#customize_popup11">i</a></h6>
+                        <h6 class="product-customize-subtitle">16" x 16" Pillow(s)  <span class="ms-1 label-color"> $23 per pillow</span>
+                          <button class="popup-info" type="button" data-bs-target="#customize_popup11">i</button>
+                        </h6>
                         <div class="product-option-select">
                           <label class="mb-0">Quantity:</label>
                           <select class="selectpicker">
-                            <option class="text-dark" value="2" data-content="&lt;b&gt;x2&lt;/b&gt;&lt;span class='text-dark ml-3'&gt;46$&lt;/span&gt;" selected></option>
-                            <option class="text-dark" value="3" data-content="&lt;b&gt;x3&lt;/b&gt;&lt;span class='text-dark ml-3'&gt;66$&lt;/span&gt;"></option>
+                            <option class="text-dark" value="2" data-bs-content="&lt;b&gt;x2&lt;/b&gt;&lt;span class='text-dark ml-3'&gt;46$&lt;/span&gt;" selected></option>
+                            <option class="text-dark" value="3" data-bs-content="&lt;b&gt;x3&lt;/b&gt;&lt;span class='text-dark ml-3'&gt;66$&lt;/span&gt;"></option>
                           </select>
                         </div>
                       </li>
                       <li class="product-option-col">
-                        <h6 class="product-customize-subtitle">20" x 20" Pillow(s) <span class="ml-1 label-color"> $50 per pillow</span><a class="popup-info" href="#" data-toggle="modal" data-target="#customize_popup11">i</a></h6>
+                        <h6 class="product-customize-subtitle">20" x 20" Pillow(s) <span class="ms-1 label-color"> $50 per pillow</span>
+                          <button class="popup-info" type="button" data-bs-target="#customize_popup11">i</button>
+                        </h6>
                         <div class="product-option-select">
                           <label class="mb-0">Quantity:</label>
                           <select class="selectpicker">
-                            <option class="text-dark" value="2" data-content="&lt;b&gt;x2&lt;/b&gt;&lt;span class='text-dark ml-3'&gt;50$&lt;/span&gt;"></option>
-                            <option class="text-dark" value="3" data-content="&lt;b&gt;x3&lt;/b&gt;&lt;span class='text-dark ml-3'&gt;100$&lt;/span&gt;" selected></option>
+                            <option class="text-dark" value="2" data-bs-content="&lt;b&gt;x2&lt;/b&gt;&lt;span class='text-dark ml-3'&gt;50$&lt;/span&gt;"></option>
+                            <option class="text-dark" value="3" data-bs-content="&lt;b&gt;x3&lt;/b&gt;&lt;span class='text-dark ml-3'&gt;100$&lt;/span&gt;" selected></option>
                           </select>
                         </div>
                       </li>
@@ -809,7 +837,8 @@
                         <h6></h6>
                         <div class="product-option mt-auto">
                           <input type="radio" id="Cylinder-0123" name="Cylinder">
-                          <label for="Cylinder-0123">Cylinder Cushions<span>+ $105</span></label><a class="popup-info" href="#" data-toggle="modal" data-target="#customize_popup11">i</a>
+                          <label for="Cylinder-0123">Cylinder Cushions<span>+ $105</span></label>
+                          <button class="popup-info" type="button" data-bs-target="#customize_popup11">i</button>
                         </div>
                       </li>
                     </ul>
@@ -853,7 +882,7 @@
         <div class="container">
           <h5 class="product-title">Customer Reviews for Indian Creek Panel Amish Bed</h5>
           <div class="row mb-4">
-            <div class="col-md-8 border-right">
+            <div class="col-md-8 border-end">
               <ul class="product-reviews-list">
                 <li class="product-review border-b-dashed mb-3">
                   <div class="avatar"><i class="fa fa-user"></i></div>
@@ -884,7 +913,7 @@
                   <div class="tagline">Ocean Shores, WA March 7, 2018</div>
                   <div class="text">I received my Squanto Bed and it is perfect in every way. The stain and style matched my other furniture beautifully and I can't say enough good things about the craftmanship of the furniture.</div>
                 </li>
-              </ul><a class="see_all pl-5" href="#">See all 8 reviews</a>
+              </ul><a class="see_all ps-5" href="#">See all 8 reviews</a>
             </div>
             <div class="col-md-4">
               <div class="avg_rating justify-content-start mt-4 mt-md-0">
@@ -975,7 +1004,7 @@
             <div class="top-section-descr">
               <h5 class="top-section-title">Indian Creek Panel Amish Bed</h5>
               <ul>
-                <li><a class="pl-0" href="#">Product details</a></li>
+                <li><a class="ps-0" href="#">Product details</a></li>
                 <li><a href="#">Customize</a></li>
               </ul>
             </div>
@@ -986,7 +1015,7 @@
               <div class="product-price-shipping"><span>+ $30.40</span> Shipping</div>
             </div>
             <form class="form d-flex justify-content-between align-items-center">
-              <div class="qty ml-3">Qty:
+              <div class="qty ms-3">Qty:
                 <input class="form-control qty-input" type="number" name="qty" value="1">
               </div><a class="btn btn-warning btn-sm" href="#">Add to cart</a><a class="btn btn-outline d-inline-block" href="#">Save to Wishlist</a>
             </form>
@@ -1006,7 +1035,7 @@
             <li><a href="#"><i class="fa fa-twitter"></i></a></li>
             <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
             <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-          </ul><a class="footer-subscribe mb-sm-3" href="#" data-toggle="modal" data-target="#subscribe_popup"><i class="fa fa-envelope-o"></i>   Subscribe for Newsletter</a>
+          </ul><a class="footer-subscribe mb-sm-3" href="#" data-bs-toggle="modal" data-bs-target="#subscribe_popup"><i class="fa fa-envelope-o"></i>   Subscribe for Newsletter</a>
         </div><img class="img-bbb" src="img/general/BBB.png" alt="#">
         <ul class="footer-nav-list">
           <li><a href="#">About Us</a></li>
@@ -1031,25 +1060,25 @@
       <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
         <div class="modal-content">
           <div class="modal-body">
-            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
             <h4 class="text-center modal-title mb-5">Sign in</h4>
             <form class="form px-md-5">
-              <div class="form-group">
+              <div class="mb-3">
                 <label class="col-form-label col-form-label-sm">Email address</label>
                 <input class="form-control" type="email" name="email">
               </div>
-              <div class="form-group">
-                <label class="col-form-label col-form-label-sm">Password<a class="text-right" href="#">Forgot yor password?</a></label>
+              <div class="mb-3">
+                <label class="col-form-label col-form-label-sm">Password<a class="text-end" href="#">Forgot yor password?</a></label>
                 <input class="form-control" type="password" name="pass">
               </div>
-              <div class="form-group d-flex">
+              <div class="mb-3 d-flex">
                 <button class="btn btn-warning w-100" type="submit">Sign In</button>
               </div>
             </form>
           </div>
           <div class="modal-footer">
             <p class="text-center text-dark">New to Cabinfield?</p>
-            <div class="form-group d-flex"><a class="btn btn-outline-warning" href="#">Create Your Cabinfield Account</a></div>
+            <div class="mb-3 d-flex"><a class="btn btn-outline-warning" href="#">Create Your Cabinfield Account</a></div>
           </div>
         </div>
       </div>
@@ -1058,20 +1087,20 @@
       <div class="modal-dialog modal-dialog-centered modal-md" role="document">
         <form class="form modal-content p-4">
           <div class="modal-header">
-            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-            <div class="form-group w-100 mb-0">
+            <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            <div class="w-100 mb-0">
               <h4 class="text-center modal-title mb-3">Forgot your password?</h4>
               <p class="mb-0 text-center">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
             </div>
           </div>
           <div class="modal-body">
-            <div class="form-group">
+            <div class="mb-3">
               <label for="email">Email Address</label>
               <input class="form-control" id="email" type="email">
             </div>
           </div>
           <div class="modal-footer">
-            <div class="form-group">
+            <div class="mb-3">
               <button class="btn btn-warning text-uppercase" type="submit"><strong>Recover password</strong></button>
             </div>
           </div>
@@ -1083,17 +1112,17 @@
         <div class="modal-content">
           <div class="modal-body">
             <h4 class="text-center modal-title mb-5">Get the Cabinfield Email Newsletter</h4>
-            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
             <form class="form px-5">
-              <div class="form-group">
+              <div class="mb-3">
                 <label class="col-form-label col-form-label-sm">Email address</label>
                 <input class="form-control" type="email" name="newsletter-email">
               </div>
-              <div class="form-group">
+              <div class="mb-3">
                 <label class="col-form-label col-form-label-sm">First Name</label>
                 <input class="form-control" type="text">
               </div>
-              <div class="form-group d-flex">
+              <div class="mb-3 d-flex">
                 <button class="btn btn-warning w-100" type="submit">Subscribe</button>
               </div>
             </form>
@@ -1108,17 +1137,17 @@
           <div class="modal-body p-5">
             <h4 class="text-center mb-4">Zip Code</h4>
             <h4 class="text-center mb-4" style="display:none">We’re Sorry!</h4>
-            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
             <form class="form modal--zip-form">
-              <div class="form-group mb-4">
+              <div class="mb-4">
                 <p style="display:none">Your zip code is out of range of the Heartland Collection's delivery availability. You are invited to shop the Cabinfield Collection. We deliver Cabinfield gazebos throughout the U.S.</p>
                 <label>Enter Zip</label>
                 <input class="form-control" type="text" name="zip" minlength="5" maxlength="5" placeholder="8●●●●">
               </div>
-              <div class="form-group d-none">
+              <div class="mb-3 d-none">
                 <button class="btn btn-warning w-100" type="button">Continue Shopping</button>
               </div>
-              <div class="form-group d-flex">
+              <div class="mb-3 d-flex">
                 <button class="btn btn-warning w-100" type="submit">Check ZIPCode</button>
               </div>
             </form>
@@ -1128,10 +1157,13 @@
       </div>
     </div><!--modal check zip end--><!--MODAL END-->
     <script src="js/jquery.js"></script>
-    <script src="js/libs.min.js"></script>
+    <!--script(src="js/libs.min.js")-->
     <script src="libs/mmenu-js/dist/mmenu.polyfills.js"></script>
     <script src="libs/mmenu-js/dist/mmenu.js"></script>
     <script src="libs/mmenu-light/dist/mmenu-light.js"></script>
+    <script src="app/libs/slick/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="app/libs/bootstrap-select/js/bootstrap-select.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

@@ -105,6 +105,9 @@ a:focus {
 }
 
 .edit {
+    background: transparent;
+    border: 0;
+    color: $primary;
     .fa {
         text-decoration: underline;
     }
@@ -389,6 +392,7 @@ a:focus {
     border-radius: 50%;
     border: $border-width solid $blue;
     color: $blue;
+    background: transparent;
     margin: auto auto auto 8px;
     &.popup-info:not(.btn){
         font-size: 12px;

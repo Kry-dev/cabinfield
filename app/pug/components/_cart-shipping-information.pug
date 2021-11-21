@@ -7,44 +7,44 @@ section.cart.address-section
                     .col-lg-6
                         form.form(action="")
                             .row.mb-3
-                                .form-group.col-md-6
+                                .mb-3.col-md-6
                                     label First name
                                     input.form-control(type='text', name='first-name')
-                                .form-group.col-md-6
+                                .mb-3.col-md-6
                                     label Last name
                                     input.form-control(type='text', name='last-name')
                             .row.mb-3
-                                .form-group.col-md-12
+                                .mb-3.col-md-12
                                     label Company name (optional)
                                     input.form-control(type='text', name='company-name')
                             .row.mb-3
-                                .form-group.col-md-12
+                                .mb-3.col-md-12
                                     label Street address
                                     input.form-control.mb-2(type='text', name='street-address-1',)
-                                .form-group.col-md-12
+                                .mb-3.col-md-12
                                     label Address line 2 (optional)"
                                     input.form-control(type='text', name='street-address-2', )
                             .row.mb-3
-                                .form-group.col-md-6
+                                .mb-3.col-md-6
                                     label City
                                     input.form-control(type='text', name='city')
-                                .form-group.col-md-6
+                                .mb-3.col-md-6
                                     label State
                                     input.form-control(type='text', name='state')
                             .row.mb-3
-                                .form-group.col-md-6
+                                .mb-3.col-md-6
                                     label Zip-code
                                     input.form-control(type='text', name='Zip-code')
-                                .form-group.col-md-6
+                                .mb-3.col-md-6
                                     label Ext (optional)
                                     input.form-control(type='text', name='ext')
                             .row.mb-3
-                                .form-group.col-lg-6.col-md-12
+                                .mb-3.col-lg-6.col-md-12
                                     label Phone
                                     input.form-control(type='text', name='phone')
                     .col-lg-6.border-dashed-b
                         .row.mb-3
-                            .form-group.col-md-12
+                            .mb-3.col-md-12
                                 label Shopping Message
                                 textarea.form-control.w-100(type='text', rows="10")
 
@@ -59,18 +59,18 @@ section.cart.address-section
                         li.checkbox.custom_checkbox
                             input#ship01(type='checkbox' name='' value='')
                             label(for='ship01').d-flex.flex-row.flex-nowrap
-                                span.d-inline-flex.text-left.w-100 Standard curbside delivery
-                                span.text-right.text-brown.w-100.border-b-dashed.pb-0 $137.00
+                                span.d-inline-flex.text-start.w-100 Standard curbside delivery
+                                span.text-end.text-brown.w-100.border-b-dashed.pb-0 $137.00
                         li.checkbox.custom_checkbox
                             input#ship02(type='checkbox' name='' value='' checked='')
                             label(for='ship02').d-flex.flex-row.flex-nowrap
-                                span.d-inline-flex.text-left.w-100 Inside delivery with set up
-                                span.text-right.text-brown.w-100.border-b-dashed.pb-0 $537.00
+                                span.d-inline-flex.text-start.w-100 Inside delivery with set up
+                                span.text-end.text-brown.w-100.border-b-dashed.pb-0 $537.00
 
                 //start PDP Item
                 .row.flex-md-row-reverse.mb-5.border-b-dashed
                     .col-lg-6.col-md-12.col-sm-12
-                        h6.text-center.text-md-left #[b Carolina Crown Amish Bed]
+                        h6.text-center.text-md-start #[b Carolina Crown Amish Bed]
                     .col-lg-6.col-md-12.col-sm-12
                         .product-selected.mb-3
                             img.img-fluid.w-100(src='img/product/yKelvO0K53.jpg')
@@ -80,7 +80,7 @@ section.cart.address-section
                 //start PDP Item
                 .row.flex-md-row-reverse.mb-5.border-b-dashed
                     .col-lg-6.col-md-12.col-sm-12
-                        h6.text-center.text-md-left #[b Carolina Crown Amish Bed]
+                        h6.text-center.text-md-start #[b Carolina Crown Amish Bed]
                     .col-lg-6.col-md-12.col-sm-12
                         .product-selected.mb-3
                             img.img-fluid.w-100(src='img/product/Amq5PuczxT.jpg')
@@ -90,7 +90,7 @@ section.cart.address-section
 
                 .extended_price (Combined) Standard curbside delivery of 4 items above
                 .extended_price You saved:
-                    span.ml-3.text-brown - $32.00
+                    span.ms-3.text-brown - $32.00
             .col-lg-4.col-md-6.col-sm-12
                 .proceed_to_checkout.mt-5.mt-md-0
                     .title.mt-0 Order Summary
@@ -114,7 +114,7 @@ section.cart.address-section
                         span.price $1,371.00
                     .item
                         span.name Due today
-                            a.popup-info.mr-0(href='#') ?
+                            a.popup-info.me-0(href='#') ?
                             | :
                         span.price $0.00
                     .d-flex.justify-content-center.w-100.mt-3

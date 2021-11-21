@@ -2,7 +2,7 @@
   .modal-dialog.modal-dialog-centered.modal-lg(role='document')
     .modal-content
       .modal-body
-        button.close(type='button', data-dismiss='modal', aria-label='Close')
+        button.close(type='button', data-bs-dismiss='modal', aria-label='Close')
           span(aria-hidden='true') ×
         .modal-wrapper
           .modal-wrapper-left
@@ -11,18 +11,18 @@
             ul.modal-options-list
               li.d-flex.flex-row
                 .d-flex.flex-column.w-75
-                  .custom-control.custom-radio
-                    input#customRadio1.custom-control-input(type='radio', name='customRadio', checked)
-                    label.custom-control-label.modal-wrapper-subtitle(for='customRadio1') (Combined) Standard curbside delivery
-                  p.mb-0.pl-4 With a handcrafted wood kitchen set mealtimes will become the special bonding time you’ve always dreamed of. Solidly constructed fan back chairs are optionally.
+                  .form-check.custom-radio
+                    input#customRadio1.form-check-input(type='radio', name='customRadio', checked)
+                    label.form-check-label.modal-wrapper-subtitle(for='customRadio1') (Combined) Standard curbside delivery
+                  p.mb-0.ps-4 With a handcrafted wood kitchen set mealtimes will become the special bonding time you’ve always dreamed of. Solidly constructed fan back chairs are optionally.
                 .d-flex.justify-content-end.align-items-center.w-25
                   p.text-brown #[strong $137.00]
               li.d-flex.flex-row
                 .d-flex.flex-column.w-75
-                  .custom-control.custom-radio
-                    input#customRadio2.custom-control-input(type='radio', name='customRadio')
-                    label.custom-control-label.modal-wrapper-subtitle(for='customRadio2') (Combined) Inside delivery with setup
-                  p.mb-0.pl-4 Solidly constructed fan back chairs are optionally stained in 2 tones, creating natural wood and black kitchen chairs with custom contoured seats. The natural and black kitchen table features elegantly curved table legs, and is optionally an expandable kitchen table with self storing leaves.
+                  .form-check.custom-radio
+                    input#customRadio2.form-check-input(type='radio', name='customRadio')
+                    label.form-check-label.modal-wrapper-subtitle(for='customRadio2') (Combined) Inside delivery with setup
+                  p.mb-0.ps-4 Solidly constructed fan back chairs are optionally stained in 2 tones, creating natural wood and black kitchen chairs with custom contoured seats. The natural and black kitchen table features elegantly curved table legs, and is optionally an expandable kitchen table with self storing leaves.
                 .d-flex.justify-content-end.align-items-center.w-25
                   p.text-brown #[strong $137.00]
             .information
@@ -33,7 +33,7 @@
             .py-3.px-4.text-dark.border-bottom
               | Shipping prices calculated for zip code:
               b 18567
-              a.edit.ml-1(href='#', data-toggle='modal', data-target='#shipping_options1')
+              a.edit.ms-1(href='#', data-bs-toggle='modal', data-bs-target='#shipping_options1')
                 i.fa.fa-pencil
                 |  Change
             .py-3.px-4

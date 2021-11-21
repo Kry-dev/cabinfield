@@ -4,13 +4,13 @@
     .modal-content
       .modal-body
         h4.text-center.modal-title Delivery ZIP Code
-        button.close(type='button', data-dismiss='modal', aria-label='Close')
+        button.close(type='button', data-bs-dismiss='modal', aria-label='Close')
           span(aria-hidden='true') ×
         p.text-center Enter your delivery zip code for more information about combined delivery and shipping charges
         form.form.modal--zip-form
-          .form-group
+          .mb-3
             input.form-control(type="text" name="zip" minlength="5" maxlength="5" placeholder="8●●●●")
-          .form-group.d-flex
+          .mb-3.d-flex
             button.btn.btn-default.w-100(type='submit') Save My ZIP Code
           p.text-center.mb-0 Or #[a(href='#') Sign In] with your Cabinfield account
         .modal-footer

@@ -2,7 +2,7 @@ form#options-form
     #optgroup-1
         .product-customize-form
             h6.product-customize-subtitle Bed size:
-                a(href="#", data-toggle="modal", data-target="#customize_popup_info").popup-info ?
+                button(type="button", data-bs-target="#customize_popup_info").popup-info ?
             .product-customize-list
                 .product-option
                     input( type="radio" id="bed-size-01" name="bed-size" )
@@ -27,7 +27,7 @@ form#options-form
     #optgroup-2
         .product-customize-form
             h6.product-customize-subtitle Wood Type:
-                a(href="#", data-toggle="modal", data-target="#customize_popup_info").popup-info ?
+                button(type="button", data-bs-target="#customize_popup_info").popup-info ?
             .product-customize-list
                 .product-option
                     input( type="radio" id="wood-01" name="wood")
@@ -43,9 +43,9 @@ form#options-form
     #optgroup-3
         .product-customize-form
             h6.product-customize-subtitle Stain:
-                a(href="#", data-toggle="modal", data-target="#customize_popup_info").popup-info.mr-3 i
+                button(type="button", data-bs-target="#customize_popup_info").popup-info.me-3 i
                 a(href="#") Reguest samples
-            .product-customize-list(data-slick='{"slidesToShow": 4, "slidesToScroll": 4}')
+            .product-customize-list(data-bs-slick='{"slidesToShow": 4, "slidesToScroll": 4}')
                 .product-option.option-stain
                     input( type="radio" id="sample-01" name="wood-stain")
                     label.product-option--label(for="sample-01")
@@ -111,7 +111,7 @@ form#options-form
                             i.fa.fa-search
                         img(src="img/product/tmp_headboard.jpg", alt="#").img-fluid
                         p.name
-                            strong.pr-2 Elliot
+                            strong.pe-2 Elliot
                             | - $242
                 .product-option.option-hboard
                     input( type="radio" id="hboard-02" name="headboard" checked)
@@ -120,7 +120,7 @@ form#options-form
                             i.fa.fa-search
                         img(src="img/product/tmp_headboard.jpg", alt="#").img-fluid
                         p.name
-                            strong.pr-2 Elliot
+                            strong.pe-2 Elliot
                             | + $102
                 .product-option.option-hboard
                     input( type="radio" id="hboard-03" name="headboard")
@@ -129,7 +129,7 @@ form#options-form
                             i.fa.fa-search
                         img(src="img/product/tmp_headboard.jpg", alt="#").img-fluid
                         p.name
-                            strong.pr-2 Lily
+                            strong.pe-2 Lily
                 .product-option.option-hboard
                     input( type="radio" id="hboard-04" name="headboard")
                     label.product-option--label(for="hboard-04")
@@ -137,7 +137,7 @@ form#options-form
                             i.fa.fa-search
                         img(src="img/product/tmp_headboard.jpg", alt="#").img-fluid
                         p.name
-                            strong.pr-2 Gbrielle
+                            strong.pe-2 Gbrielle
                             | - $242
                 .product-option.option-hboard
                     input( type="radio" id="hboard-05" name="headboard")
@@ -146,7 +146,7 @@ form#options-form
                             i.fa.fa-search
                         img(src="img/product/tmp_headboard.jpg", alt="#").img-fluid
                         p.name
-                            strong.pr-2 Elliot
+                            strong.pe-2 Elliot
                             | - $242
                 .product-option.option-hboard
                     input( type="radio" id="hboard-06" name="headboard" checked)
@@ -155,7 +155,7 @@ form#options-form
                             i.fa.fa-search
                         img(src="img/product/tmp_headboard.jpg", alt="#").img-fluid
                         p.name
-                            strong.pr-2 Elliot
+                            strong.pe-2 Elliot
                             | + $102
                 .product-option.option-hboard
                     input( type="radio" id="hboard-07" name="headboard")
@@ -164,11 +164,11 @@ form#options-form
                             i.fa.fa-search
                         img(src="img/product/tmp_headboard.jpg", alt="#").img-fluid
                         p.name
-                            strong.pr-2 Lily
+                            strong.pe-2 Lily
     #optgroup-5
         .product-customize-form
             h6.product-customize-subtitle Coat rack on footboard:
-                a(href="#", data-toggle="modal", data-target="#customize_popup_info").popup-info ?
+                button(type="button", data-bs-target="#customize_popup_info").popup-info ?
             .product-customize-list
                 .product-option
                     input( type="radio" id="coat-roat-01" name="wood")
@@ -197,7 +197,7 @@ form#options-form
     #optgroup-6
         .product-customize-form
             h6.product-customize-subtitle Extra top rail:
-                a(href="#", data-toggle="modal", data-target="#customize_popup_info").popup-info.mr-3 ?
+                button(type="button", data-bs-target="#customize_popup_info").popup-info.me-3 ?
                 p.mb-0.text-dark (Multiple options can be selected)
             .product-customize-list
                 .product-option
@@ -216,9 +216,9 @@ form#options-form
     #optgroup-7
         .product-customize-form
             h6.product-customize-subtitle Fabric:
-                a(href="#").popup-info.mr-1 ?
+                a(href="#").popup-info.me-1 ?
             h6.product-customize-subtitle
-                a.text-underline(href="#", data-toggle="modal", data-target="#options-fullsize") See all Fabric Swatches
+                a.text-underline(href="#", data-bs-toggle="modal", data-bs-target="#options-fullsize") See all Fabric Swatches
             h6.product-customize-subtitle
                 a.text-underline(href="#") Request samples
             .product-customize-list()
@@ -274,8 +274,8 @@ form#options-form
 
     #optgroup-8
         .product-customize-form.border-bottom-0
-            h6.product-customize-subtitle #[b.mr-1 Pillow: ]
-                a(href="#", data-toggle="modal", data-target="#customize_popup_info").popup-info ?
+            h6.product-customize-subtitle #[b.me-1 Pillow: ]
+                button(type="button", data-bs-target="#customize_popup_info").popup-info ?
             .row.w-100.mb-3
                 .col-md-3.col-sm-6.d-inline-flex.align-items-center
                     .checkbox.custom_checkbox
@@ -283,7 +283,7 @@ form#options-form
                         label.text-dark.text-uppercase(for='Pillow0') 13"x13" - Add $36.00
                 .col-md-3.col-sm-6
                     label.mb-0.d-flex.flex-row.align-items-center Quantity:
-                        select.selectpicker.from-control.ml-3
+                        select.selectpicker.from-control.ms-3
                             option.text-dark(value='2') Option 1
                             option.text-dark(value='3') Option 2
             .row.w-100.mb-3
@@ -293,9 +293,9 @@ form#options-form
                         label.text-dark.text-uppercase(for='Pillow1') Emriodery
                 .col-md-3.col-sm-6
                     label.mb-0.d-flex.flex-row.align-items-center Quantity:
-                        select.selectpicker.from-control.ml-3
+                        select.selectpicker.from-control.ms-3
                             option.text-dark(value='2') Option 1
-            //.form-group.row
+            //.row
             //    .col-sm-6
             //        .checkbox.custom_checkbox.mb-3
             //            input#Pillow0(type='checkbox' name='' value='')
@@ -305,7 +305,7 @@ form#options-form
             //            label.text-dark.text-uppercase(for='Pillow1') Emriodery
             //    .col-sm-6
             //        label.mb-0.d-flex.flex-row.align-items-center Quantity:
-            //            select.selectpicker.from-control.ml-3
+            //            select.selectpicker.from-control.ms-3
             //                option.text-dark(value='2') Option 1
             //                option.text-dark(value='3') Option 2
 

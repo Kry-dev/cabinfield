@@ -537,14 +537,14 @@ $(document).ready(function () {
     function hideFilterMobile() {
         let desktopView = $(document).width();
         if (desktopView <= "768") {
-            $(".product-filters-list").collapse('hide');
+            // $(".product-filters-list").collapse('hide');
         }
     }
     
     $(function () {
         hideFilterMobile();
         $(window).on("resize", function () {
-            hideFilterMobile();
+            // hideFilterMobile();
         });
     });
     

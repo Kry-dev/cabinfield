@@ -2,7 +2,7 @@
   .modal-dialog.modal-dialog-centered.modal-lg(role='document')
     .modal-content
       .modal-body
-        button.close(type='button', data-dismiss='modal', aria-label='Close')
+        button.close(type='button', data-bs-dismiss='modal', aria-label='Close')
           span(aria-hidden='true') ×
         .modal-wrapper
           .modal-wrapper-left
@@ -20,15 +20,15 @@
                   h6.modal-wrapper-subtitle Assembled
                   p.mb-0 Solidly constructed fan back chairs are optionally stained in 2 tones, creating natural wood and black kitchen chairs with custom contoured seats. The natural and black kitchen table features elegantly curved table legs, and is optionally an expandable kitchen table with self storing leaves.
                 .d-flex.justify-content-end.align-items-center.w-25
-                    a.btn-warning(href='#', data-toggle='modal', data-target='#assembly_quote') Send quote request
+                    a.btn-warning(href='#', data-bs-toggle='modal', data-bs-target='#assembly_quote') Send quote request
               li.d-flex.flex-row
                 .d-flex.flex-column.w-75
                   h6.modal-wrapper-subtitle Assembled
                   p.mb-0 Solidly constructed fan back chairs are optionally stained in 2 tones, creating natural wood and black kitchen chairs with custom contoured seats. The natural and black kitchen table features elegantly curved table legs, and is optionally an expandable kitchen table with self storing leaves.
                 .d-flex.flex-column.justify-content-center.w-25
-                  p.mb-1.text-right.text-brown Quote request sent
-                  p.mb-1.text-right We contact you in 3-5 business days
-                  p.text-right #[a(href='#') re-send request]
+                  p.mb-1.text-end.text-brown Quote request sent
+                  p.mb-1.text-end We contact you in 3-5 business days
+                  p.text-end #[a(href='#') re-send request]
             .information
               p.mb-1 Information about delivery and shipping:
               p.mb-1 #[a.more.combined_shipping(href='#') What is combined shipping]
@@ -37,7 +37,7 @@
             .py-3.px-md-4.mb-sm-3.text-dark.border-bottom
               | Shipping prices calculated for zip code:
               b 18567
-              a.edit.ml-1(href='#', data-toggle='modal', data-target='#shipping_options1')
+              a.edit.ms-1(href='#', data-bs-toggle='modal', data-bs-target='#shipping_options1')
                 i.fa.fa-pencil
                 |  Change
             .py-3.px-md-4

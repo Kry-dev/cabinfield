@@ -2,7 +2,7 @@
   .modal-dialog.modal-dialog-centered.modal-lg(role='document')
     .modal-content
       .modal-body
-        button.close(type='button', data-dismiss='modal', aria-label='Close')
+        button.close(type='button', data-bs-dismiss='modal', aria-label='Close')
           span(aria-hidden='true') ×
         .modal-wrapper
           .modal-wrapper-left.p-md-4
@@ -22,7 +22,7 @@
               +input-number('Quantity:', 'quantity', 'quantity' , '3' , '46$')
               .d-flex.flex-column.p-3
                 a.btn.btn-warning.d-block.text-uppercase(href='#') Save
-                a.btn.btn-outline.d-block.text-uppercase(href='#', data-dismiss='modal', aria-label='Close') cancel
+                a.btn.btn-outline.d-block.text-uppercase(href='#', data-bs-dismiss='modal', aria-label='Close') cancel
 
 
 

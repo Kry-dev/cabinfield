@@ -2,7 +2,7 @@
   .modal-dialog.modal-dialog-centered.modal-lg(role='document')
     .modal-content
       .modal-body
-        button.close(type='button', data-dismiss='modal', aria-label='Close')
+        button.close(type='button', data-bs-dismiss='modal', aria-label='Close')
           span(aria-hidden='true') ×
         .modal-wrapper
           .modal-wrapper-left.p-md-4
@@ -23,14 +23,14 @@
                 label.mb-0 Quantity:
                 select.selectpicker
                   option(disabled selected) none
-                  option.text-dark(value='1',data-content="<b>x1</b><span class='text-dark ml-3'>26$</span>")
-                  option.text-dark(value='2',data-content="<b>x2</b><span class='text-dark ml-3'>46$</span>")
-                  option.text-dark(value='3',data-content="<b>x3</b><span class='text-dark ml-3'>66$</span>")
+                  option.text-dark(value='1',data-bs-content="<b>x1</b><span class='text-dark ml-3'>26$</span>")
+                  option.text-dark(value='2',data-bs-content="<b>x2</b><span class='text-dark ml-3'>46$</span>")
+                  option.text-dark(value='3',data-bs-content="<b>x3</b><span class='text-dark ml-3'>66$</span>")
 
 
             .d-flex.flex-column.p-md-4
               a.btn.btn-default.d-block.text-uppercase(href='#') Apply #[span 46$]
-              a.btn.btn-outline.d-block.text-uppercase(href='#', data-dismiss='modal', aria-label='Close') x cancel
+              a.btn.btn-outline.d-block.text-uppercase(href='#', data-bs-dismiss='modal', aria-label='Close') x cancel
 
 
 

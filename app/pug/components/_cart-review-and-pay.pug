@@ -29,30 +29,30 @@ section.cart.address-section
             h5.address-title Payment Method
             form.form-address.form-address-billing.border-b-dashed(action="")
               .row
-                .form-group.col-md-8
+                .mb-3.col-md-8
                   label.col-form-label.col-form-label-sm Card number
                   input.form-control(type='text', name='card-number')
-                .form-group.col-md-4.pr-0
+                .mb-3.col-md-4.pe-0
                   p.pay-by-check
                     a.text-brown.text-underline(href="#") Pay by Check
                     a(href="#")
                       i.fa.fa-question-circle-o
               .row.exp-date
-                .form-group.col-md-12.mb-0
+                .col-md-12.mb-0
                   label.col-form-label.col-form-label-sm Expiration date
-                .form-group.col-md-4
+                .mb-3.col-md-4
                   select.form-control(type='text', name='month')
                     option month
-                .form-group.col-md-4
+                .mb-3.col-md-4
                   select.form-control(type='text', name='year', placeholder="year")
                     option year
               .row
-                .form-group.col-md-4
+                .mb-3.col-md-4
                   label.col-form-label.col-form-label-sm Security code
                   input.form-control(type='text', name='sec-code')
             .d-flex.flex-column.mt-3.mb-0
               h5.address-title.mb-3 Gift Certificates codes
-              .form-group.form-group-apply.row
+              .form-group-apply.row
                 .col-sm-6
                   input.form-control(type='text', name='', placeholder='Enter code')
                 .col-sm-3
@@ -69,7 +69,7 @@ section.cart.address-section
                 img(src='img/product/tmp_stain.jpg')
               .product-selected-text Buying this as a gift?
                 br
-                a(href='#', data-toggle='modal', data-target='#gifting_options') See gifting options
+                a(href='#', data-bs-toggle='modal', data-bs-target='#gifting_options') See gifting options
 
           .col-md-6.col-sm-8.border-b-dashed
             .option-selected
@@ -103,7 +103,7 @@ section.cart.address-section
                 img(src='img/product/tmp_stain.jpg')
               .product-selected-text Buying this as a gift?
                 br
-                a(href='#', data-toggle='modal', data-target='#gifting_options') See gifting options
+                a(href='#', data-bs-toggle='modal', data-bs-target='#gifting_options') See gifting options
 
           .col-md-6.col-sm-8.border-b-dashed
             .option-selected
@@ -133,9 +133,9 @@ section.cart.address-section
               span.save_price $32.00
 
           .col-lg-4.col-md-12
-            .values.text-right.mt-3  Combined shipping (2 items):
+            .values.text-end.mt-3  Combined shipping (2 items):
               span.price.price_shipping $71.00
-            .values.text-right.mb-3.mt-0
+            .values.text-end.mb-3.mt-0
               span Delivery:
                 a.more(href='#') Inside delivery with setup
         hr.mt-0
@@ -150,7 +150,7 @@ section.cart.address-section
                 img(src='img/product/tmp_stain.jpg')
               .product-selected-text Buying this as a gift?
                 br
-                a(href='#', data-toggle='modal', data-target='#gifting_options') See gifting options
+                a(href='#', data-bs-toggle='modal', data-bs-target='#gifting_options') See gifting options
 
           .col-md-6.col-sm-8.border-b-dashed
             .option-selected
@@ -190,7 +190,7 @@ section.cart.address-section
                 img(src='img/product/tmp_stain.jpg')
               .product-selected-text Buying this as a gift?
                 br
-                a(href='#', data-toggle='modal', data-target='#gifting_options') See gifting options
+                a(href='#', data-bs-toggle='modal', data-bs-target='#gifting_options') See gifting options
 
           .col-md-6.border-b-dashed
             .option-selected
@@ -226,9 +226,9 @@ section.cart.address-section
               span.save_price $32.00
 
           .col-lg-4.col-md-6
-            .values.text-right.mt-3  Combined shipping (2 items):
+            .values.text-end.mt-3  Combined shipping (2 items):
               span.price.price_shipping $71.00
-            .values.text-right.mb-3.mt-0
+            .values.text-end.mb-3.mt-0
               span Delivery:
                 a.more(href='#') Inside delivery with setup
         hr.mb-1

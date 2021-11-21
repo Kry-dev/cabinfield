@@ -36,13 +36,13 @@
 
     + .breadcrumb-item::before {
         display: inline-block; // Suppress underlining of the separator in modern browsers
-        padding-right: .5rem;
-        padding-left: $breadcrumb-item-padding;
+        padding-right: $breadcrumb-item-padding;
+        padding-left: 0;
         color: $breadcrumb-divider-color;
         content: "#{$breadcrumb-divider}";
         font-family: 'FontAwesome';
         font-size: 5px;
-        transform: translateY(-1px);
+        transform: translateY(1px);
     }
 
     // IE9-11 hack to properly handle hyperlink underlines for breadcrumbs built

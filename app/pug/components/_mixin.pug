@@ -112,8 +112,8 @@ mixin product-price
       span.price-new 1,371.00
     .product-price-shipping
       span + $30.40
-      span.ml-2  Standard curbside delivery to 100001
-        a.edit.pl-2.ml-1(href='#', data-toggle="modal", data-target="#modal--calculate")
+      span.ms-2  Standard curbside delivery to 100001
+        button.edit.ps-2.ms-1(href='#', data-bs-toggle="modal", data-bs-target="#modal--calculate")
             i.fa.fa-pencil
 mixin product-price-old
   <!--old product price -->
@@ -126,7 +126,7 @@ mixin product-price-old
     .product-price-shipping
       span + $30.40
       |  Combined shipping.
-      a.more.border-left.pl-2.ml-1(href='#', data-toggle='modal', data-target='#shipping_options1') shipping options
+      a.more.border-start.ps-2.ms-1(href='#', data-bs-toggle='modal', data-bs-target='#shipping_options1') shipping options
 
 mixin product-price-old-top
   <!--old product price  for top section-->
@@ -137,7 +137,7 @@ mixin product-price-old-top
     .product-price-shipping
       span + $30.40
       |  Combined shipping.
-      a.more.border-left.pl-2.ml-1(href='#', data-toggle='modal', data-target='#shipping_options1') details
+      a.more.border-start.ps-2.ms-1(href='#', data-bs-toggle='modal', data-bs-target='#shipping_options1') details
 
 mixin product-price-v2
   <!--product price  for product-v2-->
@@ -147,7 +147,7 @@ mixin product-price-v2
     .product-price-shipping
       span + $30.40
       |  Shipping.
-      a.more.border-left.pl-2.ml-1(href='#', data-toggle='modal', data-target='#shipping_options2') details
+      a.more.border-start.ps-2.ms-1(href='#', data-bs-toggle='modal', data-bs-target='#shipping_options2') details
 
 
 mixin product-price-v3
@@ -156,8 +156,8 @@ mixin product-price-v3
     span The price reflects selected options
     .product-price-value $1,371.00
     .product-price-shipping
-      a.more.d-flex(href='#', data-toggle='modal', data-target='#shipping_options1') Calculate delivery costs
-      a.more.d-flex(href='#', data-toggle='modal', data-target='#assembly_quote_request_sent') Assembly quote request sent
+      a.more.d-flex(href='#', data-bs-toggle='modal', data-bs-target='#shipping_options1') Calculate delivery costs
+      a.more.d-flex(href='#', data-bs-toggle='modal', data-bs-target='#assembly_quote_request_sent') Assembly quote request sent
 
 
 mixin product-price-v3-top-section
@@ -165,7 +165,7 @@ mixin product-price-v3-top-section
   .product-price
     .product-price-value $1,371.00
     .product-price-shipping
-    a.more(href="#", data-toggle="modal",data-target="#shipping_options1") Calculate delivery costs
+    button.more( data-bs-toggle="modal",data-bs-target="#shipping_options1") Calculate delivery costs
 
 mixin input-number(label, name, id, val, price)
   //-product custom input number (modal-customizr-popup-1)
