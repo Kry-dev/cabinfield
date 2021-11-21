@@ -18,27 +18,6 @@ $(document).ready(function () {
         }
     });
    
-    /*main_slider*/
-    $(".home-slider-list").slick({
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        transition: "fade",
-        dots: true,
-        arrows: false
-    });
-    /*review widget slider*/
-    $(".card-review-list").slick({
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        transition: "fade",
-        arrows: true,
-        prevArrow: $(".review-prev"),
-        nextArrow: $(".review-next"),
-    });
     
     /*related list slider*/
     $(".related-list").each(function () {
@@ -95,6 +74,7 @@ $(document).ready(function () {
         initRelatedSlider();
         $(window).on("load resize", initRelatedSlider);
     });
+    
     /*photo list carousel - product page*/
     $(".product-photo-carousel ul").slick({
         // mobileFirst:true,
@@ -147,6 +127,7 @@ $(document).ready(function () {
         var action = ($(this).hasClass("slick-next")) ? "slickNext" : "slickPrev";
         $(this).parents(".product-photo").find(".product-photo-carousel ul").slick(action);
     });
+    
     /*set big img from attr*/
     $(".product-photo-carousel ul").on("click", ".item", function () {
         $(".item").removeClass("selected");
@@ -929,6 +910,32 @@ $(document).ready(function () {
     $(".selectpicker").selectpicker();
     $(function () {
         $('select').selectpicker();
+    });
+    
+    const swiper = new Swiper('.home-slider .swiper', {
+        // Optional parameters
+        // direction: 'vertical',
+        loop: false,
+        autoplay: true,
+        // If we need pagination
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            renderBullet: function (index, className) {
+                return '<span class="' + className + ' '+ (index + 1) +'">' + "</span>";
+            },
+        },
+        
+        // Navigation arrows
+        // navigation: {
+        //     nextEl: '.swiper-button-next',
+        //     prevEl: '.swiper-button-prev',
+        // },
+        
+        // And if we need scrollbar
+        scrollbar: {
+            el: '.swiper-scrollbar',
+        },
     });
 });
 

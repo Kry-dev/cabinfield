@@ -140,7 +140,7 @@ $card-height: 21rem;
             align-items: center;
             padding: 0 60px;
             margin-bottom: 2rem;
-            @include media-breakpoint-down(lg) {
+            @include media-breakpoint-down(xl) {
                 padding: 0;
             }
             @include media-breakpoint-down(md) {
@@ -326,10 +326,10 @@ $card-height: 21rem;
             position: relative;
             .card-img {
                 background-position: bottom right 40%;
-                @include media-breakpoint-down(lg) {
+                @include media-breakpoint-down(xl) {
                     background-position: bottom right 100%;
                 }
-                @include media-breakpoint-down(lg) {
+                @include media-breakpoint-down(xl) {
                     background-position: bottom right 75%;
                 }
             }

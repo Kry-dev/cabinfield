@@ -345,3 +345,8 @@ a.btn-why {
     text-align: center;
     padding: 1rem  1rem;
 }
+
+button[data-bs-toggle="modal"] {
+    border: 0;
+    background: transparent;
+}

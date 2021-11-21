@@ -136,7 +136,7 @@
         flex-direction: column;
         justify-content: space-between;
         position: relative;
-        @include media-breakpoint-down(lg) {
+        @include media-breakpoint-down(xl) {
             order: 3;
             flex-direction: row;
             width: 100%;
@@ -148,7 +148,7 @@
             margin-right: 10px;
             height: 100%;
             position: relative;
-            @include media-breakpoint-down(lg) {
+            @include media-breakpoint-down(xl) {
                 flex-direction: row;
                 height: 80px;
                 width: 100%;
@@ -180,7 +180,7 @@
                 border: 2px solid $brown;
             }
             
-            @include media-breakpoint-down(lg) {
+            @include media-breakpoint-down(xl) {
                 width: 80px;
                 height: 80px;
             }
@@ -202,7 +202,7 @@
                 transform: translate(0, 0);
             }
             
-            @include media-breakpoint-down(lg) {
+            @include media-breakpoint-down(xl) {
                 width: 0;
                 height: 0;
                 .btn {
@@ -272,7 +272,7 @@
                 padding: 0 0.75rem;
                 text-align: center;
             }
-            @include media-breakpoint-down(lg) {
+            @include media-breakpoint-down(xl) {
                 max-width: 100%;
                 margin-bottom: 1rem;
                 order: 2;
