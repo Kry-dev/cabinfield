@@ -1,3 +1,4 @@
+
 $(document).ready(function () {
     /*scroll to top*/
     $("body").append("<a href='#' id='to_top'><i class='fa fa-angle-right'></i> <span>back to top</span></a>");
@@ -20,61 +21,61 @@ $(document).ready(function () {
    
     
     /*related list slider*/
-    $(".related-list").each(function () {
-        var slickIndividual = $(this);
-        slickIndividual.next().css("display", "none"); // hide the next sections with buttons
-        var relatedConfig = { // slick slider config
-            infinite: true,
-            speed: 500,
-            slidesToShow: 5,
-            slidesToScroll: 5,
-            nextArrow: slickIndividual.next().find(".btn.btn-arrow.related-next"),
-            prevArrow: slickIndividual.next().find(".btn.btn-arrow.related-prev"),
-            responsive: [
-                {
-                    breakpoint: 280,
-                    settings: "unslick"
-                },
-                {
-                    breakpoint: 600,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1
-                    }
-                },
-                {
-                    breakpoint: 768,
-                    settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 3
-                    }
-                },
-                {
-                    breakpoint: 992,
-                    settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 3
-                    }
-                },
-                {
-                    breakpoint: 1200,
-                    settings: {
-                        slidesToShow: 4,
-                        slidesToScroll: 4
-                    }
-                }
-            ]
-        };
-        
-        function initRelatedSlider() {
-            slickIndividual.next().css("display", "flex");
-            slickIndividual.not('.slick-initialized').slick(relatedConfig);
-        }
-        
-        initRelatedSlider();
-        $(window).on("load resize", initRelatedSlider);
-    });
-    
+    // $(".related-list").each(function () {
+    //     var slickIndividual = $(this);
+    //     slickIndividual.next().css("display", "none"); // hide the next sections with buttons
+    //     var relatedConfig = { // slick slider config
+    //         infinite: true,
+    //         speed: 500,
+    //         slidesToShow: 5,
+    //         slidesToScroll: 5,
+    //         nextArrow: slickIndividual.next().find(".btn.btn-arrow.related-next"),
+    //         prevArrow: slickIndividual.next().find(".btn.btn-arrow.related-prev"),
+    //         responsive: [
+    //             {
+    //                 breakpoint: 280,
+    //                 settings: "unslick"
+    //             },
+    //             {
+    //                 breakpoint: 600,
+    //                 settings: {
+    //                     slidesToShow: 1,
+    //                     slidesToScroll: 1
+    //                 }
+    //             },
+    //             {
+    //                 breakpoint: 768,
+    //                 settings: {
+    //                     slidesToShow: 3,
+    //                     slidesToScroll: 3
+    //                 }
+    //             },
+    //             {
+    //                 breakpoint: 992,
+    //                 settings: {
+    //                     slidesToShow: 3,
+    //                     slidesToScroll: 3
+    //                 }
+    //             },
+    //             {
+    //                 breakpoint: 1200,
+    //                 settings: {
+    //                     slidesToShow: 4,
+    //                     slidesToScroll: 4
+    //                 }
+    //             }
+    //         ]
+    //     };
+    //
+    //     function initRelatedSlider() {
+    //         slickIndividual.next().css("display", "flex");
+    //         slickIndividual.not('.slick-initialized').slick(relatedConfig);
+    //     }
+    //
+    //     initRelatedSlider();
+    //     $(window).on("load resize", initRelatedSlider);
+    // });
+   
     /*photo list carousel - product page*/
     $(".product-photo-carousel ul").slick({
         // mobileFirst:true,
@@ -911,10 +912,8 @@ $(document).ready(function () {
     $(function () {
         $('select').selectpicker();
     });
-    
-    const swiper = new Swiper('.home-slider .swiper', {
+    const homeHeroSliderCfg = {
         // Optional parameters
-        // direction: 'vertical',
         loop: false,
         autoplay: true,
         // If we need pagination
@@ -925,17 +924,58 @@ $(document).ready(function () {
                 return '<span class="' + className + ' '+ (index + 1) +'">' + "</span>";
             },
         },
-        
-        // Navigation arrows
-        // navigation: {
-        //     nextEl: '.swiper-button-next',
-        //     prevEl: '.swiper-button-prev',
-        // },
-        
+    
         // And if we need scrollbar
         scrollbar: {
             el: '.swiper-scrollbar',
         },
+    }
+    if ($('.home-slider .swiper').length != 0) {
+        new Swiper (".home-slider .swiper", homeHeroSliderCfg);
+    }
+    const relatedSwiperCfg = {
+        loop: false,
+        autoplay: true,
+        slidesPerView: 3,
+        spaceBetween: 30,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    }
+    
+
+    $(".related-wrap").each(function(index, element){
+        let $this = $(this);
+        new Swiper(this, {
+            loop: true,
+            autoplay: true,
+            slidesPerView: 5,
+            spaceBetween: 30,
+            navigation: {
+                nextEl: $this.find(".swiper-button-next")[0],
+                prevEl: $this.find(".swiper-button-prev")[0],
+            },
+            // nextButton: $(this).find(".related-prev")[0],
+            // prevButton: $(this).find(".related-next")[0],
+            breakpoints: {
+                318: {
+                    slidesPerView: 1,
+                },
+                525: {
+                    slidesPerView: 2,
+                },
+                768: {
+                    slidesPerView: 4,
+                },
+                1024: {
+                    slidesPerView: 4,
+                },
+                1200: {
+                    slidesPerView: 5,
+                },
+            },
+        });
     });
 });
 

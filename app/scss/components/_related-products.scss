@@ -1,6 +1,8 @@
 .related {
-    overflow: hidden;
     margin-top: 40px;
+    .container {
+        overflow: hidden;
+    }
     .title {
         font-size: 0.9375rem;
         line-height: 1.25rem;
@@ -36,8 +38,9 @@
         padding: 0 .5rem;
         
         a {
-            display: block;
-            
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
             &:hover,
             &:focus {
                 outline: none;
@@ -106,17 +109,23 @@
     
     .btn-arrow {
         width: 24px;
-        .fa {
+        .fa,
+        &:after {
             font-size: $font-size-sm;
+        }
+        &:hover:after {
+            font-size:$font-size-sm * 1.25;
         }
     }
     
-    &-prev {
-        margin-left: -24px;
+    &-prev,
+    .swiper-button-prev {
+        margin-left: -22px;
     }
     
-    &-next {
-        margin-right: -24px;
+    &-next,
+    .swiper-button-next {
+        margin-right: -22px;
     }
     
     hr {

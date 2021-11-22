@@ -49,6 +49,7 @@
     "lightgallery": "^1.7.0",
     "mmenu-js": "^8.5.3",
     "mmenu-light": "^3.0.3",
-    "popper.js": "^1.16.1"
+    "popper.js": "^1.16.1",
+    "swiper": "^7.3.0"
   }
 }
