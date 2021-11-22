@@ -782,76 +782,6 @@ $(document).ready(function () {
           {});
     }
 
-
-    /*PDP options list slider*/
-    let prodCustomSlider = $(".product-customize--slider");
-    let numSlick = 0;
-    let prodCustomSliderConfig = {
-        infinite: false,
-        slidesToShow: 7,
-        slidesToScroll: 1,
-        rows:0,
-        arrows: true,
-        fade: false,
-        adaptiveHeight: true,
-        mobileFirst: true,
-        responsive: [
-            {
-                breakpoint: 280,
-                settings: "unslick"
-            },
-            {
-                breakpoint: 300,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1
-                }
-            },
-            {
-                breakpoint: 500,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 1
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 4,
-                    slidesToScroll: 1
-                }
-            },
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 5,
-                    slidesToScroll: 1
-                }
-            },
-            {
-                breakpoint: 1200,
-                settings: {
-                    slidesToShow: 7,
-                    slidesToScroll: 1
-                }
-            }
-        ]
-    }
-    let prodCustomSliderInit = function (){
-        prodCustomSlider.each( function() {
-            numSlick++;
-            let currentSlider = $(this);
-            let sliderCount = currentSlider.children().length;
-            if (sliderCount > 7) {
-                currentSlider.not(".slick-initialized").addClass( 'product-customize--slider-' + numSlick ).slick(prodCustomSliderConfig);
-            }
-        })
-    };
-    prodCustomSliderInit();
-    $(window).on('resize orientationchange', function() {
-        $(".product-customize--slider.slick-slider").slick('resize');
-    });
-    
     let zoom = 1;
     
     $('.zoom-in').on('click', function(){
@@ -977,5 +907,136 @@ $(document).ready(function () {
             },
         });
     });
+    
+    
+    /*PDP options list slider*/
+    // let prodCustomSliderConfig = {
+    //     loop: false,
+    //     slidesToShow: 7,
+    //     navigation: {
+    //         nextEl: $this.find(".swiper-button-next")[0],
+    //         prevEl: $this.find(".swiper-button-prev")[0],
+    //     },
+    // }
+    let prodCustomSlider = $(".product-customize--slider");
+    
+    prodCustomSlider.each(function(index, element){
+        let $this = $(this);
+        let prodCustomSliderCount = $this.find('.swiper-slide').length;
+        // if (prodCustomSliderCount > 3) {
+        //
+        // }
+        new Swiper(this, {
+            loop: false,
+            autoplay: true,
+            slidesPerView: 5,
+            spaceBetween: 30,
+            lazyLoading: true,
+            pagination: {
+                el: ".swiper-pagination",
+                type: "progressbar",
+            },
+            navigation: {
+                nextEl: $this.find(".swiper-button-next")[0],
+                prevEl: $this.find(".swiper-button-prev")[0],
+            },
+            breakpoints: {
+                318: {
+                    slidesPerView: 1,
+                },
+                525: {
+                    slidesPerView: 2,
+                },
+                768: {
+                    slidesPerView: 4,
+                },
+                1024: {
+                    slidesPerView: 6,
+                },
+                1200: {
+                    slidesPerView: 7,
+                },
+            },
+            on: {
+                init: function () {
+                    if (this.slides.length <= 7) {
+                        // First way:
+                        // this.allowSlidePrev = this.allowSlideNext = false; // disabling swiping
+                        // this.el.querySelector(".swiper-button-prev").setAttribute('hidden', '');  // hiding arrows prev&next
+                        // this.el.querySelector(".swiper-button-next").setAttribute('hidden', '');
+                    
+                        // Second way:
+                        this.el.classList.add('swiper-no-swiping');
+                    }
+                }
+            }
+        });
+    });
+    // let numSlick = 0;
+    // let prodCustomSliderConfig = {
+    //     infinite: false,
+    //     slidesToShow: 7,
+    //     slidesToScroll: 1,
+    //     rows:0,
+    //     arrows: true,
+    //     fade: false,
+    //     adaptiveHeight: true,
+    //     mobileFirst: true,
+    //     responsive: [
+    //         {
+    //             breakpoint: 280,
+    //             settings: "unslick"
+    //         },
+    //         {
+    //             breakpoint: 300,
+    //             settings: {
+    //                 slidesToShow: 2,
+    //                 slidesToScroll: 1
+    //             }
+    //         },
+    //         {
+    //             breakpoint: 500,
+    //             settings: {
+    //                 slidesToShow: 3,
+    //                 slidesToScroll: 1
+    //             }
+    //         },
+    //         {
+    //             breakpoint: 768,
+    //             settings: {
+    //                 slidesToShow: 4,
+    //                 slidesToScroll: 1
+    //             }
+    //         },
+    //         {
+    //             breakpoint: 1024,
+    //             settings: {
+    //                 slidesToShow: 5,
+    //                 slidesToScroll: 1
+    //             }
+    //         },
+    //         {
+    //             breakpoint: 1200,
+    //             settings: {
+    //                 slidesToShow: 7,
+    //                 slidesToScroll: 1
+    //             }
+    //         }
+    //     ]
+    // }
+    // let prodCustomSliderInit = function (){
+    //     prodCustomSlider.each( function() {
+    //         numSlick++;
+    //         let currentSlider = $(this);
+    //         let sliderCount = currentSlider.children().length;
+    //         if (sliderCount > 7) {
+    //             currentSlider.not(".slick-initialized").addClass( 'product-customize--slider-' + numSlick ).slick(prodCustomSliderConfig);
+    //         }
+    //     })
+    // };
+    // prodCustomSliderInit();
+    // $(window).on('resize orientationchange', function() {
+    //     $(".product-customize--slider.slick-slider").slick('resize');
+    // });
 });
 
