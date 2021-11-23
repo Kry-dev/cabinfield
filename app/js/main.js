@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
     /*scroll to top*/
     $("body").append("<a href='#' id='to_top'><i class='fa fa-angle-right'></i> <span>back to top</span></a>");
@@ -20,134 +19,79 @@ $(document).ready(function () {
     });
    
     
-    /*related list slider*/
-    // $(".related-list").each(function () {
-    //     var slickIndividual = $(this);
-    //     slickIndividual.next().css("display", "none"); // hide the next sections with buttons
-    //     var relatedConfig = { // slick slider config
-    //         infinite: true,
-    //         speed: 500,
-    //         slidesToShow: 5,
-    //         slidesToScroll: 5,
-    //         nextArrow: slickIndividual.next().find(".btn.btn-arrow.related-next"),
-    //         prevArrow: slickIndividual.next().find(".btn.btn-arrow.related-prev"),
-    //         responsive: [
-    //             {
-    //                 breakpoint: 280,
-    //                 settings: "unslick"
-    //             },
-    //             {
-    //                 breakpoint: 600,
-    //                 settings: {
-    //                     slidesToShow: 1,
-    //                     slidesToScroll: 1
-    //                 }
-    //             },
-    //             {
-    //                 breakpoint: 768,
-    //                 settings: {
-    //                     slidesToShow: 3,
-    //                     slidesToScroll: 3
-    //                 }
-    //             },
-    //             {
-    //                 breakpoint: 992,
-    //                 settings: {
-    //                     slidesToShow: 3,
-    //                     slidesToScroll: 3
-    //                 }
-    //             },
-    //             {
-    //                 breakpoint: 1200,
-    //                 settings: {
-    //                     slidesToShow: 4,
-    //                     slidesToScroll: 4
-    //                 }
-    //             }
-    //         ]
-    //     };
-    //
-    //     function initRelatedSlider() {
-    //         slickIndividual.next().css("display", "flex");
-    //         slickIndividual.not('.slick-initialized').slick(relatedConfig);
-    //     }
-    //
-    //     initRelatedSlider();
-    //     $(window).on("load resize", initRelatedSlider);
-    // });
    
     /*photo list carousel - product page*/
-    $(".product-photo-carousel ul").slick({
-        // mobileFirst:true,
-        infinite: false,
-        speed: 500,
-        vertical: true,
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        arrows: false,
-        responsive: [
-            {
-                breakpoint: 1201,
-                settings: {
-                    vertical: false,
-                    slidesToShow: 4,
-                    slidesToScroll: 1
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    vertical: false,
-                    slidesToShow: 4,
-                    slidesToScroll: 1
-                }
-            },
-            {
-                breakpoint: 600,
-                settings: {
-                    vertical: false,
-                    slidesToShow: 4,
-                    slidesToScroll: 1,
-                    draggable: true,
-                    variableWidth: false
-                }
-            },
-            {
-                breakpoint: 425,
-                settings: {
-                    vertical: false,
-                    slidesToShow: 4,
-                    slidesToScroll: 1,
-                    draggable: true,
-                    variableWidth: false
-                }
-            }
-        ]
-    });
-    $(".product-photo").on("click", ".slick-arrow", function () {
-        var action = ($(this).hasClass("slick-next")) ? "slickNext" : "slickPrev";
-        $(this).parents(".product-photo").find(".product-photo-carousel ul").slick(action);
-    });
+    // $(".product-photo-carousel ul").slick({
+    //     // mobileFirst:true,
+    //     infinite: false,
+    //     speed: 500,
+    //     vertical: true,
+    //     slidesToShow: 4,
+    //     slidesToScroll: 1,
+    //     arrows: false,
+    //     responsive: [
+    //         {
+    //             breakpoint: 1201,
+    //             settings: {
+    //                 vertical: false,
+    //                 slidesToShow: 4,
+    //                 slidesToScroll: 1
+    //             }
+    //         },
+    //         {
+    //             breakpoint: 768,
+    //             settings: {
+    //                 vertical: false,
+    //                 slidesToShow: 4,
+    //                 slidesToScroll: 1
+    //             }
+    //         },
+    //         {
+    //             breakpoint: 600,
+    //             settings: {
+    //                 vertical: false,
+    //                 slidesToShow: 4,
+    //                 slidesToScroll: 1,
+    //                 draggable: true,
+    //                 variableWidth: false
+    //             }
+    //         },
+    //         {
+    //             breakpoint: 425,
+    //             settings: {
+    //                 vertical: false,
+    //                 slidesToShow: 4,
+    //                 slidesToScroll: 1,
+    //                 draggable: true,
+    //                 variableWidth: false
+    //             }
+    //         }
+    //     ]
+    // });
+    // $(".product-photo").on("click", ".slick-arrow", function () {
+    //     var action = ($(this).hasClass("slick-next")) ? "slickNext" : "slickPrev";
+    //     $(this).parents(".product-photo").find(".product-photo-carousel ul").slick(action);
+    // });
     
     /*set big img from attr*/
-    $(".product-photo-carousel ul").on("click", ".item", function () {
-        $(".item").removeClass("selected");
-        $(this).addClass("selected");
-        
-        var img = $(this).attr("data-big-img");
-        if (typeof (img) != "undefined" && img != "") {
-            $(".product-photo-main img").attr("src", img);
-            
-            var title = $(this).attr("data-title");
-            var descr = $(this).attr("data-descr");
-            if (typeof (title) != "undefined" && title != ""){
-                $(".product-photo-main .title").text(title);
-            }
-            if (typeof (descr) != "undefined" && descr != ""){
-                $(".product-photo-main .descr").text(descr);
-            }
-        }
-    });
+    // $(".product-photo-carousel ul").on("click", ".item", function () {
+    //     $(".item").removeClass("selected");
+    //     $(this).addClass("selected");
+    //
+    //     var img = $(this).attr("data-big-img");
+    //     if (typeof (img) != "undefined" && img != "") {
+    //         $(".product-photo-main img").attr("src", img);
+    //
+    //         var title = $(this).attr("data-title");
+    //         var descr = $(this).attr("data-descr");
+    //         if (typeof (title) != "undefined" && title != ""){
+    //             $(".product-photo-main .title").text(title);
+    //         }
+    //         if (typeof (descr) != "undefined" && descr != ""){
+    //             $(".product-photo-main .descr").text(descr);
+    //         }
+    //     }
+    // });
     
     /*show top-section*/
     if ( $(".top-section.d-hidden").length > 0 && $(".content .product").length > 0 ){
@@ -910,25 +854,13 @@ $(document).ready(function () {
     
     
     /*PDP options list slider*/
-    // let prodCustomSliderConfig = {
-    //     loop: false,
-    //     slidesToShow: 7,
-    //     navigation: {
-    //         nextEl: $this.find(".swiper-button-next")[0],
-    //         prevEl: $this.find(".swiper-button-prev")[0],
-    //     },
-    // }
     let prodCustomSlider = $(".product-customize--slider");
     
     prodCustomSlider.each(function(index, element){
         let $this = $(this);
-        let prodCustomSliderCount = $this.find('.swiper-slide').length;
-        // if (prodCustomSliderCount > 3) {
-        //
-        // }
         new Swiper(this, {
             loop: false,
-            autoplay: true,
+            autoplay: false,
             slidesPerView: 5,
             spaceBetween: 30,
             lazyLoading: true,
@@ -960,11 +892,6 @@ $(document).ready(function () {
             on: {
                 init: function () {
                     if (this.slides.length <= 7) {
-                        // First way:
-                        // this.allowSlidePrev = this.allowSlideNext = false; // disabling swiping
-                        // this.el.querySelector(".swiper-button-prev").setAttribute('hidden', '');  // hiding arrows prev&next
-                        // this.el.querySelector(".swiper-button-next").setAttribute('hidden', '');
-                    
                         // Second way:
                         this.el.classList.add('swiper-no-swiping');
                     }
@@ -972,71 +899,79 @@ $(document).ready(function () {
             }
         });
     });
-    // let numSlick = 0;
-    // let prodCustomSliderConfig = {
-    //     infinite: false,
-    //     slidesToShow: 7,
-    //     slidesToScroll: 1,
-    //     rows:0,
-    //     arrows: true,
-    //     fade: false,
-    //     adaptiveHeight: true,
-    //     mobileFirst: true,
-    //     responsive: [
-    //         {
-    //             breakpoint: 280,
-    //             settings: "unslick"
-    //         },
-    //         {
-    //             breakpoint: 300,
-    //             settings: {
-    //                 slidesToShow: 2,
-    //                 slidesToScroll: 1
-    //             }
-    //         },
-    //         {
-    //             breakpoint: 500,
-    //             settings: {
-    //                 slidesToShow: 3,
-    //                 slidesToScroll: 1
-    //             }
-    //         },
-    //         {
-    //             breakpoint: 768,
-    //             settings: {
-    //                 slidesToShow: 4,
-    //                 slidesToScroll: 1
-    //             }
-    //         },
-    //         {
-    //             breakpoint: 1024,
-    //             settings: {
-    //                 slidesToShow: 5,
-    //                 slidesToScroll: 1
-    //             }
-    //         },
-    //         {
-    //             breakpoint: 1200,
-    //             settings: {
-    //                 slidesToShow: 7,
-    //                 slidesToScroll: 1
-    //             }
-    //         }
-    //     ]
-    // }
-    // let prodCustomSliderInit = function (){
-    //     prodCustomSlider.each( function() {
-    //         numSlick++;
-    //         let currentSlider = $(this);
-    //         let sliderCount = currentSlider.children().length;
-    //         if (sliderCount > 7) {
-    //             currentSlider.not(".slick-initialized").addClass( 'product-customize--slider-' + numSlick ).slick(prodCustomSliderConfig);
-    //         }
-    //     })
-    // };
-    // prodCustomSliderInit();
-    // $(window).on('resize orientationchange', function() {
-    //     $(".product-customize--slider.slick-slider").slick('resize');
-    // });
+    /*PDP main slider carousel*/
+    let galleryTop = new Swiper('.pdpGallery-top', {
+        slidesPerView: 1,
+        loop: true,
+        loopedSlides: 50,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+    let galleryThumbs = new Swiper('.pdpGallery-thumbs', {
+        direction: 'vertical',
+        slidesPerView: 4,
+        slideToClickedSlide: true,
+        spaceBetween: 10,
+        loopedSlides: 50,
+        loop: true,
+    });
+    galleryTop.controller.control = galleryThumbs;
+    galleryThumbs.controller.control = galleryTop;
+    //
+    
+    
+    // window.lightGallery = lightGallery;
+    // window.lgThumbnail = lgThumbnail;
+    // window.lgZoom = lgThumbnail;
+    let productGallery = document.getElementById('product-gallery');
+    let productGalleryImages = productGallery.getElementsByTagName('img');
+    let productGalleryTitles = productGallery.getElementsByTagName('h2');
+    let productGalleryTextes = productGallery.getElementsByTagName('p');
+    let realIndexSlider;
+    let productGalleryDynamic = [];
+    for (let i = 0; i < productGalleryImages.length; i++) {
+        const img = productGalleryImages[i];
+        productGalleryDynamic[i] = {
+            src: img.getAttribute('src'),
+            thumb: img.getAttribute('src'),
+        };
+    }
+    
+    // lightGallery(document.getElementById('productGallery'));
+    let productGalleryLight = lightGallery(productGallery, {
+        dynamic: true,
+        autoplayFirstVideo: false,
+        pager: false,
+        galleryId: "nature",
+        // plugins: [lgZoom, lgThumbnail, lgAutoplay, lgVideo, lgFullscreen, lgHash],
+        plugins: [lgZoom, lgThumbnail, lgAutoplay],
+        mobileSettings: {
+            controls: true,
+            showCloseIcon: true,
+            download: true,
+            rotate: false
+        },
+        dynamicEl: productGalleryDynamic,
+    });
+    //
+    // // let imgSlider = new Swiper('#product-tab-gallery', {
+    // //     speed: 800,
+    // //     spaceBetween: 30,
+    // //     watchOverflow: true,
+    // //     autoHeight: true,
+    // //     loop: true,
+    // // });
+    //
+    let viewGalleryBtn = document.getElementById('view-gallery')
+    let openGalleryPopup = function (e) {
+        realIndexSlider = productGallery.getElementsByClassName('swiper-slide-active');
+        realIndexSlider = Number(realIndexSlider[0].getAttribute('data-swiper-slide-index'));
+        productGalleryLight.openGallery(realIndexSlider);
+    };
+    viewGalleryBtn.addEventListener('click', function (e) {
+        openGalleryPopup();
+    });
 });
 

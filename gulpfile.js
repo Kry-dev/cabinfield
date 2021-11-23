@@ -82,6 +82,7 @@ gulp.task('scripts', function() {
         // 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js',
         // 'app/libs/slick/slick.min.js',
         // 'app/libs/bootstrap-select/js/bootstrap-select.min.js',
+        // 'https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js',
     ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify().on('error', gulpUtil.log))
