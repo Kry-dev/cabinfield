@@ -902,8 +902,8 @@ $(document).ready(function () {
     /*PDP main slider carousel*/
     let galleryTop = new Swiper('.pdpGallery-top', {
         slidesPerView: 1,
-        loop: true,
-        loopedSlides: 50,
+        loop: false,
+        // loopedSlides: 50,
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
@@ -911,42 +911,42 @@ $(document).ready(function () {
     });
     let galleryThumbs = new Swiper('.pdpGallery-thumbs', {
         direction: 'vertical',
-        slidesPerView: 4,
+        slidesPerView: 5,
         slideToClickedSlide: true,
         spaceBetween: 10,
-        loopedSlides: 50,
-        loop: true,
+        // loopedSlides: 50,
+        loop: false,
     });
     galleryTop.controller.control = galleryThumbs;
     galleryThumbs.controller.control = galleryTop;
     //
     
     
-    // window.lightGallery = lightGallery;
-    // window.lgThumbnail = lgThumbnail;
-    // window.lgZoom = lgThumbnail;
     let productGallery = document.getElementById('product-gallery');
-    let productGalleryImages = productGallery.getElementsByTagName('img');
-    let productGalleryTitles = productGallery.getElementsByTagName('h2');
-    let productGalleryTextes = productGallery.getElementsByTagName('p');
+    let productGalleryItems = productGallery.getElementsByClassName('pdpGallery-item');
+    // let productGalleryImages = productGallery.getElementsByTagName('img');
     let realIndexSlider;
     let productGalleryDynamic = [];
-    for (let i = 0; i < productGalleryImages.length; i++) {
-        const img = productGalleryImages[i];
+    for (let i = 0; i < productGalleryItems.length; i++) {
+        const item = productGalleryItems[i];
+        console.log(item);
         productGalleryDynamic[i] = {
-            src: img.getAttribute('src'),
-            thumb: img.getAttribute('src'),
+            src: item.getAttribute('data-src'),
+            thumb: item.getAttribute('data-src'),
+            subHtml: item.getAttribute('data-sub-html'),
         };
     }
     
-    // lightGallery(document.getElementById('productGallery'));
     let productGalleryLight = lightGallery(productGallery, {
         dynamic: true,
+        selector: '.pdpGallery-item',
         autoplayFirstVideo: false,
         pager: false,
         galleryId: "nature",
+        subHtmlSelectorRelative: true,
+        appendSubHtmlTo: '.lg-item',
         // plugins: [lgZoom, lgThumbnail, lgAutoplay, lgVideo, lgFullscreen, lgHash],
-        plugins: [lgZoom, lgThumbnail, lgAutoplay],
+        plugins: [lgZoom, lgThumbnail],
         mobileSettings: {
             controls: true,
             showCloseIcon: true,
