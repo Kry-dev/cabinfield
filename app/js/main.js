@@ -902,8 +902,8 @@ $(document).ready(function () {
     /*PDP main slider carousel*/
     let galleryTop = new Swiper('.pdpGallery-top', {
         slidesPerView: 1,
-        loop: false,
-        // loopedSlides: 50,
+        loop: true,
+        loopedSlides: 20,
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
@@ -914,8 +914,8 @@ $(document).ready(function () {
         slidesPerView: 5,
         slideToClickedSlide: true,
         spaceBetween: 10,
-        // loopedSlides: 50,
-        loop: false,
+        loopedSlides: 20,
+        loop: true,
     });
     galleryTop.controller.control = galleryThumbs;
     galleryThumbs.controller.control = galleryTop;
