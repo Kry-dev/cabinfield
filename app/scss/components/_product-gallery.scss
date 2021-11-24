@@ -57,6 +57,23 @@
             font-size: $font-size-base * 1.25;
         }
     }
+    &-zoom {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $brown;
+        width: 32px;
+        height: 32px;
+        font-size: 24px;
+        position: absolute;
+        right: 16px;
+        bottom: 80px;
+        z-index: 20;
+        &:hover,
+        &:focus {
+            cursor: pointer;
+        }
+    }
     &-item {
         display: flex;
         flex-direction: column;
@@ -70,6 +87,7 @@
             left: 0;
             z-index: 9;
         }
+        
         &__info {
             position: relative;
             z-index: 10;

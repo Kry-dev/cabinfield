@@ -955,16 +955,10 @@ $(document).ready(function () {
         },
         dynamicEl: productGalleryDynamic,
     });
-    //
-    // // let imgSlider = new Swiper('#product-tab-gallery', {
-    // //     speed: 800,
-    // //     spaceBetween: 30,
-    // //     watchOverflow: true,
-    // //     autoHeight: true,
-    // //     loop: true,
-    // // });
-    //
-    let viewGalleryBtn = document.getElementById('view-gallery')
+    
+    let viewGalleryBtn = document.getElementById('view-gallery');
+    let viewGalleryZoom = document.getElementById('product-gallery-zoom');
+    // let viewGalleryZoom = $('.pdpGallery-item__zoom');
     let openGalleryPopup = function (e) {
         realIndexSlider = productGallery.getElementsByClassName('swiper-slide-active');
         realIndexSlider = Number(realIndexSlider[0].getAttribute('data-swiper-slide-index'));
@@ -973,5 +967,9 @@ $(document).ready(function () {
     viewGalleryBtn.addEventListener('click', function (e) {
         openGalleryPopup();
     });
+    viewGalleryZoom.addEventListener('click', function (e) {
+        openGalleryPopup();
+    });
+    
 });
 
