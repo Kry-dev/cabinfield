@@ -393,7 +393,7 @@ a:focus {
     height: $font-size-base;
     line-height: $font-size-base;
     border-radius: 50%;
-    border: $border-width solid $blue;
+    border: 1px solid $blue;
     color: $blue;
     background: transparent;
     margin: auto auto auto 8px;
@@ -406,7 +406,17 @@ a:focus {
         background: $blue;
     }
 }
+button.popup-info[data-bs-toggle=modal] {
+    border: 1px solid $blue;
+}
 
+button.btn-text {
+    border: 0;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    color: $link-color;
+}
 .person-message {
     width: 100%;
     max-width: 484px;

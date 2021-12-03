@@ -2,7 +2,7 @@ form#options-form
     #optgroup-1
         .product-customize-form
             h6.product-customize-subtitle Bed size:
-                button(type="button", data-bs-target="#customize_popup_info").popup-info ?
+                button(type="button", data-bs-target="#customize_popup_info",  data-bs-toggle="modal").popup-info.me-3 ?
             .product-customize-list
                 .product-option
                     input( type="radio" id="bed-size-01" name="bed-size" )
@@ -27,7 +27,7 @@ form#options-form
     #optgroup-2
         .product-customize-form
             h6.product-customize-subtitle Wood Type:
-                button(type="button", data-bs-target="#customize_popup_info").popup-info ?
+                button(type="button", data-bs-target="#customize_popup_info",  data-bs-toggle="modal").popup-info.me-3 ?
             .product-customize-list
                 .product-option
                     input( type="radio" id="wood-01" name="wood")
@@ -43,7 +43,7 @@ form#options-form
     #optgroup-3
         .product-customize-form
             h6.product-customize-subtitle Stain:
-                button(type="button", data-bs-target="#customize_popup_info").popup-info.me-3 i
+                button(type="button", data-bs-target="#customize_popup_info", data-bs-toggle="modal").popup-info.me-3 i
                 a(href="#") Reguest samples
             .product-customize-list(data-bs-slick='{"slidesToShow": 4, "slidesToScroll": 4}')
                 .product-option.option-stain
@@ -168,7 +168,7 @@ form#options-form
     #optgroup-5
         .product-customize-form
             h6.product-customize-subtitle Coat rack on footboard:
-                button(type="button", data-bs-target="#customize_popup_info").popup-info ?
+                button(type="button", data-bs-target="#customize_popup_info",  data-bs-toggle="modal").popup-info.me-3 ?
             .product-customize-list
                 .product-option
                     input( type="radio" id="coat-roat-01" name="wood")
@@ -197,7 +197,7 @@ form#options-form
     #optgroup-6
         .product-customize-form
             h6.product-customize-subtitle Extra top rail:
-                button(type="button", data-bs-target="#customize_popup_info").popup-info.me-3 ?
+                button(type="button", data-bs-target="#customize_popup_info", data-bs-toggle="modal").popup-info.me-3 ?
                 p.mb-0.text-dark (Multiple options can be selected)
             .product-customize-list
                 .product-option
@@ -216,9 +216,9 @@ form#options-form
     #optgroup-7
         .product-customize-form
             h6.product-customize-subtitle Fabric:
-                a(href="#").popup-info.me-1 ?
+                button(type="button", data-bs-target="#customize_popup_info", data-bs-toggle="modal").popup-info.me-1 ?
             h6.product-customize-subtitle
-                a.text-underline(href="#", data-bs-toggle="modal", data-bs-target="#options-fullsize") See all Fabric Swatches
+                button.btn-text.text-underline.text-bold(type="button", data-bs-target="#options-fullsize", data-bs-toggle="modal") See all Fabric Swatches
             h6.product-customize-subtitle
                 a.text-underline(href="#") Request samples
             .product-customize-list()
@@ -275,7 +275,7 @@ form#options-form
     #optgroup-8
         .product-customize-form.border-bottom-0
             h6.product-customize-subtitle #[b.me-1 Pillow: ]
-                button(type="button", data-bs-target="#customize_popup_info").popup-info ?
+                button(type="button", data-bs-target="#customize_popup_info",  data-bs-toggle="modal").popup-info.me-3 ?
             .row.w-100.mb-3
                 .col-md-3.col-sm-6.d-inline-flex.align-items-center
                     .checkbox.custom_checkbox
