@@ -900,25 +900,28 @@ $(document).ready(function () {
         });
     });
     /*PDP main slider carousel*/
+    let galleryThumbs = new Swiper('.pdpGallery-thumbs', {
+        direction: 'vertical', // вертикальная прокрутка
+        slidesPerView: 5, // показывать по 3 превью
+        spaceBetween: 10, // расстояние между слайдами
+        freeMode: true, // при перетаскивании превью ведет себя как при скролле
+    });
+    
     let galleryTop = new Swiper('.pdpGallery-top', {
-        slidesPerView: 1,
-        loop: true,
-        loopedSlides: 20,
+        slidesPerView: 1, // показывать по 1 изображению
+        mousewheel: true, // можно прокручивать изображения колёсиком мыши
+        grabCursor: true, // менять иконку курсора
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
+        thumbs: { // указываем на превью слайдер
+            swiper: galleryThumbs // указываем имя превью слайдера
+        }
     });
-    let galleryThumbs = new Swiper('.pdpGallery-thumbs', {
-        direction: 'vertical',
-        slidesPerView: 5,
-        slideToClickedSlide: true,
-        spaceBetween: 10,
-        loopedSlides: 20,
-        loop: true,
-    });
-    galleryTop.controller.control = galleryThumbs;
-    galleryThumbs.controller.control = galleryTop;
+    
+    // galleryTop.controller.control = galleryThumbs;
+    // galleryThumbs.controller.control = galleryTop;
     //
     
     
@@ -929,7 +932,6 @@ $(document).ready(function () {
     let productGalleryDynamic = [];
     for (let i = 0; i < productGalleryItems.length; i++) {
         const item = productGalleryItems[i];
-        console.log(item);
         productGalleryDynamic[i] = {
             src: item.getAttribute('data-src'),
             thumb: item.getAttribute('data-src'),
