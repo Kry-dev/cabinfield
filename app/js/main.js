@@ -728,7 +728,8 @@ $(document).ready(function () {
 
     let zoom = 1;
     
-    $('.zoom-in').on('click', function(){
+    $('.zoom-in').on('click', function(e){
+        e.preventDefault();
         zoom += 0.1;
         let getTarget = $(this).attr("data-zoom");
         $(getTarget).css({
@@ -740,7 +741,8 @@ $(document).ready(function () {
         });
     });
     
-    $('.zoom-out').on('click', function(){
+    $('.zoom-out').on('click', function(e){
+        e.preventDefault();
         zoom -= 0.1;
         let getTarget = $(this).attr("data-zoom");
         $(getTarget).css({

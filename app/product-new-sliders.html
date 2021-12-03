@@ -1587,6 +1587,32 @@
         <div class="modal-footer"></div>
       </div>
     </div>
+  </div>
+  <div class="modal fade modal--mainimage" id="pdpzoom_popup" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content p-4">
+        <div class="modal-header">
+          <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-12">
+              <h3 class="h3 text-center text-dark w-100">
+                <div class="text"></div>
+              </h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div class="mainimage-img m-auto"><img id="enlarge-zoom" src="#" alt="#"></div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div class="d-flex flex-row align-items-center justify-content-center"><a class="btn btn-outline-warning mx-1 zoom-out" href="#" data-zoom="#enlarge-zoom"><i class="fa fa-minus"></i></a><a class="btn btn-outline-warning mx-1 zoom-in" href="#" data-zoom="#enlarge-zoom"><i class="fa fa-plus"></i></a></div>
+        </div>
+      </div>
+    </div>
   </div><!--MODAL END-->
   <script src="js/jquery.js"></script>
   <script src="js/libs.min.js"></script>
