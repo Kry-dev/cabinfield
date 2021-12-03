@@ -905,15 +905,16 @@ $(document).ready(function () {
         slidesPerView: 5, // показывать по 3 превью
         spaceBetween: 10, // расстояние между слайдами
         freeMode: true, // при перетаскивании превью ведет себя как при скролле
+        watchSlidesProgress: true,
     });
     
     let galleryTop = new Swiper('.pdpGallery-top', {
-        slidesPerView: 1, // показывать по 1 изображению
+        // slidesPerView: 1, // показывать по 1 изображению
         mousewheel: true, // можно прокручивать изображения колёсиком мыши
         grabCursor: true, // менять иконку курсора
         navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            nextEl: '.pdpGallery-top .swiper-button-next',
+            prevEl: '.pdpGallery-top .swiper-button-prev',
         },
         thumbs: { // указываем на превью слайдер
             swiper: galleryThumbs // указываем имя превью слайдера
