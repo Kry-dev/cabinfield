@@ -18,61 +18,6 @@ $(document).ready(function () {
         }
     });
     
-    
-    /*PDP options list Fabric modal slider*/
-    // var FabricFullSize = new Swiper("#fabric-full-size.swiper-container", {
-    //     init: false,
-    //     observer: true,
-    //     observeSlideChildren: true,
-    //     loop: false,
-    //     autoplay: false,
-    //     slidesPerView: 1,
-    //     spaceBetween: 30,
-    //     lazyLoading: true,
-    //     noSwiping: false,
-    //     updateOnWindowResize: true,
-    //     navigation: {
-    //         nextEl: ".swiper-button-next",
-    //         prevEl: ".swiper-button-prev",
-    //     },
-    // })
-    //
-    $(".openFullSize").click(function (e) {
-        e.preventDefault();
-        // let gallery = hotspotsInfoGallery[ id ];
-        // $("#fabric-full-size").append('<div id="gallery-container"></div>');
-        // let container =  $("#fabric-full-size").find(".product-customize-list");
-        //
-        // container.lightGallery({
-        //     backdropEl: container,
-        //     containerEl: container,
-        //     dynamic: true,
-        //     dynamicEl: gallery,
-        //     hash: false,
-        //     share: false,
-        //     download: false
-        // });
-        //
-        // container.on('onCloseAfter.lg', function() {
-        //     container.remove();
-        // });
-        // if($("#fabric-full-size").hasClass('swiper-initialized')) {
-        //     $(this).removeClass('swiper-initialized ');
-        // }
-        // FabricFullSize.init(true);
-        // FabricFullSize.update();
-        // $(this).hide();
-    });
-    
-    $('.closeFullSize').click(function (e) {
-        e.preventDefault();
-        // if($("#fabric-full-size").hasClass('swiper-initialized')) {
-        //     FabricFullSize.destroy(true,true);
-        //     $("#fabric-full-size").removeClass('swiper-initialized swiper-horizontal swiper-pointer-events');
-        //     $(".openFullSize").show();
-        //     $(this).hide();
-        // }
-    });
     /*show top-section*/
     if ( $(".top-section.d-hidden").length > 0 && $(".content .product").length > 0 ){
     	$(window).scroll(function(){
@@ -873,7 +818,7 @@ $(document).ready(function () {
     });
     
     
-    
+    /*PDP options list Main Product LightGallery*/
     let productGallery = document.getElementById('product-gallery');
     let realIndexSlider;
     let productGalleryDynamic = [];
@@ -885,6 +830,7 @@ $(document).ready(function () {
                 src: item.getAttribute('data-src'),
                 thumb: item.getAttribute('data-src'),
                 subHtml: item.getAttribute('data-sub-html'),
+                
             };
         }
     
@@ -909,7 +855,6 @@ $(document).ready(function () {
     
         let viewGalleryBtn = document.getElementById('view-gallery');
         let viewGalleryZoom = document.getElementById('product-gallery-zoom');
-        // let viewGalleryZoom = $('.pdpGallery-item__zoom');
         let openGalleryPopup = function (e) {
             realIndexSlider = productGallery.getElementsByClassName('swiper-slide-active');
             realIndexSlider = Number(realIndexSlider[0].getAttribute('data-swiper-slide-index'));
@@ -924,21 +869,21 @@ $(document).ready(function () {
     
     }
     
-    
+    /*PDP options list Fabric modal slider*/
     let fabricGallery = document.getElementById('fabric-full-size');
-    console.log(fabricGallery);
-    console.log($('#fabric-full-size').find("input:checked"));
     let realIndexFabric;
     let fabricGalleryDynamic = [];
     let fabricGalleryItems = fabricGallery.getElementsByClassName('fabric-gallery__item');
     const $lgContainer = document.getElementById("fabric-full-size-container");
-    
+   
     for (let i = 0; i < fabricGalleryItems.length; i++) {
         const item = fabricGalleryItems[i];
+        console.log($(item.getAttribute('data-sub-html')));
+        
         fabricGalleryDynamic[i] = {
             src: item.getAttribute('data-src'),
-            thumb: item.getAttribute('data-src'),
-            subHtml: item.getAttribute('data-sub-html'),
+            // subHtml: item.getAttribute('data-sub-html'),
+            subHtml: '<h4 class="name">'+ item.getAttribute('data-title') + '</h4>',
         };
     }
     const inlineGallery = lightGallery($lgContainer, {
@@ -948,146 +893,52 @@ $(document).ready(function () {
         // as we don't want to change the url on slide change
         hash: false,
         // Do not allow users to close the gallery
-        closable: false,
+        closable: true,
         // Add maximize icon to enlarge the gallery
         showMaximizeIcon: true,
         // Append caption inside the slide item
+        subHtmlSelectorRelative: true,
         // to apply some animation for the captions (Optional)
         appendSubHtmlTo: ".lg-item",
         // Delay slide transition to complete captions animations
         // before navigating to different slides (Optional)
         // You can find caption animation demo on the captions demo page
         slideDelay: 400,
-        // plugins: [lgZoom, lgThumbnail],
+        counter: false,
+        // defaultCaptionHeight: 80,
+        download: false,
+        enableDrag: false,
+        height: "100%",
+        hideControlOnEnd: true,
+        showCloseIcon: true,
+        fullScreen: false,
+        loop: false,
         dynamicEl: fabricGalleryDynamic,
-        // dynamicEl: [
-        //     {
-        //         src:
-        //           "https://images.unsplash.com/photo-1542103749-8ef59b94f47e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80",
-        //         responsive:
-        //           "https://images.unsplash.com/photo-1542103749-8ef59b94f47e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=480&q=80 480, https://images.unsplash.com/photo-1542103749-8ef59b94f47e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80 800",
-        //         thumb:
-        //           "https://images.unsplash.com/photo-1542103749-8ef59b94f47e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=240&q=80",
-        //         subHtml: `<div class="lightGallery-captions">
-        //             <h4>Photo by <a href="https://unsplash.com/@dann">Dan</a></h4>
-        //             <p>Published on November 13, 2018</p>
-        //         </div>`
-        //     },
-        //
-        //     {
-        //         src:
-        //           "https://images.unsplash.com/photo-1591634616938-1dfa7ee2e617?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80",
-        //         responsive:
-        //           "https://images.unsplash.com/photo-1591634616938-1dfa7ee2e617?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=480&q=80 480, https://images.unsplash.com/photo-1591634616938-1dfa7ee2e617?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80 800",
-        //         thumb:
-        //           "https://images.unsplash.com/photo-1591634616938-1dfa7ee2e617?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=240&q=80",
-        //         subHtml: `<div class="lightGallery-captions">
-        //             <h4>Photo by <a href="https://unsplash.com/@brookecagle">Brooke Cagle</a></h4>
-        //             <p>Description of the slide 4</p>
-        //         </div>`
-        //     },
-        //
-        
-        //     {
-        //         src:
-        //           "https://images.unsplash.com/photo-1601935111741-ae98b2b230b0?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1400&q=80",
-        //         responsive:
-        //           "https://images.unsplash.com/photo-1601935111741-ae98b2b230b0?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=480&q=80 480, https://images.unsplash.com/photo-1601935111741-ae98b2b230b0?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=800&q=80 800",
-        //         thumb:
-        //           "https://images.unsplash.com/photo-1601935111741-ae98b2b230b0?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=240&q=80",
-        //         subHtml: `<div class="lightGallery-captions">
-        //             <h4>Photo by <a href="https://unsplash.com/@brookecagle">Brooke Cagle</a></h4>
-        //             <p>Published on October 6, 2020</p>
-        //         </div>`
-        //     }
-        // ],
-        //
-        // Completely optional
-        // Adding as the codepen preview is usually smaller
-        thumbWidth: 60,
-        thumbHeight: "40px",
-        thumbMargin: 4
+        // thumbWidth: 60,
+        // thumbHeight: "40px",
+        // thumbMargin: 4
     });
-    
-    // let btnFabricFullSize = $('.openFullSize');
-    
-    let openFabricGallery = function (e) {
-        realIndexFabric = findIndexCheckedFabric;
-        // realIndexFabric = Number(realIndexFabric[0].getAttribute('data-swiper-slide-index'));
-        // productGalleryLight.openGallery(realIndexSlider);
-        inlineGallery.openGallery(realIndexFabric + 1);
-    };
+    function openFabricLightGallery(count) {
+        console.log(count);
+        inlineGallery.openGallery(count);
+    }
     $('.openFullSize').on('click', function (e){
-        console.log('click');
         let findIndexCheckedFabric = $('#fabric-full-size').find("input:checked").parent().parent().index();
-        realIndexFabric = findIndexCheckedFabric + 1;
+        
+        realIndexFabric = findIndexCheckedFabric;
+        openFabricLightGallery(realIndexFabric);
         console.log(realIndexFabric);
-        // inlineGallery.openGallery(realIndexFabric);
-        inlineGallery.openGallery(2);
+        $("#fabric-full-size-container").addClass('d-block');
     })
-    // btnFabricFullSize.addEventListener('click', function (e) {
-    //     openFabricGallery();
-    // });
-    setTimeout(() => {
-        inlineGallery.openGallery(2);
-    }, 200);
+    $('.closeFullSize').on('click', function (e){
+        console.log('click');
+        $(this).parent().removeClass('d-block');
+        // inlineGallery.destroy();
+        // let findIndexCheckedFabric = $('#fabric-full-size').find("input:checked").parent().parent().index();
+        // realIndexFabric = findIndexCheckedFabric + 1;
+    })
     
     
-    
-    
-    // let fabricGallery = $('#fabric-full-size');
-    // console.log(fabricGallery);
-    // let fabricIndexSlider;
-    // let fabricGalleryDynamic = [];
-    // let viewFabricBtn = $('.openFullSize');
-    // if (fabricGallery) {
-    //     let fabricGalleryItems = fabricGallery.find('.product-option');
-    //     for (let i = 0; i < fabricGalleryItems.length; i++) {
-    //         const item = fabricGalleryItems[i];
-    //         fabricGalleryDynamic[i] = {
-    //             src: item.getAttribute('data-src'),
-    //             // thumb: item.getAttribute('data-src'),
-    //             // subHtml: item.getAttribute('data-sub-html'),
-    //         };
-    //     }
-    //     const lgContainer = document.getElementById('inline-gallery-container');
-    //     let fabricGalleryLight = lightGallery(fabricGallery, {
-    //         container: lgContainer,
-    //         dynamic: true,
-    //         selector: '.product-option',
-    //         autoplayFirstVideo: false,
-    //         pager: false,
-    //         galleryId: "nature",
-    //         subHtmlSelectorRelative: true,
-    //         appendSubHtmlTo: '.lg-item',
-    //         // plugins: [lgZoom, lgThumbnail, lgAutoplay, lgVideo, lgFullscreen, lgHash],
-    //         plugins: [lgZoom, lgThumbnail],
-    //         mobileSettings: {
-    //             controls: true,
-    //             showCloseIcon: true,
-    //             download: false,
-    //             rotate: false
-    //         },
-    //         dynamicEl: fabricGalleryDynamic,
-    //     });
-    //
-    //     let viewGalleryBtn = $('.openFullSize');
-    //     // let viewGalleryZoom =$('.closeFullSize');
-    //     // let viewGalleryZoom = $('.pdpGallery-item__zoom');
-    //     let openGalleryPopup = function (e) {
-    //         fabricIndexSlider = $("#fabric-full-size").find(':checkbox:checked').parent('.product-option').index();
-    //         console.log(fabricIndexSlider);
-    //         // fabricIndexSlider = Number(fabricIndexSlider[0].getAttribute('data-swiper-slide-index'));
-    //         fabricGalleryLight.openGallery(3);
-    //     };
-    //     viewFabricBtn.on('click', function (e) {
-    //         openGalleryPopup();
-    //     });
-    //     // viewGalleryZoom.on('click', function (e) {
-    //     //     openGalleryPopup();
-    //     // });
-    // }
-   
     $('.modal').on('show.bs.modal', function (e) {
         var button = e.relatedTarget;
         if($(button).hasClass('no-modal')) {
