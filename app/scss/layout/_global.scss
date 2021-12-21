@@ -583,3 +583,23 @@ button.btn-text {
 	animation-iteration-count: infinite;
 	animation-timing-function: linear;
 }
+
+.summary-text {
+	p.collapse:not(.show) {
+		height: 42px !important;
+		overflow: hidden;
+		
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+	}
+	p.collapsing {
+		min-height: 42px !important;
+	}
+	a.collapsed:after {
+		content: '+ Read More';
+	}
+	a:not(.collapsed):after {
+		content: '- Read Less';
+	}
+}
