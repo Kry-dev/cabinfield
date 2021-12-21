@@ -383,7 +383,11 @@ a:focus {
         }
     }
 }
-
+.inline-gallery-container {
+	width: 700px;
+	height: 500px;
+	position: relative;
+}
 .popup-info {
     display: flex;
     justify-content: center;

@@ -1020,16 +1020,17 @@ $(document).ready(function () {
     $('.openFullSize').on('click', function (e){
         console.log('click');
         let findIndexCheckedFabric = $('#fabric-full-size').find("input:checked").parent().parent().index();
-        console.log(findIndexCheckedFabric);
         realIndexFabric = findIndexCheckedFabric + 1;
-        inlineGallery.openGallery(realIndexFabric);
+        console.log(realIndexFabric);
+        // inlineGallery.openGallery(realIndexFabric);
+        inlineGallery.openGallery(2);
     })
     // btnFabricFullSize.addEventListener('click', function (e) {
     //     openFabricGallery();
     // });
-    // setTimeout(() => {
-    //     inlineGallery.openGallery();
-    // }, 200);
+    setTimeout(() => {
+        inlineGallery.openGallery(2);
+    }, 200);
     
     
     
