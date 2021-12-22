@@ -117,7 +117,9 @@
             padding: .5rem .75rem;
             font-size: $font-size-sm;
         }
-        
+				input[type="search" i]::-webkit-search-cancel-button {
+					margin-right: 20px;
+				}
         .btn {
             position: absolute;
             right: 0;
