@@ -1,7 +1,7 @@
 import Mmenu from '../../core/oncanvas/mmenu.oncanvas';
 import options from './_options';
 import configs from './_configs';
-import { extendShorthandOptions } from './_options';
+import {extendShorthandOptions} from './_options';
 import * as DOM from '../../_modules/dom';
 import * as media from '../../_modules/matchmedia';
 //  Add the options and configs.
@@ -17,6 +17,7 @@ import close from './_navbar.close';
 import prev from './_navbar.prev';
 import searchfield from './_navbar.searchfield';
 import title from './_navbar.title';
+
 Navbars.navbarContents = {
     breadcrumbs: breadcrumbs,
     close: close,
@@ -25,6 +26,7 @@ Navbars.navbarContents = {
     title: title
 };
 import tabs from './_navbar.tabs';
+
 Navbars.navbarTypes = {
     tabs: tabs
 };
@@ -70,8 +72,7 @@ export default function Navbars() {
                     //	Call the preset function.
                     func.call(_this, navbar);
                     //	The content is just HTML.
-                }
-                else {
+                } else {
                     //	Add the HTML.
                     //  Wrap the HTML in a single node
                     var node = DOM.create('span');
@@ -84,8 +85,7 @@ export default function Navbars() {
                     navbar.append(node);
                 }
                 //	The content is not a string, it must be an element.
-            }
-            else {
+            } else {
                 navbar.append(ctnt);
             }
         }

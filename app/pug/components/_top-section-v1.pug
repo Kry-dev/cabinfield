@@ -1,20 +1,20 @@
 section.top-section.d-hidden
-  .container.d-flex.justify-content-between.align-items-center
-    .top-section-left
-      img.top-section-img(src="img/product/tmp_product.jpg", alt="#")
-      .top-section-descr
-        h5.top-section-title Indian Creek Panel Amish Bed
-        ul
-          li #[a(href="#").ps-0 Product details]
-          li #[a(href="#") Customize]
-    .top-section-right
-      <!--Product price for top section mixin.pug-->
-      +product-price-old-top
-      <!--Product price for top section mixin.pug end -->
-      form.form.d-flex.justify-content-between.align-items-center
-        .qty.ms-3
-          | Qty:
-          input.form-control.qty-input(type='number', name='qty', value='1')
-        a(href="#").btn.btn-warning.btn-sm Add to cart
-        a(href="#").btn.btn-outline.d-inline-block Save to Wishlist
+    .container.d-flex.justify-content-between.align-items-center
+        .top-section-left
+            img.top-section-img(src="img/product/tmp_product.jpg", alt="#")
+            .top-section-descr
+                h5.top-section-title Indian Creek Panel Amish Bed
+                ul
+                    li #[a(href="#").ps-0 Product details]
+                    li #[a(href="#") Customize]
+        .top-section-right
+            <!--Product price for top section mixin.pug-->
+            +product-price-old-top
+            <!--Product price for top section mixin.pug end -->
+            form.form.d-flex.justify-content-between.align-items-center
+                .qty.ms-3
+                    | Qty:
+                    input.form-control.qty-input(type='number', name='qty', value='1')
+                a(href="#").btn.btn-warning.btn-sm Add to cart
+                a(href="#").btn.btn-outline.d-inline-block Save to Wishlist
 

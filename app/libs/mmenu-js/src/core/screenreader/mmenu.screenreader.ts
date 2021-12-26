@@ -2,9 +2,9 @@ import Mmenu from './../oncanvas/mmenu.oncanvas';
 import options from './_options';
 import configs from './_configs';
 import translate from './translations/translate';
-import { extendShorthandOptions } from './_options';
+import {extendShorthandOptions} from './_options';
 import * as DOM from '../../_modules/dom';
-import { extend } from '../../_modules/helpers';
+import {extend} from '../../_modules/helpers';
 
 //  Add the translations.
 translate();
@@ -13,7 +13,7 @@ translate();
 Mmenu.options.screenReader = options;
 Mmenu.configs.screenReader = configs;
 
-export default function(this: Mmenu) {
+export default function (this: Mmenu) {
     //	Extend options.
     var options = extendShorthandOptions(this.opts.screenReader);
     this.opts.screenReader = extend(options, Mmenu.options.screenReader);
@@ -26,34 +26,34 @@ export default function(this: Mmenu) {
         //	Add screenreader / aria hooks for add-ons
         //	In orde to keep this list short, only extend hooks that are actually used by other add-ons.
         this.bind('initAddons:after', () => {
-            this.bind('initMenu:after', function(this: Mmenu) {
+            this.bind('initMenu:after', function (this: Mmenu) {
                 this.trigger(
                     'initMenu:after:sr-aria',
                     [].slice.call(arguments)
                 );
             });
-            this.bind('initNavbar:after', function(this: Mmenu) {
+            this.bind('initNavbar:after', function (this: Mmenu) {
                 this.trigger(
                     'initNavbar:after:sr-aria',
                     [].slice.call(arguments)
                 );
             });
-            this.bind('openPanel:start', function(this: Mmenu) {
+            this.bind('openPanel:start', function (this: Mmenu) {
                 this.trigger(
                     'openPanel:start:sr-aria',
                     [].slice.call(arguments)
                 );
             });
-            this.bind('close:start', function(this: Mmenu) {
+            this.bind('close:start', function (this: Mmenu) {
                 this.trigger('close:start:sr-aria', [].slice.call(arguments));
             });
-            this.bind('close:finish', function(this: Mmenu) {
+            this.bind('close:finish', function (this: Mmenu) {
                 this.trigger('close:finish:sr-aria', [].slice.call(arguments));
             });
-            this.bind('open:start', function(this: Mmenu) {
+            this.bind('open:start', function (this: Mmenu) {
                 this.trigger('open:start:sr-aria', [].slice.call(arguments));
             });
-            this.bind('initOpened:after', function(this: Mmenu) {
+            this.bind('initOpened:after', function (this: Mmenu) {
                 this.trigger(
                     'initOpened:after:sr-aria',
                     [].slice.call(arguments)
@@ -156,10 +156,10 @@ export default function(this: Mmenu) {
         //	Add screenreader / text hooks for add-ons
         //	In orde to keep this list short, only extend hooks that are actually used by other add-ons.
         this.bind('initAddons:after', () => {
-            this.bind('setPage:after', function() {
+            this.bind('setPage:after', function () {
                 this.trigger('setPage:after:sr-text', [].slice.call(arguments));
             });
-            this.bind('initBlocker:after', function() {
+            this.bind('initBlocker:after', function () {
                 this.trigger(
                     'initBlocker:after:sr-text',
                     [].slice.call(arguments)
@@ -191,7 +191,7 @@ export default function(this: Mmenu) {
                             next.parentElement.matches('.mm-listitem_vertical')
                                 ? 'toggleSubmenu'
                                 : 'openSubmenu'
-                        ]
+                            ]
                     );
                     next.innerHTML += Mmenu.sr_text(text);
                 }
@@ -201,8 +201,8 @@ export default function(this: Mmenu) {
 }
 
 //	Methods
-(function() {
-    var attr = function(
+(function () {
+    var attr = function (
         element: HTMLElement,
         attr: string,
         value: string | boolean
@@ -218,11 +218,11 @@ export default function(this: Mmenu) {
     /**
      * Add aria (property and) attribute to a HTML element.
      *
-     * @param {HTMLElement} 	element	The node to add the attribute to.
-     * @param {string}			name	The (non-aria-prefixed) attribute name.
-     * @param {string|boolean}	value	The attribute value.
+     * @param {HTMLElement}    element    The node to add the attribute to.
+     * @param {string}            name    The (non-aria-prefixed) attribute name.
+     * @param {string|boolean}    value    The attribute value.
      */
-    Mmenu.sr_aria = function(
+    Mmenu.sr_aria = function (
         element: HTMLElement,
         name: string,
         value: string | boolean
@@ -233,20 +233,20 @@ export default function(this: Mmenu) {
     /**
      * Add role attribute to a HTML element.
      *
-     * @param {HTMLElement}		element	The node to add the attribute to.
-     * @param {string|boolean}	value	The attribute value.
+     * @param {HTMLElement}        element    The node to add the attribute to.
+     * @param {string|boolean}    value    The attribute value.
      */
-    Mmenu.sr_role = function(element: HTMLElement, value: string | boolean) {
+    Mmenu.sr_role = function (element: HTMLElement, value: string | boolean) {
         attr(element, 'role', value);
     };
 
     /**
      * Wrap a text in a screen-reader-only node.
      *
-     * @param 	{string} text	The text to wrap.
-     * @return	{string}		The wrapped text.
+     * @param    {string} text    The text to wrap.
+     * @return    {string}        The wrapped text.
      */
-    Mmenu.sr_text = function(text: string) {
+    Mmenu.sr_text = function (text: string) {
         return '<span class="mm-sronly">' + text + '</span>';
     };
 })();

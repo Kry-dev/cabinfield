@@ -1,446 +1,465 @@
 $card-height: 21rem;
 .widgets {
-    margin-bottom: 2rem;
-    
-    .card {
-        border-radius: 0;
-        position: relative;
-        border: 0;
-        width: 100%;
-        min-height: $card-height;
-        
-        &-text {
-            font-size: 0.875rem;
-            line-height: 1.3125rem;
-            opacity: 0.9;
-            z-index: 1;
-            
-            a {
-                color: inherit;
-                text-decoration: underline;
-            }
-        }
-        
-        &-title {
-            font-family: $font-family-base;
-            font-weight: 600;
-            z-index: 1;
-            
-            a {
-                font-size: inherit;
-                font-family: inherit;
-                color: inherit;
-                
-                &:hover,
-                &:focus {
-                    text-decoration: underline;
-                    cursor: pointer;
-                }
-            }
-        }
-        
-        &-subtitle {
-            font-weight: 300;
-            font-family: $font-family-base;
-            font-size: 0.875rem;
-            line-height: 1.1875rem;
-            margin-bottom: 0;
-        }
-        
-        &-controls {
-            width: 80px;
-            transform: translateY(-100%);
-        }
-        
-        &-img {
-            height: 100%;
-            position: absolute;
-            min-width: 100%;
-            left: 0;
-            background-repeat: no-repeat;
-            background-position: bottom right 100%;
-            background-size: cover;
-            @include media-breakpoint-down(sm) {
-                background-position: bottom right;
-            }
-            
-        }
-        
-        .card-img-overlay {
-            //content: "";
-            display: block;
-            width: 100%;
-            height: 100%;
-            padding: 1rem;
-            position: absolute;
-            left: 0;
-            top: 0;
-            border: 9px solid transparent;
-            outline-offset: -10px;
-            z-index: 2;
-            
-        }
-        
-        &.card-border-white .card-img-overlay {
-            outline: 1px solid rgba($white, .8);
-        }
-        
-        &.card-border-dark .card-img-overlay {
-            outline: 1px solid rgba($widget-border-color, .8);
-        }
-        
-        &-footer {
-            border: 0;
-            background: transparent;
-            margin-top: auto;
-            padding: 0;
-            z-index: 1;
-        }
-    }
-    
-    .card-why {
-        background: $why-widget-bg;
-        background-size: contain;
-        border: 10px solid #F0ECED;
-        min-height: $card-height * 1.5;
-        position: relative;
-        overflow: hidden;
-        padding: 1rem 1.5rem;
-        margin-bottom: 2rem;
-        &:before,
-        &:after {
-            position: absolute;
-            content: "";
-            display: block;
-            width: 100%;
-            height: 100%;
-            max-width: 312px;
-            max-height: 121px;
-            bottom: 0;
-            top: auto;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: 0 0;
-            z-index: 1;
-        }
-        &:before {
-            left: 10px;
-            right: auto;
-            background-image: url("../img/why/office_collection.png");
-        }
-        &:after {
-            right: 10px;
-            left: auto;
-            background-image: url("../img/why/Living_collection.png");
-        }
-        .why-list {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 60px;
-            margin-bottom: 2rem;
-            @include media-breakpoint-down(xl) {
-                padding: 0;
-            }
-            @include media-breakpoint-down(md) {
-                flex-wrap: wrap;
-            }
-            @include media-breakpoint-down(sm) {
-                max-width: 240px;
-                margin: 0 auto 2rem;
-            }
-            li+li {
-                margin-left: 45px;
-            }
-            li {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: center;
-                margin-bottom: .5rem;
-                img {
-                    width: 100%;
-                    height: 100%;
-                    max-width: 50px;
-                    max-height: 52px;
-                }
-                
-                p {
-                    margin-left: 12px;
-                    width: 100%;
-                    color: $text-dark;
-                    font-family: $font-family-base;
-                    font-size: 0.875rem;
-                    line-height: 1rem;
-                    margin-bottom: 0;
-                    min-width: 140px;
-                }
-                
-                @include media-breakpoint-down(md) {
-                    width: 50%;
-                    &:before {
-                        width: 65px;
-                    }
-                    & + li {
-                        margin-left: 0;
-                    }
-                }
-                @include media-breakpoint-down(sm) {
-                    width: 100%;
-                }
-            }
-        }
-        p {
-            font-size: $font-size-sm;
-            line-height: 19px;
-            font-weight: 600;
-            max-width: 460px;
-            @include media-breakpoint-down(sm) {
-                max-width: 240px;
-            }
-        }
-        .btn {
-            position: relative;
-            display: inline-block;
-            z-index: 2;
-        }
-        @include media-breakpoint-down(md) {
-            margin-bottom: 2rem;
-            padding-bottom: 120px;
-            &:before {
-                display: none;
-            }
-            &:after {
-                left: 50%;
-                transform: translateX(-50%);
-            }
-        }
-    }
-    
-    .card.card--shopstyle {
-        text-align: center;
-        
-        .card-title {
-            text-align: center;
-            color: $text-dark;
-            font-size: 0.875rem;
-            font-family: $font-family-base;
-            font-weight: 400;
-            line-height: 1.1875rem;
-            text-transform: uppercase;
-            width: 100%;
-            max-width: 100%;
-        }
-        
-        .card-img {
-            background-position: center;
-            background-size: cover;
-        }
-        
-        .card-img-overlay {
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            max-width: 100%;
-            padding: 1rem 2rem;
-            
-            &:before {
-                display: none !important;
-            }
-        }
-    }
-    
-    .shop_by {
-        margin: 0 auto;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        
-        a {
-            color: $black;
-            font-family: $font-family-base;
-            display: inline-block;
-            padding: 8px 33px;
-        }
-        
-        a + a {
-            margin-left: 2rem;
-            position: relative;
-            @include media-breakpoint-down(sm) {
-                margin-left: 5px;
-            }
-            @include media-breakpoint-down(xs) {
-                margin-left: 0;
-            }
-            
-            &:before {
-                content: "";
-                position: absolute;
-                left: -1rem;
-                top: 50%;
-                width: 2px;
-                height: 20px;
-                background: #d6cdca;
-                transform: rotate(20deg) translateY(-50%);
-                @include media-breakpoint-down(sm) {
-                    left: -3px;
-                }
-                @include media-breakpoint-down(xs) {
-                    display: none;
-                }
-            }
-        }
-    }
-    
-    .card-review {
-        border: $border-width solid $review-border-color;
-        min-height: $card-height * 1.5;
-        background: $white url(../img/homepage/review.png) no-repeat center bottom;
-        background-size: contain;
-        padding: 1rem 2rem 80px;
-        overflow: hidden;
-        
-        &-text {
-            font-family: $font-family-base;
-            font-size: 0.9375rem;
-            font-style: italic;
-            line-height: 1.4375rem
-        }
-        
-        .review-prev,
-        .review-next {
-            background: transparent;
-            border-radius: 0;
-            color: $brown;
-        }
-        
-        @include media-breakpoint-down(md) {
-            min-height: 44rem;
-        }
-    }
-    
-    &-inner {
-        .card {
-            min-height: 21rem;
-            position: relative;
-            .card-img {
-                background-position: bottom right 40%;
-                @include media-breakpoint-down(xl) {
-                    background-position: bottom right 100%;
-                }
-                @include media-breakpoint-down(xl) {
-                    background-position: bottom right 75%;
-                }
-            }
-            .card-title {
-                font-size: 1.125rem;
-                max-width: 250px;
-            }
-            
-            .card-img-overlay {
-                text-align: left;
-                padding: 26px 26px;
-                display: flex;
-                flex-direction: column;
-                @include media-breakpoint-down(sm) {
-                    &:before {
-                        content: "";
-                        height: 100%;
-                        width: 100%;
-                        left: 0;
-                        top: 0;
-                        z-index: 1;
-                        position: absolute;
-                        background: rgba(255, 255, 255, 0.5);
-                    }
-                }
-            }
-        }
-        
-        .card-text {
-            display: block;
-            font-size: 0.875rem;
-            max-width: 220px;
-            @include media-breakpoint-down(md) {
-                max-width: 220px;
-            }
-        }
-    }
-    &.widgets--homepage {
-        @include media-breakpoint-down(md) {
-            .card-img {
-                background-position: 50% 50%;
-            }
-            .card-img-overlay {
-                
-                &:before {
-                    content: "";
-                    height: 100%;
-                    width: 100%;
-                    left: 0;
-                    top: 0;
-                    z-index: -1;
-                    position: absolute;
-                    background: rgba(255, 255, 255, 0.5);
-                }
-            }
-            .card-border-white.text-white {
-                color: $text-dark !important;
-                .card-img-overlay {
-                    outline: 1px solid $text-dark;
-                }
-            }
-        }
-    }
-    &.widgets--new {
-        
-        .card {
-            min-height: 25rem;
-            @include media-breakpoint-down(sm) {
-                min-height: 21rem;
-            }
-            &-text {
-                opacity: 1;
-                @include media-breakpoint-up(xl) {
-                    font-size: 16px;
-                }
-            }
-        }
-        
-        .card-img-overlay {
-            padding: 1rem 5rem;
-            border: 9px solid rgba(0, 0, 0, 0);
-            //&:before {
-            //    content: "";
-            //    height: 100%;
-            //    width: 100%;
-            //    left: 0;
-            //    top: 0;
-            //    z-index: -1;
-            //    position: absolute;
-            //    background: rgba(0, 0, 0, 0);
-            //}
-            @include media-breakpoint-down(sm) {
-                padding: 1rem 2rem;
-            }
-            @include media-breakpoint-down(xs) {
-                padding: 1rem;
-            }
-        }
-        a {
-            display: block;
-            width: 100%;
-            margin: 0 auto 2rem;
-            @include media-breakpoint-down(md) {
-                max-width: 506px;
-            }
-        }
-        a:hover {
-            cursor: pointer;
-            .card-img-overlay {
-                border: 9px solid $blue;
-            }
-        }
-    }
+	margin-bottom: 2rem;
+	
+	.card {
+		border-radius: 0;
+		position: relative;
+		border: 0;
+		width: 100%;
+		min-height: $card-height;
+		
+		&-text {
+			font-size: 0.875rem;
+			line-height: 1.3125rem;
+			opacity: 0.9;
+			z-index: 1;
+			
+			a {
+				color: inherit;
+				text-decoration: underline;
+			}
+		}
+		
+		&-title {
+			font-family: $font-family-base;
+			font-weight: 600;
+			z-index: 1;
+			
+			a {
+				font-size: inherit;
+				font-family: inherit;
+				color: inherit;
+				
+				&:hover,
+				&:focus {
+					text-decoration: underline;
+					cursor: pointer;
+				}
+			}
+		}
+		
+		&-subtitle {
+			font-weight: 300;
+			font-family: $font-family-base;
+			font-size: 0.875rem;
+			line-height: 1.1875rem;
+			margin-bottom: 0;
+		}
+		
+		&-controls {
+			width: 80px;
+			transform: translateY(-100%);
+		}
+		
+		&-img {
+			height: 100%;
+			position: absolute;
+			min-width: 100%;
+			left: 0;
+			background-repeat: no-repeat;
+			background-position: bottom right 100%;
+			background-size: cover;
+			@include media-breakpoint-down(sm) {
+				background-position: bottom right;
+			}
+			
+		}
+		
+		.card-img-overlay {
+			//content: "";
+			display: block;
+			width: 100%;
+			height: 100%;
+			padding: 1rem;
+			position: absolute;
+			left: 0;
+			top: 0;
+			border: 9px solid transparent;
+			outline-offset: -10px;
+			z-index: 2;
+			
+		}
+		
+		&.card-border-white .card-img-overlay {
+			outline: 1px solid rgba($white, .8);
+		}
+		
+		&.card-border-dark .card-img-overlay {
+			outline: 1px solid rgba($widget-border-color, .8);
+		}
+		
+		&-footer {
+			border: 0;
+			background: transparent;
+			margin-top: auto;
+			padding: 0;
+			z-index: 1;
+		}
+	}
+	
+	.card-why {
+		background: $why-widget-bg;
+		background-size: contain;
+		border: 10px solid #F0ECED;
+		min-height: $card-height * 1.5;
+		position: relative;
+		overflow: hidden;
+		padding: 1rem 1.5rem;
+		margin-bottom: 2rem;
+		
+		&:before,
+		&:after {
+			position: absolute;
+			content: "";
+			display: block;
+			width: 100%;
+			height: 100%;
+			max-width: 312px;
+			max-height: 121px;
+			bottom: 0;
+			top: auto;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: 0 0;
+			z-index: 1;
+		}
+		
+		&:before {
+			left: 10px;
+			right: auto;
+			background-image: url("../img/why/office_collection.png");
+		}
+		
+		&:after {
+			right: 10px;
+			left: auto;
+			background-image: url("../img/why/Living_collection.png");
+		}
+		
+		.why-list {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+			padding: 0 60px;
+			margin-bottom: 2rem;
+			@include media-breakpoint-down(xl) {
+				padding: 0;
+			}
+			@include media-breakpoint-down(md) {
+				flex-wrap: wrap;
+			}
+			@include media-breakpoint-down(sm) {
+				max-width: 240px;
+				margin: 0 auto 2rem;
+			}
+			
+			li + li {
+				margin-left: 45px;
+			}
+			
+			li {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: center;
+				margin-bottom: .5rem;
+				
+				img {
+					width: 100%;
+					height: 100%;
+					max-width: 50px;
+					max-height: 52px;
+				}
+				
+				p {
+					margin-left: 12px;
+					width: 100%;
+					color: $text-dark;
+					font-family: $font-family-base;
+					font-size: 0.875rem;
+					line-height: 1rem;
+					margin-bottom: 0;
+					min-width: 140px;
+				}
+				
+				@include media-breakpoint-down(md) {
+					width: 50%;
+					&:before {
+						width: 65px;
+					}
+					& + li {
+						margin-left: 0;
+					}
+				}
+				@include media-breakpoint-down(sm) {
+					width: 100%;
+				}
+			}
+		}
+		
+		p {
+			font-size: $font-size-sm;
+			line-height: 19px;
+			font-weight: 600;
+			max-width: 460px;
+			@include media-breakpoint-down(sm) {
+				max-width: 240px;
+			}
+		}
+		
+		.btn {
+			position: relative;
+			display: inline-block;
+			z-index: 2;
+		}
+		
+		@include media-breakpoint-down(md) {
+			margin-bottom: 2rem;
+			padding-bottom: 120px;
+			&:before {
+				display: none;
+			}
+			&:after {
+				left: 50%;
+				transform: translateX(-50%);
+			}
+		}
+	}
+	
+	.card.card--shopstyle {
+		text-align: center;
+		
+		.card-title {
+			text-align: center;
+			color: $text-dark;
+			font-size: 0.875rem;
+			font-family: $font-family-base;
+			font-weight: 400;
+			line-height: 1.1875rem;
+			text-transform: uppercase;
+			width: 100%;
+			max-width: 100%;
+		}
+		
+		.card-img {
+			background-position: center;
+			background-size: cover;
+		}
+		
+		.card-img-overlay {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			max-width: 100%;
+			padding: 1rem 2rem;
+			
+			&:before {
+				display: none !important;
+			}
+		}
+	}
+	
+	.shop_by {
+		margin: 0 auto;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		
+		a {
+			color: $black;
+			font-family: $font-family-base;
+			display: inline-block;
+			padding: 8px 33px;
+		}
+		
+		a + a {
+			margin-left: 2rem;
+			position: relative;
+			@include media-breakpoint-down(sm) {
+				margin-left: 5px;
+			}
+			@include media-breakpoint-down(xs) {
+				margin-left: 0;
+			}
+			
+			&:before {
+				content: "";
+				position: absolute;
+				left: -1rem;
+				top: 50%;
+				width: 2px;
+				height: 20px;
+				background: #d6cdca;
+				transform: rotate(20deg) translateY(-50%);
+				@include media-breakpoint-down(sm) {
+					left: -3px;
+				}
+				@include media-breakpoint-down(xs) {
+					display: none;
+				}
+			}
+		}
+	}
+	
+	.card-review {
+		border: $border-width solid $review-border-color;
+		min-height: $card-height * 1.5;
+		background: $white url(../img/homepage/review.png) no-repeat center bottom;
+		background-size: contain;
+		padding: 1rem 2rem 80px;
+		overflow: hidden;
+		
+		&-text {
+			font-family: $font-family-base;
+			font-size: 0.9375rem;
+			font-style: italic;
+			line-height: 1.4375rem
+		}
+		
+		.review-prev,
+		.review-next {
+			background: transparent;
+			border-radius: 0;
+			color: $brown;
+		}
+		
+		@include media-breakpoint-down(md) {
+			min-height: 44rem;
+		}
+	}
+	
+	&-inner {
+		.card {
+			min-height: 21rem;
+			position: relative;
+			
+			.card-img {
+				background-position: bottom right 40%;
+				@include media-breakpoint-down(xl) {
+					background-position: bottom right 100%;
+				}
+				@include media-breakpoint-down(xl) {
+					background-position: bottom right 75%;
+				}
+			}
+			
+			.card-title {
+				font-size: 1.125rem;
+				max-width: 250px;
+			}
+			
+			.card-img-overlay {
+				text-align: left;
+				padding: 26px 26px;
+				display: flex;
+				flex-direction: column;
+				@include media-breakpoint-down(sm) {
+					&:before {
+						content: "";
+						height: 100%;
+						width: 100%;
+						left: 0;
+						top: 0;
+						z-index: 1;
+						position: absolute;
+						background: rgba(255, 255, 255, 0.5);
+					}
+				}
+			}
+		}
+		
+		.card-text {
+			display: block;
+			font-size: 0.875rem;
+			max-width: 220px;
+			@include media-breakpoint-down(md) {
+				max-width: 220px;
+			}
+		}
+	}
+	
+	&.widgets--homepage {
+		@include media-breakpoint-down(md) {
+			.card-img {
+				background-position: 50% 50%;
+			}
+			.card-img-overlay {
+				
+				&:before {
+					content: "";
+					height: 100%;
+					width: 100%;
+					left: 0;
+					top: 0;
+					z-index: -1;
+					position: absolute;
+					background: rgba(255, 255, 255, 0.5);
+				}
+			}
+			.card-border-white.text-white {
+				color: $text-dark !important;
+				
+				.card-img-overlay {
+					outline: 1px solid $text-dark;
+				}
+			}
+		}
+	}
+	
+	&.widgets--new {
+		
+		.card {
+			min-height: 25rem;
+			@include media-breakpoint-down(sm) {
+				min-height: 21rem;
+			}
+			
+			&-text {
+				opacity: 1;
+				@include media-breakpoint-up(xl) {
+					font-size: 16px;
+				}
+			}
+		}
+		
+		.card-img-overlay {
+			padding: 1rem 5rem;
+			border: 9px solid rgba(0, 0, 0, 0);
+			//&:before {
+			//    content: "";
+			//    height: 100%;
+			//    width: 100%;
+			//    left: 0;
+			//    top: 0;
+			//    z-index: -1;
+			//    position: absolute;
+			//    background: rgba(0, 0, 0, 0);
+			//}
+			@include media-breakpoint-down(sm) {
+				padding: 1rem 2rem;
+			}
+			@include media-breakpoint-down(xs) {
+				padding: 1rem;
+			}
+		}
+		
+		a {
+			display: block;
+			width: 100%;
+			margin: 0 auto 2rem;
+			@include media-breakpoint-down(md) {
+				max-width: 506px;
+			}
+		}
+		
+		a:hover {
+			cursor: pointer;
+			
+			.card-img-overlay {
+				border: 9px solid $blue;
+			}
+		}
+	}
 }

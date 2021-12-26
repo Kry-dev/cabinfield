@@ -1,8 +1,8 @@
 import Mmenu from '../../core/oncanvas/mmenu.oncanvas';
 import options from './_options';
-import { extendShorthandOptions } from './_options';
+import {extendShorthandOptions} from './_options';
 import * as DOM from '../../_modules/dom';
-import { extend } from '../../_modules/helpers';
+import {extend} from '../../_modules/helpers';
 //	Add the options.
 Mmenu.options.setSelected = options;
 export default function () {
@@ -16,8 +16,7 @@ export default function () {
             var anchor = _this.node.menu.querySelector('a[href="' + url + '"], a[href="' + url + '/"]');
             if (anchor) {
                 _this.setSelected(anchor.parentElement);
-            }
-            else {
+            } else {
                 var arr = url.split('/').slice(0, -1);
                 if (arr.length) {
                     findCurrent_1(arr.join('/'));
@@ -28,8 +27,7 @@ export default function () {
             findCurrent_1.call(_this, window.location.href);
         });
         //	Remove current selected item
-    }
-    else if (!options.current) {
+    } else if (!options.current) {
         this.bind('initListview:after', function (listview) {
             DOM.children(listview, '.mm-listitem_selected').forEach(function (listitem) {
                 listitem.classList.remove('mm-listitem_selected');

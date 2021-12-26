@@ -1,62 +1,117 @@
-@import "abstract/variables"; // custom variables -- custom bootstrap variables
+@import "abstract/variables";
+// custom variables -- custom bootstrap variables
 // @import "abstract/fonts"; // fonts styles
-@import "base/typography"; // fonts styles
-@import "abstract/stars-rating"; // stars rating styles
-@import "libs"; // vendor libraries styles
+@import "base/typography";
+// fonts styles
+@import "abstract/stars-rating";
+// stars rating styles
+@import "libs";
+// vendor libraries styles
 
 //layout
-@import "layout/global"; // global styles
-@import "layout/header"; // header stylyes
-@import "layout/header-mob"; // header styles
-@import "layout/footer"; // footer styles
+@import "layout/global";
+// global styles
+@import "layout/header";
+// header stylyes
+@import "layout/header-mob";
+// header styles
+@import "layout/footer";
+// footer styles
 ///components
-@import "components/loading"; // loading styles
-@import "components/navbar"; // main navigation
-@import "components/menu"; // main menu
-@import "components/breadcrumb"; // breadcrumb
-@import "components/buttons"; // buttons/ ".btn"  default class
-@import "components/form"; // form(input, label, textarea) styles
-@import "components/contact"; // contact block in header and footer
-@import "components/home-slider"; // top slider on homepage
-@import "components/related-products"; // slider of related products
-@import "components/product-features"; // product-features
-@import "components/product-customize"; // product-customize
-@import "components/product-review"; // product-review
-@import "components/widgets"; // widgets - ".card" boxes
-@import "components/slick"; // custom slick slider styles
-@import "components/modal"; // modal
-@import "components/product"; // product
-@import "components/product-price"; // product-price
-@import "components/top-section"; // top-section
-@import "components/input-number"; // input number custom
-@import "components/stages"; // stages in modal
-@import "components/register-sign-in"; // register-sign-in in modal
-@import "components/review-section"; // review-section
-@import "components/about"; // about page
-@import "components/account"; // account page
-@import "components/contact-us"; // contact-us page
-@import "components/wishlist"; // wishlist page
-@import "components/testimonials"; // testimonials page
-@import "components/pagination"; //pagination
-@import "components/faq"; //faq
-@import "components/cart"; //cart
-@import "components/address-section"; //address-section
-@import "components/proceed_to_checkout"; //proceed to checkout
-@import "components/delivery-information"; //delivery-information to checkout
-@import "components/checkbox"; //checkbox styles
-@import "components/category-list"; //category-list styles
-@import "components/filter-wrap"; //filter wrap styles
-@import "components/product-filters"; //product filters styles for sidebar filters on product page
-@import "components/opportunity"; //opportunity section
-@import "components/order-placed"; //order placed section
-@import "components/added-to-cart"; //added-to-cart section
-@import "components/certificate"; //certificate section
-@import "components/sign-up"; //sign up form
-@import "components/promotions"; //promotions
-@import "components/gift"; //gift certificate form steps
-@import "components/switch-btn"; //switch button
-@import "components/product-collection-listing"; //product-collections
-@import "components/filter_mobile"; //product-collections filter mobile styles
+@import "components/loading";
+// loading styles
+@import "components/navbar";
+// main navigation
+@import "components/menu";
+// main menu
+@import "components/breadcrumb";
+// breadcrumb
+@import "components/buttons";
+// buttons/ ".btn"  default class
+@import "components/form";
+// form(input, label, textarea) styles
+@import "components/contact";
+// contact block in header and footer
+@import "components/home-slider";
+// top slider on homepage
+@import "components/related-products";
+// slider of related products
+@import "components/product-features";
+// product-features
+@import "components/product-customize";
+// product-customize
+@import "components/product-review";
+// product-review
+@import "components/widgets";
+// widgets - ".card" boxes
+@import "components/slick";
+// custom slick slider styles
+@import "components/modal";
+// modal
+@import "components/product";
+// product
+@import "components/product-price";
+// product-price
+@import "components/top-section";
+// top-section
+@import "components/input-number";
+// input number custom
+@import "components/stages";
+// stages in modal
+@import "components/register-sign-in";
+// register-sign-in in modal
+@import "components/review-section";
+// review-section
+@import "components/about";
+// about page
+@import "components/account";
+// account page
+@import "components/contact-us";
+// contact-us page
+@import "components/wishlist";
+// wishlist page
+@import "components/testimonials";
+// testimonials page
+@import "components/pagination";
+//pagination
+@import "components/faq";
+//faq
+@import "components/cart";
+//cart
+@import "components/address-section";
+//address-section
+@import "components/proceed_to_checkout";
+//proceed to checkout
+@import "components/delivery-information";
+//delivery-information to checkout
+@import "components/checkbox";
+//checkbox styles
+@import "components/category-list";
+//category-list styles
+@import "components/filter-wrap";
+//filter wrap styles
+@import "components/product-filters";
+//product filters styles for sidebar filters on product page
+@import "components/opportunity";
+//opportunity section
+@import "components/order-placed";
+//order placed section
+@import "components/added-to-cart";
+//added-to-cart section
+@import "components/certificate";
+//certificate section
+@import "components/sign-up";
+//sign up form
+@import "components/promotions";
+//promotions
+@import "components/gift";
+//gift certificate form steps
+@import "components/switch-btn";
+//switch button
+@import "components/product-collection-listing";
+//product-collections
+@import "components/filter_mobile";
+//product-collections filter mobile styles
 @import "components/product-gallery";
 
 //@import "media"; // media styles. Always at the end!

@@ -1,4 +1,4 @@
-/**	Options for the sidebar add-on. */
+/**    Options for the sidebar add-on. */
 interface mmOptionsSidebar {
     /** Collapsed options */
     collapsed?: mmOptionsSidebarCollapsed;
@@ -7,7 +7,7 @@ interface mmOptionsSidebar {
     expanded?: mmOptionsSidebarExpanded;
 }
 
-/**	Collapsed options for the searchfield add-on. */
+/**    Collapsed options for the searchfield add-on. */
 interface mmOptionsSidebarCollapsed {
     /** Whether or not to enable the collapsed menu.  */
     use?: boolean | string | number;
@@ -22,7 +22,7 @@ interface mmOptionsSidebarCollapsed {
     hideNavbar?: boolean;
 }
 
-/**	"expanded" options for the searchfield add-on. */
+/**    "expanded" options for the searchfield add-on. */
 interface mmOptionsSidebarExpanded {
     /** Whether or not to enable the expanded menu.  */
     use?: boolean | string | number;

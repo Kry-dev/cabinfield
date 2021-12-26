@@ -1,8 +1,8 @@
 import Mmenu from '../../core/oncanvas/mmenu.oncanvas';
 import options from './_options';
-import { extendShorthandOptions } from './_options';
+import {extendShorthandOptions} from './_options';
 import * as DOM from '../../_modules/dom';
-import { extend } from '../../_modules/helpers';
+import {extend} from '../../_modules/helpers';
 //	Add the options.
 Mmenu.options.counters = options;
 //	Add the classnames.
@@ -41,8 +41,8 @@ export default function () {
     if (options.count) {
         var count = function (listview) {
             var panels = listview
-                ? [listview.closest('.mm-panel')]
-                : DOM.children(_this.node.pnls, '.mm-panel');
+              ? [listview.closest('.mm-panel')]
+              : DOM.children(_this.node.pnls, '.mm-panel');
             panels.forEach(function (panel) {
                 var parent = panel['mmParent'];
                 if (!parent) {

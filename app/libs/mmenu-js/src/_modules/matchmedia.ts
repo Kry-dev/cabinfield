@@ -4,16 +4,16 @@ var listeners = {};
 /**
  * Bind functions to a matchMedia listener (subscriber).
  *
- * @param {string|number} 	query 	Media query to match or number for min-width.
- * @param {function} 		yes 	Function to invoke when the media query matches.
- * @param {function} 		no 		Function to invoke when the media query doesn't match.
+ * @param {string|number}    query    Media query to match or number for min-width.
+ * @param {function}        yes    Function to invoke when the media query matches.
+ * @param {function}        no        Function to invoke when the media query doesn't match.
  */
 export function add(query: string | number, yes: Function, no: Function) {
     if (typeof query == 'number') {
         query = '(min-width: ' + query + 'px)';
     }
     listeners[query] = listeners[query] || [];
-    listeners[query].push({ yes, no });
+    listeners[query].push({yes, no});
 }
 
 /**
@@ -33,8 +33,8 @@ export function watch() {
 /**
  * Invoke the "yes" or "no" function for a matchMedia listener (publisher).
  *
- * @param {string} 			query 	Media query to check for.
- * @param {MediaQueryList} 	mqlist 	Media query list to check with.
+ * @param {string}            query    Media query to check for.
+ * @param {MediaQueryList}    mqlist    Media query list to check with.
  */
 export function fire(query: string, mqlist: MediaQueryList) {
     var fn = mqlist.matches ? 'yes' : 'no';

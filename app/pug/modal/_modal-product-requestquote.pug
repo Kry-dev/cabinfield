@@ -1,34 +1,34 @@
 <!--modal product requestquote-->
 #product-requestquote.modal.modal--infopopup.fade(tabindex='-1', role='dialog', aria-hidden='true')
-  .modal-dialog.modal-dialog-centered.modal-md(role='document')
-    .modal-content
-      .modal-body
-        h4.modal-title Quote Request for Carolina Crown Amish Bed made in Brown Mapple OCS-10 S-2
-        button.close(type='button', data-bs-dismiss='modal', aria-label='Close')
-          span(aria-hidden='true') ×
-        form.form.row.pb-5.border-bottom
-          .col-lg-6.col-sm-12
-            .mb-3
-              label.col-form-label.col-form-label-sm Your name
-              input.form-control(type='email', name='your-name')
-            .mb-3
-              label.col-form-label.col-form-label-sm Email address
-              input.form-control(type='email', name='your-mail')
-            .d-flex.justify-content-between.align-items-center
-              .w-50.me-1.mb-0
-                label.col-form-label.col-form-label-sm Zip-code
-                input.form-control(type='number', name='zip_code', placeholder='●●●●●')
-              .w-50.ms-1.mb-0
-                label.col-form-label.col-form-label-sm Phone (optional)
-                input.form-control(type='text', name='phone', placeholder='(●●●) ●●●●●')
-          .col-lg-6.col-sm-12
-            .mb-4
-              label.col-form-label.col-form-label-sm Comment (optional)
-              textarea.form-control(name='comment', rows='5')
-            .w-100.mb-0.mt-1
-              button.btn.btn-warning.d-block.w-100(type='submit') Send request
-        .row.mt-3
-          include ../layout/_product-selected
+    .modal-dialog.modal-dialog-centered.modal-md(role='document')
+        .modal-content
+            .modal-body
+                h4.modal-title Quote Request for Carolina Crown Amish Bed made in Brown Mapple OCS-10 S-2
+                button.close(type='button', data-bs-dismiss='modal', aria-label='Close')
+                    span(aria-hidden='true') ×
+                form.form.row.pb-5.border-bottom
+                    .col-lg-6.col-sm-12
+                        .mb-3
+                            label.col-form-label.col-form-label-sm Your name
+                            input.form-control(type='email', name='your-name')
+                        .mb-3
+                            label.col-form-label.col-form-label-sm Email address
+                            input.form-control(type='email', name='your-mail')
+                        .d-flex.justify-content-between.align-items-center
+                            .w-50.me-1.mb-0
+                                label.col-form-label.col-form-label-sm Zip-code
+                                input.form-control(type='number', name='zip_code', placeholder='●●●●●')
+                            .w-50.ms-1.mb-0
+                                label.col-form-label.col-form-label-sm Phone (optional)
+                                input.form-control(type='text', name='phone', placeholder='(●●●) ●●●●●')
+                    .col-lg-6.col-sm-12
+                        .mb-4
+                            label.col-form-label.col-form-label-sm Comment (optional)
+                            textarea.form-control(name='comment', rows='5')
+                        .w-100.mb-0.mt-1
+                            button.btn.btn-warning.d-block.w-100(type='submit') Send request
+                .row.mt-3
+                    include ../layout/_product-selected
 
 
 <!--modal product requestquote end-->

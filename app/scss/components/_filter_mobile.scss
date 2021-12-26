@@ -1,106 +1,123 @@
 
 .filter-mobile {
-    display: none;
-    background: $white;
-    width: 100%;
-    min-height: 100vh;
-    position: absolute;
-    top: 126px;
-    left: 0;
-    right: 0;
-    z-index: 100;
-    padding: 2rem;
-    &--top {
-        margin-bottom: 1rem;
-        button {
-            background: transparent;
-            cursor: pointer;
-            outline: 0;
-            border: 0;
-        }
-    }
-    &--cta {
-        margin-bottom: 1rem;
-    }
-    
-    /* Accordion styles */
-    .filter-tabs {
-        border-radius: 0;
-        overflow: hidden;
-    }
-    .filter-tab {
-        width: 100%;
-        overflow: hidden;
-        &:last-child {
-            .filter-tab--label {
-                border-bottom: 0;
-            }
-        }
-        &--label {
-            display: flex;
-            justify-content: flex-start;
-            color: $primary;
-            font-style: normal;
-            font-weight: 400;
-            font-size: $font-size-sm;
-            line-height: 17px;
-            padding: 10px 0;
-            border-bottom: 1px solid $primary;
-            &> span {
-                margin-left: .5rem;
-            }
-            /* Icon */
-            &:focus,
-            &:hover {
-                cursor: pointer;
-            }
-            &::before {
-                content: "\f0da";
-                font-family: $font-awesome;
-                font-size: 1rem;
-                transition: all .35s;
-                color: #000;
-                margin: 0 .5rem;
-            }
-           
-        }
-        &--content {
-            max-height: 0;
-            padding: 0 1rem;
-            transition: all .35s;
-        }
-        &>input {
-            position: absolute;
-            z-index: -999;
-            left: -100%;
-        }
-    }
-   
-    // :checked
-    input:checked {
-        + .filter-tab--label {
-            border-bottom: 0;
-            &::before {
-                transform: rotate(90deg);
-            }
-        }
-        ~ .filter-tab--content {
-            max-height: 100vh;
-        }
-    }
-    .product-filters-list {
-        margin-bottom: 0;
-        .label {
-            color: $primary;
-            line-height: 16px;
-        }
-    }
-    .product-filters-list label {
-        color: $primary;
-        font-size: 12px;
-        &:hover,
-        &:focus {
-            color: $brown;
-        }
-    }
+	display: none;
+	background: $white;
+	width: 100%;
+	min-height: 100vh;
+	position: absolute;
+	top: 126px;
+	left: 0;
+	right: 0;
+	z-index: 100;
+	padding: 2rem;
+	
+	&--top {
+		margin-bottom: 1rem;
+		
+		button {
+			background: transparent;
+			cursor: pointer;
+			outline: 0;
+			border: 0;
+		}
+	}
+	
+	&--cta {
+		margin-bottom: 1rem;
+	}
+	
+	/* Accordion styles */
+	.filter-tabs {
+		border-radius: 0;
+		overflow: hidden;
+	}
+	
+	.filter-tab {
+		width: 100%;
+		overflow: hidden;
+		
+		&:last-child {
+			.filter-tab--label {
+				border-bottom: 0;
+			}
+		}
+		
+		&--label {
+			display: flex;
+			justify-content: flex-start;
+			color: $primary;
+			font-style: normal;
+			font-weight: 400;
+			font-size: $font-size-sm;
+			line-height: 17px;
+			padding: 10px 0;
+			border-bottom: 1px solid $primary;
+			
+			& > span {
+				margin-left: .5rem;
+			}
+			
+			/* Icon */
+			&:focus,
+			&:hover {
+				cursor: pointer;
+			}
+			
+			&::before {
+				content: "\f0da";
+				font-family: $font-awesome;
+				font-size: 1rem;
+				transition: all .35s;
+				color: #000;
+				margin: 0 .5rem;
+			}
+			
+		}
+		
+		&--content {
+			max-height: 0;
+			padding: 0 1rem;
+			transition: all .35s;
+		}
+		
+		& > input {
+			position: absolute;
+			z-index: -999;
+			left: -100%;
+		}
+	}
+	
+	// :checked
+	input:checked {
+		+ .filter-tab--label {
+			border-bottom: 0;
+			
+			&::before {
+				transform: rotate(90deg);
+			}
+		}
+		
+		~ .filter-tab--content {
+			max-height: 100vh;
+		}
+	}
+	
+	.product-filters-list {
+		margin-bottom: 0;
+		
+		.label {
+			color: $primary;
+			line-height: 16px;
+		}
+	}
+	
+	.product-filters-list label {
+		color: $primary;
+		font-size: 12px;
+		
+		&:hover,
+		&:focus {
+			color: $brown;
+		}
+	}
 }

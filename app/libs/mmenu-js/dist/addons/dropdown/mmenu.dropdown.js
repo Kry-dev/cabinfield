@@ -1,9 +1,9 @@
 import Mmenu from '../../core/oncanvas/mmenu.oncanvas';
 import options from './_options';
 import configs from './_configs';
-import { extendShorthandOptions } from './_options';
+import {extendShorthandOptions} from './_options';
 import * as DOM from '../../_modules/dom';
-import { extend, originalId } from '../../_modules/helpers';
+import {extend, originalId} from '../../_modules/helpers';
 //	Add the options and configs.
 Mmenu.options.dropdown = options;
 Mmenu.configs.dropdown = configs;
@@ -40,12 +40,12 @@ export default function () {
         if (events[0] == 'hover') {
             button.addEventListener('mouseenter', function () {
                 _this.open();
-            }, { passive: true });
+            }, {passive: true});
         }
         if (events[1] == 'hover') {
             _this.node.menu.addEventListener('mouseleave', function () {
                 _this.close();
-            }, { passive: true });
+            }, {passive: true});
         }
     });
     //	Add/remove classname and style when opening/closing the menu
@@ -62,12 +62,16 @@ export default function () {
      *
      * @param  {string} dir The direction to measure ("x" for horizontal, "y" for vertical)
      * @param  {object} obj The object where (previously) measured values are stored.
-     * @return {object}		The object where measered values are stored.
+     * @return {object}        The object where measered values are stored.
      */
     var getPosition = function (dir, obj) {
         var css = obj[0], cls = obj[1];
-        var _outerSize = dir == 'x' ? 'offsetWidth' : 'offsetHeight', _startPos = dir == 'x' ? 'left' : 'top', _stopPos = dir == 'x' ? 'right' : 'bottom', _size = dir == 'x' ? 'width' : 'height', _winSize = dir == 'x' ? 'innerWidth' : 'innerHeight', _maxSize = dir == 'x' ? 'maxWidth' : 'maxHeight', _position = null;
-        var startPos = DOM.offset(button, _startPos), stopPos = startPos + button[_outerSize], windowSize = window[_winSize];
+        var _outerSize = dir == 'x' ? 'offsetWidth' : 'offsetHeight', _startPos = dir == 'x' ? 'left' : 'top',
+          _stopPos = dir == 'x' ? 'right' : 'bottom', _size = dir == 'x' ? 'width' : 'height',
+          _winSize = dir == 'x' ? 'innerWidth' : 'innerHeight', _maxSize = dir == 'x' ? 'maxWidth' : 'maxHeight',
+          _position = null;
+        var startPos = DOM.offset(button, _startPos), stopPos = startPos + button[_outerSize],
+          windowSize = window[_winSize];
         /** Offset for the menu relative to the button. */
         var offs = configs.offset.button[dir] + configs.offset.viewport[dir];
         //	Position set in option
@@ -86,9 +90,9 @@ export default function () {
         //	Position not set in option, find most space
         if (_position === null) {
             _position =
-                startPos + (stopPos - startPos) / 2 < windowSize / 2
-                    ? 'after'
-                    : 'before';
+              startPos + (stopPos - startPos) / 2 < windowSize / 2
+                ? 'after'
+                : 'before';
         }
         //	Set position and max
         var val, max;
@@ -100,12 +104,11 @@ export default function () {
             if (options.tip) {
                 cls.push('mm-menu_tip-' + (dir == 'x' ? 'left' : 'top'));
             }
-        }
-        else {
+        } else {
             val = dir == 'x' ? stopPos : startPos;
             max = val - offs;
             css[_stopPos] =
-                'calc( 100% - ' + (val - configs.offset.button[dir]) + 'px )';
+              'calc( 100% - ' + (val - configs.offset.button[dir]) + 'px )';
             css[_startPos] = 'auto';
             if (options.tip) {
                 cls.push('mm-menu_tip-' + (dir == 'x' ? 'right' : 'bottom'));
@@ -116,6 +119,7 @@ export default function () {
         }
         return [css, cls];
     };
+    
     function position() {
         var _this = this;
         if (!this.vars.opened) {
@@ -147,13 +151,14 @@ export default function () {
             // this.node.menu.classList.add(...obj[1]);
         }
     }
+    
     this.bind('open:start', position);
     window.addEventListener('resize', function (evnt) {
         position.call(_this);
-    }, { passive: true });
+    }, {passive: true});
     if (!this.opts.offCanvas.blockUI) {
         window.addEventListener('scroll', function (evnt) {
             position.call(_this);
-        }, { passive: true });
+        }, {passive: true});
     }
 }

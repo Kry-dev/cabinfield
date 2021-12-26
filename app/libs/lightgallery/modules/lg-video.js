@@ -3,23 +3,23 @@
 * Copyright (c) 2020 Sachin N; Licensed GPLv3 */
 
 (function (root, factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD. Register as an anonymous module unless amdModuleId is set
-    define(['jquery'], function (a0) {
-      return (factory(a0));
-    });
-  } else if (typeof module === 'object' && module.exports) {
-    // Node. Does not work with strict CommonJS, but
-    // only CommonJS-like environments that support module.exports,
-    // like Node.
-    module.exports = factory(require('jquery'));
-  } else {
-    factory(root["jQuery"]);
-  }
+    if (typeof define === 'function' && define.amd) {
+        // AMD. Register as an anonymous module unless amdModuleId is set
+        define(['jquery'], function (a0) {
+            return (factory(a0));
+        });
+    } else if (typeof module === 'object' && module.exports) {
+        // Node. Does not work with strict CommonJS, but
+        // only CommonJS-like environments that support module.exports,
+        // like Node.
+        module.exports = factory(require('jquery'));
+    } else {
+        factory(root["jQuery"]);
+    }
 }(this, function ($) {
 
-(function() {
-    
+    (function () {
+
         'use strict';
 
         var defaults = {
@@ -36,7 +36,7 @@
             videojsOptions: {}
         };
 
-        var Video = function(element) {
+        var Video = function (element) {
 
             this.core = $(element).data('lightGallery');
 
@@ -49,7 +49,7 @@
             return this;
         };
 
-        Video.prototype.init = function() {
+        Video.prototype.init = function () {
             var _this = this;
 
             // Event triggered when video url found without poster
@@ -59,24 +59,24 @@
             _this.core.$el.on('onAferAppendSlide.lg.tm', onAferAppendSlide.bind(this));
 
             if (_this.core.doCss() && (_this.core.$items.length > 1) && (_this.core.s.enableSwipe || _this.core.s.enableDrag)) {
-                _this.core.$el.on('onSlideClick.lg.tm', function() {
+                _this.core.$el.on('onSlideClick.lg.tm', function () {
                     var $el = _this.core.$slide.eq(_this.core.index);
                     _this.loadVideoOnclick($el);
                 });
             } else {
 
                 // For IE 9 and bellow
-                _this.core.$slide.on('click.lg', function() {
+                _this.core.$slide.on('click.lg', function () {
                     _this.loadVideoOnclick($(this));
                 });
             }
 
             _this.core.$el.on('onBeforeSlide.lg.tm', onBeforeSlide.bind(this));
 
-            _this.core.$el.on('onAfterSlide.lg.tm', function(event, prevIndex) {
+            _this.core.$el.on('onAfterSlide.lg.tm', function (event, prevIndex) {
                 _this.core.$slide.eq(prevIndex).removeClass('lg-video-playing');
             });
-            
+
             if (_this.core.s.autoplayFirstVideo) {
                 _this.core.$el.on('onAferAppendSlide.lg.tm', function (e, index) {
                     if (!_this.core.lGalleryOn) {
@@ -89,7 +89,7 @@
             }
         };
 
-        Video.prototype.loadVideo = function(src, addClass, noPoster, index, html) {
+        Video.prototype.loadVideo = function (src, addClass, noPoster, index, html) {
             var _this = this;
             var video = '';
             var autoplay = 1;
@@ -163,7 +163,7 @@
             return video;
         };
 
-        Video.prototype.loadVideoOnclick = function($el){
+        Video.prototype.loadVideoOnclick = function ($el) {
 
             var _this = this;
             // check slide has poster
@@ -176,14 +176,14 @@
 
                     var _src;
                     var _html;
-                    var _loadVideo = function(_src, _html) {
+                    var _loadVideo = function (_src, _html) {
 
                         $el.find('.lg-video').append(_this.loadVideo(_src, '', false, _this.core.index, _html));
 
                         if (_html) {
                             if (_this.core.s.videojs) {
                                 try {
-                                    videojs(_this.core.$slide.eq(_this.core.index).find('.lg-html5').get(0), _this.core.s.videojsOptions, function() {
+                                    videojs(_this.core.$slide.eq(_this.core.index).find('.lg-html5').get(0), _this.core.s.videojsOptions, function () {
                                         this.play();
                                     });
                                 } catch (e) {
@@ -219,7 +219,7 @@
                     // for showing the loading indicator while loading video
                     if (!$el.find('.lg-video-object').hasClass('lg-html5')) {
                         $el.removeClass('lg-complete');
-                        $el.find('.lg-video-object').on('load.lg error.lg', function() {
+                        $el.find('.lg-video-object').on('load.lg error.lg', function () {
                             $el.addClass('lg-complete');
                         });
                     }
@@ -259,7 +259,7 @@
             }
         };
 
-        Video.prototype.destroy = function() {
+        Video.prototype.destroy = function () {
             this.videoLoaded = false;
         };
 
@@ -270,7 +270,7 @@
             if (html) {
                 if (_this.core.s.videojs) {
                     try {
-                        videojs(_this.core.$slide.eq(index).find('.lg-html5').get(0), _this.core.s.videojsOptions, function() {
+                        videojs(_this.core.$slide.eq(index).find('.lg-html5').get(0), _this.core.s.videojsOptions, function () {
                             if (!_this.videoLoaded && _this.core.s.autoplayFirstVideo) {
                                 this.play();
                             }
@@ -279,7 +279,7 @@
                         console.error('Make sure you have included videojs');
                     }
                 } else {
-                    if(!_this.videoLoaded && _this.core.s.autoplayFirstVideo) {
+                    if (!_this.videoLoaded && _this.core.s.autoplayFirstVideo) {
                         _this.core.$slide.eq(index).find('.lg-html5').get(0).play();
                     }
                 }
@@ -326,7 +326,8 @@
                 } else {
                     html5Player.pause();
                 }
-            } if (vkPlayer) {
+            }
+            if (vkPlayer) {
                 $(vkPlayer).attr('src', $(vkPlayer).attr('src').replace('&autoplay', '&noplay'));
             }
 

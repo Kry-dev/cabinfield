@@ -2,6 +2,7 @@ import DragEvents from '../../_modules/dragevents/index';
 import * as DOM from '../../_modules/dom';
 import * as events from '../../_modules/eventlisteners';
 import * as media from '../../_modules/matchmedia';
+
 /** Instance of the DragEvents class. */
 var dragInstance = null;
 /** THe node that can be dragged. */
@@ -59,11 +60,11 @@ export default function (page) {
                         }
                         vars.slideOutNodes.forEach(function (node) {
                             node.style['transform'] =
-                                'translate' +
-                                    vars.axis.toUpperCase() +
-                                    '(' +
-                                    distance +
-                                    'px)';
+                              'translate' +
+                              vars.axis.toUpperCase() +
+                              '(' +
+                              distance +
+                              'px)';
                         });
                     }
                 }
@@ -79,7 +80,7 @@ export default function (page) {
                         });
                         //  Determine if the menu should open or close.
                         var open_1 = Math.abs(evnt['detail']['distance' + vars.axis.toUpperCase()]) >=
-                            maxDistance * 0.75;
+                          maxDistance * 0.75;
                         if (!open_1) {
                             var movement = evnt['detail']['movement' + vars.axis.toUpperCase()];
                             switch (vars.position) {
@@ -94,8 +95,7 @@ export default function (page) {
                         }
                         if (open_1) {
                             _this._openStart();
-                        }
-                        else {
+                        } else {
                             _this.close();
                         }
                     }
@@ -118,18 +118,19 @@ export default function (page) {
         if (queries.length) {
             //  A media query that'll match if any of the other media query matches:
             //    set the defaults if it doesn't match.
-            media.add(queries.join(', '), function () { }, function () {
+            media.add(queries.join(', '), function () {
+            }, function () {
                 vars = getPositionVars(vars, [], _this.node.menu);
             });
             //  The other media queries.
             queries.forEach(function (query) {
                 media.add(query, function () {
                     vars = getPositionVars(vars, _this.opts.extensions[query], _this.node.menu);
-                }, function () { });
+                }, function () {
+                });
             });
             //  No extensions, just use the defaults.
-        }
-        else {
+        } else {
             vars = getPositionVars(vars, [], _this.node.menu);
         }
     };
@@ -140,7 +141,8 @@ export default function (page) {
     //  Initialize the drag events.
     dragInstance = new DragEvents(dragNode);
     addMatchMedia();
-    addMatchMedia = function () { };
+    addMatchMedia = function () {
+    };
     addEvents();
 }
 var getPositionVars = function (vars, extensions, menu) {

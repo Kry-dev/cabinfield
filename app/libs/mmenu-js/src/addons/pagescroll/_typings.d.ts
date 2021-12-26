@@ -1,4 +1,4 @@
-/**	Options for the pageScroll add-on. */
+/**    Options for the pageScroll add-on. */
 interface mmOptionsPagescroll {
     /** Whether or not to smoothly scroll to a section on the page after clicking a menu item. */
     scroll?: boolean;
@@ -7,7 +7,7 @@ interface mmOptionsPagescroll {
     update?: boolean;
 }
 
-/**	Configuration for the pageScroll add-on. */
+/**    Configuration for the pageScroll add-on. */
 interface mmConfigsPagescroll {
     /** Amount of pixels to scroll past the top of a section after clicking a menu item. */
     scrollOffset?: number;

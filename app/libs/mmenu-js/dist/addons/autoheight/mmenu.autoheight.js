@@ -1,8 +1,8 @@
 import Mmenu from './../../core/oncanvas/mmenu.oncanvas';
 import options from './_options';
-import { extendShorthandOptions } from './_options';
+import {extendShorthandOptions} from './_options';
 import * as DOM from '../../_modules/dom';
-import { extend } from '../../_modules/helpers';
+import {extend} from '../../_modules/helpers';
 //	Add the options.
 Mmenu.options.autoHeight = options;
 export default function () {
@@ -53,8 +53,7 @@ export default function () {
             //	Measure the height.
             if (options.height == 'auto') {
                 _hgh = getCurrent();
-            }
-            else if (options.height == 'highest') {
+            } else if (options.height == 'highest') {
                 _hgh = getHighest();
             }
             //	Set the height.

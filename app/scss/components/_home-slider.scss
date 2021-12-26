@@ -1,158 +1,163 @@
 .home-slider {
-    display: flex;
-    width: 100%;
-    overflow: hidden;
-    margin-bottom: 2rem;
-    
-    &-list {
-        //display: block;
-        list-style: none;
-        
-    }
-    
-    &-item {
-        width: 100%;
-        padding: 3rem 4rem;
-        min-height: 390px;
-        position: relative;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        
-        &:before {
-            content: "";
-            display: block;
-            position: absolute;
-            left: 0;
-            top: 0;
-            right: 0;
-            width: 100%;
-            height: 100%;
-            outline: 1px solid $white;
-            outline-offset: -12px;
-            background: rgba($black, .25);
-            z-index: 1;
-        }
-        
-        @include media-breakpoint-down(md) {
-            padding: 0;
-        }
-        @include media-breakpoint-down(sm) {
-            min-height: 520px;
-        }
-    }
-    
-    &-inner {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        max-width: 280px;
-        height: 100%;
-        position: relative;
-        z-index: 15;
-        
-        &.block-center {
-            margin: 0 auto;
-            text-align: center;
-        }
-        
-        &.block-left {
-            margin-right: auto;
-        }
-        
-        &.block-right {
-            margin-left: auto;
-        }
-        
-        @include media-breakpoint-down(md) {
-            width: 100%;
-            max-width: 100%;
-            padding: 3rem;
-            margin: auto;
-            text-align: center;
-            .text-dark {
-                color: $white !important;
-            }
-            
-            p {
-                max-width: 50%;
-                text-align: center;
-                margin: 0 auto 10px;
-            }
-            
-        }
-        @include media-breakpoint-down(sm) {
-            padding: 3rem 2rem;
-            height: 520px;
-            .home-slider-title,
-            p {
-                margin: 0 auto 1rem;
-                max-width: 300px;
-            }
-            
-            .btn-order {
-                font-size: 12px;
-                position: absolute;
-                bottom: 80px;
-                left: 50%;
-                transform: translateX(-50%);
-            }
-        }
-    }
-    
-    &-title {
-        font-family: "Playfair Display", sans-serif;
-        font-size: 2.125rem;
-        font-weight: 400;
-        line-height: 2.875rem;
-        margin-bottom: 1rem;
-    }
-    
-    p {
-        font-family: $font-family-base;
-        font-size: 1.125rem;
-        line-height: 1.625rem;
-        margin-bottom: 1.5rem;
-    }
-    
-    .slick-dots {
-        li {
-            margin: 0;
-            & + li {
-                margin-left: 10px;
-            }
-        }
-        @include media-breakpoint-down(md) {
-            left: 0;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-        }
-    }
-    
-    //swiper
-    .swiper-pagination {
-        text-align: center;
-        left: 0;
-        @include media-breakpoint-up(md) {
-            left: 64px;
-            bottom: 48px;
-            text-align: left;
-        }
-       
-    }
-    .swiper-scrollbar-drag {
-        background: rgba(255,255,255,.5);
-    }
-    .swiper-pagination-bullet {
-        border: 2px solid $white;
-        width: 10px;
-        height: 10px;
-        background: transparent;
-        opacity: 1;
-        &.swiper-pagination-bullet-active {
-            background: $white;
-        }
-    
-    }
+	display: flex;
+	width: 100%;
+	overflow: hidden;
+	margin-bottom: 2rem;
+	
+	&-list {
+		//display: block;
+		list-style: none;
+		
+	}
+	
+	&-item {
+		width: 100%;
+		padding: 3rem 4rem;
+		min-height: 390px;
+		position: relative;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		
+		&:before {
+			content: "";
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 0;
+			right: 0;
+			width: 100%;
+			height: 100%;
+			outline: 1px solid $white;
+			outline-offset: -12px;
+			background: rgba($black, .25);
+			z-index: 1;
+		}
+		
+		@include media-breakpoint-down(md) {
+			padding: 0;
+		}
+		@include media-breakpoint-down(sm) {
+			min-height: 520px;
+		}
+	}
+	
+	&-inner {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		max-width: 280px;
+		height: 100%;
+		position: relative;
+		z-index: 15;
+		
+		&.block-center {
+			margin: 0 auto;
+			text-align: center;
+		}
+		
+		&.block-left {
+			margin-right: auto;
+		}
+		
+		&.block-right {
+			margin-left: auto;
+		}
+		
+		@include media-breakpoint-down(md) {
+			width: 100%;
+			max-width: 100%;
+			padding: 3rem;
+			margin: auto;
+			text-align: center;
+			.text-dark {
+				color: $white !important;
+			}
+			
+			p {
+				max-width: 50%;
+				text-align: center;
+				margin: 0 auto 10px;
+			}
+			
+		}
+		@include media-breakpoint-down(sm) {
+			padding: 3rem 2rem;
+			height: 520px;
+			.home-slider-title,
+			p {
+				margin: 0 auto 1rem;
+				max-width: 300px;
+			}
+			
+			.btn-order {
+				font-size: 12px;
+				position: absolute;
+				bottom: 80px;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+		}
+	}
+	
+	&-title {
+		font-family: "Playfair Display", sans-serif;
+		font-size: 2.125rem;
+		font-weight: 400;
+		line-height: 2.875rem;
+		margin-bottom: 1rem;
+	}
+	
+	p {
+		font-family: $font-family-base;
+		font-size: 1.125rem;
+		line-height: 1.625rem;
+		margin-bottom: 1.5rem;
+	}
+	
+	.slick-dots {
+		li {
+			margin: 0;
+			
+			& + li {
+				margin-left: 10px;
+			}
+		}
+		
+		@include media-breakpoint-down(md) {
+			left: 0;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+		}
+	}
+	
+	//swiper
+	.swiper-pagination {
+		text-align: center;
+		left: 0;
+		@include media-breakpoint-up(md) {
+			left: 64px;
+			bottom: 48px;
+			text-align: left;
+		}
+		
+	}
+	
+	.swiper-scrollbar-drag {
+		background: rgba(255, 255, 255, .5);
+	}
+	
+	.swiper-pagination-bullet {
+		border: 2px solid $white;
+		width: 10px;
+		height: 10px;
+		background: transparent;
+		opacity: 1;
+		
+		&.swiper-pagination-bullet-active {
+			background: $white;
+		}
+		
+	}
 }

@@ -4,17 +4,10 @@ const prefix = 'mm-ocd';
  * Class for off-canvas behavior.
  */
 export default class MmOffCanvasDrawer {
-    /** Prefix for the class. */
-    get prefix() {
-        return prefix;
-    }
-
     /** HTML element for the wrapper */
     wrapper: HTMLElement;
-
     /** HTML element for the content. */
     content: HTMLElement;
-
     /** HTML element for the blocker (off-canvas add-on). */
     backdrop: HTMLElement;
 
@@ -55,6 +48,11 @@ export default class MmOffCanvasDrawer {
         };
         this.backdrop.addEventListener('touchstart', close);
         this.backdrop.addEventListener('mousedown', close);
+    }
+
+    /** Prefix for the class. */
+    get prefix() {
+        return prefix;
     }
 
     /**

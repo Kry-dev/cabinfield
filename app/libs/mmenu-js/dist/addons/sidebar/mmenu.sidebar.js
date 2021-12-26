@@ -1,9 +1,9 @@
 import Mmenu from '../../core/oncanvas/mmenu.oncanvas';
 import options from './_options';
-import { extendShorthandOptions } from './_options';
+import {extendShorthandOptions} from './_options';
 import * as DOM from '../../_modules/dom';
 import * as media from '../../_modules/matchmedia';
-import { extend } from '../../_modules/helpers';
+import {extend} from '../../_modules/helpers';
 //  Add the options.
 Mmenu.options.sidebar = options;
 export default function () {
@@ -19,8 +19,8 @@ export default function () {
         this.bind('initMenu:after', function () {
             _this.node.menu.classList.add('mm-menu_sidebar-collapsed');
             if (options.collapsed.blockMenu &&
-                _this.opts.offCanvas &&
-                !DOM.children(_this.node.menu, '.mm-menu__blocker')[0]) {
+              _this.opts.offCanvas &&
+              !DOM.children(_this.node.menu, '.mm-menu__blocker')[0]) {
                 var anchor = DOM.create('a.mm-menu__blocker');
                 anchor.setAttribute('href', '#' + _this.node.menu.id);
                 _this.node.menu.prepend(anchor);
@@ -41,8 +41,7 @@ export default function () {
         };
         if (typeof options.collapsed.use == 'boolean') {
             this.bind('initMenu:after', enable);
-        }
-        else {
+        } else {
             media.add(options.collapsed.use, enable, disable);
         }
     }
@@ -65,8 +64,7 @@ export default function () {
         };
         if (typeof options.expanded.use == 'boolean') {
             this.bind('initMenu:after', enable);
-        }
-        else {
+        } else {
             media.add(options.expanded.use, enable, disable);
         }
         //  Manually en-/disable the expanded sidebar (open / close the menu)

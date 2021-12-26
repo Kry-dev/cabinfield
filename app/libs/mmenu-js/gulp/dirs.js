@@ -13,23 +13,23 @@ module.exports = findCustom => {
         output: 'dist',
         build: null
     };
-
+    
     if (!findCustom) {
         return dirs;
     }
-
+    
     var i = getOption('i'),
-        o = getOption('o');
-
+      o = getOption('o');
+    
     // Set custom input dir.
     if (i) {
         dirs.build = i;
     }
-
+    
     // Set custom output dir.
     if (o) {
         dirs.output = o;
     }
-
+    
     return dirs;
 };

@@ -1,128 +1,146 @@
 
 .product-collection-sort {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    .btn {
-        display: flex;
-        white-space: nowrap;
-    }
-    .dropdown.bootstrap-select {
-        min-width: 220px;
-        height: $input-height;
-    }
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+	
+	.btn {
+		display: flex;
+		white-space: nowrap;
+	}
+	
+	.dropdown.bootstrap-select {
+		min-width: 220px;
+		height: $input-height;
+	}
 }
 
 .collection-listing {
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
+
 .collection-card {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-    padding: 2rem;
-    border: $border-width solid $black;
-    position: relative;
-    @include media-breakpoint-down(md) {
-        padding: 1.5rem 1.5rem 4rem;
-    }
-    &--img {
-        width: 100%;
-        max-width: 230px;
-        margin-right: 2rem;
-        @include media-breakpoint-down(sm){
-            max-width: 50%;
-            margin: auto;
-        }
-        img {
-            width: 100%;
-        }
-    }
-		&--body {
-			display: flex;
-			flex-direction: column;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: nowrap;
+	padding: 2rem;
+	border: $border-width solid $black;
+	position: relative;
+	@include media-breakpoint-down(md) {
+		padding: 1.5rem 1.5rem 4rem;
+	}
+	
+	&--img {
+		width: 100%;
+		max-width: 230px;
+		margin-right: 2rem;
+		@include media-breakpoint-down(sm) {
+			max-width: 50%;
+			margin: auto;
+		}
+		
+		img {
 			width: 100%;
 		}
-		&--title {
-			font-style: normal;
+	}
+	
+	&--body {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+	
+	&--title {
+		font-style: normal;
+		font-weight: 700;
+		font-size: 28px;
+		line-height: 32px;
+		color: $text-dark;
+	}
+	
+	.product-furnitureType {
+		color: $brown;
+		
+		.furnitureType-new {
 			font-weight: 700;
 			font-size: 28px;
 			line-height: 32px;
-			color: $text-dark;
 		}
+	}
+	
+	@include media-breakpoint-down(sm) {
+		&--title {
+			font-style: normal;
+			font-weight: 700;
+			font-size: $font-size-sm;
+			line-height: 16px;
+			color: #514646;
+		}
+		.product-number,
 		.product-furnitureType {
-			color: $brown;
+			font-weight: 40;
+			font-size: 12px;
+			line-height: 16px;
+			
 			.furnitureType-new {
-				font-weight: 700;
-				font-size: 28px;
-				line-height: 32px;
+				font-size: $font-size-sm;
+			}
+			
+			.small {
+				color: #A00000;
 			}
 		}
-    @include media-breakpoint-down(sm) {
-        &--title {
-            font-style: normal;
-            font-weight: 700;
-            font-size: $font-size-sm;
-            line-height: 16px;
-            color: #514646;
-        }
-        .product-number,
-        .product-furnitureType {
-            font-weight: 40;
-            font-size: 12px;
-            line-height: 16px;
-            .furnitureType-new {
-                font-size: $font-size-sm;
-            }
-        		.small {
-							color: #A00000;
-						}
-        }
-    }
-    
-    &.collection-card--new {
-        overflow: hidden;
-        &:before ,
-        &:after {
-            display: block;
-            width: 134px;
-            height: 32px;
-            position: absolute;
-            left: -10px;
-            top: 0;
-        }
-        &:before {
-            content: "";
-            background: $primary;
-            transform: skewX(-30deg);
-        }
-        &:after {
-            content: "NEW!";
-            text-align: center;
-            vertical-align: middle;
-            color: $white;
-            font-size: $font-size-sm;
-            line-height: 32px;
-            font-family: $font-family-base;
-            font-weight: 700;
-        }
-    }
-    .row {
-        position: inherit;
-    }
-    &--cta {
-        .btn {
-            width: 100%;
-        }
-        @include media-breakpoint-down(sm) {
-            position: absolute;
-            width: 100%;
-            bottom: 1rem;
-            left: 0;
-            right: 0;
-        }
-    }
+	}
+	
+	&.collection-card--new {
+		overflow: hidden;
+		
+		&:before,
+		&:after {
+			display: block;
+			width: 134px;
+			height: 32px;
+			position: absolute;
+			left: -10px;
+			top: 0;
+		}
+		
+		&:before {
+			content: "";
+			background: $primary;
+			transform: skewX(-30deg);
+		}
+		
+		&:after {
+			content: "NEW!";
+			text-align: center;
+			vertical-align: middle;
+			color: $white;
+			font-size: $font-size-sm;
+			line-height: 32px;
+			font-family: $font-family-base;
+			font-weight: 700;
+		}
+	}
+	
+	.row {
+		position: inherit;
+	}
+	
+	&--cta {
+		.btn {
+			width: 100%;
+		}
+		
+		@include media-breakpoint-down(sm) {
+			position: absolute;
+			width: 100%;
+			bottom: 1rem;
+			left: 0;
+			right: 0;
+		}
+	}
 }

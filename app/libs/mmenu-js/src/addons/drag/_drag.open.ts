@@ -13,7 +13,7 @@ var dragNode: HTMLElement = null;
 /** How far the page (or menu) can be dragged. */
 var maxDistance: number = 0;
 
-export default function(this: Mmenu, page) {
+export default function (this: Mmenu, page) {
     /** Variables that vary for each menu position (top, right, bottom, left. front, back). */
     var vars: mmLooseObject = {};
 
@@ -40,7 +40,7 @@ export default function(this: Mmenu, page) {
                     //  Get the maximum distance to move out the page or menu.
                     maxDistance = this.node.menu[
                         vars.axis == 'x' ? 'clientWidth' : 'clientHeight'
-                    ];
+                        ];
                 }
             });
 
@@ -50,8 +50,8 @@ export default function(this: Mmenu, page) {
                     if (moving) {
                         var distance =
                             evnt['detail'][
-                                'distance' + vars.axis.toUpperCase()
-                            ];
+                            'distance' + vars.axis.toUpperCase()
+                                ];
                         switch (vars.position) {
                             case 'right':
                             case 'bottom':
@@ -109,16 +109,16 @@ export default function(this: Mmenu, page) {
                         let open =
                             Math.abs(
                                 evnt['detail'][
-                                    'distance' + vars.axis.toUpperCase()
-                                ]
+                                'distance' + vars.axis.toUpperCase()
+                                    ]
                             ) >=
                             maxDistance * 0.75;
 
                         if (!open) {
                             let movement =
                                 evnt['detail'][
-                                    'movement' + vars.axis.toUpperCase()
-                                ];
+                                'movement' + vars.axis.toUpperCase()
+                                    ];
                             switch (vars.position) {
                                 case 'right':
                                 case 'bottom':
@@ -160,7 +160,8 @@ export default function(this: Mmenu, page) {
             //    set the defaults if it doesn't match.
             media.add(
                 queries.join(', '),
-                () => {},
+                () => {
+                },
                 () => {
                     vars = getPositionVars(vars, [], this.node.menu);
                 }
@@ -177,7 +178,8 @@ export default function(this: Mmenu, page) {
                             this.node.menu
                         );
                     },
-                    () => {}
+                    () => {
+                    }
                 );
             });
 
@@ -197,7 +199,8 @@ export default function(this: Mmenu, page) {
     dragInstance = new DragEvents(dragNode);
 
     addMatchMedia();
-    addMatchMedia = () => {};
+    addMatchMedia = () => {
+    };
 
     addEvents();
 }

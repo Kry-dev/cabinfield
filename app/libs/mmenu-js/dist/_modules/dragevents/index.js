@@ -1,8 +1,9 @@
 import * as support from './_support';
 import * as options from './_defaults';
 import * as settings from './_settings';
-import { percentage2number } from './_helpers';
-import { extend } from '../helpers';
+import {percentage2number} from './_helpers';
+import {extend} from '../helpers';
+
 var DragEvents = /** @class */ (function () {
     /**
      * Create the gestures.
@@ -23,6 +24,7 @@ var DragEvents = /** @class */ (function () {
         }
         this.surface['mmHasDragEvents'] = true;
     }
+    
     /**
      * Starting the touch gesture.
      * @param {Event} event The touch event.
@@ -107,11 +109,11 @@ var DragEvents = /** @class */ (function () {
             case settings.state.dragging:
                 var position = {
                     x: event.changedTouches
-                        ? event.touches[0].pageX
-                        : event.pageX || 0,
+                      ? event.touches[0].pageX
+                      : event.pageX || 0,
                     y: event.changedTouches
-                        ? event.touches[0].pageY
-                        : event.pageY || 0
+                      ? event.touches[0].pageY
+                      : event.pageY || 0
                 };
                 this.movement = {
                     x: position.x - this.currentPosition.x,
@@ -126,9 +128,9 @@ var DragEvents = /** @class */ (function () {
                     y: position.y
                 };
                 this.axis =
-                    Math.abs(this.distance.x) > Math.abs(this.distance.y)
-                        ? 'x'
-                        : 'y';
+                  Math.abs(this.distance.x) > Math.abs(this.distance.y)
+                    ? 'x'
+                    : 'y';
                 /** The direction. */
                 var dragDirection = this._dragDirection();
                 /** The event information. */
@@ -178,10 +180,10 @@ var DragEvents = /** @class */ (function () {
      */
     DragEvents.prototype._dispatchEvents = function (eventName, detail) {
         /** General event, e.g. "drag" */
-        var event = new CustomEvent(eventName.replace('*', ''), { detail: detail });
+        var event = new CustomEvent(eventName.replace('*', ''), {detail: detail});
         this.surface.dispatchEvent(event);
         /** Axis event, e.g. "dragX" */
-        var axis = new CustomEvent(eventName.replace('*', this.axis.toUpperCase()), { detail: detail });
+        var axis = new CustomEvent(eventName.replace('*', this.axis.toUpperCase()), {detail: detail});
         this.surface.dispatchEvent(axis);
         /** Direction event, e.g. "dragLeft" */
         var direction = new CustomEvent(eventName.replace('*', detail.direction), {

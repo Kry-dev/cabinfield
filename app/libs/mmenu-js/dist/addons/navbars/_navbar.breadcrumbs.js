@@ -1,5 +1,6 @@
 import Mmenu from '../../core/oncanvas/mmenu.oncanvas';
 import * as DOM from '../../_modules/dom';
+
 export default function (navbar) {
     var _this = this;
     //	Add content
@@ -19,12 +20,12 @@ export default function (navbar) {
                     var text = title.textContent;
                     if (text.length) {
                         crumbs.unshift(first
-                            ? '<span>' + text + '</span>'
-                            : '<a href="#' +
-                                current.id +
-                                '">' +
-                                text +
-                                '</a>');
+                          ? '<span>' + text + '</span>'
+                          : '<a href="#' +
+                          current.id +
+                          '">' +
+                          text +
+                          '</a>');
                     }
                 }
                 first = false;
@@ -35,8 +36,8 @@ export default function (navbar) {
             crumbs.shift();
         }
         breadcrumbs.innerHTML = crumbs.join('<span class="mm-separator">' +
-            _this.conf.navbars.breadcrumbs.separator +
-            '</span>');
+          _this.conf.navbars.breadcrumbs.separator +
+          '</span>');
         DOM.children(panel, '.mm-navbar')[0].append(breadcrumbs);
     });
     //	Update for to opened panel

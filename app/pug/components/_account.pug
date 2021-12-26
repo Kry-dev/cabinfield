@@ -1,203 +1,203 @@
 section.account
-  .container
-    .row.mb-3
-      .col-sm-12
-        .d-flex.flex-column
-          h1.text-dark.mb-3 My Account
-          h6.text-dark You are logged in as johnsmith1974@gmail.com
-            a.log_out(href='#')
-              i.fa.fa-sign-out
-              | Log Out
-    .row.shipping_billing
-      .col-xl-8.col-lg-7.col-md-12
-        h6.account-subtitle Shipping and billing Information
-          a.edit(href="#")
-            i.fa.fa-pencil.me-2
-            | Edit
-        .row
-          .col-md-4
-            p.text-black.mb-0 #[b Shipping Address]
-            .addr
-              p John Doe
-              p 700 Carpenters Crossing
-              p BWW Ste 286309
-              p Folcroft, PA 19032-2011
-              p United States
-              p (484) 5400190
-          .col-md-4
-            p.text-black.mb-0 #[b Billing Address]
-            .addr
-              p Same as shipping address
-          .col-md-4
-            p.text-black.mb-0 #[b Payment Information]
-            .addr
-             p To safeguard your personal inormation we do not store credit card information
-      .col-xl-4.col-lg-5.col-md-12
-        h6.account-subtitle Account information and security
-          a.edit(href="#")
-            i.fa.fa-pencil.me-2
-            | Edit
-        p.text-black.mb-0 #[b Name, Email & Password]
-        .addr
-          p John Doe
-          p john-doe@gmail.com
-          p Password: ********
-    .row.px-3
-      h6.account-subtitle.w-100 YOUR ORDER HISTORY
-      .account-history
-        .account-history-left
-          h3.title Order #1130338867
-          .value
-            | Order placed:
-            span Jan 17, 2018
-          .value.price.total
-            | Total:
-            span $1,371.00
-          .value
-            a.more(href='#') Order detalis
-        .account-history-right
-          .product-history
-            .product-history-item
-              .product-history-item--left
-                .title
-                  span 1 x
-                  |  Carolina Crown Amish Bed
-                .value.price.total.ps-4
-                  | Product price:
-                  span $1,371.00
-              .product-history-item--right
-                .value
-                  | Order status:
-                  br
-                  span Shipped Jan 17, 2018
-                .value
-                  | Tracking number:
-                  br
-                  a(href='#') 1130338867
+    .container
+        .row.mb-3
+            .col-sm-12
                 .d-flex.flex-column
-                    +rating-account('0')
-            .product-history-item
-              .product-history-item--left
-                .title
-                  span 2 x
-                  |  Handcrafted Amish Gluten Free Bedroom Set
-                .value.price.total.ps-4
-                  | Product price:
-                  span $1,371.00
-              .product-history-item--right
-                .value
-                  | Order status:
-                  br
-                  span Shipped Jan 17, 2018
-                .value
-                  | Tracking number:
-                  br
-                  a(href='#') 1130338867
-                .d-flex.flex-column
-                    +rating-account('0')
-            .product-history-item
-              .product-history-item--left
-                .title
-                  span 1 x
-                  |  Carolina Crown Amish Bed
-                .value.price.total.ps-4
-                  | Product price:
-                  span $1,371.00
-              .product-history-item--right
-                .value
-                  | Order status:
-                  br
-                  span Shipped Jan 17, 2018
-                .value
-                  | Tracking number:
-                  br
-                  a(href='#') 1130338867
-                .d-flex.flex-column
-                    +rating-account('0')
-    .row.px-3
-      h6.account-subtitle.w-100
-      .account-history.mb-1
-        .account-history-left
-          h3.title Order #1130338867
-          .value
-            | Order placed:
-            span Jan 17, 2018
-          .value.price.total
-            | Total:
-            span $1,371.00
-          .value
-            a.more(href='#') Order detalis
-        .account-history-right
-          .product-history
-            .product-history-item
-              .product-history-item--left
-                .title
-                  span 1 x
-                  |  Carolina Crown Amish Bed
-                .value.price.total.ps-4
-                  | Product price:
-                  span $1,371.00
-              .product-history-item--right
-                .value
-                  | Order status:
-                  br
-                  span Shipped Jan 17, 2018
-                .value
-                  | Tracking number:
-                  br
-                  a(href='#') 1130338867
-                .d-flex.flex-column
-                    +rating-account('0')
-    .row.px-3
-      h6.account-subtitle.w-100
-      .account-history.mb-1
-        .account-history-left
-          h3.title Order #1130338867
-          .value
-            | Order placed:
-            span Jan 17, 2018
-          .value.price.total
-            | Total:
-            span $1,371.00
-          .value
-            a.more(href='#') Order detalis
-        .account-history-right
-          .product-history
-            .product-history-item
-              .product-history-item--left
-                .title
-                  span 1 x
-                  |  Carolina Crown Amish Bed
-                .value.price.total.ps-4
-                  | Product price:
-                  span $1,371.00
-              .product-history-item--right
-                .value
-                  | Order status:
-                  br
-                  span Shipped Jan 17, 2018
-                .value
-                  | Tracking number:
-                  br
-                  a(href='#') 1130338867
-                .d-flex.flex-column
-                    +rating-account('0')
-            .product-history-item
-              .product-history-item--left
-                .title
-                  span 2 x
-                  |  Handcrafted Amish Gluten Free Bedroom Set
-                .value.price.total.ps-4
-                  | Product price:
-                  span $1,371.00
-              .product-history-item--right
-                .value
-                  | Order status:
-                  br
-                  span Shipped Jan 17, 2018
-                .value
-                  | Tracking number:
-                  br
-                  a(href='#') 1130338867
-                .d-flex.flex-column
-                    +rating-account('0')
+                    h1.text-dark.mb-3 My Account
+                    h6.text-dark You are logged in as johnsmith1974@gmail.com
+                        a.log_out(href='#')
+                            i.fa.fa-sign-out
+                            | Log Out
+        .row.shipping_billing
+            .col-xl-8.col-lg-7.col-md-12
+                h6.account-subtitle Shipping and billing Information
+                    a.edit(href="#")
+                        i.fa.fa-pencil.me-2
+                        | Edit
+                .row
+                    .col-md-4
+                        p.text-black.mb-0 #[b Shipping Address]
+                        .addr
+                            p John Doe
+                            p 700 Carpenters Crossing
+                            p BWW Ste 286309
+                            p Folcroft, PA 19032-2011
+                            p United States
+                            p (484) 5400190
+                    .col-md-4
+                        p.text-black.mb-0 #[b Billing Address]
+                        .addr
+                            p Same as shipping address
+                    .col-md-4
+                        p.text-black.mb-0 #[b Payment Information]
+                        .addr
+                            p To safeguard your personal inormation we do not store credit card information
+            .col-xl-4.col-lg-5.col-md-12
+                h6.account-subtitle Account information and security
+                    a.edit(href="#")
+                        i.fa.fa-pencil.me-2
+                        | Edit
+                p.text-black.mb-0 #[b Name, Email & Password]
+                .addr
+                    p John Doe
+                    p john-doe@gmail.com
+                    p Password: ********
+        .row.px-3
+            h6.account-subtitle.w-100 YOUR ORDER HISTORY
+            .account-history
+                .account-history-left
+                    h3.title Order #1130338867
+                    .value
+                        | Order placed:
+                        span Jan 17, 2018
+                    .value.price.total
+                        | Total:
+                        span $1,371.00
+                    .value
+                        a.more(href='#') Order detalis
+                .account-history-right
+                    .product-history
+                        .product-history-item
+                            .product-history-item--left
+                                .title
+                                    span 1 x
+                                    |  Carolina Crown Amish Bed
+                                .value.price.total.ps-4
+                                    | Product price:
+                                    span $1,371.00
+                            .product-history-item--right
+                                .value
+                                    | Order status:
+                                    br
+                                    span Shipped Jan 17, 2018
+                                .value
+                                    | Tracking number:
+                                    br
+                                    a(href='#') 1130338867
+                                .d-flex.flex-column
+                                    +rating-account('0')
+                        .product-history-item
+                            .product-history-item--left
+                                .title
+                                    span 2 x
+                                    |  Handcrafted Amish Gluten Free Bedroom Set
+                                .value.price.total.ps-4
+                                    | Product price:
+                                    span $1,371.00
+                            .product-history-item--right
+                                .value
+                                    | Order status:
+                                    br
+                                    span Shipped Jan 17, 2018
+                                .value
+                                    | Tracking number:
+                                    br
+                                    a(href='#') 1130338867
+                                .d-flex.flex-column
+                                    +rating-account('0')
+                        .product-history-item
+                            .product-history-item--left
+                                .title
+                                    span 1 x
+                                    |  Carolina Crown Amish Bed
+                                .value.price.total.ps-4
+                                    | Product price:
+                                    span $1,371.00
+                            .product-history-item--right
+                                .value
+                                    | Order status:
+                                    br
+                                    span Shipped Jan 17, 2018
+                                .value
+                                    | Tracking number:
+                                    br
+                                    a(href='#') 1130338867
+                                .d-flex.flex-column
+                                    +rating-account('0')
+        .row.px-3
+            h6.account-subtitle.w-100
+            .account-history.mb-1
+                .account-history-left
+                    h3.title Order #1130338867
+                    .value
+                        | Order placed:
+                        span Jan 17, 2018
+                    .value.price.total
+                        | Total:
+                        span $1,371.00
+                    .value
+                        a.more(href='#') Order detalis
+                .account-history-right
+                    .product-history
+                        .product-history-item
+                            .product-history-item--left
+                                .title
+                                    span 1 x
+                                    |  Carolina Crown Amish Bed
+                                .value.price.total.ps-4
+                                    | Product price:
+                                    span $1,371.00
+                            .product-history-item--right
+                                .value
+                                    | Order status:
+                                    br
+                                    span Shipped Jan 17, 2018
+                                .value
+                                    | Tracking number:
+                                    br
+                                    a(href='#') 1130338867
+                                .d-flex.flex-column
+                                    +rating-account('0')
+        .row.px-3
+            h6.account-subtitle.w-100
+            .account-history.mb-1
+                .account-history-left
+                    h3.title Order #1130338867
+                    .value
+                        | Order placed:
+                        span Jan 17, 2018
+                    .value.price.total
+                        | Total:
+                        span $1,371.00
+                    .value
+                        a.more(href='#') Order detalis
+                .account-history-right
+                    .product-history
+                        .product-history-item
+                            .product-history-item--left
+                                .title
+                                    span 1 x
+                                    |  Carolina Crown Amish Bed
+                                .value.price.total.ps-4
+                                    | Product price:
+                                    span $1,371.00
+                            .product-history-item--right
+                                .value
+                                    | Order status:
+                                    br
+                                    span Shipped Jan 17, 2018
+                                .value
+                                    | Tracking number:
+                                    br
+                                    a(href='#') 1130338867
+                                .d-flex.flex-column
+                                    +rating-account('0')
+                        .product-history-item
+                            .product-history-item--left
+                                .title
+                                    span 2 x
+                                    |  Handcrafted Amish Gluten Free Bedroom Set
+                                .value.price.total.ps-4
+                                    | Product price:
+                                    span $1,371.00
+                            .product-history-item--right
+                                .value
+                                    | Order status:
+                                    br
+                                    span Shipped Jan 17, 2018
+                                .value
+                                    | Tracking number:
+                                    br
+                                    a(href='#') 1130338867
+                                .d-flex.flex-column
+                                    +rating-account('0')

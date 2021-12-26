@@ -1,305 +1,305 @@
 section.cart.address-section
-  .container
-    a.back.text-brown(href='#')
-      i.fa.fa-chevron-left
-      | Back to cart
-    h1 Delivery Information
-    .row.wishlist-item
-      .wishlist-item-left
-        .row
-          .col-lg-6
-            h5.address-title Shipping Address
-              a.edit.ps-2(href="#")
-                i.fa.fa-pencil
-                | change
-            form.form-address(action="")
-              .row
-                .mb-3.col-md-6
-                  label.col-form-label.col-form-label-sm First name
-                  input.form-control(type='text', name='first-name')
-                .mb-3.col-md-6
-                  label.col-form-label.col-form-label-sm Last name
-                  input.form-control(type='text', name='last-name')
-              .row
-                .mb-3.col-md-12
-                  label.col-form-label.col-form-label-sm Company name (optional)
-                  input.form-control(type='text', name='company-name')
-              .row
-                .mb-3.col-md-12
-                  label.col-form-label.col-form-label-sm Street address
-                  input.form-control.mb-2(type='text', name='street-address-1', placeholder="Address line 1")
-                .mb-3.col-md-12
-                  input.form-control(type='text', name='street-address-2', placeholder="Address line 2 (optional)")
-              .row
-                .mb-3.col-md-6
-                  label.col-form-label.col-form-label-sm City
-                  input.form-control(type='text', name='city')
-                .mb-3.col-md-6
-                  label.col-form-label.col-form-label-sm State
-                  input.form-control(type='text', name='state')
-              .row
-                .mb-3.col-md-6
-                  label.col-form-label.col-form-label-sm Zip-code
-                  input.form-control(type='text', name='Zip-code')
-                .mb-3.col-md-6
-                  label.col-form-label.col-form-label-sm Ext (optional)
-                  input.form-control(type='text', name='ext')
-                .mb-3.col-md-6
-                  label.col-form-label.col-form-label-sm Phone
-                  input.form-control(type='text', name='phone')
-          .col-lg-6.border-dashed-b
-            .d-flex.flex-column.justify-content-between
-              h5.address-title Billing address
-              a.text-brown.my-2(href="#" id="same_as_ship_adr") Same as shipping address
+    .container
+        a.back.text-brown(href='#')
+            i.fa.fa-chevron-left
+            | Back to cart
+        h1 Delivery Information
+        .row.wishlist-item
+            .wishlist-item-left
+                .row
+                    .col-lg-6
+                        h5.address-title Shipping Address
+                            a.edit.ps-2(href="#")
+                                i.fa.fa-pencil
+                                | change
+                        form.form-address(action="")
+                            .row
+                                .mb-3.col-md-6
+                                    label.col-form-label.col-form-label-sm First name
+                                    input.form-control(type='text', name='first-name')
+                                .mb-3.col-md-6
+                                    label.col-form-label.col-form-label-sm Last name
+                                    input.form-control(type='text', name='last-name')
+                            .row
+                                .mb-3.col-md-12
+                                    label.col-form-label.col-form-label-sm Company name (optional)
+                                    input.form-control(type='text', name='company-name')
+                            .row
+                                .mb-3.col-md-12
+                                    label.col-form-label.col-form-label-sm Street address
+                                    input.form-control.mb-2(type='text', name='street-address-1', placeholder="Address line 1")
+                                .mb-3.col-md-12
+                                    input.form-control(type='text', name='street-address-2', placeholder="Address line 2 (optional)")
+                            .row
+                                .mb-3.col-md-6
+                                    label.col-form-label.col-form-label-sm City
+                                    input.form-control(type='text', name='city')
+                                .mb-3.col-md-6
+                                    label.col-form-label.col-form-label-sm State
+                                    input.form-control(type='text', name='state')
+                            .row
+                                .mb-3.col-md-6
+                                    label.col-form-label.col-form-label-sm Zip-code
+                                    input.form-control(type='text', name='Zip-code')
+                                .mb-3.col-md-6
+                                    label.col-form-label.col-form-label-sm Ext (optional)
+                                    input.form-control(type='text', name='ext')
+                                .mb-3.col-md-6
+                                    label.col-form-label.col-form-label-sm Phone
+                                    input.form-control(type='text', name='phone')
+                    .col-lg-6.border-dashed-b
+                        .d-flex.flex-column.justify-content-between
+                            h5.address-title Billing address
+                            a.text-brown.my-2(href="#" id="same_as_ship_adr") Same as shipping address
 
-            form.form-address.form-address-billing.border-b-dashed(action="")
-              .row
-                .mb-3.col-md-6
-                  label.col-form-label.col-form-label-sm First name
-                  input.form-control(type='text', name='first-name')
-                .mb-3.col-md-6
-                  label.col-form-label.col-form-label-sm Last name
-                  input.form-control(type='text', name='last-name')
-              .row
-                .mb-3.col-md-12
-                  label.col-form-label.col-form-label-sm Company name (optional)
-                  input.form-control(type='text', name='company-name')
-              .row
-                .mb-3.col-md-12
-                  label.col-form-label.col-form-label-sm Street address
-                  input.form-control.mb-2(type='text', name='street-address-1', placeholder="Address line 1")
-                .mb-3.col-md-12
-                  input.form-control(type='text', name='street-address-2', placeholder="Address line 2 (optional)")
-              .row
-                .mb-3.col-md-6
-                  label.col-form-label.col-form-label-sm City
-                  input.form-control(type='text', name='city')
-                .mb-3.col-md-6
-                  label.col-form-label.col-form-label-sm State
-                  input.form-control(type='text', name='state')
-              .row
-                .mb-3.col-md-6
-                  label.col-form-label.col-form-label-sm Zip-code
-                  input.form-control(type='text', name='Zip-code')
-                .mb-3.col-md-6
-                  label.col-form-label.col-form-label-sm Ext (optional)
-                  input.form-control(type='text', name='ext')
-                .mb-3.col-md-6
-                  label.col-form-label.col-form-label-sm Phone
-                  input.form-control(type='text', name='phone')
-            .d-flex.flex-column.mt-3.mb-0
-              h5.address-title Gift Certificates codes
-              .form-group-apply.row.mb-0
-                .col-sm-6
-                  input.form-control(type='text', name='', placeholder='Enter code')
-                .col-sm-3
-                  a(href='#').btn.btn-outline-primary Apply
+                        form.form-address.form-address-billing.border-b-dashed(action="")
+                            .row
+                                .mb-3.col-md-6
+                                    label.col-form-label.col-form-label-sm First name
+                                    input.form-control(type='text', name='first-name')
+                                .mb-3.col-md-6
+                                    label.col-form-label.col-form-label-sm Last name
+                                    input.form-control(type='text', name='last-name')
+                            .row
+                                .mb-3.col-md-12
+                                    label.col-form-label.col-form-label-sm Company name (optional)
+                                    input.form-control(type='text', name='company-name')
+                            .row
+                                .mb-3.col-md-12
+                                    label.col-form-label.col-form-label-sm Street address
+                                    input.form-control.mb-2(type='text', name='street-address-1', placeholder="Address line 1")
+                                .mb-3.col-md-12
+                                    input.form-control(type='text', name='street-address-2', placeholder="Address line 2 (optional)")
+                            .row
+                                .mb-3.col-md-6
+                                    label.col-form-label.col-form-label-sm City
+                                    input.form-control(type='text', name='city')
+                                .mb-3.col-md-6
+                                    label.col-form-label.col-form-label-sm State
+                                    input.form-control(type='text', name='state')
+                            .row
+                                .mb-3.col-md-6
+                                    label.col-form-label.col-form-label-sm Zip-code
+                                    input.form-control(type='text', name='Zip-code')
+                                .mb-3.col-md-6
+                                    label.col-form-label.col-form-label-sm Ext (optional)
+                                    input.form-control(type='text', name='ext')
+                                .mb-3.col-md-6
+                                    label.col-form-label.col-form-label-sm Phone
+                                    input.form-control(type='text', name='phone')
+                        .d-flex.flex-column.mt-3.mb-0
+                            h5.address-title Gift Certificates codes
+                            .form-group-apply.row.mb-0
+                                .col-sm-6
+                                    input.form-control(type='text', name='', placeholder='Enter code')
+                                .col-sm-3
+                                    a(href='#').btn.btn-outline-primary Apply
 
-        .row
-          h2.address-subtitle Shopping cart
-          .col-md-3.col-sm-4
-            .product-selected
-              img.img-fluid(src='img/product/yKelvO0K53.jpg')
-              .product-selected-option
-                h6 #[b Brown Mapple]
-                  br
-                  | OCS-101 S-2
-                img(src='img/product/tmp_stain.jpg')
-              .product-selected-text Buying this as a gift?
-                br
-                a(href='#', data-bs-toggle='modal', data-bs-target='#gifting_options') See gifting options
+                .row
+                    h2.address-subtitle Shopping cart
+                    .col-md-3.col-sm-4
+                        .product-selected
+                            img.img-fluid(src='img/product/yKelvO0K53.jpg')
+                            .product-selected-option
+                                h6 #[b Brown Mapple]
+                                    br
+                                    | OCS-101 S-2
+                                img(src='img/product/tmp_stain.jpg')
+                            .product-selected-text Buying this as a gift?
+                                br
+                                a(href='#', data-bs-toggle='modal', data-bs-target='#gifting_options') See gifting options
 
-          .col-md-6.col-sm-8.border-b-dashed
-            .option-selected
-              h6 #[b Carolina Crown Amish Bed]
-              include _option-selected-list
-            .actions
-              a.edit(href='#')
-                i.fa.fa-pencil
-                | Edit
-              a.wishlist(href='#')
-                i.fa.fa-heart-o
-                | Move to wishlist
-              a.delete(href='#')
-                i.fa.fa-trash
-                | Delete
-          .col-md-3.border-b-dashed
-            .values
-              span.values_inline_label Subtotal:
-              span.price $1,371.00
-            .values
-              span.values_inline_label Shipping:
-              span.price.price_shipping $71.00
-            .values
-              span.values_inline_label Delivery:
-              a.more.align-self-end(href='#') Inside delivery with setup
+                    .col-md-6.col-sm-8.border-b-dashed
+                        .option-selected
+                            h6 #[b Carolina Crown Amish Bed]
+                            include _option-selected-list
+                        .actions
+                            a.edit(href='#')
+                                i.fa.fa-pencil
+                                | Edit
+                            a.wishlist(href='#')
+                                i.fa.fa-heart-o
+                                | Move to wishlist
+                            a.delete(href='#')
+                                i.fa.fa-trash
+                                | Delete
+                    .col-md-3.border-b-dashed
+                        .values
+                            span.values_inline_label Subtotal:
+                            span.price $1,371.00
+                        .values
+                            span.values_inline_label Shipping:
+                            span.price.price_shipping $71.00
+                        .values
+                            span.values_inline_label Delivery:
+                            a.more.align-self-end(href='#') Inside delivery with setup
 
-        .row.px-0
-          .col-md-3.col-sm-4
-            .product-selected
-              img.img-fluid(src='img/product/Amq5PuczxT.jpg')
-              .product-selected-option
-                h6 #[b Brown Mapple]
-                  br
-                  | OCS-101 S-2
-                img(src='img/product/tmp_stain.jpg')
-              .product-selected-text Buying this as a gift?
-                br
-                a(href='#', data-bs-toggle='modal', data-bs-target='#gifting_options') See gifting options
+                .row.px-0
+                    .col-md-3.col-sm-4
+                        .product-selected
+                            img.img-fluid(src='img/product/Amq5PuczxT.jpg')
+                            .product-selected-option
+                                h6 #[b Brown Mapple]
+                                    br
+                                    | OCS-101 S-2
+                                img(src='img/product/tmp_stain.jpg')
+                            .product-selected-text Buying this as a gift?
+                                br
+                                a(href='#', data-bs-toggle='modal', data-bs-target='#gifting_options') See gifting options
 
-          .col-md-6.col-sm-8.border-b-dashed
-            .option-selected
-              h6 #[b Carolina Crown Amish Bed]
-              include _option-selected-list
-            .actions
-              a.edit(href='#')
-                i.fa.fa-pencil
-                | Edit
-              a.wishlist(href='#')
-                i.fa.fa-heart-o
-                | Move to wishlist
-              a.delete(href='#')
-                i.fa.fa-trash
-                | Delete
-          .col-md-3.border-b-dashed
-            .values
-              span.values_inline_label Subtotal:
-              span.price $1,371.00
-            .values
-              span.values_inline_label Shipping:
-              span.price.price_shipping $71.00
-            .values
-              span.values_inline_label Delivery:
-              a.more.align-self-end(href='#') Inside delivery with setup
+                    .col-md-6.col-sm-8.border-b-dashed
+                        .option-selected
+                            h6 #[b Carolina Crown Amish Bed]
+                            include _option-selected-list
+                        .actions
+                            a.edit(href='#')
+                                i.fa.fa-pencil
+                                | Edit
+                            a.wishlist(href='#')
+                                i.fa.fa-heart-o
+                                | Move to wishlist
+                            a.delete(href='#')
+                                i.fa.fa-trash
+                                | Delete
+                    .col-md-3.border-b-dashed
+                        .values
+                            span.values_inline_label Subtotal:
+                            span.price $1,371.00
+                        .values
+                            span.values_inline_label Shipping:
+                            span.price.price_shipping $71.00
+                        .values
+                            span.values_inline_label Delivery:
+                            a.more.align-self-end(href='#') Inside delivery with setup
 
-        .row
-          .col-lg-3.col-md-0
-          .col-lg-5.col-md-12
-            .values.mt-3 Savings on combined shipping:
-              span.save_price $32.00
+                .row
+                    .col-lg-3.col-md-0
+                    .col-lg-5.col-md-12
+                        .values.mt-3 Savings on combined shipping:
+                            span.save_price $32.00
 
-          .col-lg-4.col-md-12
-            .values.text-end.mt-3  Combined shipping (2 items):
-              span.price.price_shipping $71.00
-            .values.text-end.mb-3.mt-0
-              span Delivery:
-                a.more(href='#') Inside delivery with setup
-        .row.px-0.mb-3
-          .col-md-3.col-sm-4
-            .product-selected
-              img.img-fluid(src='img/product/5aa15072b8457.jpeg')
-              .product-selected-option
-                h6 #[b Brown Mapple]
-                  br
-                  | OCS-101 S-2
-                img(src='img/product/tmp_stain.jpg')
-              .product-selected-text Buying this as a gift?
-                br
-                a(href='#', data-bs-toggle='modal', data-bs-target='#gifting_options') See gifting options
+                    .col-lg-4.col-md-12
+                        .values.text-end.mt-3  Combined shipping (2 items):
+                            span.price.price_shipping $71.00
+                        .values.text-end.mb-3.mt-0
+                            span Delivery:
+                                a.more(href='#') Inside delivery with setup
+                .row.px-0.mb-3
+                    .col-md-3.col-sm-4
+                        .product-selected
+                            img.img-fluid(src='img/product/5aa15072b8457.jpeg')
+                            .product-selected-option
+                                h6 #[b Brown Mapple]
+                                    br
+                                    | OCS-101 S-2
+                                img(src='img/product/tmp_stain.jpg')
+                            .product-selected-text Buying this as a gift?
+                                br
+                                a(href='#', data-bs-toggle='modal', data-bs-target='#gifting_options') See gifting options
 
-          .col-md-6.col-sm-8.border-b-dashed
-            .option-selected
-              h6 #[b Carolina Crown Amish Bed]
-              include _option-selected-list
-            .actions
-              a.edit(href='#')
-                i.fa.fa-pencil
-                | Edit
-              a.wishlist(href='#')
-                i.fa.fa-heart-o
-                | Move to wishlist
-              a.delete(href='#')
-                i.fa.fa-trash
-                | Delete
-          .col-md-3.border-b-dashed
-            .values
-              span.values_inline_label Subtotal:
-              span.price $1,371.00
-            .values
-              span.values_inline_label Shipping:
-              span.price.price_shipping $71.00
-            .values
-              span.values_inline_label Delivery:
-              a.more.align-self-end(href='#') Inside delivery with setup
+                    .col-md-6.col-sm-8.border-b-dashed
+                        .option-selected
+                            h6 #[b Carolina Crown Amish Bed]
+                            include _option-selected-list
+                        .actions
+                            a.edit(href='#')
+                                i.fa.fa-pencil
+                                | Edit
+                            a.wishlist(href='#')
+                                i.fa.fa-heart-o
+                                | Move to wishlist
+                            a.delete(href='#')
+                                i.fa.fa-trash
+                                | Delete
+                    .col-md-3.border-b-dashed
+                        .values
+                            span.values_inline_label Subtotal:
+                            span.price $1,371.00
+                        .values
+                            span.values_inline_label Shipping:
+                            span.price.price_shipping $71.00
+                        .values
+                            span.values_inline_label Delivery:
+                            a.more.align-self-end(href='#') Inside delivery with setup
 
-        .row.px-0
-          .col-md-3
-            .product-selected
-              img.img-fluid(src='img/product/Amq5PuczxT.jpg')
-              .product-selected-option
-                h6 #[b Brown Mapple]
-                  br
-                  | OCS-101 S-2
-                img(src='img/product/tmp_stain.jpg')
-              .product-selected-text Buying this as a gift?
-                br
-                a(href='#', data-bs-toggle='modal', data-bs-target='#gifting_options') See gifting options
+                .row.px-0
+                    .col-md-3
+                        .product-selected
+                            img.img-fluid(src='img/product/Amq5PuczxT.jpg')
+                            .product-selected-option
+                                h6 #[b Brown Mapple]
+                                    br
+                                    | OCS-101 S-2
+                                img(src='img/product/tmp_stain.jpg')
+                            .product-selected-text Buying this as a gift?
+                                br
+                                a(href='#', data-bs-toggle='modal', data-bs-target='#gifting_options') See gifting options
 
-          .col-md-6.border-b-dashed
-            .option-selected
-              h6 #[b Carolina Crown Amish Bed]
-              include _option-selected-list
-            .actions
-              a.edit(href='#')
-                i.fa.fa-pencil
-                | Edit
-              a.wishlist(href='#')
-                i.fa.fa-heart-o
-                | Move to wishlist
-              a.delete(href='#')
-                i.fa.fa-trash
-                | Delete
-          .col-md-3.border-b-dashed
-            .values
-              span.values_inline_label Subtotal:
-              span.price $1,371.00
-            .values
-              span.values_inline_label Shipping:
-              span.price.price_shipping $71.00
-            .values
-              span.values_inline_label Delivery:
-              a.more.align-self-end(href='#') Inside delivery with setup
-        .row
-          .col-lg-3
-          .col-lg-5.col-md-12
-            .values.mt-3 Savings on combined shipping:
-              span.save_price $32.00
+                    .col-md-6.border-b-dashed
+                        .option-selected
+                            h6 #[b Carolina Crown Amish Bed]
+                            include _option-selected-list
+                        .actions
+                            a.edit(href='#')
+                                i.fa.fa-pencil
+                                | Edit
+                            a.wishlist(href='#')
+                                i.fa.fa-heart-o
+                                | Move to wishlist
+                            a.delete(href='#')
+                                i.fa.fa-trash
+                                | Delete
+                    .col-md-3.border-b-dashed
+                        .values
+                            span.values_inline_label Subtotal:
+                            span.price $1,371.00
+                        .values
+                            span.values_inline_label Shipping:
+                            span.price.price_shipping $71.00
+                        .values
+                            span.values_inline_label Delivery:
+                            a.more.align-self-end(href='#') Inside delivery with setup
+                .row
+                    .col-lg-3
+                    .col-lg-5.col-md-12
+                        .values.mt-3 Savings on combined shipping:
+                            span.save_price $32.00
 
-          .col-lg-4.col-md-12
-            .values.text-end.mt-3  Combined shipping (2 items):
-              span.price.price_shipping $71.00
-            .values.text-end.mb-3.mt-0
-              span Delivery:
-                a.more(href='#') Inside delivery with setup
-        .extended_price
-          | Extended price (includes shipping):
-          span.text-brown $1,371.00
-      .wishlist-item-right
-        .proceed_to_checkout
-          .d-flex.justify-content-center
-            a.btn.btn-warning(href="#")
-              b Place your order
-          .title Order Summary
-          .item
-            span.name Items:
-            span.price $1,321.00
-          .item
-            span.name Shipping & handling:
-            span.price $234.00
-          .item
-            span.name Savings on combined shipping:
-            span.price.text-brown  - $128.24
-          .item
-            span.name Total before tax:
-            span.price $1,371.00
-          .item
-            span.name Estimated tax to be collected:
-            span.price $0.00
-          .item.full_price
-            span.name Order total:
-            span.price $1,371.00
-        .delivery_information
-          .title Delivery information:
-          p This piece of Fine Furniture will be ready in approximately 8 weeks. Please allow about 2 weeks shipping time. Most Fine Furniture pieces are delivered fully assembled, with the exception of beds & dining tables. You will be contacted before delivery. There is a 25% deposit and the balance is charged when it ships.
-        .d-flex.justify-content-center
-          img.img-fluid.mb-3(src='img/general/norton_secured.png', alt='#')
+                    .col-lg-4.col-md-12
+                        .values.text-end.mt-3  Combined shipping (2 items):
+                            span.price.price_shipping $71.00
+                        .values.text-end.mb-3.mt-0
+                            span Delivery:
+                                a.more(href='#') Inside delivery with setup
+                .extended_price
+                    | Extended price (includes shipping):
+                    span.text-brown $1,371.00
+            .wishlist-item-right
+                .proceed_to_checkout
+                    .d-flex.justify-content-center
+                        a.btn.btn-warning(href="#")
+                            b Place your order
+                    .title Order Summary
+                    .item
+                        span.name Items:
+                        span.price $1,321.00
+                    .item
+                        span.name Shipping & handling:
+                        span.price $234.00
+                    .item
+                        span.name Savings on combined shipping:
+                        span.price.text-brown  - $128.24
+                    .item
+                        span.name Total before tax:
+                        span.price $1,371.00
+                    .item
+                        span.name Estimated tax to be collected:
+                        span.price $0.00
+                    .item.full_price
+                        span.name Order total:
+                        span.price $1,371.00
+                .delivery_information
+                    .title Delivery information:
+                    p This piece of Fine Furniture will be ready in approximately 8 weeks. Please allow about 2 weeks shipping time. Most Fine Furniture pieces are delivered fully assembled, with the exception of beds & dining tables. You will be contacted before delivery. There is a 25% deposit and the balance is charged when it ships.
+                .d-flex.justify-content-center
+                    img.img-fluid.mb-3(src='img/general/norton_secured.png', alt='#')

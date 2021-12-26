@@ -1,14 +1,14 @@
 import Mmenu from '../../core/oncanvas/mmenu.oncanvas';
 import options from './_options';
-import { extendShorthandOptions } from './_options';
+import {extendShorthandOptions} from './_options';
 import * as DOM from '../../_modules/dom';
 import * as support from '../../_modules/support';
-import { extend } from '../../_modules/helpers';
+import {extend} from '../../_modules/helpers';
 
 //  Add the options.
 Mmenu.options.sectionIndexer = options;
 
-export default function(this: Mmenu) {
+export default function (this: Mmenu) {
     var options = extendShorthandOptions(this.opts.sectionIndexer);
     this.opts.sectionIndexer = extend(options, Mmenu.options.sectionIndexer);
 
@@ -58,10 +58,10 @@ export default function(this: Mmenu) {
                         if (
                             newTop < 0 &&
                             letter ==
-                                divider.textContent
-                                    .trim()
-                                    .slice(0, 1)
-                                    .toLowerCase()
+                            divider.textContent
+                                .trim()
+                                .slice(0, 1)
+                                .toLowerCase()
                         ) {
                             newTop = divider.offsetTop;
                         }

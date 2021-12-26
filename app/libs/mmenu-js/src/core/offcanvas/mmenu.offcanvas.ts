@@ -1,7 +1,7 @@
 import Mmenu from './../oncanvas/mmenu.oncanvas';
 import options from './_options';
 import configs from './_configs';
-import { extendShorthandOptions } from './_options';
+import {extendShorthandOptions} from './_options';
 import * as DOM from '../../_modules/dom';
 import * as events from '../../_modules/eventlisteners';
 import {
@@ -15,7 +15,7 @@ import {
 Mmenu.options.offCanvas = options;
 Mmenu.configs.offCanvas = configs;
 
-export default function(this: Mmenu) {
+export default function (this: Mmenu) {
     if (!this.opts.offCanvas) {
         return;
     }
@@ -163,7 +163,7 @@ export default function(this: Mmenu) {
 /**
  * Open the menu.
  */
-Mmenu.prototype.open = function(this: Mmenu) {
+Mmenu.prototype.open = function (this: Mmenu) {
     //	Invoke "before" hook.
     this.trigger('open:before');
 
@@ -182,7 +182,7 @@ Mmenu.prototype.open = function(this: Mmenu) {
     this.trigger('open:after');
 };
 
-Mmenu.prototype._openSetup = function(this: Mmenu) {
+Mmenu.prototype._openSetup = function (this: Mmenu) {
     var options = this.opts.offCanvas;
 
     //	Close other menus
@@ -192,7 +192,7 @@ Mmenu.prototype._openSetup = function(this: Mmenu) {
     Mmenu.node.page['mmStyle'] = Mmenu.node.page.getAttribute('style') || '';
 
     //	Trigger window-resize to measure height
-    events.trigger(window, 'resize.page', { force: true });
+    events.trigger(window, 'resize.page', {force: true});
 
     var clsn = ['mm-wrapper_opened'];
 
@@ -227,7 +227,7 @@ Mmenu.prototype._openSetup = function(this: Mmenu) {
 /**
  * Finish opening the menu.
  */
-Mmenu.prototype._openStart = function(this: Mmenu) {
+Mmenu.prototype._openStart = function (this: Mmenu) {
     //	Callback when the page finishes opening.
     transitionend(
         Mmenu.node.page,
@@ -242,7 +242,7 @@ Mmenu.prototype._openStart = function(this: Mmenu) {
     this.node.wrpr.classList.add('mm-wrapper_opening');
 };
 
-Mmenu.prototype.close = function(this: Mmenu) {
+Mmenu.prototype.close = function (this: Mmenu) {
     //	Invoke "before" hook.
     this.trigger('close:before');
 
@@ -292,7 +292,7 @@ Mmenu.prototype.close = function(this: Mmenu) {
 /**
  * Close all other menus.
  */
-Mmenu.prototype.closeAllOthers = function(this: Mmenu) {
+Mmenu.prototype.closeAllOthers = function (this: Mmenu) {
     DOM.find(document.body, '.mm-menu_offcanvas').forEach(menu => {
         if (menu !== this.node.menu) {
             let api: mmApi = menu['mmApi'];
@@ -308,7 +308,7 @@ Mmenu.prototype.closeAllOthers = function(this: Mmenu) {
  *
  * @param {HTMLElement} page Element to set as the page.
  */
-Mmenu.prototype.setPage = function(this: Mmenu, page: HTMLElement) {
+Mmenu.prototype.setPage = function (this: Mmenu, page: HTMLElement) {
     //	Invoke "before" hook.
     this.trigger('setPage:before', [page]);
 
@@ -361,7 +361,7 @@ Mmenu.prototype.setPage = function(this: Mmenu, page: HTMLElement) {
 /**
  * Initialize the window.
  */
-const initWindow = function(this: Mmenu) {
+const initWindow = function (this: Mmenu) {
     //	Prevent tabbing
     //	Because when tabbing outside the menu, the element that gains focus will be centered on the screen.
     //	In other words: The menu would move out of view.
@@ -378,7 +378,7 @@ const initWindow = function(this: Mmenu) {
 /**
  * Initialize "blocker" node
  */
-const initBlocker = function(this: Mmenu) {
+const initBlocker = function (this: Mmenu) {
     //	Invoke "before" hook.
     this.trigger('initBlocker:before');
 

@@ -1163,44 +1163,53 @@ body.modal-open .mm-slideout {
 	
 	
 }
-.product-customize-form {
-	.swiper-button-next, .swiper-button-prev {
-		display: none;
-	}
-	.swiper-button-prev {
-		display: none !important;
-	}
-	&.swiper-initialized {
-		.swiper-wrapper {
-			flex-wrap: nowrap;
-			.swiper-slide {
-				max-width: 100% !important;
-				width: 100%;
-			}
-			.product-option.option-stain{
-				width: 100%;
-				height: 100%;
-				img {
-					height: 100%;
+.modal {
+	.product-customize-form {
+		.swiper-button-next, .swiper-button-prev {
+			display: none;
+		}
+		
+		&.swiper-initialized {
+			.swiper-wrapper {
+				flex-wrap: nowrap;
+				
+				.swiper-slide {
+					max-width: 100% !important;
+					width: 100%;
 				}
-				.product-option--label{
+				
+				.product-option.option-stain {
 					width: 100%;
 					height: 100%;
+					
+					img {
+						height: 100%;
+					}
+					
+					.product-option--label {
+						width: 100%;
+						height: 100%;
+					}
 				}
 			}
-		}
-		.swiper-button-next, .swiper-button-prev {
-			display: block;
-		}
-		.swiper-button-prev {
-			display: block !important;
+			
+			.swiper-button-next, .swiper-button-prev {
+				display: block;
+			}
+			
+			.swiper-button-prev {
+				display: block !important;
+			}
 		}
 	}
 }
+
+
 .modal.modal--select-optns {
 	.modal-content {
 		position: relative;
 	}
+	
 	.inline-gallery-container {
 		position: absolute !important;
 		width: 90%;
@@ -1208,12 +1217,15 @@ body.modal-open .mm-slideout {
 		left: 5%;
 		top: 2rem;
 		background: $white;
+		
 		.lg-maximize {
 			display: none;
 		}
+		
 		.lg-close {
 			opacity: 0;
 		}
+		
 		.closeFullSize {
 			position: absolute;
 			text-align: center;
@@ -1223,10 +1235,12 @@ body.modal-open .mm-slideout {
 		}
 	}
 }
+
 .product-customize-list.fabric-gallery {
 	flex-direction: row;
 	flex-wrap: wrap;
 	overflow: hidden;
+	
 	.fabric-gallery__item {
 		max-width: 50%;
 		
@@ -1240,6 +1254,7 @@ body.modal-open .mm-slideout {
 			max-width: 20%;
 		}
 	}
+	
 	.label {
 		display: inline-flex;
 	}

@@ -19,21 +19,19 @@ $(document).ready(function () {
     });
     
     /*show top-section*/
-    if ( $(".top-section.d-hidden").length > 0 && $(".content .product").length > 0 ){
-    	$(window).scroll(function(){
-    		var scroll = $(window).scrollTop();
-    		var customize_product = $(".product").offset().top;
-    		if ( scroll > customize_product + 150 ){
-    			if ( $(".top-section.d-hidden").css("display") == "none" )
-    				$(".top-section.d-hidden").stop().slideDown(300);
-    		}
-    		else if ( $(".top-section.d-hidden").css("display") == "flex" ) {
-    			$(".top-section.d-hidden").stop().slideUp(200);
-    		}
-    		else{
-    			$(".top-section.d-hidden").stop().slideUp(200);
-    		}
-    	});
+    if ($(".top-section.d-hidden").length > 0 && $(".content .product").length > 0) {
+        $(window).scroll(function () {
+            var scroll = $(window).scrollTop();
+            var customize_product = $(".product").offset().top;
+            if (scroll > customize_product + 150) {
+                if ($(".top-section.d-hidden").css("display") == "none")
+                    $(".top-section.d-hidden").stop().slideDown(300);
+            } else if ($(".top-section.d-hidden").css("display") == "flex") {
+                $(".top-section.d-hidden").stop().slideUp(200);
+            } else {
+                $(".top-section.d-hidden").stop().slideUp(200);
+            }
+        });
     }
     
     //Product image modal
@@ -307,7 +305,6 @@ $(document).ready(function () {
     // });
     
     
-    
     $(".btn.dropdown-toggle").removeAttr('title');
     
     /*Testimonials product hover*/
@@ -411,7 +408,7 @@ $(document).ready(function () {
             inputNo.prop("checked", true);
         }
     })
-
+    
     
     //Quantity input type number
     $('.quantity').each(function () {
@@ -446,12 +443,12 @@ $(document).ready(function () {
             spinner.find("input").trigger("change");
         });
     });
-
+    
     //
     // $('.mobile-close').on("click", function () {
     //     api.close();
     // });
-
+    
     function productModalTabControl() {
         let i,
           items = $('#productSelectTabs > li > .nav-link'),
@@ -502,7 +499,7 @@ $(document).ready(function () {
     $("#select_options").on('hidden.bs.modal', function () {
         $('.top-section').hide();
     });
-
+    
     
     $("#choose-filter").on("click", function (e) {
         e.preventDefault();
@@ -519,7 +516,6 @@ $(document).ready(function () {
     // };
     
     
-
     // Open Fullsize Option
     
     //Product Fabric options show fullscreen function
@@ -553,7 +549,7 @@ $(document).ready(function () {
         let current_item = $(this).closest('.item').addClass("selected");
         fabricFullSize(current_item);
     });
-
+    
     
     //Product Fabric options prev and next arrows
     $("#fabric-fullsize").on("click", "a.prev_img:not(.inactive), a.next_img:not(.inactive)", function (e) {
@@ -590,11 +586,11 @@ $(document).ready(function () {
         $(this).find("span").toggleClass("d-none");
         
     });
-
+    
     // mobile mmenu plugin navigation
     let mobBanners = $('.nav-pictures').html(); // get banners from desctop menu and put to mmenu
     let mobileMenu = document.querySelector('#mobile-menu');
-    if(mobileMenu){
+    if (mobileMenu) {
         new Mmenu(
           mobileMenu, {
               extensions: [
@@ -615,50 +611,50 @@ $(document).ready(function () {
                       content: mobBanners,
                   }
               ],
-          
+              
               setSelected: true,
               panelNodetype: ["ul", "ol"],
           },
           {});
     }
-
+    
     let zoom = 1;
     
-    $('.zoom-in').on('click', function(e){
+    $('.zoom-in').on('click', function (e) {
         e.preventDefault();
         zoom += 0.1;
         let getTarget = $(this).attr("data-zoom");
         $(getTarget).css({
-            '-webkit-transform' : 'scale(' + zoom + ')',
-            '-moz-transform'    : 'scale(' + zoom + ')',
-            '-ms-transform'     : 'scale(' + zoom + ')',
-            '-o-transform'      : 'scale(' + zoom + ')',
-            'transform'         : 'scale(' + zoom + ')'
+            '-webkit-transform': 'scale(' + zoom + ')',
+            '-moz-transform': 'scale(' + zoom + ')',
+            '-ms-transform': 'scale(' + zoom + ')',
+            '-o-transform': 'scale(' + zoom + ')',
+            'transform': 'scale(' + zoom + ')'
         });
     });
     
-    $('.zoom-out').on('click', function(e){
+    $('.zoom-out').on('click', function (e) {
         e.preventDefault();
         zoom -= 0.1;
         let getTarget = $(this).attr("data-zoom");
         $(getTarget).css({
-            '-webkit-transform' : 'scale(' + zoom + ')',
-            '-moz-transform'    : 'scale(' + zoom + ')',
-            '-ms-transform'     : 'scale(' + zoom + ')',
-            '-o-transform'      : 'scale(' + zoom + ')',
-            'transform'         : 'scale(' + zoom + ')'
+            '-webkit-transform': 'scale(' + zoom + ')',
+            '-moz-transform': 'scale(' + zoom + ')',
+            '-ms-transform': 'scale(' + zoom + ')',
+            '-o-transform': 'scale(' + zoom + ')',
+            'transform': 'scale(' + zoom + ')'
         });
     });
     
-    $('.option-selected-list__viewAll').each(function(){
+    $('.option-selected-list__viewAll').each(function () {
         const max = 2;
         let $this = $(this);
         if ($this.find('li').length > max) {
-            $this.find('li:gt('+max+')').hide().end().append('<li class="viewAll"><a href="#" class="show_more">Show All</a></li>');
-            $this.find('.viewAll').on("click", function (e){
+            $this.find('li:gt(' + max + ')').hide().end().append('<li class="viewAll"><a href="#" class="show_more">Show All</a></li>');
+            $this.find('.viewAll').on("click", function (e) {
                 e.preventDefault();
-                $(this).siblings(':gt('+max+')').toggle();
-                if ( $('.show_more').length ) {
+                $(this).siblings(':gt(' + max + ')').toggle();
+                if ($('.show_more').length) {
                     $(this).html('<a href="#" class="show_less">Show Less</a>');
                 } else {
                     $(this).html('<a href="#" class="show_more">Show All</a>');
@@ -669,9 +665,9 @@ $(document).ready(function () {
     
     $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
         var target = this.href.split('#');
-        $('.nav a').filter('a[href="#'+target[1]+'"]').tab('show');
+        $('.nav a').filter('a[href="#' + target[1] + '"]').tab('show');
     })
-    $('#choose-optns').on("click",function () {
+    $('#choose-optns').on("click", function () {
         $("html, body").animate({
             scrollTop: $("#nav-tab").offset().top -= 100
         }, 100);
@@ -693,17 +689,17 @@ $(document).ready(function () {
             el: ".swiper-pagination",
             clickable: true,
             renderBullet: function (index, className) {
-                return '<span class="' + className + ' '+ (index + 1) +'">' + "</span>";
+                return '<span class="' + className + ' ' + (index + 1) + '">' + "</span>";
             },
         },
-    
+        
         // And if we need scrollbar
         scrollbar: {
             el: '.swiper-scrollbar',
         },
     }
     if ($('.home-slider .swiper').length != 0) {
-        new Swiper (".home-slider .swiper", homeHeroSliderCfg);
+        new Swiper(".home-slider .swiper", homeHeroSliderCfg);
     }
     const relatedSwiperCfg = {
         loop: false,
@@ -716,8 +712,8 @@ $(document).ready(function () {
         },
     }
     
-
-    $(".related-wrap").each(function(index, element){
+    
+    $(".related-wrap").each(function (index, element) {
         let $this = $(this);
         new Swiper(this, {
             loop: true,
@@ -752,7 +748,7 @@ $(document).ready(function () {
     /*PDP options list slider*/
     let prodCustomSlider = $(".product-customize--slider");
     
-    prodCustomSlider.each(function(index, element){
+    prodCustomSlider.each(function (index, element) {
         let $this = $(this);
         new Swiper(this, {
             loop: false,
@@ -760,6 +756,7 @@ $(document).ready(function () {
             slidesPerView: 5,
             spaceBetween: 30,
             lazyLoading: true,
+            noSwiping: true,
             pagination: {
                 el: ".swiper-pagination",
                 type: "progressbar",
@@ -787,14 +784,16 @@ $(document).ready(function () {
             },
             on: {
                 init: function () {
-                    if (this.slides.length <= 7) {
+                    if (this.slides.length < 7) {
                         // Second way:
+                        console.log(this.slides.length);
                         this.el.classList.add('swiper-no-swiping');
                     }
                 }
             }
         });
     });
+    
     /*PDP main slider carousel*/
     let galleryThumbs = new Swiper('.pdpGallery-thumbs', {
         direction: 'vertical', // вертикальная прокрутка
@@ -822,7 +821,7 @@ $(document).ready(function () {
     let productGallery = document.getElementById('product-gallery');
     let realIndexSlider;
     let productGalleryDynamic = [];
-    if(productGallery) {
+    if (productGallery) {
         let productGalleryItems = productGallery.getElementsByClassName('pdpGallery-item');
         for (let i = 0; i < productGalleryItems.length; i++) {
             const item = productGalleryItems[i];
@@ -833,7 +832,7 @@ $(document).ready(function () {
                 
             };
         }
-    
+        
         let productGalleryLight = lightGallery(productGallery, {
             dynamic: true,
             selector: '.pdpGallery-item',
@@ -852,7 +851,7 @@ $(document).ready(function () {
             },
             dynamicEl: productGalleryDynamic,
         });
-    
+        
         let viewGalleryBtn = document.getElementById('view-gallery');
         let viewGalleryZoom = document.getElementById('product-gallery-zoom');
         let openGalleryPopup = function (e) {
@@ -866,7 +865,7 @@ $(document).ready(function () {
         viewGalleryZoom.addEventListener('click', function (e) {
             openGalleryPopup();
         });
-    
+        
     }
     
     /*PDP options list Fabric modal slider*/
@@ -875,7 +874,7 @@ $(document).ready(function () {
     let fabricGalleryDynamic = [];
     let fabricGalleryItems = fabricGallery.getElementsByClassName('fabric-gallery__item');
     const $lgContainer = document.getElementById("fabric-full-size-container");
-   
+    
     for (let i = 0; i < fabricGalleryItems.length; i++) {
         const item = fabricGalleryItems[i];
         console.log($(item.getAttribute('data-sub-html')));
@@ -883,7 +882,7 @@ $(document).ready(function () {
         fabricGalleryDynamic[i] = {
             src: item.getAttribute('data-src'),
             // subHtml: item.getAttribute('data-sub-html'),
-            subHtml: '<h4 class="name">'+ item.getAttribute('data-title') + '</h4>',
+            subHtml: '<h4 class="name">' + item.getAttribute('data-title') + '</h4>',
         };
     }
     const inlineGallery = lightGallery($lgContainer, {
@@ -918,11 +917,13 @@ $(document).ready(function () {
         // thumbHeight: "40px",
         // thumbMargin: 4
     });
+    
     function openFabricLightGallery(count) {
         console.log(count);
         inlineGallery.openGallery(count);
     }
-    $('.openFullSize').on('click', function (e){
+    
+    $('.openFullSize').on('click', function (e) {
         let findIndexCheckedFabric = $('#fabric-full-size').find("input:checked").parent().parent().index();
         
         realIndexFabric = findIndexCheckedFabric;
@@ -930,7 +931,7 @@ $(document).ready(function () {
         console.log(realIndexFabric);
         $("#fabric-full-size-container").addClass('d-block');
     })
-    $('.closeFullSize').on('click', function (e){
+    $('.closeFullSize').on('click', function (e) {
         console.log('click');
         $(this).parent().removeClass('d-block');
         // inlineGallery.destroy();
@@ -941,7 +942,7 @@ $(document).ready(function () {
     
     $('.modal').on('show.bs.modal', function (e) {
         var button = e.relatedTarget;
-        if($(button).hasClass('no-modal')) {
+        if ($(button).hasClass('no-modal')) {
             e.stopPropagation();
         }
     });

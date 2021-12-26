@@ -1,4 +1,5 @@
 import * as DOM from '../../_modules/dom';
+
 export default function (navbar) {
     var _this = this;
     navbar.classList.add('mm-navbar_tabs');
@@ -16,9 +17,10 @@ export default function (navbar) {
         try {
             _this.openPanel(_this.node.menu.querySelector(anchor.getAttribute('href')), false);
             evnt.stopImmediatePropagation();
+        } catch (err) {
         }
-        catch (err) { }
     });
+    
     function selectTab(panel) {
         anchors.forEach(function (anchor) {
             anchor.classList.remove('mm-navbar__tab_selected');
@@ -28,13 +30,13 @@ export default function (navbar) {
         })[0];
         if (anchor) {
             anchor.classList.add('mm-navbar__tab_selected');
-        }
-        else {
+        } else {
             var parent = panel['mmParent'];
             if (parent) {
                 selectTab.call(this, parent.closest('.mm-panel'));
             }
         }
     }
+    
     this.bind('openPanel:start', selectTab);
 }

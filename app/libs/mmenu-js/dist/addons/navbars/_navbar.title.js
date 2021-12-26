@@ -1,5 +1,6 @@
 import Mmenu from '../../core/oncanvas/mmenu.oncanvas';
 import * as DOM from '../../_modules/dom';
+
 export default function (navbar) {
     var _this = this;
     //	Add content to the navbar.
@@ -22,13 +23,12 @@ export default function (navbar) {
         }
         //	Get the URL for the title.
         _url =
-            original && original.closest('a')
-                ? original.closest('a').getAttribute('href')
-                : '';
+          original && original.closest('a')
+            ? original.closest('a').getAttribute('href')
+            : '';
         if (_url) {
             title.setAttribute('href', _url);
-        }
-        else {
+        } else {
             title.removeAttribute('href');
         }
         //	Get the text for the title.

@@ -1,15 +1,15 @@
 import Mmenu from '../../core/oncanvas/mmenu.oncanvas';
 import options from './_options';
 import configs from './_configs';
-import { extendShorthandOptions } from './_options';
+import {extendShorthandOptions} from './_options';
 import * as DOM from '../../_modules/dom';
-import { extend } from '../../_modules/helpers';
+import {extend} from '../../_modules/helpers';
 
 //	Add the options and configs.
 Mmenu.options.pageScroll = options;
 Mmenu.configs.pageScroll = configs;
 
-export default function(this: Mmenu) {
+export default function (this: Mmenu) {
     var options = extendShorthandOptions(this.opts.pageScroll);
     this.opts.pageScroll = extend(options, Mmenu.options.pageScroll);
 
@@ -31,6 +31,7 @@ export default function(this: Mmenu) {
         }
         section = null;
     }
+
     function anchorInPage(href: string) {
         try {
             if (href != '#' && href.slice(0, 1) == '#') {

@@ -2,9 +2,9 @@ import Mmenu from './../oncanvas/mmenu.oncanvas';
 import options from './_options';
 import configs from './_configs';
 import translate from './translations/translate';
-import { extendShorthandOptions } from './_options';
+import {extendShorthandOptions} from './_options';
 import * as DOM from '../../_modules/dom';
-import { extend } from '../../_modules/helpers';
+import {extend} from '../../_modules/helpers';
 //  Add the translations.
 translate();
 //  Add the options and configs.
@@ -47,17 +47,21 @@ export default function () {
         //	Update aria-hidden for hidden / visible listitems
         this.bind('updateListview', function () {
             _this.node.pnls
-                .querySelectorAll('.mm-listitem')
-                .forEach(function (listitem) {
-                Mmenu.sr_aria(listitem, 'hidden', listitem.matches('.mm-hidden'));
-            });
+              .querySelectorAll('.mm-listitem')
+              .forEach(function (listitem) {
+                  Mmenu.sr_aria(listitem, 'hidden', listitem.matches('.mm-hidden'));
+              });
         });
         //	Update aria-hidden for the panels when opening and closing a panel.
         this.bind('openPanel:start', function (panel) {
             /** Panels that should be considered "hidden". */
             var hidden = DOM.find(_this.node.pnls, '.mm-panel')
-                .filter(function (hide) { return hide !== panel; })
-                .filter(function (hide) { return !hide.parentElement.matches('.mm-panel'); });
+              .filter(function (hide) {
+                  return hide !== panel;
+              })
+              .filter(function (hide) {
+                  return !hide.parentElement.matches('.mm-panel');
+              });
             /** Panels that should be considered "visible". */
             var visible = [panel];
             DOM.find(panel, '.mm-listitem_vertical .mm-listitem_opened').forEach(function (listitem) {
@@ -102,8 +106,8 @@ export default function () {
                     var navbar = DOM.children(panel, '.mm-navbar')[0];
                     /** Whether or not the navbar should be considered "hidden". */
                     var hidden = navbar.querySelector('.mm-btn_prev')
-                        ? true
-                        : false;
+                      ? true
+                      : false;
                     //	Set the navbar-title to be considered "hidden" or "visible".
                     Mmenu.sr_aria(DOM.find(navbar, '.mm-navbar__title')[0], 'hidden', hidden);
                 });
@@ -139,8 +143,8 @@ export default function () {
                 var next = DOM.children(parent, '.mm-btn_next')[0];
                 if (next) {
                     var text = _this.i18n(configs.text[next.parentElement.matches('.mm-listitem_vertical')
-                        ? 'toggleSubmenu'
-                        : 'openSubmenu']);
+                      ? 'toggleSubmenu'
+                      : 'openSubmenu']);
                     next.innerHTML += Mmenu.sr_text(text);
                 }
             }
@@ -153,17 +157,16 @@ export default function () {
         element[attr] = value;
         if (value) {
             element.setAttribute(attr, value.toString());
-        }
-        else {
+        } else {
             element.removeAttribute(attr);
         }
     };
     /**
      * Add aria (property and) attribute to a HTML element.
      *
-     * @param {HTMLElement} 	element	The node to add the attribute to.
-     * @param {string}			name	The (non-aria-prefixed) attribute name.
-     * @param {string|boolean}	value	The attribute value.
+     * @param {HTMLElement}    element    The node to add the attribute to.
+     * @param {string}            name    The (non-aria-prefixed) attribute name.
+     * @param {string|boolean}    value    The attribute value.
      */
     Mmenu.sr_aria = function (element, name, value) {
         attr(element, 'aria-' + name, value);
@@ -171,8 +174,8 @@ export default function () {
     /**
      * Add role attribute to a HTML element.
      *
-     * @param {HTMLElement}		element	The node to add the attribute to.
-     * @param {string|boolean}	value	The attribute value.
+     * @param {HTMLElement}        element    The node to add the attribute to.
+     * @param {string|boolean}    value    The attribute value.
      */
     Mmenu.sr_role = function (element, value) {
         attr(element, 'role', value);
@@ -180,8 +183,8 @@ export default function () {
     /**
      * Wrap a text in a screen-reader-only node.
      *
-     * @param 	{string} text	The text to wrap.
-     * @return	{string}		The wrapped text.
+     * @param    {string} text    The text to wrap.
+     * @return    {string}        The wrapped text.
      */
     Mmenu.sr_text = function (text) {
         return '<span class="mm-sronly">' + text + '</span>';

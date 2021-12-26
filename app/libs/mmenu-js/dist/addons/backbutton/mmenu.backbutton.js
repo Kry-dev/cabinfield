@@ -1,8 +1,8 @@
 import Mmenu from '../../core/oncanvas/mmenu.oncanvas';
 import options from './_options';
-import { extendShorthandOptions } from './_options';
+import {extendShorthandOptions} from './_options';
 import * as DOM from '../../_modules/dom';
-import { extend } from '../../_modules/helpers';
+import {extend} from '../../_modules/helpers';
 //	Add the options.
 Mmenu.options.backButton = options;
 export default function () {
@@ -39,8 +39,7 @@ export default function () {
                     var hash = states[states.length - 1];
                     if (hash == _menu) {
                         _this.close();
-                    }
-                    else {
+                    } else {
                         _this.openPanel(_this.node.menu.querySelector(hash));
                         history.pushState(null, document.title, _menu);
                     }

@@ -20,7 +20,7 @@
 	$ gulp polyfill --i ../my-custom-input --o ../my-custom-output
 */
 
-const { parallel, series } = require('gulp');
+const {parallel, series} = require('gulp');
 
 const js = require('./gulp/js');
 const css = require('./gulp/css');

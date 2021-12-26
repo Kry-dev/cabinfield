@@ -1,8 +1,8 @@
 import * as support from './_support';
 import * as options from './_defaults';
 import * as settings from './_settings';
-import { percentage2number } from './_helpers';
-import { extend } from '../helpers';
+import {percentage2number} from './_helpers';
+import {extend} from '../helpers';
 
 export default class DragEvents {
     /** The draggable area. */
@@ -256,13 +256,13 @@ export default class DragEvents {
      */
     _dispatchEvents(eventName: string, detail) {
         /** General event, e.g. "drag" */
-        var event = new CustomEvent(eventName.replace('*', ''), { detail });
+        var event = new CustomEvent(eventName.replace('*', ''), {detail});
         this.surface.dispatchEvent(event);
 
         /** Axis event, e.g. "dragX" */
         var axis = new CustomEvent(
             eventName.replace('*', this.axis.toUpperCase()),
-            { detail }
+            {detail}
         );
         this.surface.dispatchEvent(axis);
 
@@ -283,7 +283,7 @@ export default class DragEvents {
     _dragDirection() {
         return settings.directionNames[this.axis][
             this.distance[this.axis] > 0 ? 0 : 1
-        ];
+            ];
     }
 
     /**
@@ -293,6 +293,6 @@ export default class DragEvents {
     _swipeDirection() {
         return settings.directionNames[this.axis][
             this.movement[this.axis] > 0 ? 0 : 1
-        ];
+            ];
     }
 }

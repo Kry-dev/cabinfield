@@ -1,6 +1,6 @@
 import Mmenu from '../../core/oncanvas/mmenu.oncanvas';
 
-export default function(this: Mmenu) {
+export default function (this: Mmenu) {
     let classnames;
 
     document.addEventListener('turbolinks:before-visit', evnt => {

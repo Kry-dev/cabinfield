@@ -20,61 +20,50 @@ translate();
  * Class for a mobile menu.
  */
 export default class Mmenu {
-    /**	Plugin version. */
+    /**    Plugin version. */
     static version: string = version;
 
-    /**	Default options for menus. */
+    /**    Default options for menus. */
     static options: mmOptions = options;
 
-    /**	Default configuration for menus. */
+    /**    Default configuration for menus. */
     static configs: mmConfigs = configs;
 
-    /**	Available add-ons for the plugin. */
+    /**    Available add-ons for the plugin. */
     static addons: mmLooseObject = {};
 
     /** Available wrappers for the plugin. */
     static wrappers: mmFunctionObject = {};
 
-    /**	Globally used HTML elements. */
+    /**    Globally used HTML elements. */
     static node: mmHtmlObject = {};
 
     /** Globally used variables. */
     static vars: mmLooseObject = {};
-
-    /**	Options for the menu. */
-    opts: mmOptions;
-
-    /** Configuration for the menu. */
-    conf: mmConfigs;
-
-    /**	Array of method names to expose in the API. */
-    _api: string[];
-
-    /** The API. */
-    API: mmApi;
-
-    /** HTML elements used for the menu. */
-    node: mmHtmlObject;
-
-    /** Variables used for the menu. */
-    vars: mmLooseObject;
-
-    /** Callback hooks used for the menu. */
-    hook: mmLooseObject;
-
-    /** Click handlers used for the menu. */
-    clck: Function[];
-
-    /** Log deprecated warnings when using the debugger. */
-    _deprecatedWarnings: Function;
-
     //	screenReader add-on
     static sr_aria: Function;
     static sr_role: Function;
     static sr_text: Function;
+    /**    Options for the menu. */
+    opts: mmOptions;
+    /** Configuration for the menu. */
+    conf: mmConfigs;
+    /**    Array of method names to expose in the API. */
+    _api: string[];
+    /** The API. */
+    API: mmApi;
+    /** HTML elements used for the menu. */
+    node: mmHtmlObject;
+    /** Variables used for the menu. */
+    vars: mmLooseObject;
+    /** Callback hooks used for the menu. */
+    hook: mmLooseObject;
+    /** Click handlers used for the menu. */
+    clck: Function[];
+    /** Log deprecated warnings when using the debugger. */
+    _deprecatedWarnings: Function;
 
     //	offCanvas add-on
-
     /** Open the menu. */
     open: Function;
 
@@ -100,9 +89,9 @@ export default class Mmenu {
 
     /**
      * Create a mobile menu.
-     * @param {HTMLElement|string} 	menu						The menu node.
-     * @param {object} 				[options=Mmenu.options]		Options for the menu.
-     * @param {object} 				[configs=Mmenu.configs]		Configuration options for the menu.
+     * @param {HTMLElement|string}    menu                        The menu node.
+     * @param {object}                [options=Mmenu.options]        Options for the menu.
+     * @param {object}                [configs=Mmenu.configs]        Configuration options for the menu.
      */
     constructor(
         menu: HTMLElement | string,
@@ -157,8 +146,8 @@ export default class Mmenu {
 
     /**
      * Open a panel.
-     * @param {HTMLElement} panel				Panel to open.
-     * @param {boolean}		[animation=true]	Whether or not to open the panel with an animation.
+     * @param {HTMLElement} panel                Panel to open.
+     * @param {boolean}        [animation=true]    Whether or not to open the panel with an animation.
      */
     openPanel(panel: HTMLElement, animation?: boolean) {
         //	Invoke "before" hook.
@@ -247,7 +236,7 @@ export default class Mmenu {
 
             panel.classList.remove('mm-hidden');
 
-            /**	Start opening the panel. */
+            /**    Start opening the panel. */
             let openPanelStart = () => {
                 if (current) {
                     current.classList.remove('mm-panel_opened');
@@ -270,7 +259,7 @@ export default class Mmenu {
                 this.trigger('openPanel:start', [panel]);
             };
 
-            /**	Finish opening the panel. */
+            /**    Finish opening the panel. */
             let openPanelFinish = () => {
                 if (current) {
                     current.classList.remove('mm-panel_highest');
@@ -377,7 +366,7 @@ export default class Mmenu {
                 listitem.matches('.mm-listitem_opened')
                     ? 'closePanel'
                     : 'openPanel'
-            ](panel);
+                ](panel);
         }
     }
 
@@ -403,8 +392,8 @@ export default class Mmenu {
 
     /**
      * Bind functions to a hook (subscriber).
-     * @param {string} 		hook The hook.
-     * @param {function} 	func The function.
+     * @param {string}        hook The hook.
+     * @param {function}    func The function.
      */
     bind(hook: string, func: Function) {
         //	Create an array for the hook if it does not yet excist.
@@ -416,8 +405,8 @@ export default class Mmenu {
 
     /**
      * Invoke the functions bound to a hook (publisher).
-     * @param {string} 	hook  	The hook.
-     * @param {array}	[args] 	Arguments for the function.
+     * @param {string}    hook    The hook.
+     * @param {array}    [args]    Arguments for the function.
      */
     trigger(hook: string, args?: any[]) {
         if (this.hook[hook]) {
@@ -438,7 +427,7 @@ export default class Mmenu {
         (this.API as mmLooseObject) = {};
 
         this._api.forEach(fn => {
-            this.API[fn] = function() {
+            this.API[fn] = function () {
                 var re = that[fn].apply(that, arguments); // 1)
                 return typeof re == 'undefined' ? that.API : re;
             };
@@ -601,7 +590,8 @@ export default class Mmenu {
                             }
                             return true;
                         }
-                    } catch (err) {}
+                    } catch (err) {
+                    }
                 }
             }
         });
@@ -657,8 +647,8 @@ export default class Mmenu {
 
     /**
      * Initialize a single panel.
-     * @param  {HTMLElement} 		panel 	Panel to initialize.
-     * @return {HTMLElement|null} 			Initialized panel.
+     * @param  {HTMLElement}        panel    Panel to initialize.
+     * @return {HTMLElement|null}            Initialized panel.
      */
     _initPanel(panel: HTMLElement): HTMLElement {
         //	Invoke "before" hook.
@@ -798,9 +788,9 @@ export default class Mmenu {
                 panel.getAttribute('data-mm-parent')
             )[0];
         }
-        // if (panel.dataset.mmParent) { // IE10 has no dataset
-        // parentPanel = DOM.find(this.node.pnls, panel.dataset.mmParent)[0];
-        // }
+            // if (panel.dataset.mmParent) { // IE10 has no dataset
+            // parentPanel = DOM.find(this.node.pnls, panel.dataset.mmParent)[0];
+            // }
 
         //  The parent panel from a listitem.
         else {
@@ -946,7 +936,7 @@ export default class Mmenu {
             lastitem.classList.add('mm-listitem_selected');
         }
 
-        /**	The current opened panel. */
+        /**    The current opened panel. */
         let current = lastitem
             ? lastitem.closest('.mm-panel')
             : DOM.children(this.node.pnls, '.mm-panel')[0];
@@ -1057,8 +1047,8 @@ export default class Mmenu {
 
     /**
      * Get the translation for a text.
-     * @param  {string} text 	Text to translate.
-     * @return {string}			The translated text.
+     * @param  {string} text    Text to translate.
+     * @return {string}            The translated text.
      */
     i18n(text: string): string {
         return i18n.get(text, this.conf.language);

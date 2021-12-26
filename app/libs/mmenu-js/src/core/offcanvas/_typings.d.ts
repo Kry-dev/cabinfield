@@ -18,6 +18,7 @@ interface mmConfigsOffcanvas {
     /** Page configuration for the off-canvas add-on. */
     page?: mmConfigsOffcanvasPage;
 }
+
 interface mmConfigsOffcanvasMenu {
     /** How to insert the menu into the DOM. */
     insertMethod?: 'prepend' | 'append';
@@ -25,6 +26,7 @@ interface mmConfigsOffcanvasMenu {
     /** Where to insert the menu into the DOM. */
     insertSelector?: string;
 }
+
 interface mmConfigsOffcanvasPage {
     /** The nodetype for the page. */
     nodetype?: string;

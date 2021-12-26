@@ -1,7 +1,7 @@
 import Mmenu from '../../core/oncanvas/mmenu.oncanvas';
 import * as DOM from '../../_modules/dom';
 
-export default function(this: Mmenu, navbar: HTMLElement) {
+export default function (this: Mmenu, navbar: HTMLElement) {
     //	Add content to the navbar.
     let title = DOM.create('a.mm-navbar__title');
     let titleText = DOM.create('span');

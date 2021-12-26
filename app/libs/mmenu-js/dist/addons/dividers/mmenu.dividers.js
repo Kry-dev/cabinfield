@@ -1,8 +1,8 @@
 import Mmenu from '../../core/oncanvas/mmenu.oncanvas';
 import options from './_options';
-import { extendShorthandOptions } from './_options';
+import {extendShorthandOptions} from './_options';
 import * as DOM from '../../_modules/dom';
-import { extend } from '../../_modules/helpers';
+import {extend} from '../../_modules/helpers';
 //	Add the options.
 Mmenu.options.dividers = options;
 //  Add the classnames.
@@ -32,8 +32,8 @@ export default function () {
             var lastletter = '', listitems = DOM.children(listview);
             DOM.filterLI(listitems).forEach(function (listitem) {
                 var letter = DOM.children(listitem, '.mm-listitem__text')[0]
-                    .textContent.trim()
-                    .toLowerCase()[0];
+                  .textContent.trim()
+                  .toLowerCase()[0];
                 if (letter.length && letter != lastletter) {
                     lastletter = letter;
                     var divider = DOM.create('li.mm-divider');

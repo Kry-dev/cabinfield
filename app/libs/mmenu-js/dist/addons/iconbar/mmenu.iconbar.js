@@ -1,9 +1,9 @@
 import Mmenu from '../../core/oncanvas/mmenu.oncanvas';
 import options from './_options';
-import { extendShorthandOptions } from './_options';
+import {extendShorthandOptions} from './_options';
 import * as DOM from '../../_modules/dom';
 import * as media from '../../_modules/matchmedia';
-import { type, extend } from '../../_modules/helpers';
+import {type, extend} from '../../_modules/helpers';
 //  Add the options.
 Mmenu.options.iconbar = options;
 export default function () {
@@ -26,8 +26,7 @@ export default function () {
         for (var c = 0, l = ctnt.length; c < l; c++) {
             if (typeof ctnt[c] == 'string') {
                 part.innerHTML += ctnt[c];
-            }
-            else {
+            } else {
                 part.append(ctnt[c]);
             }
         }
@@ -56,8 +55,7 @@ export default function () {
         };
         if (typeof options.use == 'boolean') {
             this.bind('initMenu:after', enable);
-        }
-        else {
+        } else {
             media.add(options.use, enable, disable);
         }
         //	Tabs
@@ -79,8 +77,8 @@ export default function () {
                         evnt.stopImmediatePropagation();
                         _this.openPanel(panel, false);
                     }
+                } catch (err) {
                 }
-                catch (err) { }
             });
             var selectTab_1 = function (panel) {
                 DOM.find(iconbar, 'a').forEach(function (anchor) {
@@ -89,8 +87,7 @@ export default function () {
                 var anchor = DOM.find(iconbar, '[href="#' + panel.id + '"]')[0];
                 if (anchor) {
                     anchor.classList.add('mm-iconbar__tab_selected');
-                }
-                else {
+                } else {
                     var parent_1 = panel['mmParent'];
                     if (parent_1) {
                         selectTab_1(parent_1.closest('.mm-panel'));
