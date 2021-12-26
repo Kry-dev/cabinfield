@@ -41,6 +41,26 @@
             width: 100%;
         }
     }
+		&--body {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+		}
+		&--title {
+			font-style: normal;
+			font-weight: 700;
+			font-size: 28px;
+			line-height: 32px;
+			color: $text-dark;
+		}
+		.product-furnitureType {
+			color: $brown;
+			.furnitureType-new {
+				font-weight: 700;
+				font-size: 28px;
+				line-height: 32px;
+			}
+		}
     @include media-breakpoint-down(sm) {
         &--title {
             font-style: normal;
@@ -57,7 +77,9 @@
             .furnitureType-new {
                 font-size: $font-size-sm;
             }
-        
+        		.small {
+							color: #A00000;
+						}
         }
     }
     
