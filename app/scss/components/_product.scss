@@ -44,11 +44,11 @@
 		width: 54%;
 		align-self: flex-start;
 		flex-wrap: wrap;
-		@include media-breakpoint-down(md) {
+		@include media-breakpoint-down(lg) {
 			width: 100%;
 			margin-bottom: 1rem;
 		}
-		@include media-breakpoint-down(sm) {
+		@include media-breakpoint-down(xs) {
 			//flex-direction: column-reverse;
 		}
 		
@@ -68,7 +68,7 @@
 		width: 50%;
 		flex-direction: column;
 		padding-left: 2.2rem;
-		@include media-breakpoint-down(md) {
+		@include media-breakpoint-down(lg) {
 			width: 100%;
 			padding-left: 0;
 		}
@@ -86,7 +86,7 @@
 		
 		.product-number {
 			font-weight: 400;
-			@include media-breakpoint-down(md) {
+			@include media-breakpoint-down(lg) {
 				font-family: "Open Sans";
 				font-style: normal;
 				font-weight: 400;
@@ -568,7 +568,7 @@
 		background: #FBFAF9 url(../img/product/assembly.png) no-repeat left bottom;
 		background-size: contain;
 		margin-bottom: 3rem;
-		@include media-breakpoint-down(md) {
+		@include media-breakpoint-down(lg) {
 			padding: 1rem 1rem 1rem 100px;
 			background-size: 15%;
 		}
@@ -604,7 +604,7 @@
 			text-align: center;
 			text-transform: uppercase;
 			border: 2px solid $brown;
-			@include media-breakpoint-down(md) {
+			@include media-breakpoint-down(lg) {
 				width: 200px;
 			}
 		}

@@ -796,11 +796,28 @@ $(document).ready(function () {
     
     /*PDP main slider carousel*/
     let galleryThumbs = new Swiper('.pdpGallery-thumbs', {
-        direction: 'vertical', // вертикальная прокрутка
-        slidesPerView: 5, // показывать по 3 превью
-        spaceBetween: 10, // расстояние между слайдами
+        direction: 'horizontal',
+        slidesPerView: 3, // показывать по 3 превью
+        spaceBetween: 20, // расстояние между слайдами
         freeMode: true, // при перетаскивании превью ведет себя как при скролле
         watchSlidesProgress: true,
+        breakpoints: {
+            640: {
+                direction: 'horizontal',
+                slidesPerView: 3,
+                spaceBetween: 20,
+            },
+            768: {
+                direction: 'vertical',
+                slidesPerView: 4,
+                spaceBetween: 40,
+            },
+            1024: {
+                direction: 'vertical',
+                slidesPerView: 5,
+                spaceBetween: 10,
+            },
+        },
     });
     
     let galleryTop = new Swiper('.pdpGallery-top', {
