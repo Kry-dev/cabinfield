@@ -2,19 +2,18 @@ body.modal-open .mm-slideout {
 	z-index: inherit;
 }
 
-//.mm-slideout {
-//    -webkit-transition: -webkit-transform .4s ease;
-//    transition: -webkit-transform .4s ease;
-//    transition: transform .4s ease;
-//    transition: transform .4s ease, -webkit-transform .4s ease;
-//    z-index: 1;
-//}
-
 .modal {
 	z-index: 2000;
-	
+	&-dialog {
+		@include media-breakpoint-down(md) {
+			margin: 0;
+		}
+	}
 	&-content {
 		border-radius: 0;
+		@include media-breakpoint-down(md) {
+			padding: 3rem 1rem 0;
+		}
 	}
 	
 	&-content-loaded {
@@ -892,11 +891,10 @@ body.modal-open .mm-slideout {
 		}
 		
 		.modal-content {
-			border: 0;
-			padding: 2rem 4rem;
-			min-height: 570px;
-			@include media-breakpoint-down(sm) {
-				padding: 1rem 1rem 0;
+			@include media-breakpoint-up(md) {
+				border: 0;
+				padding: 2rem 4rem;
+				min-height: 570px;
 			}
 		}
 		
@@ -925,7 +923,6 @@ body.modal-open .mm-slideout {
 		
 		button.close {
 			@include media-breakpoint-down(sm) {
-				top: -45px;
 				color: $white;
 			}
 		}
@@ -999,7 +996,7 @@ body.modal-open .mm-slideout {
 			
 			.product-option.option-stain {
 				display: inline-flex;
-				width: 23%;
+				width: 100%;
 				margin: 0 1% 1rem;
 				
 				img {
@@ -1009,6 +1006,7 @@ body.modal-open .mm-slideout {
 				@include media-breakpoint-down(sm) {
 					width: auto;
 					margin: 0 .25rem 1rem;
+					max-height: 150px;
 				}
 			}
 			
@@ -1211,13 +1209,13 @@ body.modal-open .mm-slideout {
 	}
 	
 	.inline-gallery-container {
-		position: absolute !important;
-		width: 90%;
-		height: 90%;
-		left: 5%;
-		top: 2rem;
+		//position: absolute !important;
+		//width: 90%;
+		//height: 90%;
+		//left: 5%;
+		//top: 2rem;
 		background: $white;
-		
+		margin-bottom: 32px;
 		.lg-maximize {
 			display: none;
 		}
@@ -1225,13 +1223,27 @@ body.modal-open .mm-slideout {
 		.lg-close {
 			opacity: 0;
 		}
-		
+		.lg-sub-html {
+			.name {
+				text-align: center;
+			}
+		}
 		.closeFullSize {
 			position: absolute;
 			text-align: center;
 			z-index: 100;
 			width: 100%;
 			bottom: -20px;
+		}
+	}
+	button.close {
+		@include media-breakpoint-down(md) {
+			right: 16px;
+			color: $text-dark;
+		}
+		&:hover,
+		&:focus {
+			cursor: pointer;
 		}
 	}
 }
@@ -1242,16 +1254,16 @@ body.modal-open .mm-slideout {
 	overflow: hidden;
 	
 	.fabric-gallery__item {
-		max-width: 50%;
-		
+		max-width: 49%;
+		margin: 0 .5% 24px;
 		@include media-breakpoint-up(md) {
 			max-width: 33%;
 		}
 		@include media-breakpoint-up(lg) {
-			max-width: 25%;
+			max-width: 24%;
 		}
 		@include media-breakpoint-up(xl) {
-			max-width: 20%;
+			max-width: 19%;
 		}
 	}
 	

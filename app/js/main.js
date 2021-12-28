@@ -788,7 +788,6 @@ $(document).ready(function () {
                 init: function () {
                     if (this.slides.length < 7) {
                         // Second way:
-                        console.log(this.slides.length);
                         this.el.classList.add('swiper-no-swiping');
                         this.destroy(false, true);
                     }
@@ -898,7 +897,6 @@ $(document).ready(function () {
     
     for (let i = 0; i < fabricGalleryItems.length; i++) {
         const item = fabricGalleryItems[i];
-        console.log($(item.getAttribute('data-sub-html')));
         
         fabricGalleryDynamic[i] = {
             src: item.getAttribute('data-src'),
@@ -923,7 +921,6 @@ $(document).ready(function () {
         // Delay slide transition to complete captions animations
         // before navigating to different slides (Optional)
         // You can find caption animation demo on the captions demo page
-        // slideDelay: 400,
         counter: false,
         // defaultCaptionHeight: 80,
         download: false,
@@ -934,9 +931,6 @@ $(document).ready(function () {
         fullScreen: false,
         loop: false,
         dynamicEl: fabricGalleryDynamic,
-        // thumbWidth: 60,
-        // thumbHeight: "40px",
-        // thumbMargin: 4
     });
     
     function openFabricLightGallery(count) {
@@ -944,17 +938,26 @@ $(document).ready(function () {
         inlineGallery.openGallery(count);
     }
     
+    let fabricModalList = $('#fabric-full-size');
     $('.openFullSize').on('click', function (e) {
-        let findIndexCheckedFabric = $('#fabric-full-size').find("input:checked").parent().parent().index();
+        let thisModal = $(this).closest('.modal');
+        let findIndexCheckedFabric = fabricModalList.find("input:checked").parent().parent().index();
         
         realIndexFabric = findIndexCheckedFabric;
         openFabricLightGallery(realIndexFabric);
-        console.log(realIndexFabric);
+        console.log(thisModal);
+        thisModal.find('.modal-header').addClass('d-none');
+        thisModal.find('.modal-body').addClass('d-none');
+        thisModal.find('.modal-footer').addClass('d-none');
+        
         $("#fabric-full-size-container").addClass('d-block');
     })
     $('.closeFullSize').on('click', function (e) {
-        console.log('click');
         $(this).parent().removeClass('d-block');
+        let thisModal = $(this).closest('.modal');
+        thisModal.find('.modal-header').removeClass('d-none');
+        thisModal.find('.modal-body').removeClass('d-none');
+        thisModal.find('.modal-footer').removeClass('d-none');
         // inlineGallery.destroy();
         // let findIndexCheckedFabric = $('#fabric-full-size').find("input:checked").parent().parent().index();
         // realIndexFabric = findIndexCheckedFabric + 1;

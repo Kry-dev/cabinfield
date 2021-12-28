@@ -404,11 +404,20 @@ a:focus {
 	min-height: 600px;
 	position: relative;
 	display: none;
-	
+	@include media-breakpoint-down(md) {
+		min-height: 400px;
+	}
 	.lg-backdrop {
 		background: $white;
 	}
-	
+	.lg-container.lg-show {
+		//width: 100%;
+		//height: 100%;
+	}
+	.lg-outer {
+		//top: 50%;
+		//transform: translateY(-50%);
+	}
 	.lg-toolbar.lg-group {
 		//opacity: 0;
 		//display: none;
