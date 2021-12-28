@@ -408,7 +408,7 @@
 					max-width: 33%;
 				}
 				@include media-breakpoint-down(sm) {
-					max-width: 50%;
+					max-width: 40%;
 				}
 			}
 			
@@ -446,8 +446,11 @@
 	.bootstrap-select > .dropdown-toggle {
 		padding: .5rem .65rem;
 	}
+	
 }
-
+.bootstrap-select .dropdown-item {
+	padding: .75rem 1rem;
+}
 .product-option {
 	&--label {
 		border: $border-width solid $review-border-color;

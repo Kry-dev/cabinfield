@@ -676,7 +676,9 @@ $(document).ready(function () {
     })
     
     
-    $(".selectpicker").selectpicker();
+    $(".selectpicker").selectpicker({
+        container: 'body'
+    });
     $(function () {
         $('select').selectpicker();
     });
@@ -767,7 +769,7 @@ $(document).ready(function () {
             },
             breakpoints: {
                 318: {
-                    slidesPerView: 1,
+                    slidesPerView: 2,
                 },
                 525: {
                     slidesPerView: 2,
