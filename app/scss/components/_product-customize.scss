@@ -394,6 +394,25 @@
 	}
 	
 	&.swiper-no-swiping {
+		.swiper-wrapper {
+			flex-direction: row;
+			flex-wrap: wrap;
+			
+			.swiper-slide {
+				max-width: 14%;
+				margin-right: 20px;
+				@include media-breakpoint-down(lg) {
+					max-width: 25%;
+				}
+				@include media-breakpoint-down(md) {
+					max-width: 33%;
+				}
+				@include media-breakpoint-down(sm) {
+					max-width: 50%;
+				}
+			}
+			
+		}
 		.btn-arrow {
 			display: none;
 			opacity: 0;

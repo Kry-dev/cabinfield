@@ -788,7 +788,9 @@ $(document).ready(function () {
                         // Second way:
                         console.log(this.slides.length);
                         this.el.classList.add('swiper-no-swiping');
+                        this.destroy(false, true);
                     }
+                    
                 }
             }
         });
