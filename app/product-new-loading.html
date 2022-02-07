@@ -435,8 +435,7 @@
         <div class="d-flex flex-column flex-lg-row">
           <div class="product-left">
             <div class="product-left-top">
-              <h1 class="product-right-title mb-3">Indian Creek Panel Amish Bed</h1><span class="product-number mb-3">Product No.: FGFH1128</span>
-              <!--a(href="#", data-bs-toggle='modal', data-bs-target='#mainimage_popup').text-underline.mb-3 View Gallery--><a class="text-underline mb-3" href="#" id="view-gallery">View Gallery</a>
+              <h1 class="product-right-title mb-3">Indian Creek Panel Amish Bed</h1><span class="product-number mb-3">Product No.: FGFH1128</span><a class="text-underline mb-3" href="#" id="view-gallery">View Gallery</a>
             </div><!--Product photos in components/_product-photos.pug-->
             <div class="pdpGallery">
               <div class="swiper-container pdpGallery-thumbs">
@@ -516,7 +515,7 @@
                   <div class="product-price"><span class="text-warning">Starting at:</span>
                     <div class="product-price-value"><span class="price-new"><span>$</span><span>1,371.00</span></span><span class="price-value-old price-old">1,971.00</span></div>
                     <div class="product-price-shipping"><span>+ $30.40</span><span class="ms-2"> Standard curbside delivery to 100001
-                        <button class="edit ps-2 ms-1" href="#" data-bs-toggle="modal" data-bs-target="#modal--calculate"><i class="fa fa-pencil"></i></button></span></div>
+                        <button class="edit ps-2 ms-1" data-bs-toggle="modal" data-bs-target="#modal--calculate"><i class="fa fa-pencil"></i></button></span></div>
                   </div><!--Product price in mixin.pug end-->
               </div>
             </div>
@@ -541,7 +540,7 @@
             <div class="row">
               <div class="col-sm-12">
                 <ul class="mb-3">
-                  <li><a href="#">• Delivery Information </a></li>
+                  <li><a href="#" data-bs-toggle="modal" data-bs-target="#modal-shipping-assembly">• Delivery Information </a></li>
                   <li><a href="#">• Return Policy </a></li>
                   <li><a href="#">• Pre-Built Options </a></li>
                   <li><a href="#">• Order Samples </a></li>
@@ -1264,7 +1263,6 @@
   </footer><!--FOOTER END-->
 <!--MODAL--><!--modal calculate-->
   <div class="modal modal--calculate fade" id="modal--calculate" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
-    <!--.modal-dialog.modal-dialog-centered.modal-md(role='document')-->
     <div class="modal-dialog modal-dialog-centered modal-md">
       <form class="form modal-content p-4">
         <div class="modal-header">
@@ -1309,7 +1307,59 @@
         </div>
       </form>
     </div>
-  </div><!--modal calculate end-->
+  </div><!--modal calculate end--><!--modal #modal-shipping-assembly-->
+  <div class="modal modal--calculate fade" id="modal-shipping-assembly" tabindex="-1" role="dialog" aria-hidden="true" data-bs-backdrop="static">
+    <div class="modal-dialog modal-dialog-centered modal-md">
+      <form class="form modal-content p-4">
+        <div class="modal-header">
+          <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+          <div class="w-100 mb-0">
+            <h4 class="text-center modal-title">Calculate Shipping & Assembly</h4>
+          </div>
+        </div>
+        <div class="modal-body">
+          <div class="row mb-3">
+            <div class="col-12 col-lg-6">
+              <label>First Name</label>
+              <input class="form-control" type="text">
+            </div>
+            <div class="col-12 col-lg-6">
+              <label>Last Name</label>
+              <input class="form-control" type="text">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-12 col-lg-6">
+              <label>Zip Code</label>
+              <input class="form-control" type="text" name="zip" minlength="5" maxlength="5">
+            </div>
+            <div class="col-12 col-lg-6">
+              <label>Email</label>
+              <input class="form-control" type="email">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-12">
+              <label class="mb-3">Delivery:</label>
+              <div class="checkbox custom_checkbox mb-3">
+                <input id="myZIP10" type="radio" name="myZIP" value="" checked="checked">
+                <label class="text-dark mb-0" for="myZIP10">Will this be delivered to a commercial address?  Please check yes if that is the case.</label>
+              </div>
+              <div class="checkbox custom_checkbox">
+                <input id="myZIP11" type="radio" name="myZIP" value="">
+                <label class="text-dark mb-0" for="myZIP11">Will there be a fork lift available to unload?  Please check yes if that is the case.</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div class="mb-3">
+            <button class="btn btn-warning text-uppercase" type="submit"><strong>Request Quote</strong></button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div><!--modal #modal-shipping-assembly end-->
   <div class="modal modal--select-optns fade" id="options-fullsize" tabindex="-1" role="dialog" aria-hidden="true" data-bs-backdrop="static">
     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
       <div class="modal-content">

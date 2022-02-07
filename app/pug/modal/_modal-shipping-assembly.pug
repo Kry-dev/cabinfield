@@ -1,0 +1,38 @@
+<!--modal #modal-shipping-assembly-->
+#modal-shipping-assembly.modal.modal--calculate.fade(tabindex='-1', role='dialog', aria-hidden='true', data-bs-backdrop="static")
+    .modal-dialog.modal-dialog-centered.modal-md
+        form.form.modal-content.p-4
+            .modal-header
+                button.close(type='button', data-bs-dismiss='modal', aria-label='Close')
+                    span(aria-hidden='true') ×
+                .w-100.mb-0
+                    h4.text-center.modal-title Calculate Shipping & Assembly
+            .modal-body
+                .row.mb-3
+                    .col-12.col-lg-6
+                        label First Name
+                        input.form-control(type="text")
+                    .col-12.col-lg-6
+                        label Last Name
+                        input.form-control(type="text")
+                .row.mb-3
+                    .col-12.col-lg-6
+                        label Zip Code
+                        input.form-control(type="text" name="zip" minlength="5" maxlength="5")
+                    .col-12.col-lg-6
+                        label Email
+                        input.form-control(type="email")
+                .row.mb-3
+                    .col-12
+                        label.mb-3 Delivery:
+                        .checkbox.custom_checkbox.mb-3
+                            input#myZIP10(type='radio' name='myZIP' value='' checked="checked")
+                            label.text-dark.mb-0(for='myZIP10') Will this be delivered to a commercial address?  Please check yes if that is the case.
+                        .checkbox.custom_checkbox
+                            input#myZIP11(type='radio' name='myZIP' value='')
+                            label.text-dark.mb-0(for='myZIP11') Will there be a fork lift available to unload?  Please check yes if that is the case.
+            .modal-footer
+                .mb-3
+                    button.btn.btn-warning.text-uppercase(type='submit')
+                        strong Request Quote
+<!--modal #modal-shipping-assembly end-->
