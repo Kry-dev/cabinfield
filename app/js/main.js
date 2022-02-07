@@ -371,7 +371,10 @@ $(document).ready(function () {
         $(window).scroll(function () {
             console.log(optionsFormHeight);
             if ($(window).scrollTop() < optionsFormHeight) {
-                $("#options-form .loading").addClass("fixed")
+                setInterval(function(){
+                    $("#options-form .loading").addClass("fixed")
+                    $("#options-form .loading").addClass("d-none")
+                }, 2000);
             } else if ($(window).width() < 768 && $(window).scrollTop() < optionsFormHeightMobile) {
                 $("#options-form .loading").addClass("fixed")
             } else {

@@ -134,6 +134,9 @@
 	@include media-breakpoint-down(md) {
 		padding-left: 0;
 	}
+	.form-check-input {
+		margin-top: 2px;
+	}
 }
 
 .product-customize-list {

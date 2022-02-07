@@ -634,6 +634,10 @@
             <div class="product-customize">
               <div class="flex-column"><!--Product customize-->
                 <form id="options-form">
+                  <div class="loading">
+                    <div class="loading-circle"></div>
+                    <div class="loading-text">loading</div>
+                  </div>
                   <div id="optgroup-1">
                     <div class="product-customize-form">
                       <h6 class="product-customize-subtitle">Bed size:
@@ -922,68 +926,63 @@
                       </div>
                     </div>
                   </div>
-                  <div class="product-customize-form border-bottom-0">
-                    <div class="row w-100">
+                  <div id="optgroup-8">
+                    <div class="product-customize-form border-bottom-0">
                       <h6 class="product-customize-subtitle"><b class="me-1">Pillow: </b>
                         <button class="popup-info me-3" type="button" data-bs-target="#customize_popup_info" data-bs-toggle="modal">?</button>
                       </h6>
-                    </div>
-                    <div class="row w-100 mb-3">
-                      <label class="mb-0 d-flex flex-row align-items-center justify-content-start">Quantity:
-                        <select class="selectpicker from-control ms-3">
-                          <option class="text-dark" value="2">Option 1</option>
-                          <option class="text-dark" value="3">Option 2</option>
-                        </select>
-                      </label>
-                    </div>
-                    <div class="row w-100 mb-3">
-                      <div class="col-md-3 col-sm-6 d-inline-flex align-items-center">
-                        <div class="checkbox custom_checkbox">
-                          <input id="Pillow110" type="checkbox" name="Pillow" value="">
-                          <label class="text-dark text-uppercase" for="Pillow110">Emriodery</label>
+                      <div class="row w-100 mb-3">
+                        <div class="col-md-3 col-sm-6 d-inline-flex align-items-center">
+                          <div class="checkbox custom_checkbox">
+                            <input id="fPillow222" type="checkbox" name="Pillow" value="">
+                            <label class="text-dark text-uppercase" for="Pillow222">13"x13" - Add $36.00</label>
+                          </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                          <label class="mb-0 d-flex flex-row align-items-center justify-content-start">Quantity:
+                            <select class="selectpicker from-control ms-3">
+                              <option class="text-dark" value="2">Option 1</option>
+                              <option class="text-dark" value="3">Option 2</option>
+                            </select>
+                          </label>
                         </div>
                       </div>
-                    </div>
-                    <div class="person-message">
-                      <div class="mb-3">
-                        <label class="label-color">Message:</label>
+                      <div class="row w-100 mb-3">
+                        <div class="col-md-3 col-sm-6 d-inline-flex align-items-center">
+                          <div class="checkbox custom_checkbox">
+                            <input id="Pillow110" type="checkbox" name="Pillow" value="">
+                            <label class="text-dark text-uppercase" for="Pillow110">Emriodery</label>
+                          </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                          <label class="mb-0 d-flex flex-row align-items-center justify-content-start">Quantity:
+                            <select class="selectpicker from-control ms-3">
+                              <option class="text-dark" value="2">Option 1</option>
+                            </select>
+                          </label>
+                        </div>
+                      </div>
+                      <!--.row-->
+                      <!--    .col-sm-6-->
+                      <!--        .checkbox.custom_checkbox.mb-3-->
+                      <!--            input#Pillow0(type='checkbox' name='' value='')-->
+                      <!--            label.text-dark.text-uppercase(for='Pillow0') 13"x13" - Add $36.00-->
+                      <!--        .checkbox.custom_checkbox-->
+                      <!--            input#Pillow1(type='checkbox' name='' value='')-->
+                      <!--            label.text-dark.text-uppercase(for='Pillow1') Emriodery-->
+                      <!--    .col-sm-6-->
+                      <!--        label.mb-0.d-flex.flex-row.align-items-center Quantity:-->
+                      <!--            select.selectpicker.from-control.ms-3-->
+                      <!--                option.text-dark(value='2') Option 1-->
+                      <!--                option.text-dark(value='3') Option 2-->
+                      <div class="person-message">
+                        <h6 class="product-customize-subtitle label-color">Message:</h6>
                         <textarea rows="4"></textarea>
-                      </div>
-                      <div class="mb-3">
-                        <label class="d-inline-flex justify-content-start">Shipping prices calculated for zip code:<span class="text-black text-bold ms-1">10001</span>
-                          <button class="edit ps-2 ms-1" href="#" data-bs-toggle="modal" data-bs-target="#modal--calculate"><i class="fa fa-pencil"></i></button>
-                        </label>
-                      </div>
-                    </div>
-                    <div class="row w-100 mb-3">
-                      <div class="col-12 col-sm-6 col-lg-6">
-                        <label class="mb-3">Shipping type:</label>
-                        <div class="form-check custom-radio">
-                          <input class="form-check-input" id="customRadio1" type="radio" name="shippingType" checked="false">
-                          <label class="form-check-label" for="customRadio1">Standard curbside delivery<span class="text-warning ms-3">$30.40</span></label>
-                        </div>
-                        <div class="form-check custom-radio mt-1">
-                          <input class="form-check-input" id="customRadio2" type="radio" name="shippingType" checked="true">
-                          <label class="form-check-label" for="customRadio2">Inside delivery with setup<span class="text-warning ms-3">$250.21</span></label>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row w-100 mb-3">
-                      <label class="d-inline-flex justify-content-start">Combined value shipping:<span class="text-black text-bold ms-1">Yes</span></label>
-                      <h6 class="product-customize-subtitle"><a class="btn-text text-underline text-bold" href="#">More Info About Your Savings</a></h6>
-                    </div>
-                    <div class="row w-100 mb-3">
-                      <div class="product-price">
-                        <!--span.text-warning Starting at:-->
-                        <div class="product-price-value"><span class="price-new"><span>$</span><span>1,371.00</span></span></div>
-                        <div class="product-price-shipping"><span>+ $30.40</span><span class="ms-2 text-dark"> Standard curbside delivery to 100001</span></div>
                       </div>
                     </div>
                   </div>
-                  <div class="product-customize-form">
-                    <div class="row w-100">
-                      <div class="col-12 col-sm-6 col-lg-3"><a class="btn btn-warning w-100 text-uppercase" href="#"><strong>add to cart</strong></a></div>
-                    </div>
+                  <div class="row border-b-dashed">
+                    <div class="col-12 col-sm-6 col-lg-4"><a class="btn btn-warning w-100 text-uppercase" href="#"><strong>add to cart</strong></a></div>
                   </div>
                 </form><!--Product customize end-->
               </div>

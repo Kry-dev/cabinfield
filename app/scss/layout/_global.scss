@@ -524,7 +524,6 @@ button.btn-text {
 .person-message {
 	width: 100%;
 	max-width: 484px;
-	
 	textarea {
 		width: 100%;
 		background: $white;
@@ -533,9 +532,7 @@ button.btn-text {
 		color: $label-color;
 		border-radius: $border-radius;
 		box-shadow: inset 0 3px 0 0 #F4F2F2;
-		margin-bottom: 2rem;
 	}
-	
 	.btn {
 		width: 100%;
 		margin-bottom: 2rem;
