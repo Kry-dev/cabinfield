@@ -599,12 +599,12 @@ button.btn-text {
 
 .summary-text {
 	.collapse:not(.show) {
-		height: 100px !important;
+		height: 168px !important;
 		overflow: hidden;
 		display: -webkit-box;
-		-webkit-line-clamp: 5;
+		-webkit-line-clamp: 7;
 		-webkit-box-orient: vertical;
-		margin-bottom: 4px;
+		margin-bottom: 12px;
 	}
 	
 	.collapsing {
