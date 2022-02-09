@@ -1,22 +1,17 @@
 .testimonials {
+	&-hero {
+		border: 1px solid $border-color;
+		background: $light-bg;
+		margin: 24px auto 80px;
+		padding: 24px 24px 48px;
+	}
 	&-title {
 		font-family: $font-family-base;
 		color: $text-dark;
 		font-size: 1.875rem;
 		line-height: 2.0625rem;
 		font-weight: 700;
-		text-align: center;
-		margin-bottom: 4rem;
-		
-		&:before {
-			content: "";
-			position: absolute;
-			width: 60px;
-			height: 1px;
-			background-color: $brown;
-			margin-top: 53px;
-			margin-left: 63px;
-		}
+		text-align: left;
 	}
 	
 	p {
@@ -90,10 +85,10 @@
 	}
 	
 	.testimonial-page-ic {
-		margin-top: -40px;
-		@include media-breakpoint-down(md) {
-			margin-top: 0;
-		}
+		display: block;
+		margin: 0 auto;
+		width: 100%;
+		max-width: 196px;
 	}
 	
 	@include media-breakpoint-down(sm) {
