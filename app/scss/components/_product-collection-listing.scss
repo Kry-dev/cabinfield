@@ -59,6 +59,9 @@
 		font-size: 28px;
 		line-height: 32px;
 		color: $text-dark;
+		a {
+			color: $text-dark;
+		}
 	}
 	.product-number{
 		color: $text-dark;
