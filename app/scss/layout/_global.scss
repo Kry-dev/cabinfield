@@ -598,14 +598,16 @@ button.btn-text {
 
 .summary-text {
 	.collapse:not(.show) {
-		height: 168px !important;
+		min-height: 78px;
 		overflow: hidden;
 		display: -webkit-box;
-		-webkit-line-clamp: 7;
+		-webkit-line-clamp: 3;
 		-webkit-box-orient: vertical;
 		margin-bottom: 12px;
 	}
-	
+	.collapse.show {
+		margin-bottom: 12px;
+	}
 	.collapsing {
 		min-height: 42px !important;
 	}
