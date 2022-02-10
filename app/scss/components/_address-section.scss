@@ -62,13 +62,13 @@
 	}
 	
 	.back {
-		margin-left: -20px;
-		letter-spacing: -.1px;
+		display: inline-flex;
+		align-items: center;
 		margin-bottom: 10px;
-		font-size: 12px;
 		text-transform: uppercase;
 		.fa {
-			font-size: $font-size-sm;
+			font-size: 12px;
+			line-height: 14px;
 			margin: 0 10px 0 0;
 		}
 	}
