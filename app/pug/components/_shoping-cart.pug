@@ -25,26 +25,32 @@ section.cart
                             include _option-selected-list-viewAll
                     .col-lg-6.col-md-12.pt-lg-5
                         h4.h4.mb-3.fw-bold.text-black Carolina Crown Amish Bed
-                        h4.h4.mb-3.fw-bold.text-dark Product price #[span.text-brown.fw-bold $1,371.00]
-                        .actions.mb-3
-                            a.edit(href='#')
-                                i.fa.fa-pencil
-                                | Edit
-                            button.wishlist
-                                i.fa.fa-heart-o
-                                | Move to wishlist
-                            button.delete
-                                i.fa.fa-trash
-                                | Delete
+                        label.mb-3 Subtotal: #[span.h4.text-brown.fw-bold.mb-0 $1,371.00]
+                        .row
+                            .col-sm-12.mb-3
+                                .checkbox.custom_checkbox
+                                    input#assembly0(type='radio' name='assembly' value='' checked='checked')
+                                    label.mb-0(for='assembly0') On-site assembly #[span.text-brown + $800.00]
+
+                        .row
+                            .col-sm-12.mb-3
+                                label.mb-1 Delivery Option:
+                                select.selectpicker.w-100
+                                    option.text-dark(value='2') Option 1
+                                    option.text-dark(value='3') Option 2
                         .row
                             .col-sm-12.mb-3
                                 label.mb-1 Quantity:
                                 select.selectpicker.w-100
                                     option.text-dark(value='2') Option 1
                                     option.text-dark(value='3') Option 2
-                            .col-sm-12
-                                a(href="#").text-bold + Add add virtual pre-gifting
-
+                        .actions.mb-3
+                            a.edit(href='#')
+                                | Edit
+                            button.wishlist
+                                | Move to wishlist
+                            button.delete
+                                | Delete
                 //End PDP 1 group 1
 
                 //start PDP 1 group 2
@@ -56,28 +62,32 @@ section.cart
                             include _option-selected-list-viewAll
                     .col-lg-6.col-md-12.pt-lg-5
                         h4.h4.mb-3.fw-bold.text-black Carolina Crown Amish Bed
-                        h4.h4.mb-3.fw-bold.text-dark Product price #[span.text-brown.fw-bold $1,371.00]
-                        .actions.mb-3
-                            a.edit(href='#')
-                                i.fa.fa-pencil
-                                | Edit
-                            button.wishlist
-                                i.fa.fa-heart-o
-                                | Move to wishlist
-                            button.delete
-                                i.fa.fa-trash
-                                | Delete
+                        label.mb-3 Subtotal: #[span.h4.text-brown.fw-bold.mb-0 $1,371.00]
+                        .row
+                            .col-sm-12.mb-3
+                                .checkbox.custom_checkbox
+                                    input#assembly2(type='radio' name='assembly' value='' checked='checked')
+                                    label.mb-0(for='assembly2') On-site assembly #[span.text-brown + $800.00]
+
+                        .row
+                            .col-sm-12.mb-3
+                                label.mb-1 Delivery Option:
+                                select.selectpicker.w-100
+                                    option.text-dark(value='2') Option 1
+                                    option.text-dark(value='3') Option 2
                         .row
                             .col-sm-12.mb-3
                                 label.mb-1 Quantity:
                                 select.selectpicker.w-100
                                     option.text-dark(value='2') Option 1
                                     option.text-dark(value='3') Option 2
-                        .row.mb-3
-                            .col-sm-12
-                                a(href="#").text-bold + Add add virtual pre-gifting
-
-
+                        .actions.mb-3
+                            a.edit(href='#')
+                                | Edit
+                            button.wishlist
+                                | Move to wishlist
+                            button.delete
+                                | Delete
                 //End PDP 1 group 2
                 .extended_price (Combined) Standard curbside delivery of 2 items above
                 .extended_price Shipping group total:
@@ -108,7 +118,7 @@ section.cart
                             include _option-selected-list-viewAll
                     .col-lg-6.col-md-12.pt-lg-5
                         h4.h4.mb-3.fw-bold.text-black Carolina Crown Amish Bed
-                        h4.h4.mb-3.fw-bold.text-dark Product price #[span.text-brown.fw-bold $1,371.00]
+                        label.mb-3 Subtotal: Product price #[span.text-brown.fw-bold.mb-0 $1,371.00]
                         .actions.mb-3
                             a.edit(href='#')
                                 i.fa.fa-pencil
