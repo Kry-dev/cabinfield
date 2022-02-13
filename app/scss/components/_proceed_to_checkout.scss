@@ -24,7 +24,7 @@
 		font-size: 0.9375rem;
 		font-weight: 600;
 		line-height: 1.25rem;
-		margin-top: 30px;
+		color: $dark;
 	}
 	
 	.item {
@@ -60,10 +60,10 @@
 	
 	.item.full_price {
 		height: 20px;
-		margin-top: 27px;
-		
+		margin-top: 20px;
+		margin-bottom: 20px;
 		.name {
-			color: #000000;
+			color: $dark;
 			font-size: 1rem;
 			font-weight: 600;
 			line-height: 1.5rem;
