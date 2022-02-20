@@ -312,6 +312,12 @@ form#options-form
                     label.form-check-label(for='customRadio2') Inside delivery with setup
                         span.text-warning.ms-3 $250.21
         .row.w-100.mb-3
+            .col-12.col-sm-6.col-lg-5
+                .checkbox.custom_checkbox
+                    input#On-site-assembly(type='radio' name='assembly2' value='' checked='')
+                    label.text-dark.mb-0(for='On-site-assembly') On site assembly
+
+        .row.w-100.mb-3
             label.d-inline-flex.justify-content-start Combined value shipping:
                 span.text-black.text-bold.ms-1 Yes
             h6.product-customize-subtitle
@@ -326,6 +332,9 @@ form#options-form
                 .product-price-shipping
                     span + $30.40
                     span.ms-2.text-dark  Standard curbside delivery to 100001
+                .product-price-shipping
+                    span + $800.40
+                    span.ms-2.text-dark  On site assembly
 
     .product-customize-form
         .row.w-100
