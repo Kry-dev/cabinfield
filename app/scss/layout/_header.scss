@@ -66,8 +66,14 @@
             font-weight: 400;
             font-size: 12px;
             line-height: 14px;
-            max-width: 170px;
+            max-width: 220px;
             margin-left: 1rem;
+            .tag{
+                display: block;
+            }
+            .subtag{
+                display: block;
+            }
         }
     }
     

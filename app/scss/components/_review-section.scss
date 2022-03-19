@@ -2,11 +2,12 @@
 .review_section {
 
     .review_section_wrap {
-        border: $border-width solid $product-main-border;
-        padding: 20px 25px;
+        border: $border-width solid #979797;
+        padding: 15px;
         display: flex;
         overflow: hidden;
         flex-direction: row;
+        justify-content: space-evenly;
         @include media-breakpoint-down(sm) {
             flex-direction: column;
         }
@@ -112,6 +113,9 @@
         @include media-breakpoint-down(sm) {
             max-width: 100%;
             flex: 0 0 100%;
+            max-width: 80%;
+            margin-left: auto;
+            margin-right: auto;
         }
     }
 
@@ -165,6 +169,156 @@
                 color: #ded9d6;
                 font-size: 22px;
             }
+        }
+    }
+    .review_block{
+        width:100%;
+        border:1px solid #979797;
+        @include media-breakpoint-down(sm) {
+            margin: 0 auto;
+        }
+        .rating{
+            width: 400px;
+            height: 80px;
+            display: inline-block;
+            background: url(../img/icon/star-open.png);
+            background-size: 80px;
+            position: relative;
+            @include media-breakpoint-down(sm) {
+                width:200px;
+                height:40px;
+                background-size:40px;
+            }
+        }
+        .rating-value{
+            height:80px;
+            width:100%;
+            background: url(../img/icon/star-close.png);
+            background-size:80px;
+            @include media-breakpoint-down(sm) {
+                width:200px;
+                height:40px;
+                background-size:40px;
+            }
+            span{
+                position: absolute;
+                right: 0;
+                bottom: -72px;
+                font-size: 3em;
+                font-family: times;
+                color: $orange;
+                font-weight: 700;
+                @include media-breakpoint-down(sm) {
+                    bottom:0;
+                    right: -100px;
+                    line-height: 40px;
+                }
+            }
+        }
+    }
+    .review-text-section{
+        padding:2em 5rem;
+        @include media-breakpoint-down(sm) {
+            padding:1em;
+            width:100%;
+            margin-bottom:2em;
+        }
+        .stars-rating{
+            width:100%;
+            .fa{
+                font-size:5em;
+                width:1em;
+                margin-right:5px;
+            }
+            .front-stars{
+                left:-16px;
+            }
+            .back-stars{
+                width:100%;
+            }
+            span{
+                position: relative;
+                line-height: 1em;
+                font-size: 4em;
+                margin: 0;
+                font-family: times;
+                bottom: -94px;
+                right: -34px;
+            }
+        }
+        h3{
+            font-weight: 700;
+            font-size: 1.3em;
+            margin-bottom: 5px;
+        }
+        p{
+            &.based_on{
+                font-size:0.85em;
+            }
+        }
+        .review_list{
+            margin-top:30px;
+            position:relative;
+            flex: 100%;
+            max-width: 100%;
+            @include media-breakpoint-down(sm) {
+                max-width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+        .review_carousel{
+            .text{
+                &:before{content:""}
+                padding-left:0;
+                font-size:0.85em;
+            }
+            .name{
+                color:$orange;
+                text-align: right;
+                margin-top: 22px;
+                font-weight: 400;
+                padding-right: 30px;
+            }
+        }
+        .review_carousel-controls{
+            position:absolute;
+            top:50px;
+            height:20px;
+            margin-top:0px;
+            width:100%;
+            .slick-arrow{height:20px;}
+            .slick-prev{
+                border:none;
+                left:-40px;
+            }
+            .slick-next{
+                right:-25px;
+                border:none;
+            }
+        }
+    }
+    .review-image{
+        position:relative;
+        .power{
+            position:absolute;
+            right:0;
+            bottom:0;
+            span{
+                color: $blue;
+                font-size:0.75em;
+                font-weight: 700;
+                margin-right: 10px;
+                position: relative;
+                bottom: -7px;
+            }
+            img{
+                width:40px;
+            }
+        }
+        @include media-breakpoint-down(sm) {
+            padding:1em;
+            width:100%;
         }
     }
 }
