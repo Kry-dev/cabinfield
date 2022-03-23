@@ -14,3 +14,20 @@ body {
 .text-label {
 	color: $text-label !important;
 }
+.uppercase{
+	text-transform: uppercase;
+  }
+  .capitalize{
+	text-transform:capitalize;
+  }
+  .underdash{position:relative;}
+  .underdash:after{
+	content: "";
+	width: 80px;
+	height: 2px;
+	background: #CC7654;
+	position: absolute;
+	left: 50%;
+	margin-left: -40px;
+	bottom: -15px;
+  }
