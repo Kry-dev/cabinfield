@@ -11,6 +11,10 @@
 			flex-direction: column;
 		}
 	}
+    .review_wrap{
+        border: $border-width solid $product-main-border;
+        padding:15px 25px;
+    }
 	
 	a {
 		display: inline-block;
@@ -168,9 +172,11 @@
 		}
 	}
 	
-	.review_block{
+	.review_area{
         width:100%;
         border:1px solid #979797;
+        display:flex;
+        padding:0;
         @include media-breakpoint-down(sm) {
             margin: 0 auto;
         }
