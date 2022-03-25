@@ -1,5 +1,6 @@
 import Mmenu from '../../core/oncanvas/mmenu.oncanvas';
 import * as DOM from '../../_modules/dom';
+
 export default function (navbar) {
     var _this = this;
     //	Add content.
@@ -23,8 +24,7 @@ export default function (navbar) {
         _txt = org ? org.innerHTML : '';
         if (_url) {
             prev.setAttribute('href', _url);
-        }
-        else {
+        } else {
             prev.removeAttribute('href');
         }
         prev.classList[_url || _txt ? 'remove' : 'add']('mm-hidden');

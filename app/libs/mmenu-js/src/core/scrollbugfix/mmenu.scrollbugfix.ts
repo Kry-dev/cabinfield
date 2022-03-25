@@ -1,14 +1,14 @@
 import Mmenu from './../oncanvas/mmenu.oncanvas';
 import options from './_options';
-import { extendShorthandOptions } from './_options';
+import {extendShorthandOptions} from './_options';
 import * as DOM from '../../_modules/dom';
 import * as support from '../../_modules/support';
-import { extend, touchDirection } from '../../_modules/helpers';
+import {extend, touchDirection} from '../../_modules/helpers';
 
 //  Add the options.
 Mmenu.options.scrollBugFix = options;
 
-export default function(this: Mmenu) {
+export default function (this: Mmenu) {
     //	The scrollBugFix add-on fixes a scrolling bug
     //		1) on touch devices
     //		2) in an off-canvas menu
@@ -61,10 +61,10 @@ export default function(this: Mmenu) {
                     stop(evnt);
                 }
 
-                //  When dragging a scrollable panel,
-                //      that is fully scrolled up (or down).
-                //      It will not trigger the scroll event when dragging down (or up) (because you can't scroll up (or down)),
-                //      so we need to match the dragging direction with the scroll position before preventDefault and stopPropagation,
+                    //  When dragging a scrollable panel,
+                    //      that is fully scrolled up (or down).
+                    //      It will not trigger the scroll event when dragging down (or up) (because you can't scroll up (or down)),
+                    //      so we need to match the dragging direction with the scroll position before preventDefault and stopPropagation,
                 //      otherwise the panel would not scroll at all in any direction.
                 else if (
                     //  When scrolled up and dragging down

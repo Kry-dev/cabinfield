@@ -19,6 +19,7 @@ var MmToggler = /** @class */ (function () {
         this.matchFns = [];
         this.unmatchFns = [];
     }
+    
     /**
      * Add a function to the list,
      * also fires the added function.

@@ -1,13 +1,13 @@
 import Mmenu from '../../core/oncanvas/mmenu.oncanvas';
 import options from './_options';
-import { extendShorthandOptions } from './_options';
+import {extendShorthandOptions} from './_options';
 import * as DOM from '../../_modules/dom';
-import { extend } from '../../_modules/helpers';
+import {extend} from '../../_modules/helpers';
 
 //	Add the options.
 Mmenu.options.columns = options;
 
-export default function(this: Mmenu) {
+export default function (this: Mmenu) {
     var options = extendShorthandOptions(this.opts.columns);
     this.opts.columns = extend(options, Mmenu.options.columns);
 

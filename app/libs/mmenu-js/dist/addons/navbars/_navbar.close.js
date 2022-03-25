@@ -1,5 +1,6 @@
 import Mmenu from '../../core/oncanvas/mmenu.oncanvas';
 import * as DOM from '../../_modules/dom';
+
 export default function (navbar) {
     var _this = this;
     //	Add content

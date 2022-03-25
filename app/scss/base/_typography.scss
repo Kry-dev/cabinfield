@@ -1,31 +1,33 @@
 @import "https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800|PT+Serif:400,700";
-body{
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6{
-    font-family: $font-family-base;
-  }
+
+body {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: $font-family-base;
+	}
 }
-.text-label{
-  color: $text-label !important;
+
+.text-label {
+	color: $text-label !important;
 }
 .uppercase{
-  text-transform: uppercase;
-}
-.capitalize{
-  text-transform:capitalize;
-}
-.underdash{position:relative;}
-.underdash:after{
-  content: "";
-  width: 80px;
-  height: 2px;
-  background: #CC7654;
-  position: absolute;
-  left: 50%;
-  margin-left: -40px;
-  bottom: -15px;
-}
+	text-transform: uppercase;
+  }
+  .capitalize{
+	text-transform:capitalize;
+  }
+  .underdash{position:relative;}
+  .underdash:after{
+	content: "";
+	width: 80px;
+	height: 2px;
+	background: #CC7654;
+	position: absolute;
+	left: 50%;
+	margin-left: -40px;
+	bottom: -15px;
+  }

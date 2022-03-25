@@ -4,7 +4,7 @@ section.gift.gift-checkout
         .gift-form-section
             .row.border-b-dashed
                 .col-lg-6
-                    .form-group
+                    .mb-3
                         label.col-form-label
                             b Your email
                         input.form-control(type='text', name='')
@@ -12,19 +12,19 @@ section.gift.gift-checkout
             .col-form-label.mb-0 Payment information
             .row.border-b-dashed.pb-3.mb-3
                 .col-lg-6
-                    .form-group
+                    .mb-3
                         label.col-form-label Card number
                         input.form-control(type='number', name='card-number', placeholder="●●●●-●●●●-●●●●-●●●●")
                 .col-lg-6
                     label.col-form-label Expiration date
                     .row
-                        .form-group.col-4.pr-0
+                        .mb-3.col-4.pe-0
                             select.selectpicker.w-100(name='')
                                 option Month
-                        .form-group.col-4
+                        .mb-3.col-4
                             select.selectpicker.w-100(name='')
                                 option Year
-                        .form-group.col-4.pl-0
+                        .mb-3.col-4.ps-0
                             input.form-control(type='text', name='', placeholder="●●●")
                             label.col-form-label.sec_code Security code
             .border_top
@@ -33,39 +33,39 @@ section.gift.gift-checkout
                 .col-lg-6.border-dashed-b
                     .form-address.form-address-billing
                         .row
-                            .form-group.col-md-6
+                            .mb-3.col-md-6
                                 label.col-form-label.col-form-label-sm First name
                                 input.form-control(type='text', name='first-name')
-                            .form-group.col-md-6
+                            .mb-3.col-md-6
                                 label.col-form-label.col-form-label-sm Last name
                                 input.form-control(type='text', name='last-name')
                         .row
-                            .form-group.col-md-12
+                            .mb-3.col-md-12
                                 label.col-form-label.col-form-label-sm Company name (optional)
                                 input.form-control(type='text', name='company-name')
                         .row
-                            .form-group.col-md-12
+                            .mb-3.col-md-12
                                 label.col-form-label.col-form-label-sm Street address
                                 input.form-control.street-addr(type='text', name='street-address-1', placeholder='Address line 1')
-                            .form-group.col-md-12.mt-2
+                            .mb-3.col-md-12.mt-2
                                 input.form-control.street-addr(type='text', name='street-address-2', placeholder='Address line 2 (optional)')
                 .col-lg-6.border-dashed-b
                     .form-address.form-address-billing
                         .row
-                            .form-group.col-md-6
+                            .mb-3.col-md-6
                                 label.col-form-label.col-form-label-sm City
                                 input.form-control(type='text', name='city')
-                            .form-group.col-md-6
+                            .mb-3.col-md-6
                                 label.col-form-label.col-form-label-sm State
                                 input.form-control(type='text', name='state')
                         .row
-                            .form-group.col-md-6
+                            .mb-3.col-md-6
                                 label.col-form-label.col-form-label-sm Zip-code
                                 input.form-control(type='text', name='Zip-code', placeholder="●●●●")
-                            .form-group.col-md-6
+                            .mb-3.col-md-6
                                 label.col-form-label.col-form-label-sm Ext (optional)
                                 input.form-control(type='text', name='ext', placeholder="●●●●")
-                            .form-group.col-md-6
+                            .mb-3.col-md-6
                                 label.col-form-label.col-form-label-sm Phone
                                 input.form-control(type='text', name='phone', placeholder="(●●●)●●●●●●●")
 

@@ -1,7 +1,7 @@
 import Mmenu from '../../core/oncanvas/mmenu.oncanvas';
 import * as DOM from '../../_modules/dom';
 
-export default function(this: Mmenu, navbar: HTMLElement) {
+export default function (this: Mmenu, navbar: HTMLElement) {
     //	Add content
     var breadcrumbs = DOM.create('div.mm-navbar__breadcrumbs');
     navbar.append(breadcrumbs);
@@ -30,10 +30,10 @@ export default function(this: Mmenu, navbar: HTMLElement) {
                             first
                                 ? '<span>' + text + '</span>'
                                 : '<a href="#' +
-                                      current.id +
-                                      '">' +
-                                      text +
-                                      '</a>'
+                                current.id +
+                                '">' +
+                                text +
+                                '</a>'
                         );
                     }
                 }
@@ -48,8 +48,8 @@ export default function(this: Mmenu, navbar: HTMLElement) {
 
         breadcrumbs.innerHTML = crumbs.join(
             '<span class="mm-separator">' +
-                this.conf.navbars.breadcrumbs.separator +
-                '</span>'
+            this.conf.navbars.breadcrumbs.separator +
+            '</span>'
         );
         DOM.children(panel, '.mm-navbar')[0].append(breadcrumbs);
     });

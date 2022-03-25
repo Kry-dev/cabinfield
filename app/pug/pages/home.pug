@@ -1,15 +1,21 @@
 extends ../main-template
 
 block title
-	| Cabinfield Home page
+    | Cabinfield Home page
 
 block content
-	main.content
-		include ../layout/_home-block
-		<!--Widgets-->
-		include ../layout/_home-icon-widgets
-		<!--Widgets end-->
-		include ../layout/_home-product-block
-		<!--Related products-->
-		include ../layout/_related-products
-		<!--Related products end-->
+    main.content
+        include ../layout/_home-block
+        <!--Widgets-->
+        include ../layout/_home-icon-widgets
+        <!--Widgets end-->
+        include ../layout/_home-product-block
+        <!--Related products-->
+        include ../layout/_related-products-new
+        <!--Related products end-->
+        
+        //- review sectino 
+        include ../layout/_review-section-new
+        
+        //- // signup action
+        include ../layout/_signup-action

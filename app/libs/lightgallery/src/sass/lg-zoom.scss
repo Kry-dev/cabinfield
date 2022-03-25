@@ -7,6 +7,7 @@
             }
         }
     }
+
     &.lg-use-transition-for-zoom {
         .lg-item.lg-complete.lg-zoomable {
             .lg-img-wrap {
@@ -14,6 +15,7 @@
             }
         }
     }
+
     &.lg-use-left-for-zoom {
         .lg-item.lg-complete.lg-zoomable {
             .lg-img-wrap {
@@ -22,7 +24,7 @@
         }
     }
 
-    .lg-item.lg-complete.lg-zoomable{
+    .lg-item.lg-complete.lg-zoomable {
 
         .lg-img-wrap {
             @include translate3d(0, 0, 0);
@@ -49,6 +51,7 @@
 
 #lg-actual-size {
     font-size: 20px;
+
     &:after {
         content: "\e033";
     }

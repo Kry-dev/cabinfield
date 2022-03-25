@@ -1,4 +1,4 @@
-/**	Options for the navigation. */
+/**    Options for the navigation. */
 interface mmNavigationOptions {
     /** The class for selected listitems. */
     selectedClass?: string;
@@ -13,7 +13,7 @@ interface mmNavigationOptions {
     title?: string;
 }
 
-/**	Options for the offcanvas drawer. */
+/**    Options for the offcanvas drawer. */
 interface mmOffcanvasOptions {
     /** The position of the drawer. */
     position?: 'left' | 'right';

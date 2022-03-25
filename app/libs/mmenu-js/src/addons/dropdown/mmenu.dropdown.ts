@@ -1,15 +1,15 @@
 import Mmenu from '../../core/oncanvas/mmenu.oncanvas';
 import options from './_options';
 import configs from './_configs';
-import { extendShorthandOptions } from './_options';
+import {extendShorthandOptions} from './_options';
 import * as DOM from '../../_modules/dom';
-import { extend, originalId } from '../../_modules/helpers';
+import {extend, originalId} from '../../_modules/helpers';
 
 //	Add the options and configs.
 Mmenu.options.dropdown = options;
 Mmenu.configs.dropdown = configs;
 
-export default function(this: Mmenu) {
+export default function (this: Mmenu) {
     if (!this.opts.offCanvas) {
         return;
     }
@@ -54,7 +54,7 @@ export default function(this: Mmenu) {
                 () => {
                     this.open();
                 },
-                { passive: true }
+                {passive: true}
             );
         }
 
@@ -64,7 +64,7 @@ export default function(this: Mmenu) {
                 () => {
                     this.close();
                 },
-                { passive: true }
+                {passive: true}
             );
         }
     });
@@ -85,9 +85,9 @@ export default function(this: Mmenu) {
      *
      * @param  {string} dir The direction to measure ("x" for horizontal, "y" for vertical)
      * @param  {object} obj The object where (previously) measured values are stored.
-     * @return {object}		The object where measered values are stored.
+     * @return {object}        The object where measered values are stored.
      */
-    var getPosition = function(
+    var getPosition = function (
         this: Mmenu,
         dir: string,
         obj: mmLooseObject
@@ -164,6 +164,7 @@ export default function(this: Mmenu) {
 
         return [css, cls];
     };
+
     function position(this: Mmenu) {
         if (!this.vars.opened) {
             return;
@@ -208,7 +209,7 @@ export default function(this: Mmenu) {
         evnt => {
             position.call(this);
         },
-        { passive: true }
+        {passive: true}
     );
 
     if (!this.opts.offCanvas.blockUI) {
@@ -217,7 +218,7 @@ export default function(this: Mmenu) {
             evnt => {
                 position.call(this);
             },
-            { passive: true }
+            {passive: true}
         );
     }
 }

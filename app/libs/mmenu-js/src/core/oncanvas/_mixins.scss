@@ -1,12 +1,12 @@
 // Arrow buttons
 @mixin mm_btn_arrow_prev {
-	transform: rotate( -45deg );
+	transform: rotate(-45deg);
 	left: $mm_listitemIndent + 3;
 	right: auto;
 }
 
 @mixin mm_btn_arrow_next {
-	transform: rotate( 135deg );
+	transform: rotate(135deg);
 	right: $mm_listitemIndent + 3;
 	left: auto;
 }

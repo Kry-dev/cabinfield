@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="8px" height="12px" viewBox="0 0 8 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="8px" height="12px" viewBox="0 0 8 12" version="1.1"
+     xmlns="http://www.w3.org/2000/svg">
     <!-- Generator: sketchtool 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
     <title>C91CB1A9-4B41-4D7E-BBCC-590C681B8CDD</title>
     <desc>Created with sketchtool.</desc>
@@ -7,10 +8,14 @@
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="Product" transform="translate(-1256.000000, -951.000000)" stroke="#CC7654" stroke-width="2.8">
             <g id="Group-18" transform="translate(98.000000, 833.000000)">
-                <g id="vlide-copy-9" transform="translate(1160.000000, 124.000000) scale(-1, 1) translate(-1160.000000, -124.000000) translate(1150.000000, 101.000000)">
-                    <g id="right-copy" transform="translate(10.000000, 23.000000) scale(-1, 1) translate(-10.000000, -23.000000) ">
+                <g id="vlide-copy-9"
+                   transform="translate(1160.000000, 124.000000) scale(-1, 1) translate(-1160.000000, -124.000000) translate(1150.000000, 101.000000)">
+                    <g id="right-copy"
+                       transform="translate(10.000000, 23.000000) scale(-1, 1) translate(-10.000000, -23.000000) ">
                         <g id="scrollarrow" transform="translate(3.000000, 0.000000)">
-                            <polyline id="right-scroll-arrow" transform="translate(9.000000, 23.000000) rotate(-180.000000) translate(-9.000000, -23.000000) " points="11 18 7 23.0034903 10.9944194 28"></polyline>
+                            <polyline id="right-scroll-arrow"
+                                      transform="translate(9.000000, 23.000000) rotate(-180.000000) translate(-9.000000, -23.000000) "
+                                      points="11 18 7 23.0034903 10.9944194 28"></polyline>
                         </g>
                     </g>
                 </g>

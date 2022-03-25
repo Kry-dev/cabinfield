@@ -11,16 +11,17 @@ var options = {
     }
 };
 export default options;
+
 /**
  * Extend shorthand options.
  *
  * @param  {object} options The options to extend.
- * @return {object}			The extended options.
+ * @return {object}            The extended options.
  */
 export function extendShorthandOptions(options) {
     if (typeof options == 'string' ||
-        (typeof options == 'boolean' && options) ||
-        typeof options == 'number') {
+      (typeof options == 'boolean' && options) ||
+      typeof options == 'number') {
         options = {
             expanded: options
         };
@@ -35,7 +36,7 @@ export function extendShorthandOptions(options) {
         };
     }
     if (typeof options.collapsed == 'string' ||
-        typeof options.collapsed == 'number') {
+      typeof options.collapsed == 'number') {
         options.collapsed = {
             use: options.collapsed
         };
@@ -50,7 +51,7 @@ export function extendShorthandOptions(options) {
         };
     }
     if (typeof options.expanded == 'string' ||
-        typeof options.expanded == 'number') {
+      typeof options.expanded == 'number') {
         options.expanded = {
             use: options.expanded
         };

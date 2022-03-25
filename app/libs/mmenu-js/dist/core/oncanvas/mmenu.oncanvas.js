@@ -5,7 +5,7 @@ import translate from './translations/translate';
 import * as DOM from '../../_modules/dom';
 import * as i18n from '../../_modules/i18n';
 import * as media from '../../_modules/matchmedia';
-import { type, extend, transitionend, uniqueId, valueOrFn } from '../../_modules/helpers';
+import {type, extend, transitionend, uniqueId, valueOrFn} from '../../_modules/helpers';
 //  Add the translations.
 translate();
 /**
@@ -14,9 +14,9 @@ translate();
 var Mmenu = /** @class */ (function () {
     /**
      * Create a mobile menu.
-     * @param {HTMLElement|string} 	menu						The menu node.
-     * @param {object} 				[options=Mmenu.options]		Options for the menu.
-     * @param {object} 				[configs=Mmenu.configs]		Configuration options for the menu.
+     * @param {HTMLElement|string}    menu                        The menu node.
+     * @param {object}                [options=Mmenu.options]        Options for the menu.
+     * @param {object}                [configs=Mmenu.configs]        Configuration options for the menu.
      */
     function Mmenu(menu, options, configs) {
         //	Extend options and configuration from defaults.
@@ -39,7 +39,7 @@ var Mmenu = /** @class */ (function () {
         this.clck = [];
         //	Get menu node from string or element.
         this.node.menu =
-            typeof menu == 'string' ? document.querySelector(menu) : menu;
+          typeof menu == 'string' ? document.querySelector(menu) : menu;
         if (typeof this._deprecatedWarnings == 'function') {
             this._deprecatedWarnings();
         }
@@ -55,10 +55,11 @@ var Mmenu = /** @class */ (function () {
         media.watch();
         return this;
     }
+    
     /**
      * Open a panel.
-     * @param {HTMLElement} panel				Panel to open.
-     * @param {boolean}		[animation=true]	Whether or not to open the panel with an animation.
+     * @param {HTMLElement} panel                Panel to open.
+     * @param {boolean}        [animation=true]    Whether or not to open the panel with an animation.
      */
     Mmenu.prototype.openPanel = function (panel, animation) {
         var _this = this;
@@ -88,25 +89,29 @@ var Mmenu = /** @class */ (function () {
                 });
             });
             //	Open first non-vertical parent panel.
-            var parents = DOM.parents(panel, '.mm-panel').filter(function (panel) { return !panel.parentElement.matches('.mm-listitem_vertical'); });
+            var parents = DOM.parents(panel, '.mm-panel').filter(function (panel) {
+                return !panel.parentElement.matches('.mm-listitem_vertical');
+            });
             this.trigger('openPanel:start', [panel]);
             if (parents.length) {
                 this.openPanel(parents[0]);
             }
             this.trigger('openPanel:finish', [panel]);
             //	Open a "horizontal" panel.
-        }
-        else {
+        } else {
             if (panel.matches('.mm-panel_opened')) {
                 return;
             }
-            var panels = DOM.children(this.node.pnls, '.mm-panel'), current_1 = DOM.children(this.node.pnls, '.mm-panel_opened')[0];
+            var panels = DOM.children(this.node.pnls, '.mm-panel'),
+              current_1 = DOM.children(this.node.pnls, '.mm-panel_opened')[0];
             //	Close all child panels.
             panels
-                .filter(function (parent) { return parent !== panel; })
-                .forEach(function (parent) {
-                parent.classList.remove('mm-panel_opened-parent');
-            });
+              .filter(function (parent) {
+                  return parent !== panel;
+              })
+              .forEach(function (parent) {
+                  parent.classList.remove('mm-panel_opened-parent');
+              });
             //	Open all parent panels.
             var parent_1 = panel['mmParent'];
             while (parent_1) {
@@ -123,13 +128,17 @@ var Mmenu = /** @class */ (function () {
                 panel.classList.remove('mm-panel_highest');
             });
             panels
-                .filter(function (hidden) { return hidden !== current_1; })
-                .filter(function (hidden) { return hidden !== panel; })
-                .forEach(function (hidden) {
-                hidden.classList.add('mm-hidden');
-            });
+              .filter(function (hidden) {
+                  return hidden !== current_1;
+              })
+              .filter(function (hidden) {
+                  return hidden !== panel;
+              })
+              .forEach(function (hidden) {
+                  hidden.classList.add('mm-hidden');
+              });
             panel.classList.remove('mm-hidden');
-            /**	Start opening the panel. */
+            /**    Start opening the panel. */
             var openPanelStart_1 = function () {
                 if (current_1) {
                     current_1.classList.remove('mm-panel_opened');
@@ -140,8 +149,7 @@ var Mmenu = /** @class */ (function () {
                         current_1.classList.add('mm-panel_highest');
                     }
                     panel.classList.remove('mm-panel_opened-parent');
-                }
-                else {
+                } else {
                     if (current_1) {
                         current_1.classList.add('mm-panel_opened-parent');
                     }
@@ -150,7 +158,7 @@ var Mmenu = /** @class */ (function () {
                 //	Invoke "start" hook.
                 _this.trigger('openPanel:start', [panel]);
             };
-            /**	Finish opening the panel. */
+            /**    Finish opening the panel. */
             var openPanelFinish_1 = function () {
                 if (current_1) {
                     current_1.classList.remove('mm-panel_highest');
@@ -169,8 +177,7 @@ var Mmenu = /** @class */ (function () {
                     }, _this.conf.transitionDuration);
                     openPanelStart_1();
                 }, this.conf.openingInterval);
-            }
-            else {
+            } else {
                 openPanelStart_1();
                 openPanelFinish_1();
             }
@@ -233,8 +240,8 @@ var Mmenu = /** @class */ (function () {
         //	Only works for "vertical" panels.
         if (listitem.matches('.mm-listitem_vertical')) {
             this[listitem.matches('.mm-listitem_opened')
-                ? 'closePanel'
-                : 'openPanel'](panel);
+              ? 'closePanel'
+              : 'openPanel'](panel);
         }
     };
     /**
@@ -255,8 +262,8 @@ var Mmenu = /** @class */ (function () {
     };
     /**
      * Bind functions to a hook (subscriber).
-     * @param {string} 		hook The hook.
-     * @param {function} 	func The function.
+     * @param {string}        hook The hook.
+     * @param {function}    func The function.
      */
     Mmenu.prototype.bind = function (hook, func) {
         //	Create an array for the hook if it does not yet excist.
@@ -266,8 +273,8 @@ var Mmenu = /** @class */ (function () {
     };
     /**
      * Invoke the functions bound to a hook (publisher).
-     * @param {string} 	hook  	The hook.
-     * @param {array}	[args] 	Arguments for the function.
+     * @param {string}    hook    The hook.
+     * @param {array}    [args]    Arguments for the function.
      */
     Mmenu.prototype.trigger = function (hook, args) {
         if (this.hook[hook]) {
@@ -344,7 +351,9 @@ var Mmenu = /** @class */ (function () {
         }
         //	Loop over object.
         Object.keys(this.opts.extensions).forEach(function (query) {
-            var classnames = _this.opts.extensions[query].map(function (extension) { return 'mm-menu_' + extension; });
+            var classnames = _this.opts.extensions[query].map(function (extension) {
+                return 'mm-menu_' + extension;
+            });
             if (classnames.length) {
                 media.add(query, function () {
                     //  IE11:
@@ -382,7 +391,7 @@ var Mmenu = /** @class */ (function () {
         var panels = DOM.create('div.mm-panels');
         DOM.children(this.node.menu).forEach(function (panel) {
             if (_this.conf.panelNodetype.indexOf(panel.nodeName.toLowerCase()) >
-                -1) {
+              -1) {
                 panels.append(panel);
             }
         });
@@ -410,14 +419,13 @@ var Mmenu = /** @class */ (function () {
                         if (panel && panel.matches('.mm-panel')) {
                             if (anchor.parentElement.matches('.mm-listitem_vertical')) {
                                 _this.togglePanel(panel);
-                            }
-                            else {
+                            } else {
                                 _this.openPanel(panel);
                             }
                             return true;
                         }
+                    } catch (err) {
                     }
-                    catch (err) { }
                 }
             }
         });
@@ -462,8 +470,8 @@ var Mmenu = /** @class */ (function () {
     };
     /**
      * Initialize a single panel.
-     * @param  {HTMLElement} 		panel 	Panel to initialize.
-     * @return {HTMLElement|null} 			Initialized panel.
+     * @param  {HTMLElement}        panel    Panel to initialize.
+     * @return {HTMLElement|null}            Initialized panel.
      */
     Mmenu.prototype._initPanel = function (panel) {
         var _this = this;
@@ -484,7 +492,7 @@ var Mmenu = /** @class */ (function () {
         var id = panel.id || uniqueId();
         //  Vertical panel.
         var vertical = panel.matches('.' + this.conf.classNames.vertical) ||
-            !this.opts.slidingSubmenus;
+          !this.opts.slidingSubmenus;
         panel.classList.remove(this.conf.classNames.vertical);
         //	Wrap UL/OL in DIV
         if (panel.matches('ul, ol')) {
@@ -507,8 +515,7 @@ var Mmenu = /** @class */ (function () {
             if (parent) {
                 parent.classList.add('mm-listitem_vertical');
             }
-        }
-        else {
+        } else {
             this.node.pnls.append(panel);
         }
         if (parent) {
@@ -567,9 +574,9 @@ var Mmenu = /** @class */ (function () {
         if (panel.getAttribute('data-mm-parent')) {
             parentPanel = DOM.find(this.node.pnls, panel.getAttribute('data-mm-parent'))[0];
         }
-        // if (panel.dataset.mmParent) { // IE10 has no dataset
-        // parentPanel = DOM.find(this.node.pnls, panel.dataset.mmParent)[0];
-        // }
+          // if (panel.dataset.mmParent) { // IE10 has no dataset
+          // parentPanel = DOM.find(this.node.pnls, panel.dataset.mmParent)[0];
+          // }
         //  The parent panel from a listitem.
         else {
             parentListitem = panel['mmParent'];
@@ -613,11 +620,11 @@ var Mmenu = /** @class */ (function () {
         var titleText = DOM.create('span');
         title.append(titleText);
         titleText.innerHTML =
-            // panel.dataset.mmTitle || // IE10 has no dataset :(
-            panel.getAttribute('data-mm-title') ||
-                (opener ? opener.textContent : '') ||
-                this.i18n(this.opts.navbar.title) ||
-                this.i18n('Menu');
+          // panel.dataset.mmTitle || // IE10 has no dataset :(
+          panel.getAttribute('data-mm-title') ||
+          (opener ? opener.textContent : '') ||
+          this.i18n(this.opts.navbar.title) ||
+          this.i18n('Menu');
         switch (this.opts.navbar.titleLink) {
             case 'anchor':
                 if (opener) {
@@ -678,10 +685,10 @@ var Mmenu = /** @class */ (function () {
         if (lastitem) {
             lastitem.classList.add('mm-listitem_selected');
         }
-        /**	The current opened panel. */
+        /**    The current opened panel. */
         var current = lastitem
-            ? lastitem.closest('.mm-panel')
-            : DOM.children(this.node.pnls, '.mm-panel')[0];
+          ? lastitem.closest('.mm-panel')
+          : DOM.children(this.node.pnls, '.mm-panel')[0];
         //	Open the current opened panel.
         this.openPanel(current, false);
         //	Invoke "after" hook.
@@ -705,7 +712,7 @@ var Mmenu = /** @class */ (function () {
                 inMenu: target.closest('.mm-menu') === _this.node.menu,
                 inListview: target.matches('.mm-listitem > a'),
                 toExternal: target.matches('[rel="external"]') ||
-                    target.matches('[target="_blank"]')
+                  target.matches('[target="_blank"]')
             };
             var onClick = {
                 close: null,
@@ -738,7 +745,7 @@ var Mmenu = /** @class */ (function () {
                 //	Close menu. Default: false
                 if (valueOrFn(target, _this.opts.onClick.close, onClick.close)) {
                     if (_this.opts.offCanvas &&
-                        typeof _this.close == 'function') {
+                      typeof _this.close == 'function') {
                         _this.close();
                     }
                 }
@@ -749,23 +756,23 @@ var Mmenu = /** @class */ (function () {
     };
     /**
      * Get the translation for a text.
-     * @param  {string} text 	Text to translate.
-     * @return {string}			The translated text.
+     * @param  {string} text    Text to translate.
+     * @return {string}            The translated text.
      */
     Mmenu.prototype.i18n = function (text) {
         return i18n.get(text, this.conf.language);
     };
-    /**	Plugin version. */
+    /**    Plugin version. */
     Mmenu.version = version;
-    /**	Default options for menus. */
+    /**    Default options for menus. */
     Mmenu.options = options;
-    /**	Default configuration for menus. */
+    /**    Default configuration for menus. */
     Mmenu.configs = configs;
-    /**	Available add-ons for the plugin. */
+    /**    Available add-ons for the plugin. */
     Mmenu.addons = {};
     /** Available wrappers for the plugin. */
     Mmenu.wrappers = {};
-    /**	Globally used HTML elements. */
+    /**    Globally used HTML elements. */
     Mmenu.node = {};
     /** Globally used variables. */
     Mmenu.vars = {};

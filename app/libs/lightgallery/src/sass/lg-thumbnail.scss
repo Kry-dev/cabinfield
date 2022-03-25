@@ -27,7 +27,8 @@
             }
         }
     }
-    &.lg-thumb-open{
+
+    &.lg-thumb-open {
         .lg-thumb-outer {
             @include translate3d(0, 0%, 0);
         }
@@ -74,11 +75,13 @@
             padding-bottom: 0;
         }
     }
-    &.lg-pull-caption-up{
+
+    &.lg-pull-caption-up {
         .lg-sub-html {
             @include transition(bottom 0.25s ease);
         }
-        &.lg-thumb-open{
+
+        &.lg-thumb-open {
             .lg-sub-html {
                 bottom: 100px;
             }

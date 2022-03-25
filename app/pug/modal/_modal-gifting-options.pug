@@ -1,37 +1,37 @@
 #gifting_options.modal.fade.gifting_options(tabindex='-1', role='dialog', aria-hidden='true')
-  .modal-dialog.modal-lg(role='document')
-    button.close(type='button', data-dismiss='modal', aria-label='Close')
-      span(aria-hidden='true') ×
-    .modal-content.border-0
-      .modal-body.p-0
-        .row.m-0
-          .col-md-7.image_left.px-0
-            img.img-fluid(src='img/general/sample@2x.png')
-          .col-md-5.content_right.p-5
-            .title Virtual Pre-Gifting
-            p.mb-4
-              span Please enter your free personal message to your Virtual Pre-Gifting recipient here
-            form.form
-              .form-group
-                label.col-form-label.mb-0 Occasion
-                select.selectpicker.form-control(name='Occasion')
-                  option Select
-              .form-group
-                label.col-form-label.mb-0 To
-                input.form-control(type='text', name='To')
-              .form-group
-                label.col-form-label.mb-0 Message
-                textarea.form-control(name='Message',rows="5")
-              .form-group
-                label.col-form-label.mb-0 Closing
-                select.selectpicker.form-control(name='Closing')
-                  option Select
-              .form-group
-                label.col-form-label.mb-0 From
-                input.form-control(type='text', name='')
-              .form-group
-                a(href='#') + Add special request
-              .form-group
-                a(href='#') + Add Gift Note
-            p.d-flex.justify-content-end
-              button(type='submit').btn.btn-warning.btn-sm Save
+    .modal-dialog.modal-lg(role='document')
+        button.close(type='button', data-bs-dismiss='modal', aria-label='Close')
+            span(aria-hidden='true') ×
+        .modal-content.border-0
+            .modal-body.p-0
+                .row.m-0
+                    .col-md-7.image_left.px-0
+                        img.img-fluid(src='img/general/sample@2x.png')
+                    .col-md-5.content_right.p-5
+                        .title Virtual Pre-Gifting
+                        p.mb-4
+                            span Please enter your free personal message to your Virtual Pre-Gifting recipient here
+                        form.form
+                            .mb-3
+                                label.col-form-label.mb-0 Occasion
+                                select.selectpicker.form-control(name='Occasion')
+                                    option Select
+                            .mb-3
+                                label.col-form-label.mb-0 To
+                                input.form-control(type='text', name='To')
+                            .mb-3
+                                label.col-form-label.mb-0 Message
+                                textarea.form-control(name='Message',rows="5")
+                            .mb-3
+                                label.col-form-label.mb-0 Closing
+                                select.selectpicker.form-control(name='Closing')
+                                    option Select
+                            .mb-3
+                                label.col-form-label.mb-0 From
+                                input.form-control(type='text', name='')
+                            .mb-3
+                                a(href='#') + Add special request
+                            .mb-3
+                                a(href='#') + Add Gift Note
+                        p.d-flex.justify-content-end
+                            button(type='submit').btn.btn-warning.btn-sm Save

@@ -1,4 +1,4 @@
-import { r, $ } from '../helpers';
+import {r, $} from '../helpers';
 import * as support from '../support';
 
 const prefix = 'mm-spn';
@@ -7,20 +7,12 @@ const prefix = 'mm-spn';
  * Class for navigating in a mobile menu.
  */
 export default class MmSlidingPanelsNavigation {
-    /** Prefix for the class. */
-    get prefix() {
-        return prefix;
-    }
-
     /** HTML element for the menu. */
     node: HTMLElement;
-
     /** The title for the menu. */
     title: string;
-
     /** Whether or not to use sliding submenus. */
     slidingSubmenus: boolean;
-
     /** The class for selected menu items. */
     selectedClass: string;
 
@@ -60,6 +52,11 @@ export default class MmSlidingPanelsNavigation {
 
         this._setSelectedl();
         this._initAnchors();
+    }
+
+    /** Prefix for the class. */
+    get prefix() {
+        return prefix;
     }
 
     /**

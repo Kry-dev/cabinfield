@@ -1,8 +1,8 @@
 /**
  * Convert a list to an array.
  *
- * @param 	{NodeList|HTMLCollection} list 	The list or collection to convert into an array.
- * @return	{array}							The array.
+ * @param    {NodeList|HTMLCollection} list    The list or collection to convert into an array.
+ * @return    {array}                            The array.
  */
 export var r = function (list) {
     return Array.prototype.slice.call(list);
@@ -10,9 +10,9 @@ export var r = function (list) {
 /**
  * Find elements in the given context.
  *
- * @param 	{string}		selector			The query selector to search for.
- * @param 	{HTMLElement}	[context=document]	The context to search in.
- * @return	{HTMLElement[]}						The found list of elements.
+ * @param    {string}        selector            The query selector to search for.
+ * @param    {HTMLElement}    [context=document]    The context to search in.
+ * @return    {HTMLElement[]}                        The found list of elements.
  */
 export var $ = function (selector, context) {
     return r((context || document).querySelectorAll(selector));

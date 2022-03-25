@@ -1,4 +1,5 @@
-import { type } from '../../_modules/helpers';
+import {type} from '../../_modules/helpers';
+
 var options = {
     use: false,
     top: [],
@@ -7,11 +8,12 @@ var options = {
     type: 'default'
 };
 export default options;
+
 /**
  * Extend shorthand options.
  *
  * @param  {object} options The options to extend.
- * @return {object}			The extended options.
+ * @return {object}            The extended options.
  */
 export function extendShorthandOptions(options) {
     if (type(options) == 'array') {

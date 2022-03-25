@@ -1,0 +1,55 @@
+section.cart.address-section
+    .container
+        .row
+            .col-12
+                a.back.text-brown(href='#')
+                    i.fa.fa-chevron-left
+                    | Back
+        .row.mb-3
+            .col-12
+                h1.mb-1 Payment Information
+                h4 To pay by check, click review to proceed to next step
+        .row.wishlist-item.pt-3
+            .col-lg-8.col-md-6.col-sm-12
+                .row.mb-3.mb-lg-4
+                    h6.h6.text-bold.mb-1 Payment Options:
+                    p You may conveniently and securely pay for your gazebo online by credit card (Visa, MC or Discover). Or if you prefer, you may pay by money order or check payable to Cabinfield Woodworking.
+                .row.mb-3.mb-lg-4
+                    h6.h6.text-bold.mb-1 Special Note Concerning Payment by Check:
+                    p If you are paying by check, note that your check must clear before your item is released for shipping.
+                .row.mb-3.mb-lg-4
+                    h6.h6.text-bold.mb-1 Special Note Concerning Payments for Gazebos and Customized Products:
+                    p If you are ordering a gazebo or an item that is customized by staining or burning, note that we require a 50 percent deposit to process your order. When your gazebo or customized product is ready to ship, we will invoice you by e-mail for the remaining 50 percent. Upon receipt and clearance of your final payment, we will ship your product.
+                .row.mb-3.mb-lg-4
+                    p
+                        a.text-underline(href="#") Pay with credit or debit
+            .col-lg-4.col-md-6.col-sm-12
+                .proceed_to_checkout.mt-5.mt-md-0
+                    .title.mt-0 Order Summary
+                    .item
+                        span.name Items:
+                        span.price $1,321.00
+                    .item
+                        span.name Shipping & handling:
+                        span.price $234.00
+                    .item
+                        span.name Savings on combined shipping:
+                        span.price.text-brown  - $128.24
+                    .item
+                        span.name Total before tax:
+                        span.price $1,371.00
+                    .item
+                        span.name Estimated tax to be collected:
+                        span.price $0.00
+                    .item.full_price
+                        span.name Order total:
+                        span.price $1,371.00
+                    .item
+                        span.name Due today
+                            button(type="button", data-bs-target="#customize_popup_info", data-bs-toggle="modal").popup-info.me-0 ?
+                            | :
+                        span.price $0.00
+                    .d-flex.justify-content-center.w-100.mt-3
+                        a(href='#').btn.btn-warning.text-uppercase.w-100
+                            b Review
+

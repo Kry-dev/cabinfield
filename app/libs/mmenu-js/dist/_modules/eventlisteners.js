@@ -8,6 +8,7 @@ function ucFirst(word) {
     }
     return word.charAt(0).toUpperCase() + word.slice(1);
 }
+
 /**
  * Bind an event listener to an element.
  * @param {HTMLElement} element     The element to bind the event listener to.
@@ -22,6 +23,7 @@ export function on(element, evnt, handler) {
     element[evnt].push(handler);
     element.addEventListener(evntParts[0], handler);
 }
+
 /**
  * Remove an event listener from an element.
  * @param {HTMLElement} element The element to remove the event listeners from.
@@ -35,6 +37,7 @@ export function off(element, evnt) {
         element.removeEventListener(evntParts[0], handler);
     });
 }
+
 /**
  * Trigger the bound event listeners on an element.
  * @param {HTMLElement} element     The element of which to trigger the event listeners from.

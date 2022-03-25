@@ -1,22 +1,22 @@
 .modal--sign-in.register-sign-in
-  .modal-dialog.modal-dialog-centered.modal-sm(role='document')
-    .modal-content
-      .modal-body
-        form.form.px-5
-          h4.modal-title Sign in
-          .form-group
-            label.col-form-label.col-form-label-sm Email
-            input.form-control(type='email', name='email')
-          .form-group.mb-4
-            label.col-form-label.col-form-label-sm Password
-              a.text-right(href="#") Forgot yor password?
-            input.form-control(type='password', name="pass")
-          .form-group.d-flex
-            button.btn.btn-warning.w-100(type='submit') Sign In
+    .modal-dialog.modal-dialog-centered.modal-sm(role='document')
+        .modal-content
+            .modal-body
+                form.form.px-5
+                    h4.modal-title Sign in
+                    .mb-3
+                        label.col-form-label.col-form-label-sm Email
+                        input.form-control(type='email', name='email')
+                    .mb-4
+                        label.col-form-label.col-form-label-sm Password
+                            a.text-end(href="#") Forgot yor password?
+                        input.form-control(type='password', name="pass")
+                    .mb-3.d-flex
+                        button.btn.btn-warning.w-100(type='submit') Sign In
 .d-flex.modal-sm.mx-auto
-  .register-wrapper.w-100
-    .register-inner
-      h6.register-subtitle New to Cabinfield?
-      a.btn.btn-outline-warning(href='#') Create Your Cabinfield Account
+    .register-wrapper.w-100
+        .register-inner
+            h6.register-subtitle New to Cabinfield?
+            a.btn.btn-outline-warning(href='#') Create Your Cabinfield Account
 
 <!--modal sign-in end-->

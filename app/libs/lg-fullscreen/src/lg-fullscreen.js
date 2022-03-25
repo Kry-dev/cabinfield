@@ -1,4 +1,4 @@
-(function() {
+(function () {
 
     'use strict';
 
@@ -15,7 +15,7 @@
         );
     }
 
-    var Fullscreen = function(element) {
+    var Fullscreen = function (element) {
 
         // get lightGallery core plugin data
         this.core = $(element).data('lightGallery');
@@ -30,7 +30,7 @@
         return this;
     };
 
-    Fullscreen.prototype.init = function() {
+    Fullscreen.prototype.init = function () {
         var fullScreen = '';
         if (this.core.s.fullScreen) {
 
@@ -46,7 +46,7 @@
         }
     };
 
-    Fullscreen.prototype.requestFullscreen = function() {
+    Fullscreen.prototype.requestFullscreen = function () {
         var el = document.documentElement;
         if (el.requestFullscreen) {
             el.requestFullscreen();
@@ -59,7 +59,7 @@
         }
     };
 
-    Fullscreen.prototype.exitFullscreen = function() {
+    Fullscreen.prototype.exitFullscreen = function () {
         if (document.exitFullscreen) {
             document.exitFullscreen();
         } else if (document.msExitFullscreen) {
@@ -72,14 +72,14 @@
     };
 
     // https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Using_full_screen_mode
-    Fullscreen.prototype.fullScreen = function() {
+    Fullscreen.prototype.fullScreen = function () {
         var _this = this;
 
-        $(document).on('fullscreenchange.lg webkitfullscreenchange.lg mozfullscreenchange.lg MSFullscreenChange.lg', function() {
+        $(document).on('fullscreenchange.lg webkitfullscreenchange.lg mozfullscreenchange.lg MSFullscreenChange.lg', function () {
             _this.core.$outer.toggleClass('lg-fullscreen-on');
         });
 
-        this.core.$outer.find('.lg-fullscreen').on('click.lg', function() {
+        this.core.$outer.find('.lg-fullscreen').on('click.lg', function () {
             if (isFullScreen()) {
                 _this.exitFullscreen();
             } else {
@@ -89,10 +89,10 @@
 
     };
 
-    Fullscreen.prototype.destroy = function() {
+    Fullscreen.prototype.destroy = function () {
 
         // exit from fullscreen if activated
-        if(isFullScreen()) {
+        if (isFullScreen()) {
             this.exitFullscreen();
         }
 

@@ -2,10 +2,10 @@ import Mmenu from '../../core/oncanvas/mmenu.oncanvas';
 import options from './_options';
 import configs from './_configs';
 import translate from './translations/translate';
-import { extendShorthandOptions } from './_options';
+import {extendShorthandOptions} from './_options';
 import * as DOM from '../../_modules/dom';
 import * as events from '../../_modules/eventlisteners';
-import { type, extend } from '../../_modules/helpers';
+import {type, extend} from '../../_modules/helpers';
 
 //  Add the translations.
 translate();
@@ -14,7 +14,7 @@ translate();
 Mmenu.options.searchfield = options;
 Mmenu.configs.searchfield = configs;
 
-export default function(this: Mmenu) {
+export default function (this: Mmenu) {
     var options = extendShorthandOptions(this.opts.searchfield);
     this.opts.searchfield = extend(options, Mmenu.options.searchfield);
 
@@ -105,7 +105,7 @@ export default function(this: Mmenu) {
     });
 }
 
-const initSearchPanel = function(this: Mmenu): HTMLElement {
+const initSearchPanel = function (this: Mmenu): HTMLElement {
     var options = this.opts.searchfield,
         configs = this.conf.searchfield;
 
@@ -164,7 +164,7 @@ const initSearchPanel = function(this: Mmenu): HTMLElement {
     return searchpanel;
 };
 
-const initSearchfield = function(
+const initSearchfield = function (
     this: Mmenu,
     wrapper: HTMLElement
 ): HTMLElement {
@@ -237,7 +237,7 @@ const initSearchfield = function(
     return form;
 };
 
-const initSearching = function(this: Mmenu, form: HTMLElement) {
+const initSearching = function (this: Mmenu, form: HTMLElement) {
     var options = this.opts.searchfield,
         configs = this.conf.searchfield;
 
@@ -349,7 +349,7 @@ const initSearching = function(this: Mmenu, form: HTMLElement) {
     this.search(input);
 };
 
-const initNoResultsMsg = function(this: Mmenu, wrapper: HTMLElement) {
+const initNoResultsMsg = function (this: Mmenu, wrapper: HTMLElement) {
     if (!wrapper) {
         return;
     }
@@ -374,7 +374,7 @@ const initNoResultsMsg = function(this: Mmenu, wrapper: HTMLElement) {
     wrapper.append(message);
 };
 
-Mmenu.prototype.search = function(
+Mmenu.prototype.search = function (
     this: Mmenu,
     input: HTMLInputElement,
     query: string

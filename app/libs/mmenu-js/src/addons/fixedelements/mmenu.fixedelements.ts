@@ -10,7 +10,7 @@ Mmenu.configs.classNames.fixedElements = {
     fixed: 'Fixed'
 };
 
-export default function(this: Mmenu) {
+export default function (this: Mmenu) {
     if (!this.opts.offCanvas) {
         return;
     }
