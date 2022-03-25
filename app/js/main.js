@@ -267,42 +267,98 @@ $(document).ready(function () {
         button.parent().find(".ctrl-counter > input").val(newVal);
     });
     
+    /*related list slider*/
+    $(".related-list").each(function () {
+        var slickIndividual = $(this);
+        slickIndividual.next().css("display", "none"); // hide the next sections with buttons
+        var relatedConfig = { // slick slider config
+            infinite: true,
+            speed: 500,
+            slidesToShow: 5,
+            slidesToScroll: 5,
+            nextArrow: slickIndividual.next().find(".btn.btn-arrow.related-next"),
+            prevArrow: slickIndividual.next().find(".btn.btn-arrow.related-prev"),
+            responsive: [
+                {
+                    breakpoint: 280,
+                    settings: "unslick"
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3
+                    }
+                },
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3
+                    }
+                },
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 4,
+                        slidesToScroll: 4
+                    }
+                }
+            ]
+        };
+        
+        function initRelatedSlider() {
+            slickIndividual.next().css("display", "flex");
+            slickIndividual.not('.slick-initialized').slick(relatedConfig);
+        }
+        
+        initRelatedSlider();
+        $(window).on("load resize", initRelatedSlider);
+    });
+    
     // /*review carousel*/
-    // $('.review_section .review_carousel').slick({
-    //     infinite: true,
-    //     speed: 500,
-    //     slidesToShow: 3,
-    //     slidesToScroll: 3,
-    //     arrows: false,
-    //     responsive: [
-    //         {
-    //             breakpoint: 992,
-    //             settings: {
-    //                 slidesToShow: 2,
-    //                 slidesToScroll: 2
-    //             }
-    //         },
-    //         {
-    //             breakpoint: 768,
-    //             settings: {
-    //                 slidesToShow: 1,
-    //                 slidesToScroll: 1
-    //             }
-    //         },
-    //         {
-    //             breakpoint: 320,
-    //             settings: {
-    //                 slidesToShow: 1,
-    //                 slidesToScroll: 1
-    //             }
-    //         }
-    //     ]
-    // });
-    //
-    // $('.review_section').on('click', '.slick-arrow', function () {
-    //     var action = ($(this).hasClass('slick-next')) ? 'slickNext' : 'slickPrev'
-    //     $(this).parents('.review_section').find('.review_carousel').slick(action);
-    // });
+    $('.review_section .review_carousel').slick({
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 320,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
+    
+    $('.review_section').on('click', '.slick-arrow', function () {
+        var action = ($(this).hasClass('slick-next')) ? 'slickNext' : 'slickPrev'
+        $(this).parents('.review_section').find('.review_carousel').slick(action);
+    });
     
     
     $(".btn.dropdown-toggle").removeAttr('title');
