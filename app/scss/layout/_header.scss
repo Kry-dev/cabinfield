@@ -76,7 +76,7 @@
 			font-weight: 400;
 			font-size: 12px;
 			line-height: 14px;
-			max-width: 170px;
+			max-width: 230;
 			margin-left: 1rem;
 		}
 	}
@@ -358,4 +358,5 @@
 			width: 100%;
 		}
 	}
+	.tag, .subtag{display: block;}
 }
