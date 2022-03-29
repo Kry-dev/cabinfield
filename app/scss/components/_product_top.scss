@@ -74,8 +74,16 @@
                 span{
                     @include media-breakpoint-up(sm){
                         margin-left:10px;
+                        
+                    } 
+                    @include media-breakpoint-down(sm){
                         color:$warning;
                     } 
+                }
+                &:hover{
+                    span{
+                        color:$warning;
+                    }
                 }
             }
             @include media-breakpoint-down(sm){
