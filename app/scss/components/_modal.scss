@@ -1177,3 +1177,35 @@ body.modal-open .mm-slideout {
 	margin: 0 auto;
 }
 
+
+.lg-container{
+	.lg-item{
+		.lg-sub-html{
+			text-align:left;
+			width: 100%;
+			display: block;
+			
+			.btn-block {
+				width: 100%;
+				text-align: center;
+				margin: 20px auto 40px;
+				a{
+					height: auto;
+					padding: 10px 60px;
+					&:hover{
+						text-decoration: none;
+					}
+				}
+			}
+			.fabric-detail {
+				margin-bottom: 30px;
+				color: black;
+				li{
+					span{
+						color:$label-color;
+					}
+				}
+			}
+		}
+	}
+}

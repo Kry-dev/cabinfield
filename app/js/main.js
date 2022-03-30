@@ -960,8 +960,8 @@ $(document).ready(function () {
         
         fabricGalleryDynamic[i] = {
             src: item.getAttribute('data-src'),
-            // subHtml: item.getAttribute('data-sub-html'),
-            subHtml: '<h4 class="name">' + item.getAttribute('data-title') + '</h4>',
+            subHtml: item.getAttribute('data-sub-html'),
+            // subHtml: '<h4 class="name">' + item.getAttribute('data-title') + '</h4>',
         };
     }
     const inlineGallery = lightGallery($lgContainer, {
