@@ -784,7 +784,7 @@ body.modal-open .mm-slideout {
 		}
 		
 		.modal-dialog {
-			max-width: 950px;
+			max-width: 800px;
 		}
 		
 		.modal-content {
@@ -1103,6 +1103,10 @@ body.modal-open .mm-slideout {
 .modal.modal--select-optns {
 	.modal-content {
 		position: relative;
+		padding:0 !important;
+		.modal-header, .modal-footer, .modal-body{
+			padding:20px 30px;
+		}
 	}
 	
 	.inline-gallery-container {
@@ -1180,15 +1184,26 @@ body.modal-open .mm-slideout {
 
 .lg-container{
 	.lg-item{
+		.lg-img-wrap{
+			height: 550px;
+			padding: 20px 60px;
+			.lg-object{
+				width:100%;
+				height:auto;
+			}
+		}
 		.lg-sub-html{
 			text-align:left;
 			width: 100%;
 			display: block;
-			
+			padding: 0;
 			.btn-block {
-				width: 100%;
+				margin: 5px auto 10px;
+				border: 1px solid #dedede;
+				border-right: 0;
+				border-left: 0;
+				padding: 10px 0;
 				text-align: center;
-				margin: 20px auto 40px;
 				a{
 					height: auto;
 					padding: 10px 60px;
@@ -1198,8 +1213,9 @@ body.modal-open .mm-slideout {
 				}
 			}
 			.fabric-detail {
-				margin-bottom: 30px;
+				margin-bottom: 0px;
 				color: black;
+				padding:20px 30px;
 				li{
 					span{
 						color:$label-color;
