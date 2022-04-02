@@ -79,9 +79,10 @@ section.cart
                         .row
                             .col-sm-12.mb-3
                                 label.mb-1 Quantity:
-                                select.selectpicker.w-100
-                                    option.text-dark(value='2') Option 1
-                                    option.text-dark(value='3') Option 2
+                                .quantity.plus_minus
+                                    .quantity__btn.quantity__btn--down &#x268A;
+                                    input(type="number", min="1", max="99", step="1", value="1")
+                                    .quantity__btn.quantity__btn--up &#x271A;
                         .actions.mb-3
                             a.edit(href='#')
                                 | Edit
