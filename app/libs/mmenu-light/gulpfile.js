@@ -6,7 +6,7 @@
 
 */
 
-const { src, dest, watch, series, parallel } = require('gulp');
+const {src, dest, watch, series, parallel} = require('gulp');
 
 //  For CSS
 const sass = require('gulp-sass');
@@ -28,10 +28,10 @@ const esmDir = 'esm';
 /** CSS task */
 const css = () => {
     return src(inputDir + '/**/*.scss')
-        .pipe(sass().on('error', sass.logError))
-        .pipe(autoprefixer(['> 5%', 'last 5 versions']))
-        .pipe(cleancss())
-        .pipe(dest(outputDir));
+      .pipe(sass().on('error', sass.logError))
+      .pipe(autoprefixer(['> 5%', 'last 5 versions']))
+      .pipe(cleancss())
+      .pipe(dest(outputDir));
 };
 
 /** JS transpile task */
@@ -40,31 +40,31 @@ const jsTtranspile = () => {
         inputDir + '/**/*.d.ts', // Include all typings.
         inputDir + '/**/*.ts' // Include the needed ts files.
     ])
-        .pipe(
-            typescript({
-                target: 'es5',
-                module: 'es6'
-            })
-        )
-        .pipe(dest(esmDir));
+      .pipe(
+        typescript({
+            target: 'es5',
+            module: 'es6'
+        })
+      )
+      .pipe(dest(esmDir));
 };
 
 /** JS Pack task */
 const jsPack = () => {
     return src(inputDir + '/mmenu-light.js')
-        .pipe(
-            webpack({
-                // mode: 'development',
-                mode: 'production',
-                output: {
-                    filename: 'mmenu-light.js'
-                }
-                // optimization: {
-                //     minimize: false
-                // }
-            })
-        )
-        .pipe(dest(outputDir));
+      .pipe(
+        webpack({
+            // mode: 'development',
+            mode: 'production',
+            output: {
+                filename: 'mmenu-light.js'
+            }
+            // optimization: {
+            //     minimize: false
+            // }
+        })
+      )
+      .pipe(dest(outputDir));
 };
 
 /*
@@ -81,8 +81,8 @@ exports.polyfills = cb => {
         inputDir + '/polyfills/append.js',
         inputDir + '/polyfills/event.js'
     ])
-        .pipe(concat('mmenu-light.polyfills.js'))
-        .pipe(dest(outputDir));
+      .pipe(concat('mmenu-light.polyfills.js'))
+      .pipe(dest(outputDir));
 };
 
 /*

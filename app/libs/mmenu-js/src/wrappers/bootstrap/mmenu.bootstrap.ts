@@ -1,7 +1,7 @@
 import Mmenu from '../../core/oncanvas/mmenu.oncanvas';
 import * as DOM from '../../_modules/dom';
 
-export default function(this: Mmenu) {
+export default function (this: Mmenu) {
     //	Create the menu
     if (this.node.menu.matches('.navbar-collapse')) {
         //	No need for cloning the menu...
@@ -96,6 +96,7 @@ export default function(this: Mmenu) {
 
         return link;
     }
+
     function cloneDropdown(dropdown: HTMLElement) {
         var list = DOM.create('ul');
         DOM.children(dropdown).forEach(anchor => {
@@ -110,6 +111,7 @@ export default function(this: Mmenu) {
         });
         return list;
     }
+
     function cloneNav(nav: HTMLElement) {
         var list = DOM.create('ul');
 

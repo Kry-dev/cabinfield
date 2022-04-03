@@ -2,7 +2,7 @@ form#options-form
     #optgroup-1
         .product-customize-form
             h6.product-customize-subtitle Bed size:
-                a(href="#", data-toggle="modal", data-target="#customize_popup_info").popup-info ?
+                button(type="button", data-bs-target="#customize_popup_info",  data-bs-toggle="modal").popup-info.me-3 ?
             .product-customize-list
                 .product-option
                     input( type="radio" id="bed-size-01" name="bed-size" )
@@ -27,7 +27,7 @@ form#options-form
     #optgroup-2
         .product-customize-form
             h6.product-customize-subtitle Wood Type:
-                a(href="#", data-toggle="modal", data-target="#customize_popup_info").popup-info ?
+                button(type="button", data-bs-target="#customize_popup_info",  data-bs-toggle="modal").popup-info.me-3 ?
             .product-customize-list
                 .product-option
                     input( type="radio" id="wood-01" name="wood")
@@ -43,9 +43,9 @@ form#options-form
     #optgroup-3
         .product-customize-form
             h6.product-customize-subtitle Stain:
-                a(href="#", data-toggle="modal", data-target="#customize_popup_info").popup-info.mr-3 i
+                button(type="button", data-bs-target="#customize_popup_info", data-bs-toggle="modal").popup-info.me-3 i
                 a(href="#") Reguest samples
-            .product-customize-list(data-slick='{"slidesToShow": 4, "slidesToScroll": 4}')
+            .product-customize-list(data-bs-slick='{"slidesToShow": 4, "slidesToScroll": 4}')
                 .product-option.option-stain
                     input( type="radio" id="sample-01" name="wood-stain")
                     label.product-option--label(for="sample-01")
@@ -111,7 +111,7 @@ form#options-form
                             i.fa.fa-search
                         img(src="img/product/tmp_headboard.jpg", alt="#").img-fluid
                         p.name
-                            strong.pr-2 Elliot
+                            strong.pe-2 Elliot
                             | - $242
                 .product-option.option-hboard
                     input( type="radio" id="hboard-02" name="headboard" checked)
@@ -120,7 +120,7 @@ form#options-form
                             i.fa.fa-search
                         img(src="img/product/tmp_headboard.jpg", alt="#").img-fluid
                         p.name
-                            strong.pr-2 Elliot
+                            strong.pe-2 Elliot
                             | + $102
                 .product-option.option-hboard
                     input( type="radio" id="hboard-03" name="headboard")
@@ -129,7 +129,7 @@ form#options-form
                             i.fa.fa-search
                         img(src="img/product/tmp_headboard.jpg", alt="#").img-fluid
                         p.name
-                            strong.pr-2 Lily
+                            strong.pe-2 Lily
                 .product-option.option-hboard
                     input( type="radio" id="hboard-04" name="headboard")
                     label.product-option--label(for="hboard-04")
@@ -137,7 +137,7 @@ form#options-form
                             i.fa.fa-search
                         img(src="img/product/tmp_headboard.jpg", alt="#").img-fluid
                         p.name
-                            strong.pr-2 Gbrielle
+                            strong.pe-2 Gbrielle
                             | - $242
                 .product-option.option-hboard
                     input( type="radio" id="hboard-05" name="headboard")
@@ -146,7 +146,7 @@ form#options-form
                             i.fa.fa-search
                         img(src="img/product/tmp_headboard.jpg", alt="#").img-fluid
                         p.name
-                            strong.pr-2 Elliot
+                            strong.pe-2 Elliot
                             | - $242
                 .product-option.option-hboard
                     input( type="radio" id="hboard-06" name="headboard" checked)
@@ -155,7 +155,7 @@ form#options-form
                             i.fa.fa-search
                         img(src="img/product/tmp_headboard.jpg", alt="#").img-fluid
                         p.name
-                            strong.pr-2 Elliot
+                            strong.pe-2 Elliot
                             | + $102
                 .product-option.option-hboard
                     input( type="radio" id="hboard-07" name="headboard")
@@ -164,11 +164,11 @@ form#options-form
                             i.fa.fa-search
                         img(src="img/product/tmp_headboard.jpg", alt="#").img-fluid
                         p.name
-                            strong.pr-2 Lily
+                            strong.pe-2 Lily
     #optgroup-5
         .product-customize-form
             h6.product-customize-subtitle Coat rack on footboard:
-                a(href="#", data-toggle="modal", data-target="#customize_popup_info").popup-info ?
+                button(type="button", data-bs-target="#customize_popup_info",  data-bs-toggle="modal").popup-info.me-3 ?
             .product-customize-list
                 .product-option
                     input( type="radio" id="coat-roat-01" name="wood")
@@ -197,7 +197,7 @@ form#options-form
     #optgroup-6
         .product-customize-form
             h6.product-customize-subtitle Extra top rail:
-                a(href="#", data-toggle="modal", data-target="#customize_popup_info").popup-info.mr-3 ?
+                button(type="button", data-bs-target="#customize_popup_info", data-bs-toggle="modal").popup-info.me-3 ?
                 p.mb-0.text-dark (Multiple options can be selected)
             .product-customize-list
                 .product-option
@@ -216,9 +216,9 @@ form#options-form
     #optgroup-7
         .product-customize-form
             h6.product-customize-subtitle Fabric:
-                a(href="#").popup-info.mr-1 ?
+                button(type="button", data-bs-target="#customize_popup_info", data-bs-toggle="modal").popup-info.me-1 ?
             h6.product-customize-subtitle
-                a.text-underline(href="#", data-toggle="modal", data-target="#options-fullsize") See all Fabric Swatches
+                button.btn-text.text-underline.text-bold(type="button", data-bs-target="#options-fullsize", data-bs-toggle="modal") See all Fabric Swatches
             h6.product-customize-subtitle
                 a.text-underline(href="#") Request samples
             .product-customize-list()
@@ -272,49 +272,73 @@ form#options-form
                         img(src="img/fabric/fabric-06.jpg", alt="#").img-fluid
                         p.name(data-title="1-49 Gallery") 1-49 Gallery
 
-    #optgroup-8
-        .product-customize-form.border-bottom-0
-            h6.product-customize-subtitle #[b.mr-1 Pillow: ]
-                a(href="#", data-toggle="modal", data-target="#customize_popup_info").popup-info ?
-            .row.w-100.mb-3
-                .col-md-3.col-sm-6.d-inline-flex.align-items-center
-                    .checkbox.custom_checkbox
-                        input#Pillow0(type='checkbox' name='' value='')
-                        label.text-dark.text-uppercase(for='Pillow0') 13"x13" - Add $36.00
-                .col-md-3.col-sm-6
-                    label.mb-0.d-flex.flex-row.align-items-center Quantity:
-                        select.selectpicker.from-control.ml-3
-                            option.text-dark(value='2') Option 1
-                            option.text-dark(value='3') Option 2
-            .row.w-100.mb-3
-                .col-md-3.col-sm-6.d-inline-flex.align-items-center
-                    .checkbox.custom_checkbox
-                        input#Pillow1(type='checkbox' name='' value='')
-                        label.text-dark.text-uppercase(for='Pillow1') Emriodery
-                .col-md-3.col-sm-6
-                    label.mb-0.d-flex.flex-row.align-items-center Quantity:
-                        select.selectpicker.from-control.ml-3
-                            option.text-dark(value='2') Option 1
-            //.form-group.row
-            //    .col-sm-6
-            //        .checkbox.custom_checkbox.mb-3
-            //            input#Pillow0(type='checkbox' name='' value='')
-            //            label.text-dark.text-uppercase(for='Pillow0') 13"x13" - Add $36.00
-            //        .checkbox.custom_checkbox
-            //            input#Pillow1(type='checkbox' name='' value='')
-            //            label.text-dark.text-uppercase(for='Pillow1') Emriodery
-            //    .col-sm-6
-            //        label.mb-0.d-flex.flex-row.align-items-center Quantity:
-            //            select.selectpicker.from-control.ml-3
-            //                option.text-dark(value='2') Option 1
-            //                option.text-dark(value='3') Option 2
 
-            .person-message
-                h6.product-customize-subtitle.label-color Message:
+    .product-customize-form.border-bottom-0
+        .row.w-100
+            h6.product-customize-subtitle #[b.me-1 Pillow: ]
+                button(type="button", data-bs-target="#customize_popup_info",  data-bs-toggle="modal").popup-info.me-3 ?
+        .row.w-100.mb-3
+            label.mb-0.d-flex.flex-row.align-items-center.justify-content-start Quantity:
+                select.selectpicker.from-control.ms-3
+                    option.text-dark(value='2') Option 1
+                    option.text-dark(value='3') Option 2
+
+        .row.w-100.mb-3
+            .col-md-3.col-sm-6.d-inline-flex.align-items-center
+                .checkbox.custom_checkbox
+                    input#Pillow110(type='checkbox' name='Pillow' value='')
+                    label.text-dark.text-uppercase(for='Pillow110') Emriodery
+
+        .person-message
+            .mb-3
+                label.label-color Message:
                 textarea(rows="4")
 
-    .row.border-b-dashed
-        .col-12.col-sm-6.col-lg-4
-            a.btn.btn-warning.w-100.text-uppercase(href="#")
-                strong add to cart
+            .mb-3
+                label.d-inline-flex.justify-content-start Shipping prices calculated for zip code:
+                    span.text-black.text-bold.ms-1 10001
+                    button.edit.ps-2.ms-1(href='#', data-bs-toggle="modal", data-bs-target="#modal--calculate")
+                        i.fa.fa-pencil
+                        span.text-bold.text-primary.text-uppercase.ms-1 edit
+        .row.w-100.mb-3
+            .col-12.col-sm-6.col-lg-5
+                label.mb-3 Shipping type:
+                .form-check.custom-radio
+                    input#customRadio1.form-check-input(type='radio', name='shippingType', checked="false")
+                    label.form-check-label(for='customRadio1') Standard curbside delivery
+                        span.text-warning.ms-3 $30.40
+                .form-check.custom-radio.mt-1
+                    input#customRadio2.form-check-input(type='radio', name='shippingType', checked="true")
+                    label.form-check-label(for='customRadio2') Inside delivery with setup
+                        span.text-warning.ms-3 $250.21
+        .row.w-100.mb-3
+            .col-md-3.col-sm-6.d-inline-flex.align-items-center
+                .checkbox.custom_checkbox
+                    input#Pillow116(type='checkbox' name='Pillow' value='')
+                    label.text-dark(for='Pillow116') On site assembly
+
+        .row.w-100.mb-3
+            label.d-inline-flex.justify-content-start Combined value shipping:
+                span.text-black.text-bold.ms-1 Yes
+            h6.product-customize-subtitle
+                a.btn-text.text-underline.text-bold(href="#") More Info About Your Savings
+        .row.w-100.mb-3
+            .product-price
+                //span.text-warning Starting at:
+                .product-price-value
+                    span.price-new
+                        span $
+                        span 1,371.00
+                .product-price-shipping
+                    span + $30.40
+                    span.ms-2.text-dark  Standard curbside delivery to 100001
+                .product-price-shipping
+                    span + $800.40
+                    span.ms-2.text-dark  On site assembly
+
+    .product-customize-form
+        .row.w-100
+            .col-12.col-sm-6.col-lg-3
+                a.btn.btn-warning.w-100.text-uppercase(href="#")
+                    strong add to cart
 

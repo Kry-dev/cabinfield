@@ -1,8 +1,8 @@
 import Mmenu from '../../core/oncanvas/mmenu.oncanvas';
 import options from './_options';
-import { extendShorthandOptions } from './_options';
+import {extendShorthandOptions} from './_options';
 import * as DOM from '../../_modules/dom';
-import { extend } from '../../_modules/helpers';
+import {extend} from '../../_modules/helpers';
 //	Add the options.
 Mmenu.options.iconPanels = options;
 export default function () {
@@ -49,8 +49,7 @@ export default function () {
                 panels.forEach(function (panel, p) {
                     panel.classList[p == 0 ? 'add' : 'remove']('mm-panel_iconpanel-first');
                 });
-            }
-            else {
+            } else {
                 //	Remove the "iconpanel" classnames from all panels.
                 panels.forEach(function (panel) {
                     //  IE11:
@@ -88,8 +87,8 @@ export default function () {
         });
         this.bind('initPanel:after', function (panel) {
             if (options.blockPanel &&
-                !panel.parentElement.matches('.mm-listitem_vertical') &&
-                !DOM.children(panel, '.mm-panel__blocker')[0]) {
+              !panel.parentElement.matches('.mm-listitem_vertical') &&
+              !DOM.children(panel, '.mm-panel__blocker')[0]) {
                 var blocker = DOM.create('a.mm-panel__blocker');
                 blocker.setAttribute('href', '#' + panel.closest('.mm-panel').id);
                 panel.prepend(blocker);

@@ -1,10 +1,10 @@
 import Mmenu from './../oncanvas/mmenu.oncanvas';
 import options from './_options';
 import configs from './_configs';
-import { extendShorthandOptions } from './_options';
+import {extendShorthandOptions} from './_options';
 import * as DOM from '../../_modules/dom';
 import * as events from '../../_modules/eventlisteners';
-import { extend, transitionend, uniqueId, originalId } from '../../_modules/helpers';
+import {extend, transitionend, uniqueId, originalId} from '../../_modules/helpers';
 //  Add the options and configs.
 Mmenu.options.offCanvas = options;
 Mmenu.configs.offCanvas = configs;
@@ -37,7 +37,7 @@ export default function () {
         _this.node.wrpr = document.body;
         //	Prepend to the <body>
         document
-            .querySelector(configs.menu.insertSelector)[configs.menu.insertMethod](_this.node.menu);
+          .querySelector(configs.menu.insertSelector)[configs.menu.insertMethod](_this.node.menu);
     });
     this.bind('initMenu:after', function () {
         //	Setup the UI blocker.
@@ -151,7 +151,7 @@ Mmenu.prototype._openSetup = function () {
     //	Store style and position
     Mmenu.node.page['mmStyle'] = Mmenu.node.page.getAttribute('style') || '';
     //	Trigger window-resize to measure height
-    events.trigger(window, 'resize.page', { force: true });
+    events.trigger(window, 'resize.page', {force: true});
     var clsn = ['mm-wrapper_opened'];
     //	Add options
     if (options.blockUI) {
@@ -249,13 +249,17 @@ Mmenu.prototype.setPage = function (page) {
     if (!page) {
         /** Array of elements that are / could be "the page". */
         var pages = typeof configs.page.selector == 'string'
-            ? DOM.find(document.body, configs.page.selector)
-            : DOM.children(document.body, configs.page.nodetype);
+          ? DOM.find(document.body, configs.page.selector)
+          : DOM.children(document.body, configs.page.nodetype);
         //	Filter out elements that are absolutely not "the page".
-        pages = pages.filter(function (page) { return !page.matches('.mm-menu, .mm-wrapper__blocker'); });
+        pages = pages.filter(function (page) {
+            return !page.matches('.mm-menu, .mm-wrapper__blocker');
+        });
         //	Filter out elements that are configured to not be "the page".
         if (configs.page.noSelector.length) {
-            pages = pages.filter(function (page) { return !page.matches(configs.page.noSelector.join(', ')); });
+            pages = pages.filter(function (page) {
+                return !page.matches(configs.page.noSelector.join(', '));
+            });
         }
         //	Wrap multiple pages in a single element.
         if (pages.length > 1) {

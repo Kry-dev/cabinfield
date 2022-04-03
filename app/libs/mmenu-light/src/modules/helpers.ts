@@ -1,8 +1,8 @@
 /**
  * Convert a list to an array.
  *
- * @param 	{NodeList|HTMLCollection} list 	The list or collection to convert into an array.
- * @return	{array}							The array.
+ * @param    {NodeList|HTMLCollection} list    The list or collection to convert into an array.
+ * @return    {array}                            The array.
  */
 export const r = (list: NodeList | HTMLCollection) => {
     return Array.prototype.slice.call(list);
@@ -11,9 +11,9 @@ export const r = (list: NodeList | HTMLCollection) => {
 /**
  * Find elements in the given context.
  *
- * @param 	{string}		selector			The query selector to search for.
- * @param 	{HTMLElement}	[context=document]	The context to search in.
- * @return	{HTMLElement[]}						The found list of elements.
+ * @param    {string}        selector            The query selector to search for.
+ * @param    {HTMLElement}    [context=document]    The context to search in.
+ * @return    {HTMLElement[]}                        The found list of elements.
  */
 export const $ = (selector: string, context?: HTMLElement) => {
     return r((context || document).querySelectorAll(selector));

@@ -11,7 +11,9 @@ var MmOffCanvasDrawer = /** @class */ (function () {
      */
     function MmOffCanvasDrawer(node, position) {
         var _this = this;
-        if (node === void 0) { node = null; }
+        if (node === void 0) {
+            node = null;
+        }
         //  Create the wrapper.
         this.wrapper = document.createElement('div');
         this.wrapper.classList.add("" + prefix);
@@ -38,6 +40,7 @@ var MmOffCanvasDrawer = /** @class */ (function () {
         this.backdrop.addEventListener('touchstart', close);
         this.backdrop.addEventListener('mousedown', close);
     }
+    
     Object.defineProperty(MmOffCanvasDrawer.prototype, "prefix", {
         /** Prefix for the class. */
         get: function () {

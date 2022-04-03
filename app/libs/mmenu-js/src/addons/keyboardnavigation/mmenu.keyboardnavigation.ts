@@ -1,15 +1,15 @@
 import Mmenu from '../../core/oncanvas/mmenu.oncanvas';
 import options from './_options';
-import { extendShorthandOptions } from './_options';
+import {extendShorthandOptions} from './_options';
 import * as DOM from '../../_modules/dom';
 import * as events from '../../_modules/eventlisteners';
 import * as support from '../../_modules/support';
-import { extend } from '../../_modules/helpers';
+import {extend} from '../../_modules/helpers';
 
 //  Add the options.
 Mmenu.options.keyboardNavigation = options;
 
-export default function(this: Mmenu) {
+export default function (this: Mmenu) {
     //	Keyboard navigation on touchscreens opens the virtual keyboard :/
     //	Lets prevent that.
     if (support.touch) {
@@ -127,7 +127,7 @@ export default function(this: Mmenu) {
  * Initialize the window for keyboard navigation.
  * @param {boolean} enhance - Whether or not to also rich enhance the keyboard behavior.
  **/
-const initWindow = function(this: Mmenu, enhance: boolean) {
+const initWindow = function (this: Mmenu, enhance: boolean) {
     //	Re-enable tabbing in general
     events.off(document.body, 'keydown.tabguard');
 

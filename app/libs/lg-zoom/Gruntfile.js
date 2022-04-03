@@ -1,5 +1,5 @@
 'use strict';
-module.exports = function(grunt) {
+module.exports = function (grunt) {
     // Load all grunt tasks
     require('load-grunt-tasks')(grunt);
 
@@ -30,7 +30,7 @@ module.exports = function(grunt) {
                     src: 'src/<%= pkg.name %>.js',
                     dest: 'dist/<%= pkg.name %>.js',
                     deps: {
-                        args : ['$'],
+                        args: ['$'],
                         'default': ['$'],
                         amd: {
                             indent: 6,
@@ -51,7 +51,7 @@ module.exports = function(grunt) {
                         },
                         pipeline: {
                             indent: 0,
-                            items : ['jquery'],
+                            items: ['jquery'],
                             prefix: '//= require ',
                             separator: '\n',
                         }
@@ -125,7 +125,7 @@ module.exports = function(grunt) {
 
     // Default task.
     grunt.registerTask('default', ['jshint', 'connect', 'umd:all', 'uglify'/*, 'watch'*/, 'usebanner']);
-    grunt.registerTask('server', function() {
+    grunt.registerTask('server', function () {
         grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
         grunt.task.run(['serve']);
     });

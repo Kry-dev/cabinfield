@@ -50,13 +50,16 @@ interface mmApi {
 interface mmMethodUniqueid {
     (): string;
 }
+
 interface mmMethodI18n {
     (text?: object, language?: string): object;
+
     (text?: string, language?: string): string;
+
     (text?: undefined, language?: string): object;
 }
 
-/**	Options for the menu. */
+/**    Options for the menu. */
 interface mmOptions {
     /** A collection of extensions to enable for the menu. */
     extensions?: mmOptionsExensions | string[];
@@ -141,12 +144,12 @@ interface mmOptions {
     sidebar?: mmOptionsSidebar;
 }
 
-/**	Extensions for the menu. */
+/**    Extensions for the menu. */
 interface mmOptionsExensions {
     [key: string]: mmOptionsExensions | string[];
 }
 
-/**	Navbar options for the menu. */
+/**    Navbar options for the menu. */
 interface mmOptionsNavbar {
     /** Whether or not to add a navbar above the panels. */
     add?: boolean;
@@ -161,7 +164,7 @@ interface mmOptionsNavbar {
     titleLink?: 'parent' | 'anchor' | 'none';
 }
 
-/**	onClick options for the menu. */
+/**    onClick options for the menu. */
 interface mmOptionsOnclick {
     /** Whether or not the menu should close after clicking a link inside it. */
     close?: boolean;
@@ -173,7 +176,7 @@ interface mmOptionsOnclick {
     setSelected?: boolean;
 }
 
-/**	Configuration for the menu. */
+/**    Configuration for the menu. */
 interface mmConfigs {
     /** Object with classnames to refactor. */
     classNames?: mmLooseObject;
@@ -216,7 +219,7 @@ interface mmConfigs {
     searchfield?: mmConfigsSearchfield;
 }
 
-/**	Arguments for the onClick handlers. */
+/**    Arguments for the onClick handlers. */
 interface mmClickArguments {
     /** Whether or not the anchor is inside the menu. */
     inMenu: boolean;

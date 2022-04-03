@@ -1,0 +1,134 @@
+.pdpGallery {
+	display: flex;
+	flex-direction: column-reverse;
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+	@include media-breakpoint-up(md) {
+		flex-direction: row;
+	}
+	&-thumbs {
+		float: left;
+		width: 100%;
+		height: 120px;
+		@include media-breakpoint-up(md) {
+			width: calc(18% - 20px);
+			height: 420px;
+			margin-right: 20px;
+		}
+		.swiper-slide {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			box-sizing: border-box;
+			cursor: pointer;
+			overflow: hidden;
+			border: 1px solid $product-border-color;
+		}
+		
+		.swiper-slide-thumb-active {
+			border: 1px solid $brown;
+		}
+		
+		.swiper-slide:hover {
+			border: 1px solid $brown;
+		}
+	}
+	
+	&-thumb {
+		width: 100%;
+		object-fit: cover;
+	}
+	
+	&-top {
+		float: right;
+		width: 100%;
+		overflow: hidden;
+		position: relative;
+		height: 420px;
+		@include media-breakpoint-up(md) {
+			width: 80%;
+		}
+		
+		.swiper-slide {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			box-sizing: border-box;
+			border: 1px solid $product-border-color;
+			overflow: hidden;
+		}
+	}
+	
+	.btn-arrow {
+		&:after {
+			font-size: $font-size-base;
+		}
+		
+		&:hover:after {
+			font-size: $font-size-base * 1.25;
+		}
+	}
+	
+	&-zoom {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: $brown;
+		width: 32px;
+		height: 32px;
+		font-size: 24px;
+		position: absolute;
+		right: 16px;
+		bottom: 70px;
+		z-index: 20;
+		
+		&:hover,
+		&:focus {
+			cursor: pointer;
+		}
+	}
+	
+	&-item {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		position: relative;
+		height: 100%;
+		width: 100%;
+		
+		.pdpGallery-img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 9;
+		}
+		
+		&__info {
+			position: relative;
+			z-index: 10;
+			width: 100%;
+			background: rgba($white, 0.75);
+			padding: 0.5rem 1rem;
+		}
+		
+		.pdpGallery-title {
+			font-size: $font-size-base;
+			margin-bottom: 0;
+		}
+		
+		.pdpGallery-descr {
+			font-size: $font-size-base * 0.875;
+			margin: .5rem 0 0;
+		}
+	}
+	
+	&-img {
+		width: 100%;
+		object-fit: cover;
+	}
+}
+
+.lg-sub-html {
+	background: rgba($black, .5);
+}

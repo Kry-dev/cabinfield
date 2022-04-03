@@ -11,6 +11,7 @@
     <meta name="theme-color" content="#000">
     <link rel="stylesheet" type="text/css" href="libs/mmenu-light/dist/mmenu-light.css">
     <link rel="stylesheet" type="text/css" href="libs/mmenu-js/dist/mmenu.css">
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
     <link rel="stylesheet" type="text/css" href="css/main.min.css">
     <title>Cabinfield Cart Shipping Information
     </title>
@@ -27,9 +28,7 @@
           </ul><a class="header-tel" href="tel:8664509663">866-450-WOOD(9663)</a><!--end of header top section-->
         </div>
         <div class="header-mdl"><!--header middle section-->
-          <div class="header-brand"><a class="header-brand--logo"><img class="img-fluid" src="img/general/cabinfield-logo.svg" alt="logo"></a><span class="header-brand--title d-none d-xl-block">
-              Classic Amish Craftmanship
-              For Your Home and Garden</span></div>
+          <div class="header-brand"><a class="header-brand--logo" href="index.html"><img class="img-fluid" src="img/general/cabinfield-logo.svg" alt="logo"></a><span class="header-brand--title d-none d-xl-block"><span class="uppercase tag">CLASSIC AMISH CRAFTSMANSHIP</span><span class="subtag">For Your Home and Garden - EST. 2005</span></span></div>
           <form class="header-search d-none d-lg-flex">
             <input class="form-control" type="search" name="search" placeholder="Search our store" aria-label="Search">
             <button class="btn btn-outline-primary" type="submit"><i class="fa fa-search"></i></button>
@@ -38,8 +37,8 @@
             <li class="d-block d-md-none"><a href="#"><i class="fa fa-user"></i></a></li>
             <li class="d-block d-md-none"><a href="#"><i class="fa fa-phone"></i></a></li>
             <li class="d-none d-md-block"><a href="#">Sign In</a></li>
-            <li class="d-none d-md-block"><a href="#">My Wishlist</a></li>
-            <li><a href="#"><i class="fa fa-shopping-cart"></i><span class="text-warning ml-1">2</span></a></li>
+            <li class="d-none d-md-block"><a href="#">Wishlist</a></li>
+            <li><a href="#"><i class="fa fa-shopping-cart"></i><span class="text-warning ms-1">2</span></a></li>
           </ul><!-- end of header middle section-->
         </div>
       </div>
@@ -50,258 +49,222 @@
             <li class="dropdown">
               <div class="dropdown-toggle">Bedrooms</div>
               <div class="dropdown-menu">
-                <div class="dropdown-menu-left">
-                  <div class="nav-submenu">
-                    <p class="nav-subtitle">Shop by Style</p>
-                    <ul class="nav-submenu-list">
-                      <li><a href="#">Mission</a></li>
-                      <li><a href="#">Contemporary</a></li>
-                      <li><a href="#">Traditional</a></li>
-                      <li><a href="#">Eclectic</a></li>
-                      <li><a href="#">Rustic Sophisticates</a></li>
-                      <li><a href="#">Rough Sawn Elegence</a></li>
-                      <li><a href="#">Farmhouse</a></li>
-                      <li><a href="#">Reclaimed Barnwoood</a></li>
-                      <li><a href="#">Rustic Hickory Designs</a></li>
-                      <li><a href="#">Rustic Log Designs</a></li>
-                      <li><a href="#">Live Edge</a></li>
-                    </ul>
-                  </div>
-                  <div class="nav-submenu">
-                    <p class="nav-subtitle">Shop by Furniture Piece</p>
-                    <ul class="nav-submenu-list">
-                      <li><a href="#">Bedroom Sets</a></li>
-                      <li><a href="#">Beds & Headboards</a></li>
-                      <li><a href="#">Bedroom Storage Pieces</a></li>
-                      <li><a href="#">Storage Chests & Boxes</a></li>
-                      <li><a href="#">Bedroom Accessories</a></li>
-                    </ul>
-                  </div>
-                  <div class="nav-submenu">
-                    <p class="nav-subtitle">Shop by Quick Ship</p>
-                    <ul class="nav-submenu-list">
-                      <li><a href="#">Quick Ship Beds</a></li>
-                      <li><a href="#">Quick Ship Furniture Sets</a></li>
-                    </ul>
-                  </div>
+                <div class="nav-submenu">
+                  <p class="nav-subtitle"><a href="#"> Shop by Style</a></p>
+                  <ul class="nav-submenu-list">
+                    <li><a href="#">Mission</a></li>
+                    <li><a href="#">Contemporary</a></li>
+                    <li><a href="#">Traditional</a></li>
+                    <li><a href="#">Eclectic</a></li>
+                    <li><a href="#">Rustic Sophisticates</a></li>
+                    <li><a href="#">Rough Sawn Elegence</a></li>
+                    <li><a href="#">Farmhouse</a></li>
+                    <li><a href="#">Reclaimed Barnwoood</a></li>
+                    <li><a href="#">Rustic Hickory Designs</a></li>
+                    <li><a href="#">Rustic Log Designs</a></li>
+                    <li><a href="#">Live Edge</a></li>
+                  </ul>
                 </div>
-                <div class="dropdown-menu-right">
-                  <div class="nav-pictures"><a href="#"><img class="img-fluid" src="img/general/nav-img-01.png"></a><a href="#"><img class="img-fluid" src="img/general/nav-img-02.png"></a></div>
+                <div class="nav-submenu">
+                  <p class="nav-subtitle"><a href="#">Shop by Furniture Piece</a></p>
+                  <ul class="nav-submenu-list">
+                    <li><a href="#">Bedroom Sets</a></li>
+                    <li><a href="#">Beds & Headboards</a></li>
+                    <li><a href="#">Bedroom Storage Pieces</a></li>
+                    <li><a href="#">Storage Chests & Boxes</a></li>
+                    <li><a href="#">Bedroom Accessories</a></li>
+                  </ul>
+                </div>
+                <div class="nav-submenu">
+                  <p class="nav-subtitle"><a href="#">Shop by Quick Ship</a></p>
+                  <ul class="nav-submenu-list">
+                    <li><a href="#">Quick Ship Beds</a></li>
+                    <li><a href="#">Quick Ship Furniture Sets</a></li>
+                  </ul>
                 </div>
               </div>
             </li>
             <li class="dropdown">
               <div class="dropdown-toggle">Kitchen & Dining Room</div>
               <div class="dropdown-menu">
-                <div class="dropdown-menu-left">
-                  <div class="nav-submenu">
-                    <p class="nav-subtitle">Shop by Style</p>
-                    <ul class="nav-submenu-list">
-                      <li><a href="#">Mission</a></li>
-                      <li><a href="#">Contemporary</a></li>
-                      <li><a href="#">Traditional</a></li>
-                      <li><a href="#">Eclectic</a></li>
-                      <li><a href="#">Rustic Sophisticates</a></li>
-                      <li><a href="#">Rough Sawn Elegence</a></li>
-                      <li><a href="#">Farmhouse</a></li>
-                      <li><a href="#">Reclaimed Barnwoood</a></li>
-                      <li><a href="#">Rustic Hickory Designs</a></li>
-                      <li><a href="#">Rustic Log Designs</a></li>
-                      <li><a href="#">Live Edge</a></li>
-                    </ul>
-                  </div>
-                  <div class="nav-submenu">
-                    <p class="nav-subtitle">Shop by Furniture Piece</p>
-                    <ul class="nav-submenu-list">
-                      <li><a href="#">Bedroom Sets</a></li>
-                      <li><a href="#">Beds & Headboards</a></li>
-                      <li><a href="#">Bedroom Storage Pieces</a></li>
-                      <li><a href="#">Storage Chests & Boxes</a></li>
-                      <li><a href="#">Bedroom Accessories</a></li>
-                    </ul>
-                  </div>
-                  <div class="nav-submenu">
-                    <p class="nav-subtitle">Shop by Quick Ship</p>
-                    <ul class="nav-submenu-list">
-                      <li><a href="#">Quick Ship Beds</a></li>
-                      <li><a href="#">Quick Ship Furniture Sets</a></li>
-                    </ul>
-                  </div>
+                <div class="nav-submenu">
+                  <p class="nav-subtitle"><a href="#">Shop by Style</a></p>
+                  <ul class="nav-submenu-list">
+                    <li><a href="#">Mission</a></li>
+                    <li><a href="#">Contemporary</a></li>
+                    <li><a href="#">Traditional</a></li>
+                    <li><a href="#">Eclectic</a></li>
+                    <li><a href="#">Rustic Sophisticates</a></li>
+                    <li><a href="#">Rough Sawn Elegence</a></li>
+                    <li><a href="#">Farmhouse</a></li>
+                    <li><a href="#">Reclaimed Barnwoood</a></li>
+                    <li><a href="#">Rustic Hickory Designs</a></li>
+                    <li><a href="#">Rustic Log Designs</a></li>
+                    <li><a href="#">Live Edge</a></li>
+                  </ul>
                 </div>
-                <div class="dropdown-menu-right">
-                  <div class="nav-pictures"><a href="#"><img class="img-fluid" src="img/general/nav-img-01.png"></a><a href="#"><img class="img-fluid" src="img/general/nav-img-02.png"></a></div>
+                <div class="nav-submenu">
+                  <p class="nav-subtitle"><a href="#">Shop by Furniture Piece</a></p>
+                  <ul class="nav-submenu-list">
+                    <li><a href="#">Bedroom Sets</a></li>
+                    <li><a href="#">Beds & Headboards</a></li>
+                    <li><a href="#">Bedroom Storage Pieces</a></li>
+                    <li><a href="#">Storage Chests & Boxes</a></li>
+                    <li><a href="#">Bedroom Accessories</a></li>
+                  </ul>
+                </div>
+                <div class="nav-submenu">
+                  <p class="nav-subtitle"><a href="#">Shop by Quick Ship</a></p>
+                  <ul class="nav-submenu-list">
+                    <li><a href="#">Quick Ship Beds</a></li>
+                    <li><a href="#">Quick Ship Furniture Sets</a></li>
+                  </ul>
+                </div>
+                <div class="nav-submenu">
+                  <p class="nav-subtitle"><a href="#">Shop by Style</a></p>
+                  <ul class="nav-submenu-list">
+                    <li><a href="#">Mission</a></li>
+                    <li><a href="#">Contemporary</a></li>
+                    <li><a href="#">Traditional</a></li>
+                    <li><a href="#">Eclectic</a></li>
+                    <li><a href="#">Rustic Sophisticates</a></li>
+                    <li><a href="#">Rough Sawn Elegence</a></li>
+                    <li><a href="#">Farmhouse</a></li>
+                    <li><a href="#">Reclaimed Barnwoood</a></li>
+                    <li><a href="#">Rustic Hickory Designs</a></li>
+                    <li><a href="#">Rustic Log Designs</a></li>
+                    <li><a href="#">Live Edge</a></li>
+                  </ul>
+                </div>
+                <div class="nav-submenu">
+                  <p class="nav-subtitle"><a href="#">Shop by Style</a></p>
+                  <ul class="nav-submenu-list">
+                    <li><a href="#">Mission</a></li>
+                    <li><a href="#">Contemporary</a></li>
+                    <li><a href="#">Traditional</a></li>
+                    <li><a href="#">Eclectic</a></li>
+                    <li><a href="#">Rustic Sophisticates</a></li>
+                    <li><a href="#">Rough Sawn Elegence</a></li>
+                    <li><a href="#">Farmhouse</a></li>
+                    <li><a href="#">Reclaimed Barnwoood</a></li>
+                    <li><a href="#">Rustic Hickory Designs</a></li>
+                    <li><a href="#">Rustic Log Designs</a></li>
+                    <li><a href="#">Live Edge</a></li>
+                  </ul>
                 </div>
               </div>
             </li>
             <li class="dropdown">
               <div class="dropdown-toggle">Living Room & Entertainment</div>
               <div class="dropdown-menu">
-                <div class="dropdown-menu-left">
-                  <div class="nav-submenu">
-                    <p class="nav-subtitleShop">by Style</p>
-                    <ul class="nav-submenu-list">
-                      <li><a href="#">Mission</a></li>
-                      <li><a href="#">Contemporary</a></li>
-                      <li><a href="#">Traditional</a></li>
-                      <li><a href="#">Eclectic</a></li>
-                      <li><a href="#">Rustic Sophisticates</a></li>
-                      <li><a href="#">Rough Sawn Elegence</a></li>
-                      <li><a href="#">Farmhouse</a></li>
-                      <li><a href="#">Reclaimed Barnwoood</a></li>
-                      <li><a href="#">Rustic Hickory Designs</a></li>
-                      <li><a href="#">Rustic Log Designs</a></li>
-                      <li><a href="#">Live Edge</a></li>
-                    </ul>
-                  </div>
-                  <div class="nav-submenu">
-                    <p class="nav-subtitle">Shop by Furniture Piece</p>
-                    <ul class="nav-submenu-list">
-                      <li><a href="#">Bedroom Sets</a></li>
-                      <li><a href="#">Beds & Headboards</a></li>
-                      <li><a href="#">Bedroom Storage Pieces</a></li>
-                      <li><a href="#">Storage Chests & Boxes</a></li>
-                      <li><a href="#">Bedroom Accessories</a></li>
-                    </ul>
-                  </div>
-                  <div class="nav-submenu">
-                    <p class="nav-subtitle">Shop by Quick Ship</p>
-                    <ul class="nav-submenu-list">
-                      <li><a href="#">Quick Ship Beds</a></li>
-                      <li><a href="#">Quick Ship Furniture Sets</a></li>
-                    </ul>
-                  </div>
+                <div class="nav-submenu">
+                  <p class="nav-subtitle"><a href="#">Shop by Style</a></p>
+                  <ul class="nav-submenu-list">
+                    <li><a href="#">Mission</a></li>
+                    <li><a href="#">Contemporary</a></li>
+                    <li><a href="#">Traditional</a></li>
+                    <li><a href="#">Eclectic</a></li>
+                    <li><a href="#">Rustic Sophisticates</a></li>
+                    <li><a href="#">Rough Sawn Elegence</a></li>
+                    <li><a href="#">Farmhouse</a></li>
+                    <li><a href="#">Reclaimed Barnwoood</a></li>
+                    <li><a href="#">Rustic Hickory Designs</a></li>
+                    <li><a href="#">Rustic Log Designs</a></li>
+                    <li><a href="#">Live Edge</a></li>
+                  </ul>
                 </div>
-                <div class="dropdown-menu-right">
-                  <div class="nav-pictures"><a href="#"><img class="img-fluid" src="img/general/nav-img-01.png"></a><a href="#"><img class="img-fluid" src="img/general/nav-img-02.png"></a></div>
+                <div class="nav-submenu">
+                  <p class="nav-subtitle"><a href="#">Shop by Furniture Piece</a></p>
+                  <ul class="nav-submenu-list">
+                    <li><a href="#">Bedroom Sets</a></li>
+                    <li><a href="#">Beds & Headboards</a></li>
+                    <li><a href="#">Bedroom Storage Pieces</a></li>
+                    <li><a href="#">Storage Chests & Boxes</a></li>
+                    <li><a href="#">Bedroom Accessories</a></li>
+                  </ul>
+                </div>
+                <div class="nav-submenu">
+                  <p class="nav-subtitle"><a href="#">Shop by Quick Ship</a></p>
+                  <ul class="nav-submenu-list">
+                    <li><a href="#">Quick Ship Beds</a></li>
+                    <li><a href="#">Quick Ship Furniture Sets</a></li>
+                  </ul>
                 </div>
               </div>
             </li>
             <li class="dropdown">
               <div class="dropdown-toggle">Office</div>
               <div class="dropdown-menu">
-                <div class="dropdown-menu-left">
-                  <div class="nav-submenu">
-                    <p class="nav-subtitle">Shop by Style</p>
-                    <ul class="nav-submenu-list">
-                      <li><a href="#">Mission</a></li>
-                      <li><a href="#">Contemporary</a></li>
-                      <li><a href="#">Traditional</a></li>
-                      <li><a href="#">Eclectic</a></li>
-                      <li><a href="#">Rustic Sophisticates</a></li>
-                      <li><a href="#">Rough Sawn Elegence</a></li>
-                      <li><a href="#">Farmhouse</a></li>
-                      <li><a href="#">Reclaimed Barnwoood</a></li>
-                      <li><a href="#">Rustic Hickory Designs</a></li>
-                      <li><a href="#">Rustic Log Designs</a></li>
-                      <li><a href="#">Live Edge</a></li>
-                    </ul>
-                  </div>
-                  <div class="nav-submenu">
-                    <p class="nav-subtitle">Shop by Furniture Piece</p>
-                    <ul class="nav-submenu-list">
-                      <li><a href="#">Bedroom Sets</a></li>
-                      <li><a href="#">Beds & Headboards</a></li>
-                      <li><a href="#">Bedroom Storage Pieces</a></li>
-                      <li><a href="#">Storage Chests & Boxes</a></li>
-                      <li><a href="#">Bedroom Accessories</a></li>
-                    </ul>
-                  </div>
-                  <div class="nav-submenu">
-                    <p class="nav-subtitle">Shop by Quick Ship</p>
-                    <ul class="nav-submenu-list">
-                      <li><a href="#">Quick Ship Beds</a></li>
-                      <li><a href="#">Quick Ship Furniture Sets</a></li>
-                    </ul>
-                  </div>
+                <div class="nav-submenu">
+                  <p class="nav-subtitle"><a href="#">Shop by Style</a></p>
+                  <ul class="nav-submenu-list">
+                    <li><a href="#">Mission</a></li>
+                    <li><a href="#">Contemporary</a></li>
+                    <li><a href="#">Traditional</a></li>
+                    <li><a href="#">Eclectic</a></li>
+                    <li><a href="#">Rustic Sophisticates</a></li>
+                    <li><a href="#">Rough Sawn Elegence</a></li>
+                    <li><a href="#">Farmhouse</a></li>
+                    <li><a href="#">Reclaimed Barnwoood</a></li>
+                    <li><a href="#">Rustic Hickory Designs</a></li>
+                    <li><a href="#">Rustic Log Designs</a></li>
+                    <li><a href="#">Live Edge</a></li>
+                  </ul>
                 </div>
-                <div class="dropdown-menu-right">
-                  <div class="nav-pictures"><a href="#"><img class="img-fluid" src="img/general/nav-img-01.png"></a><a href="#"><img class="img-fluid" src="img/general/nav-img-02.png"></a></div>
+                <div class="nav-submenu">
+                  <p class="nav-subtitle"><a href="#">Shop by Furniture Piece</a></p>
+                  <ul class="nav-submenu-list">
+                    <li><a href="#">Bedroom Sets</a></li>
+                    <li><a href="#">Beds & Headboards</a></li>
+                    <li><a href="#">Bedroom Storage Pieces</a></li>
+                    <li><a href="#">Storage Chests & Boxes</a></li>
+                    <li><a href="#">Bedroom Accessories</a></li>
+                  </ul>
+                </div>
+                <div class="nav-submenu">
+                  <p class="nav-subtitle"><a href="#">Shop by Quick Ship</a></p>
+                  <ul class="nav-submenu-list">
+                    <li><a href="#">Quick Ship Beds</a></li>
+                    <li><a href="#">Quick Ship Furniture Sets</a></li>
+                  </ul>
                 </div>
               </div>
             </li>
             <li class="dropdown">
               <div class="dropdown-toggle">Outdoor</div>
               <div class="dropdown-menu">
-                <div class="dropdown-menu-left">
-                  <div class="nav-submenu">
-                    <p class="nav-subtitle">Shop by Style</p>
-                    <ul class="nav-submenu-list">
-                      <li><a href="#">Mission</a></li>
-                      <li><a href="#">Contemporary</a></li>
-                      <li><a href="#">Traditional</a></li>
-                      <li><a href="#">Eclectic</a></li>
-                      <li><a href="#">Rustic Sophisticates</a></li>
-                      <li><a href="#">Rough Sawn Elegence</a></li>
-                      <li><a href="#">Farmhouse</a></li>
-                      <li><a href="#">Reclaimed Barnwoood</a></li>
-                      <li><a href="#">Rustic Hickory Designs</a></li>
-                      <li><a href="#">Rustic Log Designs</a></li>
-                      <li><a href="#">Live Edge</a></li>
-                    </ul>
-                  </div>
-                  <div class="nav-submenu">
-                    <p class="nav-subtitle">Shop by Furniture Piece</p>
-                    <ul class="nav-submenu-list">
-                      <li><a href="#">Bedroom Sets</a></li>
-                      <li><a href="#">Beds & Headboards</a></li>
-                      <li><a href="#">Bedroom Storage Pieces</a></li>
-                      <li><a href="#">Storage Chests & Boxes</a></li>
-                      <li><a href="#">Bedroom Accessories</a></li>
-                    </ul>
-                  </div>
-                  <div class="nav-submenu">
-                    <p class="nav-subtitle">Shop by Quick Ship</p>
-                    <ul class="nav-submenu-list">
-                      <li><a href="#">Quick Ship Beds</a></li>
-                      <li><a href="#">Quick Ship Furniture Sets</a></li>
-                    </ul>
-                  </div>
+                <div class="nav-submenu">
+                  <p class="nav-subtitle"><a href="#">Shop by Style</a></p>
+                  <ul class="nav-submenu-list">
+                    <li><a href="#">Mission</a></li>
+                    <li><a href="#">Contemporary</a></li>
+                    <li><a href="#">Traditional</a></li>
+                    <li><a href="#">Eclectic</a></li>
+                    <li><a href="#">Rustic Sophisticates</a></li>
+                    <li><a href="#">Rough Sawn Elegence</a></li>
+                    <li><a href="#">Farmhouse</a></li>
+                    <li><a href="#">Reclaimed Barnwoood</a></li>
+                    <li><a href="#">Rustic Hickory Designs</a></li>
+                    <li><a href="#">Rustic Log Designs</a></li>
+                    <li><a href="#">Live Edge</a></li>
+                  </ul>
                 </div>
-                <div class="dropdown-menu-right">
-                  <div class="nav-pictures"><a href="#"><img class="img-fluid" src="img/general/nav-img-01.png"></a><a href="#"><img class="img-fluid" src="img/general/nav-img-02.png"></a></div>
+                <div class="nav-submenu">
+                  <p class="nav-subtitle"><a href="#">Shop by Furniture Piece</a></p>
+                  <ul class="nav-submenu-list">
+                    <li><a href="#">Bedroom Sets</a></li>
+                    <li><a href="#">Beds & Headboards</a></li>
+                    <li><a href="#">Bedroom Storage Pieces</a></li>
+                    <li><a href="#">Storage Chests & Boxes</a></li>
+                    <li><a href="#">Bedroom Accessories</a></li>
+                  </ul>
                 </div>
-              </div>
-            </li>
-            <li class="dropdown">
-              <div class="dropdown-toggle">Rustic & Live Edge</div>
-              <div class="dropdown-menu">
-                <div class="dropdown-menu-left">
-                  <div class="nav-submenu">
-                    <p class="nav-subtitle">Shop by Style</p>
-                    <ul class="nav-submenu-list">
-                      <li><a href="#">Mission</a></li>
-                      <li><a href="#">Contemporary</a></li>
-                      <li><a href="#">Traditional</a></li>
-                      <li><a href="#">Eclectic</a></li>
-                      <li><a href="#">Rustic Sophisticates</a></li>
-                      <li><a href="#">Rough Sawn Elegence</a></li>
-                      <li><a href="#">Farmhouse</a></li>
-                      <li><a href="#">Reclaimed Barnwoood</a></li>
-                      <li><a href="#">Rustic Hickory Designs</a></li>
-                      <li><a href="#">Rustic Log Designs</a></li>
-                      <li><a href="#">Live Edge</a></li>
-                    </ul>
-                  </div>
-                  <div class="nav-submenu">
-                    <p class="nav-subtitle">Shop by Furniture Piece</p>
-                    <ul class="nav-submenu-list">
-                      <li><a href="#">Bedroom Sets</a></li>
-                      <li><a href="#">Beds & Headboards</a></li>
-                      <li><a href="#">Bedroom Storage Pieces</a></li>
-                      <li><a href="#">Storage Chests & Boxes</a></li>
-                      <li><a href="#">Bedroom Accessories</a></li>
-                    </ul>
-                  </div>
-                  <div class="nav-submenu">
-                    <p class="nav-subtitle">Shop by Quick Ship</p>
-                    <ul class="nav-submenu-list">
-                      <li><a href="#">Quick Ship Beds</a></li>
-                      <li><a href="#">Quick Ship Furniture Sets</a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="dropdown-menu-right">
-                  <div class="nav-pictures"><a href="#"><img class="img-fluid" src="img/general/nav-img-01.png"></a><a href="#"><img class="img-fluid" src="img/general/nav-img-02.png"></a></div>
+                <div class="nav-submenu">
+                  <p class="nav-subtitle"><a href="#">Shop by Quick Ship</a></p>
+                  <ul class="nav-submenu-list">
+                    <li><a href="#">Quick Ship Beds</a></li>
+                    <li><a href="#">Quick Ship Furniture Sets</a></li>
+                  </ul>
                 </div>
               </div>
             </li>
@@ -417,70 +380,70 @@
       </nav>
     </header><!--HEADER END-->
 <!--CONTENT-->
-    <nav aria-label="breadcrumb">
-      <div class="container px-0">
-        <ul class="breadcrumb">
-          <li class="breadcrumb-item"><a class="text-warning" href="#"><i class="fa fa-chevron-left"></i><span class="font-weight-bold ml-2">Back</span></a></li>
-        </ul>
-      </div>
-    </nav>
-    <main class="content pt-0"><!-- Cart edit address section-->
+    <main class="content"><!-- Cart edit address section-->
       <section class="cart address-section">
         <div class="container">
-          <h1>Shipping Information</h1>
+          <div class="row">
+            <div class="col-12"><a class="back text-brown" href="#"><i class="fa fa-chevron-left"></i>BACK</a></div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <h1>Shipping Information</h1>
+            </div>
+          </div>
           <div class="row wishlist-item">
             <div class="col-lg-8 col-md-6 col-sm-12">
-              <div class="row mb-5">
+              <div class="row mb-4">
                 <div class="col-lg-6">
                   <form class="form" action="">
-                    <div class="row mb-3">
-                      <div class="form-group col-md-6">
+                    <div class="row">
+                      <div class="mb-3 col-md-6">
                         <label>First name</label>
                         <input class="form-control" type="text" name="first-name">
                       </div>
-                      <div class="form-group col-md-6">
+                      <div class="mb-3 col-md-6">
                         <label>Last name</label>
                         <input class="form-control" type="text" name="last-name">
                       </div>
                     </div>
-                    <div class="row mb-3">
-                      <div class="form-group col-md-12">
+                    <div class="row">
+                      <div class="mb-3 col-md-12">
                         <label>Company name (optional)</label>
                         <input class="form-control" type="text" name="company-name">
                       </div>
                     </div>
-                    <div class="row mb-3">
-                      <div class="form-group col-md-12">
+                    <div class="row">
+                      <div class="mb-3 col-md-12">
                         <label>Street address</label>
                         <input class="form-control mb-2" type="text" name="street-address-1">
                       </div>
-                      <div class="form-group col-md-12">
+                      <div class="mb-3 col-md-12">
                         <label>Address line 2 (optional)"</label>
                         <input class="form-control" type="text" name="street-address-2">
                       </div>
                     </div>
-                    <div class="row mb-3">
-                      <div class="form-group col-md-6">
+                    <div class="row">
+                      <div class="mb-3 col-md-6">
                         <label>City</label>
                         <input class="form-control" type="text" name="city">
                       </div>
-                      <div class="form-group col-md-6">
+                      <div class="mb-3 col-md-6">
                         <label>State</label>
                         <input class="form-control" type="text" name="state">
                       </div>
                     </div>
-                    <div class="row mb-3">
-                      <div class="form-group col-md-6">
+                    <div class="row">
+                      <div class="mb-3 col-md-6">
                         <label>Zip-code</label>
                         <input class="form-control" type="text" name="Zip-code">
                       </div>
-                      <div class="form-group col-md-6">
+                      <div class="mb-3 col-md-6">
                         <label>Ext (optional)</label>
                         <input class="form-control" type="text" name="ext">
                       </div>
                     </div>
-                    <div class="row mb-3">
-                      <div class="form-group col-lg-6 col-md-12">
+                    <div class="row">
+                      <div class="mb-3 col-lg-6 col-md-12">
                         <label>Phone</label>
                         <input class="form-control" type="text" name="phone">
                       </div>
@@ -489,54 +452,13 @@
                 </div>
                 <div class="col-lg-6 border-dashed-b">
                   <div class="row mb-3">
-                    <div class="form-group col-md-12">
+                    <div class="mb-3 col-md-12">
                       <label>Shopping Message</label>
-                      <textarea class="form-control w-100" type="text" rows="10"></textarea>
+                      <textarea class="form-control w-100" type="text" rows="6"></textarea>
                     </div>
                   </div>
                 </div>
               </div>
-              <!--Start of Shipping group-->
-              <div class="row px-0 mb-3">
-                <div class="col-md-12">
-                  <h2 class="h2 mb-3">Delivery Information</h2>
-                </div>
-              </div>
-              <div class="row px-0 mb-3 mb-sm-5">
-                <div class="col-lg-6 col-lg-6 col-sm-12">
-                  <h4 class="h4 mb-3">Shipping group</h4>
-                  <li class="checkbox custom_checkbox">
-                    <input id="ship01" type="checkbox" name="" value="">
-                    <label class="d-flex flex-row flex-nowrap" for="ship01"><span class="d-inline-flex text-left w-100">Standard curbside delivery</span><span class="text-right text-brown w-100 border-b-dashed pb-0">$137.00</span></label>
-                  </li>
-                  <li class="checkbox custom_checkbox">
-                    <input id="ship02" type="checkbox" name="" value="" checked="">
-                    <label class="d-flex flex-row flex-nowrap" for="ship02"><span class="d-inline-flex text-left w-100">Inside delivery with set up</span><span class="text-right text-brown w-100 border-b-dashed pb-0">$537.00</span></label>
-                  </li>
-                </div>
-              </div>
-              <!--start PDP Item-->
-              <div class="row flex-md-row-reverse mb-5 border-b-dashed">
-                <div class="col-lg-6 col-md-12 col-sm-12">
-                  <h6 class="text-center text-md-left"><b>Carolina Crown Amish Bed</b></h6>
-                </div>
-                <div class="col-lg-6 col-md-12 col-sm-12">
-                  <div class="product-selected mb-3"><img class="img-fluid w-100" src="img/product/yKelvO0K53.jpg"></div>
-                </div>
-              </div>
-              <!--End PDP Item-->
-              <!--start PDP Item-->
-              <div class="row flex-md-row-reverse mb-5 border-b-dashed">
-                <div class="col-lg-6 col-md-12 col-sm-12">
-                  <h6 class="text-center text-md-left"><b>Carolina Crown Amish Bed</b></h6>
-                </div>
-                <div class="col-lg-6 col-md-12 col-sm-12">
-                  <div class="product-selected mb-3"><img class="img-fluid w-100" src="img/product/Amq5PuczxT.jpg"></div>
-                </div>
-              </div>
-              <!--End PDP Item-->
-              <div class="extended_price">(Combined) Standard curbside delivery of 4 items above</div>
-              <div class="extended_price">You saved:<span class="ml-3 text-brown">- $32.00</span></div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-12">
               <div class="proceed_to_checkout mt-5 mt-md-0">
@@ -547,8 +469,161 @@
                 <div class="item"><span class="name">Total before tax:</span><span class="price">$1,371.00</span></div>
                 <div class="item"><span class="name">Estimated tax to be collected:</span><span class="price">$0.00</span></div>
                 <div class="item full_price"><span class="name">Order total:</span><span class="price">$1,371.00</span></div>
-                <div class="item"><span class="name">Due today<a class="popup-info mr-0" href="#">?</a>:</span><span class="price">$0.00</span></div>
-                <div class="d-flex justify-content-center w-100 mt-3"><a class="btn btn-warning text-uppercase w-100" href="#"><b>Continue to Payment</b></a></div>
+                <div class="item"><span class="name">Due today
+                    <button class="popup-info me-0" type>?</button>:</span><span class="price">$0.00</span></div>
+                <div class="d-flex justify-content-center w-100 mt-5"><a class="btn btn-warning text-uppercase w-100 text-bold" href="#">Continue to Payment</a></div>
+              </div>
+            </div>
+          </div>
+          <!--Start of Shipping group-->
+          <div class="delivery-info flex">
+            <div class="row">
+              <div class="col-md-12">
+                <h2 class="mb-0"> <strong>Delivery Information</strong></h2>
+              </div>
+            </div>
+            <div class="row shipping-group col-md-12"> 
+              <div class="col-md-12 group-title">
+                <h5> <strong>Shipping Group 1</strong></h5>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-12 single-shipping"> 
+                <div class="product-img"><img class="img-fluid" src="img/product/yKelvO0K53.jpg"></div>
+                <div class="product-option mb-3">
+                  <h4 class="title"><b>Carolina Crown Amish Bed</b></h4>
+                  <h5 class="subtotal">Subtotal: <span class="text-warning text-bold">$1371.00</span></h5>
+                  <ul class="option-list">
+                    <li>Bed size: <span>Queen</span></li>
+                    <li>Headboard Style: <span>Adessa</span></li>
+                    <li>Set: <span>Full Bed</span></li>
+                    <li>Wood: <span>Quartersawn White Oak</span></li>
+                  </ul><a class="link" href="#">View All</a>
+                </div>
+                <div class="delivery-option">
+                  <h5>Delivery Option: </h5>
+                  <select class="selectpicker w-100">
+                    <option class="text-dark" value="2">Option 1</option>
+                    <option class="text-dark" value="3">Option 2</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-12 single-shipping"> 
+                <div class="product-img"><img class="img-fluid" src="img/product/yKelvO0K53.jpg"></div>
+                <div class="product-option mb-3">
+                  <h4 class="title"><b>Carolina Crown Amish Bed</b></h4>
+                  <h5 class="subtotal">Subtotal: <span class="text-warning text-bold">$1371.00</span></h5>
+                  <ul class="option-list">
+                    <li>Bed size: <span>Queen</span></li>
+                    <li>Headboard Style: <span>Adessa</span></li>
+                    <li>Set: <span>Full Bed</span></li>
+                    <li>Wood: <span>Quartersawn White Oak</span></li>
+                  </ul><a class="link" href="#">View All</a>
+                </div>
+                <div class="delivery-option">
+                  <h5>Delivery Option: </h5>
+                  <select class="selectpicker w-100">
+                    <option class="text-dark" value="2">Option 1</option>
+                    <option class="text-dark" value="3">Option 2</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-12 single-shipping"> 
+                <div class="product-img"><img class="img-fluid" src="img/product/yKelvO0K53.jpg"></div>
+                <div class="product-option mb-3">
+                  <h4 class="title"><b>Carolina Crown Amish Bed</b></h4>
+                  <h5 class="subtotal">Subtotal: <span class="text-warning text-bold">$1371.00</span></h5>
+                  <ul class="option-list">
+                    <li>Bed size: <span>Queen</span></li>
+                    <li>Headboard Style: <span>Adessa</span></li>
+                    <li>Set: <span>Full Bed</span></li>
+                    <li>Wood: <span>Quartersawn White Oak</span></li>
+                  </ul><a class="link" href="#">View All</a>
+                </div>
+                <div class="delivery-option">
+                  <h5>Delivery Option: </h5>
+                  <select class="selectpicker w-100">
+                    <option class="text-dark" value="2">Option 1</option>
+                    <option class="text-dark" value="3">Option 2</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="row shipping-subtotal">
+              <div class="col-md-12 text-end subtotal-area"> 
+                <p>(Combined) Standard curbside delivery of 2 items above </p>
+                <p>Shipping group total: <span>$137.67</span></p>
+                <p>You saved: <span class="text-warning">-$32.00</span></p>
+              </div>
+            </div>
+            <div class="row shipping-group col-md-12">
+              <div class="col-md-12 group-title">
+                <h5> <strong>Shipping Group 2</strong></h5>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-12 single-shipping"> 
+                <div class="product-img"><img class="img-fluid" src="img/product/yKelvO0K53.jpg"></div>
+                <div class="product-option mb-3">
+                  <h4 class="title"><b>Carolina Crown Amish Bed</b></h4>
+                  <h5 class="subtotal">Subtotal: <span class="text-warning text-bold">$1371.00</span></h5>
+                  <ul class="option-list">
+                    <li>Bed size: <span>Queen</span></li>
+                    <li>Headboard Style: <span>Adessa</span></li>
+                    <li>Set: <span>Full Bed</span></li>
+                    <li>Wood: <span>Quartersawn White Oak</span></li>
+                  </ul><a class="link" href="#">View All</a>
+                </div>
+                <div class="delivery-option">
+                  <h5>Delivery Option: </h5>
+                  <select class="selectpicker w-100">
+                    <option class="text-dark" value="2">Option 1</option>
+                    <option class="text-dark" value="3">Option 2</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-12 single-shipping"> 
+                <div class="product-img"><img class="img-fluid" src="img/product/yKelvO0K53.jpg"></div>
+                <div class="product-option mb-3">
+                  <h4 class="title"><b>Carolina Crown Amish Bed</b></h4>
+                  <h5 class="subtotal">Subtotal: <span class="text-warning text-bold">$1371.00</span></h5>
+                  <ul class="option-list">
+                    <li>Bed size: <span>Queen</span></li>
+                    <li>Headboard Style: <span>Adessa</span></li>
+                    <li>Set: <span>Full Bed</span></li>
+                    <li>Wood: <span>Quartersawn White Oak</span></li>
+                  </ul><a class="link" href="#">View All</a>
+                </div>
+                <div class="delivery-option">
+                  <h5>Delivery Option: </h5>
+                  <select class="selectpicker w-100">
+                    <option class="text-dark" value="2">Option 1</option>
+                    <option class="text-dark" value="3">Option 2</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-12 single-shipping"> 
+                <div class="product-img"><img class="img-fluid" src="img/product/yKelvO0K53.jpg"></div>
+                <div class="product-option mb-3">
+                  <h4 class="title"><b>Carolina Crown Amish Bed</b></h4>
+                  <h5 class="subtotal">Subtotal: <span class="text-warning text-bold">$1371.00</span></h5>
+                  <ul class="option-list">
+                    <li>Bed size: <span>Queen</span></li>
+                    <li>Headboard Style: <span>Adessa</span></li>
+                    <li>Set: <span>Full Bed</span></li>
+                    <li>Wood: <span>Quartersawn White Oak</span></li>
+                  </ul><a class="link" href="#">View All</a>
+                </div>
+                <div class="delivery-option">
+                  <h5>Delivery Option: </h5>
+                  <select class="selectpicker w-100">
+                    <option class="text-dark" value="2">Option 1</option>
+                    <option class="text-dark" value="3">Option 2</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="row shipping-subtotal">
+              <div class="col-md-12 text-end subtotal-area"> 
+                <p>(Combined) Standard curbside delivery of 2 items above </p>
+                <p>Shipping group total: <span>$137.67</span></p>
+                <p>You saved: <span class="text-warning">-$32.00</span></p>
               </div>
             </div>
           </div>
@@ -563,11 +638,11 @@
         </div>
         <div class="footer-social-wrap">
           <ul class="footer-social">
-            <li> <a href="#"><i class="fa fa-facebook-square"></i></a></li>
+            <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
             <li><a href="#"><i class="fa fa-twitter"></i></a></li>
             <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
             <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-          </ul><a class="footer-subscribe mb-sm-3" href="#" data-toggle="modal" data-target="#subscribe_popup"><i class="fa fa-envelope-o"></i>   Subscribe for Newsletter</a>
+          </ul><a class="footer-subscribe mb-sm-3" href="#" data-bs-toggle="modal" data-bs-target="#subscribe_popup"><i class="fa fa-envelope-o"></i>   Subscribe for Newsletter</a>
         </div><img class="img-bbb" src="img/general/BBB.png" alt="#">
         <ul class="footer-nav-list">
           <li><a href="#">About Us</a></li>
@@ -592,25 +667,25 @@
       <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
         <div class="modal-content">
           <div class="modal-body">
-            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
             <h4 class="text-center modal-title mb-5">Sign in</h4>
             <form class="form px-md-5">
-              <div class="form-group">
+              <div class="mb-3">
                 <label class="col-form-label col-form-label-sm">Email address</label>
                 <input class="form-control" type="email" name="email">
               </div>
-              <div class="form-group">
-                <label class="col-form-label col-form-label-sm">Password<a class="text-right" href="#">Forgot yor password?</a></label>
+              <div class="mb-3">
+                <label class="col-form-label col-form-label-sm">Password<a class="text-end" href="#">Forgot yor password?</a></label>
                 <input class="form-control" type="password" name="pass">
               </div>
-              <div class="form-group d-flex">
+              <div class="mb-3 d-flex">
                 <button class="btn btn-warning w-100" type="submit">Sign In</button>
               </div>
             </form>
           </div>
           <div class="modal-footer">
             <p class="text-center text-dark">New to Cabinfield?</p>
-            <div class="form-group d-flex"><a class="btn btn-outline-warning" href="#">Create Your Cabinfield Account</a></div>
+            <div class="mb-3 d-flex"><a class="btn btn-outline-warning" href="#">Create Your Cabinfield Account</a></div>
           </div>
         </div>
       </div>
@@ -619,20 +694,20 @@
       <div class="modal-dialog modal-dialog-centered modal-md" role="document">
         <form class="form modal-content p-4">
           <div class="modal-header">
-            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-            <div class="form-group w-100 mb-0">
+            <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            <div class="w-100 mb-0">
               <h4 class="text-center modal-title mb-3">Forgot your password?</h4>
               <p class="mb-0 text-center">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
             </div>
           </div>
           <div class="modal-body">
-            <div class="form-group">
+            <div class="mb-3">
               <label for="email">Email Address</label>
               <input class="form-control" id="email" type="email">
             </div>
           </div>
           <div class="modal-footer">
-            <div class="form-group">
+            <div class="mb-3">
               <button class="btn btn-warning text-uppercase" type="submit"><strong>Recover password</strong></button>
             </div>
           </div>
@@ -644,17 +719,17 @@
         <div class="modal-content">
           <div class="modal-body">
             <h4 class="text-center modal-title mb-5">Get the Cabinfield Email Newsletter</h4>
-            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
             <form class="form px-5">
-              <div class="form-group">
+              <div class="mb-3">
                 <label class="col-form-label col-form-label-sm">Email address</label>
                 <input class="form-control" type="email" name="newsletter-email">
               </div>
-              <div class="form-group">
+              <div class="mb-3">
                 <label class="col-form-label col-form-label-sm">First Name</label>
                 <input class="form-control" type="text">
               </div>
-              <div class="form-group d-flex">
+              <div class="mb-3 d-flex">
                 <button class="btn btn-warning w-100" type="submit">Subscribe</button>
               </div>
             </form>
@@ -669,17 +744,17 @@
           <div class="modal-body p-5">
             <h4 class="text-center mb-4">Zip Code</h4>
             <h4 class="text-center mb-4" style="display:none">We’re Sorry!</h4>
-            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
             <form class="form modal--zip-form">
-              <div class="form-group mb-4">
+              <div class="mb-4">
                 <p style="display:none">Your zip code is out of range of the Heartland Collection's delivery availability. You are invited to shop the Cabinfield Collection. We deliver Cabinfield gazebos throughout the U.S.</p>
                 <label>Enter Zip</label>
                 <input class="form-control" type="text" name="zip" minlength="5" maxlength="5" placeholder="8●●●●">
               </div>
-              <div class="form-group d-none">
+              <div class="mb-3 d-none">
                 <button class="btn btn-warning w-100" type="button">Continue Shopping</button>
               </div>
-              <div class="form-group d-flex">
+              <div class="mb-3 d-flex">
                 <button class="btn btn-warning w-100" type="submit">Check ZIPCode</button>
               </div>
             </form>
@@ -689,10 +764,13 @@
       </div>
     </div><!--modal check zip end--><!--MODAL END-->
     <script src="js/jquery.js"></script>
-    <script src="js/libs.min.js"></script>
     <script src="libs/mmenu-js/dist/mmenu.polyfills.js"></script>
     <script src="libs/mmenu-js/dist/mmenu.js"></script>
     <script src="libs/mmenu-light/dist/mmenu-light.js"></script>
+    <script src="libs/slick/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta2/dist/js/bootstrap-select.min.js"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

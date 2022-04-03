@@ -2,9 +2,9 @@
  * Deep extend an object with the given defaults.
  * Note that the extended object is not a clone, meaning the original object will also be updated.
  *
- * @param 	{object}	orignl	The object to extend to.
- * @param 	{object}	dfault	The object to extend from.
- * @return	{object}			The extended "orignl" object.
+ * @param    {object}    orignl    The object to extend to.
+ * @param    {object}    dfault    The object to extend from.
+ * @return    {object}            The extended "orignl" object.
  */
 export function extend(orignl: mmLooseObject, dfault: mmLooseObject) {
     if (type(orignl) != 'object') {
@@ -55,8 +55,8 @@ export function touchDirection(surface) {
 /**
  * Get the type of any given variable. Improvement of "typeof".
  *
- * @param 	{any}		variable	The variable.
- * @return	{string}				The type of the variable in lowercase.
+ * @param    {any}        variable    The variable.
+ * @return    {string}                The type of the variable in lowercase.
  */
 export function type(variable: any): string {
     return {}.toString
@@ -67,10 +67,10 @@ export function type(variable: any): string {
 
 /**
  * Find the value from an option or function.
- * @param 	{HTMLElement} 	element 	Scope for the function.
- * @param 	{any} 			[option] 	Value or function.
- * @param 	{any} 			[dfault] 	Default fallback value.
- * @return	{any}						The given evaluation of the given option, or the default fallback value.
+ * @param    {HTMLElement}    element    Scope for the function.
+ * @param    {any}            [option]    Value or function.
+ * @param    {any}            [dfault]    Default fallback value.
+ * @return    {any}                        The given evaluation of the given option, or the default fallback value.
  */
 export function valueOrFn(
     element: HTMLElement,
@@ -97,9 +97,9 @@ export function valueOrFn(
 /**
  * Set and invoke a (single) transition-end function with fallback.
  *
- * @param {HTMLElement} 	element 	Scope for the function.
- * @param {function}		func		Function to invoke.
- * @param {number}			duration	The duration of the animation (for the fallback).
+ * @param {HTMLElement}    element    Scope for the function.
+ * @param {function}        func        Function to invoke.
+ * @param {number}            duration    The duration of the animation (for the fallback).
  */
 export function transitionend(
     element: HTMLElement,
@@ -107,7 +107,7 @@ export function transitionend(
     duration: number
 ) {
     var _ended = false,
-        _fn = function(evnt) {
+        _fn = function (evnt) {
             if (typeof evnt !== 'undefined') {
                 if (evnt.target !== element) {
                     return;
@@ -133,6 +133,7 @@ export function transitionend(
 export function uniqueId() {
     return 'mm-' + __id++;
 }
+
 var __id = 0;
 
 /**

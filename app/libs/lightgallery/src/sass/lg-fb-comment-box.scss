@@ -1,9 +1,11 @@
 @import "lg-variables";
 @import "lg-mixins";
-.lg-outer.fb-comments{
+
+.lg-outer.fb-comments {
     .lg-img-wrap, .lg-video-cont {
         padding-right: 400px !important;
     }
+
     .fb-comments {
         height: 100%;
         overflow-y: auto;
@@ -13,28 +15,35 @@
         width: 420px;
         z-index: 99999;
         background: #fff url("#{$lg-path-images}/loading.gif") no-repeat scroll center center;
+
         &.fb_iframe_widget {
             background-image: none;
-            &.fb_iframe_widget_loader{
+
+            &.fb_iframe_widget_loader {
                 background: #fff url("#{$lg-path-images}/loading.gif") no-repeat scroll center center;
             }
         }
     }
+
     .lg-toolbar {
         right: 420px;
         width: auto;
     }
+
     .lg-actions .lg-next {
         right: 420px;
     }
+
     .lg-item {
         background-image: none;
-        &.lg-complete{
-            .lg-img-wrap, .lg-video-cont{
+
+        &.lg-complete {
+            .lg-img-wrap, .lg-video-cont {
                 background-image: none;
             }
-        } 
+        }
     }
+
     .lg-img-wrap, .lg-video-cont {
         background: url("#{$lg-path-images}/loading.gif") no-repeat scroll transparent;
         background-position: center center;

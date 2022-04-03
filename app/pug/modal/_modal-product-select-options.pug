@@ -1,21 +1,21 @@
 #select_options.modal.modal--select-optns.fade.show(tabindex='-1', role='dialog', aria-hidden='true')
     .modal-dialog.modal-dialog-centered.modal-lg(role='document')
         .modal-content
-            button.close(type='button', data-dismiss='modal', aria-label='Close')
+            button.close(type='button', data-bs-dismiss='modal', aria-label='Close')
                 span(aria-hidden='true') ×
             .modal-header
                 ul.nav.nav-tabs(id="productSelectTabs", role="tablist")
-                    li #[a(class="nav-link active" id="step-01-tab" data-toggle="tab" href="#step-01" role="tab" aria-controls="step-01" aria-selected="true") 1. Bed Size]
-                    li #[a(class="nav-link" id="step-02-tab" data-toggle="tab" href="#step-02" role="tab" aria-controls="step-02" aria-selected="false") 2. Wood]
-                    li #[a(class="nav-link" id="step-33-tab" data-toggle="tab" href="#step-33" role="tab" aria-controls="step-33" aria-selected="false") 2.1 Wood]
-                    li #[a(class="nav-link" id="step-03-tab" data-toggle="tab" href="#step-03" role="tab" aria-controls="step-03" aria-selected="false") 3. Wood Stain]
-                    li #[a(class="nav-link" id="step-031-tab" data-toggle="tab" href="#step-031" role="tab" aria-controls="step-031" aria-selected="false") 3.1 Gazebo]
-                    li #[a(class="nav-link" id="step-04-tab" data-toggle="tab" href="#step-04" role="tab" aria-controls="step-04" aria-selected="false") 4. Headboard Style]
-                    li #[a(class="nav-link" id="step-042-tab" data-toggle="tab" href="#step-042" role="tab" aria-controls="step-042" aria-selected="false") 4.2 Storage Rail]
-                    li #[a(class="nav-link" id="step-05-tab" data-toggle="tab" href="#step-05" role="tab" aria-controls="step-05" aria-selected="false") 5. Review ZIP]
-                    li #[a(class="nav-link" id="step-06-tab" data-toggle="tab" href="#step-06" role="tab" aria-controls="step-06" aria-selected="false") 6. Review Checkout]
-                    li #[a(class="nav-link" id="step-07-tab" data-toggle="tab" href="#step-07" role="tab" aria-controls="step-07" aria-selected="false") 7. Review Gazeebo]
-                    li #[a(class="nav-link" id="step-08-tab" data-toggle="tab" href="#step-08" role="tab" aria-controls="step-08" aria-selected="false") 7. CHECKBOX]
+                    li #[a(class="nav-link active" id="step-01-tab" data-bs-toggle="tab" href="#step-01" role="tab" aria-controls="step-01" aria-selected="true") 1. Bed Size]
+                    li #[a(class="nav-link" id="step-02-tab" data-bs-toggle="tab" href="#step-02" role="tab" aria-controls="step-02" aria-selected="false") 2. Wood]
+                    li #[a(class="nav-link" id="step-33-tab" data-bs-toggle="tab" href="#step-33" role="tab" aria-controls="step-33" aria-selected="false") 2.1 Wood]
+                    li #[a(class="nav-link" id="step-03-tab" data-bs-toggle="tab" href="#step-03" role="tab" aria-controls="step-03" aria-selected="false") 3. Wood Stain]
+                    li #[a(class="nav-link" id="step-031-tab" data-bs-toggle="tab" href="#step-031" role="tab" aria-controls="step-031" aria-selected="false") 3.1 Gazebo]
+                    li #[a(class="nav-link" id="step-04-tab" data-bs-toggle="tab" href="#step-04" role="tab" aria-controls="step-04" aria-selected="false") 4. Headboard Style]
+                    li #[a(class="nav-link" id="step-042-tab" data-bs-toggle="tab" href="#step-042" role="tab" aria-controls="step-042" aria-selected="false") 4.2 Storage Rail]
+                    li #[a(class="nav-link" id="step-05-tab" data-bs-toggle="tab" href="#step-05" role="tab" aria-controls="step-05" aria-selected="false") 5. Review ZIP]
+                    li #[a(class="nav-link" id="step-06-tab" data-bs-toggle="tab" href="#step-06" role="tab" aria-controls="step-06" aria-selected="false") 6. Review Checkout]
+                    li #[a(class="nav-link" id="step-07-tab" data-bs-toggle="tab" href="#step-07" role="tab" aria-controls="step-07" aria-selected="false") 7. Review Gazeebo]
+                    li #[a(class="nav-link" id="step-08-tab" data-bs-toggle="tab" href="#step-08" role="tab" aria-controls="step-08" aria-selected="false") 7. CHECKBOX]
                 .product-select
                     h2.product-title Customize your Indian Creek Panel Amish Bed:
                     img.product-img(src="img/product/gazebo-02.png")
@@ -24,9 +24,9 @@
                     #optgroup-1
                         .product-customize-form
                             h6.product-customize-subtitle
-                                b.mr-1 Choose:
+                                b.me-1 Choose:
                                 | Bed Size
-                                a.popup-info(href='#', data-toggle='modal', data-target='#customize_popup5') i
+                                a.popup-info(href='#', data-bs-toggle='modal', data-bs-target='#customize_popup5') i
                             .product-customize-list.row-cols-4
                                 .product-option
                                     input#bed-size-01(type='radio', name='bed-size', checked='')
@@ -63,9 +63,9 @@
                     #optgroup-2
                         .product-customize-form
                             h6.product-customize-subtitle
-                                b.mr-1 Choose:
+                                b.me-1 Choose:
                                 | Wood
-                                a.popup-info(href='#', data-toggle='modal', data-target='#customize_popup5') i
+                                a.popup-info(href='#', data-bs-toggle='modal', data-bs-target='#customize_popup5') i
                             .product-customize-list
                                 .product-option
                                     input#bed-wood-01(type='radio', name='bed-wood', checked='')
@@ -89,42 +89,42 @@
                     #sdfkjsdf
                         .product-customize-form
                             h6.product-customize-subtitle
-                                b.mr-1 Hardware:
+                                b.me-1 Hardware:
                                 |   BP1586-WN, BP3620-NBZ
                             .product-customize-list.product-customize-list--hardware
                                 .product-option.product-option--hardware
                                     input#BP1466-WN(type='checkbox', name='BP1466-WN')
                                     label(for='BP1466-WN') BP1466-WN
-                                    a.popup-info(href='#', data-toggle='modal', data-target='#customize_popup11') i
+                                    a.popup-info(href='#', data-bs-toggle='modal', data-bs-target='#customize_popup11') i
                                 .product-option.product-option--hardware
                                     input#BP1467-WN(type='checkbox', name='BP1467-WN')
                                     label(for='BP1467-WN') BP1467-WN
-                                    a.popup-info(href='#', data-toggle='modal', data-target='#customize_popup11') i
+                                    a.popup-info(href='#', data-bs-toggle='modal', data-bs-target='#customize_popup11') i
                                 .product-option.product-option--hardware
                                     input#BP1468-WN(type='checkbox', name='BP1468-WN')
                                     label(for='BP1468-WN') BP1468-WN
-                                    a.popup-info(href='#', data-toggle='modal', data-target='#customize_popup11') i
+                                    a.popup-info(href='#', data-bs-toggle='modal', data-bs-target='#customize_popup11') i
                                 .product-option.product-option--hardware
                                     input#BP1469-WN(type='checkbox', name='BP1469-WN')
                                     label(for='BP1469-WN') BP1469-WN
-                                    a.popup-info(href='#', data-toggle='modal', data-target='#customize_popup11') i
+                                    a.popup-info(href='#', data-bs-toggle='modal', data-bs-target='#customize_popup11') i
                                 .product-option.product-option--hardware
                                     input#BP1470-WN(type='checkbox', name='BP1470-WN')
                                     label(for='BP1470-WN') BP1470-WN
-                                    a.popup-info(href='#', data-toggle='modal', data-target='#customize_popup11') i
+                                    a.popup-info(href='#', data-bs-toggle='modal', data-bs-target='#customize_popup11') i
                                 .product-option.product-option--hardware
                                     input#BP1471-WN(type='checkbox', name='BP1471-WN')
                                     label(for='BP1471-WN') BP1471-WN
-                                    a.popup-info(href='#', data-toggle='modal', data-target='#customize_popup11') i
+                                    a.popup-info(href='#', data-bs-toggle='modal', data-bs-target='#customize_popup11') i
 
                 .tab-pane.fade(id="step-03" role="tabpanel" aria-labelledby="step-03-tab")
                     #optgroup-3
                         .product-customize-form
                             h6.product-customize-subtitle
-                                strong.mr-1 Wood Stain:
+                                strong.me-1 Wood Stain:
                                 |  Natural
-                                a.popup-info.mr-1(href='#', data-toggle='modal', data-target='#customize_popup5') i
-                                a.more.pl-3.ml-3.border-left.openFullSize(href='#') Open full-sized previews
+                                a.popup-info.me-1(href='#', data-bs-toggle='modal', data-bs-target='#customize_popup5') i
+                                a.more.ps-3.ms-3.border-start.openFullSize(href='#') Open full-sized previews
                             .product-includes.warning.mb-3
                                 p
                                     | Please note that the stain or paint colors shown may not appear the same on all computer monitors. Actual results on your furniture may also vary due to natural variations in the color, grain, and texture of the wood. You may call or email to request stain samples.
@@ -173,48 +173,48 @@
                     #optgroup-4
                         .product-customize-form
                             h6.product-customize-subtitle
-                                strong.mr-1 Headboard Style:
+                                strong.me-1 Headboard Style:
                                 |  Lilly
-                                a.more.pl-3.ml-3.border-left.openFullSize(href='#') Open full-sized previews
+                                a.more.ps-3.ms-3.border-start.openFullSize(href='#') Open full-sized previews
                             .product-customize-list
                                 .product-option.option-hboard
                                     input#hboard-01(type='radio', name='headboard')
                                     label(for='hboard-01')
                                         img.img-fluid(src='img/product/tmp_headboard.jpg', alt='#')
                                         p.name
-                                            strong.pr-2 Elliot
+                                            strong.pe-2 Elliot
                                             | - $242
                                 .product-option.option-hboard
                                     input#hboard-02(type='radio', name='headboard', checked='')
                                     label(for='hboard-02')
                                         img.img-fluid(src='img/product/tmp_headboard.jpg', alt='#')
                                         p.name
-                                            strong.pr-2 Elliot
+                                            strong.pe-2 Elliot
                                             | + $102
                                 .product-option.option-hboard
                                     input#hboard-03(type='radio', name='headboard')
                                     label(for='hboard-03')
                                         img.img-fluid(src='img/product/tmp_headboard.jpg', alt='#')
                                         p.name
-                                            strong.pr-2 Lily
+                                            strong.pe-2 Lily
                                 .product-option.option-hboard
                                     input#hboard-04(type='radio', name='headboard')
                                     label(for='hboard-04')
                                         img.img-fluid(src='img/product/tmp_headboard.jpg', alt='#')
                                         p.name
-                                            strong.pr-2 Gbrielle
+                                            strong.pe-2 Gbrielle
                                             | - $242
                             a.closeFullSize(href="#") View Standard Previews
-                    p.text-brown.text-right *
+                    p.text-brown.text-end *
                         span #[strong Required: ]
                         | Please select an oak stain to continue
                 .tab-pane.fade(id="step-042" role="tabpanel" aria-labelledby="step-042-tab")
                     #optgroup-42
                         .product-customize-form
                             h6.product-customize-subtitle
-                                b.mr-1 Choose:
+                                b.me-1 Choose:
                                 | Bed Size
-                                a.popup-info(href='#', data-toggle='modal', data-target='#customize_popup5') i
+                                a.popup-info(href='#', data-bs-toggle='modal', data-bs-target='#customize_popup5') i
                             .product-customize-list.row-cols-4
                                 .product-option
                                     input#stor-rail-01(type='radio', name='storage-rail', checked='')
@@ -295,7 +295,7 @@
                                 .product-price-value $1,371.00
                             form.form.modal--zip
                                 label(for="review-zip") Enter Zip
-                                .form-group
+                                .mb-3
                                     input.form-control(type="text" id="review-zip" name="zip" minlength="5" maxlength="5" placeholder="8●●●●")
                             p
                                 a.btn.btn-warning.btn-sm.d-block(href='#') Calculate Shipping
@@ -374,7 +374,7 @@
                                     span + $30.40
                                     |  Shipping
                                 .d-flex.flex-row
-                                    p.text-black.mr-1
+                                    p.text-black.me-1
                                         b Extended Price:
                                     .product-price-value $1,371.00
                             p.mb-5
@@ -410,17 +410,17 @@
                                 .row
                                     .col-md-6.col-sm-12
                                         label(for="enter-zip") Enter Zip
-                                        .form-group
+                                        .mb-3
                                             input.form-control(type="text" id="enter-zip" name="zip")
                                 .row
                                     .col-md-6.col-sm-12
                                         label(for="full-name") Full Name
-                                        .form-group
+                                        .mb-3
                                             input.form-control(type="text" id="full-name" name="full-name"  placeholder="")
                                 .row
                                     .col-md-6.col-sm-12
                                         label(for="review-zip") Email
-                                        .form-group
+                                        .mb-3
                                             input.form-control(type="email" id="email" name="email" )
                                 .row
                                     .col-md-6.col-sm-12
@@ -448,36 +448,36 @@
                     #optgroup-455
                         .product-customize-form
                             h6.product-customize-subtitle
-                                strong.mr-1 Headboard Style:
+                                strong.me-1 Headboard Style:
                                 |  Lilly
-                                a.more.pl-3.ml-3.border-left.openFullSize(href='#') Open full-sized previews
+                                a.more.ps-3.ms-3.border-start.openFullSize(href='#') Open full-sized previews
                             .product-customize-list
                                 .product-option.option-hboard.checkbox
                                     input#hboar-01(type='checkbox', name='headboard')
                                     label(for='hboar-01')
                                         img.img-fluid(src='img/product/tmp_headboard.jpg', alt='#')
                                         p.name
-                                            strong.pr-2 Elliot
+                                            strong.pe-2 Elliot
                                             | - $242
                                 .product-option.option-hboard.checkbox
                                     input#hboar-02(type='checkbox', name='headboard', checked='')
                                     label(for='hboar-02')
                                         img.img-fluid(src='img/product/tmp_headboard.jpg', alt='#')
                                         p.name
-                                            strong.pr-2 Elliot
+                                            strong.pe-2 Elliot
                                             | + $102
                                 .product-option.option-hboard.checkbox
                                     input#hboar-03(type='checkbox', name='headboard')
                                     label(for='hboar-03')
                                         img.img-fluid(src='img/product/tmp_headboard.jpg', alt='#')
                                         p.name
-                                            strong.pr-2 Lily
+                                            strong.pe-2 Lily
                                 .product-option.option-hboard.checkbox
                                     input#hboar-04(type='checkbox', name='headboard')
                                     label(for='hboar-04')
                                         img.img-fluid(src='img/product/tmp_headboard.jpg', alt='#')
                                         p.name
-                                            strong.pr-2 Gbrielle
+                                            strong.pe-2 Gbrielle
                                             | - $242
                             a.closeFullSize(href="#") View Standard Previews
             .modal-footer

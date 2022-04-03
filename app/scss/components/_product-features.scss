@@ -1,97 +1,104 @@
 .product-features {
-    font-family: $font-family-base;
-    padding-top: .25rem;
-
-    .product-title {
-        font-family: $font-family-base;
-        font-size: $font-size-sm;
-        font-weight: 600;
-        line-height: 16px;
-        padding-left: 12px;
-        margin-bottom: 19px;
-    }
-
-    .product-features-list ul {
-        padding-left: 20px;
-
-        li {
-            font-size: 0.875rem;
-            line-height: 21px;
-            color: $black;
-        }
-
-        @include media-breakpoint-down(sm) {
-            margin-bottom: 1.4rem;
-        }
-    }
-
-    .product-features-list,
-    ul li,
-    .product-features-list ul,
-    .product-features-list ul li {
-        list-style-type: inherit;
-    }
-
-    hr {
-        margin-top: 2rem;
-        margin-bottom: 2rem;
-    }
-
-    .more {
-        font-weight: 600;
-    }
-
-    &-nav {
-        background: $product-option-shadow-color;
-        border-bottom: 3px solid $blue;
-        flex-wrap: nowrap;
-        .nav-link {
-            font-size: 12px;
-            text-transform: uppercase;
-            font-weight: 400;
-            color: $black;
-            text-align: center;
-            margin-bottom: -4px;
-            border-width: 3px;
-            border-radius: 0;
-            padding: .5rem .5rem;
-            @include media-breakpoint-up(md) {
-                font-size: 0.875rem;
-                min-width: 188px;
-                padding: .5rem 1rem;
-            }
-        }
-        .nav-link.active {
-            border-color: $blue $blue $white;
-            font-weight: 700;
-        }
-        .nav-link:focus,
-        .nav-link:hover {
-            background: $blue;
-            color: $white;
-            border-color: $blue;
-        }
-        @include media-breakpoint-down(sm) {
-            flex-wrap: wrap;
-            flex-direction: column;
-            border-bottom-color: transparent;
-            .nav-link {
-                width: 100%;
-            }
-            .nav-link.active {
-                border-color: $blue $blue;
-            }
-        }
-    }
-    .tab-pane {
-        padding: 2rem 0;
-        .product-title {
-            display: inline-block;
-            font-size: 0.875rem;
-            padding: 0 0.75rem;
-        }
-        .border-bottom {
-            border-bottom-color: $dark;
-        }
-    }
+	font-family: $font-family-base;
+	padding-top: .25rem;
+	
+	.product-title {
+		font-family: $font-family-base;
+		font-size: 16px;
+		font-weight: 700;
+		line-height: 16px;
+		padding-left: 12px;
+		margin-bottom: 19px;
+		color: $text-dark;
+	}
+	
+	.product-features-list ul {
+		padding-left: 20px;
+		
+		li {
+			font-size: 0.875rem;
+			line-height: 21px;
+			color: $black;
+		}
+		
+		@include media-breakpoint-down(sm) {
+			margin-bottom: 1.4rem;
+		}
+	}
+	
+	.product-features-list,
+	ul li,
+	.product-features-list ul,
+	.product-features-list ul li {
+		list-style-type: inherit;
+	}
+	
+	hr {
+		margin-top: 2rem;
+		margin-bottom: 2rem;
+	}
+	
+	.more {
+		font-weight: 600;
+	}
+	
+	&-nav {
+		background: $product-option-shadow-color;
+		border-bottom: 3px solid $blue;
+		flex-wrap: nowrap;
+		
+		.nav-link {
+			font-size: 12px;
+			text-transform: uppercase;
+			font-weight: 400;
+			color: $black;
+			text-align: center;
+			margin-bottom: -4px;
+			border-width: 3px;
+			border-radius: 0;
+			padding: .5rem .5rem;
+			@include media-breakpoint-up(md) {
+				font-size: 0.875rem;
+				min-width: 188px;
+				padding: .5rem 1rem;
+			}
+		}
+		
+		.nav-link.active {
+			border-color: $blue $blue $white;
+			font-weight: 700;
+		}
+		
+		.nav-link:focus,
+		.nav-link:hover {
+			background: $blue;
+			color: $white;
+			border-color: $blue;
+		}
+		
+		@include media-breakpoint-down(sm) {
+			flex-wrap: wrap;
+			flex-direction: column;
+			border-bottom-color: transparent;
+			.nav-link {
+				width: 100%;
+			}
+			.nav-link.active {
+				border-color: $blue $blue;
+			}
+		}
+	}
+	
+	.tab-pane {
+		padding: 2rem 0;
+		
+		.product-title {
+			display: inline-block;
+			padding: 0 0.75rem;
+		}
+		
+		.border-bottom {
+			border-bottom-color: $dark;
+		}
+	}
 }

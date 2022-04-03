@@ -16,8 +16,7 @@ export default function (navbar) {
         _txt = org ? org.innerHTML : '';
         if (_url) {
             next.setAttribute('href', _url);
-        }
-        else {
+        } else {
             next.removeAttribute('href');
         }
         next.classList[_url || _txt ? 'remove' : 'add']('mm-hidden');

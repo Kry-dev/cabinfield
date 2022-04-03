@@ -1,0 +1,323 @@
+form#options-form
+    .loading
+        .loading-circle
+        .loading-text loading
+    #optgroup-1
+        .product-customize-form
+            h6.product-customize-subtitle Bed size:
+                button(type="button", data-bs-target="#customize_popup_info",  data-bs-toggle="modal").popup-info.me-3 ?
+            .product-customize-list
+                .product-option
+                    input( type="radio" id="bed-size-01" name="bed-size" )
+                    label.product-option--label(for="bed-size-01") Twin Bed
+                        span - $102
+                .product-option
+                    input( type="radio" id="bed-size-02" name="bed-size" checked)
+                    label.product-option--label(for="bed-size-02") Full Bed
+                        span - $102
+                .product-option
+                    input( type="radio" id="bed-size-03" name="bed-size")
+                    label.product-option--label(for="bed-size-03") Queen Bed
+                        span + $156
+                .product-option
+                    input( type="radio" id="bed-size-04" name="bed-size")
+                    label.product-option--label(for="bed-size-04") King Bed
+                        span + $195
+                .product-option
+                    input( type="radio" id="bed-size-05" name="bed-size")
+                    label.product-option--label(for="bed-size-05") California King Bed
+                        span + $562
+    #optgroup-2
+        .product-customize-form
+            h6.product-customize-subtitle Wood Type:
+                button(type="button", data-bs-target="#customize_popup_info",  data-bs-toggle="modal").popup-info.me-3 ?
+            .product-customize-list
+                .product-option
+                    input( type="radio" id="wood-01" name="wood")
+                    label.product-option--label(for="wood-01") Oak
+                        span - $102
+                .product-option
+                    input( type="radio" id="wood-02" name="wood" checked)
+                    label.product-option--label(for="wood-02") Brown Maple
+                .product-option
+                    input( type="radio" id="wood-03" name="wood")
+                    label.product-option--label(for="wood-03") Sap Cherry
+                        span + $102
+    #optgroup-3
+        .product-customize-form
+            h6.product-customize-subtitle Stain:
+                button(type="button", data-bs-target="#customize_popup_info", data-bs-toggle="modal").popup-info.me-3 i
+                a(href="#") Reguest samples
+            .product-customize-list(data-bs-slick='{"slidesToShow": 4, "slidesToScroll": 4}')
+                .product-option.option-stain
+                    input( type="radio" id="sample-01" name="wood-stain")
+                    label.product-option--label(for="sample-01")
+                        .sample-text Standard as shown in product photo
+                        p.name NO FRONT...
+                .product-option.option-stain
+                    input( type="radio" id="wood-stain-01" name="wood-stain")
+                    label.product-option--label(for="wood-stain-01")
+                        .enlarge
+                            i.fa.fa-search
+                        img(src="img/product/tmp_stain-03.png", alt="#").img-fluid
+                        p.name Natural
+                .product-option.option-stain
+                    input( type="radio" id="wood-stain-02" name="wood-stain" checked)
+                    label.product-option--label(for="wood-stain-02")
+                        .enlarge
+                            i.fa.fa-search
+                        img(src="img/product/tmp_stain.jpg", alt="#").img-fluid
+                        p.name(data-title="OCS-101 S-2") OCS-101 S-2
+                .product-option.option-stain
+                    input( type="radio" id="wood-stain-04" name="wood-stain")
+                    label.product-option--label(for="wood-stain-04")
+                        .enlarge
+                            i.fa.fa-search
+                        img(src="img/product/tmp_stain-02.png", alt="#").img-fluid
+                        p.name(data-title="OCS-105 Black W") OCS-105 Black W
+                .product-option.option-stain
+                    input( type="radio" id="wood-stain-05" name="wood-stain")
+                    label.product-option--label(for="wood-stain-05")
+                        .enlarge
+                            i.fa.fa-search
+                        img(src="img/product/tmp_stain-03.png", alt="#").img-fluid
+                        p.name OCS-105 Black W
+                .product-option.option-stain
+                    input( type="radio" id="wood-stain-06" name="wood-stain")
+                    label.product-option--label(for="wood-stain-06")
+                        .enlarge
+                            i.fa.fa-search
+                        img(src="img/product/tmp_stain-02.png", alt="#").img-fluid
+                        p.name OCS-105 Black W
+                .product-option.option-stain
+                    input( type="radio" id="wood-stain-07" name="wood-stain")
+                    label.product-option--label(for="wood-stain-07")
+                        .enlarge
+                            i.fa.fa-search
+                        img(src="img/product/tmp_stain.jpg", alt="#").img-fluid
+                        p.name OCS-105 Black W
+                .product-option.option-stain
+                    input( type="radio" id="wood-stain-08" name="wood-stain")
+                    label.product-option--label(for="wood-stain-08")
+                        .enlarge
+                            i.fa.fa-search
+                        img(src="img/product/tmp_stain-03.png", alt="#").img-fluid
+                        p.name OCS-105 Black W
+    #optgroup-4
+        .product-customize-form
+            h6.product-customize-subtitle Headboard Style:
+            .product-customize-list
+                .product-option.option-hboard
+                    input( type="radio" id="hboard-01" name="headboard")
+                    label.product-option--label(for="hboard-01")
+                        .enlarge
+                            i.fa.fa-search
+                        img(src="img/product/tmp_headboard.jpg", alt="#").img-fluid
+                        p.name
+                            strong.pe-2 Elliot
+                            | - $242
+                .product-option.option-hboard
+                    input( type="radio" id="hboard-02" name="headboard" checked)
+                    label.product-option--label(for="hboard-02")
+                        .enlarge
+                            i.fa.fa-search
+                        img(src="img/product/tmp_headboard.jpg", alt="#").img-fluid
+                        p.name
+                            strong.pe-2 Elliot
+                            | + $102
+                .product-option.option-hboard
+                    input( type="radio" id="hboard-03" name="headboard")
+                    label.product-option--label(for="hboard-03")
+                        .enlarge
+                            i.fa.fa-search
+                        img(src="img/product/tmp_headboard.jpg", alt="#").img-fluid
+                        p.name
+                            strong.pe-2 Lily
+                .product-option.option-hboard
+                    input( type="radio" id="hboard-04" name="headboard")
+                    label.product-option--label(for="hboard-04")
+                        .enlarge
+                            i.fa.fa-search
+                        img(src="img/product/tmp_headboard.jpg", alt="#").img-fluid
+                        p.name
+                            strong.pe-2 Gbrielle
+                            | - $242
+                .product-option.option-hboard
+                    input( type="radio" id="hboard-05" name="headboard")
+                    label.product-option--label(for="hboard-05")
+                        .enlarge
+                            i.fa.fa-search
+                        img(src="img/product/tmp_headboard.jpg", alt="#").img-fluid
+                        p.name
+                            strong.pe-2 Elliot
+                            | - $242
+                .product-option.option-hboard
+                    input( type="radio" id="hboard-06" name="headboard" checked)
+                    label.product-option--label(for="hboard-06")
+                        .enlarge
+                            i.fa.fa-search
+                        img(src="img/product/tmp_headboard.jpg", alt="#").img-fluid
+                        p.name
+                            strong.pe-2 Elliot
+                            | + $102
+                .product-option.option-hboard
+                    input( type="radio" id="hboard-07" name="headboard")
+                    label.product-option--label(for="hboard-07")
+                        .enlarge
+                            i.fa.fa-search
+                        img(src="img/product/tmp_headboard.jpg", alt="#").img-fluid
+                        p.name
+                            strong.pe-2 Lily
+    #optgroup-5
+        .product-customize-form
+            h6.product-customize-subtitle Coat rack on footboard:
+                button(type="button", data-bs-target="#customize_popup_info",  data-bs-toggle="modal").popup-info.me-3 ?
+            .product-customize-list
+                .product-option
+                    input( type="radio" id="coat-roat-01" name="wood")
+                    label.product-option--label(for="coat-roat-01") Wooden pegs on right
+                        span + $85
+                .product-option
+                    input( type="radio" id="coat-roat-02" name="wood" checked)
+                    label.product-option--label(for="coat-roat-02") Wooden pegs on left
+                        span + $65
+                .product-option
+                    input( type="radio" id="coat-roat-03" name="wood")
+                    label.product-option--label(for="coat-roat-03") Antler pegs on right
+                        span + $85
+                .product-option
+                    input( type="radio" id="coat-roat-04" name="wood")
+                    label.product-option--label(for="coat-roat-04") Antler pegs on left
+                        span + $85
+                .product-option
+                    input( type="radio" id="coat-roat-05" name="wood" checked)
+                    label.product-option--label(for="coat-roat-05") Wooden pegs on left both sides
+                        span + $185
+                .product-option
+                    input( type="radio" id="coat-roat-06" name="wood")
+                    label.product-option--label(for="coat-roat-06") Antler pegs on left both sides
+                        span + $185
+    #optgroup-6
+        .product-customize-form
+            h6.product-customize-subtitle Extra top rail:
+                button(type="button", data-bs-target="#customize_popup_info", data-bs-toggle="modal").popup-info.me-3 ?
+                p.mb-0.text-dark (Multiple options can be selected)
+            .product-customize-list
+                .product-option
+                    input( type="radio" id="rail-01" name="Extra top rail")
+                    label.product-option--label(for="rail-01") On headboard
+                        span + $85
+                .product-option
+                    input( type="radio" id="rail-02" name="Extra top rail" checked)
+                    label.product-option--label(for="rail-02") On footboard
+                        span + $65
+                .product-option
+                    input( type="radio" id="rail-03" name="Extra top rail")
+                    label.product-option--label(for="rail-03") None
+
+
+    #optgroup-7
+        .product-customize-form
+            h6.product-customize-subtitle Fabric:
+                button(type="button", data-bs-target="#customize_popup_info", data-bs-toggle="modal").popup-info.me-1 ?
+            h6.product-customize-subtitle
+                button.btn-text.text-underline.text-bold(type="button", data-bs-target="#options-fullsize", data-bs-toggle="modal") See all Fabric Swatches
+            h6.product-customize-subtitle
+                a.text-underline(href="#") Request samples
+            .product-customize-list()
+                .product-option.option-stain
+                    input( type="radio" id="fabric-01" name="fabric")
+                    label.product-option--label(for="fabric-01")
+                        .enlarge
+                            i.fa.fa-search
+                        img(src="img/fabric/fabric-01.jpg", alt="#").img-fluid
+                        p.name 4-10 dove
+                .product-option.option-stain
+                    input( type="radio" id="fabric-02" name="fabric" checked)
+                    label.product-option--label(for="fabric-02")
+                        .enlarge
+                            i.fa.fa-search
+                        img(src="img/fabric/fabric-02.jpg", alt="#").img-fluid
+                        p.name(data-title="1-49 Gallery") 1-49 Gallery
+                .product-option.option-stain
+                    input( type="radio" id="fabric-04" name="fabric")
+                    label.product-option--label(for="fabric-04")
+                        .enlarge
+                            i.fa.fa-search
+                        img(src="img/fabric/fabric-03.jpg", alt="#").img-fluid
+                        p.name(data-title="1-49 Gallery") 1-49 Gallery
+                .product-option.option-stain
+                    input( type="radio" id="fabric-05" name="fabric")
+                    label.product-option--label(for="fabric-05")
+                        .enlarge
+                            i.fa.fa-search
+                        img(src="img/fabric/fabric-04.jpg", alt="#").img-fluid
+                        p.name(data-title="1-49 Gallery") 1-49 Gallery
+                .product-option.option-stain
+                    input( type="radio" id="fabric-06" name="fabric")
+                    label.product-option--label(for="fabric-06")
+                        .enlarge
+                            i.fa.fa-search
+                        img(src="img/fabric/fabric-04.jpg", alt="#").img-fluid
+                        p.name(data-title="1-49 Gallery") 1-49 Gallery
+                .product-option.option-stain
+                    input( type="radio" id="fabric-07" name="fabric")
+                    label.product-option--label(for="fabric-07")
+                        .enlarge
+                            i.fa.fa-search
+                        img(src="img/fabric/fabric-05.jpg", alt="#").img-fluid
+                        p.name(data-title="1-49 Gallery") 1-49 Gallery
+                .product-option.option-stain
+                    input( type="radio" id="fabric-08" name="fabric")
+                    label.product-option--label(for="fabric-08")
+                        .enlarge
+                            i.fa.fa-search
+                        img(src="img/fabric/fabric-06.jpg", alt="#").img-fluid
+                        p.name(data-title="1-49 Gallery") 1-49 Gallery
+
+    #optgroup-8
+        .product-customize-form.border-bottom-0
+            h6.product-customize-subtitle #[b.me-1 Pillow: ]
+                button(type="button", data-bs-target="#customize_popup_info",  data-bs-toggle="modal").popup-info.me-3 ?
+            .row.w-100.mb-3
+                .col-md-3.col-sm-6.d-inline-flex.align-items-center
+                    .checkbox.custom_checkbox
+                        input#fPillow222(type='checkbox' name='Pillow' value='')
+                        label.text-dark.text-uppercase(for='Pillow222') 13"x13" - Add $36.00
+                .col-md-3.col-sm-6
+                    label.mb-0.d-flex.flex-row.align-items-center.justify-content-start Quantity:
+                        select.selectpicker.from-control.ms-3
+                            option.text-dark(value='2') Option 1
+                            option.text-dark(value='3') Option 2
+            .row.w-100.mb-3
+                .col-md-3.col-sm-6.d-inline-flex.align-items-center
+                    .checkbox.custom_checkbox
+                        input#Pillow110(type='checkbox' name='Pillow' value='')
+                        label.text-dark.text-uppercase(for='Pillow110') Emriodery
+                .col-md-3.col-sm-6
+                    label.mb-0.d-flex.flex-row.align-items-center.justify-content-start Quantity:
+                        select.selectpicker.from-control.ms-3
+                            option.text-dark(value='2') Option 1
+            //.row
+            //    .col-sm-6
+            //        .checkbox.custom_checkbox.mb-3
+            //            input#Pillow0(type='checkbox' name='' value='')
+            //            label.text-dark.text-uppercase(for='Pillow0') 13"x13" - Add $36.00
+            //        .checkbox.custom_checkbox
+            //            input#Pillow1(type='checkbox' name='' value='')
+            //            label.text-dark.text-uppercase(for='Pillow1') Emriodery
+            //    .col-sm-6
+            //        label.mb-0.d-flex.flex-row.align-items-center Quantity:
+            //            select.selectpicker.from-control.ms-3
+            //                option.text-dark(value='2') Option 1
+            //                option.text-dark(value='3') Option 2
+
+            .person-message
+                h6.product-customize-subtitle.label-color Message:
+                textarea(rows="4")
+
+    .row.border-b-dashed
+        .col-12.col-sm-6.col-lg-4
+            a.btn.btn-warning.w-100.text-uppercase(href="#")
+                strong add to cart
+

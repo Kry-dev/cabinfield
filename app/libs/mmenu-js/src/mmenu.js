@@ -50,7 +50,7 @@ Mmenu.addons = {
     offcanvas,
     screenReader,
     scrollBugFix,
-
+    
     //	Add-ons
     autoHeight,
     backButton,
@@ -91,26 +91,26 @@ if (window) {
 }
 
 //	jQuery plugin
-(function($) {
+(function ($) {
     if ($) {
-        $.fn.mmenu = function(options, configs) {
+        $.fn.mmenu = function (options, configs) {
             var $result = $();
-
-            this.each(function(e, element) {
+            
+            this.each(function (e, element) {
                 //	Don't proceed if the element already is a mmenu.
                 if (element.mmApi) {
                     return;
                 }
-
+                
                 var menu = new Mmenu(element, options, configs),
-                    $menu = $(menu.node.menu);
-
+                  $menu = $(menu.node.menu);
+                
                 //	Store the API for backward compat.
                 $menu.data('mmenu', menu.API);
-
+                
                 $result = $result.add($menu);
             });
-
+            
             return $result;
         };
     }

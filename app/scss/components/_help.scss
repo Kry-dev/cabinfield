@@ -1,0 +1,118 @@
+.help{
+    .page-title{
+        h1{
+            margin:0;
+        }
+    }
+    .terms-area{
+        margin:30px 0 60px;
+        @include media-breakpoint-down(md) {
+			flex-direction: column-reverse;
+		}
+    }
+    .sidebar{
+        border:1px solid $product-main-border;
+        background-color: $light-bg;
+        width: 22%;
+        margin-right: 3%;
+        padding: 20px;
+        ul{
+            li{
+                margin-bottom:15px;
+                a{
+                    color:$orange;
+                    text-decoration: none;
+                    font-weight: 700;
+                    font-size: 0.9em;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+                &.active{
+                    a{
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+        @include media-breakpoint-down(md) {
+			width: 100%;
+            margin-right: 0;
+            margin-top:30px;
+            ul{
+                li{
+                    a{
+                        text-align:center;
+                        display: block;
+                    }
+                }
+            }
+		}
+    }
+    .main-info{
+        background-color: $light-bg;
+        border:1px solid $product-main-border;
+        padding: 20px 20px 50px;
+        .section-title{
+            font-size:1.5em;
+            margin-bottom: 20px;
+            color:$text-dark;
+        }
+        .policy-header{
+            font-size:1em;
+            margin-bottom: 10px;
+            color:$text-dark;
+            font-weight: 700;
+        }
+        .policy-pack, .section-pack{
+            background: none;
+            border-color:$orange;
+            border-top: 0;
+            margin-left: 20px;
+            .accordion-button{
+                background:none;
+                box-shadow:none;
+                color:$text-dark;
+                padding:10px 0;
+                font-weight: 700;
+                &:after{
+                    display: none;
+                }
+                
+                &.collapsed{
+                    background: none;
+                    font-weight: 400;
+                }
+            }
+            .accordion-body{
+                color:$black;
+                padding:10px 0;
+            }
+            @include media-breakpoint-down(md) {
+                margin-left: 0px;
+            }
+        }
+        .section-pack{
+            border-bottom:1px solid $orange;
+            &>.accordion-button{
+                font-weight: 700;
+                &.collapsed{
+                    font-weight: 700;
+                }
+            }
+        }
+        .policy-pack{
+            .accordion-button{
+                &:before{
+                    content:"•";
+                    display: inline;
+                    margin-right:7px;
+                }
+            }
+        }
+        @include media-breakpoint-down(md) {
+			width: 100%;
+		}
+    }
+        
+}

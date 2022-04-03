@@ -1,268 +1,272 @@
 section.cart.address-section
-  .container
-    a.back.text-brown(href='#')
-      i.fa.fa-chevron-left
-      | Back to cart
-    h1 Review and Pay
-    .row.wishlist-item
-      .wishlist-item-left
+    .container
         .row
-          .col-lg-6
-            h5.address-title Shipping Address
-              a.edit(href="#")
-                i.fa.fa-pencil
-                | change
-            .addr.mb-3
-              p John Doe
-              p 700 Carpenters Crossing
-              p BWW Ste 286309
-              p Folcroft, PA 19032-2011
-              p United States
-              p (484) 5400190
-            h5.address-title Billing address
-              a.edit(href="#")
-                i.fa.fa-pencil
-                | change
-            .addr
-              p Same as shipping address
-          .col-lg-6.border-dashed-b
-            h5.address-title Payment Method
-            form.form-address.form-address-billing.border-b-dashed(action="")
-              .row
-                .form-group.col-md-8
-                  label.col-form-label.col-form-label-sm Card number
-                  input.form-control(type='text', name='card-number')
-                .form-group.col-md-4.pr-0
-                  p.pay-by-check
-                    a.text-brown.text-underline(href="#") Pay by Check
-                    a(href="#")
-                      i.fa.fa-question-circle-o
-              .row.exp-date
-                .form-group.col-md-12.mb-0
-                  label.col-form-label.col-form-label-sm Expiration date
-                .form-group.col-md-4
-                  select.form-control(type='text', name='month')
-                    option month
-                .form-group.col-md-4
-                  select.form-control(type='text', name='year', placeholder="year")
-                    option year
-              .row
-                .form-group.col-md-4
-                  label.col-form-label.col-form-label-sm Security code
-                  input.form-control(type='text', name='sec-code')
-            .d-flex.flex-column.mt-3.mb-0
-              h5.address-title.mb-3 Gift Certificates codes
-              .form-group.form-group-apply.row
-                .col-sm-6
-                  input.form-control(type='text', name='', placeholder='Enter code')
-                .col-sm-3
-                  a(href='#').btn.btn-outline-primary Apply
-        hr.mt-0
-        .row.px-0.mb-3
-          .col-md-3.col-sm-4
-            .product-selected
-              img.img-fluid(src='img/product/yKelvO0K53.jpg')
-              .product-selected-option
-                h6 #[b Brown Mapple]
-                  br
-                  | OCS-101 S-2
-                img(src='img/product/tmp_stain.jpg')
-              .product-selected-text Buying this as a gift?
-                br
-                a(href='#', data-toggle='modal', data-target='#gifting_options') See gifting options
-
-          .col-md-6.col-sm-8.border-b-dashed
-            .option-selected
-              h6 #[b Carolina Crown Amish Bed]
-              include _option-selected-list
-            .actions
-              a.edit(href='#')
-                i.fa.fa-pencil
-                | Edit
-              a.wishlist(href='#')
-                i.fa.fa-heart-o
-                | Move to wishlist
-              a.delete(href='#')
-                i.fa.fa-trash
-                | Delete
-          .col-md-3.border-b-dashed
-            .values
-              span.values_inline_label Quantity:
-              input(type='number', name='quantity', value='1')
-            .values
-              span.values_inline_label Subtotal:
-              span.price $1,371.00
-        .row.px-0
-          .col-md-3.col-sm-4
-            .product-selected
-              img.img-fluid(src='img/product/Amq5PuczxT.jpg')
-              .product-selected-option
-                h6 #[b Brown Mapple]
-                  br
-                  | OCS-101 S-2
-                img(src='img/product/tmp_stain.jpg')
-              .product-selected-text Buying this as a gift?
-                br
-                a(href='#', data-toggle='modal', data-target='#gifting_options') See gifting options
-
-          .col-md-6.col-sm-8.border-b-dashed
-            .option-selected
-              h6 #[b Carolina Crown Amish Bed]
-              include _option-selected-list
-            .actions
-              a.edit(href='#')
-                i.fa.fa-pencil
-                | Edit
-              a.wishlist(href='#')
-                i.fa.fa-heart-o
-                | Move to wishlist
-              a.delete(href='#')
-                i.fa.fa-trash
-                | Delete
-          .col-md-3.border-b-dashed
-            .values
-              span.values_inline_label Quantity:
-              input(type='number', name='quantity', value='1')
-            .values
-              span.values_inline_label Subtotal:
-              span.price $1,371.00
+            .col-12
+                a.back.text-brown(href='#')
+                    i.fa.fa-chevron-left
+                    | Back
         .row
-          .col-lg-3.col-md-0
-          .col-lg-5.col-md-12
-            .values.mt-3 Savings on combined shipping:
-              span.save_price $32.00
+            .col-12
+                h1 Review and Pay
+        .row.wishlist-item
+            .wishlist-item-left
+                .row
+                    .col-lg-6
+                        h5.address-title Shipping Address
+                            a.edit(href="#")
+                                i.fa.fa-pencil
+                                | change
+                        .addr.mb-3
+                            p John Doe
+                            p 700 Carpenters Crossing
+                            p BWW Ste 286309
+                            p Folcroft, PA 19032-2011
+                            p United States
+                            p (484) 5400190
+                        h5.address-title Billing address
+                            a.edit(href="#")
+                                i.fa.fa-pencil
+                                | change
+                        .addr
+                            p Same as shipping address
+                    .col-lg-6.border-dashed-b
+                        h5.address-title Payment Method
+                        form.form-address.form-address-billing.border-b-dashed(action="")
+                            .row
+                                .mb-3.col-md-8
+                                    label.col-form-label.col-form-label-sm Card number
+                                    input.form-control(type='text', name='card-number')
+                                .mb-3.col-md-4.pe-0
+                                    p.pay-by-check
+                                        a.text-brown.text-underline(href="#") Pay by Check
+                                        a(href="#")
+                                            i.fa.fa-question-circle-o
+                            .row.exp-date
+                                .col-md-12.mb-0
+                                    label.col-form-label.col-form-label-sm Expiration date
+                                .mb-3.col-md-4
+                                    select.form-control(type='text', name='month')
+                                        option month
+                                .mb-3.col-md-4
+                                    select.form-control(type='text', name='year', placeholder="year")
+                                        option year
+                            .row
+                                .mb-3.col-md-4
+                                    label.col-form-label.col-form-label-sm Security code
+                                    input.form-control(type='text', name='sec-code')
+                        .d-flex.flex-column.mt-3.mb-0
+                            h5.address-title.mb-3 Gift Certificates codes
+                            .form-group-apply.row
+                                .col-sm-6
+                                    input.form-control(type='text', name='', placeholder='Enter code')
+                                .col-sm-3
+                                    a(href='#').btn.btn-outline-primary Apply
+                hr.mt-0
+                .row.px-0.mb-3
+                    .col-md-3.col-sm-4
+                        .product-selected
+                            img.img-fluid(src='img/product/yKelvO0K53.jpg')
+                            .product-selected-option
+                                h6 #[b Brown Mapple]
+                                    br
+                                    | OCS-101 S-2
+                                img(src='img/product/tmp_stain.jpg')
+                            .product-selected-text Buying this as a gift?
+                                br
+                                a(href='#', data-bs-toggle='modal', data-bs-target='#gifting_options') See gifting options
 
-          .col-lg-4.col-md-12
-            .values.text-right.mt-3  Combined shipping (2 items):
-              span.price.price_shipping $71.00
-            .values.text-right.mb-3.mt-0
-              span Delivery:
-                a.more(href='#') Inside delivery with setup
-        hr.mt-0
-        .row.px-0.mb-3
-          .col-md-3.col-sm-4
-            .product-selected
-              img.img-fluid(src='img/product/5aa15072b8457.jpeg')
-              .product-selected-option
-                h6 #[b Brown Mapple]
-                  br
-                  | OCS-101 S-2
-                img(src='img/product/tmp_stain.jpg')
-              .product-selected-text Buying this as a gift?
-                br
-                a(href='#', data-toggle='modal', data-target='#gifting_options') See gifting options
+                    .col-md-6.col-sm-8.border-b-dashed
+                        .option-selected
+                            h6 #[b Carolina Crown Amish Bed]
+                            include _option-selected-list
+                        .actions
+                            a.edit(href='#')
+                                i.fa.fa-pencil
+                                | Edit
+                            a.wishlist(href='#')
+                                i.fa.fa-heart-o
+                                | Move to wishlist
+                            a.delete(href='#')
+                                i.fa.fa-trash
+                                | Delete
+                    .col-md-3.border-b-dashed
+                        .values
+                            span.values_inline_label Quantity:
+                            input(type='number', name='quantity', value='1')
+                        .values
+                            span.values_inline_label Subtotal:
+                            span.price $1,371.00
+                .row.px-0
+                    .col-md-3.col-sm-4
+                        .product-selected
+                            img.img-fluid(src='img/product/Amq5PuczxT.jpg')
+                            .product-selected-option
+                                h6 #[b Brown Mapple]
+                                    br
+                                    | OCS-101 S-2
+                                img(src='img/product/tmp_stain.jpg')
+                            .product-selected-text Buying this as a gift?
+                                br
+                                a(href='#', data-bs-toggle='modal', data-bs-target='#gifting_options') See gifting options
 
-          .col-md-6.col-sm-8.border-b-dashed
-            .option-selected
-              h6 #[b Carolina Crown Amish Bed]
-              include _option-selected-list
-            .actions
-              a.edit(href='#')
-                i.fa.fa-pencil
-                | Edit
-              a.wishlist(href='#')
-                i.fa.fa-heart-o
-                | Move to wishlist
-              a.delete(href='#')
-                i.fa.fa-trash
-                | Delete
-          .col-md-3.border-b-dashed
-            .values
-              span.values_inline_label Quantity:
-              input(type='number', name='quantity', value='1')
-            .values
-              span.values_inline_label Subtotal:
-              span.price $1,371.00
-            .values
-              span.values_inline_label Shipping:
-              span.price.price_shipping $71.00
-            .values
-              span.values_inline_label Delivery:
-              a.more.align-self-end(href='#') Inside delivery with setup
-        .row.px-0
-          .col-md-3
-            .product-selected
-              img.img-fluid(src='img/product/Amq5PuczxT.jpg')
-              .product-selected-option
-                h6 #[b Brown Mapple]
-                  br
-                  | OCS-101 S-2
-                img(src='img/product/tmp_stain.jpg')
-              .product-selected-text Buying this as a gift?
-                br
-                a(href='#', data-toggle='modal', data-target='#gifting_options') See gifting options
+                    .col-md-6.col-sm-8.border-b-dashed
+                        .option-selected
+                            h6 #[b Carolina Crown Amish Bed]
+                            include _option-selected-list
+                        .actions
+                            a.edit(href='#')
+                                i.fa.fa-pencil
+                                | Edit
+                            a.wishlist(href='#')
+                                i.fa.fa-heart-o
+                                | Move to wishlist
+                            a.delete(href='#')
+                                i.fa.fa-trash
+                                | Delete
+                    .col-md-3.border-b-dashed
+                        .values
+                            span.values_inline_label Quantity:
+                            input(type='number', name='quantity', value='1')
+                        .values
+                            span.values_inline_label Subtotal:
+                            span.price $1,371.00
+                .row
+                    .col-lg-3.col-md-0
+                    .col-lg-5.col-md-12
+                        .values.mt-3 Savings on combined shipping:
+                            span.save_price $32.00
 
-          .col-md-6.border-b-dashed
-            .option-selected
-              h6 #[b Carolina Crown Amish Bed]
-              include _option-selected-list
-            .actions
-              a.edit(href='#')
-                i.fa.fa-pencil
-                | Edit
-              a.wishlist(href='#')
-                i.fa.fa-heart-o
-                | Move to wishlist
-              a.delete(href='#')
-                i.fa.fa-trash
-                | Delete
-          .col-md-3.border-b-dashed
-            .values
-              span.values_inline_label Quantity:
-              input(type='number', name='quantity', value='1')
-            .values
-              span.values_inline_label Subtotal:
-              span.price $1,371.00
-            .values
-              span.values_inline_label Shipping:
-              span.price.price_shipping $71.00
-            .values
-              span.values_inline_label Delivery:
-              a.more.align-self-end(href='#') Inside delivery with setup
-        .row
-          .col-lg-3.col-md-6
-          .col-lg-5.col-md-6
-            .values.mt-3 Savings on combined shipping:
-              span.save_price $32.00
+                    .col-lg-4.col-md-12
+                        .values.text-end.mt-3  Combined shipping (2 items):
+                            span.price.price_shipping $71.00
+                        .values.text-end.mb-3.mt-0
+                            span Delivery:
+                                a.more(href='#') Inside delivery with setup
+                hr.mt-0
+                .row.px-0.mb-3
+                    .col-md-3.col-sm-4
+                        .product-selected
+                            img.img-fluid(src='img/product/5aa15072b8457.jpeg')
+                            .product-selected-option
+                                h6 #[b Brown Mapple]
+                                    br
+                                    | OCS-101 S-2
+                                img(src='img/product/tmp_stain.jpg')
+                            .product-selected-text Buying this as a gift?
+                                br
+                                a(href='#', data-bs-toggle='modal', data-bs-target='#gifting_options') See gifting options
 
-          .col-lg-4.col-md-6
-            .values.text-right.mt-3  Combined shipping (2 items):
-              span.price.price_shipping $71.00
-            .values.text-right.mb-3.mt-0
-              span Delivery:
-                a.more(href='#') Inside delivery with setup
-        hr.mb-1
-        hr.mt-0
-        .extended_price
-          | Extended price (includes shipping):
-          span.text-brown $1,371.00
+                    .col-md-6.col-sm-8.border-b-dashed
+                        .option-selected
+                            h6 #[b Carolina Crown Amish Bed]
+                            include _option-selected-list
+                        .actions
+                            a.edit(href='#')
+                                i.fa.fa-pencil
+                                | Edit
+                            a.wishlist(href='#')
+                                i.fa.fa-heart-o
+                                | Move to wishlist
+                            a.delete(href='#')
+                                i.fa.fa-trash
+                                | Delete
+                    .col-md-3.border-b-dashed
+                        .values
+                            span.values_inline_label Quantity:
+                            input(type='number', name='quantity', value='1')
+                        .values
+                            span.values_inline_label Subtotal:
+                            span.price $1,371.00
+                        .values
+                            span.values_inline_label Shipping:
+                            span.price.price_shipping $71.00
+                        .values
+                            span.values_inline_label Delivery:
+                            a.more.align-self-end(href='#') Inside delivery with setup
+                .row.px-0
+                    .col-md-3
+                        .product-selected
+                            img.img-fluid(src='img/product/Amq5PuczxT.jpg')
+                            .product-selected-option
+                                h6 #[b Brown Mapple]
+                                    br
+                                    | OCS-101 S-2
+                                img(src='img/product/tmp_stain.jpg')
+                            .product-selected-text Buying this as a gift?
+                                br
+                                a(href='#', data-bs-toggle='modal', data-bs-target='#gifting_options') See gifting options
 
-      .wishlist-item-right
-        .proceed_to_checkout
-          .d-flex.justify-content-center
-            a.btn.btn-warning(href="#")
-              b Place your order
-          .title Order Summary
-          .item
-            span.name Items:
-            span.price $1,321.00
-          .item
-            span.name Shipping & handling:
-            span.price $234.00
-          .item
-            span.name Savings on combined shipping:
-            span.price.text-brown  - $128.24
-          .item
-            span.name Total before tax:
-            span.price $1,371.00
-          .item
-            span.name Estimated tax to be collected:
-            span.price $0.00
-          .item.full_price
-            span.name Order total:
-            span.price $1,371.00
-        .delivery_information
-          .title Delivery information:
-          p This piece of Fine Furniture will be ready in approximately 8 weeks. Please allow about 2 weeks shipping time. Most Fine Furniture pieces are delivered fully assembled, with the exception of beds & dining tables. You will be contacted before delivery. There is a 25% deposit and the balance is charged when it ships.
-        .d-flex.justify-content-center
-          img.img-fluid.mb-3(src='img/general/norton_secured.png', alt='#')
+                    .col-md-6.border-b-dashed
+                        .option-selected
+                            h6 #[b Carolina Crown Amish Bed]
+                            include _option-selected-list
+                        .actions
+                            a.edit(href='#')
+                                i.fa.fa-pencil
+                                | Edit
+                            a.wishlist(href='#')
+                                i.fa.fa-heart-o
+                                | Move to wishlist
+                            a.delete(href='#')
+                                i.fa.fa-trash
+                                | Delete
+                    .col-md-3.border-b-dashed
+                        .values
+                            span.values_inline_label Quantity:
+                            input(type='number', name='quantity', value='1')
+                        .values
+                            span.values_inline_label Subtotal:
+                            span.price $1,371.00
+                        .values
+                            span.values_inline_label Shipping:
+                            span.price.price_shipping $71.00
+                        .values
+                            span.values_inline_label Delivery:
+                            a.more.align-self-end(href='#') Inside delivery with setup
+                .row
+                    .col-lg-3.col-md-6
+                    .col-lg-5.col-md-6
+                        .values.mt-3 Savings on combined shipping:
+                            span.save_price $32.00
+
+                    .col-lg-4.col-md-6
+                        .values.text-end.mt-3  Combined shipping (2 items):
+                            span.price.price_shipping $71.00
+                        .values.text-end.mb-3.mt-0
+                            span Delivery:
+                                a.more(href='#') Inside delivery with setup
+                hr.mb-1
+                hr.mt-0
+                .extended_price
+                    | Extended price (includes shipping):
+                    span.text-brown $1,371.00
+
+            .wishlist-item-right
+                .proceed_to_checkout
+                    .d-flex.justify-content-center
+                        a.btn.btn-warning(href="#")
+                            b Place your order
+                    .title Order Summary
+                    .item
+                        span.name Items:
+                        span.price $1,321.00
+                    .item
+                        span.name Shipping & handling:
+                        span.price $234.00
+                    .item
+                        span.name Savings on combined shipping:
+                        span.price.text-brown  - $128.24
+                    .item
+                        span.name Total before tax:
+                        span.price $1,371.00
+                    .item
+                        span.name Estimated tax to be collected:
+                        span.price $0.00
+                    .item.full_price
+                        span.name Order total:
+                        span.price $1,371.00
+                .delivery_information
+                    .title Delivery information:
+                    p This piece of Fine Furniture will be ready in approximately 8 weeks. Please allow about 2 weeks shipping time. Most Fine Furniture pieces are delivered fully assembled, with the exception of beds & dining tables. You will be contacted before delivery. There is a 25% deposit and the balance is charged when it ships.
+                .d-flex.justify-content-center
+                    img.img-fluid.mb-3(src='img/general/norton_secured.png', alt='#')

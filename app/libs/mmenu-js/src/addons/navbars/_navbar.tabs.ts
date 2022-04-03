@@ -1,7 +1,7 @@
 import Mmenu from '../../core/oncanvas/mmenu.oncanvas';
 import * as DOM from '../../_modules/dom';
 
-export default function(this: Mmenu, navbar: HTMLElement) {
+export default function (this: Mmenu, navbar: HTMLElement) {
     navbar.classList.add('mm-navbar_tabs');
     navbar.parentElement.classList.add('mm-navbars_has-tabs');
 
@@ -23,7 +23,8 @@ export default function(this: Mmenu, navbar: HTMLElement) {
                 false
             );
             evnt.stopImmediatePropagation();
-        } catch (err) {}
+        } catch (err) {
+        }
     });
 
     function selectTab(this: Mmenu, panel: HTMLElement) {

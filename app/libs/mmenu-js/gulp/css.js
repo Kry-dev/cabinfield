@@ -4,7 +4,7 @@
 		**) For a custom build, the includes and variables are copied from the specified "custom input" dir (--i flag), into the "input" dir.
 */
 
-const { src, dest, watch, series, parallel } = require('gulp');
+const {src, dest, watch, series, parallel} = require('gulp');
 
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
@@ -17,25 +17,25 @@ var dir = {};
 /** Run all scripts. */
 exports.all = CSSall = cb => {
     dir = dirs(false);
-
+    
     series(
-        parallel(CSSconcatMixins, CSSconcatIncludes, CSSconcatVariables),
-        CSScompile
+      parallel(CSSconcatMixins, CSSconcatIncludes, CSSconcatVariables),
+      CSScompile
     )(cb);
 };
 
 exports.custom = CSScustom = cb => {
     dir = dirs(true);
-
+    
     const CSScompileCustom = cb => CSScompile(cb, dir.build + '/mmenu.scss');
-
+    
     series(parallel(CSScopyIncludes, CSScopyVariables), CSScompileCustom)(cb);
 };
 
 /** Put a watch on all files. */
 exports.watch = CSSwatch = cb => {
     dir = dirs(false);
-
+    
     watch([
         dir.input + '/**/*.scss',
         '!' + dir.input + '/_includes.scss',
@@ -46,37 +46,37 @@ exports.watch = CSSwatch = cb => {
         var cb = () => {
             console.log('CSS compiled and concatenated.');
         };
-
+        
         switch (true) {
-            //	Changing an include, a variable or a mixin potentially affects all .scss files:
-            //		- run all CSS tasks.
+          //	Changing an include, a variable or a mixin potentially affects all .scss files:
+          //		- run all CSS tasks.
             case path.indexOf('_includes.scss') > -1:
             case path.indexOf('_variables.scss') > -1:
             case path.indexOf('_mixins.scss') > -1:
                 CSSall(cb);
                 break;
-
-            //	Changing any other file should only affect the files in the same directory:
-            //		- compile only the directory to css;
-            //		- concatenate all.
+          
+          //	Changing any other file should only affect the files in the same directory:
+          //		- compile only the directory to css;
+          //		- concatenate all.
             default:
                 var files = path.split('/');
                 files.pop();
                 files.shift();
                 files = files.join('/');
-
+                
                 var CSScompileOne = cb =>
-                    CSScompile(
-                        cb,
-                        dir.input + '/' + files + '/*.scss',
-                        dir.output + '/' + files
-                    );
-
+                  CSScompile(
+                    cb,
+                    dir.input + '/' + files + '/*.scss',
+                    dir.output + '/' + files
+                  );
+                
                 series(CSScompileOne, CSScompile)(cb);
                 break;
         }
     });
-
+    
     cb();
 };
 
@@ -88,10 +88,10 @@ const CSSconcatIncludes = cb => {
         dir.input + '/**/_includes.scss', // Include the rest of the includes.
         '!' + dir.input + '/_includes.scss' // Exclude the includes destination file.
     ];
-
+    
     return src(files)
-        .pipe(concat('_includes.scss'))
-        .pipe(dest(dir.input));
+      .pipe(concat('_includes.scss'))
+      .pipe(dest(dir.input));
 };
 
 // *) Concatenate variables into a single file.
@@ -102,10 +102,10 @@ const CSSconcatVariables = cb => {
         dir.input + '/**/_variables.scss', // Include the rest of the variables.
         '!' + dir.input + '/_variables.scss' // Exclude the variables destination file.
     ];
-
+    
     return src(files)
-        .pipe(concat('_variables.scss'))
-        .pipe(dest(dir.input));
+      .pipe(concat('_variables.scss'))
+      .pipe(dest(dir.input));
 };
 
 // Concatenate mixins into a single file.
@@ -116,10 +116,10 @@ const CSSconcatMixins = cb => {
         dir.input + '/**/_mixins.scss', // Include the rest of the mixins.
         '!' + dir.input + '/_mixins.scss' // Exclude the mixins destination file.
     ];
-
+    
     return src(files)
-        .pipe(concat('_mixins.scss'))
-        .pipe(dest(dir.input));
+      .pipe(concat('_mixins.scss'))
+      .pipe(dest(dir.input));
 };
 
 // **) Copy includes from custom input into input.
@@ -135,8 +135,8 @@ const CSScopyVariables = cb => {
 // Compile all (or some) SCSS files to CSS.
 const CSScompile = (cb, input, output) => {
     return src(input || dir.input + '/**/*.scss')
-        .pipe(sass().on('error', sass.logError))
-        .pipe(autoprefixer(['> 5%', 'last 5 versions']))
-        .pipe(cleancss())
-        .pipe(dest(output || dir.output));
+      .pipe(sass().on('error', sass.logError))
+      .pipe(autoprefixer(['> 5%', 'last 5 versions']))
+      .pipe(cleancss())
+      .pipe(dest(output || dir.output));
 };

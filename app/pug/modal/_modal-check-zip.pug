@@ -1,21 +1,21 @@
 <!--modal check zip -->
 #check_zip.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
-  .modal-dialog.modal-dialog-centered.modal-sm(role='document')
-    .modal-content.border-0
-      .modal-body.p-5
-        h4.text-center.mb-4 Zip Code
-        h4.text-center.mb-4(style='display:none') We’re Sorry!
-        button.close(type='button', data-dismiss='modal', aria-label='Close')
-          span(aria-hidden='true') ×
-        form.form.modal--zip-form
-          .form-group.mb-4
-            p(style='display:none') Your zip code is out of range of the Heartland Collection's delivery availability. You are invited to shop the Cabinfield Collection. We deliver Cabinfield gazebos throughout the U.S.
-            label Enter Zip
-            input.form-control(type="text" name="zip" minlength="5" maxlength="5" placeholder="8●●●●")
-          .form-group.d-none
-            button.btn.btn-warning.w-100(type='button') Continue Shopping
-          .form-group.d-flex
-            button.btn.btn-warning.w-100(type='submit') Check ZIPCode
-        .modal-footer
+    .modal-dialog.modal-dialog-centered.modal-sm(role='document')
+        .modal-content.border-0
+            .modal-body.p-5
+                h4.text-center.mb-4 Zip Code
+                h4.text-center.mb-4(style='display:none') We’re Sorry!
+                button.close(type='button', data-bs-dismiss='modal', aria-label='Close')
+                    span(aria-hidden='true') ×
+                form.form.modal--zip-form
+                    .mb-4
+                        p(style='display:none') Your zip code is out of range of the Heartland Collection's delivery availability. You are invited to shop the Cabinfield Collection. We deliver Cabinfield gazebos throughout the U.S.
+                        label Enter Zip
+                        input.form-control(type="text" name="zip" minlength="5" maxlength="5" placeholder="8●●●●")
+                    .mb-3.d-none
+                        button.btn.btn-warning.w-100(type='button') Continue Shopping
+                    .mb-3.d-flex
+                        button.btn.btn-warning.w-100(type='submit') Check ZIPCode
+                .modal-footer
 <!--modal check zip end-->
 

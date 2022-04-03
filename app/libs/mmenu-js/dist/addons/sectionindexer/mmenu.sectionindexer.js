@@ -1,9 +1,9 @@
 import Mmenu from '../../core/oncanvas/mmenu.oncanvas';
 import options from './_options';
-import { extendShorthandOptions } from './_options';
+import {extendShorthandOptions} from './_options';
 import * as DOM from '../../_modules/dom';
 import * as support from '../../_modules/support';
-import { extend } from '../../_modules/helpers';
+import {extend} from '../../_modules/helpers';
 //  Add the options.
 Mmenu.options.sectionIndexer = options;
 export default function () {
@@ -40,30 +40,33 @@ export default function () {
                 var newTop = -1, oldTop = panel.scrollTop;
                 panel.scrollTop = 0;
                 DOM.find(panel, '.mm-divider')
-                    .filter(function (divider) { return !divider.matches('.mm-hidden'); })
-                    .forEach(function (divider) {
-                    if (newTop < 0 &&
+                  .filter(function (divider) {
+                      return !divider.matches('.mm-hidden');
+                  })
+                  .forEach(function (divider) {
+                      if (newTop < 0 &&
                         letter ==
-                            divider.textContent
-                                .trim()
-                                .slice(0, 1)
-                                .toLowerCase()) {
-                        newTop = divider.offsetTop;
-                    }
-                });
+                        divider.textContent
+                          .trim()
+                          .slice(0, 1)
+                          .toLowerCase()) {
+                          newTop = divider.offsetTop;
+                      }
+                  });
                 panel.scrollTop = newTop > -1 ? newTop : oldTop;
             };
             if (support.touch) {
                 _this.node.indx.addEventListener('touchstart', mouseOverEvent);
                 _this.node.indx.addEventListener('touchmove', mouseOverEvent);
-            }
-            else {
+            } else {
                 _this.node.indx.addEventListener('mouseover', mouseOverEvent);
             }
         }
         //	Show or hide the indexer
         _this.bind('openPanel:start', function (panel) {
-            var active = DOM.find(panel, '.mm-divider').filter(function (divider) { return !divider.matches('.mm-hidden'); }).length;
+            var active = DOM.find(panel, '.mm-divider').filter(function (divider) {
+                return !divider.matches('.mm-hidden');
+            }).length;
             _this.node.indx.classList[active ? 'add' : 'remove']('mm-sectionindexer_active');
         });
     });

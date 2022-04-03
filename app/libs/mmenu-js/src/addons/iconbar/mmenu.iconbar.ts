@@ -1,14 +1,14 @@
 import Mmenu from '../../core/oncanvas/mmenu.oncanvas';
 import options from './_options';
-import { extendShorthandOptions } from './_options';
+import {extendShorthandOptions} from './_options';
 import * as DOM from '../../_modules/dom';
 import * as media from '../../_modules/matchmedia';
-import { type, extend } from '../../_modules/helpers';
+import {type, extend} from '../../_modules/helpers';
 
 //  Add the options.
 Mmenu.options.iconbar = options;
 
-export default function(this: Mmenu) {
+export default function (this: Mmenu) {
     var options = extendShorthandOptions(this.opts.iconbar);
     this.opts.iconbar = extend(options, Mmenu.options.iconbar);
 
@@ -96,7 +96,8 @@ export default function(this: Mmenu) {
 
                         this.openPanel(panel, false);
                     }
-                } catch (err) {}
+                } catch (err) {
+                }
             });
 
             const selectTab = (panel: HTMLElement) => {

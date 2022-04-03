@@ -1,10 +1,10 @@
 import Mmenu from '../../core/oncanvas/mmenu.oncanvas';
 import options from './_options';
-import { extendShorthandOptions } from './_options';
+import {extendShorthandOptions} from './_options';
 import * as DOM from '../../_modules/dom';
 import * as events from '../../_modules/eventlisteners';
 import * as support from '../../_modules/support';
-import { extend } from '../../_modules/helpers';
+import {extend} from '../../_modules/helpers';
 //  Add the options.
 Mmenu.options.keyboardNavigation = options;
 export default function () {
@@ -18,7 +18,8 @@ export default function () {
     this.opts.keyboardNavigation = extend(options, Mmenu.options.keyboardNavigation);
     //	Enable keyboard navigation
     if (options.enable) {
-        var menuStart_1 = DOM.create('button.mm-tabstart.mm-sronly'), menuEnd_1 = DOM.create('button.mm-tabend.mm-sronly'), blockerEnd_1 = DOM.create('button.mm-tabend.mm-sronly');
+        var menuStart_1 = DOM.create('button.mm-tabstart.mm-sronly'),
+          menuEnd_1 = DOM.create('button.mm-tabend.mm-sronly'), blockerEnd_1 = DOM.create('button.mm-tabend.mm-sronly');
         this.bind('initMenu:after', function () {
             if (options.enhance) {
                 _this.node.menu.classList.add('mm-menu_keyboardfocus');
@@ -41,7 +42,7 @@ export default function () {
         var focusable_1 = 'input, select, textarea, button, label, a[href]';
         var setFocus = function (panel) {
             panel =
-                panel || DOM.children(_this.node.pnls, '.mm-panel_opened')[0];
+              panel || DOM.children(_this.node.pnls, '.mm-panel_opened')[0];
             var focus = null;
             //	Focus already is on an element in a navbar in this menu.
             var navbar = document.activeElement.closest('.mm-navbar');
@@ -132,14 +133,14 @@ var initWindow = function (enhance) {
             var api = menu['mmApi'];
             if (!target.matches('input, textarea')) {
                 switch (evnt.keyCode) {
-                    //	press enter to toggle and check
+                  //	press enter to toggle and check
                     case 13:
                         if (target.matches('.mm-toggle') ||
-                            target.matches('.mm-check')) {
+                          target.matches('.mm-check')) {
                             target.dispatchEvent(new Event('click'));
                         }
                         break;
-                    //	prevent spacebar or arrows from scrolling the page
+                  //	prevent spacebar or arrows from scrolling the page
                     case 32: //	space
                     case 37: //	left
                     case 38: //	top
@@ -153,23 +154,22 @@ var initWindow = function (enhance) {
                 //	special case for input
                 if (target.matches('input')) {
                     switch (evnt.keyCode) {
-                        //	empty searchfield with esc
+                      //	empty searchfield with esc
                         case 27:
                             target.value = '';
                             break;
                     }
-                }
-                else {
+                } else {
                     var api_1 = menu['mmApi'];
                     switch (evnt.keyCode) {
-                        //	close submenu with backspace
+                      //	close submenu with backspace
                         case 8:
                             var parent_1 = DOM.find(menu, '.mm-panel_opened')[0]['mmParent'];
                             if (parent_1) {
                                 api_1.openPanel(parent_1.closest('.mm-panel'));
                             }
                             break;
-                        //	close menu with esc
+                      //	close menu with esc
                         case 27:
                             if (menu.matches('.mm-menu_offcanvas')) {
                                 api_1.close();

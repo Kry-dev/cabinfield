@@ -1,9 +1,13 @@
 section.cart.address-section
     .container
-        a.back.text-brown(href='#')
-            i.fa.fa-chevron-left
-            | Back to cart
-        h1.h1 Order Placed
+        .row
+            .col-12
+                a.back.text-brown(href='#')
+                    i.fa.fa-chevron-left
+                    | Back
+        .row
+            .col-12
+                h1.h1 Order Placed
         .row.wishlist-item
             .col-lg-8.col-md-6.col-sm-12
                 .row
@@ -61,7 +65,7 @@ section.cart.address-section
                         span.price $1,371.00
                     .item
                         span.name Due today
-                            a.popup-info.mr-0(href='#') ?
+                            button(type="button", data-bs-target="#customize_popup_info", data-bs-toggle="modal").popup-info.me-0 ?
                             | :
                         span.price $0.00
                     .d-flex.justify-content-center.w-100.mt-3
@@ -81,8 +85,8 @@ section.cart.address-section
                     h6 #[b Carolina Crown Amish Bed]
                     include _option-selected-list
                     h6.h6.d-flex.justify-content-between.text-bold
-                        span.text-dark.text-left Subtotal
-                        span.text-brown.text-right $1,371.00
+                        span.text-dark.text-start Subtotal
+                        span.text-brown.text-end $1,371.00
 
             .col-lg-4.col-md-6
                 .product-selected
@@ -91,8 +95,8 @@ section.cart.address-section
                     h6 #[b Carolina Crown Amish Bed]
                     include _option-selected-list
                     h6.h6.d-flex.justify-content-between.text-bold
-                        span.text-dark.text-left Subtotal
-                        span.text-brown.text-right $1,371.00
+                        span.text-dark.text-start Subtotal
+                        span.text-brown.text-end $1,371.00
             .col-lg-4.col-md-6
                 .product-selected
                     img.img-fluid(src='img/product/yKelvO0K53.jpg')
@@ -100,8 +104,8 @@ section.cart.address-section
                     h6 #[b Carolina Crown Amish Bed]
                     include _option-selected-list
                     h6.h6.d-flex.justify-content-between.text-bold
-                        span.text-dark.text-left Subtotal
-                        span.text-brown.text-right $1,371.00
+                        span.text-dark.text-start Subtotal
+                        span.text-brown.text-end $1,371.00
 
             .col-lg-4.col-md-6
                 .product-selected
@@ -110,8 +114,8 @@ section.cart.address-section
                     h6 #[b Carolina Crown Amish Bed]
                     include _option-selected-list
                     h6.h6.d-flex.justify-content-between.text-bold
-                        span.text-dark.text-left Subtotal
-                        span.text-brown.text-right $1,371.00
+                        span.text-dark.text-start Subtotal
+                        span.text-brown.text-end $1,371.00
 
             .col-lg-4.col-md-6
                 .product-selected
@@ -120,8 +124,8 @@ section.cart.address-section
                     h6 #[b Carolina Crown Amish Bed]
                     include _option-selected-list
                     h6.h6.d-flex.justify-content-between.text-bold
-                        span.text-dark.text-left Subtotal
-                        span.text-brown.text-right $1,371.00
+                        span.text-dark.text-start Subtotal
+                        span.text-brown.text-end $1,371.00
 
             .col-lg-4.col-md-6
                 .product-selected
@@ -131,5 +135,5 @@ section.cart.address-section
                     include _option-selected-list
 
                     h6.h6.d-flex.justify-content-between.text-bold
-                        span.text-dark.text-left Subtotal
-                        span.text-brown.text-right $1,371.00
+                        span.text-dark.text-start Subtotal
+                        span.text-brown.text-end $1,371.00

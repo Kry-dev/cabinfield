@@ -1,10 +1,11 @@
 extends ../main-template
 
 block title
-	| Cabinfield testimonials page
+    | Cabinfield testimonials page
 
 block content
-	main.content.pt-lg-0
-		<!--Testimonials-->
-		include ../components/_testimonials
-		<!--Testimonials end-->
+    +breadcrumbs([['Help Center', '#']])
+    main.content.pt-lg-0
+        <!--Testimonials-->
+        include ../components/_testimonials
+        <!--Testimonials end-->

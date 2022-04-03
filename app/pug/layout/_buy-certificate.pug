@@ -20,23 +20,23 @@ section.gift
         .gift-form-section
             .row.border-b-dashed.mb-4
                 .col-lg-6
-                    .form-group
+                    .mb-3
                         label.col-form-label Your name
                         input.form-control(type='text', name='name', required='required')
-                    .form-group
+                    .mb-3
                         label.col-form-label Recipient’s email address
                         input.form-control(type='text', name='email', required='required')
-                    .form-group
+                    .mb-3
                         label.col-form-label Re-type recipient’s email address
                         input.form-control(type='text', name='reemail', required='required')
                 .col-lg-6
-                    .form-group
+                    .mb-3
                         label.col-form-label Recipient’s name
                         input.form-control(type='text', name='recipient', required='required')
-                    .form-group
+                    .mb-3
                         label.col-form-label Message
                         textarea.form-control(name='message', rows="4")
-                    a.certificate_example.more(href='#', data-toggle='modal', data-target='#certificate_example') See example of gift certificate
+                    a.certificate_example.more(href='#', data-bs-toggle='modal', data-bs-target='#certificate_example') See example of gift certificate
             .button_section.d-flex.justify-content-between
                 button.back.flat_bg(type='button') Back
                 button.next.btn-warning(type='submit') Proceed to checkout

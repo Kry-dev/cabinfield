@@ -1,5 +1,5 @@
 'use strict';
-module.exports = function(grunt) {
+module.exports = function (grunt) {
     // Load all grunt tasks
     require('load-grunt-tasks')(grunt);
 
@@ -60,7 +60,7 @@ module.exports = function(grunt) {
                     src: 'src/js/<%= pkg.name %>.js',
                     dest: 'dist/js/<%= pkg.name %>.js',
                     deps: {
-                        args : ['$'],
+                        args: ['$'],
                         'default': ['$'],
                         amd: {
                             indent: 6,
@@ -81,7 +81,7 @@ module.exports = function(grunt) {
                         },
                         pipeline: {
                             indent: 0,
-                            items : ['jquery'],
+                            items: ['jquery'],
                             prefix: '//= require ',
                             separator: '\n',
                         }
@@ -108,7 +108,7 @@ module.exports = function(grunt) {
                     'dist/css/<%= pkg.name %>.min.css': ['src/css/<%= pkg.name %>.css']
                 }, {
                     'dist/css/lg-fb-comment-box.min.css': ['src/css/lg-fb-comment-box.css']
-                },{
+                }, {
                     'dist/css/lg-transitions.min.css': ['src/css/lg-transitions.css']
                 }]
             }
@@ -200,8 +200,8 @@ module.exports = function(grunt) {
     });
 
     // Default task.
-    grunt.registerTask('default', ['clean', 'jshint', 'connect', 'umd:all', 'concat','uglify', 'sass', 'cssmin', 'copy', /*'usebanner', 'watch'*/]);
-    grunt.registerTask('server', function() {
+    grunt.registerTask('default', ['clean', 'jshint', 'connect', 'umd:all', 'concat', 'uglify', 'sass', 'cssmin', 'copy', /*'usebanner', 'watch'*/]);
+    grunt.registerTask('server', function () {
         grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
         grunt.task.run(['serve']);
     });

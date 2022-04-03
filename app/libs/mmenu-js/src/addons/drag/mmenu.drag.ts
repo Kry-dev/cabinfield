@@ -1,13 +1,13 @@
 import Mmenu from '../../core/oncanvas/mmenu.oncanvas';
 import options from './_options';
-import { extendShorthandOptions } from './_options';
+import {extendShorthandOptions} from './_options';
 import dragOpen from './_drag.open';
-import { extend } from '../../_modules/helpers';
+import {extend} from '../../_modules/helpers';
 
 //	Add the options and configs.
 Mmenu.options.drag = options;
 
-export default function(this: Mmenu) {
+export default function (this: Mmenu) {
     if (!this.opts.offCanvas) {
         return;
     }

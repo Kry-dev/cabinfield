@@ -1,9 +1,9 @@
 import Mmenu from '../../core/oncanvas/mmenu.oncanvas';
 import options from './_options';
 import configs from './_configs';
-import { extendShorthandOptions } from './_options';
+import {extendShorthandOptions} from './_options';
 import * as DOM from '../../_modules/dom';
-import { extend } from '../../_modules/helpers';
+import {extend} from '../../_modules/helpers';
 //	Add the options and configs.
 Mmenu.options.pageScroll = options;
 Mmenu.configs.pageScroll = configs;
@@ -14,29 +14,31 @@ export default function () {
     var configs = this.conf.pageScroll;
     /** The currently "active" section */
     var section;
+    
     function scrollTo() {
         if (section) {
             // section.scrollIntoView({ behavior: 'smooth' });
             window.scrollTo({
                 top: section.getBoundingClientRect().top +
-                    document.scrollingElement.scrollTop -
-                    configs.scrollOffset,
+                  document.scrollingElement.scrollTop -
+                  configs.scrollOffset,
                 behavior: 'smooth'
             });
         }
         section = null;
     }
+    
     function anchorInPage(href) {
         try {
             if (href != '#' && href.slice(0, 1) == '#') {
                 return Mmenu.node.page.querySelector(href);
             }
             return null;
-        }
-        catch (err) {
+        } catch (err) {
             return null;
         }
     }
+    
     //	Scroll to section after clicking menu item.
     if (options.scroll) {
         this.bind('close:finish', function () {
@@ -60,12 +62,11 @@ export default function () {
             }
             //	If the sidebar add-on is "expanded"...
             if (_this.node.menu.matches('.mm-menu_sidebar-expanded') &&
-                _this.node.wrpr.matches('.mm-wrapper_sidebar-expanded')) {
+              _this.node.wrpr.matches('.mm-wrapper_sidebar-expanded')) {
                 //	... scroll the page to the section.
                 scrollTo();
                 //	... otherwise...
-            }
-            else {
+            } else {
                 //	... close the menu.
                 return {
                     close: true

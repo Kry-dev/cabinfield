@@ -76,7 +76,7 @@ export default class MmenuLight {
         //  Only needs to be done ones.
         if (!this.drawer) {
             options = options || {};
-            const { position = 'left' } = options;
+            const {position = 'left'} = options;
             this.drawer = new MmOffCanvasDrawer(null, position);
 
             /** Original location in the DOM for the menu. */

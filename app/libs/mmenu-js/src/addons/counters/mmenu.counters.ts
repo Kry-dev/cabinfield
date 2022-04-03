@@ -1,8 +1,8 @@
 import Mmenu from '../../core/oncanvas/mmenu.oncanvas';
 import options from './_options';
-import { extendShorthandOptions } from './_options';
+import {extendShorthandOptions} from './_options';
 import * as DOM from '../../_modules/dom';
-import { extend } from '../../_modules/helpers';
+import {extend} from '../../_modules/helpers';
 
 //	Add the options.
 Mmenu.options.counters = options;
@@ -12,7 +12,7 @@ Mmenu.configs.classNames.counters = {
     counter: 'Counter'
 };
 
-export default function(this: Mmenu) {
+export default function (this: Mmenu) {
     var options = extendShorthandOptions(this.opts.counters);
     this.opts.counters = extend(options, Mmenu.options.counters);
 

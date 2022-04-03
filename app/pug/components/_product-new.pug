@@ -5,9 +5,9 @@ section.product
                 .product-left-top
                     h1.product-right-title.mb-3 Indian Creek Panel Amish Bed
                     span.product-number.mb-3 Product No.: FGFH1128
-                    a(href="#", data-toggle='modal', data-target='#mainimage_popup').text-underline.mb-3 View Gallery
+                    a(href="#", id="view-gallery").text-underline.mb-3 View Gallery
                 <!--Product photos in components/_product-photos.pug-->
-                include ../layout/_product-photos-new
+                include ../layout/_product-photos-new-swiper
                 <!--Product photos in components/_product-photos.pug end-->
             .product-right
                 .row
@@ -32,22 +32,24 @@ section.product
                             <!--Product rating small in mixin.pug end-->
                 .row
                     .product-right-btns.flex-column.col-xl-6.col-lg-9.col-sm-12
-                        //a.btn.btn-warning.text-uppercase.w-100(data-toggle='tab' href='#nav-customize' role='tab' aria-controls='nav-customize' aria-selected='true')
+                        //a.btn.btn-warning.text-uppercase.w-100(data-bs-toggle='tab' href='#nav-customize' role='tab' aria-controls='nav-customize' aria-selected='true')
                         a#choose-optns.btn.btn-warning.text-uppercase.w-100(href='#nav-customize')
                             strong Choose Options
-                        //a#nav-customize-tab.nav-link.active(data-toggle='tab' href='#nav-customize' role='tab' aria-controls='nav-customize' aria-selected='true') Customize
+                        //a#nav-customize-tab.nav-link.active(data-bs-toggle='tab' href='#nav-customize' role='tab' aria-controls='nav-customize' aria-selected='true') Customize
                         a.btn.btn-outline-primary.text-uppercase.w-100.mt-3(href='#')
-                            strong Add to wishlist
+                            strong Shipping information
                 .row
                     .col-sm-12
                         ul.mb-3
-                            li #[a(href="#") • Delivery Information ]
+                            li #[a(href="#" data-bs-toggle="modal", data-bs-target="#modal-shipping-assembly") • Delivery Information ]
                             li #[a(href="#") • Return Policy ]
                             li #[a(href="#") • Pre-Built Options ]
                             li #[a(href="#") • Order Samples ]
+                            li #[a(href="#") • Lead Time ]
                     .col-sm-12
                         h6.text-dark.mb-0 Product Information:
-                        p.text-dark
-                            | With a handcrafted wood kitchen set mealtimes will become the special bonding time you’ve always dreamed of.
-                            | Solidly constructed fan back chairs are optionally stained in 2 tones, creating
-                            | #[a(href="#") Read more...]
+                        .text-dark
+                            p.mb-0
+                                | With a handcrafted wood kitchen set mealtimes will become the special bonding time you’ve always dreamed of.
+                                | Solidly constructed fan back chairs are optionally stained in 2 tones, creating
+                                | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc porttitor maximus laoreet.

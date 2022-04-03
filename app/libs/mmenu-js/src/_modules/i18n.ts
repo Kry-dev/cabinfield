@@ -1,4 +1,5 @@
-import { extend } from './helpers';
+import {extend} from './helpers';
+
 var translations = {};
 
 /**

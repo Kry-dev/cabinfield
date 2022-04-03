@@ -1,5 +1,6 @@
-import { r, $ } from '../helpers';
+import {r, $} from '../helpers';
 import * as support from '../support';
+
 var prefix = 'mm-spn';
 /**
  * Class for navigating in a mobile menu.
@@ -30,6 +31,7 @@ var MmSlidingPanelsNavigation = /** @class */ (function () {
         this._setSelectedl();
         this._initAnchors();
     }
+    
     Object.defineProperty(MmSlidingPanelsNavigation.prototype, "prefix", {
         /** Prefix for the class. */
         get: function () {
@@ -153,11 +155,9 @@ var MmSlidingPanelsNavigation = /** @class */ (function () {
             //  Find the parent listitem.
             if (target.closest('span')) {
                 listitem = target.parentElement;
-            }
-            else if (target.closest('li')) {
+            } else if (target.closest('li')) {
                 listitem = target;
-            }
-            else {
+            } else {
                 listitem = false;
             }
             if (listitem) {

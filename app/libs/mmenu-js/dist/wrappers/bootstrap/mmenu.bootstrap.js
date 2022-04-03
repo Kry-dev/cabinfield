@@ -1,4 +1,5 @@
 import * as DOM from '../../_modules/dom';
+
 export default function () {
     var _this = this;
     //	Create the menu
@@ -25,7 +26,7 @@ export default function () {
                     };
                     _this.conf.searchfield.input = {
                         name: child.querySelector('input').getAttribute('name') ||
-                            null
+                          null
                     };
                     _this.conf.searchfield.clear = false;
                     _this.conf.searchfield.submit = true;
@@ -60,6 +61,7 @@ export default function () {
             }
         }
     }
+    
     function cloneLink(anchor) {
         var link = DOM.create(anchor.matches('a') ? 'a' : 'span');
         //	Copy attributes
@@ -77,20 +79,21 @@ export default function () {
         });
         return link;
     }
+    
     function cloneDropdown(dropdown) {
         var list = DOM.create('ul');
         DOM.children(dropdown).forEach(function (anchor) {
             var item = DOM.create('li');
             if (anchor.matches('.dropdown-divider')) {
                 item.classList.add('Divider');
-            }
-            else if (anchor.matches('.dropdown-item')) {
+            } else if (anchor.matches('.dropdown-item')) {
                 item.append(cloneLink(anchor));
             }
             list.append(item);
         });
         return list;
     }
+    
     function cloneNav(nav) {
         var list = DOM.create('ul');
         DOM.find(nav, '.nav-item').forEach(function (anchor) {

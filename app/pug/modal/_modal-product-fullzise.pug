@@ -1,61 +1,71 @@
-#options-fullsize.modal.modal--select-optns.fade.show(tabindex='-1', role='dialog', aria-hidden='true')
+#options-fullsize.modal.modal--select-optns.fade(tabindex='-1', role='dialog', aria-hidden='true', data-bs-backdrop="static")
     .modal-dialog.modal-dialog-centered.modal-lg(role='document')
         .modal-content
-            button.close(type='button', data-dismiss='modal', aria-label='Close')
+            button.close(type='button', data-bs-dismiss='modal', aria-label='Close')
                 span(aria-hidden='true') ×
             .modal-header
                 h2.product-title Customize your Indian Creek Panel Amish Bed:
-            .modal-body
+            .modal-body.border-bottom
                 #optgroup-3
                     .product-customize-form
                         h6.product-customize-subtitle
-                            strong.mr-1 Choose 1:
+                            strong.me-1 Choose 1:
                             |  Fabric
-                            a.more.pl-3.ml-3.border-left.openFullSize(href='#') Open full-sized previews
+                            a.more.ps-3.ms-3.border-start.openFullSize(href='#') Open full-sized previews
                         .product-includes.warning.mb-5
                             p.text-dark
                                 | Please note that the stain or paint colors shown may not appear the same on all computer monitors. Actual results on your furniture may also vary due to natural variations in the color, grain, and texture of the wood. You may call or email to request stain samples.
-                        .product-customize-list()
-                            .product-option.option-stain
-                                input( type="radio" id="fabric-101" name="fabric")
-                                label.product-option--label(for="fabric-101")
-                                    img(src="img/fabric/fabric-01.jpg", alt="#").img-fluid
-                                    p.name 4-10 dove
-                            .product-option.option-stain
-                                input( type="radio" id="fabric-102" name="fabric" checked)
-                                label.product-option--label(for="fabric-102")
-                                    img(src="img/fabric/fabric-02.jpg", alt="#").img-fluid
-                                    p.name(data-title="1-49 Gallery") 1-49 Gallery
-                            .product-option.option-stain
-                                input( type="radio" id="fabric-104" name="fabric")
-                                label.product-option--label(for="fabric-104")
-                                    img(src="img/fabric/fabric-03.jpg", alt="#").img-fluid
-                                    p.name(data-title="1-49 Gallery") 1-49 Gallery
-                            .product-option.option-stain
-                                input( type="radio" id="fabric-105" name="fabric")
-                                label.product-option--label(for="fabric-105")
-                                    img(src="img/fabric/fabric-04.jpg", alt="#").img-fluid
-                                    p.name(data-title="1-49 Gallery") 1-49 Gallery
-                            .product-option.option-stain
-                                input( type="radio" id="fabric-106" name="fabric")
-                                label.product-option--label(for="fabric-106")
-                                    img(src="img/fabric/fabric-04.jpg", alt="#").img-fluid
-                                    p.name(data-title="1-49 Gallery") 1-49 Gallery
-                            .product-option.option-stain
-                                input( type="radio" id="fabric-107" name="fabric")
-                                label.product-option--label(for="fabric-107")
-                                    img(src="img/fabric/fabric-05.jpg", alt="#").img-fluid
-                                    p.name(data-title="1-49 Gallery") 1-49 Gallery
-                            .product-option.option-stain
-                                input( type="radio" id="fabric-108" name="fabric")
-                                label.product-option--label(for="fabric-108")
-                                    img(src="img/fabric/fabric-06.jpg", alt="#").img-fluid
-                                    p.name(data-title="1-49 Gallery") 1-49 Gallery
+                        #fabric-full-size.product-customize-list.fabric-gallery
+                            .fabric-gallery__item(data-src="img/fabric/fabric-01.jpg", data-sub-html="<div class='btn-block'><a class='btn btn-warning' href='#'>Select</a></div><ul class='fabric-detail'><li><strong>29-8 Steel</strong></li><li><span>Fiber Content:</span> <strong>100% Polyester</strong></li><li><span>Pattern Repeat:</span> <strong>Up The Roll</strong></li><li><span>Cleaning Code:</span> <strong>S</strong></li><li><span>Abrasion Rating:</span> <strong>M</strong></li><li><strong>1000,000 Double Rubs</strong></li></ul>", data-title="Title 1")
+                                .product-option.option-stain
+                                    input( type="radio" id="fabric-101" name="fabric")
+                                    label.product-option--label(for="fabric-101")
+                                        img(src="img/fabric/fabric-01.jpg", alt="#").img-fluid
+                                        p.name Title 1
 
-                        a.closeFullSize(href="#") View Standard Previews
-            hr
+                            .fabric-gallery__item(data-src="img/fabric/fabric-02.jpg", data-sub-html="<div class='btn-block'><a class='btn btn-warning' href='#'>Select</a></div><ul class='fabric-detail'><li><strong>29-8 Steel</strong></li><li><span>Fiber Content:</span> <strong>100% Polyester</strong></li><li><span>Pattern Repeat:</span> <strong>Up The Roll</strong></li><li><span>Cleaning Code:</span> <strong>S</strong></li><li><span>Abrasion Rating:</span> <strong>M</strong></li><li><strong>1000,000 Double Rubs</strong></li></ul>", data-title="Title 2")
+                                .product-option.option-stain
+                                    input( type="radio" id="fabric-102" name="fabric" checked)
+                                    label.product-option--label(for="fabric-102")
+                                        img(src="img/fabric/fabric-02.jpg", alt="#").img-fluid
+                                        p.name Title 2
+
+                            .fabric-gallery__item(data-src="img/fabric/fabric-03.jpg", data-sub-html="<div class='btn-block'><a class='btn btn-warning' href='#'>Select</a></div><ul class='fabric-detail'><li><strong>29-8 Steel</strong></li><li><span>Fiber Content:</span> <strong>100% Polyester</strong></li><li><span>Pattern Repeat:</span> <strong>Up The Roll</strong></li><li><span>Cleaning Code:</span> <strong>S</strong></li><li><span>Abrasion Rating:</span> <strong>M</strong></li><li><strong>1000,000 Double Rubs</strong></li></ul>", data-title="Title 3")
+                                .product-option.option-stain
+                                    input( type="radio" id="fabric-104" name="fabric")
+                                    label.product-option--label(for="fabric-104")
+                                        img(src="img/fabric/fabric-03.jpg", alt="#").img-fluid
+                                        p.name Title 3
+
+                            .fabric-gallery__item(data-src="img/fabric/fabric-04.jpg", data-sub-html="<div class='btn-block'><a class='btn btn-warning' href='#'>Select</a></div><ul class='fabric-detail'><li><strong>29-8 Steel</strong></li><li><span>Fiber Content:</span> <strong>100% Polyester</strong></li><li><span>Pattern Repeat:</span> <strong>Up The Roll</strong></li><li><span>Cleaning Code:</span> <strong>S</strong></li><li><span>Abrasion Rating:</span> <strong>M</strong></li><li><strong>1000,000 Double Rubs</strong></li></ul>", data-title="Title 4")
+                                .product-option.option-stain
+                                    input( type="radio" id="fabric-105" name="fabric")
+                                    label.product-option--label(for="fabric-105")
+                                        img(src="img/fabric/fabric-04.jpg", alt="#").img-fluid
+                                        p.name Title 4
+
+                            .fabric-gallery__item(data-src="img/fabric/fabric-05.jpg", data-sub-html="<div class='btn-block'><a class='btn btn-warning' href='#'>Select</a></div><ul class='fabric-detail'><li><strong>29-8 Steel</strong></li><li><span>Fiber Content:</span> <strong>100% Polyester</strong></li><li><span>Pattern Repeat:</span> <strong>Up The Roll</strong></li><li><span>Cleaning Code:</span> <strong>S</strong></li><li><span>Abrasion Rating:</span> <strong>M</strong></li><li><strong>1000,000 Double Rubs</strong></li></ul>", data-title="Title 5")
+                                .product-option.option-stain
+                                    input( type="radio" id="fabric-106" name="fabric")
+                                    label.product-option--label(for="fabric-106")
+                                        img(src="img/fabric/fabric-05.jpg", alt="#").img-fluid
+                                        p.name Title 5
+
+                            .fabric-gallery__item(data-src="img/fabric/fabric-06.jpg", data-sub-html="<div class='btn-block'><a class='btn btn-warning' href='#'>Select</a></div><ul class='fabric-detail'><li><strong>29-8 Steel</strong></li><li><span>Fiber Content:</span> <strong>100% Polyester</strong></li><li><span>Pattern Repeat:</span> <strong>Up The Roll</strong></li><li><span>Cleaning Code:</span> <strong>S</strong></li><li><span>Abrasion Rating:</span> <strong>M</strong></li><li><strong>1000,000 Double Rubs</strong></li></ul>", data-title="Title 6")
+                                .product-option.option-stain
+                                    input( type="radio" id="fabric-107" name="fabric")
+                                    label.product-option--label(for="fabric-107")
+                                        img(src="img/fabric/fabric-06.jpg", alt="#").img-fluid
+                                        p.name Title 6
+
+                            .fabric-gallery__item(data-src="img/fabric/fabric-07.jpg", data-sub-html="<div class='btn-block'><a class='btn btn-warning' href='#'>Select</a></div><ul class='fabric-detail'><li><strong>29-8 Steel</strong></li><li><span>Fiber Content:</span> <strong>100% Polyester</strong></li><li><span>Pattern Repeat:</span> <strong>Up The Roll</strong></li><li><span>Cleaning Code:</span> <strong>S</strong></li><li><span>Abrasion Rating:</span> <strong>M</strong></li><li><strong>1000,000 Double Rubs</strong></li></ul>", data-title="Title 7")
+                                .product-option.option-stain
+                                    input( type="radio" id="fabric-108" name="fabric")
+                                    label.product-option--label(for="fabric-108")
+                                        img(src="img/fabric/fabric-07.jpg", alt="#").img-fluid
+                                        p.name Title 7
             .modal-footer.row
-                .col-md-8.offset-md-2.col-sm-12
+                .col-12.col-lg-8.offset-lg-2
                     .pagination
                         .pagination-inner
                             a.pagination-arrow.prev.inactive(href='#')
@@ -72,3 +82,5 @@
                             a.pagination-arrow.next(href='#')
                                 span
 
+            #fabric-full-size-container.inline-gallery-container
+                a.closeFullSize(href="#") View Standard Previews
